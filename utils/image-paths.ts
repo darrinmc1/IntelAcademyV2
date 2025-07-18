@@ -1,8 +1,27 @@
 /**
- * This file is deprecated. Its functionality has been largely replaced by `utils/image-naming.ts`
- * and the consolidated `Image` component's built-in fallback mechanisms.
+ * This file provides image path utilities for the application
  */
 
-export function deprecatedImagePaths() {
-  console.warn("deprecatedImagePaths is deprecated.")
+export const forumCategoryImages = [
+  "/forum-categories/general-discussion.png",
+  "/forum-categories/intelligence-analysis.png",
+  "/forum-categories/tools-techniques.png",
+  "/forum-categories/case-studies.png",
+  "/forum-categories/resources.png"
+];
+
+export function getCategoryImagePath(category: string): string {
+  return `/categories/${category}.png`;
+}
+
+export function getTopicImagePath(topic: string): string {
+  return `/topics/${topic}.png`;
+}
+
+export function getLearningPathImagePath(path: string): string {
+  return `/learning-paths/${path}.png`;
+}
+
+export function getIntelligenceTypeImagePath(type: string): string {
+  return `/intelligence-types/${type}.png`;
 }

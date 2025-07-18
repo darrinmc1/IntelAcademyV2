@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 // Paths to clear
 const pathsToClear = [
@@ -27,13 +26,4 @@ pathsToClear.forEach(dirPath => {
   }
 });
 
-// Run npm commands
-console.log('Running npm cache clean...');
-try {
-  execSync('npm cache clean --force', { stdio: 'inherit' });
-  console.log('npm cache cleaned successfully');
-} catch (err) {
-  console.error('Error cleaning npm cache:', err);
-}
-
-console.log('Cache clearing complete. Please run "npm install" followed by "npm run dev" to restart your application.');
+console.log('Cache clearing complete. Please run "npm run dev" to restart your application.');

@@ -26,10 +26,10 @@ import { Progress } from "@/components/ui/progress"
 
 export default function AdminDashboard() {
   const [systemStatus, setSystemStatus] = useState({
-    search: "healthy",
-    database: "healthy",
-    storage: "warning",
-    api: "healthy",
+    search: "unknown",
+    database: "unknown",
+    storage: "unknown",
+    api: "unknown",
   })
 
   return (
@@ -54,8 +54,8 @@ export default function AdminDashboard() {
             <BookOpen className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">142</div>
-            <p className="text-xs text-muted-foreground">+6 from last month</p>
+            <div className="text-2xl font-bold">--</div>
+            <p className="text-xs text-muted-foreground">Demo data only</p>
           </CardContent>
         </Card>
         <Card>
@@ -64,8 +64,8 @@ export default function AdminDashboard() {
             <Users className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">2,350</div>
-            <p className="text-xs text-muted-foreground">+18% from last month</p>
+            <div className="text-2xl font-bold">--</div>
+            <p className="text-xs text-muted-foreground">Demo data only</p>
           </CardContent>
         </Card>
         <Card>
@@ -74,8 +74,8 @@ export default function AdminDashboard() {
             <ImageIcon className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">487</div>
-            <p className="text-xs text-muted-foreground">+24 from last week</p>
+            <div className="text-2xl font-bold">--</div>
+            <p className="text-xs text-muted-foreground">Demo data only</p>
           </CardContent>
         </Card>
         <Card>
@@ -84,8 +84,8 @@ export default function AdminDashboard() {
             <Database className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">78%</div>
-            <Progress value={78} className="h-2 mt-2" />
+            <div className="text-2xl font-bold">--</div>
+            <p className="text-xs text-muted-foreground">Demo data only</p>
           </CardContent>
         </Card>
       </div>
@@ -220,35 +220,19 @@ export default function AdminDashboard() {
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
                     <span className="text-sm">Search Service</span>
-                    {systemStatus.search === "healthy" ? (
-                      <CheckCircle className="h-5 w-5 text-green-500" />
-                    ) : (
-                      <AlertTriangle className="h-5 w-5 text-amber-500" />
-                    )}
+                    <span className="text-sm text-muted-foreground">Status unknown</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-sm">Database</span>
-                    {systemStatus.database === "healthy" ? (
-                      <CheckCircle className="h-5 w-5 text-green-500" />
-                    ) : (
-                      <AlertTriangle className="h-5 w-5 text-amber-500" />
-                    )}
+                    <span className="text-sm text-muted-foreground">Status unknown</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-sm">Storage</span>
-                    {systemStatus.storage === "healthy" ? (
-                      <CheckCircle className="h-5 w-5 text-green-500" />
-                    ) : (
-                      <AlertTriangle className="h-5 w-5 text-amber-500" />
-                    )}
+                    <span className="text-sm text-muted-foreground">Status unknown</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-sm">API Services</span>
-                    {systemStatus.api === "healthy" ? (
-                      <CheckCircle className="h-5 w-5 text-green-500" />
-                    ) : (
-                      <AlertTriangle className="h-5 w-5 text-amber-500" />
-                    )}
+                    <span className="text-sm text-muted-foreground">Status unknown</span>
                   </div>
                 </div>
               </CardContent>
@@ -348,41 +332,10 @@ export default function AdminDashboard() {
       <div className="mt-8">
         <h2 className="text-xl font-semibold mb-4">Recent Activity</h2>
         <Card>
-          <CardContent className="p-0">
-            <div className="divide-y">
-              {[
-                {
-                  action: "Image uploaded",
-                  user: "Admin",
-                  time: "2 minutes ago",
-                  icon: <Upload className="h-4 w-4" />,
-                },
-                { action: "Topic updated", user: "Editor", time: "1 hour ago", icon: <FileText className="h-4 w-4" /> },
-                {
-                  action: "Video added",
-                  user: "Content Manager",
-                  time: "3 hours ago",
-                  icon: <FileVideo className="h-4 w-4" />,
-                },
-                { action: "System backup", user: "System", time: "Yesterday", icon: <Database className="h-4 w-4" /> },
-                {
-                  action: "New user registered",
-                  user: "System",
-                  time: "2 days ago",
-                  icon: <Users className="h-4 w-4" />,
-                },
-              ].map((item, i) => (
-                <div key={i} className="flex items-center justify-between p-4">
-                  <div className="flex items-center gap-3">
-                    <div className="bg-primary/10 p-2 rounded-full">{item.icon}</div>
-                    <div>
-                      <p className="font-medium">{item.action}</p>
-                      <p className="text-sm text-muted-foreground">By {item.user}</p>
-                    </div>
-                  </div>
-                  <div className="text-sm text-muted-foreground">{item.time}</div>
-                </div>
-              ))}
+          <CardContent className="p-4 text-center">
+            <div className="py-8">
+              <p className="text-muted-foreground">No recent activity to display</p>
+              <p className="text-sm text-muted-foreground mt-2">Activity will be shown here when available</p>
             </div>
           </CardContent>
         </Card>
