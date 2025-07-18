@@ -1,0 +1,106 @@
+"use server"
+
+import fs from "fs/promises"
+import path from "path"
+
+// Map of page types to their directory paths
+const PAGE_TYPE_PATHS = {
+  topic: "app/topics",
+  "learning-path": "app/learning-paths",
+  "advanced-topic": "app/advanced-topics",
+  other: "app",
+}
+
+// Function to fetch content from a page file
+export async function fetchPageContent(pageType: string, pageId: string): Promise<string> {
+  try {
+    // In a real implementation, this would parse the actual TSX file
+    // For now, we'll simulate by checking if a content file exists
+
+    const contentDir = path.join(process.cwd(), "data", "page-content")
+
+    // Create the directory if it doesn't exist
+    try {
+      await fs.mkdir(contentDir, { recursive: true })
+    } catch (error) {
+      console.error("Error creating content directory:", error)
+    }
+
+    const contentPath = path.join(contentDir, `${pageType}-${pageId}.txt`)
+
+    try {
+      const content = await fs.readFile(contentPath, "utf-8")
+      return content
+    } catch (error) {
+      // If file doesn't exist, return empty string
+      return ""
+    }
+  } catch (error) {
+    console.error("Error fetching page content:", error)
+    throw new Error("Failed to fetch page content")
+  }
+}
+
+// Function to save content to a page file
+export async function savePageContent(pageType: string, pageId: string, content: string): Promise<void> {
+  try {
+    // In a real implementation, this would update the actual TSX file
+    // For now, we'll save to a separate content file
+
+    const contentDir = path.join(process.cwd(), "data", "page-content")
+
+    // Create the directory if it doesn't exist
+    try {
+      await fs.mkdir(contentDir, { recursive: true })
+    } catch (error) {
+      console.error("Error creating content directory:", error)
+    }
+
+    const contentPath = path.join(contentDir, `${pageType}-${pageId}.txt`)
+
+    await fs.writeFile(contentPath, content, "utf-8")
+
+    // In a production environment, you would:
+    // 1. Parse the TSX file
+    // 2. Update the content section
+    // 3. Write back the updated file
+    // 4. Potentially trigger a rebuild or revalidation
+
+    return
+  } catch (error) {
+    console.error("Error saving page content:", error)
+    throw new Error("Failed to save page content")
+  }
+}
+
+// Function to get all available pages of a specific type
+export async function getAvailablePages(pageType: string): Promise<Array<{ id: string; name: string }>> {
+  try {
+    const basePath = PAGE_TYPE_PATHS[pageType as keyof typeof PAGE_TYPE_PATHS] || "app"
+    const fullPath = path.join(process.cwd(), basePath)
+
+    // Read the directory
+    const entries = await fs.readdir(fullPath, { withFileTypes: true })
+
+    // Filter for directories (which represent pages in Next.js app router)
+    const pages = entries
+      .filter((entry) => entry.isDirectory())
+      .map((dir) => ({
+        id: dir.name,
+        name: formatPageName(dir.name),
+      }))
+
+    return pages
+  } catch (error) {
+    console.error("Error getting available pages:", error)
+    return []
+  }
+}
+
+// Helper function to format page ID into a readable name
+function formatPageName(pageId: string): string {
+  return pageId
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ")
+}
