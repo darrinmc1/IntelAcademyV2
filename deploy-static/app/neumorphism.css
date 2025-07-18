@@ -1,0 +1,260 @@
+/* Neumorphism Design System for The Intel Analyst Academy */
+
+/* Base neumorphism variables */
+:root {
+  --neu-bg: #e6e7ee;
+  --neu-bg-dark: #2d3748;
+  --neu-shadow-light: #ffffff;
+  --neu-shadow-dark: #a3a8c3;
+  --neu-shadow-dark-mode-light: #3a4553;
+  --neu-shadow-dark-mode-dark: #1a202c;
+  --neu-border-radius: 12px;
+  --neu-border-radius-sm: 8px;
+  --neu-border-radius-lg: 16px;
+  --neu-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light mode neumorphism */
+.neu-base {
+
+  border-radius: var(--neu-border-radius);
+  box-shadow: 8px 8px 16px var(--neu-shadow-dark), -8px -8px 16px var(--neu-shadow-light);
+  transition: var(--neu-transition);
+}
+
+.neu-inset {
+
+  border-radius: var(--neu-border-radius);
+  box-shadow: inset 4px 4px 8px var(--neu-shadow-dark), inset -4px -4px 8px var(--neu-shadow-light);
+  transition: var(--neu-transition);
+}
+
+.neu-button {
+
+  border: none;
+  border-radius: var(--neu-border-radius);
+  box-shadow: 6px 6px 12px var(--neu-shadow-dark), -6px -6px 12px var(--neu-shadow-light);
+  transition: var(--neu-transition);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.neu-button:hover {
+  box-shadow: 4px 4px 8px var(--neu-shadow-dark), -4px -4px 8px var(--neu-shadow-light);
+  transform: translateY(-1px);
+}
+
+.neu-button:active {
+  box-shadow: inset 3px 3px 6px var(--neu-shadow-dark), inset -3px -3px 6px var(--neu-shadow-light);
+  transform: translateY(0);
+}
+
+.neu-button-sm {
+  border-radius: var(--neu-border-radius-sm);
+  box-shadow: 4px 4px 8px var(--neu-shadow-dark), -4px -4px 8px var(--neu-shadow-light);
+}
+
+.neu-button-lg {
+  border-radius: var(--neu-border-radius-lg);
+  box-shadow: 10px 10px 20px var(--neu-shadow-dark), -10px -10px 20px var(--neu-shadow-light);
+}
+
+.neu-card {
+
+  border-radius: var(--neu-border-radius);
+  box-shadow: 12px 12px 24px var(--neu-shadow-dark), -12px -12px 24px var(--neu-shadow-light);
+  transition: var(--neu-transition);
+}
+
+.neu-card:hover {
+  box-shadow: 16px 16px 32px var(--neu-shadow-dark), -16px -16px 32px var(--neu-shadow-light);
+  transform: translateY(-2px);
+}
+
+.neu-input {
+
+  border: none;
+  border-radius: var(--neu-border-radius-sm);
+  box-shadow: inset 4px 4px 8px var(--neu-shadow-dark), inset -4px -4px 8px var(--neu-shadow-light);
+  transition: var(--neu-transition);
+  padding: 12px 16px;
+  outline: none;
+}
+
+.neu-input:focus {
+  box-shadow: inset 6px 6px 12px var(--neu-shadow-dark), inset -6px -6px 12px var(--neu-shadow-light), 0 0 0 3px
+    rgba(59, 130, 246, 0.1);
+}
+
+.neu-toggle {
+
+  border-radius: 20px;
+  box-shadow: inset 4px 4px 8px var(--neu-shadow-dark), inset -4px -4px 8px var(--neu-shadow-light);
+  transition: var(--neu-transition);
+  position: relative;
+}
+
+.neu-toggle-thumb {
+
+  border-radius: 50%;
+  box-shadow: 4px 4px 8px var(--neu-shadow-dark), -4px -4px 8px var(--neu-shadow-light);
+  transition: var(--neu-transition);
+}
+
+.neu-progress {
+
+  border-radius: var(--neu-border-radius-sm);
+  box-shadow: inset 4px 4px 8px var(--neu-shadow-dark), inset -4px -4px 8px var(--neu-shadow-light);
+  overflow: hidden;
+}
+
+.neu-progress-bar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: var(--neu-border-radius-sm);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: var(--neu-transition);
+}
+
+/* Dark mode neumorphism */
+.dark .neu-base {
+  
+  box-shadow: 8px 8px 16px var(--neu-shadow-dark-mode-dark), -8px -8px 16px var(--neu-shadow-dark-mode-light);
+}
+
+.dark .neu-inset {
+  
+  box-shadow: inset 4px 4px 8px var(--neu-shadow-dark-mode-dark), inset -4px -4px 8px var(--neu-shadow-dark-mode-light);
+}
+
+.dark .neu-button {
+  
+  box-shadow: 6px 6px 12px var(--neu-shadow-dark-mode-dark), -6px -6px 12px var(--neu-shadow-dark-mode-light);
+  color: #e2e8f0;
+}
+
+.dark .neu-button:hover {
+  box-shadow: 4px 4px 8px var(--neu-shadow-dark-mode-dark), -4px -4px 8px var(--neu-shadow-dark-mode-light);
+}
+
+.dark .neu-button:active {
+  box-shadow: inset 3px 3px 6px var(--neu-shadow-dark-mode-dark), inset -3px -3px 6px var(--neu-shadow-dark-mode-light);
+}
+
+.dark .neu-card {
+  
+  box-shadow: 12px 12px 24px var(--neu-shadow-dark-mode-dark), -12px -12px 24px var(--neu-shadow-dark-mode-light);
+}
+
+.dark .neu-card:hover {
+  box-shadow: 16px 16px 32px var(--neu-shadow-dark-mode-dark), -16px -16px 32px var(--neu-shadow-dark-mode-light);
+}
+
+.dark .neu-input {
+  
+  box-shadow: inset 4px 4px 8px var(--neu-shadow-dark-mode-dark), inset -4px -4px 8px var(--neu-shadow-dark-mode-light);
+  color: #e2e8f0;
+}
+
+.dark .neu-input:focus {
+  box-shadow: inset 6px 6px 12px var(--neu-shadow-dark-mode-dark), inset -6px -6px 12px
+    var(--neu-shadow-dark-mode-light), 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Special intelligence-themed neumorphism */
+.neu-classified {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 8px 8px 16px rgba(102, 126, 234, 0.3), -8px -8px 16px rgba(118, 75, 162, 0.3);
+}
+
+.neu-classified:hover {
+  box-shadow: 12px 12px 24px rgba(102, 126, 234, 0.4), -12px -12px 24px rgba(118, 75, 162, 0.4);
+  transform: translateY(-2px);
+}
+
+.neu-secure {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  box-shadow: 8px 8px 16px rgba(17, 153, 142, 0.3), -8px -8px 16px rgba(56, 239, 125, 0.3);
+}
+
+.neu-alert {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 100%);
+  color: white;
+  box-shadow: 8px 8px 16px rgba(255, 107, 107, 0.3), -8px -8px 16px rgba(255, 167, 38, 0.3);
+}
+
+/* Animated neumorphism effects */
+.neu-pulse {
+  animation: neuPulse 2s infinite;
+}
+
+@keyframes neuPulse {
+  0%,
+  100% {
+    box-shadow: 8px 8px 16px var(--neu-shadow-dark), -8px -8px 16px var(--neu-shadow-light);
+  }
+  50% {
+    box-shadow: 12px 12px 24px var(--neu-shadow-dark), -12px -12px 24px var(--neu-shadow-light);
+  }
+}
+
+.neu-glow {
+  position: relative;
+}
+
+.neu-glow::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #667eea, #764ba2, #667eea);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.neu-glow:hover::before {
+  opacity: 0.7;
+}
+
+/* Responsive neumorphism */
+@media (max-width: 768px) {
+  .neu-base,
+  .neu-card {
+    box-shadow: 6px 6px 12px var(--neu-shadow-dark), -6px -6px 12px var(--neu-shadow-light);
+  }
+
+  .neu-button {
+    box-shadow: 4px 4px 8px var(--neu-shadow-dark), -4px -4px 8px var(--neu-shadow-light);
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .neu-base,
+  .neu-button,
+  .neu-card,
+  .neu-input,
+  .neu-toggle,
+  .neu-progress {
+    transition: none;
+  }
+
+  .neu-pulse {
+    animation: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .neu-base,
+  .neu-button,
+  .neu-card {
+    border: 2px solid currentColor;
+  }
+}
