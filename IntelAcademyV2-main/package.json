@@ -9,8 +9,7 @@
     "start": "next start",
     "clear-cache": "node clear-cache.js",
     "dev:clean": "npm run clear-cache && npm run dev",
-    "vercel-build": "npm install @next/swc-win32-x64-msvc --save-dev && next build",
-    "prebuild": "npm install @next/swc-win32-x64-msvc --save-dev"
+    "vercel-build": "next build"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
