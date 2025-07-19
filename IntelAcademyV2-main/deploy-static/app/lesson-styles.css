@@ -1,0 +1,144 @@
+/* Enhanced typography for lesson content */
+.lesson-content h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1a202c;
+}
+
+.lesson-content h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  color: #2d3748;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.lesson-content h3 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #4a5568;
+}
+
+.lesson-content p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: #4a5568;
+}
+
+.lesson-content ul,
+.lesson-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.lesson-content li {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.lesson-content blockquote {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: #4a5568;
+  border-left: 4px solid #edf2f7;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* Enhanced card styles */
+.lesson-content .card {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin: 2rem 0;
+}
+
+/* Image captions */
+.lesson-content .image-caption {
+  font-size: 0.875rem;
+  text-align: center;
+  color: #718096;
+  margin-top: 0.5rem;
+}
+
+/* Key points sections */
+.lesson-content .key-points {
+  
+  border-left: 4px solid #4299e1;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+}
+
+.lesson-content .key-points h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2b6cb0;
+}
+
+/* Definition boxes */
+.lesson-content .definition {
+  
+  border-left: 4px solid #48bb78;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+}
+
+.lesson-content .definition h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2f855a;
+}
+
+/* Warning boxes */
+.lesson-content .warning {
+  
+  border-left: 4px solid #f56565;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+}
+
+.lesson-content .warning h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #c53030;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .lesson-content h1 {
+    font-size: 2rem;
+  }
+
+  .lesson-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .lesson-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .lesson-content p,
+  .lesson-content li {
+    font-size: 1.0625rem;
+  }
+
+  .lesson-content blockquote {
+    font-size: 1.125rem;
+  }
+}
