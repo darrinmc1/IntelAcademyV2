@@ -1,7 +1,3 @@
 {
-  "buildCommand": "node build.js",
-  "outputDirectory": "IntelAcademyV2-main/.next",
-  "installCommand": "npm install",
-  "framework": "nextjs",
   "rootDirectory": "IntelAcademyV2-main"
 }
