@@ -9,7 +9,8 @@
     "start": "next start",
     "clear-cache": "node clear-cache.js",
     "dev:clean": "npm run clear-cache && npm run dev",
-    "vercel-build": "next build"
+    "vercel-build": "npm install @next/swc-win32-x64-msvc --save-dev && next build",
+    "prebuild": "npm install @next/swc-win32-x64-msvc --save-dev"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
@@ -79,6 +80,8 @@
     }
   },
   "devDependencies": {
+    "@next/swc-win32-x64-msvc": "^15.4.1",
+    "@next/swc-linux-x64-gnu": "^15.4.1",
     "@types/node": "22.16.5",
     "@types/react": "18.3.23",
     "@types/react-dom": "^18",

@@ -1,0 +1,13 @@
+# Ignore the root app folder
+/app
+/components
+/data
+/hooks
+/lib
+/public
+/scripts
+/styles
+/utils
+
+# Only include the IntelAcademyV2-main folder
+!IntelAcademyV2-main/
