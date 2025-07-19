@@ -6,15 +6,11 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
     scrollRestoration: true,
     largePageDataBytes: 128 * 1000, // 128KB
-    serverActions: {allowedOrigins: ['localhost:3000']},
+    serverActions: { bodySizeLimit: '2mb' },
   },
   
   // Output configuration for better deployment compatibility
-  // output: 'export',
   trailingSlash: true,
-  
-  // Skip static generation for problematic pages
-  generateStaticParams: false,
   
   // Image optimization
   images: {
