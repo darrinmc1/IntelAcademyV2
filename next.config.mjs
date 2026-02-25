@@ -13,9 +13,6 @@ const nextConfig = {
   // output: 'export',
   trailingSlash: true,
   
-  // Skip static generation for problematic pages
-  generateStaticParams: false,
-  
   // Image optimization
   images: {
     unoptimized: true,

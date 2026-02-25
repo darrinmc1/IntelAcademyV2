@@ -1,8 +1,15 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export const sendTopicRequestEmail = async (email: string, topic: string, description: string) => {
+  const apiKey = process.env.RESEND_API_KEY;
+  
+  if (!apiKey) {
+    console.error("Missing RESEND_API_KEY environment variable");
+    throw new Error("Email service not configured");
+  }
+
+  const resend = new Resend(apiKey);
+
   try {
     await resend.emails.send({
       from: 'onboarding@resend.dev',
