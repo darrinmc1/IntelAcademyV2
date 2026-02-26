@@ -22,7 +22,7 @@ export default function IntelligenceDecisionMakingPage() {
       <TopicHeader
         title="Intelligence in Decision Making"
         description="How intelligence reduces uncertainty and enhances decision quality across domains"
-        image="/intelligence-decision-making.png"
+        imageSrc="/intelligence-decision-making.png"
         imageAlt="Intelligence informing strategic decision making process"
       />
 

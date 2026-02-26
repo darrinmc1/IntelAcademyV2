@@ -19,7 +19,7 @@ export default function IntelligenceVsInformationPage() {
       <TopicHeader
         title="Intelligence vs Information"
         description="Understanding the transformation from raw data to actionable insights"
-        image="/intelligence-vs-information.png"
+        imageSrc="/intelligence-vs-information.png"
         imageAlt="Diagram showing the transformation from raw information to processed intelligence"
       />
 
