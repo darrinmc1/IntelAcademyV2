@@ -19,6 +19,7 @@ interface LearningPathCard3DProps {
   difficulty: "Beginner" | "Intermediate" | "Advanced"
   topics: number | string[]
   estimatedTime: string
+  category?: string
   intensity?: "subtle" | "medium" | "strong"
   index?: number
 }
@@ -87,7 +88,7 @@ export function LearningPathCard3D({
     Advanced: "bg-red-100 text-red-800 border-red-200",
   }
 
-  
+
 
   // Format topics for display
   const topicsDisplay = Array.isArray(topics) ? topics.join(", ") : `${topics} topics`

@@ -94,7 +94,7 @@ export default function Enhanced3DLearningPathsPage() {
               description={path.description}
               image={path.imagePath || "/placeholder.svg"}
               href={path.path}
-              difficulty={path.difficulty || "Beginner"}
+              difficulty={(path.difficulty as any) || "Beginner"}
               topics={path.topicCount || 0}
               estimatedTime={path.estimatedTime || "2-3 hours"}
               category={path.category || "General"}
