@@ -14,12 +14,20 @@ interface TopicCard3DProps {
   title: string
   description: string
   image: string
-  href: string
+  href?: string
+  path?: string // alias for href
   category: string
-  estimatedTime: string
+  estimatedTime?: string
+  duration?: string // alias for estimatedTime
   completed?: boolean
   learningObjectives?: string[]
   intensity?: "subtle" | "medium" | "strong"
+  topic?: string
+  difficulty?: string
+  skills?: string[]
+  progress?: number
+  index?: number
+  [key: string]: any
 }
 
 export function TopicCard3D({
@@ -27,12 +35,17 @@ export function TopicCard3D({
   description,
   image,
   href,
+  path,
   category,
   estimatedTime,
+  duration,
   completed = false,
   learningObjectives = [],
   intensity = "subtle",
+  ...rest
 }: TopicCard3DProps) {
+  const displayHref = href || path || "#"
+  const displayTime = estimatedTime || duration || "15 min"
   const cardRef = useRef<HTMLDivElement>(null)
   const [transform, setTransform] = useState("")
   const [glowPosition, setGlowPosition] = useState({ x: 0, y: 0 })
@@ -170,12 +183,12 @@ export function TopicCard3D({
         {/* Time estimate */}
         <div className="flex items-center text-gray-500 text-sm mb-4">
           <Clock className="h-4 w-4 mr-1" />
-          <span>{estimatedTime}</span>
+          <span>{displayTime}</span>
         </div>
 
         {/* Button */}
         <Button asChild className="w-full" variant={completed ? "outline" : "default"}>
-          <Link href={href} className="flex items-center justify-center gap-2">
+          <Link href={displayHref} className="flex items-center justify-center gap-2">
             {completed ? (
               <>
                 <span>Review</span>
