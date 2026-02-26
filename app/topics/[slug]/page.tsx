@@ -26,7 +26,7 @@ interface TopicPageProps {
 export async function generateStaticParams() {
   const topicsDir = path.join(process.cwd(), 'app/topics')
   const topicEntries = await fs.readdir(topicsDir, { withFileTypes: true })
-  
+
   const validTopics = await Promise.all(
     topicEntries
       .filter(dirent => dirent.isDirectory() && dirent.name !== '[slug]')
@@ -37,6 +37,7 @@ export async function generateStaticParams() {
   )
 
   return validTopics
+    .filter(topic => !topic.hasPage) // ONLY generate paths for those that DO NOT have a dedicated page.
     .map(topic => ({
       slug: topic.slug
     }))
@@ -44,18 +45,19 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: TopicPageProps): Promise<Metadata> {
   const { slug } = params;
-  const topicData = getTopicContent(slug);
 
-  if (!topicData) {
+  if (!slug) {
     return {
       title: "Topic Not Found - The Intel Analyst Academy",
       description: "The requested topic could not be found.",
     };
   }
 
+  const topicTitle = slug.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
+
   return {
-    title: `${topicData.title} - The Intel Analyst Academy`,
-    description: topicData.description,
+    title: `${topicTitle} - The Intel Analyst Academy`,
+    description: `Learn about ${topicTitle} at The Intel Analyst Academy.`,
   };
 }
 

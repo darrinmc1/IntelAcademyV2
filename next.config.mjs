@@ -5,26 +5,24 @@ const nextConfig = {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
     scrollRestoration: true,
-    largePageDataBytes: 128 * 1000, // 128KB
-    serverActions: {allowedOrigins: ['localhost:3000']},
   },
-  
+
   // Output configuration for better deployment compatibility
   // output: 'export',
   trailingSlash: true,
-  
+
   // Image optimization
   images: {
     unoptimized: true,
   },
-  
+
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
     // Ensure SWC is used
     styledComponents: false,
   },
-  
+
   // ESLint and TypeScript configurations
   eslint: {
     ignoreDuringBuilds: true,
