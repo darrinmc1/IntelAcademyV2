@@ -16,12 +16,8 @@ const nextConfig = {
     styledComponents: false,
   },
 
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  // Turbopack config (replaces webpack in Next.js 16)
+  turbopack: {},
 
   webpack: (config) => {
     config.resolve.fallback = {
@@ -30,9 +26,14 @@ const nextConfig = {
       net: false,
       tls: false,
       path: false,
+      'prettier/plugins/html': false,
+      'prettier/standalone': false,
     };
     return config;
   },
+
+
+
 };
 
 export default nextConfig;
