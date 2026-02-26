@@ -88,20 +88,17 @@ export default function ExcelForAnalystsPage() {
           <FeaturedResource
             title="Excel Templates for Intelligence Analysis"
             description="Download ready-to-use Excel templates designed specifically for intelligence workflows."
-            type="Template"
-            href="/resources/excel-templates-for-intelligence"
+            path="/resources/excel-templates-for-intelligence"
           />
           <FeaturedResource
             title="Advanced Excel Functions for Analysts"
             description="Guide to Excel functions most valuable for intelligence analysis."
-            type="Guide"
-            href="/resources/advanced-excel-functions"
+            path="/resources/advanced-excel-functions"
           />
           <FeaturedResource
             title="Case Study: Excel in Major Investigations"
             description="Real-world examples of how Excel has been used in complex intelligence cases."
-            type="Case Study"
-            href="/resources/excel-investigation-case-study"
+            path="/resources/excel-investigation-case-study"
           />
         </div>
       </div>

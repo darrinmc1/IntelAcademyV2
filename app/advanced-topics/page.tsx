@@ -1,92 +1,129 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, ChevronRight } from "lucide-react"
 import { advancedTopicRequirements } from "@/data/advanced-topic-requirements"
+import { PageHero } from "@/components/page-hero"
 
 export const metadata: Metadata = {
   title: "Advanced Topics | The Intel Analyst Academy",
   description:
-    "Specialized content for experienced analysts seeking to deepen their expertise in intelligence analysis",
+    "Specialised content for experienced analysts seeking to deepen their expertise in intelligence analysis.",
+}
+
+const categoryAccents: Record<string, { border: string; glow: string; badge: string }> = {
+  "Analytical Techniques": {
+    border: "border-cyan-500/30",
+    glow: "shadow-[0_0_20px_rgba(8,145,178,0.15)]",
+    badge: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+  },
+  "Operational Applications": {
+    border: "border-indigo-500/30",
+    glow: "shadow-[0_0_20px_rgba(99,102,241,0.15)]",
+    badge: "bg-indigo-500/10 text-indigo-400 border-indigo-500/20",
+  },
+  "Intelligence Collection": {
+    border: "border-purple-500/30",
+    glow: "shadow-[0_0_20px_rgba(168,85,247,0.15)]",
+    badge: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+  },
+  "Communication & Reporting": {
+    border: "border-blue-500/30",
+    glow: "shadow-[0_0_20px_rgba(59,130,246,0.15)]",
+    badge: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+  },
 }
 
 export default function AdvancedTopicsPage() {
-  // Group topics by category
-  const categories = {
+  const categories: Record<string, string[]> = {
     "Analytical Techniques": ["strategic-forecasting", "structured-analytical-techniques", "statistical-techniques"],
-    "Operational Applications": [
-      "network-disruption",
-      "target-package-development",
-      "risk-terrain-modeling",
-      "predictive-patterning",
-    ],
+    "Operational Applications": ["network-disruption", "target-package-development", "risk-terrain-modeling", "predictive-patterning"],
     "Intelligence Collection": ["deep-web-research", "operations-security", "social-network-analysis"],
     "Communication & Reporting": ["intelligence-storytelling", "strategic-risk-assessment"],
   }
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="max-w-4xl mx-auto mb-12">
-        <h1 className="text-4xl font-bold mb-4">Advanced Topics</h1>
-        <p className="text-xl text-gray-600 dark:text-gray-300">
-          Specialized content for experienced analysts seeking to deepen their expertise in intelligence analysis. These
-          advanced topics build upon foundational knowledge and provide in-depth exploration of sophisticated analytical
-          techniques and applications.
-        </p>
-      </div>
+    <>
+      <PageHero
+        title="Advanced"
+        accentTitle="Topics"
+        subtitle="Specialised content for experienced analysts seeking to deepen their expertise in sophisticated analytical techniques and applications."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Advanced Topics" }]}
+      />
 
-      {Object.entries(categories).map(([category, topicIds]) => (
-        <div key={category} className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200 dark:border-gray-700">{category}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {topicIds.map((topicId) => {
-              const topic = advancedTopicRequirements[topicId]
-              if (!topic) return null
+      <div className="container mx-auto px-4 py-12">
+        {Object.entries(categories).map(([category, topicIds]) => {
+          const accent = categoryAccents[category] ?? categoryAccents["Analytical Techniques"]
+          return (
+            <div key={category} className="mb-16">
+              {/* Category heading */}
+              <div className="flex items-center gap-3 mb-8">
+                <h2 className="text-2xl font-bold text-white">{category}</h2>
+                <div className="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent" />
+              </div>
 
-              return (
-                <Link
-                  key={topicId}
-                  href={`/advanced-topics/${topicId}`}
-                  className="group block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow"
-                >
-                  <div className="h-48 overflow-hidden">
-                    <img
-                      src={`/advanced-topics/${topicId}.png`}
-                      alt={topic.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                      {topic.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">{topic.description}</p>
-                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-                      <span className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">{topic.experienceLevel}</span>
-                      <span className="ml-auto flex items-center font-medium text-blue-600 dark:text-blue-400">
-                        Learn more <ArrowRight className="ml-1 h-4 w-4" />
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              )
-            })}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {topicIds.map((topicId) => {
+                  const topic = advancedTopicRequirements[topicId]
+                  if (!topic) return null
+
+                  return (
+                    <Link
+                      key={topicId}
+                      href={`/advanced-topics/${topicId}`}
+                      className={`group block bg-slate-900/60 backdrop-blur-xl rounded-xl overflow-hidden border border-white/10 hover:${accent.border} hover:${accent.glow} transition-all duration-300`}
+                    >
+                      <div className="h-44 overflow-hidden relative">
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent z-10" />
+                        <img
+                          src={`/advanced-topics/${topicId}.png`}
+                          alt={topic.title}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+                        />
+                        <div className="absolute top-3 right-3 z-20">
+                          <span className={`text-xs font-medium px-2.5 py-1 rounded-full border ${accent.badge}`}>
+                            {topic.experienceLevel}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="p-5">
+                        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300 leading-snug">
+                          {topic.title}
+                        </h3>
+                        <p className="text-slate-400 text-sm font-light leading-relaxed line-clamp-2 mb-4">
+                          {topic.description}
+                        </p>
+                        <span className="inline-flex items-center gap-1 text-xs font-medium text-cyan-400 group-hover:gap-2 transition-all duration-300">
+                          Learn more <ArrowRight className="h-3 w-3" />
+                        </span>
+                      </div>
+                    </Link>
+                  )
+                })}
+              </div>
+            </div>
+          )
+        })}
+
+        {/* CTA */}
+        <div className="glass-panel-heavy rounded-2xl p-8 border border-cyan-500/20 shadow-[0_0_40px_rgba(8,145,178,0.1)] relative overflow-hidden">
+          <div className="absolute -top-16 -right-16 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="relative z-10">
+            <h2 className="text-2xl font-bold text-white mb-3">
+              Request an <span className="text-gradient-primary">Advanced Topic</span>
+            </h2>
+            <p className="text-slate-400 font-light mb-6 max-w-xl">
+              Is there a specific advanced intelligence analysis topic you&apos;d like to see covered? Let us know and
+              we&apos;ll consider adding it to our curriculum.
+            </p>
+            <Link
+              href="/request-topic?category=advanced"
+              className="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white font-medium py-2.5 px-6 rounded-full transition-all duration-300 glow-primary-hover border border-cyan-400/30 shadow-[0_0_15px_rgba(8,145,178,0.3)]"
+            >
+              Request a Topic <ChevronRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
-      ))}
-
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-8 mt-12 border border-blue-100 dark:border-blue-800">
-        <h2 className="text-2xl font-bold mb-4">Request an Advanced Topic</h2>
-        <p className="text-gray-600 dark:text-gray-300 mb-6">
-          Is there a specific advanced intelligence analysis topic you&apos;d like to see covered? Let us know and we&apos;ll
-          consider adding it to our curriculum.
-        </p>
-        <Link
-          href="/request-topic?category=advanced"
-          className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition-colors"
-        >
-          Request a Topic <ArrowRight className="ml-2 h-4 w-4" />
-        </Link>
       </div>
-    </div>
+    </>
   )
 }

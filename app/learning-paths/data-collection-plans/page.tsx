@@ -130,20 +130,17 @@ export default function DataCollectionPlansPage() {
           <FeaturedResource
             title="Collection Plan Templates"
             description="Downloadable templates for creating data collection plans."
-            type="Template"
-            href="/resources/collection-plan-templates"
+            path="/resources/collection-plan-templates"
           />
           <FeaturedResource
             title="Intelligence Requirements Handbook"
             description="Guide to developing clear, actionable intelligence requirements."
-            type="Guide"
-            href="/resources/intelligence-requirements-handbook"
+            path="/resources/intelligence-requirements-handbook"
           />
           <FeaturedResource
             title="Case Study: Collection Planning Success"
             description="Real-world example of how effective collection planning led to intelligence breakthroughs."
-            type="Case Study"
-            href="/resources/collection-planning-case-study"
+            path="/resources/collection-planning-case-study"
           />
         </div>
       </div>

@@ -48,7 +48,6 @@ export default function CrimeSeriesAnalysisPage() {
           title="What is Crime Series Analysis"
           description="An introduction to the fundamentals of crime series analysis and its importance in law enforcement"
           imageSrc="/what-is-crime-series-analysis.png"
-          alt="What is Crime Series Analysis"
           duration="15 min read"
         />
 
@@ -56,7 +55,6 @@ export default function CrimeSeriesAnalysisPage() {
           title="Modus Operandi Analysis"
           description="Techniques for identifying and analyzing criminal methods and behaviors"
           imageSrc="/modus-operandi-analysis.png"
-          alt="Modus Operandi Analysis"
           duration="20 min read"
         />
 
@@ -64,7 +62,6 @@ export default function CrimeSeriesAnalysisPage() {
           title="Crime Linkage Techniques"
           description="Methods for connecting related crimes through behavioral and physical evidence"
           imageSrc="/crime-linkage-techniques.png"
-          alt="Crime Linkage Techniques"
           duration="25 min read"
         />
 
@@ -72,7 +69,6 @@ export default function CrimeSeriesAnalysisPage() {
           title="Repeat Offender Profiling"
           description="Identifying and analyzing patterns of repeat offenders"
           imageSrc="/repeat-offender-profiling.png"
-          alt="Repeat Offender Profiling"
           duration="18 min read"
         />
 
@@ -80,7 +76,6 @@ export default function CrimeSeriesAnalysisPage() {
           title="Series Pattern Detection"
           description="Statistical and analytical methods for identifying crime series"
           imageSrc="/series-pattern-detection.png"
-          alt="Series Pattern Detection"
           duration="22 min read"
         />
 
@@ -88,7 +83,6 @@ export default function CrimeSeriesAnalysisPage() {
           title="Predictive Patterning"
           description="Using historical series data to predict future criminal activity"
           imageSrc="/predictive-patterning.png"
-          alt="Predictive Patterning"
           duration="20 min read"
         />
       </div>
