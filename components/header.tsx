@@ -220,31 +220,31 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-200 ${isScrolled ? "bg-white shadow-md" : "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"}`}
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? "bg-slate-950/80 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]" : "bg-transparent"}`}
       data-testid="site-header"
     >
       {activeDropdown && (
         <div className="fixed inset-0 bg-transparent z-40" onClick={closeDropdowns} aria-hidden="true" />
       )}
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-20 items-center justify-between">
         <div className="flex items-center gap-2 md:gap-6">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden" data-testid="mobile-menu-button">
+              <Button variant="ghost" size="icon" className="md:hidden text-white hover:bg-white/10 hover:text-cyan-400" data-testid="mobile-menu-button">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-[240px] sm:w-[300px]">
+            <SheetContent side="left" className="w-[240px] sm:w-[300px] bg-slate-950/95 backdrop-blur-xl border-r border-white/10 text-slate-100">
               <div className="flex items-center gap-2 mb-6">
                 <StaticImage
                   src="/intelligence-analysis-workspace.png"
                   alt="Intelligence Analyst Academy Logo"
                   width={40}
                   height={40}
-                  className="rounded-md"
+                  className="rounded-md ring-2 ring-cyan-500/30"
                 />
-                <span className="font-bold text-lg">Intelligence Analyst Academy</span>
+                <span className="font-bold text-lg text-white">Intelligence Analyst Academy</span>
               </div>
               <nav className="flex flex-col gap-4">
                 {mobileNavItems.map((item) => (
@@ -252,18 +252,18 @@ export function Header() {
                     key={item.href}
                     href={item.href}
                     className={cn(
-                      "text-sm font-medium transition-colors hover:text-primary flex items-center gap-2 p-2 rounded-md",
-                      item.active ? "text-primary bg-muted" : "text-muted-foreground",
+                      "text-sm font-medium transition-colors hover:text-cyan-400 flex items-center gap-2 p-2 rounded-md",
+                      item.active ? "text-cyan-400 bg-white/5" : "text-slate-300",
                     )}
                     data-testid={`mobile-nav-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
                   >
-                    <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center overflow-hidden">
+                    <div className="w-6 h-6 rounded-full bg-cyan-900/30 border border-cyan-500/20 flex items-center justify-center overflow-hidden">
                       <StaticImage
                         src={`/${getIconForNavItem(item.label)}`}
                         alt=""
                         width={24}
                         height={24}
-                        className="object-cover"
+                        className="object-cover opacity-80"
                       />
                     </div>
                     {item.label}
@@ -274,28 +274,28 @@ export function Header() {
           </Sheet>
 
           <Link href="/" className="flex items-center gap-2" data-testid="site-logo">
-            <div className="relative w-8 h-8 overflow-hidden rounded-md">
+            <div className="relative w-10 h-10 overflow-hidden rounded-md ring-2 ring-cyan-500/30 hover:ring-cyan-400 transition-all duration-300 shadow-[0_0_15px_rgba(8,145,178,0.3)]">
               <StaticImage
                 src="/intelligence-analysis-workspace.png"
                 alt="Intelligence Analyst Academy Logo"
-                width={32}
-                height={32}
+                width={40}
+                height={40}
                 className="object-cover"
               />
             </div>
-            <span className="font-bold hidden md:inline-block">The Intel Analyst Academy</span>
-            <span className="font-bold md:hidden">IAA</span>
+            <span className="font-bold text-xl hidden md:inline-block text-white tracking-wide">The Intel Analyst Academy</span>
+            <span className="font-bold text-xl md:hidden text-white">IAA</span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-6 xl:gap-8 xl:ml-8">
             {mainNavItems.map((item) =>
               item.hasDropdown ? (
                 <div key={item.id} className="relative" ref={item.id === activeDropdown ? dropdownRef : null}>
                   <button
                     onClick={() => toggleDropdown(item.id)}
                     className={cn(
-                      "flex items-center gap-1 text-sm font-medium transition-all duration-200 hover:text-primary group",
-                      item.active || activeDropdown === item.id ? "text-primary" : "text-muted-foreground",
+                      "flex items-center gap-1 text-sm font-medium transition-all duration-200 hover:text-cyan-400 group",
+                      item.active || activeDropdown === item.id ? "text-cyan-400" : "text-slate-200",
                     )}
                     data-testid={`nav-dropdown-${item.id}`}
                     aria-expanded={activeDropdown === item.id}
@@ -305,17 +305,17 @@ export function Header() {
                     <ChevronDown
                       className={cn(
                         "h-4 w-4 transition-transform duration-300",
-                        activeDropdown === item.id ? "rotate-180" : "group-hover:translate-y-[2px]",
+                        activeDropdown === item.id ? "rotate-180 text-cyan-400" : "text-slate-400 group-hover:translate-y-[2px] group-hover:text-cyan-400",
                       )}
                     />
                   </button>
                   <div
                     id={`dropdown-${item.id}`}
                     className={cn(
-                      "absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg rounded-md overflow-hidden z-50 transition-all duration-300 ease-in-out origin-top",
+                      "absolute top-full left-1/2 transform -translate-x-1/2 mt-6 bg-slate-900/95 backdrop-blur-xl border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.5)] rounded-xl overflow-hidden z-50 transition-all duration-300 ease-out origin-top",
                       activeDropdown === item.id
-                        ? "opacity-100 scale-y-100 translate-y-0"
-                        : "opacity-0 scale-y-95 translate-y-[-10px] pointer-events-none",
+                        ? "opacity-100 scale-100 translate-y-0"
+                        : "opacity-0 scale-95 translate-y-[-10px] pointer-events-none",
                     )}
                     style={{
                       maxWidth: "min(900px, 90vw)",
@@ -338,8 +338,8 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "text-sm font-medium transition-colors hover:text-primary",
-                    item.active ? "text-primary" : "text-muted-foreground",
+                    "text-sm font-medium transition-colors hover:text-cyan-400",
+                    item.active ? "text-cyan-400" : "text-slate-200",
                   )}
                   onClick={closeDropdowns}
                   data-testid={`nav-link-${item.label.toLowerCase()}`}
@@ -348,17 +348,17 @@ export function Header() {
                 </Link>
               ),
             )}
-            <Link href="/categories" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link href="/categories" className="text-sm font-medium transition-colors text-slate-200 hover:text-cyan-400">
               Categories
             </Link>
           </nav>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 xl:gap-6">
           {/* Search form - now separated from the Request a Topic button */}
           <div className="relative hidden md:block">
             <SearchBar
-              className="w-[200px] lg:w-[300px]"
+              className="w-[200px] lg:w-[280px] xl:w-[320px] bg-slate-900/50 border-white/10 text-white placeholder:text-slate-400 focus-within:border-cyan-500/50 focus-within:ring-1 focus-within:ring-cyan-500/50 rounded-full transition-all duration-300"
               onSearch={(query) => {
                 if (query) {
                   router.push(`/search?q=${encodeURIComponent(query)}`)
@@ -368,11 +368,13 @@ export function Header() {
           </div>
 
           {/* Mobile search button */}
-          <MobileSearch />
+          <div className="md:hidden">
+            <MobileSearch />
+          </div>
 
           {/* Request a Topic button - now clearly separated */}
-          <Button asChild className="ml-2" data-testid="request-topic-button">
-            <Link href="/request-topic">Request a Topic</Link>
+          <Button asChild className="hidden sm:flex bg-cyan-600 hover:bg-cyan-500 text-white rounded-full px-6 glow-primary-hover shadow-[0_0_15px_rgba(8,145,178,0.3)] border border-cyan-400/30 transition-all duration-300" data-testid="request-topic-button">
+            <Link href="/request-topic">Request Topic</Link>
           </Button>
         </div>
       </div>
@@ -530,7 +532,7 @@ function LearningDropdown({ closeDropdowns, isMobile, isTablet }: DropdownProps)
       className="grid grid-cols-3 p-6 gap-6 animate-fadeIn relative"
       onClick={closeDropdowns}
       style={{
-        backgroundImage: "url('/strategic-intelligence-default.png')",
+        backgroundImage: "url('/strategic-intelligence.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundBlendMode: "overlay",

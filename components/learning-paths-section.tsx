@@ -38,7 +38,7 @@ export function LearningPathsSection() {
       title: "Report Writing",
       humorousQuote: "Making your brilliant insights sound... well, brilliant",
       description: "Develop professional intelligence writing and presentation skills",
-      imagePath: "/report-writing-thumb.png", 
+      imagePath: "/report-writing-thumb.png",
       path: "/learning-paths/report-writing",
       difficulty: "Intermediate" as const,
       topicCount: 8,
@@ -58,7 +58,7 @@ export function LearningPathsSection() {
       title: "IBM Analyst Notebook",
       humorousQuote: "Making connections visible, one link at a time",
       description: "Learn to use IBM i2 Analyst's Notebook for link analysis and data visualization",
-      imagePath: "/analyst-notebook.png", 
+      imagePath: "/analyst-notebook.png",
       path: "/learning-paths/analyst-notebook",
       difficulty: "Intermediate" as const,
       topicCount: 8,
@@ -67,9 +67,11 @@ export function LearningPathsSection() {
   ]
 
   return (
-    <section className="py-12 md:py-20">
+    <section className="py-12 md:py-24 relative z-10">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Featured Learning Paths</h2>
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 tracking-tight text-white">
+          Featured <span className="text-gradient-primary">Learning Paths</span>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredPaths.map((path, index) => (
             <div key={path.title}>

@@ -58,7 +58,7 @@ export function preloadCategoryThumbnails() {
         imagePath = "/osint-default.png"
         break
       case "report-writing":
-        imagePath = "/report-writing-document.png"
+        imagePath = "/report-writing.png"
         break
       case "threat-assessment":
         imagePath = "/threat-assessment.png"
@@ -79,19 +79,19 @@ export function preloadCategoryThumbnails() {
         imagePath = "/crime-trend-analysis.png"
         break
       case "intelligence-tools":
-        imagePath = "/intelligence-tools-default.png"
+        imagePath = "/intelligence-tools.png"
         break
       case "source-evaluation":
         imagePath = "/source-evaluation-default.png"
         break
       case "digital-intelligence":
-        imagePath = "/digital-intelligence-default.png"
+        imagePath = "/digital-intelligence.png"
         break
       case "geospatial-intelligence":
-        imagePath = "/geospatial-intelligence-default.png"
+        imagePath = "/geospatial-intelligence.png"
         break
       case "intelligence-ethics":
-        imagePath = "/intelligence-ethics-default.png"
+        imagePath = "/intelligence-ethics.png"
         break
       case "cognitive-bias":
         imagePath = "/cognitive-bias-default.png"
@@ -103,10 +103,10 @@ export function preloadCategoryThumbnails() {
         imagePath = "/intelligence-communication-default.png"
         break
       case "analytical-techniques":
-        imagePath = "/analytical-techniques-banner.png"
+        imagePath = "/analytical-techniques.png"
         break
       case "excel-for-analysts":
-        imagePath = "/excel-dashboard-insights.png"
+        imagePath = "/excel-for-analysts.png"
         break
       default:
         imagePath = "/intelligence-analysis-workspace.png"
@@ -135,7 +135,7 @@ export function preloadCategoryThumbnail(category: string) {
   // Map category to image path (using the same mapping as above)
   switch (category) {
     case "foundations":
-      imagePath = "foundations.png"
+      imagePath = "/foundations.png"
       break
     case "strategic-intelligence":
       imagePath = "/strategic-intelligence-default.png"
@@ -150,7 +150,7 @@ export function preloadCategoryThumbnail(category: string) {
       imagePath = "/osint-default.png"
       break
     case "report-writing":
-      imagePath = "/report-writing-document.png"
+      imagePath = "/report-writing.png"
       break
     case "threat-assessment":
       imagePath = "/threat-assessment.png"
@@ -171,19 +171,19 @@ export function preloadCategoryThumbnail(category: string) {
       imagePath = "/crime-trend-analysis.png"
       break
     case "intelligence-tools":
-      imagePath = "/intelligence-tools-default.png"
+      imagePath = "/intelligence-tools.png"
       break
     case "source-evaluation":
       imagePath = "/source-evaluation-default.png"
       break
     case "digital-intelligence":
-      imagePath = "/digital-intelligence-default.png"
+      imagePath = "/digital-intelligence.png"
       break
     case "geospatial-intelligence":
-      imagePath = "/geospatial-intelligence-default.png"
+      imagePath = "/geospatial-intelligence.png"
       break
     case "intelligence-ethics":
-      imagePath = "/intelligence-ethics-default.png"
+      imagePath = "/intelligence-ethics.png"
       break
     case "cognitive-bias":
       imagePath = "/cognitive-bias-default.png"
@@ -195,10 +195,10 @@ export function preloadCategoryThumbnail(category: string) {
       imagePath = "/intelligence-communication-default.png"
       break
     case "analytical-techniques":
-      imagePath = "/analytical-techniques-banner.png"
+      imagePath = "/analytical-techniques.png"
       break
     case "excel-for-analysts":
-      imagePath = "/excel-dashboard-insights.png"
+      imagePath = "/excel-for-analysts.png"
       break
     default:
       imagePath = "/intelligence-analysis-workspace.png"

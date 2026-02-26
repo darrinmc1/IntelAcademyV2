@@ -28,7 +28,7 @@ import {
 
 type CategoryThumbnailProps = {
   category: string
-  size?: "sm" | "md" | "lg"
+  size?: "xs" | "sm" | "md" | "lg"
   className?: string
   showLabel?: boolean
   onClick?: () => void
@@ -53,12 +53,14 @@ export function CategoryThumbnail({
 
   // Size mappings
   const sizeClasses = {
+    xs: "w-6 h-6",
     sm: "w-8 h-8",
     md: "w-12 h-12",
     lg: "w-16 h-16",
   }
 
   const iconSizes = {
+    xs: 12,
     sm: 16,
     md: 24,
     lg: 32,
@@ -150,7 +152,7 @@ export function CategoryThumbnail({
       label: "Intelligence Tools",
       color: "bg-gray-700",
       icon: <Database size={iconSizes[size]} className="text-white" />,
-      bgImage: "/intelligence-tools-default.png",
+      bgImage: "/intelligence-tools.png",
     },
     "source-evaluation": {
       label: "Source Evaluation",
@@ -162,19 +164,19 @@ export function CategoryThumbnail({
       label: "Digital Intelligence",
       color: "bg-sky-600",
       icon: <Laptop size={iconSizes[size]} className="text-white" />,
-      bgImage: "/digital-intelligence-default.png",
+      bgImage: "/digital-intelligence.png",
     },
     "geospatial-intelligence": {
       label: "Geospatial Intelligence",
       color: "bg-lime-600",
       icon: <MapPin size={iconSizes[size]} className="text-white" />,
-      bgImage: "/geospatial-intelligence-default.png",
+      bgImage: "/geospatial-intelligence.png",
     },
     "intelligence-ethics": {
       label: "Intelligence Ethics",
       color: "bg-teal-600",
       icon: <Scale size={iconSizes[size]} className="text-white" />,
-      bgImage: "/intelligence-ethics-default.png",
+      bgImage: "/intelligence-ethics.png",
     },
     "cognitive-bias": {
       label: "Cognitive Bias",
@@ -198,13 +200,13 @@ export function CategoryThumbnail({
       label: "Analytical Techniques",
       color: "bg-violet-600",
       icon: <BarChart3 size={iconSizes[size]} className="text-white" />,
-      bgImage: "/analytical-techniques-banner.png",
+      bgImage: "/analytical-techniques.png",
     },
     "excel-for-analysts": {
       label: "Excel for Analysts",
       color: "bg-green-700",
       icon: <Database size={iconSizes[size]} className="text-white" />,
-      bgImage: "/excel-dashboard-insights.png",
+      bgImage: "/excel-for-analysts.png",
     },
   }
 
@@ -243,11 +245,11 @@ export function CategoryThumbnail({
       {/* Background image */}
       <div className="absolute inset-0 bg-black/20">
         <Image
-        fill
+          fill
           src={src || config.bgImage}
           alt={alt || config.label}
-      
-         //width={safeWidth}
+
+          //width={safeWidth}
           //height={safeHeight}
           className={cn(
             "object-cover w-full h-full transition-opacity duration-300",
