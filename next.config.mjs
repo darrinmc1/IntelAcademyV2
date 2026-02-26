@@ -16,7 +16,6 @@ const nextConfig = {
     styledComponents: false,
   },
 
-  // Turbopack config (replaces webpack in Next.js 16)
   turbopack: {},
 
   webpack: (config) => {

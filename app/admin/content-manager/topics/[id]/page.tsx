@@ -6,13 +6,14 @@ import { fetchPageContent } from "@/app/actions/content-manager-client"
 import { TopicEditor } from "../topic-editor"
 
 interface TopicEditorPageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
-export function generateMetadata({ params }: TopicEditorPageProps): Metadata {
-  const content = fetchPageContent("topics", params.id)
+export async function generateMetadata({ params }: TopicEditorPageProps): Promise<Metadata> {
+  const { id } = await params
+  const content = fetchPageContent("topics", id)
 
   if (!content) {
     return {
@@ -22,7 +23,7 @@ export function generateMetadata({ params }: TopicEditorPageProps): Metadata {
 
   // Extract title from content (first heading)
   const titleMatch = content.match(/# (.*?)(\n|$)/)
-  const title = titleMatch ? titleMatch[1] : params.id
+  const title = titleMatch ? titleMatch[1] : id
 
   return {
     title: `Edit: ${title} - Intel Analyst Academy`,
@@ -30,16 +31,17 @@ export function generateMetadata({ params }: TopicEditorPageProps): Metadata {
   }
 }
 
-export default function TopicEditorPage({ params }: TopicEditorPageProps) {
-  const content = fetchPageContent("topics", params.id)
+export default async function TopicEditorPage({ params }: TopicEditorPageProps) {
+  const { id } = await params
+  const content = fetchPageContent("topics", id)
 
-  if (!content && params.id !== "new") {
+  if (!content && id !== "new") {
     notFound()
   }
 
   // Extract title from content (first heading)
-  const titleMatch = content.match(/# (.*?)(\n|$)/)
-  const title = titleMatch ? titleMatch[1] : params.id
+  const titleMatch = content?.match(/# (.*?)(\n|$)/)
+  const title = titleMatch ? titleMatch[1] : id
 
   return (
     <div className="space-y-6">
@@ -52,11 +54,11 @@ export default function TopicEditorPage({ params }: TopicEditorPageProps) {
           Back to Topics
         </Link>
         <h1 className="text-2xl font-bold tracking-tight">
-          {params.id === "new" ? "Create New Topic" : `Edit: ${title}`}
+          {id === "new" ? "Create New Topic" : `Edit: ${title}`}
         </h1>
       </div>
 
-      <TopicEditor topicId={params.id} initialContent={content} isNew={params.id === "new"} />
+      <TopicEditor topicId={id} initialContent={content} isNew={id === "new"} />
     </div>
   )
 }

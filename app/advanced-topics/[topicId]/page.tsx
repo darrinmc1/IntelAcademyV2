@@ -14,13 +14,13 @@ export async function generateStaticParams() {
 }
 
 interface AdvancedTopicPageProps {
-  params: {
+  params: Promise<{
     topicId: string
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: AdvancedTopicPageProps): Promise<Metadata> {
-  const topicId = params.topicId
+  const { topicId } = await params
   const topic = advancedTopicRequirements[topicId]
 
   if (!topic) {
@@ -35,8 +35,8 @@ export async function generateMetadata({ params }: AdvancedTopicPageProps): Prom
   }
 }
 
-export default function AdvancedTopicPage({ params }: AdvancedTopicPageProps) {
-  const topicId = params.topicId
+export default async function AdvancedTopicPage({ params }: AdvancedTopicPageProps) {
+  const { topicId } = await params
   const topic = advancedTopicRequirements[topicId]
 
   if (!topic) {

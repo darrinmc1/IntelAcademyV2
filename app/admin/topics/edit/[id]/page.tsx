@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, use } from "react"
 import Link from "next/link"
 import { ArrowLeft, Save } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -13,7 +13,9 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { topicStatuses } from "@/utils/topic-status"
 
-export default function EditTopicPage({ params }: { params: { id: string } }) {
+export default function EditTopicPage({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = use(params)
+  const topicId = resolvedParams.id
   const [topic, setTopic] = useState({
     title: "",
     description: "",
@@ -25,7 +27,7 @@ export default function EditTopicPage({ params }: { params: { id: string } }) {
 
   useEffect(() => {
     // Find the topic by ID (in a real app, this would be an API call)
-    const id = Number.parseInt(params.id)
+    const id = Number.parseInt(topicId)
     if (!isNaN(id) && id > 0 && id <= topicStatuses.length) {
       const foundTopic = topicStatuses[id - 1]
       setTopic({
@@ -37,7 +39,7 @@ export default function EditTopicPage({ params }: { params: { id: string } }) {
       })
     }
     setLoading(false)
-  }, [params.id])
+  }, [topicId])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()

@@ -1,5 +1,10 @@
 "use client"
+import Link from "next/link"
 import { Image } from "@/components/image"
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
+import { Button } from "@/components/ui/button"
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
+import { ChevronRight } from "lucide-react"
 
 interface AdvancedTopic {
   id: string
@@ -259,11 +264,10 @@ function AdvancedTopicCard({ topic }: { topic: AdvancedTopic }) {
         />
         <div className="absolute top-2 right-2">
           <span
-            className={`px-2 py-1 text-xs font-medium rounded-full ${
-              topic.difficulty === "expert"
+            className={`px-2 py-1 text-xs font-medium rounded-full ${topic.difficulty === "expert"
                 ? "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300"
                 : "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300"
-            }`}
+              }`}
           >
             {topic.difficulty === "expert" ? "Expert" : "Advanced"}
           </span>

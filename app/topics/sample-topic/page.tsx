@@ -3,6 +3,7 @@ import { TopicHeader } from "@/components/topic-header"
 import { LessonContent } from "@/components/lesson-content"
 import { FullWidthSection } from "@/components/full-width-section"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function SampleTopicPage() {
   return (
@@ -126,18 +127,18 @@ export default function SampleTopicPage() {
                 <p className="text-sm text-muted-foreground mb-3">
                   Learn the systematic process used to convert information into intelligence
                 </p>
-                <a href="/topics/intelligence-cycle" className="text-sm font-medium text-primary">
+                <Link href="/topics/intelligence-cycle" className="text-sm font-medium text-primary">
                   Start Learning →
-                </a>
+                </Link>
               </div>
               <div className="border rounded-lg p-4 bg-card hover:shadow-md transition-shadow">
                 <h4 className="font-medium mb-1">Types of Intelligence</h4>
                 <p className="text-sm text-muted-foreground mb-3">
                   Explore the different categories and classifications of intelligence
                 </p>
-                <a href="/topics/intelligence-types" className="text-sm font-medium text-primary">
+                <Link href="/topics/intelligence-types" className="text-sm font-medium text-primary">
                   Start Learning →
-                </a>
+                </Link>
               </div>
             </div>
           </div>

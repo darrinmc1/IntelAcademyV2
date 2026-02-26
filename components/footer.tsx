@@ -98,14 +98,14 @@ export function Footer() {
                 </a>
               </li>
               <li className="pt-2">
-                <a href="#" className="text-sm text-slate-500 hover:text-slate-300 transition-colors duration-300">
+                <Link href="/privacy" className="text-sm text-slate-500 hover:text-slate-300 transition-colors duration-300">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-slate-500 hover:text-slate-300 transition-colors duration-300">
+                <Link href="/terms" className="text-sm text-slate-500 hover:text-slate-300 transition-colors duration-300">
                   Terms of Service
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

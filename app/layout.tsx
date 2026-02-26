@@ -26,7 +26,6 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${inter.className} min-h-screen bg-slate-950 text-slate-50 flex flex-col relative`}>
         <AnimatedBackground />
-        {/* <EnvWarningSuppressor /> */}
         <Header />
         <main className="flex-grow z-10">
           <LayoutWrapper>

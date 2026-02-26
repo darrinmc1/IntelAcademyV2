@@ -17,9 +17,9 @@ const hasDedicatedPage = async (slug: string) => {
 }
 
 interface TopicPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 
@@ -44,7 +44,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: TopicPageProps): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params;
 
   if (!slug) {
     return {
@@ -62,7 +62,8 @@ export async function generateMetadata({ params }: TopicPageProps): Promise<Meta
 }
 
 export default async function TopicPage({ params }: TopicPageProps) {
-  const { slug } = params;
+  const resolvedParams = await params
+  const { slug } = resolvedParams;
 
   const hasPage = await hasDedicatedPage(slug);
   if (!hasPage) {
@@ -73,5 +74,5 @@ export default async function TopicPage({ params }: TopicPageProps) {
   // Get actual page content from the dedicated page
   const { default: ContentComponent } = await import(`@/app/topics/${slug}/page`);
 
-  return <ContentComponent params={params} />;
+  return <ContentComponent params={resolvedParams} />;
 }

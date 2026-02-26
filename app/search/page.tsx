@@ -6,19 +6,20 @@ import { Skeleton } from "@/components/ui/skeleton"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
 
-interface SearchPageProps {
-  searchParams: { q?: string }
-}
-
-export default function SearchPage({ searchParams }: SearchPageProps) {
-  const query = searchParams.q || ""
+export default async function SearchPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string }>
+}) {
+  const { q } = await searchParams
+  const query = q || ""
 
   return (
     <div className="container py-8">
       <h1 className="text-3xl font-bold mb-6">Search Intelligence Academy</h1>
 
       <div className="mb-8">
-        <SearchBar initialQuery={query} />
+        <SearchBar defaultValue={query} />
       </div>
 
       <Suspense fallback={<SearchSkeleton />}>

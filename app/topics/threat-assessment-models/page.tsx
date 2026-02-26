@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/components/ui/use-toast"
 
-export function RequestTopicForm() {
+function RequestTopicForm() {
   const { toast } = useToast()
   const [email, setEmail] = useState("")
   const [topic, setTopic] = useState("")
@@ -95,5 +95,17 @@ export function RequestTopicForm() {
         </form>
       </CardContent>
     </Card>
+  )
+}
+
+export default function ThreatAssessmentModelsPage() {
+  return (
+    <div className="container py-8 max-w-4xl mx-auto">
+      <h1 className="text-3xl font-bold mb-6">Threat Assessment Models</h1>
+      <p className="mb-8 text-lg text-muted-foreground">
+        This topic is currently in development. We are working on comprehensive material for various threat assessment methodologies and models.
+      </p>
+      <RequestTopicForm />
+    </div>
   )
 }

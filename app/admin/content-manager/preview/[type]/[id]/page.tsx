@@ -7,14 +7,14 @@ import Link from "next/link"
 import ContentRenderer from "@/components/content-renderer"
 
 interface PreviewPageProps {
-  params: {
+  params: Promise<{
     type: string
     id: string
-  }
+  }>
 }
 
-export default function ContentPreviewPage({ params }: PreviewPageProps) {
-  const { type, id } = params
+export default async function ContentPreviewPage({ params }: PreviewPageProps) {
+  const { type, id } = await params
 
   // Validate page type
   const validTypes = ["topic", "learning-path", "advanced-topic", "other"]
