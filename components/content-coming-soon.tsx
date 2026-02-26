@@ -4,12 +4,19 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
 interface ContentComingSoonProps {
-  topicTitle: string
+  topicTitle?: string
+  pageName?: string
   category?: string
   estimatedDate?: string
 }
 
-export function ContentComingSoon({ topicTitle, category, estimatedDate }: ContentComingSoonProps) {
+export function ContentComingSoon({
+  topicTitle,
+  pageName,
+  category,
+  estimatedDate
+}: ContentComingSoonProps) {
+  const displayTitle = topicTitle || pageName || "Coming Soon"
   return (
     <div className="container max-w-4xl py-12">
       <Link
@@ -25,7 +32,7 @@ export function ContentComingSoon({ topicTitle, category, estimatedDate }: Conte
           <div className="mx-auto bg-muted rounded-full w-12 h-12 flex items-center justify-center mb-4">
             <CalendarClock className="h-6 w-6 text-muted-foreground" />
           </div>
-          <CardTitle className="text-2xl md:text-3xl">{topicTitle}</CardTitle>
+          <CardTitle className="text-2xl md:text-3xl">{displayTitle}</CardTitle>
           {category && <CardDescription className="text-base">Category: {category}</CardDescription>}
         </CardHeader>
         <CardContent className="text-center space-y-4 pb-6">

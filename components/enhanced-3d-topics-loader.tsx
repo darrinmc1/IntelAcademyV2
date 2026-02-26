@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic"
 
 const Enhanced3DTopicsPage = dynamic(
-  () => import("../enhanced-3d/page").then((mod) => mod.default),
+  () => import("@/components/enhanced-3d-topics-client").then((mod) => mod.default || mod),
   { ssr: false }
 )
 

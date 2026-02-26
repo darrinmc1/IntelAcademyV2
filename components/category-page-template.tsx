@@ -1,4 +1,4 @@
-import Image from "next/image"
+import { Image } from "@/components/image"
 import { StartCourseButton } from "@/components/start-course-button"
 
 interface CategoryPageTemplateProps {

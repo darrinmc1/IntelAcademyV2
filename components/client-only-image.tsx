@@ -13,6 +13,8 @@ interface ClientOnlyImageProps {
   fill?: boolean
   sizes?: string
   fallbackSrc?: string
+  unoptimized?: boolean
+  [key: string]: any
 }
 
 export function ClientOnlyImage({
@@ -25,6 +27,8 @@ export function ClientOnlyImage({
   fill = false,
   sizes,
   fallbackSrc = "/placeholder.svg",
+  unoptimized = false,
+  ...props
 }: ClientOnlyImageProps) {
   const [mounted, setMounted] = useState(false)
 
@@ -51,6 +55,8 @@ export function ClientOnlyImage({
       priority={priority}
       fill={fill}
       sizes={sizes}
+      unoptimized={unoptimized}
+      {...props}
     />
   )
 }

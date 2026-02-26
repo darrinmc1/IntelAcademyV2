@@ -3,14 +3,19 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 interface LetsGoButtonProps {
-  href: string
-  children: React.ReactNode
+  href?: string
+  path?: string // alias for href
+  children?: React.ReactNode
+  size?: "default" | "sm" | "lg" | "icon"
+  [key: string]: any
 }
 
-export function LetsGoButton({ href, children }: LetsGoButtonProps) {
+export function LetsGoButton({ href, path, children, size = "lg", ...props }: LetsGoButtonProps) {
+  const displayHref = href || path || "#"
+  const displayText = children || "Let's Go"
   return (
-    <Button asChild size="lg" className="bg-black hover:bg-gray-800 text-white">
-      <Link href={href}>{children}</Link>
+    <Button asChild size={size} className="bg-black hover:bg-gray-800 text-white" {...props}>
+      <Link href={displayHref}>{displayText}</Link>
     </Button>
   )
 }

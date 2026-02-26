@@ -2,11 +2,13 @@ import { WhatsNextCompact } from "@/components/whats-next-compact"
 import { getWhatsNextRecommendations } from "@/data/whats-next-recommendations"
 
 interface PathWhatsNextProps {
-  pathSlug: string
+  pathSlug?: string
+  currentPathSlug?: string
 }
 
-export function PathWhatsNext({ pathSlug }: PathWhatsNextProps) {
-  const recommendations = getWhatsNextRecommendations(pathSlug as any)
+export function PathWhatsNext({ pathSlug, currentPathSlug }: PathWhatsNextProps) {
+  const displaySlug = pathSlug || currentPathSlug || ""
+  const recommendations = getWhatsNextRecommendations(displaySlug as any)
 
   return (
     <WhatsNextCompact

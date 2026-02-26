@@ -4,12 +4,19 @@ import { cn } from "@/lib/utils"
 
 interface StartCourseButtonProps {
   path: string
+  children?: React.ReactNode
   className?: string
   variant?: "default" | "outline" | "subtle"
   size?: "sm" | "default" | "lg"
 }
 
-export function StartCourseButton({ path, className, variant = "default", size = "default" }: StartCourseButtonProps) {
+export function StartCourseButton({
+  path,
+  children,
+  className,
+  variant = "default",
+  size = "default"
+}: StartCourseButtonProps) {
   const variantStyles = {
     default: "bg-black text-white hover:bg-yellow-500 hover:text-black",
     outline: "bg-transparent border-2 border-black text-black hover:bg-black hover:text-white",
@@ -36,7 +43,7 @@ export function StartCourseButton({ path, className, variant = "default", size =
         className,
       )}
     >
-      <span className="mr-1">Start</span>
+      {children || <span className="mr-1">Start</span>}
       <ChevronRight className="h-4 w-4 group-hover:animate-bounce-right" />
     </Link>
   )

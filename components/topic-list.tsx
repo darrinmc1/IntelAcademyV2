@@ -13,10 +13,10 @@ interface Topic {
 
 interface TopicListProps {
   topics: Topic[]
-  category: string
+  category?: string
 }
 
-export function TopicList({ topics, category }: TopicListProps) {
+export function TopicList({ topics, category = "general" }: TopicListProps) {
   if (!topics || topics.length === 0) {
     return (
       <div className="p-4 text-center">

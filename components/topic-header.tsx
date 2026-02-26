@@ -3,10 +3,14 @@ import { SimpleImage } from "@/components/simple-image"
 
 interface TopicHeaderProps {
   title: string
-  description: string
+  description?: string
+  subtitle?: string
   readTime?: number
   category?: string
   imageSrc?: string
+  image?: string
+  imageUrl?: string
+  imageAlt?: string
   className?: string
   publishDate?: string
 }
@@ -14,20 +18,27 @@ interface TopicHeaderProps {
 export function TopicHeader({
   title,
   description,
+  subtitle,
   readTime,
   category,
   imageSrc,
+  image,
+  imageUrl,
+  imageAlt,
   className,
   publishDate,
 }: TopicHeaderProps) {
+  const displayImage = imageSrc || image || imageUrl
+  const altText = imageAlt || title
+  const displayDescription = description || subtitle
   return (
     <div className={`relative overflow-hidden rounded-xl border bg-background mb-6 ${className}`}>
       <div className="absolute inset-0 z-0">
-        {imageSrc ? (
+        {displayImage ? (
           <SimpleImage
-            src={imageSrc}
+            src={displayImage}
             fallbackSrc={`/placeholder.svg?height=400&width=1200&query=${encodeURIComponent(title)}`}
-            alt={title}
+            alt={altText}
             fill
             className="object-cover opacity-15"
             priority
@@ -45,7 +56,7 @@ export function TopicHeader({
           )}
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">{title}</h1>
-          <p className="text-xl text-muted-foreground mb-6 leading-relaxed max-w-3xl">{description}</p>
+          <p className="text-xl text-muted-foreground mb-6 leading-relaxed max-w-3xl">{displayDescription}</p>
 
           <div className="flex flex-wrap items-center gap-6 text-base text-muted-foreground">
             {readTime && (

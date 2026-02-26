@@ -7,8 +7,8 @@ interface CategoryImageProps {
   category: string
   fallbackSrc?: string
   alt?: string
-  width?: number | string
-  height?: number | string
+  width?: any
+  height?: any
   className?: string
 }
 
@@ -19,8 +19,8 @@ export function CategoryImage({ category, fallbackSrc, alt, width, height, class
     <Image
       src={imagePath}
       alt={alt || `${category} category image`}
-      width={width}
-      height={height}
+      width={width as any}
+      height={height as any}
       imageType="card"
       className={className}
       fallbackSrc={fallbackSrc}

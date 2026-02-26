@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { DirectImage } from "@/components/direct-image"
+import { Image } from "@/components/image"
 import { Button } from "@/components/ui/button"
 import { ChevronRight } from "lucide-react"
 
@@ -14,7 +14,7 @@ export function CompactLearningPathItem({ title, description, slug, category }: 
   return (
     <div className="flex flex-col md:flex-row items-center gap-4 p-3 rounded-lg border hover:bg-muted/50 transition-colors">
       <div className="relative h-16 w-16 overflow-hidden rounded-md flex-shrink-0">
-        <DirectImage
+        <Image
           src={`/learning-path-thumbnails/${category}-thumb.png`}
           alt={title}
           fill

@@ -20,6 +20,7 @@ import {
   Eye,
   Database,
   Award,
+  Presentation,
   type LucideIcon,
 } from "lucide-react"
 
@@ -38,6 +39,8 @@ export interface WhatsNextItem {
   description: string
   href: string
   icon?: string
+  estimatedTime?: string
+  [key: string]: any // Flexible for legacy props
 }
 
 // ─── Icon map for string → component lookup ──────────────────────────────────
@@ -62,6 +65,7 @@ const ICON_MAP: Record<string, LucideIcon> = {
   Database,
   Award,
   ArrowRight,
+  Presentation,
 }
 
 function DynamicIcon({ name, className }: { name?: string; className?: string }) {
@@ -75,6 +79,10 @@ interface WhatsNextProps {
   // New API
   title?: string
   items?: WhatsNextItem[]
+  topics?: WhatsNextItem[]
+  nextTopics?: WhatsNextItem[]
+  suggestions?: WhatsNextItem[]
+  currentPath?: string
   // Legacy API
   anotherTopic?: NextTopicOption
   moreLearning?: NextTopicOption
@@ -84,12 +92,17 @@ interface WhatsNextProps {
 export function WhatsNext({
   title,
   items,
+  topics,
+  nextTopics,
+  suggestions,
   anotherTopic,
   moreLearning,
   advancedLearning,
 }: WhatsNextProps) {
+  const displayItems = items || topics || nextTopics || suggestions
+
   // ── New "items array" API ─────────────────────────────────────────────────
-  if (items && items.length > 0) {
+  if (displayItems && displayItems.length > 0) {
     return (
       <section className="mt-16 py-10 border-t border-gray-200">
         <div className="container">
@@ -101,7 +114,7 @@ export function WhatsNext({
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {items.map((item) => (
+            {displayItems.map((item) => (
               <div
                 key={item.href}
                 className="bg-white rounded-lg shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow flex flex-col justify-between"

@@ -8,8 +8,8 @@ interface BannerImageProps {
   alt: string
   large?: boolean
   priority?: boolean
-  width?: number | string
-  height?: number | string
+  width?: any
+  height?: any
   className?: string
 }
 
@@ -35,8 +35,8 @@ export function BannerImage({
     <Image
       src={imageSrc || "/placeholder.svg"}
       alt={alt}
-      width={width}
-      height={height}
+      width={width as any}
+      height={height as any}
       imageType="banner"
       priority={priority}
       className={className}
