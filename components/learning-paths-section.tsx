@@ -1,4 +1,3 @@
-import TargetProfilingPage from "@/app/learning-paths/target-profiling/page"
 import { LearningPathCard } from "@/components/learning-path-card"
 
 export function LearningPathsSection() {

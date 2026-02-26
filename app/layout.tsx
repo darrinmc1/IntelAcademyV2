@@ -3,7 +3,6 @@ import "./globals.css"
 import "./button-animations.css"
 
 import { Inter } from "next/font/google"
-import { EnvWarningSuppressor } from "@/components/env-warning-suppressor"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -13,7 +12,7 @@ import { AnimatedBackground } from "@/components/ui/animated-background"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "The The Intel Analyst Academy",
+  title: "The Intel Analyst Academy",
   description: "Learn intelligence analysis techniques and methodologies",
   generator: 'v0.dev'
 }
