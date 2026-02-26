@@ -6,7 +6,7 @@ export interface Subtopic {
   title: string
   slug: string
   description: string
-  status: "draft" | "published" | "review"
+  status: "draft" | "published" | "review" | "in-development" | "coming-soon"
   lastUpdated: string
   views: number
 }
@@ -17,7 +17,7 @@ export interface MainTopic {
   slug: string
   category: string
   description: string
-  status: "draft" | "published" | "review"
+  status: "draft" | "published" | "review" | "in-development" | "coming-soon"
   lastUpdated: string
   views: number
   subtopics: Subtopic[]
@@ -29,7 +29,7 @@ export interface FlattenedTopic {
   slug: string
   category: string
   description: string
-  status: "draft" | "published" | "review"
+  status: "draft" | "published" | "review" | "in-development" | "coming-soon"
   lastUpdated: string
   views: number
   parentId?: number
@@ -47,18 +47,18 @@ export async function importTopicsFromCSV(csvData: string): Promise<MainTopic[]>
         const topics: MainTopic[] = []
         const topicMap: Record<number, MainTopic> = {}
 
-        results.data.forEach((row) => {
+        results.data.forEach((row: any) => {
           const topicId = Number.parseInt(row.id)
           const isSubtopic = row.isSubtopic === "true"
           const parentId = row.parentId ? Number.parseInt(row.parentId) : undefined
 
-          const topicData = {
+          const topicData: MainTopic = {
             id: topicId,
             title: row.title,
             slug: row.slug,
             category: row.category,
             description: row.description,
-            status: row.status,
+            status: row.status as any,
             lastUpdated: row.lastUpdated,
             views: Number.parseInt(row.views),
             subtopics: [],
@@ -70,7 +70,7 @@ export async function importTopicsFromCSV(csvData: string): Promise<MainTopic[]>
               title: row.title,
               slug: row.slug,
               description: row.description,
-              status: row.status,
+              status: row.status as any,
               lastUpdated: row.lastUpdated,
               views: Number.parseInt(row.views),
             })

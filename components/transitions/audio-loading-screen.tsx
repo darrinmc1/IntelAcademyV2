@@ -18,16 +18,16 @@ export function AudioLoadingScreen({
   const [currentMessage, setCurrentMessage] = useState(message)
   const { playSound } = useAudioCues({ volume: 0.15 })
 
-  const loadingMessages = [
-    "Initializing secure connection...",
-    "Authenticating credentials...",
-    "Loading intelligence modules...",
-    "Preparing workspace...",
-    "Access granted.",
-  ]
-
   useEffect(() => {
     if (!isLoading) return
+
+    const loadingMessages = [
+      "Initializing secure connection...",
+      "Authenticating credentials...",
+      "Loading intelligence modules...",
+      "Preparing workspace...",
+      "Access granted.",
+    ]
 
     // Play initial loading sound
     playSound("loadingStart")

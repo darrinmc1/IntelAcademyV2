@@ -46,7 +46,7 @@ export default function SearchVerificationPage() {
               <CardDescription>Enter a search query to test the search functionality manually.</CardDescription>
             </CardHeader>
             <CardContent>
-              <SearchBar initialQuery={query} onSearch={handleSearch} />
+              <SearchBar defaultValue={query} onSearch={handleSearch} />
             </CardContent>
           </Card>
 

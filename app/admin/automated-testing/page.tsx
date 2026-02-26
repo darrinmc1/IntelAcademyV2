@@ -497,7 +497,7 @@ export default function AutomatedTestingPage() {
               </Card>
 
               {/* Test Component */}
-              <div ref={(el) => (testRefs.current[index] = el)} className="max-w-sm">
+              <div ref={(el) => { testRefs.current[index] = el }} className="max-w-sm">
                 <EnhancedLearningPathCard {...testCase.data} />
               </div>
             </div>

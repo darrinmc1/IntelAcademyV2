@@ -230,13 +230,10 @@ export default function DataValidationPage() {
 
               <div className="max-w-sm">
                 <LearningPathCard
-                  title={testScenarios[selectedScenario].data.title as any}
-                  description={testScenarios[selectedScenario].data.description as any}
-                  image={testScenarios[selectedScenario].data.image as any}
-                  href={testScenarios[selectedScenario].data.href as any}
-                  difficulty={testScenarios[selectedScenario].data.difficulty as any}
-                  topics={testScenarios[selectedScenario].data.topics as any}
-                  estimatedTime={testScenarios[selectedScenario].data.estimatedTime as any}
+                  {...(testScenarios[selectedScenario].data as any)}
+                  humorousQuote={(testScenarios[selectedScenario].data as any).humorousQuote || ""}
+                  enable3D={false}
+                  intensity="subtle"
                 />
               </div>
             </div>

@@ -22,94 +22,93 @@ interface ProcessLink {
   condition?: string
 }
 
+const processData = {
+  nodes: [
+    {
+      id: "requirements",
+      name: "Planning & Direction",
+      type: "input" as const,
+      description: "Identify intelligence requirements and establish collection priorities",
+      duration: "1-2 days",
+      stakeholders: ["Intelligence Officers", "Decision Makers", "Analysts"],
+    },
+    {
+      id: "collection",
+      name: "Collection",
+      type: "process" as const,
+      description: "Gather raw information from various sources",
+      duration: "1-30 days",
+      stakeholders: ["Collection Officers", "Technical Specialists", "Field Agents"],
+    },
+    {
+      id: "processing",
+      name: "Processing",
+      type: "process" as const,
+      description: "Convert raw data into usable format",
+      duration: "2-5 days",
+      stakeholders: ["Data Analysts", "Technical Staff", "Linguists"],
+    },
+    {
+      id: "quality_check",
+      name: "Quality Assessment",
+      type: "decision" as const,
+      description: "Evaluate data quality and reliability",
+      duration: "1 day",
+      stakeholders: ["Quality Assurance", "Senior Analysts"],
+    },
+    {
+      id: "analysis",
+      name: "Analysis & Production",
+      type: "process" as const,
+      description: "Analyze processed information and create intelligence products",
+      duration: "3-10 days",
+      stakeholders: ["Intelligence Analysts", "Subject Matter Experts", "Editors"],
+    },
+    {
+      id: "review",
+      name: "Review & Validation",
+      type: "decision" as const,
+      description: "Review analysis for accuracy and completeness",
+      duration: "1-2 days",
+      stakeholders: ["Senior Analysts", "Division Chiefs", "Quality Control"],
+    },
+    {
+      id: "dissemination",
+      name: "Dissemination",
+      type: "output" as const,
+      description: "Distribute intelligence products to end users",
+      duration: "1 day",
+      stakeholders: ["Distribution Officers", "Security Personnel", "End Users"],
+    },
+    {
+      id: "feedback",
+      name: "Feedback & Evaluation",
+      type: "process" as const,
+      description: "Collect feedback and evaluate effectiveness",
+      duration: "Ongoing",
+      stakeholders: ["End Users", "Intelligence Officers", "Analysts"],
+    },
+  ],
+  links: [
+    { source: "requirements", target: "collection", label: "Collection Plan" },
+    { source: "collection", target: "processing", label: "Raw Data" },
+    { source: "processing", target: "quality_check", label: "Processed Data" },
+    { source: "quality_check", target: "analysis", label: "Approved", condition: "Quality OK" },
+    { source: "quality_check", target: "collection", label: "Rejected", condition: "Quality Issues" },
+    { source: "analysis", target: "review", label: "Draft Product" },
+    { source: "review", target: "dissemination", label: "Approved", condition: "Review Passed" },
+    { source: "review", target: "analysis", label: "Revisions", condition: "Needs Changes" },
+    { source: "dissemination", target: "feedback", label: "Intelligence Product" },
+    { source: "feedback", target: "requirements", label: "New Requirements" },
+  ],
+}
+
 const IntelligenceProcessFlow: React.FC = () => {
   const svgRef = useRef<SVGSVGElement>(null)
   const [selectedNode, setSelectedNode] = useState<ProcessNode | null>(null)
   const [animationStep, setAnimationStep] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
   const [dimensions, setDimensions] = useState({ width: 1000, height: 600 })
-
-  // Intelligence cycle process data
-  const processData = {
-    nodes: [
-      {
-        id: "requirements",
-        name: "Planning & Direction",
-        type: "input" as const,
-        description: "Identify intelligence requirements and establish collection priorities",
-        duration: "1-2 days",
-        stakeholders: ["Intelligence Officers", "Decision Makers", "Analysts"],
-      },
-      {
-        id: "collection",
-        name: "Collection",
-        type: "process" as const,
-        description: "Gather raw information from various sources",
-        duration: "1-30 days",
-        stakeholders: ["Collection Officers", "Technical Specialists", "Field Agents"],
-      },
-      {
-        id: "processing",
-        name: "Processing",
-        type: "process" as const,
-        description: "Convert raw data into usable format",
-        duration: "2-5 days",
-        stakeholders: ["Data Analysts", "Technical Staff", "Linguists"],
-      },
-      {
-        id: "quality_check",
-        name: "Quality Assessment",
-        type: "decision" as const,
-        description: "Evaluate data quality and reliability",
-        duration: "1 day",
-        stakeholders: ["Quality Assurance", "Senior Analysts"],
-      },
-      {
-        id: "analysis",
-        name: "Analysis & Production",
-        type: "process" as const,
-        description: "Analyze processed information and create intelligence products",
-        duration: "3-10 days",
-        stakeholders: ["Intelligence Analysts", "Subject Matter Experts", "Editors"],
-      },
-      {
-        id: "review",
-        name: "Review & Validation",
-        type: "decision" as const,
-        description: "Review analysis for accuracy and completeness",
-        duration: "1-2 days",
-        stakeholders: ["Senior Analysts", "Division Chiefs", "Quality Control"],
-      },
-      {
-        id: "dissemination",
-        name: "Dissemination",
-        type: "output" as const,
-        description: "Distribute intelligence products to end users",
-        duration: "1 day",
-        stakeholders: ["Distribution Officers", "Security Personnel", "End Users"],
-      },
-      {
-        id: "feedback",
-        name: "Feedback & Evaluation",
-        type: "process" as const,
-        description: "Collect feedback and evaluate effectiveness",
-        duration: "Ongoing",
-        stakeholders: ["End Users", "Intelligence Officers", "Analysts"],
-      },
-    ],
-    links: [
-      { source: "requirements", target: "collection", label: "Collection Plan" },
-      { source: "collection", target: "processing", label: "Raw Data" },
-      { source: "processing", target: "quality_check", label: "Processed Data" },
-      { source: "quality_check", target: "analysis", label: "Approved", condition: "Quality OK" },
-      { source: "quality_check", target: "collection", label: "Rejected", condition: "Quality Issues" },
-      { source: "analysis", target: "review", label: "Draft Product" },
-      { source: "review", target: "dissemination", label: "Approved", condition: "Review Passed" },
-      { source: "review", target: "analysis", label: "Revisions", condition: "Needs Changes" },
-      { source: "dissemination", target: "feedback", label: "Intelligence Product" },
-      { source: "feedback", target: "requirements", label: "New Requirements" },
-    ],
-  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -394,9 +393,8 @@ const IntelligenceProcessFlow: React.FC = () => {
         <button
           onClick={startAnimation}
           disabled={isAnimating}
-          className={`px-4 py-2 text-sm rounded ${
-            isAnimating ? "bg-gray-300 text-gray-500 cursor-not-allowed" : "bg-blue-600 text-white hover:bg-blue-700"
-          }`}
+          className={`px-4 py-2 text-sm rounded ${isAnimating ? "bg-gray-300 text-gray-500 cursor-not-allowed" : "bg-blue-600 text-white hover:bg-blue-700"
+            }`}
         >
           {isAnimating ? "Animating..." : "Animate Flow"}
         </button>

@@ -769,7 +769,7 @@ export default function TopicsPage() {
       // Update each subtopic status
       const updatedSubtopics = topic.subtopics.map((subtopic) => {
         const statusInfo = topicStatuses.find((ts) => ts.slug === subtopic.slug)
-        let status = "in-development"
+        let status: any = "in-development"
 
         if (statusInfo) {
           if (statusInfo.hasContent === true) {
@@ -783,15 +783,17 @@ export default function TopicsPage() {
 
         return {
           ...subtopic,
-          status,
+          status: status as any,
         }
       })
 
-      return {
+      const finalTopic: MainTopic = {
         ...topic,
-        status: hasContent ? "published" : "draft",
-        subtopics: updatedSubtopics,
+        status: (hasContent ? "published" : "draft") as any,
+        subtopics: updatedSubtopics as any[],
       }
+
+      return finalTopic
     })
 
     setTopics(updatedTopics)

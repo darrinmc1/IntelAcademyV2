@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Next.js Dev",
+      "runtimeExecutable": "F:\\MCPServer\\Node.js\\npm.cmd",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3000
+    },
+    {
+      "name": "Next.js Dev (Clean Cache)",
+      "runtimeExecutable": "F:\\MCPServer\\Node.js\\npm.cmd",
+      "runtimeArgs": ["run", "dev:clean"],
+      "port": 3000
+    },
+    {
+      "name": "Next.js Production",
+      "runtimeExecutable": "F:\\MCPServer\\Node.js\\npm.cmd",
+      "runtimeArgs": ["run", "start"],
+      "port": 3000
+    }
+  ]
+}

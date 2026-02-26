@@ -1,5 +1,17 @@
+import type { Metadata } from "next"
 import { LearningPathCard3D } from "@/components/3d-effects/learning-path-card-3d"
 import { learningPaths } from "@/data/learning-paths"
+
+export const metadata: Metadata = {
+  title: "Intelligence Analysis Learning Paths | The Intel Analyst Academy",
+  description:
+    "Explore structured learning paths covering OSINT, strategic intelligence, threat assessment, geospatial analysis, and more. Start your journey from beginner to advanced.",
+  openGraph: {
+    title: "Intelligence Analysis Learning Paths",
+    description: "Master intelligence analysis through structured, expert-designed learning paths.",
+    type: "website",
+  },
+}
 
 export default function LearningPathsPage() {
   return (

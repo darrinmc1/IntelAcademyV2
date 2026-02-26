@@ -1,8 +1,7 @@
 "use client"
 
-import type React from "react"
-
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
+import Link from "next/link"
 
 export function ErrorBoundary({
   children,
@@ -28,9 +27,9 @@ export function ErrorBoundary({
           <p className="mb-6 text-gray-600">We're sorry, but something went wrong. Please try again later.</p>
 
           <div className="mt-8">
-            <a href="/" className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+            <Link href="/" className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
               Return to Home
-            </a>
+            </Link>
           </div>
         </div>
       </div>

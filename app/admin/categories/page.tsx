@@ -243,7 +243,7 @@ export default function AdminCategoriesPage() {
         if (!inverseExists) {
           const updatedTargetCategory = {
             ...targetCategory,
-            relationships: [...targetCategory.relationships, { type: "related", targetId: selectedCategory.id }],
+            relationships: [...targetCategory.relationships, { type: "related" as const, targetId: selectedCategory.id }],
           }
           setCategories(categories.map((cat) => (cat.id === targetCategory.id ? updatedTargetCategory : cat)))
         }
@@ -296,7 +296,7 @@ export default function AdminCategoriesPage() {
         if (!inverseExists) {
           const updatedTargetCategory = {
             ...targetCategory,
-            relationships: [...targetCategory.relationships, { type: "related", targetId: sourceId }],
+            relationships: [...targetCategory.relationships, { type: "related" as const, targetId: sourceId }],
           }
           updatedCategories = updatedCategories.map((cat) => (cat.id === targetId ? updatedTargetCategory : cat))
         }

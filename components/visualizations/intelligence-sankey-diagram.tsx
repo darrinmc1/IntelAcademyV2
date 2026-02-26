@@ -10,13 +10,18 @@ interface SankeyNode {
   name: string
   category: string
   value?: number
+  x0?: number
+  x1?: number
+  y0?: number
+  y1?: number
 }
 
 interface SankeyLink {
-  source: string
-  target: string
+  source: any
+  target: any
   value: number
   type: string
+  width?: number
 }
 
 interface SankeyData {
@@ -24,75 +29,75 @@ interface SankeyData {
   links: SankeyLink[]
 }
 
+// Sample data representing intelligence data flow
+const data: SankeyData = {
+  nodes: [
+    // Raw Data Sources
+    { id: "social_media", name: "Social Media", category: "source" },
+    { id: "news_feeds", name: "News Feeds", category: "source" },
+    { id: "satellite_imagery", name: "Satellite Imagery", category: "source" },
+    { id: "human_sources", name: "Human Sources", category: "source" },
+    { id: "signals_intercept", name: "Signals Intercept", category: "source" },
+
+    // Collection Systems
+    { id: "osint_collection", name: "OSINT Collection", category: "collection" },
+    { id: "humint_collection", name: "HUMINT Collection", category: "collection" },
+    { id: "sigint_collection", name: "SIGINT Collection", category: "collection" },
+    { id: "geoint_collection", name: "GEOINT Collection", category: "collection" },
+
+    // Processing Systems
+    { id: "data_fusion", name: "Data Fusion", category: "processing" },
+    { id: "pattern_analysis", name: "Pattern Analysis", category: "processing" },
+    { id: "correlation_engine", name: "Correlation Engine", category: "processing" },
+
+    // Analysis Products
+    { id: "threat_assessment", name: "Threat Assessment", category: "analysis" },
+    { id: "situation_report", name: "Situation Report", category: "analysis" },
+    { id: "intelligence_estimate", name: "Intelligence Estimate", category: "analysis" },
+
+    // End Users
+    { id: "policy_makers", name: "Policy Makers", category: "consumer" },
+    { id: "military_commanders", name: "Military Commanders", category: "consumer" },
+    { id: "law_enforcement", name: "Law Enforcement", category: "consumer" },
+  ],
+  links: [
+    // Source to Collection
+    { source: "social_media", target: "osint_collection", value: 30, type: "data_flow" },
+    { source: "news_feeds", target: "osint_collection", value: 25, type: "data_flow" },
+    { source: "satellite_imagery", target: "geoint_collection", value: 40, type: "data_flow" },
+    { source: "human_sources", target: "humint_collection", value: 35, type: "data_flow" },
+    { source: "signals_intercept", target: "sigint_collection", value: 45, type: "data_flow" },
+
+    // Collection to Processing
+    { source: "osint_collection", target: "data_fusion", value: 25, type: "processing_flow" },
+    { source: "osint_collection", target: "pattern_analysis", value: 30, type: "processing_flow" },
+    { source: "humint_collection", target: "correlation_engine", value: 35, type: "processing_flow" },
+    { source: "sigint_collection", target: "data_fusion", value: 25, type: "processing_flow" },
+    { source: "sigint_collection", target: "pattern_analysis", value: 20, type: "processing_flow" },
+    { source: "geoint_collection", target: "correlation_engine", value: 40, type: "processing_flow" },
+
+    // Processing to Analysis
+    { source: "data_fusion", target: "threat_assessment", value: 30, type: "analysis_flow" },
+    { source: "data_fusion", target: "situation_report", value: 20, type: "analysis_flow" },
+    { source: "pattern_analysis", target: "intelligence_estimate", value: 25, type: "analysis_flow" },
+    { source: "pattern_analysis", target: "threat_assessment", value: 25, type: "analysis_flow" },
+    { source: "correlation_engine", target: "situation_report", value: 35, type: "analysis_flow" },
+    { source: "correlation_engine", target: "intelligence_estimate", value: 40, type: "analysis_flow" },
+
+    // Analysis to Consumers
+    { source: "threat_assessment", target: "policy_makers", value: 25, type: "dissemination" },
+    { source: "threat_assessment", target: "military_commanders", value: 30, type: "dissemination" },
+    { source: "situation_report", target: "military_commanders", value: 35, type: "dissemination" },
+    { source: "situation_report", target: "law_enforcement", value: 20, type: "dissemination" },
+    { source: "intelligence_estimate", target: "policy_makers", value: 40, type: "dissemination" },
+    { source: "intelligence_estimate", target: "law_enforcement", value: 25, type: "dissemination" },
+  ],
+}
+
 const IntelligenceSankeyDiagram: React.FC = () => {
   const svgRef = useRef<SVGSVGElement>(null)
   const [selectedFlow, setSelectedFlow] = useState<string | null>(null)
   const [dimensions, setDimensions] = useState({ width: 800, height: 600 })
-
-  // Sample data representing intelligence data flow
-  const data: SankeyData = {
-    nodes: [
-      // Raw Data Sources
-      { id: "social_media", name: "Social Media", category: "source" },
-      { id: "news_feeds", name: "News Feeds", category: "source" },
-      { id: "satellite_imagery", name: "Satellite Imagery", category: "source" },
-      { id: "human_sources", name: "Human Sources", category: "source" },
-      { id: "signals_intercept", name: "Signals Intercept", category: "source" },
-
-      // Collection Systems
-      { id: "osint_collection", name: "OSINT Collection", category: "collection" },
-      { id: "humint_collection", name: "HUMINT Collection", category: "collection" },
-      { id: "sigint_collection", name: "SIGINT Collection", category: "collection" },
-      { id: "geoint_collection", name: "GEOINT Collection", category: "collection" },
-
-      // Processing Systems
-      { id: "data_fusion", name: "Data Fusion", category: "processing" },
-      { id: "pattern_analysis", name: "Pattern Analysis", category: "processing" },
-      { id: "correlation_engine", name: "Correlation Engine", category: "processing" },
-
-      // Analysis Products
-      { id: "threat_assessment", name: "Threat Assessment", category: "analysis" },
-      { id: "situation_report", name: "Situation Report", category: "analysis" },
-      { id: "intelligence_estimate", name: "Intelligence Estimate", category: "analysis" },
-
-      // End Users
-      { id: "policy_makers", name: "Policy Makers", category: "consumer" },
-      { id: "military_commanders", name: "Military Commanders", category: "consumer" },
-      { id: "law_enforcement", name: "Law Enforcement", category: "consumer" },
-    ],
-    links: [
-      // Source to Collection
-      { source: "social_media", target: "osint_collection", value: 30, type: "data_flow" },
-      { source: "news_feeds", target: "osint_collection", value: 25, type: "data_flow" },
-      { source: "satellite_imagery", target: "geoint_collection", value: 40, type: "data_flow" },
-      { source: "human_sources", target: "humint_collection", value: 35, type: "data_flow" },
-      { source: "signals_intercept", target: "sigint_collection", value: 45, type: "data_flow" },
-
-      // Collection to Processing
-      { source: "osint_collection", target: "data_fusion", value: 25, type: "processing_flow" },
-      { source: "osint_collection", target: "pattern_analysis", value: 30, type: "processing_flow" },
-      { source: "humint_collection", target: "correlation_engine", value: 35, type: "processing_flow" },
-      { source: "sigint_collection", target: "data_fusion", value: 25, type: "processing_flow" },
-      { source: "sigint_collection", target: "pattern_analysis", value: 20, type: "processing_flow" },
-      { source: "geoint_collection", target: "correlation_engine", value: 40, type: "processing_flow" },
-
-      // Processing to Analysis
-      { source: "data_fusion", target: "threat_assessment", value: 30, type: "analysis_flow" },
-      { source: "data_fusion", target: "situation_report", value: 20, type: "analysis_flow" },
-      { source: "pattern_analysis", target: "intelligence_estimate", value: 25, type: "analysis_flow" },
-      { source: "pattern_analysis", target: "threat_assessment", value: 25, type: "analysis_flow" },
-      { source: "correlation_engine", target: "situation_report", value: 35, type: "analysis_flow" },
-      { source: "correlation_engine", target: "intelligence_estimate", value: 40, type: "analysis_flow" },
-
-      // Analysis to Consumers
-      { source: "threat_assessment", target: "policy_makers", value: 25, type: "dissemination" },
-      { source: "threat_assessment", target: "military_commanders", value: 30, type: "dissemination" },
-      { source: "situation_report", target: "military_commanders", value: 35, type: "dissemination" },
-      { source: "situation_report", target: "law_enforcement", value: 20, type: "dissemination" },
-      { source: "intelligence_estimate", target: "policy_makers", value: 40, type: "dissemination" },
-      { source: "intelligence_estimate", target: "law_enforcement", value: 25, type: "dissemination" },
-    ],
-  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -189,11 +194,10 @@ const IntelligenceSankeyDiagram: React.FC = () => {
       .attr("fill", (d) => categoryColors[d.category as keyof typeof categoryColors] || "#999")
       .attr("stroke", "#000")
       .attr("stroke-width", 0.5)
-      .on("mouseover", function (event, d) {
+      .on("mouseover", function (event, d: any) {
         d3.select(this).attr("opacity", 0.8)
-
         // Highlight connected links
-        links.attr("opacity", (link) => (link.source === d || link.target === d ? 0.8 : 0.2))
+        links.attr("opacity", (link: any) => (link.source === d || link.target === d ? 0.8 : 0.2))
       })
       .on("mouseout", function () {
         d3.select(this).attr("opacity", 1)
@@ -259,7 +263,7 @@ const IntelligenceSankeyDiagram: React.FC = () => {
       .style("font-size", "11px")
       .style("fill", "#374151")
       .text((d) => d.label)
-  }, [data, dimensions])
+  }, [dimensions])
 
   return (
     <div className="w-full bg-white rounded-lg shadow-lg p-6">

@@ -15,195 +15,194 @@ interface HierarchyNode {
   children?: HierarchyNode[]
 }
 
+const hierarchyData: HierarchyNode = {
+  id: "director",
+  name: "Director of Intelligence",
+  title: "Director",
+  level: 1,
+  department: "Executive",
+  clearance: "Top Secret/SCI",
+  responsibilities: ["Strategic oversight", "Policy direction", "Inter-agency coordination"],
+  children: [
+    {
+      id: "deputy_analysis",
+      name: "Deputy Director - Analysis",
+      title: "Deputy Director",
+      level: 2,
+      department: "Analysis",
+      clearance: "Top Secret/SCI",
+      responsibilities: ["Analysis oversight", "Product quality", "Analytic standards"],
+      children: [
+        {
+          id: "strategic_analysis",
+          name: "Strategic Analysis Division",
+          title: "Division Chief",
+          level: 3,
+          department: "Strategic Analysis",
+          clearance: "Top Secret",
+          responsibilities: ["Long-term assessments", "Strategic forecasting", "Policy support"],
+          children: [
+            {
+              id: "political_analyst",
+              name: "Political Intelligence Team",
+              title: "Senior Analyst",
+              level: 4,
+              department: "Political Analysis",
+              clearance: "Secret",
+              responsibilities: ["Political analysis", "Government stability", "Election monitoring"],
+            },
+            {
+              id: "economic_analyst",
+              name: "Economic Intelligence Team",
+              title: "Senior Analyst",
+              level: 4,
+              department: "Economic Analysis",
+              clearance: "Secret",
+              responsibilities: ["Economic trends", "Trade analysis", "Financial intelligence"],
+            },
+          ],
+        },
+        {
+          id: "tactical_analysis",
+          name: "Tactical Analysis Division",
+          title: "Division Chief",
+          level: 3,
+          department: "Tactical Analysis",
+          clearance: "Top Secret",
+          responsibilities: ["Immediate threats", "Operational support", "Crisis response"],
+          children: [
+            {
+              id: "threat_analyst",
+              name: "Threat Assessment Team",
+              title: "Senior Analyst",
+              level: 4,
+              department: "Threat Analysis",
+              clearance: "Top Secret",
+              responsibilities: ["Threat identification", "Risk assessment", "Warning indicators"],
+            },
+            {
+              id: "tactical_support",
+              name: "Tactical Support Team",
+              title: "Analyst",
+              level: 4,
+              department: "Tactical Support",
+              clearance: "Secret",
+              responsibilities: ["Field support", "Real-time analysis", "Operational briefings"],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "deputy_collection",
+      name: "Deputy Director - Collection",
+      title: "Deputy Director",
+      level: 2,
+      department: "Collection",
+      clearance: "Top Secret/SCI",
+      responsibilities: ["Collection oversight", "Source management", "Collection priorities"],
+      children: [
+        {
+          id: "humint_division",
+          name: "HUMINT Division",
+          title: "Division Chief",
+          level: 3,
+          department: "HUMINT",
+          clearance: "Top Secret/SCI",
+          responsibilities: ["Human source operations", "Case officer management", "Source validation"],
+          children: [
+            {
+              id: "case_officers",
+              name: "Case Officer Team",
+              title: "Case Officer",
+              level: 4,
+              department: "Field Operations",
+              clearance: "Top Secret",
+              responsibilities: ["Source recruitment", "Intelligence collection", "Source security"],
+            },
+          ],
+        },
+        {
+          id: "sigint_division",
+          name: "SIGINT Division",
+          title: "Division Chief",
+          level: 3,
+          department: "SIGINT",
+          clearance: "Top Secret/SCI",
+          responsibilities: ["Signals intelligence", "Technical collection", "Communications analysis"],
+          children: [
+            {
+              id: "technical_team",
+              name: "Technical Collection Team",
+              title: "Technical Specialist",
+              level: 4,
+              department: "Technical Operations",
+              clearance: "Top Secret/SCI",
+              responsibilities: ["Signal interception", "Technical analysis", "Equipment maintenance"],
+            },
+          ],
+        },
+        {
+          id: "osint_division",
+          name: "OSINT Division",
+          title: "Division Chief",
+          level: 3,
+          department: "OSINT",
+          clearance: "Secret",
+          responsibilities: ["Open source collection", "Media monitoring", "Public information analysis"],
+          children: [
+            {
+              id: "osint_analysts",
+              name: "OSINT Analyst Team",
+              title: "OSINT Analyst",
+              level: 4,
+              department: "Open Source",
+              clearance: "Secret",
+              responsibilities: ["Social media monitoring", "News analysis", "Public records research"],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "deputy_operations",
+      name: "Deputy Director - Operations",
+      title: "Deputy Director",
+      level: 2,
+      department: "Operations",
+      clearance: "Top Secret/SCI",
+      responsibilities: ["Operational oversight", "Mission planning", "Resource allocation"],
+      children: [
+        {
+          id: "counterintel",
+          name: "Counterintelligence Division",
+          title: "Division Chief",
+          level: 3,
+          department: "Counterintelligence",
+          clearance: "Top Secret/SCI",
+          responsibilities: ["CI investigations", "Security assessments", "Threat mitigation"],
+          children: [
+            {
+              id: "ci_analysts",
+              name: "CI Analyst Team",
+              title: "CI Analyst",
+              level: 4,
+              department: "CI Analysis",
+              clearance: "Top Secret",
+              responsibilities: ["Threat analysis", "Security investigations", "Risk assessment"],
+            },
+          ],
+        },
+      ],
+    },
+  ],
+}
+
 const IntelligenceHierarchyChart: React.FC = () => {
   const svgRef = useRef<SVGSVGElement>(null)
   const [selectedNode, setSelectedNode] = useState<HierarchyNode | null>(null)
   const [viewMode, setViewMode] = useState<"tree" | "radial">("tree")
   const [dimensions, setDimensions] = useState({ width: 1000, height: 700 })
-
-  // Sample organizational hierarchy data
-  const hierarchyData: HierarchyNode = {
-    id: "director",
-    name: "Director of Intelligence",
-    title: "Director",
-    level: 1,
-    department: "Executive",
-    clearance: "Top Secret/SCI",
-    responsibilities: ["Strategic oversight", "Policy direction", "Inter-agency coordination"],
-    children: [
-      {
-        id: "deputy_analysis",
-        name: "Deputy Director - Analysis",
-        title: "Deputy Director",
-        level: 2,
-        department: "Analysis",
-        clearance: "Top Secret/SCI",
-        responsibilities: ["Analysis oversight", "Product quality", "Analytic standards"],
-        children: [
-          {
-            id: "strategic_analysis",
-            name: "Strategic Analysis Division",
-            title: "Division Chief",
-            level: 3,
-            department: "Strategic Analysis",
-            clearance: "Top Secret",
-            responsibilities: ["Long-term assessments", "Strategic forecasting", "Policy support"],
-            children: [
-              {
-                id: "political_analyst",
-                name: "Political Intelligence Team",
-                title: "Senior Analyst",
-                level: 4,
-                department: "Political Analysis",
-                clearance: "Secret",
-                responsibilities: ["Political analysis", "Government stability", "Election monitoring"],
-              },
-              {
-                id: "economic_analyst",
-                name: "Economic Intelligence Team",
-                title: "Senior Analyst",
-                level: 4,
-                department: "Economic Analysis",
-                clearance: "Secret",
-                responsibilities: ["Economic trends", "Trade analysis", "Financial intelligence"],
-              },
-            ],
-          },
-          {
-            id: "tactical_analysis",
-            name: "Tactical Analysis Division",
-            title: "Division Chief",
-            level: 3,
-            department: "Tactical Analysis",
-            clearance: "Top Secret",
-            responsibilities: ["Immediate threats", "Operational support", "Crisis response"],
-            children: [
-              {
-                id: "threat_analyst",
-                name: "Threat Assessment Team",
-                title: "Senior Analyst",
-                level: 4,
-                department: "Threat Analysis",
-                clearance: "Top Secret",
-                responsibilities: ["Threat identification", "Risk assessment", "Warning indicators"],
-              },
-              {
-                id: "tactical_support",
-                name: "Tactical Support Team",
-                title: "Analyst",
-                level: 4,
-                department: "Tactical Support",
-                clearance: "Secret",
-                responsibilities: ["Field support", "Real-time analysis", "Operational briefings"],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "deputy_collection",
-        name: "Deputy Director - Collection",
-        title: "Deputy Director",
-        level: 2,
-        department: "Collection",
-        clearance: "Top Secret/SCI",
-        responsibilities: ["Collection oversight", "Source management", "Collection priorities"],
-        children: [
-          {
-            id: "humint_division",
-            name: "HUMINT Division",
-            title: "Division Chief",
-            level: 3,
-            department: "HUMINT",
-            clearance: "Top Secret/SCI",
-            responsibilities: ["Human source operations", "Case officer management", "Source validation"],
-            children: [
-              {
-                id: "case_officers",
-                name: "Case Officer Team",
-                title: "Case Officer",
-                level: 4,
-                department: "Field Operations",
-                clearance: "Top Secret",
-                responsibilities: ["Source recruitment", "Intelligence collection", "Source security"],
-              },
-            ],
-          },
-          {
-            id: "sigint_division",
-            name: "SIGINT Division",
-            title: "Division Chief",
-            level: 3,
-            department: "SIGINT",
-            clearance: "Top Secret/SCI",
-            responsibilities: ["Signals intelligence", "Technical collection", "Communications analysis"],
-            children: [
-              {
-                id: "technical_team",
-                name: "Technical Collection Team",
-                title: "Technical Specialist",
-                level: 4,
-                department: "Technical Operations",
-                clearance: "Top Secret/SCI",
-                responsibilities: ["Signal interception", "Technical analysis", "Equipment maintenance"],
-              },
-            ],
-          },
-          {
-            id: "osint_division",
-            name: "OSINT Division",
-            title: "Division Chief",
-            level: 3,
-            department: "OSINT",
-            clearance: "Secret",
-            responsibilities: ["Open source collection", "Media monitoring", "Public information analysis"],
-            children: [
-              {
-                id: "osint_analysts",
-                name: "OSINT Analyst Team",
-                title: "OSINT Analyst",
-                level: 4,
-                department: "Open Source",
-                clearance: "Secret",
-                responsibilities: ["Social media monitoring", "News analysis", "Public records research"],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "deputy_operations",
-        name: "Deputy Director - Operations",
-        title: "Deputy Director",
-        level: 2,
-        department: "Operations",
-        clearance: "Top Secret/SCI",
-        responsibilities: ["Operational oversight", "Mission planning", "Resource allocation"],
-        children: [
-          {
-            id: "counterintel",
-            name: "Counterintelligence Division",
-            title: "Division Chief",
-            level: 3,
-            department: "Counterintelligence",
-            clearance: "Top Secret/SCI",
-            responsibilities: ["CI investigations", "Security assessments", "Threat mitigation"],
-            children: [
-              {
-                id: "ci_analysts",
-                name: "CI Analyst Team",
-                title: "CI Analyst",
-                level: 4,
-                department: "CI Analysis",
-                clearance: "Top Secret",
-                responsibilities: ["Threat analysis", "Security investigations", "Risk assessment"],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -465,7 +464,7 @@ const IntelligenceHierarchyChart: React.FC = () => {
       .style("font-size", "10px")
       .style("fill", "#374151")
       .text((d) => d.level)
-  }, [hierarchyData, viewMode, dimensions])
+  }, [viewMode, dimensions])
 
   return (
     <div className="w-full bg-white rounded-lg shadow-lg p-6">
@@ -481,17 +480,15 @@ const IntelligenceHierarchyChart: React.FC = () => {
         <div className="flex gap-2">
           <button
             onClick={() => setViewMode("tree")}
-            className={`px-3 py-1 text-sm rounded ${
-              viewMode === "tree" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-            }`}
+            className={`px-3 py-1 text-sm rounded ${viewMode === "tree" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              }`}
           >
             Tree View
           </button>
           <button
             onClick={() => setViewMode("radial")}
-            className={`px-3 py-1 text-sm rounded ${
-              viewMode === "radial" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-            }`}
+            className={`px-3 py-1 text-sm rounded ${viewMode === "radial" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              }`}
           >
             Radial View
           </button>

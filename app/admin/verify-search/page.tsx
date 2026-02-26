@@ -12,7 +12,7 @@ export default function VerifySearchPage() {
   // State for the API verification tab
   const [testResults, setTestResults] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
-  
+
   // State for the individual query tab
   const [query, setQuery] = useState("")
   const [results, setResults] = useState([])
@@ -44,13 +44,13 @@ export default function VerifySearchPage() {
       setError("Please enter a search query")
       return
     }
-    
+
     setQueryLoading(true)
     setError(null)
-    
+
     try {
       const searchResults = await testSearchApi(query)
-      setResults(searchResults || [])
+      setResults(searchResults?.results || [])
     } catch (err) {
       setError(err instanceof Error ? err.message : "An unknown error occurred")
       setResults([])

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { StaticImage } from "@/components/static-image"
 import { Loader2, AlertCircle, Search } from "lucide-react"
@@ -20,31 +20,39 @@ interface SearchResultsProps {
   query: string
 }
 
+const DEBOUNCE_MS = 300
+
 export function SearchResults({ query }: SearchResultsProps) {
   const [results, setResults] = useState<SearchResult[]>([])
   const [loading, setLoading] = useState(false)
   const [enhancedQuery, setEnhancedQuery] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [retryCount, setRetryCount] = useState(0)
+  const abortRef = useRef<AbortController | null>(null)
 
   useEffect(() => {
-    async function fetchResults() {
-      if (!query.trim()) {
-        setResults([])
-        setEnhancedQuery(null)
-        return
-      }
+    if (!query.trim()) {
+      setResults([])
+      setEnhancedQuery(null)
+      setLoading(false)
+      return
+    }
 
-      setLoading(true)
-      setError(null)
+    setLoading(true)
+    setError(null)
+
+    // Debounce: wait before firing the request
+    const timer = setTimeout(async () => {
+      // Cancel any in-flight request
+      abortRef.current?.abort()
+      abortRef.current = new AbortController()
 
       try {
         const response = await fetch("/api/search", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query }),
+          signal: abortRef.current.signal,
         })
 
         if (!response.ok) {
@@ -55,20 +63,22 @@ export function SearchResults({ query }: SearchResultsProps) {
         setResults(data.results || [])
         setEnhancedQuery(data.enhancedQuery)
       } catch (err) {
+        if ((err as Error).name === "AbortError") return
         console.error("Search error:", err)
         setError(`Failed to perform search: ${err instanceof Error ? err.message : "Unknown error"}`)
         setResults([])
       } finally {
         setLoading(false)
       }
-    }
+    }, DEBOUNCE_MS)
 
-    fetchResults()
+    return () => {
+      clearTimeout(timer)
+      abortRef.current?.abort()
+    }
   }, [query, retryCount])
 
-  const handleRetry = () => {
-    setRetryCount((prev) => prev + 1)
-  }
+  const handleRetry = () => setRetryCount((prev) => prev + 1)
 
   if (loading) {
     return (

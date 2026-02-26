@@ -31,181 +31,165 @@ const IntelligenceNetworkAnalysis: React.FC = () => {
   const [selectedLink, setSelectedLink] = useState<NetworkLink | null>(null)
   const [filterType, setFilterType] = useState<string>("all")
   const [dimensions, setDimensions] = useState({ width: 1000, height: 700 })
-  const networkData = {
-    nodes: [
-      {
-        id: "person_1",
-        name: "Ahmed Hassan",
-        type: "person" as const,
-        importance: 0.9,
-        attributes: { role: "Suspected Leader", location: "Cairo", status: "Active" },
-      },
-      {
-        id: "person_2",
-        name: "Maria Santos",
-        type: "person" as const,
-        importance: 0.7,
-        attributes: { role: "Financial Coordinator", location: "Madrid", status: "Under Surveillance" },
-      },
-      {
-        id: "person_3",
-        name: "Viktor Petrov",
-        type: "person" as const,
-        importance: 0.6,
-        attributes: { role: "Communications", location: "Moscow", status: "Active" },
-      },
-      {
-        id: "org_1",
-        name: "Shell Company Alpha",
-        type: "organization" as const,
-        importance: 0.8,
-        attributes: { type: "Financial", established: "2019", status: "Operational" },
-      },
-      {
-        id: "org_2",
-        name: "Logistics Corp",
-        type: "organization" as const,
-        importance: 0.5,
-        attributes: { type: "Transportation", established: "2020", status: "Dissolved" },
-      },
-      {
-        id: "loc_1",
-        name: "Safe House Berlin",
-        type: "location" as const,
-        importance: 0.7,
-        attributes: { type: "Safe House", coordinates: "52.5200° N, 13.4050° E", status: "Compromised" },
-      },
-      {
-        id: "loc_2",
-        name: "Port of Rotterdam",
-        type: "location" as const,
-        importance: 0.6,
-        attributes: { type: "Transit Point", coordinates: "51.9244° N, 4.4777° E", status: "Monitored" },
-      },
-      {
-        id: "event_1",
-        name: "Meeting Jan 2024",
-        type: "event" as const,
-        importance: 0.8,
-        attributes: { date: "2024-01-15", type: "Coordination Meeting", participants: 4 },
-      },
-      {
-        id: "comm_1",
-        name: "Encrypted Channel A",
-        type: "communication" as const,
-        importance: 0.9,
-        attributes: { type: "Encrypted Messaging", frequency: "Daily", status: "Intercepted" },
-      },
-      {
-        id: "comm_2",
-        name: "Financial Transfer",
-        type: "communication" as const,
-        importance: 0.7,
-        attributes: { type: "Bank Transfer", amount: "$50,000", status: "Traced" },
-      },
-    ],
-    links: [
-      {
-        source: "person_1",
-        target: "org_1",
-        relationship: "Controls",
-        strength: 0.9,
-        frequency: 10,
-        attributes: { since: "2019", evidence: "Financial records" },
-      },
-      {
-        source: "person_2",
-        target: "org_1",
-        relationship: "Manages",
-        strength: 0.8,
-        frequency: 15,
-        attributes: { since: "2020", evidence: "Communication intercepts" },
-      },
-      {
-        source: "person_1",
-        target: "person_3",
-        relationship: "Communicates",
-        strength: 0.7,
-        frequency: 8,
-        attributes: { method: "Encrypted messaging", evidence: "SIGINT" },
-      },
-      {
-        source: "person_1",
-        target: "loc_1",
-        relationship: "Visits",
-        strength: 0.6,
-        frequency: 5,
-        attributes: { last_visit: "2024-01-10", evidence: "Surveillance" },
-      },
-      {
-        source: "org_1",
-        target: "comm_2",
-        relationship: "Transfers",
-        strength: 0.8,
-        frequency: 12,
-        attributes: { amount: "$50,000", evidence: "Financial intelligence" },
-      },
-      {
-        source: "person_2",
-        target: "loc_2",
-        relationship: "Coordinates",
-        strength: 0.7,
-        frequency: 6,
-        attributes: { role: "Logistics", evidence: "Travel records" },
-      },
-      {
-        source: "event_1",
-        target: "person_1",
-        relationship: "Attended",
-        strength: 0.9,
-        frequency: 1,
-        attributes: { role: "Organizer", evidence: "Surveillance footage" },
-      },
-      {
-        source: "event_1",
-        target: "person_2",
-        relationship: "Attended",
-        strength: 0.8,
-        frequency: 1,
-        attributes: { role: "Participant", evidence: "Communication metadata" },
-      },
-      {
-        source: "comm_1",
-        target: "person_1",
-        relationship: "Uses",
-        strength: 0.9,
-        frequency: 20,
-        attributes: { frequency: "Daily", evidence: "Traffic analysis" },
-      },
-      {
-        source: "comm_1",
-        target: "person_3",
-        relationship: "Uses",
-        strength: 0.8,
-        frequency: 18,
-        attributes: { frequency: "Daily", evidence: "Traffic analysis" },
-      },
-    ],
-  }
-
-  useEffect(() => {
-    const handleResize = () => {
-      const container = svgRef.current?.parentElement
-      if (container) {
-        setDimensions({
-          width: Math.min(container.clientWidth, 1200),
-          height: Math.min(container.clientHeight || 700, 900),
-        })
-      }
-    }
-
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
-
   useEffect(() => {
     if (!svgRef.current) return
+
+    const networkData = {
+      nodes: [
+        {
+          id: "person_1",
+          name: "Ahmed Hassan",
+          type: "person" as const,
+          importance: 0.9,
+          attributes: { role: "Suspected Leader", location: "Cairo", status: "Active" },
+        },
+        {
+          id: "person_2",
+          name: "Maria Santos",
+          type: "person" as const,
+          importance: 0.7,
+          attributes: { role: "Financial Coordinator", location: "Madrid", status: "Under Surveillance" },
+        },
+        {
+          id: "person_3",
+          name: "Viktor Petrov",
+          type: "person" as const,
+          importance: 0.6,
+          attributes: { role: "Communications", location: "Moscow", status: "Active" },
+        },
+        {
+          id: "org_1",
+          name: "Shell Company Alpha",
+          type: "organization" as const,
+          importance: 0.8,
+          attributes: { type: "Financial", established: "2019", status: "Operational" },
+        },
+        {
+          id: "org_2",
+          name: "Logistics Corp",
+          type: "organization" as const,
+          importance: 0.5,
+          attributes: { type: "Transportation", established: "2020", status: "Dissolved" },
+        },
+        {
+          id: "loc_1",
+          name: "Safe House Berlin",
+          type: "location" as const,
+          importance: 0.7,
+          attributes: { type: "Safe House", coordinates: "52.5200° N, 13.4050° E", status: "Compromised" },
+        },
+        {
+          id: "loc_2",
+          name: "Port of Rotterdam",
+          type: "location" as const,
+          importance: 0.6,
+          attributes: { type: "Transit Point", coordinates: "51.9244° N, 4.4777° E", status: "Monitored" },
+        },
+        {
+          id: "event_1",
+          name: "Meeting Jan 2024",
+          type: "event" as const,
+          importance: 0.8,
+          attributes: { date: "2024-01-15", type: "Coordination Meeting", participants: 4 },
+        },
+        {
+          id: "comm_1",
+          name: "Encrypted Channel A",
+          type: "communication" as const,
+          importance: 0.9,
+          attributes: { type: "Encrypted Messaging", frequency: "Daily", status: "Intercepted" },
+        },
+        {
+          id: "comm_2",
+          name: "Financial Transfer",
+          type: "communication" as const,
+          importance: 0.7,
+          attributes: { type: "Bank Transfer", amount: "$50,000", status: "Traced" },
+        },
+      ],
+      links: [
+        {
+          source: "person_1",
+          target: "org_1",
+          relationship: "Controls",
+          strength: 0.9,
+          frequency: 10,
+          attributes: { since: "2019", evidence: "Financial records" },
+        },
+        {
+          source: "person_2",
+          target: "org_1",
+          relationship: "Manages",
+          strength: 0.8,
+          frequency: 15,
+          attributes: { since: "2020", evidence: "Communication intercepts" },
+        },
+        {
+          source: "person_1",
+          target: "person_3",
+          relationship: "Communicates",
+          strength: 0.7,
+          frequency: 8,
+          attributes: { method: "Encrypted messaging", evidence: "SIGINT" },
+        },
+        {
+          source: "person_1",
+          target: "loc_1",
+          relationship: "Visits",
+          strength: 0.6,
+          frequency: 5,
+          attributes: { last_visit: "2024-01-10", evidence: "Surveillance" },
+        },
+        {
+          source: "org_1",
+          target: "comm_2",
+          relationship: "Transfers",
+          strength: 0.8,
+          frequency: 12,
+          attributes: { amount: "$50,000", evidence: "Financial intelligence" },
+        },
+        {
+          source: "person_2",
+          target: "loc_2",
+          relationship: "Coordinates",
+          strength: 0.7,
+          frequency: 6,
+          attributes: { role: "Logistics", evidence: "Travel records" },
+        },
+        {
+          source: "event_1",
+          target: "person_1",
+          relationship: "Attended",
+          strength: 0.9,
+          frequency: 1,
+          attributes: { role: "Organizer", evidence: "Surveillance footage" },
+        },
+        {
+          source: "event_1",
+          target: "person_2",
+          relationship: "Attended",
+          strength: 0.8,
+          frequency: 1,
+          attributes: { role: "Participant", evidence: "Communication metadata" },
+        },
+        {
+          source: "comm_1",
+          target: "person_1",
+          relationship: "Uses",
+          strength: 0.9,
+          frequency: 20,
+          attributes: { frequency: "Daily", evidence: "Traffic analysis" },
+        },
+        {
+          source: "comm_1",
+          target: "person_3",
+          relationship: "Uses",
+          strength: 0.8,
+          frequency: 18,
+          attributes: { frequency: "Daily", evidence: "Traffic analysis" },
+        },
+      ],
+    }
 
     const svg = d3.select(svgRef.current)
     svg.selectAll("*").remove()

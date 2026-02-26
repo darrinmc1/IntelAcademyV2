@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, useCallback } from "react"
 
 interface Use3DCardEffectOptions {
   intensity?: "subtle" | "medium" | "strong"
@@ -23,8 +23,8 @@ export function use3DCardEffect({
   const [transform, setTransform] = useState("")
   const [glowPosition, setGlowPosition] = useState({ x: 50, y: 50 })
   const [isHovered, setIsHovered] = useState(false)
+  const rafRef = useRef<number | null>(null)
 
-  // Configure intensity levels
   const intensitySettings = {
     subtle: { tilt: 5, scale: 1.02, glow: 0.1 },
     medium: { tilt: 10, scale: 1.05, glow: 0.15 },
@@ -33,66 +33,61 @@ export function use3DCardEffect({
 
   const settings = intensitySettings[intensity]
 
-  // Handle mouse movement for 3D effect
+  // Throttle mouse move via requestAnimationFrame (~60fps max)
+  const handleMouseMove = useCallback(
+    (e: MouseEvent) => {
+      if (rafRef.current !== null) return
+      rafRef.current = requestAnimationFrame(() => {
+        rafRef.current = null
+        const card = cardRef.current
+        if (!card) return
+
+        const rect = card.getBoundingClientRect()
+        const centerX = rect.left + rect.width / 2
+        const centerY = rect.top + rect.height / 2
+
+        const rotateY = ((e.clientX - centerX) / (rect.width / 2)) * settings.tilt
+        const rotateX = ((centerY - e.clientY) / (rect.height / 2)) * settings.tilt
+
+        setTransform(`perspective(1000px) scale(${settings.scale}) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`)
+        setGlowPosition({
+          x: ((e.clientX - rect.left) / rect.width) * 100,
+          y: ((e.clientY - rect.top) / rect.height) * 100,
+        })
+      })
+    },
+    [settings.tilt, settings.scale]
+  )
+
   useEffect(() => {
     if (!enabled || !cardRef.current) return
 
+    // Respect prefers-reduced-motion
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
+
     const card = cardRef.current
 
-    const handleMouseMove = (e: MouseEvent) => {
-      const rect = card.getBoundingClientRect()
-      const centerX = rect.left + rect.width / 2
-      const centerY = rect.top + rect.height / 2
-      const mouseX = e.clientX
-      const mouseY = e.clientY
-
-      // Calculate rotation based on mouse position
-      const rotateY = ((mouseX - centerX) / (rect.width / 2)) * settings.tilt
-      const rotateX = ((centerY - mouseY) / (rect.height / 2)) * settings.tilt
-
-      // Update transform
-      setTransform(`
-        perspective(1000px) 
-        scale(${settings.scale}) 
-        rotateX(${rotateX}deg) 
-        rotateY(${rotateY}deg)
-      `)
-
-      // Update glow position
-      const x = ((mouseX - rect.left) / rect.width) * 100
-      const y = ((mouseY - rect.top) / rect.height) * 100
-      setGlowPosition({ x, y })
-    }
-
-    const handleMouseEnter = () => {
-      setIsHovered(true)
-    }
-
+    const handleMouseEnter = () => setIsHovered(true)
     const handleMouseLeave = () => {
+      if (rafRef.current !== null) {
+        cancelAnimationFrame(rafRef.current)
+        rafRef.current = null
+      }
       setTransform("perspective(1000px) scale(1) rotateX(0) rotateY(0)")
       setIsHovered(false)
     }
 
-    // Add event listeners
     card.addEventListener("mousemove", handleMouseMove)
     card.addEventListener("mouseenter", handleMouseEnter)
     card.addEventListener("mouseleave", handleMouseLeave)
 
-    // Cleanup
     return () => {
       card.removeEventListener("mousemove", handleMouseMove)
       card.removeEventListener("mouseenter", handleMouseEnter)
       card.removeEventListener("mouseleave", handleMouseLeave)
+      if (rafRef.current !== null) cancelAnimationFrame(rafRef.current)
     }
-  }, [enabled, settings.tilt, settings.scale])
-
-  // Check for reduced motion preference
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)")
-    if (mediaQuery.matches) {
-      setTransform("")
-    }
-  }, [])
+  }, [enabled, handleMouseMove])
 
   return {
     cardRef,

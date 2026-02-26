@@ -1,5 +1,6 @@
 "use client"
 
+import { memo } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
@@ -19,7 +20,7 @@ interface LearningPathCardProps {
   intensity: string
 }
 
-export function LearningPathCard({
+export const LearningPathCard = memo(function LearningPathCard({
   title,
   humorousQuote,
   description,
@@ -36,7 +37,6 @@ export function LearningPathCard({
     enabled: enable3D,
   })
 
-  // Determine badge color based on difficulty
   const getBadgeVariant = () => {
     switch (difficulty) {
       case "Beginner":
@@ -65,7 +65,7 @@ export function LearningPathCard({
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent z-10" />
           <Image
             src={image}
-            alt={title}
+            alt={`${title} learning path`}
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
           />
@@ -94,4 +94,4 @@ export function LearningPathCard({
       </Card>
     </Link>
   )
-}
+})

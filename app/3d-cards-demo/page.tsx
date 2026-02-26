@@ -29,10 +29,6 @@ export default function ThreeDCardsDemo() {
               difficulty="Intermediate"
               topics={12}
               estimatedTime="4-6 hours"
-              progress={65}
-              rating={4.9}
-              enrolledUsers={2340}
-              category="Strategic Analysis"
             />
             <LearningPathCard3D
               title="OSINT Fundamentals"
@@ -42,10 +38,6 @@ export default function ThreeDCardsDemo() {
               difficulty="Beginner"
               topics={8}
               estimatedTime="3-4 hours"
-              progress={0}
-              rating={4.8}
-              enrolledUsers={3120}
-              category="Collection Methods"
             />
             <LearningPathCard3D
               title="Tactical Intelligence Operations"
@@ -55,10 +47,6 @@ export default function ThreeDCardsDemo() {
               difficulty="Advanced"
               topics={15}
               estimatedTime="6-8 hours"
-              progress={25}
-              rating={4.7}
-              enrolledUsers={1890}
-              category="Tactical Analysis"
             />
           </div>
         </section>
@@ -72,10 +60,9 @@ export default function ThreeDCardsDemo() {
               description="Understanding the fundamental phases of the intelligence cycle and their interconnections."
               image="/intelligence-cycle.png"
               href="/topics/intelligence-cycle"
-              duration="15 min"
-              difficulty="Beginner"
+              estimatedTime="15 min"
               completed={true}
-              objectives={[
+              learningObjectives={[
                 "Identify the six phases of the intelligence cycle",
                 "Understand the flow of information through each phase",
                 "Recognize feedback loops and iterative processes",
@@ -87,10 +74,9 @@ export default function ThreeDCardsDemo() {
               description="Learn systematic approaches to evaluating and categorizing potential threats."
               image="/threat-assessment-matrix.png"
               href="/topics/threat-assessment"
-              duration="25 min"
-              difficulty="Intermediate"
+              estimatedTime="25 min"
               completed={false}
-              objectives={[
+              learningObjectives={[
                 "Apply structured threat assessment frameworks",
                 "Evaluate threat probability and impact",
                 "Develop threat mitigation strategies",
@@ -102,10 +88,9 @@ export default function ThreeDCardsDemo() {
               description="Techniques for gathering and analyzing intelligence from social media platforms."
               image="/socmint-techniques.png"
               href="/topics/socmint-techniques"
-              duration="30 min"
-              difficulty="Intermediate"
+              estimatedTime="30 min"
               completed={false}
-              objectives={[
+              learningObjectives={[
                 "Master social media collection techniques",
                 "Understand privacy and legal considerations",
                 "Analyze social network patterns",
@@ -117,10 +102,9 @@ export default function ThreeDCardsDemo() {
               description="Essential skills for creating clear, concise, and actionable intelligence reports."
               image="/intelligence-report-fundamentals.png"
               href="/topics/report-writing-fundamentals"
-              duration="20 min"
-              difficulty="Beginner"
+              estimatedTime="20 min"
               completed={true}
-              objectives={[
+              learningObjectives={[
                 "Structure intelligence reports effectively",
                 "Write clear executive summaries",
                 "Present findings with appropriate confidence levels",

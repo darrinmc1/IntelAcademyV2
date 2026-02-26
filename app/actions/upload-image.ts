@@ -2,7 +2,13 @@
 
 import { revalidatePath } from "next/cache"
 
-export async function uploadImage(formData: FormData) {
+export async function uploadImage(formData: FormData): Promise<{
+  success: boolean
+  url?: string
+  pathname?: string
+  message?: string
+  error?: string
+}> {
   try {
     // Get the file from the form data
     const file = formData.get("file") as File
@@ -23,7 +29,8 @@ export async function uploadImage(formData: FormData) {
 
     return {
       success: true,
-      imagePath,
+      url: imagePath,
+      pathname: file.name,
       message: `File ${file.name} uploaded successfully`,
     }
   } catch (error) {

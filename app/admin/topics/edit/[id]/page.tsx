@@ -35,7 +35,7 @@ export default function EditTopicPage({ params }: { params: Promise<{ id: string
         description: "Topic description goes here...",
         category: foundTopic.category,
         status: foundTopic.hasContent ? "published" : "draft",
-        hasContent: foundTopic.hasContent,
+        hasContent: !!foundTopic.hasContent,
       })
     }
     setLoading(false)
