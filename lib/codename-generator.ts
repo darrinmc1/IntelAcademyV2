@@ -1,0 +1,131 @@
+const ADJECTIVES = [
+  'Shadow',
+  'Crimson',
+  'Velvet',
+  'Rogue',
+  'Phantom',
+  'Tactical',
+  'Stealth',
+  'Double',
+  'Covert',
+  'Silent',
+  'Midnight',
+  'Iron',
+  'Ghost',
+  'Neon',
+  'Arctic',
+  'Thunder',
+  'Onyx',
+  'Emerald',
+  'Cobalt',
+  'Obsidian',
+  'Quantum',
+  'Binary',
+  'Cipher',
+  'Delta',
+  'Echo',
+  'Whiskey',
+  'Tango',
+  'Foxtrot',
+  'Victor',
+  'Zulu',
+  'Alpha',
+  'Bravo',
+  'Viper',
+  'Apex',
+  'Spectral',
+  'Wraith',
+  'Prism',
+  'Nexus',
+  'Blaze',
+  'Frost',
+  'Storm',
+  'Molten',
+  'Sonic',
+  'Daring',
+  'Reckless',
+  'Omega',
+  'Cosmic',
+  'Razor',
+  'Turbo',
+  'Savage',
+  'Inferno',
+  'Vortex',
+  'Lunar',
+];
+
+const NOUNS = [
+  'Falcon',
+  'Badger',
+  'Toaster',
+  'Penguin',
+  'Noodle',
+  'Hedgehog',
+  'Llama',
+  'Briefcase',
+  'Mongoose',
+  'Octopus',
+  'Panda',
+  'Wombat',
+  'Narwhal',
+  'Platypus',
+  'Chameleon',
+  'Otter',
+  'Cactus',
+  'Muffin',
+  'Waffle',
+  'Pretzel',
+  'Pickle',
+  'Biscuit',
+  'Samurai',
+  'Viking',
+  'Ninja',
+  'Pirate',
+  'Raven',
+  'Wolf',
+  'Shark',
+  'Eagle',
+  'Sphinx',
+  'Dragon',
+  'Phoenix',
+  'Kraken',
+  'Titan',
+  'Bandit',
+  'Maverick',
+  'Goblin',
+  'Gremlin',
+  'Yeti',
+  'Bigfoot',
+  'Cryptid',
+  'Legend',
+  'Rumor',
+  'Jackal',
+  'Ferret',
+  'Walrus',
+  'Moose',
+  'Pelican',
+  'Gazelle',
+  'Weasel',
+  'Sloth',
+  'Flamingo',
+];
+
+/**
+ * Generate a spy-themed codename in the format "Adjective Noun"
+ * @returns A formatted codename string
+ */
+export function generateCodename(): string {
+  const adjective = ADJECTIVES[Math.floor(Math.random() * ADJECTIVES.length)];
+  const noun = NOUNS[Math.floor(Math.random() * NOUNS.length)];
+  return `${adjective} ${noun}`;
+}
+
+/**
+ * Generate a spy-themed codename with a random 2-digit number appended
+ * @returns A formatted codename string with number (e.g., "Shadow Falcon 47")
+ */
+export function generateCodenameWithNumber(): string {
+  const codename = generateCodename();
+  const number = Math.floor(Math.random() * 90) + 10; // 10-99
+  return `${codename} ${number}`;
+}

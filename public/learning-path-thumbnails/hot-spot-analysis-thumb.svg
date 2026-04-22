@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#grid)" opacity="0.5"/>
+  <rect x="0" y="0" width="800" height="6" fill="url(#cyan)"/>
+  <rect x="0" y="444" width="800" height="6" fill="url(#cyan)"/>
+  <g transform="translate(400, 130)">
+    <circle cx="0" cy="0" r="44" fill="none" stroke="url(#cyan)" stroke-width="3"/>
+    <path d="M -22 -4 L -6 14 L 24 -16" fill="none" stroke="url(#cyan)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+    <text x="400" y="220" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="48" font-weight="700" fill="#e2e8f0" text-anchor="middle">Hot Spot</text>
+    <text x="400" y="280" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="48" font-weight="700" fill="#e2e8f0" text-anchor="middle">Analysis Thumb</text>
+  <text x="400" y="370" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="500" fill="#22d3ee" text-anchor="middle" letter-spacing="4">THE INTEL ANALYST ACADEMY</text>
+  <text x="400" y="400" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="14" font-weight="400" fill="#64748b" text-anchor="middle" letter-spacing="2">LEARNING PATH</text>
+</svg>

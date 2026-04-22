@@ -1,0 +1,11 @@
+{
+  "name": "intel-analyst-academy-1-9",
+  "version": "1.9.0",
+  "mcpServers": {
+    "my-server": {
+      "command": "node my-server.js"
+    }
+  },
+  "contextFileName": "GEMINI.md",
+  "excludeTools": ["run_shell_command"]
+}

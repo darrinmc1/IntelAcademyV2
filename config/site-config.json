@@ -1,0 +1,46 @@
+{
+  "siteName": "Intel Analyst Academy",
+  "siteSlug": "intel-academy",
+  "siteUrl": "https://theintelanalystacademy.com",
+  "theme": {
+    "primaryColor": "#1e40af",
+    "secondaryColor": "#3b82f6"
+  },
+  "ranks": [
+    { "name": "Trainee", "icon": "🟤", "minPoints": 0 },
+    { "name": "Analyst", "icon": "🔵", "minPoints": 100 },
+    { "name": "Senior Analyst", "icon": "🟢", "minPoints": 500 },
+    { "name": "Lead Analyst", "icon": "🟡", "minPoints": 1500 },
+    { "name": "Chief Intelligence Officer", "icon": "🔴", "minPoints": 3000 }
+  ],
+  "pricing": {
+    "pro_monthly": {
+      "price": 9.99,
+      "stripePriceId": "price_UPDATE_AFTER_STRIPE_SETUP"
+    },
+    "pro_yearly": {
+      "price": 99.00,
+      "stripePriceId": "price_UPDATE_AFTER_STRIPE_SETUP"
+    },
+    "cert_associate": {
+      "price": 49.00,
+      "stripePriceId": "price_UPDATE_AFTER_STRIPE_SETUP"
+    },
+    "cert_professional": {
+      "price": 99.00,
+      "stripePriceId": "price_UPDATE_AFTER_STRIPE_SETUP"
+    },
+    "cert_master": {
+      "price": 199.00,
+      "stripePriceId": "price_UPDATE_AFTER_STRIPE_SETUP"
+    }
+  },
+  "points": {
+    "lessonComplete": 50,
+    "quizPass": 100,
+    "challengeComplete": 150,
+    "dailyStreak7": 200,
+    "dailyStreak30": 500,
+    "certificationPass": 500
+  }
+}

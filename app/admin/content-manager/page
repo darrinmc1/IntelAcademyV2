@@ -1,0 +1,349 @@
+"use client"
+
+import { useState, useEffect } from "react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Textarea } from "@/components/ui/textarea"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Loader2, Save, Eye, FileText, Check, AlertCircle } from "lucide-react"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { fetchPageContent, savePageContent } from "@/app/actions/content-manager"
+
+// Page type definitions
+const PAGE_TYPES = [
+  { id: "topic", name: "Topic Pages" },
+  { id: "learning-path", name: "Learning Path Pages" },
+  { id: "advanced-topic", name: "Advanced Topic Pages" },
+  { id: "other", name: "Other Pages" },
+]
+
+export default function ContentManagerPage() {
+  const [pageType, setPageType] = useState<string>("topic")
+  const [pages, setPages] = useState<Array<{ id: string; name: string }>>([])
+  const [selectedPage, setSelectedPage] = useState<string>("")
+  const [content, setContent] = useState<string>("")
+  const [originalContent, setOriginalContent] = useState<string>("")
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [isSaving, setIsSaving] = useState<boolean>(false)
+  const [previewMode, setPreviewMode] = useState<boolean>(false)
+  const [notification, setNotification] = useState<{ type: "success" | "error"; message: string } | null>(null)
+  const [searchTerm, setSearchTerm] = useState<string>("")
+
+  // Fetch pages based on selected type
+  useEffect(() => {
+    const fetchPages = async () => {
+      setIsLoading(true)
+      try {
+        // This would be replaced with an actual API call to get pages of the selected type
+        // For now, we'll use mock data
+        const mockPages = getMockPages(pageType)
+        setPages(mockPages)
+      } catch (error) {
+        console.error("Error fetching pages:", error)
+        setNotification({
+          type: "error",
+          message: "Failed to load pages. Please try again.",
+        })
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    fetchPages()
+  }, [pageType])
+
+  // Fetch page content when a page is selected
+  useEffect(() => {
+    if (!selectedPage) return
+
+    const getPageContent = async () => {
+      setIsLoading(true)
+      try {
+        const content = await fetchPageContent(pageType, selectedPage)
+        setContent(content)
+        setOriginalContent(content)
+      } catch (error) {
+        console.error("Error fetching page content:", error)
+        setNotification({
+          type: "error",
+          message: "Failed to load page content. Please try again.",
+        })
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    getPageContent()
+  }, [selectedPage, pageType])
+
+  const handleSave = async () => {
+    setIsSaving(true)
+    try {
+      await savePageContent(pageType, selectedPage, content)
+      setOriginalContent(content)
+      setNotification({
+        type: "success",
+        message: "Content saved successfully!",
+      })
+    } catch (error) {
+      console.error("Error saving content:", error)
+      setNotification({
+        type: "error",
+        message: "Failed to save content. Please try again.",
+      })
+    } finally {
+      setIsSaving(false)
+    }
+  }
+
+  const filteredPages = pages.filter((page) => page.name.toLowerCase().includes(searchTerm.toLowerCase()))
+
+  const hasChanges = content !== originalContent
+
+  return (
+    <div className="container mx-auto py-8">
+      <h1 className="text-3xl font-bold mb-6">Lesson Content Manager</h1>
+
+      {notification && (
+        <Alert
+          className={`mb-6 ${notification.type === "success" ? "bg-green-50" : "bg-red-50"}`}
+          variant={notification.type === "success" ? "default" : "destructive"}
+        >
+          {notification.type === "success" ? <Check className="h-4 w-4" /> : <AlertCircle className="h-4 w-4" />}
+          <AlertTitle>{notification.type === "success" ? "Success" : "Error"}</AlertTitle>
+          <AlertDescription>{notification.message}</AlertDescription>
+        </Alert>
+      )}
+
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <Card className="md:col-span-1">
+          <CardHeader>
+            <CardTitle>Page Selection</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="page-type">Page Type</Label>
+              <Select
+                value={pageType}
+                onValueChange={(value) => {
+                  setPageType(value)
+                  setSelectedPage("")
+                  setContent("")
+                  setOriginalContent("")
+                }}
+              >
+                <SelectTrigger id="page-type">
+                  <SelectValue placeholder="Select page type" />
+                </SelectTrigger>
+                <SelectContent>
+                  {PAGE_TYPES.map((type) => (
+                    <SelectItem key={type.id} value={type.id}>
+                      {type.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="search-pages">Search Pages</Label>
+              <Input
+                id="search-pages"
+                placeholder="Search pages..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="page-select">Select Page</Label>
+              <Select value={selectedPage} onValueChange={setSelectedPage} disabled={isLoading || pages.length === 0}>
+                <SelectTrigger id="page-select">
+                  <SelectValue placeholder={isLoading ? "Loading pages..." : "Select a page"} />
+                </SelectTrigger>
+                <SelectContent>
+                  {filteredPages.map((page) => (
+                    <SelectItem key={page.id} value={page.id}>
+                      {page.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="pt-4">
+              <p className="text-sm text-gray-500">
+                {selectedPage
+                  ? originalContent
+                    ? "This page has existing content."
+                    : "This page is currently empty."
+                  : "Select a page to view or edit its content."}
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="md:col-span-3">
+          <CardHeader>
+            <CardTitle className="flex justify-between items-center">
+              <span>
+                {selectedPage
+                  ? `Editing: ${pages.find((p) => p.id === selectedPage)?.name || selectedPage}`
+                  : "Content Editor"}
+              </span>
+              <div className="flex space-x-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setPreviewMode(!previewMode)}
+                  disabled={!selectedPage || isLoading}
+                >
+                  {previewMode ? <FileText className="h-4 w-4 mr-2" /> : <Eye className="h-4 w-4 mr-2" />}
+                  {previewMode ? "Edit" : "Preview"}
+                </Button>
+              </div>
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            {isLoading ? (
+              <div className="flex justify-center items-center h-64">
+                <Loader2 className="h-8 w-8 animate-spin text-gray-400" />
+              </div>
+            ) : !selectedPage ? (
+              <div className="text-center py-12 text-gray-500">
+                <FileText className="h-12 w-12 mx-auto mb-4 text-gray-300" />
+                <p>Select a page to edit its content</p>
+              </div>
+            ) : previewMode ? (
+              <div className="border rounded-md p-4 min-h-[400px] prose max-w-none">
+                <ContentPreview content={content} />
+              </div>
+            ) : (
+              <Textarea
+                className="min-h-[400px] font-mono"
+                placeholder="Enter or paste lesson content here..."
+                value={content}
+                onChange={(e) => setContent(e.target.value)}
+              />
+            )}
+          </CardContent>
+          <CardFooter className="flex justify-between">
+            <Button
+              variant="outline"
+              onClick={() => {
+                setContent(originalContent)
+                setNotification(null)
+              }}
+              disabled={!hasChanges || isLoading || isSaving}
+            >
+              Cancel
+            </Button>
+            <Button onClick={handleSave} disabled={!hasChanges || isLoading || isSaving || !selectedPage}>
+              {isSaving ? <Loader2 className="h-4 w-4 mr-2 animate-spin" /> : <Save className="h-4 w-4 mr-2" />}
+              Save Changes
+            </Button>
+          </CardFooter>
+        </Card>
+      </div>
+    </div>
+  )
+}
+
+// Mock function to get pages based on type
+function getMockPages(pageType: string) {
+  switch (pageType) {
+    case "topic":
+      return [
+        { id: "what-is-intelligence", name: "What is Intelligence?" },
+        { id: "intelligence-cycle", name: "Intelligence Cycle" },
+        { id: "intelligence-types", name: "Types of Intelligence" },
+        { id: "strategic-intelligence-concept", name: "Strategic Intelligence Concept" },
+        { id: "what-is-osint", name: "What is OSINT?" },
+      ]
+    case "learning-path":
+      return [
+        { id: "foundations", name: "Foundations of Intelligence" },
+        { id: "strategic-intelligence", name: "Strategic Intelligence" },
+        { id: "tactical-intelligence", name: "Tactical Intelligence" },
+        { id: "operational-intelligence", name: "Operational Intelligence" },
+        { id: "osint", name: "Open Source Intelligence (OSINT)" },
+      ]
+    case "advanced-topic":
+      return [
+        { id: "cognitive-biases", name: "Cognitive Biases in Intelligence" },
+        { id: "intelligence-ethics", name: "Ethics in Intelligence" },
+        { id: "digital-intelligence", name: "Digital Intelligence" },
+      ]
+    case "other":
+      return [
+        { id: "about", name: "About Page" },
+        { id: "faq", name: "FAQ Page" },
+        { id: "resources", name: "Resources Page" },
+      ]
+    default:
+      return []
+  }
+}
+
+// Simple content preview component
+function ContentPreview({ content }: { content: string }) {
+  if (!content) {
+    return <p className="text-gray-400 italic">No content to preview</p>
+  }
+
+  // Split content by paragraphs and render
+  const paragraphs = content.split("\n\n").filter((p) => p.trim())
+
+  return (
+    <div>
+      {paragraphs.map((paragraph, index) => {
+        // Check if paragraph looks like a heading (starts with # or ##)
+        if (paragraph.startsWith("# ")) {
+          return (
+            <h1 key={index} className="text-2xl font-bold mb-4">
+              {paragraph.substring(2)}
+            </h1>
+          )
+        }
+        if (paragraph.startsWith("## ")) {
+          return (
+            <h2 key={index} className="text-xl font-bold mb-3">
+              {paragraph.substring(3)}
+            </h2>
+          )
+        }
+        if (paragraph.startsWith("### ")) {
+          return (
+            <h3 key={index} className="text-lg font-bold mb-2">
+              {paragraph.substring(4)}
+            </h3>
+          )
+        }
+
+        // Handle bullet points
+        if (paragraph.includes("\n- ")) {
+          const [intro, ...bullets] = paragraph.split("\n- ")
+          return (
+            <div key={index} className="mb-4">
+              {intro && <p className="mb-2">{intro}</p>}
+              <ul className="list-disc pl-6 space-y-1">
+                {bullets.map((bullet, i) => (
+                  <li key={i}>{bullet}</li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
+
+        // Regular paragraph
+        return (
+          <p key={index} className="mb-4">
+            {paragraph}
+          </p>
+        )
+      })}
+    </div>
+  )
+}
