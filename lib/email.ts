@@ -78,3 +78,14 @@ export async function sendAdminNotification(args: {
   `;
   return send(NOTIFY, subject, html);
 }
+
+export async function sendTopicRequestEmail(
+  email: string,
+  topic: string,
+  description: string
+) {
+  if (!NOTIFY) return { ok: false as const, reason: "notify_email_not_set" };
+  const subject = "[" + SITE_NAME + "] New Topic Request: " + topic;
+  const html = "<h3>" + subject + "</h3><p>From: " + email + "</p><p>Topic: " + topic + "</p><p>" + description + "</p>";
+  return send(NOTIFY, subject, html);
+}
