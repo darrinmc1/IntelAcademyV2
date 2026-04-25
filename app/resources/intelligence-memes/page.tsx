@@ -90,7 +90,7 @@ export default function IntelligenceMemesPage() {
               <MemeCard
                 title="Intelligence Deadlines"
                 description="When they need the analysis 'ASAP'"
-                imagePath="/intelligence-deadline-spongebob.png"
+                imagePath="/intelligence-deadline-owl.png"
                 altText="Meme about impossible intelligence deadlines"
                 concept="Report Writing"
                 conceptLink="/learning-paths/report-writing"

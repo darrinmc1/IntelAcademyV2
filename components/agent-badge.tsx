@@ -50,7 +50,7 @@ export function AgentBadge({ progress, size = 'md', showProgress = true, showNam
           <Image
             src={agent.imagePath}
             alt={agent.codename}
-            fill
+            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
             onError={() => setImgError(true)}
           />

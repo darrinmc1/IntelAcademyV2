@@ -21,7 +21,7 @@ export default function CrimeTrendAnalysisPage() {
             <Image
               src="/crime-trend-analysis-banner-large.png"
               alt="Crime Trend Analysis"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
               priority
             />
@@ -48,7 +48,7 @@ export default function CrimeTrendAnalysisPage() {
             <Image
               src="/trend-analysis-methodology-thumb.png"
               alt="What is Crime Trend Analysis"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -67,7 +67,7 @@ export default function CrimeTrendAnalysisPage() {
             <Image
               src="/short-vs-long-term-trends-thumb.png"
               alt="Short vs Long-Term Trends"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -86,7 +86,7 @@ export default function CrimeTrendAnalysisPage() {
             <Image
               src="/seasonal-temporal-trends-thumb.png"
               alt="Seasonal and Temporal Trends"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -102,7 +102,7 @@ export default function CrimeTrendAnalysisPage() {
         {/* Card 4 */}
         <div className="border rounded-lg overflow-hidden shadow-sm">
           <div className="relative h-48">
-            <Image src="/statistical-techniques-thumb.png" alt="Statistical Techniques" fill className="object-cover" />
+            <Image src="/statistical-techniques-thumb.png" alt="Statistical Techniques" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
           </div>
           <div className="p-4">
             <h3 className="text-xl font-bold mb-2">Statistical Techniques</h3>
@@ -114,7 +114,7 @@ export default function CrimeTrendAnalysisPage() {
         {/* Card 5 */}
         <div className="border rounded-lg overflow-hidden shadow-sm">
           <div className="relative h-48">
-            <Image src="/emerging-threats-thumb.png" alt="Emerging Threats" fill className="object-cover" />
+            <Image src="/emerging-threats-thumb.png" alt="Emerging Threats" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
           </div>
           <div className="p-4">
             <h3 className="text-xl font-bold mb-2">Identifying Emerging Threats</h3>
@@ -129,7 +129,7 @@ export default function CrimeTrendAnalysisPage() {
             <Image
               src="/trend-analysis-reporting-thumb.png"
               alt="Trend Analysis Reporting"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -149,7 +149,7 @@ export default function CrimeTrendAnalysisPage() {
             <Image
               src="/crime-trend-analysis-concept.png"
               alt="Crime Trend Analysis Concept"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover rounded-lg"
             />
           </div>

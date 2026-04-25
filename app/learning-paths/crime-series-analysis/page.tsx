@@ -22,7 +22,7 @@ export default function CrimeSeriesAnalysisPage() {
             <Image
               src="/crime-series-analysis-banner-large.png"
               alt="Crime Series Analysis"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
               priority
             />
@@ -101,7 +101,7 @@ export default function CrimeSeriesAnalysisPage() {
             <Image
               src="/crime-series-framework.png"
               alt="Crime Series Analysis Framework"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover rounded-lg"
             />
           </div>

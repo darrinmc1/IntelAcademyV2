@@ -15,7 +15,7 @@ export default function ExcelForAnalystsPage() {
           <Image
             src="/excel-for-analysts-banner.png"
             alt="Excel for Intelligence Analysts"
-            fill
+            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
             priority
           />

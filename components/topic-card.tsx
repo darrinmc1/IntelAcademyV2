@@ -18,7 +18,7 @@ const TopicCard: React.FC<TopicCardProps> = ({ title, description, image, path, 
       className="block rounded-lg bg-card shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200"
     >
       <div className="relative h-48 w-full">
-        <Image className="object-cover" src={image || "/placeholder.svg"} alt={title} fill />
+        <Image className="object-cover" src={image || "/placeholder.svg"} alt={title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
       </div>
       <div className="p-4">
         <div className="flex items-center mb-2">

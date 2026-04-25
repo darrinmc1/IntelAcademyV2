@@ -44,7 +44,7 @@ export default function AnalystNotebookPage() {
             <Image
               src={bannerImage || "/placeholder.svg"}
               alt="IBM i2 Analyst&apos;s Notebook"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
               priority
             />

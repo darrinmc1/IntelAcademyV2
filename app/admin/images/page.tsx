@@ -121,7 +121,7 @@ function ImageUploadSection() {
               {uploadedImages.map((image, index) => (
                 <Card key={index} className="overflow-hidden">
                   <div className="relative h-48">
-                    <Image src={image.url || "/placeholder.svg"} alt="Uploaded image" fill className="object-cover" />
+                    <Image src={image.url || "/placeholder.svg"} alt="Uploaded image" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                   </div>
                   <CardContent className="p-4">
                     <div className="flex items-center justify-between">

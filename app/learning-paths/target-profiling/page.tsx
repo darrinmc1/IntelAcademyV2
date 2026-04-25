@@ -12,7 +12,7 @@ export default function TargetProfilingPage() {
     <main className="container mx-auto px-4 py-12">
       {/* Banner */}
       <div className="relative w-full h-64 mb-8 rounded-lg overflow-hidden">
-        <Image src="/target-profiling-banner-large.png" alt="Target Profiling" fill className="object-cover" priority />
+        <Image src="/target-profiling-banner-large.png" alt="Target Profiling" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" priority />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-start pl-8">
           <h1 className="text-4xl md:text-5xl font-bold text-white">Target Profiling</h1>
         </div>
@@ -43,7 +43,7 @@ export default function TargetProfilingPage() {
             <Image
               src="/what-is-target-profiling-thumb.png"
               alt="What is Target Profiling"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -59,7 +59,7 @@ export default function TargetProfilingPage() {
         {/* Card 2 */}
         <div className="border rounded-lg overflow-hidden shadow-sm">
           <div className="relative h-48">
-            <Image src="/behavioral-analysis-thumb.png" alt="Behavioral Analysis" fill className="object-cover" />
+            <Image src="/behavioral-analysis-thumb.png" alt="Behavioral Analysis" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
           </div>
           <div className="p-4">
             <h3 className="text-xl font-bold mb-2">Behavioral Analysis</h3>
@@ -71,7 +71,7 @@ export default function TargetProfilingPage() {
         {/* Card 3 */}
         <div className="border rounded-lg overflow-hidden shadow-sm">
           <div className="relative h-48">
-            <Image src="/target-package-thumb.png" alt="Target Package Development" fill className="object-cover" />
+            <Image src="/target-package-thumb.png" alt="Target Package Development" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
           </div>
           <div className="p-4">
             <h3 className="text-xl font-bold mb-2">Target Package Development</h3>
@@ -88,7 +88,7 @@ export default function TargetProfilingPage() {
             <Image
               src="/criminal-profiling-basics-thumb.png"
               alt="Criminal Profiling Basics"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -105,7 +105,7 @@ export default function TargetProfilingPage() {
             <Image
               src="/priority-offender-programs-thumb.png"
               alt="Priority Offender Programs"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -122,7 +122,7 @@ export default function TargetProfilingPage() {
             <Image
               src="/high-risk-identification-thumb.png"
               alt="High-Risk Target Identification"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -142,7 +142,7 @@ export default function TargetProfilingPage() {
             <Image
               src="/target-profiling-concept.png"
               alt="Target Profiling Concept"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover rounded-lg"
             />
           </div>

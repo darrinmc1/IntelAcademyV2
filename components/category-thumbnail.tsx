@@ -246,6 +246,7 @@ export function CategoryThumbnail({
       <div className="absolute inset-0 bg-black/20">
         <Image
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           src={src || config.bgImage}
           alt={alt || config.label}
 

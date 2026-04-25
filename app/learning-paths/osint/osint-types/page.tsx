@@ -33,7 +33,7 @@ export default function OSINTTypesPage() {
           <Image
             src="/osint-types-categories.png"
             alt="OSINT Types and Categories"
-            fill
+            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
             priority
           />
@@ -143,7 +143,7 @@ export default function OSINTTypesPage() {
               <div className="flex items-center justify-between py-2">
                 <div className="flex items-center gap-4">
                   <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0">
-                    <Image src="/google-dorking-thumb.png" alt="Google Dorking" fill className="object-cover" />
+                    <Image src="/google-dorking-thumb.png" alt="Google Dorking" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                   </div>
                   <div>
                     <h3 className="font-medium">Google Dorking Techniques</h3>
@@ -160,7 +160,7 @@ export default function OSINTTypesPage() {
               <div className="flex items-center justify-between py-2">
                 <div className="flex items-center gap-4">
                   <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0">
-                    <Image src="/socmint-techniques-thumb.png" alt="SOCMINT Techniques" fill className="object-cover" />
+                    <Image src="/socmint-techniques-thumb.png" alt="SOCMINT Techniques" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                   </div>
                   <div>
                     <h3 className="font-medium">Social Media Intelligence (SOCMINT) Techniques</h3>

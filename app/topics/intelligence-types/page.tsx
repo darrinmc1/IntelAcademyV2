@@ -52,7 +52,7 @@ export default function IntelligenceTypes() {
           <Image
             src="/intelligence-types-header.png"
             alt="Types of Intelligence"
-            fill
+            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
             priority
           />
@@ -113,7 +113,7 @@ export default function IntelligenceTypes() {
               </div>
               <div>
                 <div className="relative h-64 w-full rounded-lg overflow-hidden mb-4">
-                  <Image src="/humint-illustration.png" alt="HUMINT Illustration" fill className="object-cover" />
+                  <Image src="/humint-illustration.png" alt="HUMINT Illustration" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Applications</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -183,7 +183,7 @@ export default function IntelligenceTypes() {
               </div>
               <div>
                 <div className="relative h-64 w-full rounded-lg overflow-hidden mb-4">
-                  <Image src="/osint-illustration.png" alt="OSINT Illustration" fill className="object-cover" />
+                  <Image src="/osint-illustration.png" alt="OSINT Illustration" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Applications</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -252,7 +252,7 @@ export default function IntelligenceTypes() {
               </div>
               <div>
                 <div className="relative h-64 w-full rounded-lg overflow-hidden mb-4">
-                  <Image src="/sigint-illustration.png" alt="SIGINT Illustration" fill className="object-cover" />
+                  <Image src="/sigint-illustration.png" alt="SIGINT Illustration" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Applications</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -322,7 +322,7 @@ export default function IntelligenceTypes() {
               </div>
               <div>
                 <div className="relative h-64 w-full rounded-lg overflow-hidden mb-4">
-                  <Image src="/geoint-illustration.png" alt="GEOINT Illustration" fill className="object-cover" />
+                  <Image src="/geoint-illustration.png" alt="GEOINT Illustration" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Applications</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -391,7 +391,7 @@ export default function IntelligenceTypes() {
               </div>
               <div>
                 <div className="relative h-64 w-full rounded-lg overflow-hidden mb-4">
-                  <Image src="/masint-illustration.png" alt="MASINT Illustration" fill className="object-cover" />
+                  <Image src="/masint-illustration.png" alt="MASINT Illustration" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Applications</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -459,7 +459,7 @@ export default function IntelligenceTypes() {
               </div>
               <div>
                 <div className="relative h-64 w-full rounded-lg overflow-hidden mb-4">
-                  <Image src="/finint-illustration.png" alt="FININT Illustration" fill className="object-cover" />
+                  <Image src="/finint-illustration.png" alt="FININT Illustration" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Applications</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -528,7 +528,7 @@ export default function IntelligenceTypes() {
               </div>
               <div>
                 <div className="relative h-64 w-full rounded-lg overflow-hidden mb-4">
-                  <Image src="/techint-illustration.png" alt="TECHINT Illustration" fill className="object-cover" />
+                  <Image src="/techint-illustration.png" alt="TECHINT Illustration" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Applications</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -607,7 +607,7 @@ export default function IntelligenceTypes() {
             <Image
               src="/intelligence-integration-diagram.png"
               alt="Intelligence Integration Diagram"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>

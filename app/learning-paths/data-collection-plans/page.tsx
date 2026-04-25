@@ -15,7 +15,7 @@ export default function DataCollectionPlansPage() {
           <Image
             src="/data-collection-plans-banner-large.png"
             alt="Data Collection Plans"
-            fill
+            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
             priority
           />

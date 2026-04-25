@@ -37,7 +37,7 @@ export default function WhatIsOperationalIntelligence() {
           <Image
             src="/operational-intelligence-header.png"
             alt="Operational Intelligence"
-            fill
+            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
             priority
           />
@@ -88,7 +88,7 @@ export default function WhatIsOperationalIntelligence() {
           <Image
             src="/intelligence-levels-comparison.png"
             alt="Comparison of Strategic, Operational, and Tactical Intelligence"
-            fill
+            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-contain p-4"
           />
         </div>
@@ -170,7 +170,7 @@ export default function WhatIsOperationalIntelligence() {
           <Image
             src="/operational-intelligence-process.png"
             alt="Operational Intelligence Process"
-            fill
+            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-contain p-4"
           />
         </div>

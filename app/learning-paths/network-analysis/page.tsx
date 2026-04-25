@@ -18,7 +18,7 @@ export default function NetworkAnalysisPage() {
             </div>
           </div>
           <div className="relative h-full">
-            <Image src="/network-analysis-banner-large.png" alt="Network Analysis" fill className="object-cover" priority />
+            <Image src="/network-analysis-banner-large.png" alt="Network Analysis" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" priority />
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@ export default function NetworkAnalysisPage() {
             <Image
               src="/what-is-network-analysis-thumb.png"
               alt="What is Network Analysis"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -58,7 +58,7 @@ export default function NetworkAnalysisPage() {
         {/* Card 2 */}
         <div className="border rounded-lg overflow-hidden shadow-sm">
           <div className="relative h-48">
-            <Image src="/link-analysis-charts-thumb.png" alt="Link Analysis Charts" fill className="object-cover" />
+            <Image src="/link-analysis-charts-thumb.png" alt="Link Analysis Charts" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
           </div>
           <div className="p-4">
             <h3 className="text-xl font-bold mb-2">Link Analysis Charts</h3>
@@ -75,7 +75,7 @@ export default function NetworkAnalysisPage() {
             <Image
               src="/entity-relationship-mapping-thumb.png"
               alt="Entity Relationship Mapping"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -92,7 +92,7 @@ export default function NetworkAnalysisPage() {
             <Image
               src="/social-network-analysis-thumb.png"
               alt="Social Network Analysis"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -106,7 +106,7 @@ export default function NetworkAnalysisPage() {
         {/* Card 5 */}
         <div className="border rounded-lg overflow-hidden shadow-sm">
           <div className="relative h-48">
-            <Image src="/key-influencers-thumb.png" alt="Key Influencers" fill className="object-cover" />
+            <Image src="/key-influencers-thumb.png" alt="Key Influencers" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
           </div>
           <div className="p-4">
             <h3 className="text-xl font-bold mb-2">Identifying Key Influencers</h3>
@@ -118,7 +118,7 @@ export default function NetworkAnalysisPage() {
         {/* Card 6 */}
         <div className="border rounded-lg overflow-hidden shadow-sm">
           <div className="relative h-48">
-            <Image src="/network-disruption-thumb.png" alt="Network Disruption" fill className="object-cover" />
+            <Image src="/network-disruption-thumb.png" alt="Network Disruption" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
           </div>
           <div className="p-4">
             <h3 className="text-xl font-bold mb-2">Network Disruption Strategies</h3>
@@ -136,7 +136,7 @@ export default function NetworkAnalysisPage() {
             <Image
               src="/network-analysis-concept.png"
               alt="Network Analysis Concept"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover rounded-lg"
             />
           </div>

@@ -21,7 +21,7 @@ export default function HotSpotAnalysisPage() {
             <Image
               src="/hot-spot-analysis-banner-large.png"
               alt="Hot Spot Analysis"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
               priority
             />
@@ -48,7 +48,7 @@ export default function HotSpotAnalysisPage() {
             <Image
               src="/hot-spot-mapping-intro-thumb.png"
               alt="What is Hot Spot Analysis"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -67,7 +67,7 @@ export default function HotSpotAnalysisPage() {
             <Image
               src="/crime-mapping-techniques-thumb.png"
               alt="Crime Mapping Techniques"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -83,7 +83,7 @@ export default function HotSpotAnalysisPage() {
         {/* Card 3 */}
         <div className="border rounded-lg overflow-hidden shadow-sm">
           <div className="relative h-48">
-            <Image src="/temporal-analysis-thumb.png" alt="Temporal Analysis" fill className="object-cover" />
+            <Image src="/temporal-analysis-thumb.png" alt="Temporal Analysis" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
           </div>
           <div className="p-4">
             <h3 className="text-xl font-bold mb-2">Temporal Analysis</h3>
@@ -95,7 +95,7 @@ export default function HotSpotAnalysisPage() {
         {/* Card 4 */}
         <div className="border rounded-lg overflow-hidden shadow-sm">
           <div className="relative h-48">
-            <Image src="/risk-terrain-modeling-thumb.png" alt="Risk Terrain Modeling" fill className="object-cover" />
+            <Image src="/risk-terrain-modeling-thumb.png" alt="Risk Terrain Modeling" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
           </div>
           <div className="p-4">
             <h3 className="text-xl font-bold mb-2">Risk Terrain Modeling</h3>
@@ -107,7 +107,7 @@ export default function HotSpotAnalysisPage() {
         {/* Card 5 */}
         <div className="border rounded-lg overflow-hidden shadow-sm">
           <div className="relative h-48">
-            <Image src="/predictive-hot-spots-thumb.png" alt="Predictive Hot Spots" fill className="object-cover" />
+            <Image src="/predictive-hot-spots-thumb.png" alt="Predictive Hot Spots" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
           </div>
           <div className="p-4">
             <h3 className="text-xl font-bold mb-2">Predictive Hot Spots</h3>
@@ -122,7 +122,7 @@ export default function HotSpotAnalysisPage() {
             <Image
               src="/deployment-decisions-thumb.png"
               alt="Resource Deployment Strategies"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -142,7 +142,7 @@ export default function HotSpotAnalysisPage() {
             <Image
               src="/hot-spot-analysis-concept.png"
               alt="Hot Spot Analysis Concept"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover rounded-lg"
             />
           </div>

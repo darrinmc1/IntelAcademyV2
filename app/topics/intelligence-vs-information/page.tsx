@@ -91,7 +91,7 @@ export default function IntelligenceVsInformationPage() {
               <Image
                 src="/intelligence-transformation-process.png"
                 alt="The process of transforming information into intelligence"
-                fill
+                fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-contain"
               />
             </div>

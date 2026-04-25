@@ -45,7 +45,7 @@ export default function LearnMore() {
               <Image
                 src="/collaborative-intelligence-hub.png"
                 alt="Intelligence analysts collaborating"
-                fill
+                fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover"
               />
             </div>

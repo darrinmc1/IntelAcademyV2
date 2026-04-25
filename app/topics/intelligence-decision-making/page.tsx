@@ -92,7 +92,7 @@ export default function IntelligenceDecisionMakingPage() {
             <Image
               src="/intelligence-reduce-uncertainty.png"
               alt="Intelligence reducing uncertainty in decision making"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-contain"
             />
           </div>
