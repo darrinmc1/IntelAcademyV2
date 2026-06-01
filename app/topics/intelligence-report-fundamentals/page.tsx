@@ -109,7 +109,7 @@ export default function IntelligenceReportFundamentalsPage() {
                 <h4 className="text-lg font-medium mt-6 mb-3">The Anatomy of an Intelligence Report</h4>
 
                 <div className="space-y-4 mt-4">
-                  <div className="bg-blue-50 p-4 rounded-md border-l-4 border-blue-500">
+                  <div className="bg-blue-900/20 p-4 rounded-md border-l-4 border-blue-500">
                     <h5 className="font-medium text-blue-800">Executive Summary</h5>
                     <ul className="mt-2 space-y-1 text-blue-800">
                       <li>• Provides a concise overview of the entire report in 1-2 paragraphs</li>
@@ -183,7 +183,7 @@ export default function IntelligenceReportFundamentalsPage() {
 
                 <h4 className="text-lg font-medium mt-8 mb-3">The "Inverted Pyramid" Approach</h4>
 
-                <div className="bg-blue-50 p-6 rounded-lg my-6 border border-blue-100">
+                <div className="bg-blue-900/20 p-6 rounded-lg my-6 border border-blue-800/30">
                   <h5 className="text-blue-800 font-medium mb-4">The Inverted Pyramid Structure</h5>
                   <div className="relative w-full h-64 mb-4">
                     <div className="absolute top-0 left-0 right-0 h-16 bg-blue-700 text-white flex items-center justify-center rounded-t-lg">
@@ -336,9 +336,9 @@ export default function IntelligenceReportFundamentalsPage() {
 
                 <h5 className="font-medium mt-4 mb-2">Vague Terms to Avoid</h5>
                 <div className="overflow-x-auto mb-6">
-                  <table className="min-w-full bg-white border border-gray-200 rounded-md">
+                  <table className="min-w-full bg-gray-800/50 border border-gray-700 rounded-md">
                     <thead>
-                      <tr className="bg-gray-50">
+                      <tr className="bg-gray-700/50">
                         <th className="py-2 px-4 border-b text-left">Vague Term</th>
                         <th className="py-2 px-4 border-b text-left">Precision Problem</th>
                         <th className="py-2 px-4 border-b text-left">Better Alternative</th>
@@ -393,7 +393,7 @@ export default function IntelligenceReportFundamentalsPage() {
                     </p>
                   </div>
 
-                  <div className="bg-blue-50 p-4 rounded-md border border-blue-200">
+                  <div className="bg-blue-900/20 p-4 rounded-md border border-blue-800/30">
                     <h5 className="font-medium text-blue-800 mb-2">Passive Voice Problems</h5>
                     <p className="text-blue-800 mb-2">Active voice clarifies responsibility and action:</p>
                     <div className="space-y-2">
@@ -420,9 +420,9 @@ export default function IntelligenceReportFundamentalsPage() {
                       Intelligence analysts use standardized terminology to communicate likelihood:
                     </p>
                     <div className="overflow-x-auto">
-                      <table className="min-w-full bg-white border border-gray-200 rounded-md">
+                      <table className="min-w-full bg-gray-800/50 border border-gray-700 rounded-md">
                         <thead>
-                          <tr className="bg-gray-50">
+                          <tr className="bg-gray-700/50">
                             <th className="py-2 px-4 border-b text-left">Term</th>
                             <th className="py-2 px-4 border-b text-left">Approximate Probability</th>
                           </tr>
@@ -510,7 +510,7 @@ export default function IntelligenceReportFundamentalsPage() {
                 <p className="mb-3">Precise intelligence writing explicitly identifies:</p>
 
                 <div className="space-y-4 mb-6">
-                  <div className="bg-blue-50 p-4 rounded-md border-l-4 border-blue-500">
+                  <div className="bg-blue-900/20 p-4 rounded-md border-l-4 border-blue-500">
                     <h5 className="font-medium text-blue-800">Facts</h5>
                     <ul className="mt-1 space-y-1 text-blue-800">
                       <li>• Verified information from reliable sources</li>
@@ -538,7 +538,7 @@ export default function IntelligenceReportFundamentalsPage() {
                   </div>
                 </div>
 
-                <div className="bg-gray-50 p-5 rounded-lg border border-gray-200 mb-6">
+                <div className="bg-gray-800 p-5 rounded-lg border border-gray-700 mb-6">
                   <h5 className="font-medium mb-2">Example of clear distinction</h5>
                   <p className="italic">
                     "Intercepted communications confirm North Country has cancelled military leave for the next month{" "}
@@ -633,7 +633,7 @@ export default function IntelligenceReportFundamentalsPage() {
                   </div>
                 </div>
 
-                <div className="bg-blue-50 p-5 rounded-lg border border-blue-200 mb-4">
+                <div className="bg-blue-900/20 p-5 rounded-lg border border-blue-800/30 mb-4">
                   <h5 className="font-medium text-blue-800 mb-2">Conclusion</h5>
                   <p className="text-blue-800">
                     Precision language isn't about academic elegance—it's about communicating intelligence that
@@ -668,7 +668,7 @@ export default function IntelligenceReportFundamentalsPage() {
 
                 <h4 className="text-lg font-medium mt-6 mb-3">The Fundamentals of Source Documentation</h4>
 
-                <div className="bg-blue-50 p-5 rounded-lg border border-blue-200 mb-6">
+                <div className="bg-blue-900/20 p-5 rounded-lg border border-blue-800/30 mb-6">
                   <h5 className="font-medium text-blue-800 mb-3">Why Sourcing Matters</h5>
                   <ul className="space-y-1 text-blue-800">
                     <li>• Enables readers to assess the strength of evidence</li>
@@ -742,9 +742,9 @@ export default function IntelligenceReportFundamentalsPage() {
                   <div>
                     <h5 className="font-medium mb-3">Source Reliability Scale</h5>
                     <div className="overflow-x-auto">
-                      <table className="min-w-full bg-white border border-gray-200 rounded-md">
+                      <table className="min-w-full bg-gray-800/50 border border-gray-700 rounded-md">
                         <thead>
-                          <tr className="bg-gray-50">
+                          <tr className="bg-gray-700/50">
                             <th className="py-2 px-3 border-b text-left text-sm">Rating</th>
                             <th className="py-2 px-3 border-b text-left text-sm">Description</th>
                             <th className="py-2 px-3 border-b text-left text-sm">Meaning</th>
@@ -801,9 +801,9 @@ export default function IntelligenceReportFundamentalsPage() {
                   <div>
                     <h5 className="font-medium mb-3">Information Credibility Scale</h5>
                     <div className="overflow-x-auto">
-                      <table className="min-w-full bg-white border border-gray-200 rounded-md">
+                      <table className="min-w-full bg-gray-800/50 border border-gray-700 rounded-md">
                         <thead>
-                          <tr className="bg-gray-50">
+                          <tr className="bg-gray-700/50">
                             <th className="py-2 px-3 border-b text-left text-sm">Rating</th>
                             <th className="py-2 px-3 border-b text-left text-sm">Description</th>
                             <th className="py-2 px-3 border-b text-left text-sm">Meaning</th>
@@ -859,7 +859,7 @@ export default function IntelligenceReportFundamentalsPage() {
                   </div>
                 </div>
 
-                <p className="mb-6 text-sm bg-gray-50 p-3 rounded-md border border-gray-200">
+                <p className="mb-6 text-sm bg-gray-800 p-3 rounded-md border border-gray-700">
                   A source evaluated as "B2" would be considered usually reliable, providing information assessed as
                   probably true.
                 </p>
@@ -1021,7 +1021,7 @@ export default function IntelligenceReportFundamentalsPage() {
                 <h4 className="text-lg font-medium mt-6 mb-3">Handling Multiple Sources</h4>
 
                 <div className="space-y-6 mb-6">
-                  <div className="bg-blue-50 p-4 rounded-md border border-blue-200">
+                  <div className="bg-blue-900/20 p-4 rounded-md border border-blue-800/30">
                     <h5 className="font-medium text-blue-800 mb-2">Confirming Sources</h5>
                     <p className="text-blue-800 mb-2">When sources confirm each other:</p>
                     <ol className="space-y-1 text-blue-800 pl-5 list-decimal">
@@ -1030,7 +1030,7 @@ export default function IntelligenceReportFundamentalsPage() {
                       <li>Indicate how confirmation strengthens confidence</li>
                       <li>Identify any collection bias that might affect multiple sources</li>
                     </ol>
-                    <div className="mt-3 bg-white p-3 rounded-md border border-blue-100">
+                    <div className="mt-3 bg-gray-800 p-3 rounded-md border border-blue-800/30">
                       <p className="text-sm font-medium">Example:</p>
                       <p className="text-sm italic">
                         "Three independent HUMINT sources (B2, C2, B3) and SIGINT collection from two separate platforms
@@ -1049,7 +1049,7 @@ export default function IntelligenceReportFundamentalsPage() {
                       <li>Present alternative explanations based on different source sets</li>
                       <li>Explain your reasoning for favoring certain sources</li>
                     </ol>
-                    <div className="mt-3 bg-white p-3 rounded-md border border-purple-100">
+                    <div className="mt-3 bg-gray-800 p-3 rounded-md border border-purple-800/30">
                       <p className="text-sm font-medium">Example:</p>
                       <p className="text-sm italic">
                         "While diplomatic reporting (C3) suggests willingness to compromise, SIGINT collection (A2) and
@@ -1129,7 +1129,7 @@ export default function IntelligenceReportFundamentalsPage() {
 
                 <h4 className="text-lg font-medium mt-6 mb-3">Identifying Core Intelligence Questions</h4>
 
-                <div className="bg-blue-50 p-5 rounded-lg border border-blue-200 mb-6">
+                <div className="bg-blue-900/20 p-5 rounded-lg border border-blue-800/30 mb-6">
                   <h5 className="font-medium text-blue-800 mb-3">The Intelligence Requirements Process</h5>
                   <p className="text-blue-800 mb-2">
                     Every intelligence product begins with requirements - the specific questions the analysis needs to
@@ -1149,7 +1149,7 @@ export default function IntelligenceReportFundamentalsPage() {
                     </li>
                   </ol>
 
-                  <div className="mt-4 bg-white p-4 rounded-md border border-blue-100">
+                  <div className="mt-4 bg-gray-800 p-4 rounded-md border border-blue-800/30">
                     <p className="font-medium mb-2">Example Set:</p>
                     <ul className="space-y-2">
                       <li>
@@ -1233,9 +1233,9 @@ export default function IntelligenceReportFundamentalsPage() {
                 <p className="mb-3">Categorize research findings into:</p>
 
                 <div className="overflow-x-auto mb-6">
-                  <table className="min-w-full bg-white border border-gray-200 rounded-md">
+                  <table className="min-w-full bg-gray-800/50 border border-gray-700 rounded-md">
                     <thead>
-                      <tr className="bg-gray-50">
+                      <tr className="bg-gray-700/50">
                         <th className="py-2 px-4 border-b text-left">Category</th>
                         <th className="py-2 px-4 border-b text-left">Description</th>
                         <th className="py-2 px-4 border-b text-left">Treatment in Report</th>
@@ -1320,9 +1320,9 @@ export default function IntelligenceReportFundamentalsPage() {
                   <div>
                     <h5 className="font-medium mb-3">Effective Countermeasures</h5>
                     <div className="overflow-x-auto">
-                      <table className="min-w-full bg-white border border-gray-200 rounded-md">
+                      <table className="min-w-full bg-gray-800/50 border border-gray-700 rounded-md">
                         <thead>
-                          <tr className="bg-gray-50">
+                          <tr className="bg-gray-700/50">
                             <th className="py-2 px-3 border-b text-left text-sm">Trigger</th>
                             <th className="py-2 px-3 border-b text-left text-sm">Countermeasure</th>
                           </tr>
