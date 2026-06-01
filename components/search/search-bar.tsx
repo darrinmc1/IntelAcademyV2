@@ -7,6 +7,9 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { cn } from "@/lib/utils"
 
+// Hide the native browser search clear button that causes double X icons
+const inputClass = "pl-8 pr-20 [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
+
 interface SearchBarProps extends React.HTMLAttributes<HTMLFormElement> {
   onSearch?: (query: string) => void
   defaultValue?: string
@@ -48,7 +51,7 @@ export function SearchBar({
         <Input
           type="search"
           placeholder={placeholder}
-          className="pl-8 pr-10"
+            className={inputClass}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           data-testid="search-input"
