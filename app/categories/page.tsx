@@ -16,7 +16,7 @@ export default function CategoriesPage() {
       description: "Master the fundamental disciplines of intelligence analysis",
       path: "/categories/core-intelligence",
       imagePath: "/foundations.png",
-      courseCount: 4,
+      courseCount: 12,
     },
     {
       title: "Intelligence Collection Methods",
@@ -30,14 +30,84 @@ export default function CategoriesPage() {
       description: "Master advanced analytical techniques used by intelligence professionals",
       path: "/categories/analysis-techniques",
       imagePath: "/crime-series-analysis.png",
+      courseCount: 18,
+    },
+    {
+      title: "Report Writing & Briefing",
+      description: "Master intelligence report writing, executive summaries, and verbal briefings",
+      path: "/learning-paths/report-writing",
+      imagePath: "/intelligence-report-fundamentals.png",
+      courseCount: 20,
+    },
+    {
+      title: "OSINT & Open Source Intelligence",
+      description: "Open source intelligence gathering, SOCMINT, Google Dorking, and real-time monitoring",
+      path: "/learning-paths/osint",
+      imagePath: "/osint.png",
+      courseCount: 5,
+    },
+    {
+      title: "Strategic Intelligence",
+      description: "Long-term planning, forecasting, and strategic analysis for senior decision-makers",
+      path: "/learning-paths/strategic-intelligence",
+      imagePath: "/strategic-intelligence-banner.png",
+      courseCount: 3,
+    },
+    {
+      title: "Tactical Intelligence",
+      description: "Situational awareness, threat monitoring, and tactical reporting for field operations",
+      path: "/learning-paths/tactical-intelligence",
+      imagePath: "/tactical-intelligence.png",
+      courseCount: 4,
+    },
+    {
+      title: "Threat Assessment",
+      description: "Threat assessment frameworks, models, and continuous monitoring methodologies",
+      path: "/learning-paths/threat-assessment",
+      imagePath: "/threat-assessment.png",
+      courseCount: 4,
+    },
+    {
+      title: "Crime Analysis",
+      description: "Crime series analysis, crime trend analysis, and hot spot mapping techniques",
+      path: "/learning-paths/crime-series-analysis",
+      imagePath: "/crime-series-analysis.png",
+      courseCount: 2,
+    },
+    {
+      title: "Intelligence Ethics & Failures",
+      description: "Ethical frameworks, cognitive biases, and lessons from notable intelligence failures",
+      path: "/learning-paths/intelligence-ethics",
+      imagePath: "/intelligence-ethics.png",
+      courseCount: 3,
+    },
+    {
+      title: "Analyst Tools & Excel",
+      description: "Analysts Notebook, Excel for analysts, timeline visualization, and digital evidence tools",
+      path: "/learning-paths/analyst-notebook",
+      imagePath: "/intelligence-tools.png",
       courseCount: 8,
     },
     {
-      title: "Tools & Skills",
-      description: "Develop practical skills and master the tools used by intelligence professionals",
-      path: "/categories/tools-skills",
-      imagePath: "/intelligence-tools.png",
-      courseCount: 6,
+      title: "Foundations",
+      description: "Core foundations of intelligence analysis — the intelligence cycle, types, and key concepts",
+      path: "/learning-paths/foundations",
+      imagePath: "/foundations.png",
+      courseCount: 10,
+    },
+    {
+      title: "Financial Intelligence",
+      description: "Financial intelligence (FININT) fundamentals — following the money trail",
+      path: "/learning-paths/financial-intelligence",
+      imagePath: "/financial-intelligence.png",
+      courseCount: 1,
+    },
+    {
+      title: "Geospatial Intelligence",
+      description: "Geospatial intelligence (GEOINT) — satellite imagery, mapping, and location analysis",
+      path: "/learning-paths/geospatial-intelligence",
+      imagePath: "/geospatial-intelligence.png",
+      courseCount: 1,
     },
   ]
 
@@ -48,7 +118,7 @@ export default function CategoriesPage() {
         Browse our collection of intelligence analysis courses by category
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {categories.map((category) => (
           <Card key={category.path} className="overflow-hidden">
             <div className="relative h-48 w-full">
