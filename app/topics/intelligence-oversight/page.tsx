@@ -185,8 +185,7 @@ export default function IntelligenceOversightPage() {
             clipboard and asks questions that make senior leaders visibly uncomfortable. They
             are not popular at parties, but they are essential to the functioning of a
             democratic intelligence service.
-          </p>
-        }
+          </JokeAside>
 
           <h3 className="text-xl font-bold mb-3 mt-6">The Office of the Director of National Intelligence (ODNI)</h3>
           <p className="mb-4">

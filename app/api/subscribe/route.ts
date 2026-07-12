@@ -1,4 +1,4 @@
-// app/api/subscribe/route.ts — unified subscribe endpoint
+﻿// app/api/subscribe/route.ts – unified subscribe endpoint
 // Replaces the old nodemailer+JSON-file pattern.
 // Writes to Supabase, upserts into Mailchimp, sends welcome via Resend.
 
@@ -9,7 +9,7 @@ import { sendWelcome, sendAdminNotification } from "@/lib/email";
 
 const SITE_KEY = process.env.SITE_KEY ?? "unknown";
 
-// Simple in-memory rate limit (per-server-instance — good enough for now).
+// Simple in-memory rate limit (per-server-instance – good enough for now).
 const rateLimit = new Map<string, { count: number; reset: number }>();
 const WINDOW_MS = 60_000;
 const MAX_PER_WINDOW = 5;
@@ -37,9 +37,15 @@ export async function POST(req: NextRequest) {
   }
 
   const body = await req.json().catch(() => ({}));
-  const { email, name, source } = body as {
-    email?: string; name?: string; source?: string;
+  const { email, name, source, website } = body as {
+    email?: string; name?: string; source?: string; website?: string;
   };
+  
+  // HONEYPOT CHECK – reject silently if filled
+  if (website && website !== '') {
+    return NextResponse.json({ ok: true });
+  }
+
   if (!email || !emailRe.test(email)) {
     return NextResponse.json({ error: "Invalid email" }, { status: 400 });
   }
@@ -57,7 +63,7 @@ export async function POST(req: NextRequest) {
     else dbWrote = true;
   }
 
-  // 2. Push to Mailchimp (best-effort — don't fail the request if this errors)
+  // 2. Push to Mailchimp (best-effort – don't fail the request if this errors)
   const mc = await addToMailchimp({ email, name, tags: source ? [source] : [] });
 
   // 3. Fire-and-forget welcome email + admin notification
