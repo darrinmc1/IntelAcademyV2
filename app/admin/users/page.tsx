@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { RoleManager } from "./role-manager"
 
 // Mock data for users
 const mockUsers = [
@@ -123,6 +124,9 @@ export default function UsersPage() {
           Add New User
         </Button>
       </div>
+
+      {/* Real, DB-backed role management (the table below is still mock data). */}
+      <RoleManager />
 
       <Card className="mb-6">
         <CardHeader className="pb-3">

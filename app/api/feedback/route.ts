@@ -1,16 +1,15 @@
-// app/api/feedback/route.ts — unified feedback endpoint
-// Writes to Supabase, sends admin notification via Resend.
+// app/api/feedback/route.ts – feedback endpoint used by <FeedbackWidget/>.
+// Validates + persists via submitFeedbackAction (writes to `feedback` table
+// and notifies the admin inbox through Resend).
 
 import { NextRequest, NextResponse } from "next/server";
-import { supabaseAdmin } from "@/lib/supabase";
-import { sendAdminNotification } from "@/lib/email";
+import { submitFeedbackAction } from "@/app/actions/feedback";
 
-const SITE_KEY = process.env.SITE_KEY ?? "unknown";
-const VALID_CATEGORIES = ["Bug", "Suggestion", "Content Request", "Other"];
-
+// Simple in-memory rate limit (per-server-instance – matches /api/subscribe).
 const rateLimit = new Map<string, { count: number; reset: number }>();
 const WINDOW_MS = 60_000;
-const MAX_PER_WINDOW = 10;
+const MAX_PER_WINDOW = 5;
+
 function rateLimited(ip: string) {
   const now = Date.now();
   const e = rateLimit.get(ip);
@@ -32,35 +31,32 @@ export async function POST(req: NextRequest) {
   }
 
   const body = await req.json().catch(() => ({}));
-  const { rating, category, message, page, email } = body as {
-    rating?: number; category?: string; message?: string; page?: string; email?: string;
+  const { rating, category, message, email, page, website } = body as {
+    rating?: number;
+    category?: string;
+    message?: string;
+    email?: string;
+    page?: string;
+    website?: string;
   };
 
-  if (!rating || !category || !message) {
-    return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
-  }
-  if (rating < 1 || rating > 5) {
-    return NextResponse.json({ error: "Rating must be 1-5" }, { status: 400 });
-  }
-  if (!VALID_CATEGORIES.includes(category)) {
-    return NextResponse.json({ error: "Invalid category" }, { status: 400 });
+  // Honeypot – reject silently if filled.
+  if (website && website !== "") {
+    return NextResponse.json({ message: "Thank you for your feedback." });
   }
 
-  // 1. Persist to Supabase
-  let dbWrote = false;
-  if (supabaseAdmin) {
-    const { error } = await supabaseAdmin
-      .from("feedback")
-      .insert({ site: SITE_KEY, rating, category, message, page: page ?? null, email: email ?? null });
-    if (error) console.error("[feedback] supabase error", error);
-    else dbWrote = true;
-  }
-
-  // 2. Notify admin
-  await sendAdminNotification({
-    kind: "feedback",
-    payload: { site: SITE_KEY, rating, category, message, page, email, ip, dbWrote },
+  const result = await submitFeedbackAction({
+    category: category ?? "",
+    rating: typeof rating === "number" ? rating : undefined,
+    message: message ?? "",
+    page,
+    email,
+    ip,
   });
 
-  return NextResponse.json({ ok: true });
+  if (!result.ok) {
+    return NextResponse.json({ error: result.message }, { status: 400 });
+  }
+
+  return NextResponse.json({ message: result.message });
 }

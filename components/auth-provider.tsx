@@ -6,6 +6,7 @@ interface AuthUser {
   id: string
   email: string
   codename: string
+  role?: string
   xp?: number
   badges?: string[]
   lessonsCompleted?: string[]

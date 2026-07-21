@@ -27,6 +27,7 @@ export async function POST(request: Request) {
       id: user.id,
       email: user.email,
       codename: user.codename,
+      role: user.role || 'user',
       createdAt: user.created_at,
     })
     await setAuthCookie(token)

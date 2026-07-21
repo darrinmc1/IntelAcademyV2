@@ -1,5 +1,7 @@
 "use client"
 
+import { useEffect } from "react"
+
 export default function GlobalError({
   error,
   reset,
@@ -7,6 +9,26 @@ export default function GlobalError({
   error: Error & { digest?: string }
   reset: () => void
 }) {
+  useEffect(() => {
+    console.error(error)
+
+    // Auto-reload on ChunkLoadError or Loading chunk failed
+    const errorMsg = error?.message || ""
+    if (
+      errorMsg.includes("ChunkLoadError") ||
+      errorMsg.includes("Loading chunk") ||
+      errorMsg.includes("failed to load")
+    ) {
+      const now = Date.now()
+      const lastReload = sessionStorage.getItem("last_chunk_reload")
+      if (!lastReload || now - parseInt(lastReload, 10) > 10000) {
+        sessionStorage.setItem("last_chunk_reload", now.toString())
+        console.warn("ChunkLoadError detected in GlobalError, reloading...")
+        window.location.reload()
+      }
+    }
+  }, [error])
+
   return (
     <html lang="en">
       <body>

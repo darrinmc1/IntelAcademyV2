@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { RichTextEditor } from "@/components/content-editor/rich-text-editor"
-import { savePageContent } from "@/app/actions/content-manager-client"
+import { submitContent } from "@/app/actions/content-manager"
 import { useToast } from "@/hooks/use-toast"
 
 interface TopicEditorProps {
@@ -41,23 +41,24 @@ export function TopicEditor({ topicId, initialContent, isNew = false }: TopicEdi
     setIsSaving(true)
     try {
       const id = isNew ? newTopicId : topicId
-      const success = await savePageContent("topics", id, content)
+      const result = await submitContent("topics", id, content)
 
-      if (success) {
+      if (result.ok) {
         toast({
-          title: "Success",
-          description: "Topic content saved successfully",
+          title: result.status === "submitted" ? "Submitted for review" : "Published",
+          description:
+            result.status === "submitted"
+              ? "A reviewer will approve or return your changes."
+              : "Topic content is now live.",
         })
 
-        if (isNew) {
-          // Redirect to the edit page for the new topic
+        if (isNew && result.status === "published") {
           router.push(`/admin/content-manager/topics/${newTopicId}`)
         } else {
-          // Refresh the page to show updated content
           router.refresh()
         }
       } else {
-        throw new Error("Failed to save content")
+        throw new Error(result.message)
       }
     } catch (error) {
       toast({

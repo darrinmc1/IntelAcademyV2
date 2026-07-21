@@ -21,12 +21,15 @@ import {
   Database,
   Home,
   FileText,
+  ClipboardCheck,
+  MessageSquare,
   LogOut,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { LogoutButton } from "./logout-button"
 
 interface NavItem {
   title: string
@@ -133,6 +136,16 @@ const navItems: NavItem[] = [
     ],
   },
   {
+    title: "Reviews",
+    href: "/admin/reviews",
+    icon: <ClipboardCheck className="h-5 w-5" />,
+  },
+  {
+    title: "Feedback",
+    href: "/admin/feedback",
+    icon: <MessageSquare className="h-5 w-5" />,
+  },
+  {
     title: "Users",
     href: "/admin/users",
     icon: <Users className="h-5 w-5" />,
@@ -156,7 +169,22 @@ export default function AdminLayoutClient({
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null)
+  const [pendingReviews, setPendingReviews] = useState(0)
   const pathname = usePathname()
+
+  // Live pending-review count for the Reviews nav badge (reviewers only; 403 -> 0).
+  React.useEffect(() => {
+    let active = true
+    fetch("/api/admin/reviews/count")
+      .then((r) => (r.ok ? r.json() : { count: 0 }))
+      .then((d) => {
+        if (active) setPendingReviews(d.count ?? 0)
+      })
+      .catch(() => {})
+    return () => {
+      active = false
+    }
+  }, [pathname])
 
   const toggleSubmenu = (title: string) => {
     setOpenSubmenu(openSubmenu === title ? null : title)
@@ -233,12 +261,19 @@ export default function AdminLayoutClient({
           <Link
             href={item.href}
             className={cn(
-              "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium",
+              "flex items-center justify-between gap-3 rounded-md px-3 py-2 text-sm font-medium",
               isActive(item.href) ? "bg-primary text-primary-foreground" : "hover:bg-gray-100",
             )}
           >
-            {item.icon}
-            <span>{item.title}</span>
+            <div className="flex items-center gap-3">
+              {item.icon}
+              <span>{item.title}</span>
+            </div>
+            {item.href === "/admin/reviews" && pendingReviews > 0 && (
+              <span className="ml-auto rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-800">
+                {pendingReviews}
+              </span>
+            )}
           </Link>
         )}
       </div>
@@ -271,10 +306,7 @@ export default function AdminLayoutClient({
                   </div>
                 </ScrollArea>
                 <div className="absolute bottom-4 left-4 right-4">
-                  <Button variant="outline" size="sm" className="w-full justify-start">
-                    <LogOut className="mr-2 h-4 w-4" />
-                    Log out
-                  </Button>
+                  <LogoutButton variant="outline" size="sm" className="w-full justify-start" />
                 </div>
               </SheetContent>
             </Sheet>
@@ -313,17 +345,14 @@ export default function AdminLayoutClient({
             <Link href="/" className="text-sm font-medium">
               View Site
             </Link>
-            <Button variant="outline" size="sm" className="hidden md:flex">
-              <LogOut className="mr-2 h-4 w-4" />
-              Log out
-            </Button>
+            <LogoutButton variant="outline" size="sm" className="hidden md:flex" />
           </div>
         </div>
       </header>
 
-      <div className="flex flex-1">
+      <div className="flex flex-1 overflow-hidden">
         {/* Desktop Sidebar */}
-        <div className="hidden md:block w-64 bg-white border-r h-[calc(100vh-4rem)] overflow-hidden fixed top-16">
+        <div className="hidden md:block w-64 bg-white border-r h-[calc(100vh-4rem)] overflow-hidden fixed top-16 left-0">
           <ScrollArea className="h-full">
             <div className="px-3 py-2">
               <nav className="space-y-1">{renderNavItems(navItems)}</nav>
@@ -332,8 +361,8 @@ export default function AdminLayoutClient({
         </div>
 
         {/* Main content */}
-        <div className="md:ml-64 w-full flex-1 bg-gray-50 min-h-[calc(100vh-4rem)]">
-          <main className="container py-6 px-4">
+        <div className="md:ml-64 w-full flex-1 bg-gray-50 min-h-[calc(100vh-4rem)] overflow-x-hidden overflow-y-auto">
+          <main className="w-full max-w-full py-6 px-4 md:px-6">
             <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
           </main>
         </div>

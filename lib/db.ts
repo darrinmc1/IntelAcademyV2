@@ -18,10 +18,116 @@ export async function initDatabase() {
       best_streak INTEGER DEFAULT 0,
       last_visit_date TEXT,
       access_tier TEXT DEFAULT 'free',
+      role TEXT DEFAULT 'user',
       created_at TIMESTAMP DEFAULT NOW(),
       updated_at TIMESTAMP DEFAULT NOW()
     )
   `
+  // Idempotent migration: add role to pre-existing users tables
+  await sql`ALTER TABLE users ADD COLUMN IF NOT EXISTS role TEXT DEFAULT 'user'`
+
+  // Content review workflow tables (migration 002)
+  await sql`
+    CREATE TABLE IF NOT EXISTS content_submissions (
+      id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+      type TEXT NOT NULL,
+      content_id TEXT NOT NULL,
+      title TEXT,
+      content TEXT NOT NULL,
+      status TEXT NOT NULL DEFAULT 'submitted',
+      submitted_by TEXT,
+      reviewer_id TEXT,
+      reviewer_comments TEXT,
+      reviewed_at TIMESTAMP,
+      created_at TIMESTAMP DEFAULT NOW(),
+      updated_at TIMESTAMP DEFAULT NOW()
+    )
+  `
+  await sql`CREATE INDEX IF NOT EXISTS idx_submissions_status ON content_submissions(status)`
+  await sql`CREATE INDEX IF NOT EXISTS idx_submissions_content ON content_submissions(type, content_id)`
+  await sql`
+    CREATE TABLE IF NOT EXISTS review_audit_log (
+      id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+      submission_id UUID,
+      actor_id TEXT,
+      action TEXT NOT NULL,
+      comment TEXT,
+      created_at TIMESTAMP DEFAULT NOW()
+    )
+  `
+  await sql`CREATE INDEX IF NOT EXISTS idx_audit_log_submission ON review_audit_log(submission_id)`
+
+  // Feedback and topic request tracking (migration 003)
+  await sql`
+    CREATE TABLE IF NOT EXISTS feedback (
+      id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+      category TEXT NOT NULL,
+      rating INTEGER,
+      message TEXT NOT NULL,
+      page TEXT,
+      email TEXT,
+      ip_address TEXT,
+      status TEXT DEFAULT 'new',
+      admin_notes TEXT,
+      created_at TIMESTAMP DEFAULT NOW(),
+      reviewed_at TIMESTAMP
+    )
+  `
+  await sql`CREATE INDEX IF NOT EXISTS idx_feedback_status ON feedback(status)`
+  await sql`CREATE INDEX IF NOT EXISTS idx_feedback_created_at ON feedback(created_at DESC)`
+  
+  await sql`
+    CREATE TABLE IF NOT EXISTS topic_requests (
+      id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+      topic_title TEXT NOT NULL,
+      category TEXT,
+      description TEXT NOT NULL,
+      experience_level TEXT,
+      email TEXT,
+      status TEXT DEFAULT 'new',
+      admin_notes TEXT,
+      created_at TIMESTAMP DEFAULT NOW(),
+      reviewed_at TIMESTAMP
+    )
+  `
+  await sql`CREATE INDEX IF NOT EXISTS idx_topic_requests_status ON topic_requests(status)`
+  await sql`CREATE INDEX IF NOT EXISTS idx_topic_requests_created_at ON topic_requests(created_at DESC)`
+
+  // Published content (migration 004)
+  await sql`
+    CREATE TABLE IF NOT EXISTS content (
+      id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+      type TEXT NOT NULL,
+      content_id TEXT NOT NULL,
+      title TEXT,
+      content TEXT NOT NULL,
+      published_at TIMESTAMP DEFAULT NOW(),
+      updated_at TIMESTAMP DEFAULT NOW(),
+      UNIQUE(type, content_id)
+    )
+  `
+  await sql`CREATE INDEX IF NOT EXISTS idx_content_type ON content(type)`
+  await sql`CREATE INDEX IF NOT EXISTS idx_content_published_at ON content(published_at DESC)`
+}
+
+/**
+ * Valid roles for RBAC (keep in sync with lib/rbac.ts)
+ */
+export type UserRole = 'admin' | 'moderator' | 'editor' | 'viewer' | 'user'
+
+/**
+ * Set a user's role by email. Use to bootstrap the first admin.
+ */
+export async function setUserRole(email: string, role: UserRole) {
+  await sql`UPDATE users SET role = ${role}, updated_at = NOW() WHERE email = ${email.toLowerCase()}`
+}
+
+/**
+ * Get a user's role by ID. Returns 'user' if unset.
+ */
+export async function getUserRole(id: string): Promise<UserRole> {
+  const result = await sql`SELECT role FROM users WHERE id = ${id}`
+  return (result.rows[0]?.role as UserRole) || 'user'
 }
 
 /**
@@ -132,6 +238,301 @@ export async function getUserProfile(id: string) {
     bestStreak: user.best_streak,
     lastVisitDate: user.last_visit_date,
     accessTier: user.access_tier,
+    role: user.role || 'user',
     createdAt: user.created_at,
   }
+}
+
+// ---------------------------------------------------------------------------
+// Content review workflow
+// ---------------------------------------------------------------------------
+
+export type SubmissionStatus = 'draft' | 'submitted' | 'approved' | 'rejected'
+
+/**
+ * Append an immutable audit entry.
+ */
+export async function logReviewAudit(
+  submissionId: string,
+  actorId: string | null,
+  action: 'submitted' | 'approved' | 'rejected' | 'published_directly' | 'returned',
+  comment: string | null = null
+) {
+  await sql`
+    INSERT INTO review_audit_log (submission_id, actor_id, action, comment)
+    VALUES (${submissionId}, ${actorId}, ${action}, ${comment})
+  `
+}
+
+/**
+ * Editor submits proposed content for review. Supersedes any prior open
+ * submission for the same item; returns the submission id.
+ */
+export async function submitForReview(args: {
+  type: string
+  contentId: string
+  title: string
+  content: string
+  submittedBy: string
+}): Promise<string> {
+  const open = await sql`
+    SELECT id FROM content_submissions
+    WHERE type = ${args.type} AND content_id = ${args.contentId} AND status = 'submitted'
+    LIMIT 1
+  `
+  let id: string
+  if (open.rows[0]) {
+    id = open.rows[0].id
+    await sql`
+      UPDATE content_submissions
+      SET content = ${args.content}, title = ${args.title},
+          submitted_by = ${args.submittedBy}, updated_at = NOW()
+      WHERE id = ${id}
+    `
+  } else {
+    const inserted = await sql`
+      INSERT INTO content_submissions (type, content_id, title, content, status, submitted_by)
+      VALUES (${args.type}, ${args.contentId}, ${args.title}, ${args.content}, 'submitted', ${args.submittedBy})
+      RETURNING id
+    `
+    id = inserted.rows[0].id
+  }
+  await logReviewAudit(id, args.submittedBy, 'submitted', null)
+  return id
+}
+
+/**
+ * List submissions, optionally filtered by status, newest first.
+ */
+export async function getSubmissions(status?: SubmissionStatus | 'all') {
+  if (status && status !== 'all') {
+    const r = await sql`
+      SELECT s.*, u.codename AS submitter_codename, u.email AS submitter_email
+      FROM content_submissions s
+      LEFT JOIN users u ON u.id = s.submitted_by
+      WHERE s.status = ${status}
+      ORDER BY s.updated_at DESC
+    `
+    return r.rows
+  }
+  const r = await sql`
+    SELECT s.*, u.codename AS submitter_codename, u.email AS submitter_email
+    FROM content_submissions s
+    LEFT JOIN users u ON u.id = s.submitted_by
+    ORDER BY s.updated_at DESC
+  `
+  return r.rows
+}
+
+export async function getPendingReviewCount(): Promise<number> {
+  const r = await sql`SELECT COUNT(*)::int AS count FROM content_submissions WHERE status = 'submitted'`
+  return r.rows[0]?.count ?? 0
+}
+
+export async function getSubmissionById(id: string) {
+  const r = await sql`
+    SELECT s.*, u.codename AS submitter_codename, u.email AS submitter_email
+    FROM content_submissions s
+    LEFT JOIN users u ON u.id = s.submitted_by
+    WHERE s.id = ${id}
+  `
+  return r.rows[0] || null
+}
+
+export async function getReviewAuditLog(submissionId: string) {
+  const r = await sql`
+    SELECT a.*, u.codename AS actor_codename
+    FROM review_audit_log a
+    LEFT JOIN users u ON u.id = a.actor_id
+    WHERE a.submission_id = ${submissionId}
+    ORDER BY a.created_at ASC
+  `
+  return r.rows
+}
+
+/**
+ * Admin publishes directly (no review). Records an approved submission plus a
+ * 'published_directly' audit entry so every content change has a trail.
+ */
+export async function recordDirectPublish(args: {
+  type: string
+  contentId: string
+  title: string
+  content: string
+  adminId: string
+}): Promise<string> {
+  const inserted = await sql`
+    INSERT INTO content_submissions
+      (type, content_id, title, content, status, submitted_by, reviewer_id, reviewed_at)
+    VALUES
+      (${args.type}, ${args.contentId}, ${args.title}, ${args.content}, 'approved',
+       ${args.adminId}, ${args.adminId}, NOW())
+    RETURNING id
+  `
+  const id = inserted.rows[0].id
+  await logReviewAudit(id, args.adminId, 'published_directly', null)
+  return id
+}
+
+export async function setSubmissionStatus(
+  id: string,
+  status: 'approved' | 'rejected',
+  reviewerId: string,
+  comments: string | null
+) {
+  await sql`
+    UPDATE content_submissions
+    SET status = ${status}, reviewer_id = ${reviewerId},
+        reviewer_comments = ${comments}, reviewed_at = NOW(), updated_at = NOW()
+    WHERE id = ${id}
+  `
+  await logReviewAudit(id, reviewerId, status, comments)
+}
+
+// ---------------------------------------------------------------------------
+// Feedback and topic requests
+// ---------------------------------------------------------------------------
+
+export async function submitFeedback(args: {
+  category: string
+  rating?: number
+  message: string
+  page?: string
+  email?: string
+  ip?: string
+}): Promise<string> {
+  const r = await sql`
+    INSERT INTO feedback (category, rating, message, page, email, ip_address)
+    VALUES (${args.category}, ${args.rating ?? null}, ${args.message}, 
+            ${args.page ?? null}, ${args.email ?? null}, ${args.ip ?? null})
+    RETURNING id
+  `
+  return r.rows[0].id
+}
+
+export async function submitTopicRequest(args: {
+  topic_title: string
+  category?: string
+  description: string
+  experience_level?: string
+  email?: string
+}): Promise<string> {
+  const r = await sql`
+    INSERT INTO topic_requests (topic_title, category, description, experience_level, email)
+    VALUES (${args.topic_title}, ${args.category ?? null}, ${args.description},
+            ${args.experience_level ?? null}, ${args.email ?? null})
+    RETURNING id
+  `
+  return r.rows[0].id
+}
+
+export async function getFeedback(status?: string | 'all') {
+  if (status && status !== 'all') {
+    const r = await sql`
+      SELECT * FROM feedback WHERE status = ${status}
+      ORDER BY created_at DESC
+    `
+    return r.rows
+  }
+  const r = await sql`SELECT * FROM feedback ORDER BY created_at DESC`
+  return r.rows
+}
+
+export async function getTopicRequests(status?: string | 'all') {
+  if (status && status !== 'all') {
+    const r = await sql`
+      SELECT * FROM topic_requests WHERE status = ${status}
+      ORDER BY created_at DESC
+    `
+    return r.rows
+  }
+  const r = await sql`SELECT * FROM topic_requests ORDER BY created_at DESC`
+  return r.rows
+}
+
+export async function getFeedbackById(id: string) {
+  const r = await sql`SELECT * FROM feedback WHERE id = ${id}`
+  return r.rows[0] ?? null
+}
+
+export async function getTopicRequestById(id: string) {
+  const r = await sql`SELECT * FROM topic_requests WHERE id = ${id}`
+  return r.rows[0] ?? null
+}
+
+export async function updateFeedbackStatus(
+  id: string,
+  status: 'new' | 'reviewed' | 'responded' | 'archived',
+  adminNotes?: string
+) {
+  await sql`
+    UPDATE feedback
+    SET status = ${status}, admin_notes = ${adminNotes ?? null}, reviewed_at = NOW()
+    WHERE id = ${id}
+  `
+}
+
+export async function updateTopicRequestStatus(
+  id: string,
+  status: 'new' | 'reviewed' | 'planned' | 'completed' | 'archived',
+  adminNotes?: string
+) {
+  await sql`
+    UPDATE topic_requests
+    SET status = ${status}, admin_notes = ${adminNotes ?? null}, reviewed_at = NOW()
+    WHERE id = ${id}
+  `
+}
+
+export async function getPendingFeedbackCount(): Promise<number> {
+  const r = await sql`SELECT COUNT(*)::int AS count FROM feedback WHERE status = 'new'`
+  return r.rows[0]?.count ?? 0
+}
+
+export async function getPendingTopicRequestCount(): Promise<number> {
+  const r = await sql`SELECT COUNT(*)::int AS count FROM topic_requests WHERE status IN ('new', 'reviewed')`
+  return r.rows[0]?.count ?? 0
+}
+
+// ---------------------------------------------------------------------------
+// Published content (persists approved submissions)
+// ---------------------------------------------------------------------------
+
+/**
+ * Publish (upsert) approved content to the durable content table.
+ * Called when a reviewer approves a submission.
+ */
+export async function publishContent(args: {
+  type: string
+  contentId: string
+  title: string
+  content: string
+}): Promise<void> {
+  await sql`
+    INSERT INTO content (type, content_id, title, content)
+    VALUES (${args.type}, ${args.contentId}, ${args.title}, ${args.content})
+    ON CONFLICT (type, content_id)
+    DO UPDATE SET content = ${args.content}, title = ${args.title}, updated_at = NOW()
+  `
+}
+
+/**
+ * Fetch published content from the database by type and content ID.
+ */
+export async function getPublishedContent(type: string, contentId: string) {
+  const r = await sql`
+    SELECT * FROM content WHERE type = ${type} AND content_id = ${contentId}
+  `
+  return r.rows[0] ?? null
+}
+
+/**
+ * List all published content of a given type, newest first.
+ */
+export async function getPublishedContentList(type: string) {
+  const r = await sql`
+    SELECT * FROM content WHERE type = ${type}
+    ORDER BY published_at DESC
+  `
+  return r.rows
 }

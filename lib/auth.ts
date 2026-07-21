@@ -6,10 +6,13 @@ const JWT_SECRET = new TextEncoder().encode(
 )
 const COOKIE_NAME = 'intel-session'
 
+export type UserRole = 'admin' | 'moderator' | 'editor' | 'viewer' | 'user'
+
 export interface AuthUser {
   id: string
   email: string
   codename: string
+  role: UserRole
   createdAt: string
 }
 
@@ -20,7 +23,8 @@ export async function createToken(user: AuthUser): Promise<string> {
   return new SignJWT({ 
     id: user.id, 
     email: user.email, 
-    codename: user.codename 
+    codename: user.codename,
+    role: user.role || 'user'
   })
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()

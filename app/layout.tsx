@@ -39,6 +39,35 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var handleChunkError = function(msg) {
+                  if (msg.indexOf('ChunkLoadError') > -1 || msg.indexOf('Loading chunk') > -1) {
+                    console.warn('ChunkLoadError detected. Checking rate limit before automatic reload...');
+                    var now = Date.now();
+                    var lastReload = sessionStorage.getItem('last_chunk_reload');
+                    if (!lastReload || (now - parseInt(lastReload, 10) > 10000)) {
+                      sessionStorage.setItem('last_chunk_reload', now.toString());
+                      window.location.reload();
+                    }
+                  }
+                };
+                window.addEventListener('error', function(event) {
+                  var msg = event.message || '';
+                  handleChunkError(msg);
+                }, true);
+                window.addEventListener('unhandledrejection', function(event) {
+                  var reason = (event.reason && event.reason.message) || '';
+                  handleChunkError(reason);
+                });
+              })();
+            `
+          }}
+        />
+      </head>
       <body className={`${inter.className} min-h-screen bg-slate-950 text-slate-50 flex flex-col relative`}>
         <UserProvider>
           <AuthProvider>

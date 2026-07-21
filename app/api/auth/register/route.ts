@@ -49,6 +49,7 @@ export async function POST(request: Request) {
       id: userId, 
       email: email.toLowerCase(), 
       codename: agentCodename,
+      role: 'user',
       createdAt: new Date().toISOString(),
     })
     await setAuthCookie(token)

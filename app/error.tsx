@@ -10,8 +10,23 @@ export default function Error({
   reset: () => void
 }) {
   useEffect(() => {
-    // Log the error to an error reporting service
     console.error(error)
+
+    // Auto-reload on ChunkLoadError or Loading chunk failed
+    const errorMsg = error?.message || ""
+    if (
+      errorMsg.includes("ChunkLoadError") ||
+      errorMsg.includes("Loading chunk") ||
+      errorMsg.includes("failed to load")
+    ) {
+      const now = Date.now()
+      const lastReload = sessionStorage.getItem("last_chunk_reload")
+      if (!lastReload || now - parseInt(lastReload, 10) > 10000) {
+        sessionStorage.setItem("last_chunk_reload", now.toString())
+        console.warn("ChunkLoadError detected in ErrorBoundary, reloading...")
+        window.location.reload()
+      }
+    }
   }, [error])
 
   return (

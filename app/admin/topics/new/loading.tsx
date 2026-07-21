@@ -14,9 +14,9 @@ export default function NewTopicLoading() {
           <CardTitle>
             <Skeleton className="h-8 w-40" />
           </CardTitle>
-          <CardDescription>
+          <div className="text-sm text-muted-foreground">
             <Skeleton className="h-4 w-60" />
-          </CardDescription>
+          </div>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">

@@ -23,10 +23,16 @@ async function send(
   html: string
 ): Promise<SendResult> {
   if (!resend) {
-    console.warn("[email] RESEND_API_KEY not set — skipping send");
+    console.warn("[email] RESEND_API_KEY not set — skipping send", { to, subject });
     return { ok: false, reason: "resend_not_configured" };
   }
-  const { error } = await resend.emails.send({
+  if (FROM === "noreply@example.com") {
+    console.warn(
+      "[email] RESEND_FROM not set — using placeholder that Resend will reject. Set RESEND_FROM to a verified sender.",
+      { to, subject }
+    );
+  }
+  const { data, error } = await resend.emails.send({
     from: FROM,
     to,
     subject,
@@ -34,9 +40,10 @@ async function send(
     replyTo: REPLY_TO,
   });
   if (error) {
-    console.error("[email] send failed", error);
+    console.error("[email] send failed", { to, subject, from: FROM, error });
     return { ok: false, reason: error.name ?? "send_error" };
   }
+  console.log("[email] sent", { to, subject, id: data?.id });
   return { ok: true };
 }
 
@@ -59,7 +66,12 @@ export async function sendAdminNotification(args: {
   kind: "subscribe" | "feedback";
   payload: Record<string, unknown>;
 }) {
-  if (!NOTIFY) return { ok: false as const, reason: "notify_email_not_set" };
+  if (!NOTIFY) {
+    console.warn("[email] NOTIFY_EMAIL not set — skipping admin notification", {
+      kind: args.kind,
+    });
+    return { ok: false as const, reason: "notify_email_not_set" };
+  }
   const subject =
     args.kind === "subscribe"
       ? `[${SITE_NAME}] New subscriber`
@@ -84,8 +96,79 @@ export async function sendTopicRequestEmail(
   topic: string,
   description: string
 ) {
-  if (!NOTIFY) return { ok: false as const, reason: "notify_email_not_set" };
+  if (!NOTIFY) {
+    console.warn("[email] NOTIFY_EMAIL not set — skipping topic request email");
+    return { ok: false as const, reason: "notify_email_not_set" };
+  }
   const subject = "[" + SITE_NAME + "] New Topic Request: " + topic;
   const html = "<h3>" + subject + "</h3><p>From: " + email + "</p><p>Topic: " + topic + "</p><p>" + description + "</p>";
   return send(NOTIFY, subject, html);
+}
+
+// ---------------------------------------------------------------------------
+// Content review workflow notifications
+// ---------------------------------------------------------------------------
+
+function shell(title: string, body: string) {
+  return `
+    <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 560px; margin: 0 auto; padding: 24px;">
+      <h2 style="color:#2E4A7C;">${title}</h2>
+      ${body}
+      <p style="margin-top:32px;color:#888;font-size:14px;">— ${SITE_NAME}</p>
+    </div>
+  `;
+}
+
+/** Sent to the admin/reviewer inbox when an editor submits content. */
+export async function sendReviewSubmitted(args: {
+  contentTitle: string;
+  editorName: string;
+  submissionId: string;
+}) {
+  if (!NOTIFY) {
+    console.warn("[email] NOTIFY_EMAIL not set — skipping review-submitted email");
+    return { ok: false as const, reason: "notify_email_not_set" };
+  }
+  const subject = `[${SITE_NAME}] Review needed: ${args.contentTitle}`;
+  const html = shell(
+    "New content awaiting review",
+    `<p><strong>${args.editorName}</strong> submitted "<strong>${args.contentTitle}</strong>" for review.</p>
+     <p>Open the reviews dashboard to approve or reject it.</p>`
+  );
+  return send(NOTIFY, subject, html);
+}
+
+/** Sent to the editor when their content is approved and published. */
+export async function sendReviewApproved(args: {
+  to: string;
+  contentTitle: string;
+  reviewerName: string;
+  comments?: string;
+}) {
+  const subject = `[${SITE_NAME}] Approved: ${args.contentTitle}`;
+  const note = args.comments
+    ? `<p style="color:#444;">Reviewer note: ${args.comments}</p>`
+    : "";
+  const html = shell(
+    "Your content is live ✅",
+    `<p>"<strong>${args.contentTitle}</strong>" was approved by ${args.reviewerName} and is now published.</p>${note}`
+  );
+  return send(args.to, subject, html);
+}
+
+/** Sent to the editor when their content is rejected. */
+export async function sendReviewRejected(args: {
+  to: string;
+  contentTitle: string;
+  reviewerName: string;
+  feedback: string;
+}) {
+  const subject = `[${SITE_NAME}] Changes requested: ${args.contentTitle}`;
+  const html = shell(
+    "Changes requested",
+    `<p>"<strong>${args.contentTitle}</strong>" was reviewed by ${args.reviewerName} and needs revisions before it can go live.</p>
+     <p style="background:#f6f6f6;border-left:3px solid #2E4A7C;padding:12px;"><strong>Feedback:</strong><br/>${args.feedback}</p>
+     <p>Edit and resubmit when ready.</p>`
+  );
+  return send(args.to, subject, html);
 }
