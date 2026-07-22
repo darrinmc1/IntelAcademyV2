@@ -1,8 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { User, Flame, Star, Dices } from 'lucide-react'
+import { Flame, Star, Dices } from 'lucide-react'
 import { useUser } from '@/components/user-provider'
+import { AvatarPicker } from '@/components/avatar-picker'
 
 export function ProfileBar() {
   const { profile, rerollCodename, isLoaded } = useUser()
@@ -22,10 +23,8 @@ export function ProfileBar() {
 
   return (
     <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-lg px-3 py-1.5">
-      {/* User Icon */}
-      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-cyan-400/20 flex items-center justify-center">
-        <User className="w-4 h-4 text-cyan-400" />
-      </div>
+      {/* Profile picture (click to change) */}
+      <AvatarPicker />
 
       {/* Codename */}
       <span className="text-sm font-medium text-slate-200 whitespace-nowrap">

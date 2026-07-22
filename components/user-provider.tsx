@@ -15,6 +15,8 @@ import {
   markLessonCompleted as libMarkLessonCompleted,
   rerollCodename as libRerollCodename,
   updateStreak,
+  setAvatar as libSetAvatar,
+  removeAvatar as libRemoveAvatar,
 } from '@/lib/user-store';
 import { checkForNewBadges } from '@/lib/badge-checker';
 import { getBadge } from '@/data/badges';
@@ -27,6 +29,8 @@ export interface UserContextType {
   markLessonCompleted: (slug: string) => void;
   rerollCodename: () => string;
   checkBadges: () => void;
+  setAvatar: (dataUrl: string) => void;
+  removeAvatar: () => void;
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
@@ -89,6 +93,16 @@ export function UserProvider({ children }: { children: ReactNode }) {
     return newCodename;
   };
 
+  const setAvatar = (dataUrl: string) => {
+    libSetAvatar(dataUrl);
+    setProfile(getUserProfile());
+  };
+
+  const removeAvatar = () => {
+    libRemoveAvatar();
+    setProfile(getUserProfile());
+  };
+
   const value: UserContextType = {
     profile,
     isLoaded,
@@ -96,6 +110,8 @@ export function UserProvider({ children }: { children: ReactNode }) {
     markLessonCompleted,
     rerollCodename,
     checkBadges: processAndNotifyBadges,
+    setAvatar,
+    removeAvatar,
   };
 
   return (

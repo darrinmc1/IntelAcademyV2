@@ -536,3 +536,64 @@ export async function getPublishedContentList(type: string) {
   `
   return r.rows
 }
+
+// ---------------------------------------------------------------------------
+// Admin dashboard
+// ---------------------------------------------------------------------------
+
+export type AdminDashboardStats = {
+  users: number
+  publishedContent: number
+  pendingReviews: number
+  openFeedback: number
+  openTopicRequests: number
+}
+
+/**
+ * Aggregate counts for the admin dashboard, in a single round of queries.
+ */
+export async function getAdminDashboardStats(): Promise<AdminDashboardStats> {
+  const [users, content, reviews, feedback, topics] = await Promise.all([
+    sql`SELECT COUNT(*)::int AS count FROM users`,
+    sql`SELECT COUNT(*)::int AS count FROM content`,
+    sql`SELECT COUNT(*)::int AS count FROM content_submissions WHERE status = 'submitted'`,
+    sql`SELECT COUNT(*)::int AS count FROM feedback WHERE status = 'new'`,
+    sql`SELECT COUNT(*)::int AS count FROM topic_requests WHERE status IN ('new', 'reviewed')`,
+  ])
+  return {
+    users: users.rows[0]?.count ?? 0,
+    publishedContent: content.rows[0]?.count ?? 0,
+    pendingReviews: reviews.rows[0]?.count ?? 0,
+    openFeedback: feedback.rows[0]?.count ?? 0,
+    openTopicRequests: topics.rows[0]?.count ?? 0,
+  }
+}
+
+export type ActivityRow = {
+  action: string
+  comment: string | null
+  created_at: string
+  actor_codename: string | null
+  actor_email: string | null
+  submission_title: string | null
+  submission_type: string | null
+  content_id: string | null
+}
+
+/**
+ * Most recent entries from the review audit log, joined with the actor and
+ * the submission they acted on. Powers the dashboard "Recent Activity" feed.
+ */
+export async function getRecentActivity(limit = 8): Promise<ActivityRow[]> {
+  const r = await sql`
+    SELECT a.action, a.comment, a.created_at,
+           u.codename AS actor_codename, u.email AS actor_email,
+           s.title AS submission_title, s.type AS submission_type, s.content_id
+    FROM review_audit_log a
+    LEFT JOIN users u ON u.id = a.actor_id
+    LEFT JOIN content_submissions s ON s.id = a.submission_id
+    ORDER BY a.created_at DESC
+    LIMIT ${limit}
+  `
+  return r.rows as ActivityRow[]
+}

@@ -12,6 +12,7 @@ export interface UserProfile {
   lastVisitDate: string; // ISO
   createdAt: string; // ISO
   accessTier: 'free' | 'registered' | 'premium' | 'subscriber';
+  avatar?: string; // data URL of the profile picture (optional)
 }
 
 const STORAGE_KEY = 'intel-academy-profile';
@@ -166,4 +167,22 @@ export function addBadge(badgeId: string): void {
     profile.badges.push(badgeId);
     saveUserProfile(profile);
   }
+}
+
+/**
+ * Set the user's profile picture (expects a data URL) and persist it.
+ */
+export function setAvatar(dataUrl: string): void {
+  const profile = getUserProfile();
+  profile.avatar = dataUrl;
+  saveUserProfile(profile);
+}
+
+/**
+ * Remove the user's profile picture.
+ */
+export function removeAvatar(): void {
+  const profile = getUserProfile();
+  delete profile.avatar;
+  saveUserProfile(profile);
 }

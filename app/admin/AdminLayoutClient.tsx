@@ -283,7 +283,7 @@ export default function AdminLayoutClient({
   return (
     <div className="min-h-screen flex flex-col">
       {/* Top Header - Always visible */}
-      <header className="border-b bg-white z-10">
+      <header className="sticky top-0 z-30 border-b bg-white">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <div className="flex items-center gap-2">
             {/* Mobile menu trigger */}
@@ -350,19 +350,21 @@ export default function AdminLayoutClient({
         </div>
       </header>
 
-      <div className="flex flex-1 overflow-hidden">
-        {/* Desktop Sidebar */}
-        <div className="hidden md:block w-64 bg-white border-r h-[calc(100vh-4rem)] overflow-hidden fixed top-16 left-0">
+      <div className="flex-1">
+        {/* Desktop Sidebar (fixed, sits directly below the sticky header) */}
+        <aside className="hidden md:block w-64 bg-white border-r h-[calc(100vh-4rem)] overflow-hidden fixed top-16 left-0 z-20">
           <ScrollArea className="h-full">
             <div className="px-3 py-2">
               <nav className="space-y-1">{renderNavItems(navItems)}</nav>
             </div>
           </ScrollArea>
-        </div>
+        </aside>
 
-        {/* Main content */}
-        <div className="md:ml-64 w-full flex-1 bg-gray-50 min-h-[calc(100vh-4rem)] overflow-x-hidden overflow-y-auto">
-          <main className="w-full max-w-full py-6 px-4 md:px-6">
+        {/* Main content: full-width block padded by the sidebar width, so it can
+            never slide under the fixed sidebar. min-w-0 lets wide grids/tables
+            shrink instead of forcing horizontal overflow. */}
+        <div className="md:pl-64 min-h-[calc(100vh-4rem)] bg-gray-50">
+          <main className="w-full max-w-full min-w-0 py-6 px-4 md:px-6">
             <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
           </main>
         </div>
