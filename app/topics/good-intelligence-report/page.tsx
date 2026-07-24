@@ -169,6 +169,44 @@ completing a task -- you are building the bridge between what is known and what 
 Make that bridge sturdy.
 
 )
+
+## Defining a Good Intelligence Report
+
+A good intelligence report is not simply a well-written document. It is a document that meets the consumer's needs, informs a decision, and withstands scrutiny. These criteria are more demanding than standard writing quality and require specific analytical tradecraft:
+
+- **Timeliness:** A perfectly accurate report that arrives after the decision has been made has failed its mission. Timeliness is the first criterion of intelligence quality. Reports must be produced fast enough to be actionable, even at the cost of some completeness or polish.
+- **Relevance:** The report must address a question the consumer is actually asking, not a question the analyst finds interesting. Relevance requires continuous consumer engagement — analysts who do not understand their consumer's decisions cannot produce relevant intelligence.
+- **Accuracy:** The report's factual claims must be correct and its analytical judgements must be well-supported. Accuracy is tested over time as events unfold. A track record of accurate reporting builds the credibility that makes future assessments influential.
+- **Actionability:** The report should enable the consumer to make a decision or take an action that they would not have taken without the intelligence. Reports that inform without enabling action may be interesting but are not fully successful.
+
+## The Characteristics of Effective Intelligence Writing
+
+Beyond meeting the basic criteria, the best intelligence reports share specific writing characteristics:
+
+- **Clarity:** The report's message should be understandable on first reading. Complex ideas should be explained simply, not simplified — there is a difference between making something accessible and dumbing it down. Avoid jargon, unexplained acronyms, and convoluted sentence structures.
+- **Concision:** Every sentence should serve a purpose. Information that does not support the key judgement, provide essential context, or enable the consumer to evaluate the assessment should be cut. Shorter reports are more likely to be read in full.
+- **Conviction:** Tentative language erodes consumer confidence. A well-supported assessment should be stated with appropriate conviction. Reserve hedging for genuine uncertainty, not as a default posture to avoid being wrong.
+- **Coherence:** The report should tell a logical story from beginning to end. Each section should build on the previous one, and the structure should guide the reader naturally toward the conclusion. Disorganised reports force consumers to do the analytical work themselves.
+
+## From Data to Insight
+
+The most valuable intelligence reports do more than present data — they provide insight:
+
+- **Data Is Not Intelligence:** A chart showing increased military activity at a border crossing is data. The intelligence is the assessment that this activity indicates preparation for a cross-border operation within 72 hours. The distinction between presenting data and providing insight is the most important skill an analyst develops.
+- **Adding Value:** The analyst's value lies in what they add to the raw data — context, comparison, interpretation, and judgement. A report that simply summarises what is already known from open sources has not added value.
+- **Connecting the Dots:** Intelligence consumers see fragments. The analyst's job is to connect those fragments into a coherent picture that the consumer could not construct alone. This requires integrating information across sources, disciplines, and timeframes.
+- **Telling the Consumer Something New:** A good intelligence report tells the consumer something they did not already know. This may be a new fact, a new interpretation, or a new connection between existing facts. Reports that confirm what the consumer already believes are less valuable than reports that challenge or refine their understanding.
+
+## Practical Quality Checks
+
+Before publishing any intelligence report, analysts should apply systematic quality checks:
+
+- **The So What Test:** If the consumer's response to the report would be "so what?" — if it does not inform a decision or change their understanding — the report needs revision or should not be published.
+- **The Straw Man Test:** Have you presented the strongest version of alternative explanations, or have you set up weak alternatives that are easy to dismiss? A rigorous assessment engages seriously with competing interpretations.
+- **The Source Test:** Can you trace every factual claim to a specific source? Is the source reliable for this specific claim? Would you defend this source attribution to a sceptical reviewer?
+- **The Confidence Check:** Is your stated confidence level consistent with the evidence? Have you communicated what is uncertain as clearly as what is certain? Consumers should understand not just what you think but how sure you are.
+- **The Consumer Test:** Would the intended consumer understand this report without additional explanation? If not, revise for clarity before publication.
+
 `
 
 export default function GoodintelligencereportPage() {

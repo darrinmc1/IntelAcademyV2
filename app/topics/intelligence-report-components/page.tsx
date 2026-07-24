@@ -163,6 +163,43 @@ not deliver, or the key judgments contradict the outlook -- the reader loses tru
 consistency is not optional.
 
 )
+
+## Anatomy of an Intelligence Report
+
+Every intelligence report, regardless of type or format, shares common structural components. Understanding these components helps analysts write more effective reports and helps consumers navigate them efficiently:
+
+- **The Header Block:** Classification level, report series identifier, date-time group, and dissemination caveats. The header tells the consumer what they are reading, how it should be handled, and when it was produced.
+- **The Key Judgement or Bottom Line:** A one-to-three-sentence summary of the most important analytical finding. This is the most read section of any report and should be self-contained — the consumer should understand the assessment without reading further.
+- **The Body:** The analytical argument supported by evidence. The body is structured to guide the reader from the key judgement through the supporting reasoning to the implications. Effective bodies use subheadings, short paragraphs, and a logical flow from most to least important.
+- **The Outlook or Implications:** What the assessment means for the consumer — what decisions are informed, what risks are highlighted, what actions are recommended. Intelligence that does not identify implications has not completed its analytical mission.
+- **Source References:** Documentation of the sources and methods underlying the assessment. In finished intelligence, source references may be abbreviated or classified separately, but they must exist to support analytical accountability.
+
+## The Title
+
+The title is the most important single element of any intelligence report. A good title tells the consumer what the report is about, what the key judgement is, and why they should read it:
+
+- **Informative, Not Cute:** "Storm Clouds Over the Pacific: Strategic Implications of Regional Military Modernisation" is a less effective title than "Southeast Asian Military Modernisation Accelerates Beyond Projections." The consumer should know the assessment from the title alone.
+- **Include the Key Judgement Where Possible:** A title that incorporates the main finding — "Iranian Nuclear Enrichment Reaches Weapons-Grade Threshold" — is more useful than "Status of Iranian Nuclear Enrichment." The former tells the consumer both the topic and the conclusion.
+- **Avoid Unnecessary Qualifiers:** Titles that begin with "An Assessment of" or "Preliminary Thoughts on" can be deleted without changing the meaning. Every word should earn its place.
+
+## The Executive Summary
+
+For reports longer than two pages, the executive summary is mandatory. It should be self-contained — the consumer should understand the assessment, the supporting reasoning, and the implications without reading the main body:
+
+- **Length:** Executive summaries should not exceed one page. If the summary needs more than one page, the report itself may be too long.
+- **Structure:** Key judgement first, followed by the two to four most important supporting points, followed by the implications for the consumer. This structure mirrors the inverted pyramid of the full report.
+- **Language:** The executive summary should use the same language as the main body. Different terminology in the summary and the body confuses consumers and undermines confidence in the assessment's rigour.
+- **Standalone Utility:** A consumer who only reads the executive summary should understand the assessment well enough to make an informed decision. If the summary requires reference to the main body, it has failed its purpose.
+
+## Analytical Rigour in Report Structure
+
+Beyond formatting, the structure of an intelligence report reflects the rigour of the analytical process:
+
+- **Transparency:** The report should make clear how the analyst reached their conclusion. What evidence was considered? What alternative explanations were evaluated? What assumptions were made?
+- **Confidence Communication:** Every assessment should include a confidence statement — high, moderate, or low — that reflects the quality and quantity of supporting evidence. Confidence should be stated explicitly, not implied through hedging language.
+- **Assumption Caveats:** Key assumptions should be identified and their potential impact on the assessment discussed. "This assessment assumes that current economic trends continue. A sharp recession would fundamentally alter the strategic calculus."
+- **Outlier Scenarios:** Acknowledging outlier scenarios — low-probability, high-impact events — demonstrates analytical thoroughness and prepares consumers for possibilities they might not have considered. Outlier scenarios should be clearly labelled as such, not presented as alternative primary assessments.
+
 `
 
 export default function IntelligencereportcomponentsPage() {

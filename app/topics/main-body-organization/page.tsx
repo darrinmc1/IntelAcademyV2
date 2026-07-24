@@ -171,6 +171,43 @@ Avoid abrupt topic changes without transitions. If the reader feels a "wait, why
 talking about this now?" reaction, you have skipped a transition.
 
 )
+
+## Structuring the Main Body
+
+The main body of an intelligence report carries the analytical argument from the key judgement to the supporting evidence. Its structure determines whether the consumer follows and accepts the reasoning or becomes confused and disengaged:
+
+- **The Logical Flow:** The main body should present information in a logical sequence that builds toward the conclusion. Common organising principles include chronological (what happened, in order), thematic (by topic or issue), comparative (alternative explanations evaluated side by side), and analytical (problem definition, evidence, analysis, conclusion).
+- **Subheadings as Roadmap:** Subheadings guide the reader through the structure and allow them to skip to sections of interest. Effective subheadings are informative, not generic. "Evidence from SIGINT Sources" is better than "Sources." "Implications for Regional Stability" is better than "Outlook."
+- **Paragraph Unity:** Each paragraph should develop a single idea. The first sentence states the idea; subsequent sentences support, explain, or qualify it. Paragraphs that cover multiple ideas confuse readers and weaken the analytical argument.
+- **Transitions Between Sections:** Each section should connect to the next through a transitional sentence or paragraph. "Having established the threat actor's capabilities, this section assesses their likely intent" tells the reader where they are in the argument and what comes next.
+
+## Evidence Presentation
+
+How evidence is presented affects how it is received by the consumer:
+
+- **Source Attribution in Context:** The most relevant source information should appear with the evidence, not in a footnote or appendix. "SIGINT intercepts from June 12 indicate the target is moving toward the border" is more effective than "The target is moving toward the border (Source: SIGINT intercept, June 12)."
+- **Evaluating Evidence Quality:** The consumer should understand the quality of the evidence supporting each claim. High-confidence evidence (multiple corroborated sources) can be stated directly. Lower-confidence evidence should be caveated: "A single source of unknown reliability reports that..."
+- **Visual Evidence:** Where available, visual evidence — images, maps, graphs, timelines — should be integrated into the body, not relegated to an appendix. A well-chosen visual can convey information more efficiently than paragraphs of text.
+- **Negative Evidence:** The absence of expected evidence can be as informative as its presence. When expected evidence is absent, note this explicitly: "Despite extensive collection against this target, no communications intercepts have been observed in the past 72 hours, which is inconsistent with normal operating patterns."
+
+## Managing Length
+
+Intelligence reports should be as long as necessary and as short as possible:
+
+- **The Two-Page Rule:** For most intelligence consumers, two pages is the ideal report length. Longer reports should justify their length through the complexity or importance of the subject, not through verbose writing.
+- **Information Layering:** Longer reports can use information layering to serve multiple consumers. The first page contains the key judgement and supporting evidence. Subsequent pages provide additional depth, context, and methodological detail. A time-pressed consumer reads the first page; an analyst with more time reads the full report.
+- **Annexes for Supporting Detail:** Detailed technical information, methodological descriptions, and comprehensive source references belong in annexes, not the main body. The body tells the story; annexes provide the supporting evidence.
+- **Kill Your Darlings:** The most painful editing step is cutting information the analyst worked hard to develop. If information does not directly support the key judgement or enable the consumer to evaluate it, it should be cut regardless of how interesting or well-researched it is.
+
+## Adapting Structure to Content
+
+Different types of analytical problems require different structural approaches:
+
+- **Descriptive Reports:** For reports that describe a situation or event, a chronological or geographic structure works best. Describe what happened, when it happened, where it happened, and who was involved before assessing significance.
+- **Predictive Reports:** For reports that forecast future developments, a structure that presents the assessment, then the supporting evidence, then alternative scenarios works best. The consumer should understand the primary assessment before being presented with alternatives.
+- **Warning Reports:** For warning intelligence, the structure should lead with the warning, then the evidence supporting it, then the time window for action. Warning reports should minimise background and context — if the consumer needs to act in hours, they do not need a history lesson.
+- **Estimative Reports:** For estimates of adversary capabilities or intentions, a structure that presents the key judgement, then the evidence, then alternative explanations, then implications for the consumer, provides the analytical depth estimative consumers need.
+
 `
 
 export default function MainbodyorganizationPage() {

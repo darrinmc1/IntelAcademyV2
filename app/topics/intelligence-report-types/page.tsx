@@ -159,6 +159,44 @@ consumer does not need your strategic context. A strategic consumer does not nee
 details. Know who you are writing for and pitch your product accordingly.
 
 )
+
+## The Intelligence Report Taxonomy
+
+Intelligence reports are not a single product type but a family of related products, each designed for a specific purpose, consumer, and timeframe. Understanding the taxonomy of intelligence reports helps analysts choose the right format for their findings and helps consumers know what to expect from each product type:
+
+- **Current Intelligence:** Short, timely reports on recent or ongoing events. Designed to keep consumers informed of developments as they occur. Examples include the President's Daily Brief, situation reports (SITREPs), and intelligence bulletins.
+- **Estimative Intelligence:** Forward-looking assessments about likely future developments. These are the most analytically demanding products, requiring the analyst to weigh uncertainty, consider alternatives, and make probability judgements. National Intelligence Estimates are the most prominent type.
+- **Research Intelligence:** In-depth studies of specific topics, countries, or issues. These are longer-form products that provide comprehensive background, analysis, and forecasting. They may take weeks or months to produce.
+- **Warning Intelligence:** Products specifically designed to alert consumers to imminent threats or emerging crises. Warning intelligence emphasises timeliness over completeness and is often delivered through dedicated warning channels.
+- **Scientific and Technical Intelligence (S&T):** Reports focused on adversary technological capabilities, weapons systems, and scientific developments. These require specialised analytical expertise and often draw heavily on MASINT and SIGINT sources.
+
+## The President's Daily Brief (PDB)
+
+The PDB is the highest-profile intelligence product in the US system and represents the gold standard for concise, actionable intelligence writing:
+
+- **Format:** The PDB is typically 10-15 pages, containing 6-12 articles. Each article is a single page or less. The format forces analysts to distil complex issues into their most essential elements.
+- **Consumer-Focused:** The PDB is written for a single consumer — the President — and their specific information needs. This consumer focus is so intense that PDB writers typically rotate through the White House to understand the President's decision-making style and priorities.
+- **Actionable Content:** Every PDB article addresses a question the President might ask or a decision the President might face. Articles that inform without enabling action are candidates for removal.
+- **Sources and Methods Protected:** The PDB does not cite sources or explain collection methods in the article text. Source information is handled through separate classification markings and handling instructions.
+
+## Intelligence Reports in Law Enforcement
+
+Law enforcement intelligence reports differ from national security reporting in important ways:
+
+- **Evidentiary Standards:** Law enforcement intelligence must meet higher evidentiary standards because it may be used in criminal proceedings. Analysts must document their sources, methods, and reasoning more thoroughly than in national security reporting.
+- **Actionable vs. Background:** Law enforcement intelligence emphasises actionable information — specific individuals, locations, targets, and timings — that can support arrest, search, or surveillance operations.
+- **Sharing Restrictions:** Law enforcement intelligence is subject to stricter dissemination controls due to privacy laws, grand jury secrecy, and ongoing investigation sensitivities. Reports carry specific handling caveats that limit sharing.
+- **Longer Product Lifecycle:** Intelligence developed for criminal investigations may have evidentiary value for years after production, requiring more careful archiving and chain-of-custody documentation than perishable national security assessments.
+
+## Writing for Different Consumers
+
+Adapting report style to the consumer is a critical analytical skill:
+
+- **Senior Decision-Makers:** Short, direct, bottom-line up front. These consumers have limited time and need the key judgement in the first paragraph. Supporting detail can follow, but the conclusion must lead.
+- **Operational Consumers:** Specific, actionable, and time-sensitive. Operators need to know who, what, where, when, and how in the first few lines. They also need to know the reliability of the intelligence so they can factor uncertainty into their operational planning.
+- **Analytical Peers:** Detailed, rigorous, and well-sourced. Other analysts need to understand the methodology, the sources, and the analytical reasoning that produced the assessment. They will evaluate the product's logic and evidentiary basis.
+- **External Partners:** Contextual, collaborative, and appropriately sanitised. Intelligence shared with foreign partners or other agencies must provide enough context to be useful while protecting sources, methods, and sensitive collection capabilities.
+
 `
 
 export default function IntelligencereporttypesPage() {

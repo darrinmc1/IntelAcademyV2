@@ -179,6 +179,60 @@ review and update your processes based on lessons learned and new tools or techn
 workflow is often the difference between amateur internet searching and professional intelligence gathering.
 
 )
+
+## The OSINT Workflow
+
+Open Source Intelligence requires a structured workflow to manage the volume, variety, and velocity of publicly available information. Without a systematic approach, analysts quickly become overwhelmed by data and produce analysis that is reactive rather than purposeful:
+
+- **The OSINT Cycle:** OSINT follows a modified intelligence cycle tailored to the unique characteristics of open sources. The phases — planning, collection, processing, analysis, and dissemination — are the same, but the methods and tools at each phase differ significantly from classified intelligence disciplines.
+- **Source Saturation:** The greatest challenge in OSINT is not finding information but filtering it. An analyst monitoring a single country's social media activity may encounter thousands of potentially relevant posts per day. Effective OSINT workflows prioritise triage and filtering over broad collection.
+- **The OSINT Toolchain:** Professional OSINT operations use a stack of specialised tools — social media monitoring platforms, web scrapers, data visualisation tools, and analytical frameworks. The toolchain should be matched to the specific intelligence requirement, not dictated by what tools are available or familiar.
+
+## Phase 1: Planning
+
+OSINT planning begins with the intelligence requirement and works backward to identify the most productive open sources:
+
+- **Source Mapping:** Identify which open sources are most likely to contain the needed information. For a requirement about military movements, satellite imagery from commercial providers and local social media posts may be the most productive sources. For a requirement about economic conditions, government statistics and financial news may be more relevant.
+- **Collection Strategy:** Determine how each source will be collected, at what frequency, and for what duration. Some sources (government websites) can be collected once; others (social media feeds) require continuous monitoring.
+- **Resource Allocation:** OSINT collection can be resource-intensive. Prioritise sources and collection frequencies based on their expected contribution to the intelligence requirement. A satellite image that costs thousands of dollars per frame should be tasked only when the expected intelligence value justifies the cost.
+- **Legal and Ethical Boundaries:** Before collection begins, confirm that the planned collection is within authorised legal and ethical boundaries. Different jurisdictions have different laws regarding web scraping, social media monitoring, and data retention. OSINT analysts must know and respect these boundaries.
+
+## Phase 2: Collection
+
+OSINT collection gathers publicly available information from identified sources:
+
+- **Web Scraping:** Automated tools collect data from websites at scale. Web scraping can collect thousands of pages per hour but must respect website terms of service and robots.txt instructions. For intelligence purposes, scraped data should be timestamped and source-tagged for future verification.
+- **Social Media Monitoring:** Dedicated tools monitor social media platforms for keywords, hashtags, account activity, and network changes. Social media monitoring should be configured to minimise false positives while capturing relevant activity.
+- **Media Monitoring:** News aggregation services and RSS feeds collect articles from traditional media sources. Media monitoring provides coverage of official statements, reported events, and editorial commentary that may not appear on social media.
+- **Database Access:** Many open source databases require registration, subscription, or academic affiliation. Corporate registries, patent databases, academic journals, and government data portals are valuable OSINT sources that require active access management.
+- **Human Collection:** Some open source information is best collected through human interaction — interviews with subject matter experts, attendance at conferences, engagement with online communities. This form of OSINT collection requires tradecraft more similar to HUMINT than to technical collection.
+
+## Phase 3: Processing and Triage
+
+Raw OSINT data must be processed before it can be analysed:
+
+- **Deduplication:** The same information often appears across multiple sources. Deduplication prevents the analyst from treating a single event as multiple corroborated reports.
+- **Translation:** Foreign language sources must be translated. Machine translation (Google Translate, DeepL) is adequate for triage but should not be relied upon for final analysis. Critical foreign language content should be translated by a qualified linguist.
+- **Verification:** Open source information varies enormously in reliability. Each piece of information should be assessed for plausibility, source reliability, and consistency with other available information before it is used in analysis.
+- **Triage:** Not all collected information merits analysis. Triage rules should be established during the planning phase based on the intelligence requirement. Information that clearly does not meet the requirement should be archived without detailed analysis.
+
+## Phase 4: Analysis
+
+OSINT analysis applies the same analytical tradecraft as other intelligence disciplines:
+
+- **Source Evaluation:** Each open source should be evaluated using the same criteria applied to classified sources — access, motivation, history of reliability, and potential for deception. The fact that a source is "open" does not make it more reliable than a classified source.
+- **Cross-Source Integration:** OSINT information should be integrated across sources before conclusions are drawn. A single social media post is not a trend; a single news article is not a confirmed fact. Patterns across multiple independent sources carry analytical weight.
+- **Temporal Analysis:** When was the information published? Has the source updated or corrected it? Is the information still current? Open source information decays rapidly — a news article from six months ago may no longer reflect the current situation.
+- **Geospatial Correlation:** Where possible, geolocate OSINT information to specific places. A social media post about a protest is more valuable when it can be geolocated to a specific intersection at a specific time.
+
+## Phase 5: Dissemination
+
+OSINT products follow the same dissemination standards as classified intelligence:
+
+- **Source Transparency:** Unlike classified intelligence, which protects sources through classification markings, OSINT products can often cite sources directly. However, analyst should consider whether citing a source could endanger the source or reveal analytical methods.
+- **Timeliness:** OSINT products may have shorter shelf lives than classified products because the underlying open sources are updated continuously. Date and time stamps on OSINT products are essential for consumers to assess currency.
+- **Methodological Transparency:** OSINT consumers benefit from understanding how the information was collected and analysed. A brief methodological note — sources used, search terms, timeframe — helps consumers evaluate the product's reliability and relevance.
+
 `
 
 export default function OsintworkflowPage() {

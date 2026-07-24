@@ -156,6 +156,44 @@ The perfect intelligence report is like a unicorn: everyone has heard of it, but
 one. But with these tips, you might just create a horse with a party hat—and sometimes, that's close enough.
 
 )
+
+## Common Report Writing Mistakes
+
+Even experienced intelligence analysts fall into predictable writing traps. Recognising these pitfalls is the first step toward avoiding them:
+
+- **Hedge Words and Weasel Language:** Phrases like "it is assessed that," "it is believed that," and "there is a possibility that" drain confidence from your writing without adding precision. Every hedge word should have a specific meaning and be used deliberately, not habitually.
+- **Buried Conclusions:** The most important finding of the report should appear in the first paragraph, ideally the first sentence. Analysts sometimes feel they need to "build the case" before stating the conclusion. Intelligence consumers do not have time for this. State the conclusion, then support it.
+- **Passive Voice Overuse:** "It was determined that the threat actor was operating from the following IP addresses" should be "We determined the threat actor operated from these IP addresses." Passive voice obscures responsibility and weakens analytical assertions.
+- **Jargon and Acronyms:** Intelligence writing is notorious for unexplained acronyms and discipline-specific jargon. A report that cannot be understood by an intelligent generalist is a report that will not influence decision-making. Define every acronym on first use and prefer plain language.
+- **Overqualification:** Every analytical judgement exists on a spectrum of uncertainty. But qualifying every sentence with "it is possible that" or "the available evidence suggests that" makes even confident assessments sound weak. Reserve qualification for judgements that genuinely require it.
+
+## Structure and Flow
+
+Poor report structure is the most common reason analytical products go unread:
+
+- **The Inverted Pyramid:** Place the most important information at the top. A decision-maker should be able to read the first paragraph and understand the key judgement. Subsequent paragraphs provide supporting detail in descending order of importance.
+- **The Wall of Text:** Blocks of text longer than six sentences discourage reading. Break long paragraphs into shorter ones. Use subheadings to guide the reader through the report's structure. Use bullet points for lists of facts or options.
+- **Missing Signposts:** Each section should begin with a sentence that tells the reader what this section covers. "The following section examines three alternative explanations for the observed activity" is a signpost. Without signposts, readers must infer the structure from the content — and often get it wrong.
+- **Weak Transitions:** Jumping between topics without transitional sentences confuses readers. "Having established the threat actor's capabilities, we now turn to their likely intent" connects two sections and helps the reader follow the analytical argument.
+
+## Audience Awareness
+
+The most common cause of ineffective intelligence writing is writing for the wrong audience:
+
+- **Know Your Consumer:** A tactical report for an operator needs specific, actionable details and minimal background. A strategic assessment for a policy-maker needs context, alternatives, and implications. Writing the wrong type of report for the consumer guarantees it will not be read.
+- **Assume Limited Time:** Most intelligence consumers have more reading than time. Write as if the reader will only read the first paragraph. If the key judgement is not in that paragraph, you have failed.
+- **Provide Executive Summary:** For reports longer than two pages, include an executive summary or key judgements section at the beginning. This section should be self-contained — the reader should understand the assessment without reading the supporting text.
+- **Answer the Question:** Before writing, confirm what question the consumer wants answered. A brilliantly written report that answers the wrong question is worse than a mediocre report that answers the right one.
+
+## Handling Uncertainty
+
+Intelligence reports must communicate what is known, what is not known, and how confident the analyst is in their assessment:
+
+- **The Confidence Scale:** Use a standardised confidence scale consistently — for example, High Confidence (well-supported by multiple sources), Moderate Confidence (plausible but with gaps), and Low Confidence (speculative or single source). Define what each level means in the report's front matter.
+- **Source Limitations:** Be explicit about the limitations of your sources. A report based on a single source of unknown reliability should carry a lower confidence level than one based on multiple corroborated sources, regardless of how compelling the single source appears.
+- **Alternative Explanations:** Acknowledge alternative explanations for the observed phenomena, even if you ultimately reject them. This demonstrates analytical rigour and prevents consumers from discovering alternatives you failed to consider.
+- **What Would Change Your Assessment:** The most valuable thing an analyst can tell a consumer is what new information would change their assessment. This empowers the consumer to monitor the situation and understand when the analytical picture has fundamentally shifted.
+
 `
 
 export default function ReportwritingpitfallsPage() {

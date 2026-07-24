@@ -183,6 +183,44 @@ route, they decide whether to take it, and when they ignore you and drive into a
 you calmly say "recalculating."
 
 )
+
+## What Makes a Good Recommendation?
+
+Intelligence recommendations are analytical judgements that go beyond assessment to suggest specific actions. A well-constructed recommendation is specific, actionable, grounded in evidence, and sensitive to the consumer's decision-making context:
+
+- **Specific, Not Generic:** "Improve collection against the target" is not a useful recommendation. "Task a satellite over Location X within the next 48 hours to confirm the presence of identified equipment" is a useful recommendation. Specificity enables action.
+- **Actionable by the Consumer:** A recommendation must be directed at a consumer who has the authority to implement it. Recommending a policy change to an intelligence analyst who cannot change policy is futile. Recommending a shift in collection priorities to a collection manager who controls those priorities is actionable.
+- **Grounded in the Assessment:** Recommendations should follow logically from the analytical assessment. A recommendation that is not supported by the preceding analysis appears arbitrary and reduces confidence in the overall product.
+- **Timed and Prioritised:** Recommendations should indicate when action is needed and how the consumer should prioritise among multiple recommendations. "Recommendation 1 (Priority): Confirm target location within 24 hours. Recommendation 2 (Routine): Develop additional sources on the target's support network."
+
+## The Recommendation Structure
+
+Effective recommendations follow a consistent structure:
+
+1. **Action Verb:** Begin with a clear action verb — Task, Deploy, Monitor, Engage, Report, Prepare, Authorise. The action verb tells the consumer what you want them to do.
+2. **Target of Action:** Specify who or what the action should be directed toward. Monitor "the identified communication node" rather than monitoring "suspicious activity."
+3. **Rationale:** Briefly explain why this action is recommended. The rationale connects the recommendation to the analytical assessment. "Task satellite imagery of Location X because the assessment identifies it as the most likely storage site for the identified equipment."
+4. **Timeline:** Indicate when the action should be taken. "Within 48 hours," "Before the next steering committee meeting," "At the first indication of movement."
+5. **Expected Outcome:** Describe what the recommended action is expected to achieve. "This will confirm the equipment's presence and location, enabling follow-on collection or action."
+
+## Common Recommendation Mistakes
+
+Even experienced analysts make predictable errors when formulating recommendations:
+
+- **The False Precision Trap:** Recommending actions with a degree of precision that the intelligence cannot support. "Deploy assets to Grid 123456" is only useful if the intelligence is precise enough to warrant that specific targeting. Recommending at a higher level of precision than the intelligence supports is counterproductive.
+- **The "More Collection" Default:** The most common intelligence recommendation is "collect more information." While sometimes appropriate, this recommendation should be reserved for cases where additional collection would genuinely change the analytical picture. Recommending more collection when the existing evidence is sufficient delays decision-making unnecessarily.
+- **Ignoring Consumer Constraints:** Recommendations that are technically sound but practically impossible — requiring resources the consumer does not have, timelines the consumer cannot meet, or authorities the consumer does not possess — frustrate consumers and undermine the analyst's credibility.
+- **The False Choice:** Presenting only two options when more exist. "Either authorise direct action or accept the threat" presents a false choice that ignores intermediate options like enhanced monitoring, passive collection, or diplomatic engagement.
+
+## Integrating Recommendations into Reports
+
+Recommendations should be integrated into the intelligence report structure, not appended as an afterthought:
+
+- **Placement:** Recommendations appear after the key judgement and supporting evidence, as the logical conclusion of the analytical argument. They should not precede the evidence that supports them.
+- **Prioritisation:** When multiple recommendations are offered, they should be prioritised. The consumer should know which action is most important and which can be deferred.
+- **Explicit Connection:** Each recommendation should be explicitly connected to the preceding analysis. "Based on the assessment that [key judgement], we recommend [specific action]."
+- **Separate Recommendations from Findings:** Avoid the common error of embedding recommendations within analytical findings. "The target is likely at Location X, and we should task imagery" confuses assessment with recommendation. Keep them structurally separate.
+
 `
 
 export default function RecommendationframeworkPage() {

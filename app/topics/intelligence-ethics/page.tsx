@@ -181,6 +181,33 @@ they use phrases like "valuable contribution to national security" rather than "
 basic human rights." Aim high!
 
 )
+
+## The Ethical Framework for Intelligence
+
+Intelligence professionals operate in a uniquely challenging ethical environment. They are authorised to deceive, to collect information without the subject's knowledge or consent, and in some circumstances to influence events covertly. These authorities, necessary for effective intelligence work, create ethical obligations that distinguish intelligence from other information professions:
+
+- **The Necessity of Deception:** Intelligence work cannot be conducted transparently. The very nature of the profession requires deception — of adversaries, of targets, and sometimes of allies. The ethical question is not whether deception occurs but how it is constrained, authorised, and reviewed.
+- **The Public Trust Paradox:** Intelligence agencies operate in secret on behalf of a public that cannot directly observe their activities. This creates a unique trust relationship: the public must trust that intelligence activities are lawful, necessary, and proportionate, without being able to verify this directly.
+- **Consequences of Failure:** Ethical failures in intelligence — unauthorised surveillance, torture, political manipulation — can destroy the trust relationship between an intelligence service and the society it serves. The intelligence professional's individual ethical decisions contribute to or undermine this institutional trust.
+
+## Core Ethical Principles
+
+Several principles guide ethical decision-making in intelligence:
+
+- **Proportionality:** The intrusiveness of intelligence collection must be proportionate to the threat or requirement. Collecting information about a suspected terrorist's communications network is proportionate; collecting the communications of everyone within a three-mile radius of the target is not.
+- **Minimisation:** Intelligence agencies should collect the minimum information necessary to satisfy a valid requirement and should minimise the retention and dissemination of information about individuals who are not intelligence targets. This principle is embedded in US signals intelligence procedures through "incidental collection" minimisation rules.
+- **Accountability:** Intelligence activities should be subject to oversight — internal (inspectors general, legal review), external (legislative oversight committees, judicial review), and in some cases public (declassified reports, historical releases). Accountability mechanisms ensure that intelligence activities remain within authorised boundaries.
+- **Lawfulness:** Intelligence activities must be conducted within the legal framework of the society the intelligence service serves. This includes domestic law, international law, and the laws of armed conflict where applicable. The rule of law is not suspended for intelligence activities.
+
+## Ethical Challenges in Intelligence Analysis
+
+Analysts face distinctive ethical challenges in their daily work:
+
+- **Policy Advocacy vs. Objective Analysis:** The most persistent ethical challenge for intelligence analysts is maintaining analytical independence from policy preferences. Analysts who tailor their assessments to support a preferred policy outcome are not providing intelligence — they are providing advocacy. The ethical obligation is to report what the evidence shows, not what the consumer wants to hear.
+- **Cherry-Picking Evidence:** The inclination to select evidence that supports a preferred conclusion while discounting contradictory evidence is both a cognitive bias and an ethical failure. Analysts have an affirmative ethical obligation to seek out and fairly consider evidence that challenges their working hypotheses.
+- **Classification and Secrecy:** Analysts must navigate the tension between transparency (providing consumers with enough information to evaluate the assessment) and secrecy (protecting sources and methods). Using classification to hide analytical weaknesses — rather than to protect legitimate sources — is an ethical violation.
+- **Speaking Truth to Power:** Analysts have an ethical obligation to communicate their assessments clearly and honestly, even when the assessment is unwelcome or contradicts established policy. The intelligence professional's duty is to the facts, not to organisational or political convenience.
+
 `
 
 export default function IntelligenceethicsPage() {
