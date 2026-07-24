@@ -1,98 +1,101 @@
-const OSINTPage = () => {
-  return (
-    <div className="container mx-auto py-8">
-      <h1 className="text-3xl font-bold mb-4">What is OSINT?</h1>
-      <p className="text-gray-700 mb-4">
-        <em>"Professional internet stalking with a badge and a really good understanding of privacy settings."</em>
-      </p>
-      <p className="text-gray-700 mb-4">
-        OSINT, or Open Source Intelligence, is the practice of collecting and analyzing information that is publicly
-        available. This information can come from a variety of sources, including:
-      </p>
-      <ul className="list-disc list-inside mb-4">
-        <li>Websites</li>
-        <li>Social media</li>
-        <li>News articles</li>
-        <li>Government reports</li>
-        <li>Academic publications</li>
-      </ul>
-      <p className="text-gray-700 mb-4">
-        OSINT is used by a wide range of organizations, including law enforcement, intelligence agencies, and
-        businesses. It can be used for a variety of purposes, such as:
-      </p>
-      <ul className="list-disc list-inside mb-4">
-        <li>Investigating crimes</li>
-        <li>Gathering intelligence</li>
-        <li>Conducting market research</li>
-        <li>Assessing risks</li>
-      </ul>
+import EnhancedLessonContentLoader from "@/components/enhanced-lesson-content-loader"
+import LessonContainer from "@/components/lesson-container"
+import { MicroLesson } from "@/components/micro-lesson"
+import { Metadata } from "next"
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Key Components of OSINT</h2>
-      <p className="text-gray-700 mb-4">
-        <em>"Google-fu, social media archaeology, and the ability to find anyone's high school yearbook photo."</em>
-      </p>
-      <ul className="list-disc list-inside mb-4">
-        <li>
-          <b>Identification of Sources:</b> Knowing where to look for information.
-        </li>
-        <li>
-          <b>Data Collection:</b> Gathering the information from identified sources.
-        </li>
-        <li>
-          <b>Data Analysis:</b> Processing and understanding the collected information.
-        </li>
-        <li>
-          <b>Dissemination:</b> Sharing the analyzed intelligence with stakeholders.
-        </li>
-      </ul>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">OSINT in Practice</h2>
-      <p className="text-gray-700 mb-4">
-        <em>"Where 'I found it on the internet' becomes a legitimate intelligence source citation."</em>
-      </p>
-      <p className="text-gray-700 mb-4">
-        OSINT techniques are applied in various real-world scenarios. Examples include:
-      </p>
-      <ul className="list-disc list-inside mb-4">
-        <li>
-          <b>Cybersecurity:</b> Identifying potential threats and vulnerabilities.
-        </li>
-        <li>
-          <b>Journalism:</b> Investigating stories and verifying facts.
-        </li>
-        <li>
-          <b>Business Intelligence:</b> Understanding competitors and market trends.
-        </li>
-      </ul>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Career in OSINT</h2>
-      <p className="text-gray-700 mb-4">
-        <em>"Professional digital detective with 47 browser tabs open and somehow knowing what each one is for."</em>
-      </p>
-      <p className="text-gray-700 mb-4">
-        A career in OSINT can be rewarding for those who enjoy research and analysis. Potential roles include:
-      </p>
-      <ul className="list-disc list-inside mb-4">
-        <li>Intelligence Analyst</li>
-        <li>Security Analyst</li>
-        <li>Investigative Journalist</li>
-      </ul>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Advanced OSINT Concepts</h2>
-      <p className="text-gray-700 mb-4">
-        <em>
-          "When basic Google searches aren't enough, and you need to dive into the digital rabbit hole with specialized
-          tools."
-        </em>
-      </p>
-      <p className="text-gray-700 mb-4">Beyond basic search techniques, advanced OSINT involves:</p>
-      <ul className="list-disc list-inside mb-4">
-        <li>Using specialized search engines and databases.</li>
-        <li>Analyzing metadata and network traffic.</li>
-        <li>Employing scripting and automation for data collection.</li>
-      </ul>
-    </div>
-  )
+export const metadata: Metadata = {
+  title: "What Is OSINT - The Intel Analyst Academy",
+  description: "Learn about what is osint in intelligence analysis.",
 }
 
+const topicContent = `# What is OSINT?
+
+_"Professional internet stalking with a badge and a really good understanding of privacy settings."_
+
+OSINT, or Open Source Intelligence, is the practice of collecting and analyzing information that is publicly
+available. This information can come from a variety of sources, including:
+
+- Websites
+- Social media
+- News articles
+- Government reports
+- Academic publications
+
+OSINT is used by a wide range of organizations, including law enforcement, intelligence agencies, and
+businesses. It can be used for a variety of purposes, such as:
+
+- Investigating crimes
+- Gathering intelligence
+- Conducting market research
+- Assessing risks
+
+## Key Components of OSINT
+
+_"Google-fu, social media archaeology, and the ability to find anyone's high school yearbook photo."_
+
+- **Identification of Sources:** Knowing where to look for information.
+
+- **Data Collection:** Gathering the information from identified sources.
+
+- **Data Analysis:** Processing and understanding the collected information.
+
+- **Dissemination:** Sharing the analyzed intelligence with stakeholders.
+
+## OSINT in Practice
+
+_"Where 'I found it on the internet' becomes a legitimate intelligence source citation."_
+
+OSINT techniques are applied in various real-world scenarios. Examples include:
+
+- **Cybersecurity:** Identifying potential threats and vulnerabilities.
+
+- **Journalism:** Investigating stories and verifying facts.
+
+- **Business Intelligence:** Understanding competitors and market trends.
+
+## Career in OSINT
+
+_"Professional digital detective with 47 browser tabs open and somehow knowing what each one is for."_
+
+A career in OSINT can be rewarding for those who enjoy research and analysis. Potential roles include:
+
+- Intelligence Analyst
+- Security Analyst
+- Investigative Journalist
+
+## Advanced OSINT Concepts
+
+_
+"When basic Google searches aren't enough, and you need to dive into the digital rabbit hole with specialized
+tools."
+_
+
+Beyond basic search techniques, advanced OSINT involves:
+
+- Using specialized search engines and databases.
+- Analyzing metadata and network traffic.
+- Employing scripting and automation for data collection.
+
+)
+
 export default OSINTPage
+`
+
+export default function WhatisosintPage() {
+  return (
+    <LessonContainer>
+      <MicroLesson
+        title="What is OSINT?"
+        subtitle="Learn about what is osint in intelligence analysis."
+        humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
+        readTime={15}
+        difficulty="Intermediate"
+        category="Intelligence Analysis"
+        mascot="foundations"
+        mascotMessage="Another day, another intelligence problem to solve. Let's get to work."
+      >
+        <EnhancedLessonContentLoader content={topicContent} topic="what-is-osint" />
+      </MicroLesson>
+    </LessonContainer>
+  )
+}
