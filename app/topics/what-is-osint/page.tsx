@@ -76,9 +76,34 @@ Beyond basic search techniques, advanced OSINT involves:
 - Analyzing metadata and network traffic.
 - Employing scripting and automation for data collection.
 
-)
+## OSINT Collection Methods
 
-export default OSINTPage
+Open source intelligence draws from an enormous range of publicly available information. Understanding the categories of OSINT sources helps analysts know where to look and how to evaluate what they find.
+
+- **Published Media:** Newspapers, journals, magazines, books, and government reports. These often provide verified, authoritative information but may lag behind current events.
+- **Broadcast Media:** Television, radio, and podcasts. News broadcasts can provide real-time information from conflict zones or disaster areas, though the analyst must account for editorial bias.
+- **Online Sources:** Websites, forums, blogs, social media platforms, and video-sharing sites. The internet has democratised access to information but also introduced unprecedented volumes of noise and disinformation.
+- **Commercial Data:** Satellite imagery, financial data, shipping records, and business registries. Commercial providers now offer capabilities once reserved for national intelligence agencies.
+- **Grey Literature:** Conference proceedings, academic preprints, technical reports, and working papers. These sit between published and unpublished — often rich in detail but inconsistent in quality control.
+
+## Evaluating OSINT Sources
+
+Not all open sources are equally reliable. Analysts must apply the same source evaluation criteria used in classified intelligence collection:
+
+- **Proximity:** How close is the source to the event or information? A first-hand account carries more weight than a third-hand retelling.
+- **Motivation:** Why is the source sharing this information? Propaganda, disinformation, and commercial interests can all colour what appears to be objective reporting.
+- **Corroboration:** Can the information be confirmed through independent sources? Single-source OSINT should always be treated as provisional.
+- **Timeliness:** When was the information collected or published? OSINT decays rapidly — a social media post from six months ago may no longer reflect the current situation.
+
+## OSINT Tools and Techniques
+
+Professional OSINT practitioners use a range of specialised tools to collect, filter, and analyse open source data efficiently:
+
+- **Search Operators:** Advanced Google operators (site:, filetype:, intitle:, inurl:) allow precise targeting of information within specific domains or file formats.
+- **Social Media Analysis Tools:** Tools like Maltego, SpiderFoot, and theHarvester automate the collection of publicly available information about individuals, domains, and organisations.
+- **Image Analysis:** Reverse image search (Google Images, TinEye) and metadata extraction (EXIF data) can reveal the origin, location, and history of photographs.
+- **Archived Content:** Services like the Wayback Machine allow analysts to view historical versions of websites, uncovering content that has since been removed or altered.
+
 `
 
 export default function WhatisosintPage() {

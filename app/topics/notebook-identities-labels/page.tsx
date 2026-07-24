@@ -90,7 +90,42 @@ Creating a Chart
 
 Example Materials in Analyst's Notebook
 
-)
+## The Importance of Identity Resolution
+
+In any intelligence investigation, the fundamental analytical task is connecting identities to individuals. A single person may use multiple names, aliases, phone numbers, email addresses, social media accounts, and physical addresses. Identity resolution — determining which identifiers belong to the same person — is the foundation upon which all other analysis rests.
+
+- **The Identity Problem:** A target uses a burner phone with one number, a social media account under a pseudonym, an encrypted messaging account tied to an email address registered in another country, and occasionally meets contacts using an alias. Without identity resolution, these appear to be separate individuals.
+- **Resolution Confidence:** Identity resolution is rarely certain. Analyst's Notebook allows analysts to assign confidence levels to identity links, making it possible to work with probabilistic associations while tracking the strength of the evidence.
+
+## Types of Identifiers
+
+Analyst's Notebook supports a wide range of identifier types, each with different evidential weight:
+
+- **Biographic Identifiers:** Name, date of birth, place of birth, nationality. These are relatively stable but can be falsified. A person may have multiple names (legal name, maiden name, alias, nom de guerre).
+- **Biometric Identifiers:** Fingerprints, facial recognition data, voice samples, iris scans. These are the most reliable identifiers but the least commonly available in open source investigations.
+- **Documentary Identifiers:** Passport numbers, national ID numbers, driver's licence numbers. These link a person to a legal identity but may be forged or shared.
+- **Digital Identifiers:** Phone numbers (MSISDN, IMSI, IMEI), email addresses, social media usernames, IP addresses, cryptocurrency wallet addresses. Digital identifiers are abundant but ephemeral — they change frequently and can be anonymised.
+- **Behavioural Identifiers:** Communication patterns, travel routes, operational tradecraft, linguistic markers. These are the most subtle identifiers and often the hardest for adversaries to change.
+
+## Link Analysis Techniques
+
+Once identities are resolved, link analysis reveals how individuals relate to each other and to events:
+
+- **Associational Links:** Two individuals are known to have met, spoken, or transacted. These are direct links that form the backbone of network analysis.
+- **Temporal Links:** Two individuals were in the same location at the same time — not necessarily together, but their presence creates a potential association worth investigating.
+- **Transactional Links:** Financial transfers, phone calls, text messages, emails. These leave documentary evidence and are the most verifiable type of link.
+- **Attributional Links:** Two individuals share an attribute — same address, same employer, same educational institution. These are weaker than associational links but can generate leads.
+
+## Best Practices for Label Management
+
+Effective label and identity management in Analyst's Notebook requires disciplined workflow practices:
+
+- **Consistent Naming Conventions:** Establish a standard format for entity names at the start of every investigation. Full names with surname first (SMITH, John) reduces sorting and searching problems.
+- **Source Attribution:** Every label and identity link should be attributed to its source. When information comes from multiple sources, track which source provided which identifier.
+- **Confidence Scoring:** Use a consistent confidence scale for identity resolution. A rule of thumb: a confirmed phone number linked to a known address scores higher than two individuals using the same type of disposable phone.
+- **Regular Review:** As investigations progress, new information may confirm or challenge existing identity resolutions. Periodically review resolved identities against fresh data.
+- **Deconfliction:** In larger investigations, multiple analysts may be working on the same targets. Centralised identity management prevents duplicated effort and conflicting conclusions.
+
 `
 
 export default function NotebookidentitieslabelsPage() {
