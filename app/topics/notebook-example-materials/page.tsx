@@ -99,6 +99,32 @@ Importing an Example Dataset
 Editing Chart Items
 
 )
+
+## Selecting Examples for Analysis
+
+The examples and materials you include in an Analyst's Notebook chart are not neutral — they shape how others interpret the data. Careful selection and annotation of example materials ensures that the analysis is transparent, reproducible, and defensible.
+
+- **Representative Examples:** Choose examples that fairly represent the broader dataset. Cherry-picking examples that support a preferred conclusion undermines analytical integrity.
+- **Anomalous Examples:** Include examples that contradict the prevailing pattern. These are often where the most valuable intelligence insights emerge — the data point that doesn't fit reveals the limits of your understanding.
+- **Temporal Spread:** Ensure examples span the full timeframe of the investigation. Including only recent examples may miss early indicators; including only old examples may miss current developments.
+
+## Annotating Example Materials
+
+Raw data is rarely meaningful without context. Effective annotation of example materials adds analytical value:
+
+- **Source Attribution:** Every example must be traceable to its source. Include the source identifier, collection method, date of collection, and assessed reliability.
+- **Relevance Statement:** Briefly explain why this particular example was included. What analytical question does it illuminate? What hypothesis does it support or challenge?
+- **Confidence Indicators:** Where the example involves interpretation or inference (rather than direct observation), indicate the analyst's confidence level. This allows consumers to weigh the evidence appropriately.
+- **Cross-References:** Link example materials to related entities, events, or reports in the chart. A well-annotated chart allows consumers to follow the analytical trail from raw data to finished assessment.
+
+## Using Templates Effectively
+
+Analyst's Notebook templates standardise the presentation of common entity and link types, saving time and ensuring consistency:
+
+- **Entity Templates:** Pre-configure standard entity types (Person, Organisation, Location, Event) with the attributes most relevant to your investigation. For example, a Person template might include fields for Name, Alias, DOB, Phone, Email, and Status.
+- **Link Templates:** Standardise how different relationship types are displayed. A phone call link might show duration and frequency; a financial link might show amount and currency.
+- **Chart Templates:** For recurring investigation types (fraud networks, terrorist cells, organised crime groups), create chart templates that pre-populate the analytical framework, saving setup time on each new case.
+
 `
 
 export default function NotebookexamplematerialsPage() {

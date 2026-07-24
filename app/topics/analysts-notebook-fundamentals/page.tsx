@@ -121,6 +121,35 @@ Timeline Visualization (Time Is A Flat Circle, But Your Chart Shouldn't Be)
 {/* What's Next Section */}
 
 )
+
+## What is Analyst's Notebook?
+
+IBM i2 Analyst's Notebook is the most widely used visual analysis tool in law enforcement, intelligence, and corporate security. It transforms complex relational data into visual charts that reveal patterns, networks, and connections that would be difficult or impossible to see in text-based formats.
+
+- **Visual Analysis Paradigm:** Unlike database tools that present data in tables or text tools that present data in reports, Analyst's Notebook works on a visual canvas where entities (people, places, things) are represented as icons and their relationships as connecting lines. This visual representation leverages the human brain's exceptional pattern-recognition capabilities.
+- **Multi-Dimensional Analysis:** Analyst's Notebook supports multiple analytical dimensions simultaneously — network analysis (who is connected to whom), temporal analysis (when events occurred), geospatial analysis (where events occurred), and hierarchical analysis (organisational structures).
+- **Enterprise Integration:** Analyst's Notebook can integrate with existing intelligence databases, case management systems, and data feeds, allowing analysts to work with live data rather than static exports.
+
+## The Analyst's Notebook Interface
+
+New users should familiarise themselves with the core interface components:
+
+- **The Chart Canvas:** The main workspace where entities and links are placed and arranged. The canvas supports unlimited zoom, pan, and layering, allowing analysts to work with charts ranging from a handful of entities to thousands.
+- **The Entity Palette:** A toolbar containing standard entity icons (Person, Organisation, Location, Vehicle, Communication, Financial, etc.). Entities are dragged from the palette onto the canvas.
+- **The Link Palette:** Defines the types of relationships that can be drawn between entities — ownership, communication, association, temporal, and custom link types.
+- **The Attributes Panel:** Displays and allows editing of detailed information about the selected entity or link. Each entity type has configurable attribute fields.
+- **The Conditioned View Panel:** Allows analysts to create rule-based views that highlight specific patterns — for example, highlighting all entities connected to a particular phone number in red.
+
+## Core Analytical Capabilities
+
+Analyst's Notebook provides several analytical capabilities that distinguish it from generic charting tools:
+
+- **Link Analysis:** The core capability — identifying and visualising connections between entities. Link analysis reveals hidden relationships, communication chains, and organisational structures.
+- **Timeline Analysis:** Chart entities and events on a common timeline to reveal sequences, gaps, and temporal patterns. Timeline analysis is essential for understanding the chronology of complex investigations.
+- **Social Network Analysis:** Built-in SNA metrics (degree centrality, betweenness centrality, etc.) quantify the structural position of entities within a network. These metrics can identify key players, brokers, and peripheral actors.
+- **Entity Resolution:** Tools to identify and merge duplicate entities — when the same person appears under slightly different names or with different identifying information across multiple data sources.
+- **Chart Comparison:** Compare two versions of a chart to identify what has changed — new entities, new links, or relationships that have been modified or removed.
+
 `
 
 export default function AnalystsnotebookfundamentalsPage() {

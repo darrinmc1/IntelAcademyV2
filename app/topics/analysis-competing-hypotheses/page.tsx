@@ -120,6 +120,37 @@ Assumptions Check: Questioning Everything You Hold Dear
 Indicators Development: Crystal Ball Not Required
 
 )
+
+## What is Analysis of Competing Hypotheses?
+
+Analysis of Competing Hypotheses (ACH) is one of the most widely taught structured analytical techniques in the intelligence community. Developed by Richards Heuer, ACH addresses a fundamental cognitive challenge: analysts naturally gravitate toward a single explanation and interpret subsequent evidence to support it. ACH forces the systematic consideration of multiple explanations before evidence is evaluated.
+
+- **The Core Insight:** ACH inverts the natural analytical process. Instead of asking "what does the evidence tell me?", ACH asks "if this hypothesis were true, what evidence would I expect to see?" This reframing reduces confirmation bias.
+- **Not a Prediction Tool:** ACH is not designed to predict the future. It is designed to evaluate which explanation best fits the available evidence, given the inherent uncertainties of intelligence analysis.
+- **When to Use ACH:** ACH is most valuable for analytical problems where there are multiple plausible explanations, where the stakes of getting it wrong are high, and where the analyst has sufficient evidence to discriminate between hypotheses.
+
+## The ACH Process
+
+ACH follows a structured eight-step process:
+
+1. **Identify the Possible Hypotheses:** Generate a set of plausible explanations for the phenomenon under investigation. Include the null hypothesis — that the observed situation is the result of normal, innocent activity. Analysts often stop at two or three hypotheses; the technique works best when at least four or five are considered.
+2. **List the Evidence and Assumptions:** Catalogue all relevant evidence, including the absence of expected evidence. Distinguish between confirmed facts, reported information, and analytical assumptions.
+3. **Build the Matrix:** Create a matrix with hypotheses as columns and evidence as rows. For each cell, assess whether the evidence is consistent (+), inconsistent (-), or irrelevant (N/A) to the hypothesis.
+4. **Refine the Matrix:** Re-examine each entry. Evidence that appears consistent with all hypotheses may be too general to be diagnostic. Evidence that is inconsistent with a hypothesis is analytically valuable and should be scrutinised for accuracy.
+5. **Draw Tentative Conclusions:** The hypothesis with the fewest and least damaging inconsistencies is tentatively the strongest. However, also consider the hypothesis that would be most damaging if wrong — sensitivity to being wrong is an important analytical consideration.
+6. **Consider the Sensitivity of Conclusions:** Test how robust the conclusion is to changes in key assumptions. If a single piece of evidence shifts the assessment, the conclusion is fragile and should be caveated accordingly.
+7. **Identify Diagnostic Evidence:** Determine what new evidence would change the assessment. This focuses future collection efforts and gives consumers a basis for monitoring the situation.
+8. **Document the Reasoning:** The ACH matrix itself serves as documentation of the analytical process, allowing reviewers and consumers to understand how the conclusion was reached.
+
+## Common ACH Mistakes
+
+Even experienced analysts make predictable errors when applying ACH:
+
+- **Including the Hypothesis You Want to Be True:** Analysts may unconsciously include a favoured hypothesis and then treat the matrix as confirmation. The technique works best when hypotheses are generated before evidence is reviewed.
+- **Neglecting the Null Hypothesis:** The "nothing unusual is happening" hypothesis is often dismissed too quickly. Strategic surprises often occur because analysts rejected the null hypothesis based on ambiguous evidence.
+- **Evidence that Fits Everything:** Generic evidence — "the country has a history of regional tensions" — is consistent with many hypotheses and is not diagnostically useful. ACH works best when evidence is specific and discriminating.
+- **Treating ACH Output as Truth:** ACH is a thinking tool, not a truth machine. The matrix reflects the analyst's current understanding and is limited by the quality and completeness of available evidence.
+
 `
 
 export default function AnalysiscompetinghypothesesPage() {
