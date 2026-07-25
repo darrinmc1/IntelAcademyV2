@@ -8,25 +8,7 @@ export const metadata: Metadata = {
   description: "Understand the critical differences between raw information and processed intelligence, and how analysts transform data into actionable insights.",
 }
 
-const topicContent = `import Image from "next/image"
-import type { Metadata } from "next"
-import { FileText, CheckCircle, AlertTriangle, Info, Brain, Filter, Zap } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import { WhatsNext } from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Intelligence vs Information | The Intel Analyst Academy",
-description:
-"Understand the critical differences between raw information and processed intelligence, and how analysts transform data into actionable insights.",
+const topicContent = `"Understand the critical differences between raw information and processed intelligence, and how analysts transform data into actionable insights.",
 
 In this lesson, you'll learn:
 

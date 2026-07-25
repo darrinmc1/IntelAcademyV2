@@ -8,23 +8,7 @@ export const metadata: Metadata = {
   description: "Learn frameworks and models for making ethical decisions in intelligence work, from classic ethical theories to practical step-by-step decision-making processes.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-FieldExercise,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Ethical Decision-Making in Intelligence | The Intel Analyst Academy",
-description:
-"Learn frameworks and models for making ethical decisions in intelligence work, from classic ethical theories to practical step-by-step decision-making processes.",
+const topicContent = `"Learn frameworks and models for making ethical decisions in intelligence work, from classic ethical theories to practical step-by-step decision-making processes.",
 
 Ethics in intelligence is not an abstract philosophical exercise. It is a practical
 necessity. Every day, intelligence professionals face decisions that have real

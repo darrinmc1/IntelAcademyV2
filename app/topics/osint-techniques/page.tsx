@@ -8,18 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about osint techniques in intelligence analysis.",
 }
 
-const topicContent = `import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-FieldExercise,
-ProTip,
-JokeAside,
-Debrief,
-NextLessonLink,
-} from '@/components/micro-lesson';
-
-You'll learn core OSINT techniques including search engine operators, social media intelligence, public records research, and how to verify what you find. These skills form the foundation of modern intelligence gathering.
+const topicContent = `You'll learn core OSINT techniques including search engine operators, social media intelligence, public records research, and how to verify what you find. These skills form the foundation of modern intelligence gathering.
 
 {/* What is OSINT */}
 

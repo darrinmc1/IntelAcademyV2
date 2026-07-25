@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to effectively present data in intelligence reports using the right charts, tables, and visual design principles.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Data Presentation | The Intel Analyst Academy",
-description:
-"Learn how to effectively present data in intelligence reports using the right charts, tables, and visual design principles.",
+const topicContent = `"Learn how to effectively present data in intelligence reports using the right charts, tables, and visual design principles.",
 
 Data does not speak for itself -- it needs a translator. As an intelligence analyst,
 your job is to transform raw numbers, frequencies, and patterns into visual stories

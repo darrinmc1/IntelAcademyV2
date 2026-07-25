@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to structure the main body of your intelligence reports using chronological, thematic, geographical, and other frameworks.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Main Body Organization | The Intel Analyst Academy",
-description:
-"Learn how to structure the main body of your intelligence reports using chronological, thematic, geographical, and other frameworks.",
+const topicContent = `"Learn how to structure the main body of your intelligence reports using chronological, thematic, geographical, and other frameworks.",
 
 The main body is where your analysis lives or dies. You can nail the executive summary and
 craft perfect key judgments, but if the main body is a disorganized wall of text, your reader

@@ -8,17 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to import data from various sources and manage large datasets effectively.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import Link from "next/link"
-
-import { LessonVideo } from "@/components/lesson-video"
-import { Card, CardContent } from "@/components/ui/card"
-
-export const metadata: Metadata = {
-title: "Importing and Managing Data in Analyst's Notebook | The Intel Analyst Academy",
-description: "Learn how to import data from various sources and manage large datasets effectively.",
-
-← Back to Analyst's Notebook Learning Path
+const topicContent = `← Back to Analyst's Notebook Learning Path
 
 # Importing and Managing Data
 

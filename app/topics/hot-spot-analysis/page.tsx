@@ -8,23 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to identify, classify, and analyze crime hot spots using spatial statistics, temporal patterns, and repeat victimization theory.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-FieldExercise,
-ProTip,
-JokeAside,
-Debrief,
-NextLessonLink,
-} from "@/components/micro-lesson"
-
-export const metadata: Metadata = {
-title: "Hot Spot Analysis | The Intel Analyst Academy",
-description:
-"Learn how to identify, classify, and analyze crime hot spots using spatial statistics, temporal patterns, and repeat victimization theory.",
+const topicContent = `"Learn how to identify, classify, and analyze crime hot spots using spatial statistics, temporal patterns, and repeat victimization theory.",
 
 Crime is not random. It clusters in space and time, and understanding where and when
 these clusters form is one of the most powerful tools in a crime analyst's arsenal.

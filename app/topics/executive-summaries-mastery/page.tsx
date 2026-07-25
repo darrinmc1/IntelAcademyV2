@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Master the art of writing executive summaries using BLUF technique, the elevator pitch test, and before-and-after examples.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Executive Summary Mastery | The Intel Analyst Academy",
-description:
-"Master the art of writing executive summaries using BLUF technique, the elevator pitch test, and before-and-after examples.",
+const topicContent = `"Master the art of writing executive summaries using BLUF technique, the elevator pitch test, and before-and-after examples.",
 
 The executive summary is where your analysis lives or dies. For senior leaders
 juggling dozens of reports, briefings, and crises, your executive summary may be the

@@ -8,17 +8,7 @@ export const metadata: Metadata = {
   description: "Create temporal analysis charts to visualize events over time and identify patterns.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import Link from "next/link"
-
-import { LessonVideo } from "@/components/lesson-video"
-import { Card, CardContent } from "@/components/ui/card"
-
-export const metadata: Metadata = {
-title: "Timeline Visualization | The Intel Analyst Academy",
-description: "Create temporal analysis charts to visualize events over time and identify patterns.",
-
-← Back to Analyst's Notebook Learning Path
+const topicContent = `← Back to Analyst's Notebook Learning Path
 
 # Timeline Visualization
 

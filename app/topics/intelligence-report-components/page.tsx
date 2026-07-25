@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Master the standard sections of an intelligence report -- from executive summary to appendices -- and learn how each component serves the reader.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Components of a Basic Intelligence Report | The Intel Analyst Academy",
-description:
-"Master the standard sections of an intelligence report -- from executive summary to appendices -- and learn how each component serves the reader.",
+const topicContent = `"Master the standard sections of an intelligence report -- from executive summary to appendices -- and learn how each component serves the reader.",
 
 A standardized report structure is not bureaucratic busywork -- it is a contract with your reader.
 Decision-makers who receive dozens of reports a day rely on predictable formats to find the

@@ -8,15 +8,7 @@ export const metadata: Metadata = {
   description: "Master essential Excel functions and features specifically relevant to intelligence analysis workflows.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import Image from "next/image"
-import Link from "next/link"
-import { Card, CardContent } from "@/components/ui/card"
-
-export const metadata: Metadata = {
-title: "Excel Fundamentals for Analysts | The Intel Analyst Academy",
-description:
-"Master essential Excel functions and features specifically relevant to intelligence analysis workflows.",
+const topicContent = `"Master essential Excel functions and features specifically relevant to intelligence analysis workflows.",
 
 ← Back to Excel for Analysts Learning Path
 

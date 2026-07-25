@@ -8,24 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about network analysis in intelligence analysis.",
 }
 
-const topicContent = `import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-FieldExercise,
-ProTip,
-JokeAside,
-Debrief,
-NextLessonLink,
-} from '@/components/micro-lesson';
-import {
-Network,
-Users,
-GitBranch,
-ArrowRight,
-} from 'lucide-react';
-
-Every intelligence problem is, at some level, a network problem. A terrorist cell
+const topicContent = `Every intelligence problem is, at some level, a network problem. A terrorist cell
 is a network. A drug trafficking route is a network. A money laundering scheme is
 a network. Understanding who is connected to whom — and what those connections mean
 — is one of the most powerful analytical tools at your disposal. In this lesson, you

@@ -8,24 +8,7 @@ export const metadata: Metadata = {
   description: "Master the discipline of continuous threat monitoring — building dashboards, setting tripwires, and avoiding alert fatigue in intelligence operations.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-FieldExercise,
-Debrief,
-NextLessonLink,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Threat Monitoring | The Intel Analyst Academy",
-description:
-"Master the discipline of continuous threat monitoring — building dashboards, setting tripwires, and avoiding alert fatigue in intelligence operations.",
+const topicContent = `"Master the discipline of continuous threat monitoring — building dashboards, setting tripwires, and avoiding alert fatigue in intelligence operations.",
 
 Threat monitoring is the continuous, systematic observation of the operational
 environment for indicators of emerging threats. It is the intelligence equivalent of

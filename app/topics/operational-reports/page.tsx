@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to write operational intelligence reports that support campaigns, sustained operations, and theater-level decision-making.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Operational Reports | The Intel Analyst Academy",
-description:
-"Learn how to write operational intelligence reports that support campaigns, sustained operations, and theater-level decision-making.",
+const topicContent = `"Learn how to write operational intelligence reports that support campaigns, sustained operations, and theater-level decision-making.",
 
 Operational intelligence is the middle child of the intelligence family -- often overlooked but
 absolutely essential. It supports the planners and commanders who translate strategic objectives

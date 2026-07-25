@@ -8,23 +8,7 @@ export const metadata: Metadata = {
   description: "Identify spatial crime clusters and learn how geography reveals offender patterns.",
 }
 
-const topicContent = `"use client"
-
-import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-FieldExercise,
-Debrief,
-NextLessonLink,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-Crime series analysis is the art and science of identifying when disparate criminal
+const topicContent = `Crime series analysis is the art and science of identifying when disparate criminal
 incidents are connected — committed by the same offender, part of the same pattern,
 or driven by the same underlying dynamic. It sits at the intersection of behavioral
 analysis, forensic science, and old-fashioned detective work, and it is one of the

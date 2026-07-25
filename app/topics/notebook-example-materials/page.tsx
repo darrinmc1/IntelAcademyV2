@@ -8,16 +8,7 @@ export const metadata: Metadata = {
   description: "Explore the example charts and import specifications provided with i2 Analyst&amp;apos;s Notebook for practice and learning.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import Link from "next/link"
-
-import { LessonVideo } from "@/components/lesson-video"
-import { Card, CardContent } from "@/components/ui/card"
-
-export const metadata: Metadata = {
-title: "Example Materials in Analyst's Notebook | The Intel Analyst Academy",
-description:
-"Explore the example charts and import specifications provided with i2 Analyst's Notebook for practice and learning.",
+const topicContent = `"Explore the example charts and import specifications provided with i2 Analyst's Notebook for practice and learning.",
 
 ← Back to Analyst's Notebook Learning Path
 

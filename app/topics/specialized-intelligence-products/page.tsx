@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about intelligence products beyond the standard report -- briefings, target packages, threat assessments, and more.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Specialized Intelligence Products | The Intel Analyst Academy",
-description:
-"Learn about intelligence products beyond the standard report -- briefings, target packages, threat assessments, and more.",
+const topicContent = `"Learn about intelligence products beyond the standard report -- briefings, target packages, threat assessments, and more.",
 
 The standard intelligence report is the bread and butter of the IC, but it is far from
 the only tool in your toolbox. From the rapid-fire daily brief to the exhaustive

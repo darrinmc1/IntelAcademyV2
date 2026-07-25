@@ -8,8 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about cognitive biases and their impact on intelligence analysis.",
 }
 
-const topicContent = `
-## Understanding Cognitive Biases
+const topicContent = `## Understanding Cognitive Biases
 
 Cognitive biases are systematic patterns of deviation from norm or rationality in judgment. They represent mental shortcuts (heuristics) that the human brain uses to make decisions quickly, but these shortcuts can sometimes lead to irrational or inaccurate conclusions. In intelligence analysis, these biases can significantly impact the quality and accuracy of assessments.
 

@@ -8,16 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to create a new chart, add entities and links, and begin building a basic network in Analyst&#x27;s Notebook.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import Link from "next/link"
-
-import { LessonVideo } from "@/components/lesson-video"
-import { Card, CardContent } from "@/components/ui/card"
-
-export const metadata: Metadata = {
-title: "Creating a Chart in Analyst's Notebook | The Intel Analyst Academy",
-description:
-"Learn how to create a new chart, add entities and links, and begin building a basic network in Analyst's Notebook.",
+const topicContent = `"Learn how to create a new chart, add entities and links, and begin building a basic network in Analyst's Notebook.",
 
 ← Back to Analyst's Notebook Learning Path
 

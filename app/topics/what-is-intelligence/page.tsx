@@ -8,26 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about what is intelligence in intelligence analysis.",
 }
 
-const topicContent = `import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-FieldExercise,
-ProTip,
-JokeAside,
-Debrief,
-NextLessonLink,
-} from '@/components/micro-lesson';
-import {
-Brain,
-Search,
-Target,
-Shield,
-TrendingUp,
-Users,
-} from 'lucide-react';
-
-By the end of this lesson, you'll understand what intelligence actually is, how it differs from raw information, and why it matters for decision-making. You'll also learn the key areas where intelligence creates real-world impact.
+const topicContent = `By the end of this lesson, you'll understand what intelligence actually is, how it differs from raw information, and why it matters for decision-making. You'll also learn the key areas where intelligence creates real-world impact.
 
 {/* Defining Intelligence Section */}
 

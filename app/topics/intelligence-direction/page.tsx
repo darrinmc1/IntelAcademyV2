@@ -8,11 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about intelligence direction in intelligence analysis.",
 }
 
-const topicContent = `import Link from "next/link"
-import { ArrowLeft, Upload } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import {
-Breadcrumb,
+const topicContent = `Breadcrumb,
 BreadcrumbItem,
 BreadcrumbLink,
 BreadcrumbList,

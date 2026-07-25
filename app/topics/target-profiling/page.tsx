@@ -8,24 +8,7 @@ export const metadata: Metadata = {
   description: "Master the art of target profiling — building comprehensive intelligence profiles of persons of interest through structured analysis and confidence-based gap assessment.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-FieldExercise,
-Debrief,
-NextLessonLink,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Target Profiling | The Intel Analyst Academy",
-description:
-"Master the art of target profiling — building comprehensive intelligence profiles of persons of interest through structured analysis and confidence-based gap assessment.",
+const topicContent = `"Master the art of target profiling — building comprehensive intelligence profiles of persons of interest through structured analysis and confidence-based gap assessment.",
 
 Target profiling is the systematic process of constructing a comprehensive operational
 picture of a person of interest — their identity, associations, capabilities, intentions,

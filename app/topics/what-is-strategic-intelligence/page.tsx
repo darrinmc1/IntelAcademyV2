@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about what is strategic intelligence in intelligence analysis.",
 }
 
-const topicContent = `import { StaticImage } from "@/components/static-image"
-import {
-Breadcrumb,
+const topicContent = `Breadcrumb,
 BreadcrumbItem,
 BreadcrumbLink,
 BreadcrumbList,

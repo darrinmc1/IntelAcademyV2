@@ -8,16 +8,7 @@ export const metadata: Metadata = {
   description: "Learn methods and techniques for long-term intelligence forecasting to anticipate future threats and opportunities.",
 }
 
-const topicContent = `import Image from "next/image"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { TrendingUp, Calendar, Brain, Target, BarChart4, AlertTriangle, CheckCircle2 } from "lucide-react"
-import { WhatsNext } from "@/components/whats-next"
-
-title: "Strategic Forecasting | The Intel Analyst Academy",
-description:
-"Learn methods and techniques for long-term intelligence forecasting to anticipate future threats and opportunities.",
+const topicContent = `"Learn methods and techniques for long-term intelligence forecasting to anticipate future threats and opportunities.",
 
 {/* Hero Section */}
 

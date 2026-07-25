@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Learn why all intelligence conclusions must be supported by evidence, how to evaluate sources, and how to build a credible evidence trail.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Evidence-Based Conclusions | The Intel Analyst Academy",
-description:
-"Learn why all intelligence conclusions must be supported by evidence, how to evaluate sources, and how to build a credible evidence trail.",
+const topicContent = `"Learn why all intelligence conclusions must be supported by evidence, how to evaluate sources, and how to build a credible evidence trail.",
 
 In intelligence analysis, a conclusion without evidence is just an opinion -- and
 opinions do not survive peer review, congressional oversight, or the harsh light of

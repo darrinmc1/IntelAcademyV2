@@ -8,23 +8,7 @@ export const metadata: Metadata = {
   description: "Explore the legal frameworks, statutes, and international laws that govern intelligence activities and define the boundaries of lawful intelligence work.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-FieldExercise,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Legal Frameworks for Intelligence | The Intel Analyst Academy",
-description:
-"Explore the legal frameworks, statutes, and international laws that govern intelligence activities and define the boundaries of lawful intelligence work.",
+const topicContent = `"Explore the legal frameworks, statutes, and international laws that govern intelligence activities and define the boundaries of lawful intelligence work.",
 
 Intelligence operations do not exist in a legal vacuum. Despite what action movies suggest,
 spies do not operate on a "shoot first, ask for forgiveness never" basis. Every

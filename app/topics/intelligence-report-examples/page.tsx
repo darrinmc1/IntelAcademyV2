@@ -8,11 +8,7 @@ export const metadata: Metadata = {
   description: "Learn from good and bad examples of intelligence reports.",
 }
 
-const topicContent = `import Link from "next/link"
-import { ArrowLeft, Clock, FileText, CheckCircle, XCircle, TrendingUp } from "lucide-react"
-import type { Metadata } from "next"
-import {
-Breadcrumb,
+const topicContent = `Breadcrumb,
 BreadcrumbItem,
 BreadcrumbLink,
 BreadcrumbList,

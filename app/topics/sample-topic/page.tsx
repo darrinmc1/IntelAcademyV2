@@ -8,13 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about sample topic in intelligence analysis.",
 }
 
-const topicContent = `import { LessonContainer } from "@/components/lesson-container"
-import { TopicHeader } from "@/components/topic-header"
-import { LessonContent } from "@/components/lesson-content"
-import { FullWidthSection } from "@/components/full-width-section"
-import Image from "next/image"
-
-## Defining Intelligence
+const topicContent = `## Defining Intelligence
 
 At its core, intelligence is about reducing uncertainty. It provides decision-makers with the knowledge
 they need to understand situations, identify threats and opportunities, and make effective choices.

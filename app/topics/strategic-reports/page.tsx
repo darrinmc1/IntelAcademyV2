@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to write strategic intelligence reports for senior policymakers, including NIE formats and long-range assessments.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Strategic Reports | The Intel Analyst Academy",
-description:
-"Learn how to write strategic intelligence reports for senior policymakers, including NIE formats and long-range assessments.",
+const topicContent = `"Learn how to write strategic intelligence reports for senior policymakers, including NIE formats and long-range assessments.",
 
 Strategic intelligence reports address the big questions: Where is this conflict
 headed? What are this nation's long-term intentions? How will emerging technologies

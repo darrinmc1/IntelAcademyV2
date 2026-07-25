@@ -8,23 +8,7 @@ export const metadata: Metadata = {
   description: "Understand the systems, institutions, and processes that ensure accountability in intelligence activities, from legislative and executive oversight to international models.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-FieldExercise,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Intelligence Oversight | The Intel Analyst Academy",
-description:
-"Understand the systems, institutions, and processes that ensure accountability in intelligence activities, from legislative and executive oversight to international models.",
+const topicContent = `"Understand the systems, institutions, and processes that ensure accountability in intelligence activities, from legislative and executive oversight to international models.",
 
 Intelligence agencies are given extraordinary powers — the ability to surveil,
 infiltrate, collect, and in some cases, use force. In democratic societies, these

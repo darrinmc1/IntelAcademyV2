@@ -8,26 +8,7 @@ export const metadata: Metadata = {
   description: "Master advanced Google search operators for effective OSINT investigations.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import { Search, Shield, AlertTriangle } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Alert, AlertDescription } from "@/components/ui/alert"
-import { LessonContainer } from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-FieldExercise,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-
-export const metadata: Metadata = {
-title: "Google Dorking Techniques | The Intel Analyst Academy",
-description: "Master advanced Google search operators for effective OSINT investigations.",
-
-By the end of this lesson, you'll be able to:
+const topicContent = `By the end of this lesson, you'll be able to:
 
 - Understand the fundamentals of Google dorking and its intelligence applications
 - Master essential and advanced Google search operators
@@ -139,22 +120,22 @@ Google Dorking — also known as Google hacking — is the practice of using adv
 
 Mastering these operators is the foundation of effective Google Dorking:
 
-- **site: — Target a specific domain or subdomain.** `site:gov classified` returns all pages on .gov domains containing the word "classified." `site:example.com filetype:pdf` returns all PDF files hosted on example.com.
-- **filetype: — Restrict results to a specific file format.** Critical for finding documents, spreadsheets, and presentations that may contain sensitive information. `filetype:xls salary` finds salary spreadsheets. `filetype:pdf confidential` finds PDFs labelled as confidential.
-- **intitle: — Find pages with specific words in the title.** `intitle:"index of"` is one of the most famous dorks — it finds directory listings that reveal the file structure of web servers. `intitle:"classified" filetype:pdf` finds PDFs with "classified" in their title.
-- **inurl: — Search for specific text in the URL.** `inurl:admin` finds login pages and admin panels. `inurl:passwd` finds pages that may expose password files. `inurl:wp-admin` targets WordPress admin interfaces.
-- **intext: — Search for text in the body of the page.** More specific than a standard keyword search. `intext:"confidential" intext:"not for distribution" site:example.com` finds pages on a specific domain that contain both phrases.
-- **cache: — View Google's cached version of a page.** Essential for preserving content that may have been removed or changed since Google last indexed it. `cache:example.com/sensitive-document.pdf` retrieves the indexed version even if the original has been taken down.
+- **site: — Target a specific domain or subdomain.** \`site:gov classified\` returns all pages on .gov domains containing the word "classified." \`site:example.com filetype:pdf\` returns all PDF files hosted on example.com.
+- **filetype: — Restrict results to a specific file format.** Critical for finding documents, spreadsheets, and presentations that may contain sensitive information. \`filetype:xls salary\` finds salary spreadsheets. \`filetype:pdf confidential\` finds PDFs labelled as confidential.
+- **intitle: — Find pages with specific words in the title.** \`intitle:"index of"\` is one of the most famous dorks — it finds directory listings that reveal the file structure of web servers. \`intitle:"classified" filetype:pdf\` finds PDFs with "classified" in their title.
+- **inurl: — Search for specific text in the URL.** \`inurl:admin\` finds login pages and admin panels. \`inurl:passwd\` finds pages that may expose password files. \`inurl:wp-admin\` targets WordPress admin interfaces.
+- **intext: — Search for text in the body of the page.** More specific than a standard keyword search. \`intext:"confidential" intext:"not for distribution" site:example.com\` finds pages on a specific domain that contain both phrases.
+- **cache: — View Google's cached version of a page.** Essential for preserving content that may have been removed or changed since Google last indexed it. \`cache:example.com/sensitive-document.pdf\` retrieves the indexed version even if the original has been taken down.
 
 ## Combining Operators for Intelligence Collection
 
 The true power of Google Dorking comes from combining operators in targeted search strings:
 
-- **Finding Exposed Documents:** `site:example.com filetype:pdf intitle:confidential` — finds PDFs labelled as confidential on the target domain.
-- **Identifying Vulnerable Systems:** `inurl:"/cgi-bin/" site:target.gov filetype:cgi` — identifies CGI scripts that may have known vulnerabilities.
-- **Mapping Network Infrastructure:** `site:*.target.org intitle:"index of"` — finds exposed directory listings across all subdomains.
-- **Discovering Login Portals:** `inurl:login inurl:admin site:target.com` — finds administrative login pages that may be targets for credential testing.
-- **Locating Backup Files:** `filetype:bak site:example.com` — finds backup files (`.bak`) that often contain older versions of sensitive documents that were insufficiently secured.
+- **Finding Exposed Documents:** \`site:example.com filetype:pdf intitle:confidential\` — finds PDFs labelled as confidential on the target domain.
+- **Identifying Vulnerable Systems:** \`inurl:"/cgi-bin/" site:target.gov filetype:cgi\` — identifies CGI scripts that may have known vulnerabilities.
+- **Mapping Network Infrastructure:** \`site:*.target.org intitle:"index of"\` — finds exposed directory listings across all subdomains.
+- **Discovering Login Portals:** \`inurl:login inurl:admin site:target.com\` — finds administrative login pages that may be targets for credential testing.
+- **Locating Backup Files:** \`filetype:bak site:example.com\` — finds backup files (\`.bak\`) that often contain older versions of sensitive documents that were insufficiently secured.
 
 ## Documenting and Preserving Findings
 

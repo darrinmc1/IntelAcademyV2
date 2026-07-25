@@ -8,23 +8,7 @@ export const metadata: Metadata = {
   description: "Go deeper into the specific techniques of verbal briefing delivery and audience management.",
 }
 
-const topicContent = `"use client"
-
-import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-FieldExercise,
-Debrief,
-NextLessonLink,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-You have spent days, weeks, sometimes months assembling an intelligence product. The
+const topicContent = `You have spent days, weeks, sometimes months assembling an intelligence product. The
 analysis is rigorous, the sourcing is solid, the key judgments are sharp. Then you
 walk into the briefing room, open your mouth, and within sixty seconds you have lost
 them. The intelligence was fine. The briefing was not.

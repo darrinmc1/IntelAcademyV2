@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Understand the three levels of intelligence reporting -- strategic, operational, and tactical -- and learn when to use each.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Strategic, Operational, and Tactical Reports | The Intel Analyst Academy",
-description:
-"Understand the three levels of intelligence reporting -- strategic, operational, and tactical -- and learn when to use each.",
+const topicContent = `"Understand the three levels of intelligence reporting -- strategic, operational, and tactical -- and learn when to use each.",
 
 Intelligence reporting is not one-size-fits-all. A report designed for the National Security
 Council looks nothing like one written for a patrol leader in the field, and both look nothing

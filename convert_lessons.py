@@ -52,7 +52,7 @@ def strip_jsx_to_markdown(content):
     text = content
     
     # Remove imports, exports, and React boilerplate
-    text = re.sub(r'^import .+?;\s*\n', '', text, flags=re.MULTILINE)
+    text = re.sub(r'^import\s+(?:type\s+)?.*?[;]?\s*\n', '', text, flags=re.MULTILINE)
     text = re.sub(r'export (default )?(const|function) \w+\s*[=({].*?\{', '', text, flags=re.DOTALL)
     text = re.sub(r'const \w+\s*=\s*\([^)]*\)\s*=>\s*\{', '', text)
     text = re.sub(r'^\s*return\s*\(', '', text, flags=re.MULTILINE)
@@ -60,7 +60,7 @@ def strip_jsx_to_markdown(content):
     text = re.sub(r'^\s*\);\s*$', '', text, flags=re.MULTILINE)
     text = re.sub(r'^\s*}\s*\)?\s*$', '', text, flags=re.MULTILINE)
     text = re.sub(r'^\s*</?(div|section|main|article|React\.Fragment|>)>', '', text, flags=re.MULTILINE)
-    text = re.sub(r'export const metadata.*?\};', '', text, flags=re.DOTALL)
+    text = re.sub(r'^export\s+const\s+metadata.*?^\};', '', text, flags=re.MULTILINE | re.DOTALL)
     
     # Remove JSX wrapper elements but keep content
     text = re.sub(r'<div[^>]*>', '', text)
@@ -151,6 +151,8 @@ def convert_page(slug):
         desc = meta_desc(slug)
     
     md_content = strip_jsx_to_markdown(content)
+    # Escape backticks so they don't break the template literal
+    md_content = md_content.replace("")
     
     new_file = f"""import EnhancedLessonContentLoader from "@/components/enhanced-lesson-content-loader"
 import LessonContainer from "@/components/lesson-container"

@@ -8,25 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about common mistakes in intelligence report writing and how to avoid them.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-FieldExercise,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-import Image from "next/image"
-
-export const metadata: Metadata = {
-title: "Report Writing Pitfalls | The Intel Analyst Academy",
-description: "Learn about common mistakes in intelligence report writing and how to avoid them.",
-
-In this mission, you'll explore the seven deadly sins of intelligence report writing, understand how to avoid them, and develop the skills to create reports that actually influence decisions instead of becoming classified coasters.
+const topicContent = `In this mission, you'll explore the seven deadly sins of intelligence report writing, understand how to avoid them, and develop the skills to create reports that actually influence decisions instead of becoming classified coasters.
 
 Welcome to the world of intelligence report writing, where your brilliant analysis can either shape national
 policy or become the world's most classified paper airplane. The difference often comes down to avoiding these

@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to properly document, preserve, and report on digital evidence for intelligence and legal proceedings.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Digital Evidence Documentation | The Intel Analyst Academy",
-description:
-"Learn how to properly document, preserve, and report on digital evidence for intelligence and legal proceedings.",
+const topicContent = `"Learn how to properly document, preserve, and report on digital evidence for intelligence and legal proceedings.",
 
 Digital evidence -- social media posts, emails, server logs, metadata, device images,
 and OSINT screenshots -- forms the backbone of modern intelligence analysis. But

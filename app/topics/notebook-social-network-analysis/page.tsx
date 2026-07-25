@@ -8,17 +8,7 @@ export const metadata: Metadata = {
   description: "Apply social network analysis techniques to identify key actors and relationships in networks.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import Link from "next/link"
-
-import { LessonVideo } from "@/components/lesson-video"
-import { Card, CardContent } from "@/components/ui/card"
-
-export const metadata: Metadata = {
-title: "Social Network Analysis with Analyst's Notebook | The Intel Analyst Academy",
-description: "Apply social network analysis techniques to identify key actors and relationships in networks.",
-
-← Back to Analyst's Notebook Learning Path
+const topicContent = `← Back to Analyst's Notebook Learning Path
 
 # Social Network Analysis
 

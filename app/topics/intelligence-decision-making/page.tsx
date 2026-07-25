@@ -8,28 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how intelligence supports effective decision-making processes across various domains and the critical role it plays in reducing uncertainty.",
 }
 
-const topicContent = `import Image from "next/image"
-import Link from "next/link"
-import type { Metadata } from "next"
-import { BookOpen, ArrowRight, LightbulbIcon, AlertTriangle, Info, CheckCircle, Target, BarChart } from "lucide-react"
-
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import { WhatsNext } from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Intelligence in Decision Making | The Intel Analyst Academy",
-description:
-"Learn how intelligence supports effective decision-making processes across various domains and the critical role it plays in reducing uncertainty.",
+const topicContent = `"Learn how intelligence supports effective decision-making processes across various domains and the critical role it plays in reducing uncertainty.",
 
 In this lesson, you'll discover:
 

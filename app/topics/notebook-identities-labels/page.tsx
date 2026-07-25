@@ -8,16 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to use identity and label item properties in i2 Analyst&amp;apos;s Notebook for effective chart creation.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import Link from "next/link"
-
-import { LessonVideo } from "@/components/lesson-video"
-import { Card, CardContent } from "@/components/ui/card"
-
-export const metadata: Metadata = {
-title: "Identities and Labels in Analyst's Notebook | The Intel Analyst Academy",
-description:
-"Learn how to use identity and label item properties in i2 Analyst's Notebook for effective chart creation.",
+const topicContent = `"Learn how to use identity and label item properties in i2 Analyst's Notebook for effective chart creation.",
 
 ← Back to Analyst's Notebook Learning Path
 

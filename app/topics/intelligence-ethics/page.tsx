@@ -8,24 +8,7 @@ export const metadata: Metadata = {
   description: "Explore the ethical considerations and dilemmas in intelligence work and how to navigate them responsibly.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-FieldExercise,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-import Image from "next/image"
-
-export const metadata: Metadata = {
-title: "Intelligence Ethics | The Intel Analyst Academy",
-description:
-"Explore the ethical considerations and dilemmas in intelligence work and how to navigate them responsibly.",
+const topicContent = `"Explore the ethical considerations and dilemmas in intelligence work and how to navigate them responsibly.",
 
 In this mission, you'll learn how ethical guardrails keep intelligence operations from going off a cliff, explore the tension between security and liberty, and develop judgment that lets you make decisions you can defend both professionally and personally.
 

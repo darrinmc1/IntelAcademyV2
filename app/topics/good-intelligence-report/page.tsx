@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Learn the six core attributes of a high-quality intelligence report and how to apply the &#x27;would I act on this?&#x27; test.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "What Makes a Good Intelligence Report? | The Intel Analyst Academy",
-description:
-"Learn the six core attributes of a high-quality intelligence report and how to apply the 'would I act on this?' test.",
+const topicContent = `"Learn the six core attributes of a high-quality intelligence report and how to apply the 'would I act on this?' test.",
 
 Every intelligence organization in the world produces reports. Most of them are technically competent.
 Far fewer actually change decisions. The gap between a report that gets read and one that gets filed

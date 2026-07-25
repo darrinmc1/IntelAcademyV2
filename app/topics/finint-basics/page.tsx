@@ -8,23 +8,7 @@ export const metadata: Metadata = {
   description: "Master the art of delivering intelligence briefings that keep decision-makers awake and informed.",
 }
 
-const topicContent = `"use client"
-
-import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-FieldExercise,
-Debrief,
-NextLessonLink,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-Financial intelligence — FININT — is the discipline of collecting, analyzing, and
+const topicContent = `Financial intelligence — FININT — is the discipline of collecting, analyzing, and
 acting on financial data to detect, disrupt, and prosecute illicit financial activity.
 It is one of the most underappreciated INTs in the intelligence community, largely
 because spreadsheets lack the glamour of satellite imagery or the drama of human

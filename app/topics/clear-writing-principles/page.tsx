@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Master the principles of clear, effective writing for intelligence reports including active voice, plain language, and sentence surgery techniques.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Clear Writing Principles | The Intel Analyst Academy",
-description:
-"Master the principles of clear, effective writing for intelligence reports including active voice, plain language, and sentence surgery techniques.",
+const topicContent = `"Master the principles of clear, effective writing for intelligence reports including active voice, plain language, and sentence surgery techniques.",
 
 Clear writing is the difference between intelligence that drives action and intelligence
 that drives your reader to a nap. In this lesson, you will learn how to strip the fog

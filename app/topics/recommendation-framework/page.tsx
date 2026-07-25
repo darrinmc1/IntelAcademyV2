@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to develop and present actionable recommendations in your intelligence reports using the SMART framework.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Recommendation Framework | The Intel Analyst Academy",
-description:
-"Learn how to develop and present actionable recommendations in your intelligence reports using the SMART framework.",
+const topicContent = `"Learn how to develop and present actionable recommendations in your intelligence reports using the SMART framework.",
 
 Intelligence analysts walk a razor-thin line between informing decisions and making them.
 This lesson covers when recommendations are appropriate, how to structure them using the

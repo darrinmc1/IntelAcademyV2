@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to fuse information from HUMINT, SIGINT, OSINT, and other disciplines into coherent, reliable intelligence assessments.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Multi-Source Integration | The Intel Analyst Academy",
-description:
-"Learn how to fuse information from HUMINT, SIGINT, OSINT, and other disciplines into coherent, reliable intelligence assessments.",
+const topicContent = `"Learn how to fuse information from HUMINT, SIGINT, OSINT, and other disciplines into coherent, reliable intelligence assessments.",
 
 Single-source intelligence is like a single witness in a courtroom -- it can be valuable, but
 it can also be wrong, incomplete, or deliberately misleading. Multi-source integration (also

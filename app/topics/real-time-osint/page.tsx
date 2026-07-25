@@ -8,10 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about real-time open source intelligence techniques and applications.",
 }
 
-const topicContent = `title: "Real-Time OSINT | The Intel Analyst Academy",
-description: "Learn about real-time open source intelligence techniques and applications.",
-
-# Real-Time OSINT
+const topicContent = `# Real-Time OSINT
 
 Real-time OSINT is what happens when regular OSINT puts on running shoes and chugs an energy drink. It's the
 high-speed, high-stress art of collecting and analyzing open source intelligence as events unfold—because

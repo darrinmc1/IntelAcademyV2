@@ -8,11 +8,7 @@ export const metadata: Metadata = {
   description: "Learn the core principles of effective intelligence reporting",
 }
 
-const topicContent = `import Link from "next/link"
-import { ArrowLeft, Clock, FileText, CheckCircle } from "lucide-react"
-import type { Metadata } from "next"
-import {
-Breadcrumb,
+const topicContent = `Breadcrumb,
 BreadcrumbItem,
 BreadcrumbLink,
 BreadcrumbList,

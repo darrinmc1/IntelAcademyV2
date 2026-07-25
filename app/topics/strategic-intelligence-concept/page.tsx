@@ -8,23 +8,7 @@ export const metadata: Metadata = {
   description: "Master the discipline of strategic intelligence — long-term forecasting, national security strategy, analytical products like NIEs, and the political challenges that threaten objectivity.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-FieldExercise,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Strategic Intelligence | The Intel Analyst Academy",
-description:
-"Master the discipline of strategic intelligence — long-term forecasting, national security strategy, analytical products like NIEs, and the political challenges that threaten objectivity.",
+const topicContent = `"Master the discipline of strategic intelligence — long-term forecasting, national security strategy, analytical products like NIEs, and the political challenges that threaten objectivity.",
 
 Tactical intelligence tells you what is happening right now. Strategic intelligence tells
 you what will happen next — and why it matters to the people who decide the fate of

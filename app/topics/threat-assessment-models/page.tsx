@@ -8,23 +8,7 @@ export const metadata: Metadata = {
   description: "Explore structured threat assessment models including DHS NTAS, CARVER, and OCTAVE, and learn how qualitative and quantitative approaches differ for security analysis.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-FieldExercise,
-ProTip,
-JokeAside,
-Debrief,
-NextLessonLink,
-} from "@/components/micro-lesson"
-
-export const metadata: Metadata = {
-title: "Threat Assessment Models | The Intel Analyst Academy",
-description:
-"Explore structured threat assessment models including DHS NTAS, CARVER, and OCTAVE, and learn how qualitative and quantitative approaches differ for security analysis.",
+const topicContent = `"Explore structured threat assessment models including DHS NTAS, CARVER, and OCTAVE, and learn how qualitative and quantitative approaches differ for security analysis.",
 
 In the previous lesson, you learned what threat assessment is. Now it is time to get
 specific. A threat assessment model is a structured framework that ensures consistency,

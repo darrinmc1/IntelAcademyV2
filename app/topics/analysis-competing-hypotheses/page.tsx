@@ -8,15 +8,7 @@ export const metadata: Metadata = {
   description: "Master the systematic evaluation of multiple hypotheses to avoid confirmation bias in intelligence analysis.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import Image from "next/image"
-import Link from "next/link"
-import { Card, CardContent } from "@/components/ui/card"
-
-export const metadata: Metadata = {
-title: "Analysis of Competing Hypotheses | The Intel Analyst Academy",
-description:
-"Master the systematic evaluation of multiple hypotheses to avoid confirmation bias in intelligence analysis.",
+const topicContent = `"Master the systematic evaluation of multiple hypotheses to avoid confirmation bias in intelligence analysis.",
 
 ← Back to Analytical Techniques
 

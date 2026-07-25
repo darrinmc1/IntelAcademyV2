@@ -8,23 +8,7 @@ export const metadata: Metadata = {
   description: "Understanding the complex balance between intelligence collection needs and the protection of privacy rights and civil liberties in democratic societies.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-FieldExercise,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Privacy and Civil Liberties | The Intel Analyst Academy",
-description:
-"Understanding the complex balance between intelligence collection needs and the protection of privacy rights and civil liberties in democratic societies.",
+const topicContent = `"Understanding the complex balance between intelligence collection needs and the protection of privacy rights and civil liberties in democratic societies.",
 
 Privacy and civil liberties sit at the heart of the tension between security and
 freedom. Intelligence agencies need information to protect national security, but

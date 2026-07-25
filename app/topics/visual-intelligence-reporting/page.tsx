@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to use charts, maps, timelines, and graphics to create more effective intelligence reports.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Visual Intelligence Reporting | The Intel Analyst Academy",
-description:
-"Learn how to use charts, maps, timelines, and graphics to create more effective intelligence reports.",
+const topicContent = `"Learn how to use charts, maps, timelines, and graphics to create more effective intelligence reports.",
 
 Intelligence reports live or die by their ability to communicate complex information
 quickly. Visuals -- charts, maps, timelines, link diagrams, and infographics -- are

@@ -8,23 +8,7 @@ export const metadata: Metadata = {
   description: "Learn the fundamentals of threat assessment including the differences between threats, risks, and vulnerabilities, the four-step assessment process, threat actor profiles, and the capability-intent model.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-FieldExercise,
-ProTip,
-JokeAside,
-Debrief,
-NextLessonLink,
-} from "@/components/micro-lesson"
-
-export const metadata: Metadata = {
-title: "What Is Threat Assessment | The Intel Analyst Academy",
-description:
-"Learn the fundamentals of threat assessment including the differences between threats, risks, and vulnerabilities, the four-step assessment process, threat actor profiles, and the capability-intent model.",
+const topicContent = `"Learn the fundamentals of threat assessment including the differences between threats, risks, and vulnerabilities, the four-step assessment process, threat actor profiles, and the capability-intent model.",
 
 Threat assessment is the systematic process of identifying, characterizing, and evaluating
 threats to determine what could cause harm and how likely that harm is to occur. It is the

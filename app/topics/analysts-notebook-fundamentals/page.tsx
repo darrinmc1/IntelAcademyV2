@@ -8,18 +8,7 @@ export const metadata: Metadata = {
   description: "Learn the core interface, features, and capabilities of IBM i2 Analyst&amp;apos;s Notebook.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import Link from "next/link"
-
-import { LessonVideo } from "@/components/lesson-video"
-import { Card, CardContent } from "@/components/ui/card"
-import { WhatsNextCompact } from "@/components/whats-next-compact"
-
-export const metadata: Metadata = {
-title: "Analyst's Notebook Fundamentals | The Intel Analyst Academy",
-description:"Learn the core interface, features, and capabilities of IBM i2 Analyst's Notebook.",
-
-← Back to Analyst's Notebook Learning Path
+const topicContent = `← Back to Analyst's Notebook Learning Path
 
 # Analyst's Notebook Fundamentals
 

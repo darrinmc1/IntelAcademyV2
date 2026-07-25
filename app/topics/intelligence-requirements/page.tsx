@@ -8,8 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to identify and prioritize intelligence needs to guide collection efforts.",
 }
 
-const topicContent = `
-## What Are Intelligence Requirements? (Besides a Way to Make Collectors Roll Their Eyes)
+const topicContent = `## What Are Intelligence Requirements? (Besides a Way to Make Collectors Roll Their Eyes)
 
 Intelligence requirements are the questions that need answering, the gaps that need filling, and the
 uncertainties that keep decision-makers awake at 3 AM wondering if they should have gone into accounting

@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to write strong, well-supported conclusions that synthesize your analysis and drive decision-making.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Conclusion Development | The Intel Analyst Academy",
-description:
-"Learn how to write strong, well-supported conclusions that synthesize your analysis and drive decision-making.",
+const topicContent = `"Learn how to write strong, well-supported conclusions that synthesize your analysis and drive decision-making.",
 
 Your conclusion is the last thing your reader sees -- and often the only thing they
 remember. A weak conclusion can undermine an otherwise brilliant report, while a strong

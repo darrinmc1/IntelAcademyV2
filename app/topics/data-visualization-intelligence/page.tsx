@@ -8,15 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about data visualization intelligence in intelligence analysis.",
 }
 
-const topicContent = `"use client"
-
-import type React from "react"
-import IntelligenceSankeyDiagram from "@/components/visualizations/intelligence-sankey-diagram"
-import IntelligenceHierarchyChart from "@/components/visualizations/intelligence-hierarchy-chart"
-import IntelligenceProcessFlow from "@/components/visualizations/intelligence-process-flow"
-import IntelligenceNetworkAnalysis from "@/components/visualizations/intelligence-network-analysis"
-
-const DataVisualizationIntelligencePage: React.FC = () => {
+const topicContent = `const DataVisualizationIntelligencePage: React.FC = () => {
 
 {/* Header */}
 

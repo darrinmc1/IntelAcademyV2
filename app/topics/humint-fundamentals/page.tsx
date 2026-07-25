@@ -8,24 +8,7 @@ export const metadata: Metadata = {
   description: "Master human intelligence tradecraft — source typology, the MICE framework, the recruitment cycle, and the handler&#x27;s craft of communication, validation, and protection.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-FieldExercise,
-Debrief,
-NextLessonLink,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "HUMINT — How to Make Friends and Influence Sources | The Intel Analyst Academy",
-description:
-"Master human intelligence tradecraft — source typology, the MICE framework, the recruitment cycle, and the handler's craft of communication, validation, and protection.",
+const topicContent = `"Master human intelligence tradecraft — source typology, the MICE framework, the recruitment cycle, and the handler's craft of communication, validation, and protection.",
 
 Human Intelligence — HUMINT — is the oldest intelligence discipline in existence.
 Long before satellites, signals intercepts, or open-source scraping, intelligence

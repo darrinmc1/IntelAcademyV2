@@ -8,17 +8,7 @@ export const metadata: Metadata = {
   description: "Master techniques for building clear and effective link charts showing entities and connections.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import Link from "next/link"
-
-import { LessonVideo } from "@/components/lesson-video"
-import { Card, CardContent } from "@/components/ui/card"
-
-export const metadata: Metadata = {
-title: "Creating Entity Relationship Charts | The Intel Analyst Academy",
-description: "Master techniques for building clear and effective link charts showing entities and connections.",
-
-← Back to Analyst's Notebook Learning Path
+const topicContent = `← Back to Analyst's Notebook Learning Path
 
 # Creating Entity Relationship Charts
 

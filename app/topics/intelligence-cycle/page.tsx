@@ -8,18 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about intelligence cycle in intelligence analysis.",
 }
 
-const topicContent = `import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-FieldExercise,
-ProTip,
-JokeAside,
-Debrief,
-NextLessonLink,
-} from '@/components/micro-lesson';
-
-You'll learn the five phases of the intelligence cycle, understand how each phase feeds into the next, and discover why this systematic approach prevents analysts from just winging it.
+const topicContent = `You'll learn the five phases of the intelligence cycle, understand how each phase feeds into the next, and discover why this systematic approach prevents analysts from just winging it.
 
 {/* Overview Section */}
 

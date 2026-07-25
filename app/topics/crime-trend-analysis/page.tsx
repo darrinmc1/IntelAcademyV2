@@ -8,23 +8,7 @@ export const metadata: Metadata = {
   description: "Master the analysis of crime trends over time — seasonal patterns, detection methods, displacement effects, and the traps that deceive even experienced analysts.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-FieldExercise,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Crime Trend Analysis | The Intel Analyst Academy",
-description:
-"Master the analysis of crime trends over time — seasonal patterns, detection methods, displacement effects, and the traps that deceive even experienced analysts.",
+const topicContent = `"Master the analysis of crime trends over time — seasonal patterns, detection methods, displacement effects, and the traps that deceive even experienced analysts.",
 
 A single snapshot of crime data tells you where trouble is today. A trend tells you where
 trouble is going tomorrow — and where it came from last week, last month, and last year.

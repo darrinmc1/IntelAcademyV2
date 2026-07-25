@@ -8,24 +8,7 @@ export const metadata: Metadata = {
   description: "Master the fundamentals of SIGINT — COMINT, ELINT, FISINT, collection methods, cryptanalysis, and the historical triumphs and fiascos that shaped the discipline.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-FieldExercise,
-Debrief,
-NextLessonLink,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Signals Intelligence — The Art of Eavesdropping (Legally) | The Intel Analyst Academy",
-description:
-"Master the fundamentals of SIGINT — COMINT, ELINT, FISINT, collection methods, cryptanalysis, and the historical triumphs and fiascos that shaped the discipline.",
+const topicContent = `"Master the fundamentals of SIGINT — COMINT, ELINT, FISINT, collection methods, cryptanalysis, and the historical triumphs and fiascos that shaped the discipline.",
 
 Signals Intelligence — SIGINT — is the discipline of collecting and analysing
 electronic signals to produce actionable intelligence. It is the largest technical

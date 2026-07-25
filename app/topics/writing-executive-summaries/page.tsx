@@ -8,11 +8,7 @@ export const metadata: Metadata = {
   description: "Master the art of creating concise and impactful executive summaries",
 }
 
-const topicContent = `import Link from "next/link"
-import { ArrowLeft, Clock, FileText } from "lucide-react"
-import type { Metadata } from "next"
-import {
-Breadcrumb,
+const topicContent = `Breadcrumb,
 BreadcrumbItem,
 BreadcrumbLink,
 BreadcrumbList,

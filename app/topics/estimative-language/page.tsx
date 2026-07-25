@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Master the use of estimative language to convey probability and confidence in intelligence assessments, including the Kent scale and common pitfalls.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Estimative Language | The Intel Analyst Academy",
-description:
-"Master the use of estimative language to convey probability and confidence in intelligence assessments, including the Kent scale and common pitfalls.",
+const topicContent = `"Master the use of estimative language to convey probability and confidence in intelligence assessments, including the Kent scale and common pitfalls.",
 
 Intelligence analysts almost never deal in certainty. The future is murky, sources are
 incomplete, and the adversary is not cooperating with your timeline. Estimative language

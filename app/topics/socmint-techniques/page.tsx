@@ -8,26 +8,7 @@ export const metadata: Metadata = {
   description: "Master Social Media Intelligence gathering techniques for effective OSINT investigations.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import { Users, Eye, Shield, AlertTriangle } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Alert, AlertDescription } from "@/components/ui/alert"
-import { LessonContainer } from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-FieldExercise,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-
-export const metadata: Metadata = {
-title: "SOCMINT Techniques | The Intel Analyst Academy",
-description: "Master Social Media Intelligence gathering techniques for effective OSINT investigations.",
-
-By the end of this lesson, you'll be able to:
+const topicContent = `By the end of this lesson, you'll be able to:
 
 - Understand the fundamentals and importance of SOCMINT in modern intelligence operations
 - Identify and leverage key social media platforms for intelligence collection

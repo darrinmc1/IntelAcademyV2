@@ -8,25 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about situational awareness in intelligence analysis.",
 }
 
-const topicContent = `import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-FieldExercise,
-ProTip,
-JokeAside,
-Debrief,
-NextLessonLink,
-} from '@/components/micro-lesson';
-import {
-Eye,
-EyeOff,
-Activity,
-Map,
-Target,
-} from 'lucide-react';
-
-Situational awareness (SA) is the single most important cognitive skill in
+const topicContent = `Situational awareness (SA) is the single most important cognitive skill in
 tactical intelligence. It is the ability to perceive what is happening in your
 environment, comprehend what it means, and project what is about to happen next.
 Without SA, you are not analyzing — you are reacting. In this lesson, you will

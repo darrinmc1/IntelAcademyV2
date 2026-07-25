@@ -8,16 +8,7 @@ export const metadata: Metadata = {
   description: "Learn the basics of Geospatial Intelligence and satellite imagery analysis",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import Link from "next/link"
-import { ChevronLeft, Satellite, Map, Camera, Globe, Layers, MapPin } from "lucide-react"
-import { LessonContainer } from "@/components/lesson-container"
-
-export const metadata: Metadata = {
-title: "GEOINT Fundamentals | Intelligence Analyst Academy",
-description: "Learn the basics of Geospatial Intelligence and satellite imagery analysis",
-
-{/* Breadcrumb Navigation */}
+const topicContent = `{/* Breadcrumb Navigation */}
 
 Back to Learning Paths
 

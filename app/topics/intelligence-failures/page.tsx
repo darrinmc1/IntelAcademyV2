@@ -8,24 +8,7 @@ export const metadata: Metadata = {
   description: "Examine historical intelligence failures, their causes, and lessons learned to improve future analysis.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-FieldExercise,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-import WhatsNext from "@/components/whats-next"
-import Image from "next/image"
-
-export const metadata: Metadata = {
-title: "Intelligence Failures: Case Studies | The Intel Analyst Academy",
-description:
-"Examine historical intelligence failures, their causes, and lessons learned to improve future analysis.",
+const topicContent = `"Examine historical intelligence failures, their causes, and lessons learned to improve future analysis.",
 
 In this mission, you'll examine spectacular intelligence failures throughout history, identify the common patterns that led to catastrophic mistakes, and learn how to avoid becoming the next case study in the "Hall of Shame."
 

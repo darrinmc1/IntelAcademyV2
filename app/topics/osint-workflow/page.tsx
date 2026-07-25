@@ -8,26 +8,7 @@ export const metadata: Metadata = {
   description: "Learn systematic approaches to OSINT investigations and establish effective workflows.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import { LessonContainer } from "@/components/lesson-container"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Alert, AlertDescription } from "@/components/ui/alert"
-import { CheckCircle, Search, FileText, Shield, AlertTriangle } from "lucide-react"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-FieldExercise,
-ProTip,
-JokeAside,
-Debrief,
-} from "@/components/micro-lesson"
-
-export const metadata: Metadata = {
-title: "OSINT Workflow and Methodology | The Intel Analyst Academy",
-description: "Learn systematic approaches to OSINT investigations and establish effective workflows.",
-
-By the end of this lesson, you'll be able to:
+const topicContent = `By the end of this lesson, you'll be able to:
 
 - Understand the six-phase OSINT investigation framework
 - Develop comprehensive planning and requirements documents

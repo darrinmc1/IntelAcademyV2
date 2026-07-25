@@ -8,23 +8,7 @@ export const metadata: Metadata = {
   description: "Master the art of writing tight, actionable executive summaries using BLUF, the five-paragraph formula, and ruthless editing.",
 }
 
-const topicContent = `import type { Metadata } from "next"
-import LessonContainer from "@/components/lesson-container"
-import {
-MicroLesson,
-MissionBriefing,
-DeepDive,
-FieldExercise,
-ProTip,
-JokeAside,
-Debrief,
-NextLessonLink,
-} from "@/components/micro-lesson"
-
-export const metadata: Metadata = {
-title: "Executive Summaries | The Intel Analyst Academy",
-description:
-"Master the art of writing tight, actionable executive summaries using BLUF, the five-paragraph formula, and ruthless editing.",
+const topicContent = `"Master the art of writing tight, actionable executive summaries using BLUF, the five-paragraph formula, and ruthless editing.",
 
 The executive summary is the most valuable real estate in any intelligence product.
 It is also the most mistreated. Analysts treat it as a afterthought — a quick
