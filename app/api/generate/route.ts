@@ -59,6 +59,7 @@ Generate the ${toolName} in full. Use concrete detail where provided and profess
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           tool,
+          model: 'free',
           docName: toolName,
           prompt,
           questions,
