@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     siteName: "The Intel Analyst Academy",
     type: "website",
   },
+  icons: {
+    icon: "/favicon.ico",
+  },
 }
 
 export default function RootLayout({
