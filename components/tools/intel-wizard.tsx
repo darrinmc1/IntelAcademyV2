@@ -37,7 +37,7 @@ function getFreeUsage(): number {
 }
 
 /** Increment free usage counter */
-function useFreeTrial(): number {
+function incrementFreeTrial(): number {
   try {
     const next = getFreeUsage() + 1
     localStorage.setItem("intelacademy_free_uses", String(next))
@@ -101,7 +101,7 @@ export function IntelWizard({ tool }: { tool: IntelTool }) {
       }
 
       setDraft(data.draft)
-      useFreeTrial()
+      incrementFreeTrial()
       setPhase("result")
     } catch (err) {
       setError("Network error — check your connection and try again.")
