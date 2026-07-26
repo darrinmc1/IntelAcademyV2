@@ -47,9 +47,9 @@ export function generateStaticParams() {
   return TOOLS.map((tool) => ({ tool: tool.id }))
 }
 
-export default function ToolPage({ params }: { params: { tool: string } }) {
-  const tool = TOOLS.find((t) => t.id === params.tool)
-
+export default async function ToolPage({ params }: { params: Promise<{ tool: string }> }) {
+  const { tool: toolId } = await params
+  const tool = TOOLS.find((t) => t.id === toolId)
   if (!tool) {
     notFound()
   }
