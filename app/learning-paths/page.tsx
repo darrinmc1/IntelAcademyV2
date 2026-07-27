@@ -15,7 +15,7 @@ export default function LearningPathsPage() {
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
           <div>
             <h1 className="text-4xl font-bold mb-2">Intelligence Analysis Learning Paths</h1>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-slate-300">
               Learning paths designed to help you master different aspects of
               intelligence analysis and operations.
             </p>
@@ -78,14 +78,14 @@ export default function LearningPathsPage() {
             <Link
               key={path.id}
               href={path.path}
-              className="block p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:shadow-md transition-all hover:bg-blue-50"
+              className="block p-4 border border-slate-700 bg-slate-800/50 rounded-lg hover:border-blue-500 hover:shadow-md transition-all"
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{path.title}</h3>
-                  <p className="text-gray-600 text-sm mb-2">{path.description}</p>
-                  <div className="flex flex-wrap gap-3 text-xs text-gray-500">
-                    <span className="inline-block px-2 py-1 bg-gray-100 rounded">
+                  <h3 className="text-lg font-semibold text-slate-100 mb-1">{path.title}</h3>
+                  <p className="text-slate-400 text-sm mb-2">{path.description}</p>
+                  <div className="flex flex-wrap gap-3 text-xs text-slate-500">
+                    <span className="inline-block px-2 py-1 bg-slate-700 rounded">
                       {path.difficulty}
                     </span>
                     <span>{path.topicCount} topics</span>
@@ -93,7 +93,7 @@ export default function LearningPathsPage() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-xs font-medium text-blue-600">View Path →</p>
+                  <p className="text-xs font-medium text-blue-400">View Path →</p>
                 </div>
               </div>
             </Link>
