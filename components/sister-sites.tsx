@@ -10,21 +10,21 @@ interface SisterSite {
 
 const sites: SisterSite[] = [
   {
-    name: "Peel Boss",
-    description: "Management & leadership training",
-    url: "https://peelboss.com",
+    name: "FreelancePro",
+    description: "Contracts, proposals & pricing for freelancers",
+    url: "https://freelancepro.com",
     icon: <Building2 className="w-6 h-6 text-cyan-400" />,
   },
   {
-    name: "AI Training Hub",
-    description: "AI skills, tools & practical training",
-    url: "#",
+    name: "AI for SMB",
+    description: "AI tools for small business operations",
+    url: "https://aiforsmb.com",
     icon: <Brain className="w-6 h-6 text-cyan-400" />,
   },
   {
-    name: "Cybersecurity Academy",
-    description: "Cyber defence training & certification prep",
-    url: "#",
+    name: "ABC of Cyber",
+    description: "Cybersecurity training without the scare tactics",
+    url: "https://abcsofcyber.com",
     icon: <ShieldCheck className="w-6 h-6 text-cyan-400" />,
   },
 ]
