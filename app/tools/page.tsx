@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 export const metadata: Metadata = {
   title: "Analyst Tools",
   description:
-    "AI-powered intelligence analysis tools — generate structured reports, evaluate sources, and assess threats with Gemini Flash.",
+    "AI-powered intelligence analysis tools - generate structured reports, evaluate sources, and assess threats with Gemini Flash.",
 }
 
 const tools = [

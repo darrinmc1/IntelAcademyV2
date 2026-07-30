@@ -23,7 +23,7 @@ export const learningPathImageMap: Record<string, string> = {
 }
 
 // Static image mappings for forum categories.
-// Forum is COMING SOON — all entries point to the branded placeholder until launch.
+// Forum is COMING SOON - all entries point to the branded placeholder until launch.
 // When the forum ships, replace these with real per-category images.
 export const forumCategoryImageMap: Record<string, string> = {
   "general-discussion": "/placeholder.svg",
@@ -83,7 +83,7 @@ export const criticalImages = [
   "/foundations.png",
 ]
 
-// Homepage images — shown above the fold on the landing page.
+// Homepage images - shown above the fold on the landing page.
 export const homepageImages = [
   "/strategic.png",
   "/tactical.png",

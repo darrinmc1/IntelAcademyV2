@@ -26,7 +26,7 @@ predicting rain, they're predicting geopolitical storms, economic hurricanes, an
 d'état.
 
 "Strategic forecaster: Someone paid to be wrong about the future in more sophisticated ways than the
-general public." —{" "}
+general public." -{" "}
 The Unofficial Intelligence Analyst's Dictionary
 
 ##
@@ -38,7 +38,7 @@ watching the first 15 minutes, except the movie is constantly being rewritten, h
 and occasionally defies the laws of physics and common sense.
 
 Unlike tactical intelligence, which focuses on immediate threats and opportunities, strategic forecasting
-takes the long view—looking months, years, or even decades into the future. This means strategic
+takes the long view - looking months, years, or even decades into the future. This means strategic
 forecasters have the unique privilege of being proven catastrophically wrong on a much longer timeline
 than their tactical colleagues.
 
@@ -68,7 +68,7 @@ while being wrong, which counts for something.
 
 Using sophisticated mathematical models to predict the future, because adding numbers and algorithms
 makes guessing look more scientific. These models work perfectly in theory, which is great until
-reality refuses to follow the equations. As they say, "All models are wrong, but some are useful"—with
+reality refuses to follow the equations. As they say, "All models are wrong, but some are useful" - with
 the emphasis firmly on "wrong."
 
 ## Why Forecasting Is Hard (Or: Why Analysts Need Antacids)
@@ -88,7 +88,7 @@ information, and occasionally what they had for breakfast
 - **Cognitive Biases:** Your brain is actively working against you, trying to see patterns
 where none exist and ignore information that contradicts your beliefs
 
-- **The Butterfly Effect:** Small changes can have massive, unpredictable consequences—and
+- **The Butterfly Effect:** Small changes can have massive, unpredictable consequences - and
 there are approximately 7 billion butterflies flapping their wings at any given moment
 
 ##
@@ -96,16 +96,16 @@ Famous Forecasting Failures (Or: You're in Good Company When You're Wrong)
 
 Even the best strategic forecasters get it spectacularly wrong sometimes. Some notable examples:
 
-- "The internet will be a fad" — Various experts in the early 1990s
+- "The internet will be a fad" - Various experts in the early 1990s
 -
-"There is no chance that the iPhone is going to get any significant market share" — Steve Ballmer, 2007
+"There is no chance that the iPhone is going to get any significant market share" - Steve Ballmer, 2007
 
 -
-"Democracy will flourish in [insert country here] after regime change" — Countless political analysts
+"Democracy will flourish in [insert country here] after regime change" - Countless political analysts
 throughout history
 
 -
-"This new technology will bring world peace and end all conflict" — Said about every major technological
+"This new technology will bring world peace and end all conflict" - Said about every major technological
 advancement from the telegraph to social media
 
 The lesson? Humility is the strategic forecaster's most valuable trait. That, and a good sense of humor
@@ -455,7 +455,7 @@ be spectacularly wrong in ways you can't even imagine yet."
 
 Complexity and Chaos
 
-Complex adaptive systems—like global politics, economies, and societies—exhibit properties that
+Complex adaptive systems - like global politics, economies, and societies - exhibit properties that
 fundamentally limit predictability:
 
 - Non-linearity: Small causes can produce large effects
@@ -544,7 +544,7 @@ Effective forecasters update their assessments as new information emerges:
 - Make many small updates rather than few large ones
 - Document reasoning behind significant revisions
 
-"Bayesian updating—adjusting beliefs incrementally as new evidence emerges—is a cornerstone of effective
+"Bayesian updating - adjusting beliefs incrementally as new evidence emerges - is a cornerstone of effective
 forecasting."
 
 6

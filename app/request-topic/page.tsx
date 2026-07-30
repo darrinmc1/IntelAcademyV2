@@ -57,7 +57,7 @@ export default function RequestTopicPage() {
 
       if (result.ok) {
         if (result.emailWarning) {
-          toast({ title: "Submitted — notification issue", description: result.emailWarning, variant: "destructive" })
+          toast({ title: "Submitted - notification issue", description: result.emailWarning, variant: "destructive" })
         } else {
           toast({ title: "Request submitted", description: result.message })
         }

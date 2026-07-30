@@ -102,14 +102,14 @@ Starting a new chart in Analyst's Notebook requires planning beyond simply placi
 
 - **Define the Question:** Every Intelligence chart should answer a specific analytical question. Before creating the chart, write down the question in one sentence. This focus prevents the chart from becoming an undirected collection of data.
 - **Set Boundaries:** Determine what data will be included and what will be left out. An investigation into a fraud ring may include financial records and communications data but exclude unrelated personal relationships.
-- **Choose the Chart Type:** Analyst's Notebook offers different chart types for different analytical needs — link charts for relationship analysis, timeline charts for temporal analysis, and combination charts for multi-dimensional problems.
+- **Choose the Chart Type:** Analyst's Notebook offers different chart types for different analytical needs - link charts for relationship analysis, timeline charts for temporal analysis, and combination charts for multi-dimensional problems.
 
 ## Entity Creation Best Practices
 
 Entities are the building blocks of any chart. Consistent entity creation practices prevent confusion as the chart grows:
 
 - **Single Instance Rule:** Each real-world person, organisation, or location should appear exactly once in the chart. Duplicate entities are the most common error in Analyst's Notebook charts and can lead to incorrect analytical conclusions.
-- **Attribute Completeness:** Fill in all available attributes for each entity. An entity with only a name provides limited analytical value — one with phone numbers, addresses, associations, and notes provides a rich analytical target.
+- **Attribute Completeness:** Fill in all available attributes for each entity. An entity with only a name provides limited analytical value - one with phone numbers, addresses, associations, and notes provides a rich analytical target.
 - **Entity Naming:** Use a consistent naming convention from the start. A recommended approach: SURNAME, Given Name for individuals; full legal name for organisations; City, Country for locations.
 - **Icon Selection:** Choose entity icons that communicate meaning at a glance. Use standard icons for common entity types and reserve custom icons for specific categories that appear frequently in your investigation.
 
@@ -119,7 +119,7 @@ Links define the structure of the chart and require as much care as entity creat
 
 - **Link Direction:** Understand when links should be directed (A calls B) versus undirected (A and B are siblings). Directed links enable analysis of flow and hierarchy.
 - **Link Semantics:** Use precise link types rather than generic "associated with" links. A "subscriber of" link between a person and a phone number carries more analytical weight than a generic "related to" link.
-- **Temporal Links:** Where possible, include temporal attributes on links — when a call was made, when a transaction occurred. Temporal links enable timeline analysis and can reveal patterns and rhythms.
+- **Temporal Links:** Where possible, include temporal attributes on links - when a call was made, when a transaction occurred. Temporal links enable timeline analysis and can reveal patterns and rhythms.
 - **Strength and Frequency:** Where data supports it, encode the strength or frequency of a relationship as a link attribute. A phone number that appears 200 times in call records is more significant than one that appears twice.
 
 `

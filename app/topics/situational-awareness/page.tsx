@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const topicContent = `Situational awareness (SA) is the single most important cognitive skill in
 tactical intelligence. It is the ability to perceive what is happening in your
 environment, comprehend what it means, and project what is about to happen next.
-Without SA, you are not analyzing — you are reacting. In this lesson, you will
+Without SA, you are not analyzing - you are reacting. In this lesson, you will
 learn the OODA loop framework, how to build a common operating picture, the three
 levels of SA according to Endsley's model, and the most common failure mode
 that gets analysts killed or outmaneuvered: cognitive tunneling.
@@ -21,13 +21,13 @@ that gets analysts killed or outmaneuvered: cognitive tunneling.
 Developed by United States Air Force Colonel John Boyd, the OODA loop is the
 foundational framework for decision-making under uncertainty. OODA stands for
 ** Observe, Orient, Decide, Act**. The core insight is simple but
-profound: whoever can cycle through these four steps faster — and more accurately
-— wins.
+profound: whoever can cycle through these four steps faster - and more accurately
+- wins.
 
 ### Observe
 
 Observation is the collection of information from the environment. This is not
-passive looking — it is active seeking. In an intelligence context, observation
+passive looking - it is active seeking. In an intelligence context, observation
 means pulling from every available sensor: human intelligence (HUMINT), signals
 intelligence (SIGINT), open-source intelligence (OSINT), geospatial intelligence
 (GEOINT). The quality of your observation determines everything that follows.
@@ -37,7 +37,7 @@ Garbage in, garbage out.
 
 Orientation is the analysis step. It is where you place your observations into
 context using your existing knowledge, experience, training, assumptions, and
-cultural understanding. Boyd called this the "schwerpunkt" — the
+cultural understanding. Boyd called this the "schwerpunkt" - the
 reference point that gives the situation meaning. This is the most complex and
 most critical step. It is also where cognitive biases can derail your entire
 loop.
@@ -52,17 +52,17 @@ a good decision made quickly is better than a perfect decision made too late.
 
 Action is the execution of your decision. It changes the environment, which
 generates new observations, and the loop begins again. The goal is not to stop
-the loop — it is to keep cycling faster than your adversary.
+the loop - it is to keep cycling faster than your adversary.
 
 Boyd's key insight: in a competitive situation, you do not just need good
 decisions. You need to cycle through OODA faster than the other side can cycle
 through theirs. Speed of the loop matters as much as accuracy of the orientation.
 
 The OODA loop is basically the scientific method with more urgency and fewer lab
-coats. Observe, think, decide, do — then do it again before the guy shooting at
+coats. Observe, think, decide, do - then do it again before the guy shooting at
 you finishes his loop.
 
-Watch for "OODA lock" — when an adversary cannot complete their loop
+Watch for "OODA lock" - when an adversary cannot complete their loop
 because your actions create disorientation. Feints, decoys, and information
 operations all serve to jam an opponent's Orientation phase. Make them
 observe things that do not make sense.
@@ -87,12 +87,12 @@ An effective COP must track at least these dimensions:
 
 ### How to Display It
 
-The best COP is not the one with the most data — it is the one with the right data
+The best COP is not the one with the most data - it is the one with the right data
 presented clearly. Principles:
 
 - Use a map as the base layer. Location is always the primary reference.
 - Use symbols and colors consistently. Red for threats, blue for friendlies, yellow for unknown.
-- Keep it current. A stale COP is worse than no COP — it creates false confidence.
+- Keep it current. A stale COP is worse than no COP - it creates false confidence.
 - Keep it simple. If a new operator cannot understand the picture in 30 seconds, it is too complex.
 
 If your common operating picture requires a user manual and a decoder ring, it is
@@ -120,8 +120,8 @@ sensors are not calibrated correctly.
 ### Level 2: Comprehension
 
 Comprehension is the understanding of what those perceived elements mean in context.
-You do not just see the truck — you recognize it is the same truck that was linked
-to the logistics hub. You do not just hear the gunshot — you understand it came
+You do not just see the truck - you recognize it is the same truck that was linked
+to the logistics hub. You do not just hear the gunshot - you understand it came
 from the direction of the checkpoint. This is the "so what" level. This
 is where raw observation becomes analysis.
 
@@ -155,12 +155,12 @@ are a scribe, not an analyst.
 
 Cognitive tunneling is the single most dangerous failure of situational awareness.
 It occurs when an analyst becomes so focused on one element of the environment that
-they lose awareness of everything else. It is tunnel vision — literal or figurative
-— and it has caused more tactical failures than bad intelligence ever did.
+they lose awareness of everything else. It is tunnel vision - literal or figurative
+- and it has caused more tactical failures than bad intelligence ever did.
 
 ### How Tunneling Happens
 
-Cognitive tunneling is not stupidity — it is a natural human response to stress and
+Cognitive tunneling is not stupidity - it is a natural human response to stress and
 cognitive load. Under time pressure, your brain narrows its focus to reduce
 information processing demands. The problem is that it tends to narrow to the wrong
 thing. An analyst tracking a single vehicle on a surveillance feed may miss the
@@ -170,7 +170,7 @@ report may miss the mortar team setting up 200 meters away.
 ### Common SA Failures
 
 - **Fixation:** Staring at one data point while the situation changes
-around you. The classic — watching the front door while the threat comes through
+around you. The classic - watching the front door while the threat comes through
 the back.
 
 - **Assumption creep:** Operating on outdated information because you
@@ -206,12 +206,12 @@ Look up. Scan the horizon.
 You are the intelligence watch officer for a forward operating base. It has been
 quiet for three hours. Your COP shows the following:
 
-**COP Snapshot — Time: 1430Z**
+**COP Snapshot - Time: 1430Z**
 
 - Three local nationals observed at the north checkpoint 22 minutes ago
-- Civilian vehicle traffic on Main Supply Route (MSR) — normal pattern
-- Local cell tower signal spike — 47% above baseline, originating southeast
-- One scheduled logistics convoy inbound — ETA 45 minutes
+- Civilian vehicle traffic on Main Supply Route (MSR) - normal pattern
+- Local cell tower signal spike - 47% above baseline, originating southeast
+- One scheduled logistics convoy inbound - ETA 45 minutes
 - Weather: clear, visibility 10 km
 
 Tasks (execute the 90-second scan discipline):

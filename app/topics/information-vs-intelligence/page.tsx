@@ -23,11 +23,11 @@ expect people to be impressed. Similarly, raw information might be interesting, 
 makes decision-makers actually pay attention to your reports.
 
 "Information is knowing a tomato is a fruit. Intelligence is knowing not to put it in a fruit salad.
-Wisdom is knowing the fruit salad would have been served to your adversary anyway." —{" "}
+Wisdom is knowing the fruit salad would have been served to your adversary anyway." -{" "}
 The Unofficial Intelligence Analyst's Dictionary
 
-In the intelligence world, we make a crucial distinction between information and intelligence. It's not just
-semantic nitpicking—it's the difference between drowning your boss in useless facts and actually helping
+In the intelligence world, we make a important distinction between information and intelligence. It's not just
+semantic nitpicking - it's the difference between drowning your boss in useless facts and actually helping
 them make decisions that don't end in disaster.
 
 Think of it this way: information is everything you could possibly know about a subject, while intelligence
@@ -62,11 +62,11 @@ Requires analysis and judgment to produce (like opinions worth listening to)
 The process of turning information into intelligence is like cooking a gourmet meal. You start with raw
 ingredients (information), apply heat and technique (analysis), and end up with something that's greater
 than the sum of its parts (intelligence). And just like cooking, if you skip steps or use bad ingredients,
-the result will be inedible—or in intelligence terms, useless or misleading.
+the result will be inedible - or in intelligence terms, useless or misleading.
 
 ### Step 1: Collection
 
-Gathering relevant information from various sources. This is like grocery shopping—you need to be
+Gathering relevant information from various sources. This is like grocery shopping - you need to be
 selective, but you also need enough ingredients to work with. Unfortunately, many analysts approach this
 step like panic-buying before a snowstorm, grabbing everything in sight just in case.
 
@@ -79,13 +79,13 @@ intelligence products.
 ### Step 3: Analysis
 
 Examining the processed information to identify patterns, relationships, and significance. This is the
-actual cooking—applying heat, combining ingredients, and adding seasoning. This is where the magic
+actual cooking - applying heat, combining ingredients, and adding seasoning. This is where the magic
 happens, or where everything goes horribly wrong and you end up ordering pizza instead.
 
 ### Step 4: Production
 
 Creating intelligence products that communicate findings effectively. This is plating the
-dish—presentation matters! No matter how good your analysis is, if you serve it on a dirty paper plate
+dish - presentation matters! No matter how good your analysis is, if you serve it on a dirty paper plate
 with ketchup smears, no one will want to consume it.
 
 ### Example 1: The Weather Report

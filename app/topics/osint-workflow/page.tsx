@@ -165,9 +165,9 @@ workflow is often the difference between amateur internet searching and professi
 
 Open Source Intelligence requires a structured workflow to manage the volume, variety, and velocity of publicly available information. Without a systematic approach, analysts quickly become overwhelmed by data and produce analysis that is reactive rather than purposeful:
 
-- **The OSINT Cycle:** OSINT follows a modified intelligence cycle tailored to the unique characteristics of open sources. The phases — planning, collection, processing, analysis, and dissemination — are the same, but the methods and tools at each phase differ significantly from classified intelligence disciplines.
+- **The OSINT Cycle:** OSINT follows a modified intelligence cycle tailored to the unique characteristics of open sources. The phases - planning, collection, processing, analysis, and dissemination - are the same, but the methods and tools at each phase differ significantly from classified intelligence disciplines.
 - **Source Saturation:** The greatest challenge in OSINT is not finding information but filtering it. An analyst monitoring a single country's social media activity may encounter thousands of potentially relevant posts per day. Effective OSINT workflows prioritise triage and filtering over broad collection.
-- **The OSINT Toolchain:** Professional OSINT operations use a stack of specialised tools — social media monitoring platforms, web scrapers, data visualisation tools, and analytical frameworks. The toolchain should be matched to the specific intelligence requirement, not dictated by what tools are available or familiar.
+- **The OSINT Toolchain:** Professional OSINT operations use a stack of specialised tools - social media monitoring platforms, web scrapers, data visualisation tools, and analytical frameworks. The toolchain should be matched to the specific intelligence requirement, not dictated by what tools are available or familiar.
 
 ## Phase 1: Planning
 
@@ -186,7 +186,7 @@ OSINT collection gathers publicly available information from identified sources:
 - **Social Media Monitoring:** Dedicated tools monitor social media platforms for keywords, hashtags, account activity, and network changes. Social media monitoring should be configured to minimise false positives while capturing relevant activity.
 - **Media Monitoring:** News aggregation services and RSS feeds collect articles from traditional media sources. Media monitoring provides coverage of official statements, reported events, and editorial commentary that may not appear on social media.
 - **Database Access:** Many open source databases require registration, subscription, or academic affiliation. Corporate registries, patent databases, academic journals, and government data portals are valuable OSINT sources that require active access management.
-- **Human Collection:** Some open source information is best collected through human interaction — interviews with subject matter experts, attendance at conferences, engagement with online communities. This form of OSINT collection requires tradecraft more similar to HUMINT than to technical collection.
+- **Human Collection:** Some open source information is best collected through human interaction - interviews with subject matter experts, attendance at conferences, engagement with online communities. This form of OSINT collection requires tradecraft more similar to HUMINT than to technical collection.
 
 ## Phase 3: Processing and Triage
 
@@ -201,9 +201,9 @@ Raw OSINT data must be processed before it can be analysed:
 
 OSINT analysis applies the same analytical tradecraft as other intelligence disciplines:
 
-- **Source Evaluation:** Each open source should be evaluated using the same criteria applied to classified sources — access, motivation, history of reliability, and potential for deception. The fact that a source is "open" does not make it more reliable than a classified source.
+- **Source Evaluation:** Each open source should be evaluated using the same criteria applied to classified sources - access, motivation, history of reliability, and potential for deception. The fact that a source is "open" does not make it more reliable than a classified source.
 - **Cross-Source Integration:** OSINT information should be integrated across sources before conclusions are drawn. A single social media post is not a trend; a single news article is not a confirmed fact. Patterns across multiple independent sources carry analytical weight.
-- **Temporal Analysis:** When was the information published? Has the source updated or corrected it? Is the information still current? Open source information decays rapidly — a news article from six months ago may no longer reflect the current situation.
+- **Temporal Analysis:** When was the information published? Has the source updated or corrected it? Is the information still current? Open source information decays rapidly - a news article from six months ago may no longer reflect the current situation.
 - **Geospatial Correlation:** Where possible, geolocate OSINT information to specific places. A social media post about a protest is more valuable when it can be geolocated to a specific intersection at a specific time.
 
 ## Phase 5: Dissemination
@@ -212,7 +212,7 @@ OSINT products follow the same dissemination standards as classified intelligenc
 
 - **Source Transparency:** Unlike classified intelligence, which protects sources through classification markings, OSINT products can often cite sources directly. However, analyst should consider whether citing a source could endanger the source or reveal analytical methods.
 - **Timeliness:** OSINT products may have shorter shelf lives than classified products because the underlying open sources are updated continuously. Date and time stamps on OSINT products are essential for consumers to assess currency.
-- **Methodological Transparency:** OSINT consumers benefit from understanding how the information was collected and analysed. A brief methodological note — sources used, search terms, timeframe — helps consumers evaluate the product's reliability and relevance.
+- **Methodological Transparency:** OSINT consumers benefit from understanding how the information was collected and analysed. A brief methodological note - sources used, search terms, timeframe - helps consumers evaluate the product's reliability and relevance.
 
 `
 

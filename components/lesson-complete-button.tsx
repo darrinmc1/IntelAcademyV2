@@ -41,7 +41,7 @@ export function LessonCompleteButton({
           <div>
             <p className="text-emerald-300 font-semibold">Mission Accomplished</p>
             <p className="text-emerald-400/70 text-sm">
-              Lesson complete — nice work, Agent!
+              Lesson complete - nice work, Agent!
             </p>
           </div>
         </div>
@@ -59,7 +59,7 @@ export function LessonCompleteButton({
       }`}
     >
       <Target className="w-5 h-5" />
-      <span>Mark as Complete — Mission Accomplished</span>
+      <span>Mark as Complete - Mission Accomplished</span>
     </button>
   )
 }

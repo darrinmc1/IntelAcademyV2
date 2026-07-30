@@ -12,7 +12,7 @@ const topicContent = `"Learn how to write strong, well-supported conclusions tha
 
 Your conclusion is the last thing your reader sees -- and often the only thing they
 remember. A weak conclusion can undermine an otherwise brilliant report, while a strong
-one can elevate mediocre analysis into something actionable. In this lesson, you will
+one can improve mediocre analysis into something actionable. In this lesson, you will
 learn to synthesize rather than summarize, pass the "so what" test, and avoid the
 common traps that turn conclusions into afterthoughts.
 
@@ -154,7 +154,7 @@ refine the conclusion after the body is complete.
 
 ## Developing Analytical Conclusions
 
-Drawing conclusions is the culmination of the analytical process — the moment when evidence, reasoning, and judgement combine to produce an assessment that informs decision-making. Despite its central importance, conclusion development is often the least structured part of the analytical workflow, left to instinct rather than methodology.
+Drawing conclusions is the culmination of the analytical process - the moment when evidence, reasoning, and judgement combine to produce an assessment that informs decision-making. Despite its central importance, conclusion development is often the least structured part of the analytical workflow, left to instinct rather than methodology.
 
 - **Evidence to Inference to Conclusion:** The analytical chain runs from evidence (what we observe) through inference (what we deduce from the evidence) to conclusion (what we assess based on our inferences). Each step in this chain should be explicit and defensible.
 - **Degrees of Certainty:** Conclusions are rarely certain. Effective analytical conclusions communicate what the analyst knows, what they infer, their level of confidence in the inference, and what would change that confidence.
@@ -166,7 +166,7 @@ Strong conclusions rest on explicit reasoning that can be examined, challenged, 
 
 - **Deductive Reasoning:** Moves from general principles to specific conclusions. If all observed cases follow a pattern, the next case is expected to follow the same pattern. Deductive reasoning works well for stable, well-understood phenomena but fails when conditions change or novel situations arise.
 - **Inductive Reasoning:** Moves from specific observations to general conclusions. Based on multiple observations of a pattern, the analyst infers that the pattern is general. Inductive reasoning is the foundation of pattern-of-life analysis and works well for identifying trends.
-- **Abductive Reasoning:** Moves from observed effects to inferred causes. Given that we observe phenomenon X, what is the most likely explanation? Abductive reasoning — inference to the best explanation — is the most common form of analytical reasoning in intelligence and the most prone to cognitive bias.
+- **Abductive Reasoning:** Moves from observed effects to inferred causes. Given that we observe phenomenon X, what is the most likely explanation? Abductive reasoning - inference to the best explanation - is the most common form of analytical reasoning in intelligence and the most prone to cognitive bias.
 - **Structured Reasoning Techniques:** Methodologies like Analysis of Competing Hypotheses, Key Assumptions Check, and Indicators Validation force analysts to make their reasoning explicit and systematic, reducing reliance on intuition and reducing vulnerability to bias.
 
 ## Communicating Confidence
@@ -175,7 +175,7 @@ Confidence is the analyst's assessment of the likelihood that their conclusion i
 
 - **High Confidence:** The conclusion is supported by multiple independent sources, the evidence is consistent and mutually reinforcing, and the analytical reasoning is robust. High confidence is rare and should be reserved for conclusions that are very unlikely to be wrong.
 - **Moderate Confidence:** The conclusion is plausible, the evidence is generally consistent but may have gaps, and alternative explanations cannot be ruled out. Most important intelligence assessments fall into this category.
-- **Low Confidence:** The conclusion is speculative, based on limited or ambiguous evidence, and alternative explanations are equally or more plausible. Low-confidence assessments are still valuable — they inform consumers what might be true — but they must be clearly caveated.
+- **Low Confidence:** The conclusion is speculative, based on limited or ambiguous evidence, and alternative explanations are equally or more plausible. Low-confidence assessments are still valuable - they inform consumers what might be true - but they must be clearly caveated.
 - **Confidence vs. Probability:** Confidence is not the same as probability. An analyst can be highly confident that a 40% probability event will occur (because the underlying dynamics are well understood) or have low confidence that a 90% probability event will occur (because the evidence is poor).
 
 ## Common Conclusion Errors

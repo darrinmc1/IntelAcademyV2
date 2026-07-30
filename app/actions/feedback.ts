@@ -45,10 +45,10 @@ export async function submitFeedbackAction(args: {
       kind: "feedback",
       payload: {
         category: args.category,
-        rating: args.rating ? `${args.rating}/5` : "—",
+        rating: args.rating ? `${args.rating}/5` : " - ",
         message: args.message,
-        page: args.page || "—",
-        email: args.email || "—",
+        page: args.page || " - ",
+        email: args.email || " - ",
         pending_count: pending,
       },
     })

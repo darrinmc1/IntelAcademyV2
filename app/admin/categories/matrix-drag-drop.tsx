@@ -204,7 +204,7 @@ export default function MatrixDragDrop({
                         }}
                       >
                         {rowCat.id === colCat.id ? (
-                          <span className="text-gray-400">—</span>
+                          <span className="text-gray-400"> - </span>
                         ) : relationship ? (
                           <Badge variant="outline" className={getRelationshipColor(relationship.type)}>
                             {getRelationshipLabel(relationship.type)}

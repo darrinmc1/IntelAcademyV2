@@ -32,7 +32,7 @@ export function ReviewActions({ submissionId }: { submissionId: string }) {
       if (result.ok) {
         if (result.emailWarning) {
           toast({
-            title: kind === "approve" ? "Approved — email not sent" : "Returned — email not sent",
+            title: kind === "approve" ? "Approved - email not sent" : "Returned - email not sent",
             description: result.emailWarning,
             variant: "destructive",
           })

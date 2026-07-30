@@ -177,7 +177,7 @@ export default function AdvancedTopicsClientPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex items-center">
             <div className="p-8 text-white max-w-2xl">
-              <h2 className="text-3xl font-bold mb-2">Elevate Your Analysis</h2>
+              <h2 className="text-3xl font-bold mb-2">improve Your Analysis</h2>
               <p className="text-lg opacity-90">
                 These advanced topics build on foundational knowledge to develop specialized expertise in key
                 intelligence disciplines.

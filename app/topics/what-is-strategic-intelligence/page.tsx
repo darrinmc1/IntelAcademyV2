@@ -123,25 +123,25 @@ Strategic intelligence is intelligence that supports long-term policy, planning,
 
 - **Time Horizon:** Strategic intelligence typically looks months to years ahead. It identifies emerging trends, assesses long-term risks and opportunities, and provides the foundation for policy development and resource allocation.
 - **Scope:** Strategic intelligence is broad. It integrates political, economic, military, social, and technological factors into a comprehensive picture that no single source or discipline can provide alone.
-- **Consumer:** The primary consumers of strategic intelligence are senior decision-makers — heads of state, cabinet ministers, military commanders, corporate boards. These consumers have limited time and require concise, authoritative assessments that speak directly to their decisions.
+- **Consumer:** The primary consumers of strategic intelligence are senior decision-makers - heads of state, cabinet ministers, military commanders, corporate boards. These consumers have limited time and require concise, authoritative assessments that speak directly to their decisions.
 
 ## The Strategic Intelligence Cycle
 
 Strategic intelligence follows a modified intelligence cycle that emphasises deep analysis over rapid production:
 
 1. **Direction and Prioritisation:** Strategic intelligence requirements are set by senior consumers. These are typically broad, persistent questions rather than time-sensitive taskings. "What will the geopolitical landscape look like in five years?" is a strategic intelligence requirement.
-2. **Collection Across Disciplines:** Strategic intelligence draws on all available collection disciplines — HUMINT, SIGINT, GEOINT, OSINT, and MASINT. It also integrates non-traditional sources such as academic research, think tank reports, economic data, and cultural analysis.
+2. **Collection Across Disciplines:** Strategic intelligence draws on all available collection disciplines - HUMINT, SIGINT, GEOINT, OSINT, and MASINT. It also integrates non-traditional sources such as academic research, think tank reports, economic data, and cultural analysis.
 3. **Integration and Synthesis:** This is the core of strategic intelligence. Analysts integrate information from multiple sources, disciplines, and methodologies into a coherent assessment that accounts for complexity, uncertainty, and competing explanations.
-4. **Long-Form Production:** Strategic intelligence is typically delivered through longer-form products — National Intelligence Estimates, strategic assessments, annual threat assessments. These products are structured to provide both deep analysis and executive summaries.
+4. **Long-Form Production:** Strategic intelligence is typically delivered through longer-form products - National Intelligence Estimates, strategic assessments, annual threat assessments. These products are structured to provide both deep analysis and executive summaries.
 5. **Review and Update:** Strategic intelligence products are living documents. They are reviewed and updated as new information becomes available, ensuring they remain relevant to evolving consumer needs.
 
 ## Key Characteristics of Strategic Analysis
 
 Strategic analysis differs from other forms of intelligence analysis in several important ways:
 
-- **Emphasis on Drivers and Dynamics:** Strategic analysis focuses not just on what is happening but on why — the underlying drivers, structural factors, and systemic dynamics that shape events. This is necessarily more interpretive than descriptive.
+- **Emphasis on Drivers and Dynamics:** Strategic analysis focuses not just on what is happening but on why - the underlying drivers, structural factors, and systemic dynamics that shape events. This is necessarily more interpretive than descriptive.
 - **Scenario Development:** Strategic intelligence often uses scenario analysis to explore alternative futures. Scenarios help consumers understand that the future is not predetermined and prepare for multiple possible outcomes.
-- **Indicators and Warnings:** Strategic intelligence identifies indicators — observable events or conditions that signal a change in the strategic environment. An indicator for a geopolitical shift might be a change in trade policy, a military deployment, or a leadership transition.
+- **Indicators and Warnings:** Strategic intelligence identifies indicators - observable events or conditions that signal a change in the strategic environment. An indicator for a geopolitical shift might be a change in trade policy, a military deployment, or a leadership transition.
 - **Long-Term Forecasting:** Strategic intelligence makes forecasts about the future, always with attendant caveats about uncertainty. The value of a strategic forecast is not in being right or wrong but in providing a framework for thinking about what might happen and why.
 
 ## Strategic Intelligence Products

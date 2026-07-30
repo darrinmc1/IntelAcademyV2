@@ -5,25 +5,25 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Threat Monitoring - The Intel Analyst Academy",
-  description: "Master the discipline of continuous threat monitoring — building dashboards, setting tripwires, and avoiding alert fatigue in intelligence operations.",
+  description: "Master the discipline of continuous threat monitoring - building dashboards, setting tripwires, and avoiding alert fatigue in intelligence operations.",
 }
 
-const topicContent = `"Master the discipline of continuous threat monitoring — building dashboards, setting tripwires, and avoiding alert fatigue in intelligence operations.",
+const topicContent = `"Master the discipline of continuous threat monitoring - building dashboards, setting tripwires, and avoiding alert fatigue in intelligence operations.",
 
 Threat monitoring is the continuous, systematic observation of the operational
 environment for indicators of emerging threats. It is the intelligence equivalent of
-standing watch — except the horizon never ends, the threats keep evolving, and nobody
+standing watch - except the horizon never ends, the threats keep evolving, and nobody
 sends a relief shift just because you are tired.
 
 This lesson covers the philosophy of continuous versus episodic monitoring, how to design
 threat dashboards that actually get used, the art of setting effective tripwires, and
 how to keep your alert system from crying wolf so often that everybody stops listening.
-By the end, you will understand why monitoring is not just a tool — it is a mindset.
+By the end, you will understand why monitoring is not just a tool - it is a mindset.
 
 {/* ---- Section 1: Continuous vs. One-Shot ---- */}
 
 A common misconception among new analysts is that threat monitoring means watching
-everything all the time. It does not — and it cannot. Resources are finite, attention
+everything all the time. It does not - and it cannot. Resources are finite, attention
 is limited, and the volume of raw information available is effectively infinite. The
 art lies in knowing when to watch continuously and when a single-point assessment will
 suffice.
@@ -33,7 +33,7 @@ suffice.
 Continuous monitoring is appropriate for threats that are dynamic, imminent, or
 high-impact. Think of an active insurgent group with a pattern of attacks, a volatile
 political situation that could escalate at any moment, or a cyber threat actor actively
-probing your networks. In these cases, you need persistent coverage — daily or even
+probing your networks. In these cases, you need persistent coverage - daily or even
 hourly updates, live feeds, real-time indicators, and a watch floor that never sleeps.
 
 ### One-Shot (Episodic) Assessments
@@ -54,8 +54,8 @@ either extreme.
 Most mature monitoring programmes use a hybrid model. A baseline of continuous
 monitoring covers the highest-priority threats. Lower-priority threats are assessed
 periodically but linked to specific triggers that promote them to continuous status. When
-a dormant threat actor suddenly becomes active — a new propaganda video, a known associate
-travelling to a conflict zone, an influx of funding — that trigger escalates them into
+a dormant threat actor suddenly becomes active - a new propaganda video, a known associate
+travelling to a conflict zone, an influx of funding - that trigger escalates them into
 continuous watch. The system pays for constant coverage only where it matters.
 
 Define your escalation triggers before you need them. It is easy to promote a threat
@@ -66,7 +66,7 @@ have that conversation under time pressure while something is already on fire.
 
 A threat dashboard is only useful if people actually look at it. The history of
 intelligence is littered with beautifully designed dashboards that were opened once,
-admired, and then forgotten. A good dashboard is not a work of art — it is a working
+admired, and then forgotten. A good dashboard is not a work of art - it is a working
 tool. It answers specific questions, surfaces actionable information, and respects the
 limited attention of its audience.
 
@@ -106,7 +106,7 @@ you are probably not paying attention.
 A tripwire is a predefined event or condition that, when observed, triggers an automatic
 escalation in response. Tripwires are the backbone of any effective monitoring system
 because they remove the burden of judgment from the moment of detection. By the time the
-tripwire fires, the decision to escalate has already been made — it was made when you
+tripwire fires, the decision to escalate has already been made - it was made when you
 defined the tripwire.
 
 ### Characteristics of an Effective Tripwire
@@ -135,7 +135,7 @@ protocol (what happens next), and the review date (when the tripwire is reassess
 relevance). Without documentation, tripwires exist only in people's heads, and people
 forget, leave, or disagree about what was agreed.
 
-Pick a real or realistic threat scenario relevant to your area of interest —
+Pick a real or realistic threat scenario relevant to your area of interest -
 for example, a known foreign influence operation targeting your country's upcoming
 election, or a local extremist group with a history of low-level violence.
 
@@ -155,15 +155,15 @@ Alert fatigue is the gradual desensitisation of analysts and decision-makers to 
 signals caused by an excessive volume of alerts. It is one of the most dangerous
 conditions a monitoring system can develop, because it does not announce itself. It
 creeps in quietly, one ignored alert at a time, until the day a real threat triggers an
-alert and nobody responds — because they stopped believing the system would ever tell
+alert and nobody responds - because they stopped believing the system would ever tell
 them something they did not already know.
 
 ### How Alert Fatigue Happens
 
 Alert fatigue follows a predictable pattern. Phase one: a monitoring system is deployed
-with inclusive thresholds — better safe than sorry. Phase two: analysts receive dozens of
+with inclusive thresholds - better safe than sorry. Phase two: analysts receive dozens of
 alerts per day, most of which turn out to be benign. Phase three: analysts develop
-shortcuts — they only read alerts from certain sources, or certain times of day, or
+shortcuts - they only read alerts from certain sources, or certain times of day, or
 certain severity levels. Phase four: a critical alert arrives in the afternoon, gets
 buried in the noise, and nobody acts on it. Phase five: the post-incident review blames
 the analysts, but the system was the real culprit.
@@ -186,12 +186,12 @@ A good prioritisation framework helps analysts decide what to look at first. A c
 approach combines two dimensions: **likelihood** (how probable is this
 threat to materialise?) and **impact** (how bad would it be if it did?).
 High-likelihood, high-impact threats get immediate attention. Low-likelihood, low-impact
-threats get logged for review. The dangerous quadrant is low-likelihood, high-impact —
+threats get logged for review. The dangerous quadrant is low-likelihood, high-impact -
 these are the threats that surprise you, and they deserve periodic review even if they
 do not trigger daily alerts.
 
 There is a special place in intelligence hell reserved for systems that send a
-"CRITICAL — URGENT" alert for a minor data fluctuation at 3 AM, then go silent when
+"CRITICAL - URGENT" alert for a minor data fluctuation at 3 AM, then go silent when
 an actual crisis unfolds at 9 AM. Tune your system. Your analysts have enough problems.
 
 Track your "time to indifference." Measure how long it takes an analyst to stop
@@ -207,7 +207,7 @@ export default function ThreatmonitoringPage() {
     <LessonContainer>
       <MicroLesson
         title="Threat Monitoring"
-        subtitle="Master the discipline of continuous threat monitoring — building dashboards, setting tripwires, and avoiding alert fatig"
+        subtitle="Master the discipline of continuous threat monitoring - building dashboards, setting tripwires, and avoiding alert fatig"
         humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
         readTime={15}
         difficulty="Intermediate"

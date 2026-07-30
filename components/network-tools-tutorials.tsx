@@ -174,7 +174,7 @@ Source,Target,Type,Weight,Relationship
   {
     id: "nodexl",
     name: "NodeXL",
-    description: "Excel-based network analysis tool that integrates seamlessly with Microsoft Office workflows.",
+    description: "Excel-based network analysis tool that integrates smoothly with Microsoft Office workflows.",
     difficulty: "Beginner",
     platform: ["Windows"],
     cost: "Freemium",
@@ -305,7 +305,7 @@ Bob      | Financier | Beta Group   | LA       | High`,
         id: "reporting",
         title: "Reports & Documentation",
         description: "Create professional intelligence reports",
-        content: `NodeXL integrates seamlessly with Office for professional reporting:
+        content: `NodeXL integrates smoothly with Office for professional reporting:
 
 **Report Components:**
 1. **Executive Summary**: Key findings and recommendations

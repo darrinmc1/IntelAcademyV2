@@ -57,9 +57,9 @@ export async function submitTopicRequestAction(args: {
       payload: {
         type: "Topic Request",
         title: args.topic_title,
-        category: args.category || "—",
-        experience: args.experience_level || "—",
-        email: args.email || "—",
+        category: args.category || " - ",
+        experience: args.experience_level || " - ",
+        email: args.email || " - ",
         pending_requests: pending,
       },
     })

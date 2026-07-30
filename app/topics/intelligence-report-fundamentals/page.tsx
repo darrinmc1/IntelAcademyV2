@@ -130,7 +130,7 @@ The Inverted Pyramid Structure
 
 The intelligence community follows an "inverted pyramid" structure that places the most important
 information at the beginning. This approach ensures that even if a decision-maker only reads the
-first page, they receive the most crucial information. This stands in stark contrast to academic or
+first page, they receive the most important information. This stands in stark contrast to academic or
 legal writing, which typically builds a case before revealing conclusions.
 
 #### Enhancing Readability and Navigation
@@ -189,12 +189,12 @@ Reference specific findings when making decisions
 
 Remember, a disorganized intelligence report, no matter how insightful the analysis, ultimately
 fails in its primary mission: to inform decision-making. Structure in intelligence reporting isn't
-just about following conventions—it's about ensuring that critical information reaches the right
+just about following conventions - it's about ensuring that critical information reaches the right
 people at the right time in a format they can readily use.
 
 As intelligence professionals often note: in this field, brilliant analysis that arrives too late or
 in an unusable format is ultimately worthless. Structure and organization aren't just bureaucratic
-requirements—they're the foundation that makes intelligence actionable.
+requirements - they're the foundation that makes intelligence actionable.
 
 Because "stream of consciousness" isn't a recognized intelligence writing style, no matter how
 insightful your 3 AM thoughts are.
@@ -221,7 +221,7 @@ Language imprecision in intelligence reporting can lead to serious consequences:
 - • Erosion of trust in intelligence products
 
 The infamous "slam dunk" characterization of Iraq WMD intelligence demonstrates how casual language
-can contribute to major policy missteps. Precision isn't merely stylistic—it's fundamental to the
+can contribute to major policy missteps. Precision isn't merely stylistic - it's fundamental to the
 intelligence mission.
 
 #### Identifying and Eliminating Vague Language
@@ -421,7 +421,7 @@ monitoring."
 
 Conclusion
 
-Precision language isn't about academic elegance—it's about communicating intelligence that
+Precision language isn't about academic elegance - it's about communicating intelligence that
 decision-makers can trust and act upon appropriately. By eliminating vagueness, clearly
 communicating certainty levels, distinguishing observation from inference, and avoiding terminology
 pitfalls, intelligence professionals ensure their critical insights translate into effective action.
@@ -723,13 +723,13 @@ transactions to compensate for limitations in any single stream."
 
 #### Conclusion
 
-Proper sourcing and attribution is not merely a procedural requirement—it's the foundation of
+Proper sourcing and attribution is not merely a procedural requirement - it's the foundation of
 analytic credibility. By rigorously documenting where information comes from, evaluating its
 reliability, acknowledging limitations, and seeking diverse confirmation, intelligence professionals
 transform raw reports into assessments that decision-makers can trust.
 
 In the intelligence world, an analysis is only as good as its sources, and proper attribution
-ensures that those sources—and their strengths and weaknesses—are transparent to those who must act
+ensures that those sources - and their strengths and weaknesses - are transparent to those who must act
 on the information provided.
 
 Like academic citations, but with more redacted names and fewer scholarly journals.
@@ -1020,13 +1020,13 @@ seemingly unnecessary sections
 
 #### Conclusion
 
-Effective scope control is not about producing shorter reports—it's about delivering intelligence
+Effective scope control is not about producing shorter reports - it's about delivering intelligence
 that answers the right questions without distracting or overwhelming decision-makers. By rigorously
 identifying core requirements, distinguishing essential information, imposing explicit constraints,
 removing tangential content, conducting periodic scope checks, and leveraging peer review, analysts
 can create products that directly serve their intended purpose.
 
-Remember that the most important information in an intelligence product isn't what you know—it's
+Remember that the most important information in an intelligence product isn't what you know - it's
 what the decision-maker needs to know. Sometimes this means setting aside that fascinating but
 completely irrelevant detail you spent three days researching, knowing that while it won't appear in
 this report, it contributes to your overall expertise and may prove valuable in future analyses.
@@ -1036,8 +1036,8 @@ researching.
 
 ## Conclusion
 
-Mastering these four fundamental aspects of intelligence report writing—structure and organization,
-precision language, sourcing and attribution, and scope control—will significantly improve the
+Mastering these four fundamental aspects of intelligence report writing - structure and organization,
+precision language, sourcing and attribution, and scope control - will significantly improve the
 effectiveness of your intelligence products. These skills form the foundation upon which all other
 intelligence communication is built.
 

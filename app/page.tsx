@@ -72,7 +72,7 @@ export default function HomePage() {
             variant="hero"
             theme="slate"
             siteName="Intel Academy"
-            heading="Stay Intel-igent — Get Updates"
+            heading="Stay Intel-igent - Get Updates"
             subheading="Get early access to new modules, intel briefings, and exclusive training content delivered to your inbox."
             source="homepage-hero"
             showName

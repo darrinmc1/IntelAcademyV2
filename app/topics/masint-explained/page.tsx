@@ -81,7 +81,7 @@ MASINT encompasses a diverse range of sensor technologies, each designed to dete
 
 - **Radar MASINT:** Analyses radar emissions to determine the size, shape, composition, and movement patterns of objects. Synthetic Aperture Radar (SAR) can produce high-resolution images through cloud cover and at night.
 - **Infrared MASINT:** Detects heat signatures emitted by objects. This is critical for identifying hidden facilities, monitoring industrial activity, and tracking moving targets in darkness.
-- **Acoustic MASINT:** Captures and analyses sound waves — from submarine propeller signatures to the acoustic profile of missile launches. Underwater acoustic MASINT (sonar) is a cornerstone of naval intelligence.
+- **Acoustic MASINT:** Captures and analyses sound waves - from submarine propeller signatures to the acoustic profile of missile launches. Underwater acoustic MASINT (sonar) is a cornerstone of naval intelligence.
 - **Chemical and Biological MASINT:** Detects trace chemicals or biological agents in the air, water, or soil. Used for weapons monitoring, environmental assessment, and counter-proliferation.
 - **Nuclear MASINT:** Monitors radiation signatures to detect nuclear weapons development, reactor operations, and radioactive material movement.
 
@@ -89,10 +89,10 @@ MASINT encompasses a diverse range of sensor technologies, each designed to dete
 
 MASINT operations follow a structured lifecycle similar to other intelligence disciplines:
 
-1. **Requirements Definition:** Intelligence consumers identify gaps that MASINT can fill — for example, confirming whether a facility is operational based on heat signatures.
+1. **Requirements Definition:** Intelligence consumers identify gaps that MASINT can fill - for example, confirming whether a facility is operational based on heat signatures.
 2. **Sensor Tasking:** Collection managers select the appropriate sensor types and platforms (satellite, aircraft, drone, ground station) and task them against the target.
 3. **Data Collection:** Sensors gather raw physical data, often in vast quantities. A single satellite pass can generate terabytes of radar or infrared data.
-4. **Processing and Exploitation:** Raw sensor data is processed into analysable formats — converting radar returns into images, or acoustic signals into frequency profiles.
+4. **Processing and Exploitation:** Raw sensor data is processed into analysable formats - converting radar returns into images, or acoustic signals into frequency profiles.
 5. **Analysis and Reporting:** Trained analysts interpret the processed data, extract intelligence value, and produce reports for consumers.
 
 ## Challenges in MASINT
@@ -100,7 +100,7 @@ MASINT operations follow a structured lifecycle similar to other intelligence di
 MASINT presents unique challenges that distinguish it from other intelligence disciplines:
 
 - **Data Volume:** MASINT sensors generate enormous quantities of data. Processing and storing this data requires significant computational infrastructure and specialised software.
-- **Signature Libraries:** Interpreting MASINT data requires extensive libraries of known signatures — the acoustic profile of a particular helicopter model, the infrared signature of a specific missile type. Building and maintaining these libraries is resource-intensive.
+- **Signature Libraries:** Interpreting MASINT data requires extensive libraries of known signatures - the acoustic profile of a particular helicopter model, the infrared signature of a specific missile type. Building and maintaining these libraries is resource-intensive.
 - **Environmental Interference:** Weather, terrain, and atmospheric conditions can degrade sensor performance. Cloud cover blocks optical sensors, thermal gradients distort acoustic signals, and electromagnetic interference affects radar.
 - **Analyst Expertise:** MASINT analysts require deep scientific and engineering knowledge. The shortage of qualified personnel is a persistent constraint on MASINT capabilities across nearly all intelligence services.
 

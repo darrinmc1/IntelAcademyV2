@@ -11,18 +11,18 @@ export const metadata: Metadata = {
 const topicContent = `# Real-Time OSINT
 
 Real-time OSINT is what happens when regular OSINT puts on running shoes and chugs an energy drink. It's the
-high-speed, high-stress art of collecting and analyzing open source intelligence as events unfold—because
+high-speed, high-stress art of collecting and analyzing open source intelligence as events unfold - because
 waiting for tomorrow's news is so last century.
 
 "Real-time OSINT analyst: Someone who can tell you what's happening halfway around the world faster than you
-can figure out what's happening in your own staff meeting." —{" "}
+can figure out what's happening in your own staff meeting." -{" "}
 The Unofficial Intelligence Analyst's Dictionary
 
 ## Introduction to Real-Time OSINT (Or: How to Give Yourself an Ulcer in Record Time)
 
 Real-time OSINT involves monitoring, collecting, and analyzing open source information as events are occurring.
 It's like trying to complete a jigsaw puzzle while someone keeps adding new pieces, taking others away, and
-occasionally flipping the table—all while your boss stands behind you asking if you're done yet.
+occasionally flipping the table - all while your boss stands behind you asking if you're done yet.
 
 Unlike traditional OSINT, which allows for methodical collection and analysis, real-time OSINT operates under
 the constant pressure of "now, now, NOW!" It's the intelligence equivalent of speed chess, except the pieces
@@ -32,7 +32,7 @@ keep changing shape and occasionally explode.
 
 ### The Information Tsunami
 
-During breaking events, information doesn't just flow—it floods. Trying to keep up with the torrent of
+During breaking events, information doesn't just flow - it floods. Trying to keep up with the torrent of
 social media posts, news updates, and eyewitness reports is like trying to drink from a fire hydrant while
 someone keeps turning up the pressure. Your only options are to develop superhuman reading speeds or accept
 that you'll miss something important while blinking.
@@ -92,9 +92,9 @@ Verification becomes exponentially more important and exponentially more difficu
 
 ## What Is Real-Time OSINT?
 
-Real-time OSINT refers to the collection, processing, and analysis of open source information as it is created, with minimal delay between publication and exploitation. Where traditional OSINT might analyse a situation days or weeks after the fact, real-time OSINT operates in the same timeframe as the events themselves — often providing intelligence before traditional classified sources can respond.
+Real-time OSINT refers to the collection, processing, and analysis of open source information as it is created, with minimal delay between publication and exploitation. Where traditional OSINT might analyse a situation days or weeks after the fact, real-time OSINT operates in the same timeframe as the events themselves - often providing intelligence before traditional classified sources can respond.
 
-- **The Speed Advantage:** Real-time OSINT can detect events as they unfold — a protest, a military movement, a natural disaster — sometimes before official channels are aware. This makes it invaluable for situational awareness and early warning.
+- **The Speed Advantage:** Real-time OSINT can detect events as they unfold - a protest, a military movement, a natural disaster - sometimes before official channels are aware. This makes it invaluable for situational awareness and early warning.
 - **The Noise Problem:** Real-time sources generate enormous volumes of data. Separating signal from noise in real-time requires automated filtering, triage, and validation that traditional OSINT methods don't need.
 - **Verification Challenge:** Speed and accuracy are in tension in real-time OSINT. Early reports of an event may be inaccurate, misleading, or deliberately deceptive. The analyst must provide timely intelligence without sacrificing reliability.
 
@@ -123,7 +123,7 @@ Real-time OSINT is only as valuable as its accuracy. Verification must be built 
 
 - **Source Authentication:** Before trusting a real-time source, verify its identity. Is the social media account verified? Does the account have a history of reliable reporting? Is the source in a position to know the information they're sharing?
 - **Cross-Validation:** Do not rely on a single real-time source. Confirm significant information through at least two independent sources before reporting it as fact.
-- **Geolocation:** Whenever possible, verify the location of reported events using geospatial data — check the reported location against maps, satellite imagery, and other geolocated content.
+- **Geolocation:** Whenever possible, verify the location of reported events using geospatial data - check the reported location against maps, satellite imagery, and other geolocated content.
 - **Temporal Consistency:** Does the chronology of reported events make sense? Inconsistencies in timestamps, lighting conditions, weather, or other temporal markers can indicate fabricated or misattributed content.
 - **Open Source Forensics:** For visual content, examine metadata, reverse image search, and check for signs of manipulation. Deepfakes and AI-generated content are an increasing challenge for real-time OSINT verification.
 

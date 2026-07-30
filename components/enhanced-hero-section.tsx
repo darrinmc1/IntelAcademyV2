@@ -11,7 +11,7 @@ export function EnhancedHeroSection() {
   return (
     <ParallaxHeader
       title="Intelligence Analyst Academy"
-      subtitle="Master the art and science of intelligence analysis with cutting-edge training and real-world applications"
+      subtitle="Master the art and science of intelligence analysis with modern training and real-world applications"
       backgroundImage="/intelligence-analysis-workspace.png"
       overlayImage="/digital-investigation-interface.png"
       height="xl"

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const topicContent = `"Master the art of writing tight, actionable executive summaries using BLUF, the five-paragraph formula, and ruthless editing.",
 
 The executive summary is the most valuable real estate in any intelligence product.
-It is also the most mistreated. Analysts treat it as a afterthought — a quick
+It is also the most mistreated. Analysts treat it as a afterthought - a quick
 condensation slapped onto the front of a finished report. In reality, it is the only
 part most decision-makers will ever read. This lesson will teach you how to write
 executive summaries that deliver the bottom line at the top, follow a battle-tested
@@ -23,7 +23,7 @@ one-page test every time.
 There is a reason the U.S. military codified the BLUF (Bottom Line Up Front) principle
 decades ago: it works. Decision-makers do not have the time or inclination to read your
 methodology, your sourcing tree, or your carefully crafted narrative arc. They need the
-answer to one question — "What do I need to know?" — and they need it in the first
+answer to one question - "What do I need to know?" - and they need it in the first
 two sentences.
 
 ### Why BLUF Matters for Exec Summaries
@@ -31,7 +31,7 @@ two sentences.
 Studies of executive reading behavior consistently show that decision-makers spend an
 average of 30 to 90 seconds on an executive summary before deciding whether to read
 deeper. If your key judgment is not delivered in that window, it does not exist. The
-executive summary is not a "teaser" — it is the main event. The rest of the report is
+executive summary is not a "teaser" - it is the main event. The rest of the report is
 the supporting evidence.
 
 Buried Bottom Line
@@ -51,7 +51,7 @@ the insurgent financial network shows no signs of disruption despite
 sustained counter-efforts. The core leadership remains intact and
 continues to recruit effectively."
 
-Key judgment, confidence level, and supporting evidence — all in the first paragraph.
+Key judgment, confidence level, and supporting evidence - all in the first paragraph.
 
 ### The Hierarchy of the Bottom Line
 
@@ -62,7 +62,7 @@ has a clear hierarchy:
 - **Secondary bottom lines:** Additional key judgments that support or qualify the primary. These fill paragraphs two and three.
 - **Actionable implication:** What the decision-maker should do, stop doing, or prepare for. This closes the summary.
 
-If your executive summary can be tweeted and still make sense, it is probably too long. If it can be tweeted and still makes sense, congratulations — you have mastered BLUF.
+If your executive summary can be tweeted and still make sense, it is probably too long. If it can be tweeted and still makes sense, congratulations - you have mastered BLUF.
 
 Write your key judgment on a sticky note before you write the summary. If the sticky
 note does not fit on a real sticky note, your judgment is not sharp enough. Trim
@@ -73,41 +73,41 @@ until it fits.
 Every intelligence executive summary should follow a variation of the SMEAC
 (Situation, Mission, Execution, Administration/Logistics, Command/Signal) format
 adapted for analytical products. It is the structure that military decision-makers
-already know — and it works because it forces you to answer the right questions in
+already know - and it works because it forces you to answer the right questions in
 the right order.
 
-### Paragraph 1: Situation — The Key Judgment
+### Paragraph 1: Situation - The Key Judgment
 
 This is your BLUF paragraph. It answers: **What is happening, and what does it
 mean?** Include the key judgment, confidence level, and time horizon. Keep it to
 two or three sentences. This is the paragraph that determines whether the reader keeps
 going.
 
-### Paragraph 2: Mission — Why We Care
+### Paragraph 2: Mission - Why We Care
 
 This paragraph answers: **Why does this matter to the reader or the
 organization?** Connect the analytical finding to the decision-maker's equities,
 responsibilities, or strategic objectives. If you cannot articulate why the reader
 should care, neither will they.
 
-### Paragraph 3: Execution — The Evidence
+### Paragraph 3: Execution - The Evidence
 
 This paragraph answers: **What evidence supports this judgment, and what are the
 key drivers?** Provide the two to three most compelling pieces of evidence or
-analytical drivers. This is where you prove your case — briefly. Detailed sourcing
+analytical drivers. This is where you prove your case - briefly. Detailed sourcing
 belongs in the body.
 
-### Paragraph 4: Admin — Implications and Risks
+### Paragraph 4: Admin - Implications and Risks
 
 This paragraph answers: **What are the implications, and what could go
 wrong?** Include second- and third-order effects, potential blowback, or
 alternative scenarios. Flag any significant information gaps that affect confidence.
 
-### Paragraph 5: Command — Recommended Actions
+### Paragraph 5: Command - Recommended Actions
 
 This paragraph answers: **What should the reader do?** Include specific,
 actionable recommendations or at minimum, define the decision space. Even "no action
-required at this time" is useful — it tells the leader they can stop worrying about it.
+required at this time" is useful - it tells the leader they can stop worrying about it.
 
 The five-paragraph format is older than most of the analysts writing it. There is a
 reason it has survived: because anything that is five paragraphs long can be read in
@@ -119,7 +119,7 @@ be read.
 Every analyst has a beloved paragraph they fought hard to write. Maybe it contains a
 particularly elegant turn of phrase. Maybe it connects two disparate data points in
 a way that made you feel brilliant. If it does not serve the executive summary, it has
-to go. This is called "killing your darlings" — and it is the hardest part of writing
+to go. This is called "killing your darlings" - and it is the hardest part of writing
 tight.
 
 ### The Word Budget
@@ -127,11 +127,11 @@ tight.
 A proper executive summary should not exceed 300 to 500 words. That is roughly one
 page of standard formatting. Here is how a 400-word budget typically breaks down:
 
-- **Paragraph 1 (Situation):** 75 words — the key judgment and confidence level.
-- **Paragraph 2 (Mission):** 75 words — why it matters.
-- **Paragraph 3 (Execution):** 100 words — the evidence.
-- **Paragraph 4 (Admin):** 75 words — implications and risks.
-- **Paragraph 5 (Command):** 75 words — recommendations.
+- **Paragraph 1 (Situation):** 75 words - the key judgment and confidence level.
+- **Paragraph 2 (Mission):** 75 words - why it matters.
+- **Paragraph 3 (Execution):** 100 words - the evidence.
+- **Paragraph 4 (Admin):** 75 words - implications and risks.
+- **Paragraph 5 (Command):** 75 words - recommendations.
 
 ### The Editing Checklist
 
@@ -157,7 +157,7 @@ After Editing
 "The threat actor is using multiple cyber attack vectors against
 regional critical infrastructure."
 
-14 words — 60 percent shorter, zero substance lost.
+14 words - 60 percent shorter, zero substance lost.
 
 Read your executive summary out loud. Every time you hear a word that feels
 unnecessary, strike it. Then read it again. After three passes, compare the
@@ -167,7 +167,7 @@ original to the final version. The difference will shock you.
 
 There is a simple rule in intelligence writing: if your executive summary is longer
 than one page, it is not an executive summary. It is an abstract, a précis, or a
-condensed report — call it what you want, but do not call it an executive summary.
+condensed report - call it what you want, but do not call it an executive summary.
 The one-page test is brutally simple: print it. If it spills onto a second page,
 cut until it does not.
 
@@ -193,7 +193,7 @@ one-page test is a ceiling, not a target.
 - **Merge paragraphs that cover related points.** Two half-paragraphs waste more space than one full paragraph.
 - **Delete the final paragraph if it says nothing new.** If your recommendations are implicit in the analysis, stop writing.
 
-The one-page test reveals a universal truth about intelligence writing: your first draft is always too long, your second draft is still too long, and your third draft is finally the right length — unless you let yourself add "just one more sentence."
+The one-page test reveals a universal truth about intelligence writing: your first draft is always too long, your second draft is still too long, and your third draft is finally the right length - unless you let yourself add "just one more sentence."
 
 Below is a poorly written executive summary. Your mission: rewrite it in 300 to 500
 words using the BLUF principle and the five-paragraph SMEAC formula. Then cut it to
@@ -215,7 +215,7 @@ process."
 **Challenge:** Rewrite this to pass the one-page test. Apply BLUF by
 inventing a concrete key judgment. Structure the result into the five-paragraph SMEAC
 format. Strike every word that does not carry analytical weight. When you are done,
-the original should look like a rough draft — because it is.
+the original should look like a rough draft - because it is.
 
 )
 `

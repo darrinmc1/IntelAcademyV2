@@ -1,3 +1,5 @@
+"use client"
+
 import { useState, useEffect, useCallback } from "react"
 
 const STORAGE_KEY = "iaa:completed-topics"

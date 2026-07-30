@@ -112,7 +112,7 @@ training facilities. Their online presence has expanded to six new platforms. Th
 #### Narrative Approach
 
 "Six months ago, Group X was struggling to maintain relevance. Today, they're executing a
-sophisticated expansion strategy—recruiting new members at unprecedented rates, establishing
+sophisticated expansion strategy - recruiting new members at unprecedented rates, establishing
 training infrastructure, and launching a coordinated online campaign that's reaching entirely new
 audiences. This transformation suggests a significant shift in both their capabilities and
 intentions."
@@ -148,7 +148,7 @@ audience.
 ## 4. Handling Questions
 
 **Techniques for addressing complex inquiries under pressure.** Prepare for that one question
-you didn't anticipate—it will always be the first one asked.
+you didn't anticipate - it will always be the first one asked.
 
 Question-and-answer sessions are often the most valuable part of intelligence briefings, allowing for
 clarification, deeper exploration, and addressing specific concerns. However, they can also be
@@ -202,11 +202,11 @@ information
 ## 5. Confidence Calibration
 
 **Appropriately conveying certainty levels during briefings.** Master the art of sounding
-confident while admitting you're not entirely sure—a contradiction that defines the intelligence
+confident while admitting you're not entirely sure - a contradiction that defines the intelligence
 profession.
 
 Intelligence analysis inherently involves uncertainty. Effectively communicating your confidence in
-different assessments is crucial for decision-makers to properly weigh the information you're providing.
+different assessments is important for decision-makers to properly weigh the information you're providing.
 
 Techniques for confidence calibration include:
 
@@ -239,7 +239,7 @@ deliver briefings that effectively communicate complex intelligence in ways that
 decision-making.
 
 Remember that verbal briefings complement rather than replace written reports. The most effective
-intelligence communication often combines both approaches—detailed written analysis for reference and
+intelligence communication often combines both approaches - detailed written analysis for reference and
 record, supported by impactful verbal briefings that highlight key points and facilitate discussion.
 
 With practice and attention to these techniques, you can develop the ability to deliver clear, compelling,

@@ -126,7 +126,7 @@ export function Debrief({ takeaways, humorSummary }: DebriefProps) {
       <div className="flex items-center gap-2 mb-3">
         <FileText className="w-5 h-5 text-cyan-400" />
         <h3 className="text-sm uppercase tracking-widest font-bold text-cyan-400">
-          Debrief — Key Takeaways
+          Debrief - Key Takeaways
         </h3>
       </div>
       <ul className="space-y-2">

@@ -20,7 +20,7 @@ Here's the kicker: 80-90% of intelligence typically comes from open sources. You
 
 OSINT is legal when conducted properly, ethical, and incredibly powerful. It's the foundation of modern intelligence analysis.
 
-OSINT analysts are basically professional Googlers. But don't let the simplicity fool you — there's a reason "Google it" isn't an intelligence methodology.
+OSINT analysts are basically professional Googlers. But don't let the simplicity fool you - there's a reason "Google it" isn't an intelligence methodology.
 
 {/* Core Techniques */}
 

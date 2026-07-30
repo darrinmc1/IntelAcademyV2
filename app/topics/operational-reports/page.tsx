@@ -168,11 +168,11 @@ stability."
 
 ## The Role of Operational Reports
 
-Operational reports are the primary vehicle for communicating intelligence that directly supports ongoing operations. Unlike strategic assessments, which inform long-term planning, operational reports are produced and consumed in the same timeframe as the operations they support — often hours or minutes before the operation commences:
+Operational reports are the primary vehicle for communicating intelligence that directly supports ongoing operations. Unlike strategic assessments, which inform long-term planning, operational reports are produced and consumed in the same timeframe as the operations they support - often hours or minutes before the operation commences:
 
-- **Time-Sensitive Production:** Operational reports must be produced quickly enough to inform the operation they support. A tactical report that arrives after the operation has begun has lost most of its value. This time pressure shapes every aspect of operational reporting — format, length, source requirements, and dissemination channels.
-- **Action-Oriented Content:** Operational reports focus on specific, actionable information — the location and activity of a target, the security situation along a planned route, the presence of civilians or friendly forces in an area of operations. Information that does not directly support operational decision-making is excluded, regardless of its analytical interest.
-- **Direct Consumer Relationship:** Operational reports are typically consumed by the operators or tactical commanders who will act on the intelligence. This direct relationship — often face-to-face or through a dedicated communications channel — allows for immediate clarification, refinement, and follow-up that formal reporting channels cannot provide.
+- **Time-Sensitive Production:** Operational reports must be produced quickly enough to inform the operation they support. A tactical report that arrives after the operation has begun has lost most of its value. This time pressure shapes every aspect of operational reporting - format, length, source requirements, and dissemination channels.
+- **Action-Oriented Content:** Operational reports focus on specific, actionable information - the location and activity of a target, the security situation along a planned route, the presence of civilians or friendly forces in an area of operations. Information that does not directly support operational decision-making is excluded, regardless of its analytical interest.
+- **Direct Consumer Relationship:** Operational reports are typically consumed by the operators or tactical commanders who will act on the intelligence. This direct relationship - often face-to-face or through a dedicated communications channel - allows for immediate clarification, refinement, and follow-up that formal reporting channels cannot provide.
 
 ## Structure of an Operational Report
 
@@ -181,13 +181,13 @@ Operational reports follow a standardised format that allows operators to extrac
 - **The SALUTE Format:** A widely used template for tactical intelligence reports: Size (how many), Activity (what are they doing), Location (where are they), Unit (who are they), Time (when was the information collected), Equipment (what are they carrying or using). SALUTE reports are concise, structured, and immediately usable.
 - **The SITREP (Situation Report):** A broader format that covers the current situation, friendly force status, enemy activity, and significant events since the last report. SITREPs are the standard reporting format for ongoing operations and are produced at regular intervals or when significant changes occur.
 - **The SPOT Report:** A short, urgent report of time-sensitive information that cannot wait for the next scheduled SITREP. SPOT reports are used for imminent threats, significant enemy movements, or unexpected developments that require immediate command attention.
-- **The ACE Report:** Army, Casualties, Equipment — a format used to report battle damage, casualties, and equipment status. ACE reports are essential for maintaining situational awareness of friendly force readiness during prolonged operations.
+- **The ACE Report:** Army, Casualties, Equipment - a format used to report battle damage, casualties, and equipment status. ACE reports are essential for maintaining situational awareness of friendly force readiness during prolonged operations.
 
 ## Operational Report Writing Standards
 
 Writing for operational consumers requires specific adaptations from standard intelligence writing:
 
-- **Bottom Line Up Front:** The most critical information — the threat to the operation, the change in the situation, the time-sensitive development — must appear in the first sentence. Operational consumers do not have time to read background before reaching the essential information.
+- **Bottom Line Up Front:** The most critical information - the threat to the operation, the change in the situation, the time-sensitive development - must appear in the first sentence. Operational consumers do not have time to read background before reaching the essential information.
 - **Specificity Over Generality:** "The target was observed at 0630 hours moving from Location A to Location B in a white Toyota HiLux, licence plate ABC-123, accompanied by two unidentified males" is an operational report. "The target was seen leaving his residence in the morning with associates" is not.
 - **Grid Coordinates:** Location information in operational reports should include grid coordinates (MGRS or lat/long) in addition to place names. "Near the market in the northern district" is not sufficiently precise for an operation. "Grid: 38T 0546789 1234567" is precise.
 - **Confidence Indicators:** Operational consumers need to know how reliable the intelligence is so they can factor uncertainty into their planning. A report that does not include a confidence assessment forces the operator to guess at the intelligence's reliability.
@@ -200,7 +200,7 @@ The relationship between intelligence producers and operational consumers is cri
 - **Embedded Analysts:** Many military and law enforcement organisations embed intelligence analysts directly with operational units. Embedded analysts develop a deeper understanding of operational needs and can produce more relevant intelligence faster than analysts working from a remote headquarters.
 - **The Intelligence Push:** In a well-functioning intelligence-operations relationship, intelligence is pushed to operators based on their anticipated needs, not pulled based on requests. The analyst anticipates what the operator will need next and produces it before being asked.
 - **After-Action Review:** Following every operation, the intelligence that supported it should be reviewed. What was accurate? What was missed? What could have been better? The after-action review is the most effective mechanism for improving operational intelligence.
-- **Trust Development:** Operators trust intelligence they have seen validated through operational outcomes. New intelligence units or analysts must build this trust over time through consistent, accurate reporting. Trust once broken — through an inaccurate report that leads to a failed operation — is difficult to rebuild.
+- **Trust Development:** Operators trust intelligence they have seen validated through operational outcomes. New intelligence units or analysts must build this trust over time through consistent, accurate reporting. Trust once broken - through an inaccurate report that leads to a failed operation - is difficult to rebuild.
 
 `
 

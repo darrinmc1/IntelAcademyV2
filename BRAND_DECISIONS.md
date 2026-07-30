@@ -1,4 +1,4 @@
-# Intel Academy — Brand Decisions
+# Intel Academy - Brand Decisions
 
 Single source of truth for visual-identity decisions. Update as new decisions are made.
 
@@ -8,13 +8,13 @@ Single source of truth for visual-identity decisions. Update as new decisions ar
 
 ## Master illustration style
 
-Clean, modern, professional editorial illustration. Flat or semi-flat vector-style with subtle gradients. Think "educational platform hero art" — not photorealistic, not cartoony, not clipart.
+Clean, modern, professional editorial illustration. Flat or semi-flat vector-style with subtle gradients. Think "educational platform hero art" - not photorealistic, not cartoony, not clipart.
 
 - **Base palette:** navy/slate (`#1e293b`, `#334155`), neutral off-white background (`#f8fafc`)
-- **Master accent:** amber (`#f59e0b`) — used when no topic-specific accent applies
+- **Master accent:** amber (`#f59e0b`) - used when no topic-specific accent applies
 - **Composition:** central conceptual object/scene, balanced negative space, subject ~60% of frame, soft drop shadows, no hard outlines
 - **Lighting:** soft directional from top-left, subtle ambient glow around focal element
-- **Mood:** intelligent, authoritative, approachable — NOT dark/military/espionage clichés
+- **Mood:** intelligent, authoritative, approachable - NOT dark/military/espionage clichés
 - **Text in image:** zero. No labels, no captions, no lettering.
 
 ## Standard dimensions
@@ -48,7 +48,7 @@ Use these to colour-code illustrations by topic. All accents are used *against* 
 | Analytical techniques | Emerald | `#10b981` | statistical, structured analysis |
 | Intelligence tools | Violet | `#8b5cf6` | software, dashboards, notebooks |
 | Threat assessment | (TBD) | | threat |
-| OSINT | (TBD — green?) | | open-source intel |
+| OSINT | (TBD - green?) | | open-source intel |
 | SIGINT / HUMINT / GEOINT / MASINT / TECHINT | (TBD) | | INT family |
 
 ## Generation workflow
@@ -63,5 +63,5 @@ Use these to colour-code illustrations by topic. All accents are used *against* 
 
 - Domain: `intelanalyst.academy` or stay on current? (open from Apr 16 notes)
 - Sister Networks footer section: keep "ManageLearn" link, remove section, or generic placeholder? (open)
-- Mascots use: already committed — 24 SVGs exist, refs updated from `.png` → `.svg`
-- Forum: coming-soon page — no forum-categories images required for launch
+- Mascots use: already committed - 24 SVGs exist, refs updated from `.png` → `.svg`
+- Forum: coming-soon page - no forum-categories images required for launch

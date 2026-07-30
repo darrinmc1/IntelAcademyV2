@@ -160,7 +160,7 @@ Intelligence reports are not a single product type but a family of related produ
 The PDB is the highest-profile intelligence product in the US system and represents the gold standard for concise, actionable intelligence writing:
 
 - **Format:** The PDB is typically 10-15 pages, containing 6-12 articles. Each article is a single page or less. The format forces analysts to distil complex issues into their most essential elements.
-- **Consumer-Focused:** The PDB is written for a single consumer — the President — and their specific information needs. This consumer focus is so intense that PDB writers typically rotate through the White House to understand the President's decision-making style and priorities.
+- **Consumer-Focused:** The PDB is written for a single consumer - the President - and their specific information needs. This consumer focus is so intense that PDB writers typically rotate through the White House to understand the President's decision-making style and priorities.
 - **Actionable Content:** Every PDB article addresses a question the President might ask or a decision the President might face. Articles that inform without enabling action are candidates for removal.
 - **Sources and Methods Protected:** The PDB does not cite sources or explain collection methods in the article text. Source information is handled through separate classification markings and handling instructions.
 
@@ -169,7 +169,7 @@ The PDB is the highest-profile intelligence product in the US system and represe
 Law enforcement intelligence reports differ from national security reporting in important ways:
 
 - **Evidentiary Standards:** Law enforcement intelligence must meet higher evidentiary standards because it may be used in criminal proceedings. Analysts must document their sources, methods, and reasoning more thoroughly than in national security reporting.
-- **Actionable vs. Background:** Law enforcement intelligence emphasises actionable information — specific individuals, locations, targets, and timings — that can support arrest, search, or surveillance operations.
+- **Actionable vs. Background:** Law enforcement intelligence emphasises actionable information - specific individuals, locations, targets, and timings - that can support arrest, search, or surveillance operations.
 - **Sharing Restrictions:** Law enforcement intelligence is subject to stricter dissemination controls due to privacy laws, grand jury secrecy, and ongoing investigation sensitivities. Reports carry specific handling caveats that limit sharing.
 - **Longer Product Lifecycle:** Intelligence developed for criminal investigations may have evidentiary value for years after production, requiring more careful archiving and chain-of-custody documentation than perishable national security assessments.
 

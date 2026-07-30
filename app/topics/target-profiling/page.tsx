@@ -5,13 +5,13 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Target Profiling - The Intel Analyst Academy",
-  description: "Master the art of target profiling — building comprehensive intelligence profiles of persons of interest through structured analysis and confidence-based gap assessment.",
+  description: "Master the art of target profiling - building comprehensive intelligence profiles of persons of interest through structured analysis and confidence-based gap assessment.",
 }
 
-const topicContent = `"Master the art of target profiling — building comprehensive intelligence profiles of persons of interest through structured analysis and confidence-based gap assessment.",
+const topicContent = `"Master the art of target profiling - building comprehensive intelligence profiles of persons of interest through structured analysis and confidence-based gap assessment.",
 
 Target profiling is the systematic process of constructing a comprehensive operational
-picture of a person of interest — their identity, associations, capabilities, intentions,
+picture of a person of interest - their identity, associations, capabilities, intentions,
 and vulnerabilities. It is not guesswork, not stereotyping, and certainly not the
 dramatised version you have seen on television. It is a structured analytical method
 designed to answer one question: _who are we dealing with, and what can they do?_
@@ -35,12 +35,12 @@ Target profiling in an intelligence context is the methodical collection, collat
 analysis of information about a specific person of interest to enable operational
 decision-making. It answers practical questions: Where does this person operate? Who do
 they trust? What resources can they mobilise? What pressure points exist? It is not about
-diagnosing psychological disorders — leave that to psychiatrists.
+diagnosing psychological disorders - leave that to psychiatrists.
 
 ### What It Is Not
 
 - **Not guesswork:** Every claim in a profile must trace back to a source, even if that source has caveats.
-- **Not stereotyping:** Profiling by ethnicity, nationality, or religion is not analysis — it is prejudice with a filing system.
+- **Not stereotyping:** Profiling by ethnicity, nationality, or religion is not analysis - it is prejudice with a filing system.
 - **Not a biography:** You are not writing a Wikipedia entry. Irrelevant personal details that do not affect operational outcomes are noise.
 - **Not permanent:** Targets change. Their circumstances, loyalties, and capabilities evolve. Your profile must keep up or become a liability.
 
@@ -66,7 +66,7 @@ These five lenses ensure you cover the critical dimensions of any person of inte
 without getting lost in irrelevant detail. Think of them as the pillars that hold up a
 credible operational picture.
 
-### 1. Identity — Who Are They?
+### 1. Identity - Who Are They?
 
 This goes beyond a name and date of birth. True identity profiling covers aliases, known
 variations of their name across different scripts, documents (passports, ID cards, birth
@@ -74,7 +74,7 @@ certificates), biometric data where available, and digital footprints. Many targ
 operate under multiple identities simultaneously. Your job is to connect the dots and
 confirm which identity is legitimate in which context.
 
-### 2. Associations — Who Do They Know?
+### 2. Associations - Who Do They Know?
 
 Mapping a target's network is often more valuable than anything you learn about the
 individual in isolation. Associations include family ties (both biological and marital),
@@ -82,7 +82,7 @@ business partners, political affiliations, known co-conspirators, and social or
 ideological connections. A target's network reveals their access, their constraints, and
 their potential successors. When the target goes quiet, their network often keeps talking.
 
-### 3. Capabilities — What Can They Do?
+### 3. Capabilities - What Can They Do?
 
 Capabilities encompass the resources a target can mobilise. Financial resources (liquid
 assets, funding streams, access to credit), technical skills (cyber capabilities,
@@ -91,26 +91,26 @@ communications equipment), and organisational support (backing from a state, gro
 institution). Assess not just what they have, but what they could acquire given time and
 motivation.
 
-### 4. Intent — What Do They Want?
+### 4. Intent - What Do They Want?
 
 Intent is the hardest factor to assess and the most critical. It combines the target's
 stated goals, observed behaviours, historical patterns, and expressed grievances or
 ambitions. Look for disconnects between what they say and what they do. A target who
 publicly advocates for peace while privately stockpiling weapons has told you everything
-you need to know — you just have to be paying attention.
+you need to know - you just have to be paying attention.
 
-### 5. Vulnerabilities — Where Are They Weak?
+### 5. Vulnerabilities - Where Are They Weak?
 
 Vulnerabilities are the pressure points that can be exploited. These include personal
 vices (gambling, substance use, extramarital affairs), financial pressures (debt,
 embezzlement, dependence on a single income source), legal vulnerabilities (outstanding
 warrants, pending investigations, citizenship issues), and psychological or emotional
 weak points (ego, paranoia, loyalty conflicts). Note: identifying a vulnerability is not
-the same as exploiting it. Your role is analysis, not action — unless your job description
+the same as exploiting it. Your role is analysis, not action - unless your job description
 says otherwise.
 
 "Intent" is the factor that keeps analysts awake at night. Capabilities you can
-photograph. Intent you can only infer — and your inference is only as good as your last
+photograph. Intent you can only infer - and your inference is only as good as your last
 piece of intelligence.
 
 Lay out the five factors as columns in a simple table. Rate each factor on a scale of
@@ -128,7 +128,7 @@ are your gaps.
 ### Gap Analysis Fundamentals
 
 Gap analysis is the systematic identification of missing information within each of the
-five factors. It is not an admission of failure — it is a professional necessity. A mature
+five factors. It is not an admission of failure - it is a professional necessity. A mature
 analyst knows their gaps and accounts for them in every assessment. An immature analyst
 fills gaps with assumptions and calls it analysis.
 
@@ -141,8 +141,8 @@ framework uses three levels:
 - **Moderate confidence:** Supported by one reliable source or multiple sources with caveats. Plausible but not proven.
 - **Low confidence:** Based on single-source reporting, uncorroborated claims, or inference. Use with extreme caution.
 
-When a critical gap exists in a high-risk area — for example, you do not know whether the
-target has access to explosives — you must flag it explicitly in your assessment. The
+When a critical gap exists in a high-risk area - for example, you do not know whether the
+target has access to explosives - you must flag it explicitly in your assessment. The
 empty chair is not an embarrassment. It is a collection requirement.
 
 ### The Danger of Assumption Filling
@@ -153,7 +153,7 @@ there is no evidence of weapons is making a dangerous logical leap. Absence of e
 is not evidence of absence. The empty chair reminds you to keep that gap visible and
 labelled until you have real data.
 
-Take a real or hypothetical person of interest — a local political figure, a corporate
+Take a real or hypothetical person of interest - a local political figure, a corporate
 executive, or a known criminal actor in your area. Create a simple five-factor table
 with two columns: "Known" and "Unknown." Spend 15 minutes filling in what you
 actually know from memory or open sources. Then review your "Unknown" column. For
@@ -169,7 +169,7 @@ Time: 15 minutes | Tools: Notebook, browser for open-source checks
 
 A target profile is never finished. The moment you declare it complete is the moment it
 begins to decay. Targets move, change jobs, acquire new skills, lose old connections,
-and shift their priorities. Your profile must evolve with them — or it becomes dangerous
+and shift their priorities. Your profile must evolve with them - or it becomes dangerous
 misinformation dressed up as analysis.
 
 ### When to Update
@@ -187,7 +187,7 @@ Sometimes an update is not enough. You need to start from scratch when:
 
 - The target has undergone a fundamental identity change (new name, new country, new appearance through surgery or prolonged disguise).
 - Your previous profile contained significant errors that have cascaded into multiple downstream assessments.
-- The operational context has shifted so dramatically that the original profiling framework no longer applies — for example, a criminal target who has become a political actor.
+- The operational context has shifted so dramatically that the original profiling framework no longer applies - for example, a criminal target who has become a political actor.
 - Your confidence in the existing profile has collapsed below an acceptable threshold due to source reliability issues or contradictory reporting.
 
 ### Profile Hygiene Best Practices
@@ -210,7 +210,7 @@ export default function TargetprofilingPage() {
     <LessonContainer>
       <MicroLesson
         title="Target Profiling"
-        subtitle="Master the art of target profiling — building comprehensive intelligence profiles of persons of interest through structu"
+        subtitle="Master the art of target profiling - building comprehensive intelligence profiles of persons of interest through structu"
         humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
         readTime={15}
         difficulty="Intermediate"

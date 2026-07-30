@@ -172,7 +172,7 @@ How evidence is presented affects how it is received by the consumer:
 
 - **Source Attribution in Context:** The most relevant source information should appear with the evidence, not in a footnote or appendix. "SIGINT intercepts from June 12 indicate the target is moving toward the border" is more effective than "The target is moving toward the border (Source: SIGINT intercept, June 12)."
 - **Evaluating Evidence Quality:** The consumer should understand the quality of the evidence supporting each claim. High-confidence evidence (multiple corroborated sources) can be stated directly. Lower-confidence evidence should be caveated: "A single source of unknown reliability reports that..."
-- **Visual Evidence:** Where available, visual evidence — images, maps, graphs, timelines — should be integrated into the body, not relegated to an appendix. A well-chosen visual can convey information more efficiently than paragraphs of text.
+- **Visual Evidence:** Where available, visual evidence - images, maps, graphs, timelines - should be integrated into the body, not relegated to an appendix. A well-chosen visual can convey information more efficiently than paragraphs of text.
 - **Negative Evidence:** The absence of expected evidence can be as informative as its presence. When expected evidence is absent, note this explicitly: "Despite extensive collection against this target, no communications intercepts have been observed in the past 72 hours, which is inconsistent with normal operating patterns."
 
 ## Managing Length
@@ -190,7 +190,7 @@ Different types of analytical problems require different structural approaches:
 
 - **Descriptive Reports:** For reports that describe a situation or event, a chronological or geographic structure works best. Describe what happened, when it happened, where it happened, and who was involved before assessing significance.
 - **Predictive Reports:** For reports that forecast future developments, a structure that presents the assessment, then the supporting evidence, then alternative scenarios works best. The consumer should understand the primary assessment before being presented with alternatives.
-- **Warning Reports:** For warning intelligence, the structure should lead with the warning, then the evidence supporting it, then the time window for action. Warning reports should minimise background and context — if the consumer needs to act in hours, they do not need a history lesson.
+- **Warning Reports:** For warning intelligence, the structure should lead with the warning, then the evidence supporting it, then the time window for action. Warning reports should minimise background and context - if the consumer needs to act in hours, they do not need a history lesson.
 - **Estimative Reports:** For estimates of adversary capabilities or intentions, a structure that presents the key judgement, then the evidence, then alternative explanations, then implications for the consumer, provides the analytical depth estimative consumers need.
 
 `

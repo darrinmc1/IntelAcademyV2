@@ -18,7 +18,7 @@ Master the art of making boxes and lines tell stories that would make detective 
 
 Entity relationship charts are the foundation of visual analysis in Analyst's Notebook. These charts allow
 you to represent people, organizations, events, locations, and other entities as icons and the
-relationships between them as links—essentially turning your investigation into something that looks like
+relationships between them as links - essentially turning your investigation into something that looks like
 it belongs on a conspiracy theorist's wall, but with better graphics.
 
 ### Entity Chart Truth #1
@@ -32,7 +32,7 @@ you missed?" Be prepared to smile through the pain.
 Innocent Bystander"
 
 - **Adding properties and attributes** - Because knowing someone's favorite ice cream flavor
-might be crucial to the case (but probably isn't)
+might be important to the case (but probably isn't)
 
 - **Creating links between entities** - Drawing lines that say "these two people definitely
 know each other" based on one phone call three years ago
@@ -52,7 +52,7 @@ but not so colorful it induces seizures
 ## Best Practices (That Everyone Agrees With But Few Actually Follow)
 
 When creating entity relationship charts, consistency is key. Use standard entity types and link types to
-ensure your charts are easily understood by others—or at least as easily understood as a complex network
+ensure your charts are easily understood by others - or at least as easily understood as a complex network
 of criminal relationships can be.
 
 - **Use appropriate entity types** - A person is a person, not a building. This seems obvious
@@ -135,8 +135,8 @@ Effective ER charts follow a systematic construction process:
 ER charts are particularly effective at revealing several recurring structural patterns:
 
 - **The Star Pattern:** A central entity connected to many peripheral entities with few connections among themselves. This pattern suggests a hub-and-spoke structure, common in drug trafficking networks and intelligence rings where cell members communicate through a single handler.
-- **The Chain Pattern:** Entities connected in a linear sequence — A connects to B, B connects to C, C connects to D. Chains often indicate hierarchical communication paths or supply chains. Identifying chain breakpoints reveals critical nodes for disruption.
-- **The Cluster Pattern:** Multiple entities with dense interconnections forming a distinct group, with few connections to entities outside the group. Clusters indicate cohesive sub-groups — teams, cells, or departments within larger organisations.
+- **The Chain Pattern:** Entities connected in a linear sequence - A connects to B, B connects to C, C connects to D. Chains often indicate hierarchical communication paths or supply chains. Identifying chain breakpoints reveals critical nodes for disruption.
+- **The Cluster Pattern:** Multiple entities with dense interconnections forming a distinct group, with few connections to entities outside the group. Clusters indicate cohesive sub-groups - teams, cells, or departments within larger organisations.
 - **The Bridge Pattern:** An entity that connects two otherwise separate clusters. Bridge entities are analytically significant because they control information flow between groups and are often the most effective targets for network disruption.
 - **The Isolate Pattern:** An entity with no connections in the chart. Isolates may be irrelevant to the investigation, may represent entities whose connections haven't yet been discovered, or may be deliberately compartmented operatives.
 
@@ -144,8 +144,8 @@ ER charts are particularly effective at revealing several recurring structural p
 
 Common mistakes in ER chart construction and interpretation include:
 
-- **Over-Inclusion:** Including every entity and relationship without analytical triage produces an unreadable chart. Apply the "so what?" test — if removing an entity wouldn't change the analytical picture, consider whether it needs to be in the chart.
-- **Assuming Absence Means Absence:** The absence of a visible connection does not mean no connection exists. It may mean the connection operates through channels not captured in available data — encrypted communications, in-person meetings, or cutout intermediaries.
+- **Over-Inclusion:** Including every entity and relationship without analytical triage produces an unreadable chart. Apply the "so what?" test - if removing an entity wouldn't change the analytical picture, consider whether it needs to be in the chart.
+- **Assuming Absence Means Absence:** The absence of a visible connection does not mean no connection exists. It may mean the connection operates through channels not captured in available data - encrypted communications, in-person meetings, or cutout intermediaries.
 - **Presenting Correlation as Causation:** Two entities that both connect to a third entity are not necessarily connected to each other. A correlation in the chart may reflect a common activity rather than a direct relationship.
 
 `

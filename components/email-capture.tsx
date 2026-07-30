@@ -203,7 +203,7 @@ export function EmailCapture({
           </div>
 
           <h2 className={`text-3xl md:text-4xl font-extrabold ${colors.text} mb-4`}>
-            {heading || `Stay Intel-igent — Get Updates`}
+            {heading || `Stay Intel-igent - Get Updates`}
           </h2>
           <p className={`text-lg ${colors.textMuted} mb-8 max-w-xl mx-auto`}>
             {subheading ||
@@ -323,7 +323,7 @@ export function EmailCapture({
             </span>
           </div>
           <h3 className={`text-xl md:text-2xl font-extrabold ${colors.text} mb-1`}>
-            {heading || "Stay Intel-igent — Get Updates"}
+            {heading || "Stay Intel-igent - Get Updates"}
           </h3>
           <p className={`${colors.textMuted} text-sm md:text-base`}>
             {subheading || "Get notified when new modules drop. Be first to access new intel training."}

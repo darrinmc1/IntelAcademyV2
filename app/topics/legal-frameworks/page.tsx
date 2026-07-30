@@ -12,26 +12,26 @@ const topicContent = `"Explore the legal frameworks, statutes, and international
 
 Intelligence operations do not exist in a legal vacuum. Despite what action movies suggest,
 spies do not operate on a "shoot first, ask for forgiveness never" basis. Every
-intelligence activity — from surveillance to recruitment to analysis — operates within
+intelligence activity - from surveillance to recruitment to analysis - operates within
 a dense web of laws, regulations, and executive orders that define what is allowed, what
 is forbidden, and what is in the gray area where legal teams earn their salaries.
 
 In this lesson, you will explore domestic and international legal frameworks governing
 intelligence, understand the oversight ecosystem that enforces compliance, and learn
-how to identify when an operation is operating within — or beyond — its legal mandate.
+how to identify when an operation is operating within - or beyond - its legal mandate.
 Because nothing ruins an intelligence career faster than a well-deserved felony charge.
 
 {/* ---- Section 1: Why Intelligence Isn't Just James Bond ---- */}
 
 Popular culture has done intelligence work a disservice. James Bond blows up buildings,
 seduces targets, and drinks martinis while technically on the clock. Real intelligence
-professionals operate under legal constraints that would make Bond's head spin — if he
+professionals operate under legal constraints that would make Bond's head spin - if he
 had a head for anything other than one-liners.
 
 ### The Myth of the License to Kill
 
 No intelligence officer in any functional democracy possesses a "license to kill." This
-concept — popularized by Ian Fleming — is pure fiction. In reality, lethal action by
+concept - popularized by Ian Fleming - is pure fiction. In reality, lethal action by
 intelligence personnel is governed by strict rules of engagement, use-of-force
 policies, and in many cases, separate legal authorization. Killing someone without
 lawful authority is murder, whether you work for an intelligence agency or not.
@@ -50,7 +50,7 @@ intelligence agencies, demonstrated conclusively that unchecked intelligence pow
 inevitably leads to abuse.
 
 The Church Committee was named after Senator Frank Church, not because the hearings
-were held in a church — though given the confessions of surveillance sins, they might
+were held in a church - though given the confessions of surveillance sins, they might
 as well have been.
 
 ### The Constitutional Foundation
@@ -59,17 +59,17 @@ In the United States, intelligence activities are fundamentally constrained by t
 Constitution. The Fourth Amendment's protection against unreasonable searches and
 seizures, the First Amendment's protection of speech and association, and the Due
 Process Clause of the Fifth Amendment all impose limits on what intelligence agencies
-can do. These are not suggestions — they are binding legal constraints.
+can do. These are not suggestions - they are binding legal constraints.
 
 When evaluating whether an intelligence activity is lawful, start with the
 Constitution, not the statute. If the activity would violate a constitutional right
 if done by a police officer, it likely raises constitutional concerns when done by
-an intelligence agency too — regardless of what the specific statute says.
+an intelligence agency too - regardless of what the specific statute says.
 
 {/* ---- Section 2: Domestic Legal Frameworks ---- */}
 
 Every country with an intelligence apparatus has some form of domestic legal framework
-governing its activities. These frameworks vary enormously — from comprehensive
+governing its activities. These frameworks vary enormously - from comprehensive
 statutory schemes in mature democracies to vague enabling legislation in authoritarian
 states. For our purposes, we focus on democratic frameworks that balance security
 needs with individual rights.
@@ -104,7 +104,7 @@ way of saying "maybe we went a bit far there."
 
 ### Executive Orders and Attorney General Guidelines
 
-Beyond statutes, intelligence activities are governed by executive orders — directives
+Beyond statutes, intelligence activities are governed by executive orders - directives
 from the President that carry legal force. The most important is Executive Order 12333,
 signed by President Reagan in 1981, which remains the primary legal framework governing
 U.S. intelligence activities. EO 12333 prohibits assassination, sets rules for
@@ -118,7 +118,7 @@ are the fence, the AG guidelines are the barbed wire on top.
 
 ### The FISA Court: Secret Law for Secret Agencies
 
-The Foreign Intelligence Surveillance Court (FISC) is a unique institution — a federal
+The Foreign Intelligence Surveillance Court (FISC) is a unique institution - a federal
 court that meets in secret to review applications for surveillance warrants in
 foreign intelligence cases. Critics argue it operates as a rubber stamp; supporters
 argue its existence provides meaningful oversight. The truth, as with most things in
@@ -126,7 +126,7 @@ intelligence law, lies somewhere in between.
 
 When researching FISA court opinions, remember that the court publishes redacted
 versions of significant rulings. Reading FISC opinions is a masterclass in
-understanding what the government thinks it can legally do — and what the court
+understanding what the government thinks it can legally do - and what the court
 thinks the government can legally do. The gap between those two things is where
 the interesting law happens.
 
@@ -137,10 +137,10 @@ paper-shredding service.
 
 {/* ---- Section 3: International Law and Intelligence ---- */}
 
-Intelligence activities do not stop at borders — but the law does. International law
+Intelligence activities do not stop at borders - but the law does. International law
 creates a complex operating environment where an activity that is perfectly legal in
 one country may be a violation of international law when conducted across borders. This
-is where intelligence law gets truly interesting — and truly complicated.
+is where intelligence law gets truly interesting - and truly complicated.
 
 ### Principles of Sovereignty
 
@@ -154,14 +154,14 @@ international law, are within the exclusive domestic jurisdiction of another sta
 Of course, states conduct intelligence operations against each other all the time.
 This creates a fascinating gap between legal theory and state practice. Some legal
 scholars argue that espionage is so widespread it has become customary international
-law. Others maintain it remains illegal but is simply tolerated — an "don't ask,
+law. Others maintain it remains illegal but is simply tolerated - an "don't ask,
 don't tell" of international relations.
 
 ### The UN Charter and the Use of Force
 
 The UN Charter prohibits the use of force against the territorial integrity or
 political independence of any state. This constraint applies to intelligence
-activities that rise to the level of force — cyber attacks that cause physical
+activities that rise to the level of force - cyber attacks that cause physical
 damage, covert actions that involve military operations, or any activity that
 would constitute an act of war under traditional definitions.
 
@@ -174,7 +174,7 @@ consequences ripple outward for decades.
 
 During armed conflict, intelligence activities are governed by the law of armed
 conflict (LOAC) and the Geneva Conventions. Spies captured during wartime are not
-entitled to prisoner of war status — but they are entitled to a trial before execution.
+entitled to prisoner of war status - but they are entitled to a trial before execution.
 Intelligence personnel who engage in torture, disproportionate attacks, or targeting
 of civilians can be prosecuted for war crimes regardless of whether they were
 "just following orders."
@@ -190,7 +190,7 @@ The Tallinn Manuals (1.0 and 2.0), produced by an international group of experts
 convened by the NATO Cooperative Cyber Defence Centre of Excellence, provide guidance
 on how international law applies to cyber operations. They are not binding law, but
 they represent the most authoritative analysis available on how existing legal
-frameworks apply to the digital domain — including intelligence-related cyber
+frameworks apply to the digital domain - including intelligence-related cyber
 activities like hacking, surveillance, and data exfiltration.
 
 {/* ---- Section 4: The Oversight Ecosystem ---- */}
@@ -206,8 +206,8 @@ In the United States, congressional oversight is exercised primarily through the
 House Permanent Select Committee on Intelligence (HPSCI) and the Senate Select
 Committee on Intelligence (SSCI). These committees receive briefings on covert
 actions, review intelligence programs, conduct investigations, and control the
-intelligence budget. The so-called "Gang of Eight" — the leaders of Congress and
-the intelligence committees — receives briefings on the most sensitive covert
+intelligence budget. The so-called "Gang of Eight" - the leaders of Congress and
+the intelligence committees - receives briefings on the most sensitive covert
 actions.
 
 Congressional oversight has a mixed track record. Some committees have been
@@ -226,7 +226,7 @@ And each intelligence agency has its own Inspector General, internal affairs off
 and general counsel.
 
 The problem with executive oversight is that it is, ultimately, the executive
-overseeing itself. This creates an inherent conflict of interest — one reason why
+overseeing itself. This creates an inherent conflict of interest - one reason why
 robust independent oversight is essential.
 
 ### Judicial Oversight
@@ -245,7 +245,7 @@ They investigate allegations of misconduct, waste, fraud, and abuse. The Intelli
 Community Inspector General (IC IG) coordinates IG activities across the IC. IGs have
 the authority to subpoena documents, interview employees, and refer criminal matters
 to the Department of Justice. They are the closest thing the intelligence community
-has to an internal affairs division — minus the dramatic interrogations and
+has to an internal affairs division - minus the dramatic interrogations and
 mustachioed detectives.
 
 Inspector General reports are among the most valuable public sources of information

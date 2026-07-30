@@ -31,7 +31,7 @@ function categoryIcon(category: string) {
 }
 
 function fmt(d: string | Date | null) {
-  if (!d) return "—"
+  if (!d) return " - "
   return new Date(d).toLocaleString()
 }
 

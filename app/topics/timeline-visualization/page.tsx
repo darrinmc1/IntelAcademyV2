@@ -72,7 +72,7 @@ Importing and Managing Data
 
 Timelines are one of the most powerful analytical tools available to intelligence analysts. They transform a jumble of dates, events, and observations into a structured narrative that reveals patterns, gaps, and connections that would otherwise remain hidden.
 
-- **Identifying Sequences:** A timeline shows the chronological order of events, helping analysts understand cause and effect — what happened before, during, and after a critical decision or incident.
+- **Identifying Sequences:** A timeline shows the chronological order of events, helping analysts understand cause and effect - what happened before, during, and after a critical decision or incident.
 - **Spotting Gaps:** When events cluster in certain periods and leave others empty, those gaps can be as informative as the events themselves. A three-month silence in communications may indicate operational security, a change in leadership, or something more significant.
 - **Revealing Correlations:** Placing multiple data streams on the same timeline (financial transactions, travel records, communications intercepts) can reveal correlations that no single source would expose.
 
@@ -80,7 +80,7 @@ Timelines are one of the most powerful analytical tools available to intelligenc
 
 Effective timeline construction follows a systematic process:
 
-1. **Data Collection:** Gather all relevant date-stamped information from available sources. This includes not only obvious events but also metadata — when a document was created, when a phone was last active, when a bank account was opened.
+1. **Data Collection:** Gather all relevant date-stamped information from available sources. This includes not only obvious events but also metadata - when a document was created, when a phone was last active, when a bank account was opened.
 2. **Triage and Filtering:** Not every data point belongs on the timeline. Filter for events that are relevant to the analytical question, significant in their own right, or potentially connected to other events.
 3. **Normalisation:** Standardise date formats and time zones. Analysts working across multiple time zones must convert all timestamps to a single reference (typically UTC) to avoid misalignments.
 4. **Visual Arrangement:** Lay out events chronologically using a tool that allows flexible grouping, colour-coding, and annotation. The physical arrangement should make patterns visible at a glance.
@@ -89,10 +89,10 @@ Effective timeline construction follows a systematic process:
 
 Experienced analysts recognise several recurring patterns in timeline analysis:
 
-- **The Acceleration Pattern:** Events increase in frequency over time, suggesting escalating activity — preparation for an attack, a diplomatic push, or a financial crisis building momentum.
-- **The Rhythmic Pattern:** Events recur at regular intervals — weekly meetings, monthly shipments, annual conferences. Deviations from the rhythm can signal disruption or deception.
+- **The Acceleration Pattern:** Events increase in frequency over time, suggesting escalating activity - preparation for an attack, a diplomatic push, or a financial crisis building momentum.
+- **The Rhythmic Pattern:** Events recur at regular intervals - weekly meetings, monthly shipments, annual conferences. Deviations from the rhythm can signal disruption or deception.
 - **The Trigger Pattern:** A single event is followed by a cascade of related activity. Identifying the trigger event helps analysts distinguish causation from mere correlation.
-- **The Lull Before the Storm:** An unexplained period of quiet preceding a major event. This pattern often indicates operational security — adversaries going dark before an operation.
+- **The Lull Before the Storm:** An unexplained period of quiet preceding a major event. This pattern often indicates operational security - adversaries going dark before an operation.
 
 ## Digital Timeline Tools
 

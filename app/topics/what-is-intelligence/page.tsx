@@ -181,7 +181,7 @@ Tactical Value
 
 Good intelligence is like having tomorrow's newspaper today. Bad intelligence is like having yesterday's weather forecast.
 
-**The Cost of Poor Intelligence** Decisions made without intelligence are just guesses. Decisions made with poor intelligence are worse — they're confident guesses. History is full of catastrophic failures caused by bad intelligence or ignoring good intelligence. As a future intelligence professional, your job is to make sure decision-makers never have to guess.
+**The Cost of Poor Intelligence** Decisions made without intelligence are just guesses. Decisions made with poor intelligence are worse - they're confident guesses. History is full of catastrophic failures caused by bad intelligence or ignoring good intelligence. As a future intelligence professional, your job is to make sure decision-makers never have to guess.
 `
 
 export default function WhatisintelligencePage() {

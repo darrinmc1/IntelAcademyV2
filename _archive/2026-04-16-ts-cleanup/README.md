@@ -6,7 +6,7 @@ These files were moved out of the active source tree as part of a TypeScript err
 Each file was verified to be **orphaned** (zero incoming references from any page, component,
 or config that Next.js actually routes or bundles) before being moved here.
 
-They are preserved in this folder — rather than deleted outright — as a safety net.
+They are preserved in this folder - rather than deleted outright - as a safety net.
 If anything they contained is ever needed, paths inside this folder mirror the originals
 so recovery is a simple `git mv` or drag-and-drop back into place.
 
@@ -14,7 +14,7 @@ so recovery is a simple `git mv` or drag-and-drop back into place.
 
 ### `app/learning-paths/page-enhanced.tsx`
 Alternate/draft version of `app/learning-paths/page.tsx`. Next.js routing only serves
-`page.tsx` — this file was never reachable in production. Zero imports from elsewhere.
+`page.tsx` - this file was never reachable in production. Zero imports from elsewhere.
 Carried several TS errors (missing `slug` property on learning path type, etc.).
 
 ### `app/topics/[slug]/page-enhanced.tsx`
@@ -25,12 +25,12 @@ not imported by anything. Dead code.
 Only referenced by the two `page-enhanced.tsx` files above. Once those are orphans,
 so is this. Carried 16 TS errors. **Note:** other components in the
 `components/scroll-animations/` folder (staggered-content-reveal, parallax-scroll-section,
-scroll-progress-indicator) are still in active use — only this one was removed.
+scroll-progress-indicator) are still in active use - only this one was removed.
 
 ### `components/timeline/timeline-event-details.tsx`
 Imported 12 sibling modules from `./timeline/*` (timeline-event, hover-card, event-card,
 timeline-navigation, event-filter, search-bar, export-options, bookmark-system,
-case-study-timeline, learning-objectives, analysis-exercises, historical-context) — none
+case-study-timeline, learning-objectives, analysis-exercises, historical-context) - none
 of which exist anywhere in the repo. The component itself was also never imported by
 anything. Clearly an abandoned feature branch. Carried 12 TS errors.
 

@@ -45,7 +45,7 @@ export default function About() {
             <p>
               Our platform serves complete beginners, students, law enforcement officers, and private sector analysts
               who need both foundational training and refresher modules. By providing open access to professional-grade
-              educational resources, we aim to elevate the standard of intelligence analysis across all sectors.
+              educational resources, we aim to improve the standard of intelligence analysis across all sectors.
             </p>
           </section>
 

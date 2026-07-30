@@ -106,7 +106,7 @@ export const agentMenagerie: AgentAnimal[] = [
     emoji: "🦫",
     icon: "FileText",
     imagePath: "/mascots/the-scribe.svg",
-    description: "Builds reports like dams — methodical, sturdy, and occasionally impressive.",
+    description: "Builds reports like dams - methodical, sturdy, and occasionally impressive.",
     personality: "Patient, detail-oriented, never misses a typo.",
     tierThresholds: { recruit: 1, operative: 4, specialist: 8 },
     tierLabels: { recruit: "Scribbler", operative: "Wordsmith", specialist: "Master Scribe" },

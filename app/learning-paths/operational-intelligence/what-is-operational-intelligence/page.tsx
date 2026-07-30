@@ -75,7 +75,7 @@ export default function WhatIsOperationalIntelligence() {
             players. It's the pre-game analysis.
           </li>
           <li>
-            <b>The &quot;Why&quot; for the &quot;What&quot;:</b> Provides the crucial context for tactical teams. It&apos;s the mission briefing
+            <b>The &quot;Why&quot; for the &quot;What&quot;:</b> Provides the important context for tactical teams. It&apos;s the mission briefing
             that prevents boots-on-the-ground from just winging it.
           </li>
           <li>

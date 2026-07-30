@@ -19,7 +19,7 @@ Or: How to Prove Yourself Wrong in the Most Structured Way Possible
 ## What is ACH? (Besides a Sound You Make When Realizing You've Been Wrong All Along)
 
 Analysis of Competing Hypotheses (ACH) is a structured analytical technique that helps intelligence
-analysts avoid the cognitive trap of falling in love with their first hypothesis—a relationship that, like
+analysts avoid the cognitive trap of falling in love with their first hypothesis - a relationship that, like
 many first loves, is often doomed to heartbreak and embarrassment.
 
 Developed by Richards Heuer at the CIA, ACH is essentially a methodical way of playing devil's advocate
@@ -47,7 +47,7 @@ across the top and evidence down the side.
 - **Draw tentative conclusions** - Figure out which hypothesis has survived your brutal
 assault of evidence. It's rarely the one you started with, much to your ego's dismay.
 
-- **Analyze sensitivity** - Ask yourself: "What if that crucial piece of evidence turns out
+- **Analyze sensitivity** - Ask yourself: "What if that important piece of evidence turns out
 to be from a source who also believes the Earth is flat?"
 
 - **Report conclusions** - Explain your findings in a way that doesn't reveal how attached
@@ -56,16 +56,16 @@ you were to your original, now-disproven theory.
 ## Why ACH Works (When You Actually Follow It)
 
 ACH forces analysts to consider alternative explanations rather than just gathering evidence to support
-their initial hunch—a cognitive bias known as "confirmation bias" or, in technical terms, "only seeing
+their initial hunch - a cognitive bias known as "confirmation bias" or, in technical terms, "only seeing
 what you want to see."
 
 By focusing on disproving hypotheses rather than proving them, ACH helps analysts avoid the trap of
-becoming emotionally attached to their favorite theory—a relationship that should have ended several
+becoming emotionally attached to their favorite theory - a relationship that should have ended several
 pieces of contradictory evidence ago.
 
 ### ACH Reality Check
 
-Remember: In the intelligence world, being wrong loudly and confidently isn't just embarrassing—it can
+Remember: In the intelligence world, being wrong loudly and confidently isn't just embarrassing - it can
 lead to real-world consequences. ACH helps you be wrong in private first, so you can be right when it
 counts.
 
@@ -125,11 +125,11 @@ Analysis of Competing Hypotheses (ACH) is one of the most widely taught structur
 
 ACH follows a structured eight-step process:
 
-1. **Identify the Possible Hypotheses:** Generate a set of plausible explanations for the phenomenon under investigation. Include the null hypothesis — that the observed situation is the result of normal, innocent activity. Analysts often stop at two or three hypotheses; the technique works best when at least four or five are considered.
+1. **Identify the Possible Hypotheses:** Generate a set of plausible explanations for the phenomenon under investigation. Include the null hypothesis - that the observed situation is the result of normal, innocent activity. Analysts often stop at two or three hypotheses; the technique works best when at least four or five are considered.
 2. **List the Evidence and Assumptions:** Catalogue all relevant evidence, including the absence of expected evidence. Distinguish between confirmed facts, reported information, and analytical assumptions.
 3. **Build the Matrix:** Create a matrix with hypotheses as columns and evidence as rows. For each cell, assess whether the evidence is consistent (+), inconsistent (-), or irrelevant (N/A) to the hypothesis.
 4. **Refine the Matrix:** Re-examine each entry. Evidence that appears consistent with all hypotheses may be too general to be diagnostic. Evidence that is inconsistent with a hypothesis is analytically valuable and should be scrutinised for accuracy.
-5. **Draw Tentative Conclusions:** The hypothesis with the fewest and least damaging inconsistencies is tentatively the strongest. However, also consider the hypothesis that would be most damaging if wrong — sensitivity to being wrong is an important analytical consideration.
+5. **Draw Tentative Conclusions:** The hypothesis with the fewest and least damaging inconsistencies is tentatively the strongest. However, also consider the hypothesis that would be most damaging if wrong - sensitivity to being wrong is an important analytical consideration.
 6. **Consider the Sensitivity of Conclusions:** Test how robust the conclusion is to changes in key assumptions. If a single piece of evidence shifts the assessment, the conclusion is fragile and should be caveated accordingly.
 7. **Identify Diagnostic Evidence:** Determine what new evidence would change the assessment. This focuses future collection efforts and gives consumers a basis for monitoring the situation.
 8. **Document the Reasoning:** The ACH matrix itself serves as documentation of the analytical process, allowing reviewers and consumers to understand how the conclusion was reached.
@@ -140,7 +140,7 @@ Even experienced analysts make predictable errors when applying ACH:
 
 - **Including the Hypothesis You Want to Be True:** Analysts may unconsciously include a favoured hypothesis and then treat the matrix as confirmation. The technique works best when hypotheses are generated before evidence is reviewed.
 - **Neglecting the Null Hypothesis:** The "nothing unusual is happening" hypothesis is often dismissed too quickly. Strategic surprises often occur because analysts rejected the null hypothesis based on ambiguous evidence.
-- **Evidence that Fits Everything:** Generic evidence — "the country has a history of regional tensions" — is consistent with many hypotheses and is not diagnostically useful. ACH works best when evidence is specific and discriminating.
+- **Evidence that Fits Everything:** Generic evidence - "the country has a history of regional tensions" - is consistent with many hypotheses and is not diagnostically useful. ACH works best when evidence is specific and discriminating.
 - **Treating ACH Output as Truth:** ACH is a thinking tool, not a truth machine. The matrix reflects the analyst's current understanding and is limited by the quality and completeness of available evidence.
 
 `

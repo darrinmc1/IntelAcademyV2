@@ -150,7 +150,7 @@ The Aridan Valley has long been a hotbed of insurgent activity. The Aridan Valle
 
 Why This Is a Bad Report
 
-- **Buried Lead:** The most important piece of information—the warning of a future attack—is at the very end of the paragraph. A busy commander might miss it entirely.
+- **Buried Lead:** The most important piece of information - the warning of a future attack - is at the very end of the paragraph. A busy commander might miss it entirely.
 - **Academic Structure:** The report is written like a mystery novel or an academic paper, building a case before revealing the conclusion. Intelligence writing must do the opposite.
 - **Lack of Headings:** The single block of text makes it difficult to scan for key information.
 - **Inefficient:** It forces the reader to process a lot of background information before getting to the point.

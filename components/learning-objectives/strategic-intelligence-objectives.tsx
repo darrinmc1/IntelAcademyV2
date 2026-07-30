@@ -19,7 +19,7 @@ const objectives: Objective[] = [
 export const StrategicIntelligenceObjectives: React.FC<StrategicIntelligenceObjectivesProps> = ({ completedModules }) => {
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4">Learning Objectives</h2>
+      <h2 className="text-2xl font-bold mb-4 tabular-nums">Learning Objectives</h2>
       <ul className="space-y-2">
         {objectives.map((objective) => (
           <li key={objective.id} className="flex items-center">

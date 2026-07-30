@@ -71,7 +71,7 @@ const sampleLearningPaths = [
     id: "osint",
     title: "Open Source Intelligence (OSINT)",
     description:
-      "Master the art of gathering and analyzing publicly available information using cutting-edge tools and techniques.",
+      "Master the art of gathering and analyzing publicly available information using modern tools and techniques.",
     image: "/osint-banner-large.png",
     href: "/learning-paths/osint",
     difficulty: "Intermediate" as const,

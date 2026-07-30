@@ -36,7 +36,7 @@ const TOOLS: IntelTool[] = [
     questions: [
       "What is the threat actor or entity being assessed?",
       "What is the nature of the threat they pose? (cyber, physical, espionage, etc.)",
-      "What is the likelihood of this threat manifesting? (Low / Medium / High) — explain your reasoning.",
+      "What is the likelihood of this threat manifesting? (Low / Medium / High) - explain your reasoning.",
       "What would be the potential impact if the threat were realized?",
       "What mitigation measures are currently in place or recommended?",
     ],

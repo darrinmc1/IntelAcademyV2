@@ -258,7 +258,7 @@ Protect intelligence analysis from political or organizational pressure to suppo
 After major decisions, review the intelligence that informed them to identify lessons for improving the
 intelligence-decision relationship.
 
-Effective intelligence-based decision making is not simply about having more information—it's about
+Effective intelligence-based decision making is not simply about having more information - it's about
 having the right information, properly analyzed and clearly communicated, at the right time to support
 specific decisions.
 

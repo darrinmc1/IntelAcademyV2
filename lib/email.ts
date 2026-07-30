@@ -1,4 +1,4 @@
-// lib/email.ts — Resend transactional send
+// lib/email.ts - Resend transactional send
 // Install: npm i resend
 //
 // Usage:
@@ -23,12 +23,12 @@ async function send(
   html: string
 ): Promise<SendResult> {
   if (!resend) {
-    console.warn("[email] RESEND_API_KEY not set — skipping send", { to, subject });
+    console.warn("[email] RESEND_API_KEY not set - skipping send", { to, subject });
     return { ok: false, reason: "resend_not_configured" };
   }
   if (FROM === "noreply@example.com") {
     console.warn(
-      "[email] RESEND_FROM not set — using placeholder that Resend will reject. Set RESEND_FROM to a verified sender.",
+      "[email] RESEND_FROM not set - using placeholder that Resend will reject. Set RESEND_FROM to a verified sender.",
       { to, subject }
     );
   }
@@ -56,7 +56,7 @@ export async function sendWelcome(args: { email: string; name?: string }) {
       <p>${greeting}</p>
       <p>Thanks for signing up. You'll be the first to know about new modules, updates, and early-access features.</p>
       <p>If this wasn't you, just ignore this email and you won't hear from us again.</p>
-      <p style="margin-top: 32px; color: #888; font-size: 14px;">— The ${SITE_NAME} team</p>
+      <p style="margin-top: 32px; color: #888; font-size: 14px;">- The ${SITE_NAME} team</p>
     </div>
   `;
   return send(args.email, subject, html);
@@ -67,7 +67,7 @@ export async function sendAdminNotification(args: {
   payload: Record<string, unknown>;
 }) {
   if (!NOTIFY) {
-    console.warn("[email] NOTIFY_EMAIL not set — skipping admin notification", {
+    console.warn("[email] NOTIFY_EMAIL not set - skipping admin notification", {
       kind: args.kind,
     });
     return { ok: false as const, reason: "notify_email_not_set" };
@@ -97,7 +97,7 @@ export async function sendTopicRequestEmail(
   description: string
 ) {
   if (!NOTIFY) {
-    console.warn("[email] NOTIFY_EMAIL not set — skipping topic request email");
+    console.warn("[email] NOTIFY_EMAIL not set - skipping topic request email");
     return { ok: false as const, reason: "notify_email_not_set" };
   }
   const subject = "[" + SITE_NAME + "] New Topic Request: " + topic;
@@ -114,7 +114,7 @@ function shell(title: string, body: string) {
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 560px; margin: 0 auto; padding: 24px;">
       <h2 style="color:#2E4A7C;">${title}</h2>
       ${body}
-      <p style="margin-top:32px;color:#888;font-size:14px;">— ${SITE_NAME}</p>
+      <p style="margin-top:32px;color:#888;font-size:14px;">- ${SITE_NAME}</p>
     </div>
   `;
 }
@@ -126,7 +126,7 @@ export async function sendReviewSubmitted(args: {
   submissionId: string;
 }) {
   if (!NOTIFY) {
-    console.warn("[email] NOTIFY_EMAIL not set — skipping review-submitted email");
+    console.warn("[email] NOTIFY_EMAIL not set - skipping review-submitted email");
     return { ok: false as const, reason: "notify_email_not_set" };
   }
   const subject = `[${SITE_NAME}] Review needed: ${args.contentTitle}`;

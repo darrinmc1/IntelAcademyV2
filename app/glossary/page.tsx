@@ -368,7 +368,7 @@ export default function GlossaryPage() {
 
       <div className="text-center text-sm text-slate-500 mt-8">
         <p>
-          Remember: In intelligence work, a sense of humor is not just recommended—it&apos;s classified as essential
+          Remember: In intelligence work, a sense of humor is not just recommended - it&apos;s classified as essential
           equipment.
         </p>
         <p className="mt-2">

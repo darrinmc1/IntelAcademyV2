@@ -75,7 +75,7 @@ Advanced Analysis Features
 Social Network Analysis (SNA) is a methodological approach to understanding social structures through the mapping and measurement of relationships and flows between connected entities. In intelligence analysis, SNA transforms a collection of individual data points into a picture of group dynamics, influence patterns, and organisational structure.
 
 - **Nodes and Ties:** The fundamental building blocks of any network. Nodes represent entities (people, organisations, locations, accounts) and ties represent relationships or interactions between them (phone calls, meetings, financial transactions, emails).
-- **Networks as Structures:** SNA treats networks as structures with measurable properties — density, centrality, clustering, and brokerage. These properties reveal things about the network that no individual data point can show.
+- **Networks as Structures:** SNA treats networks as structures with measurable properties - density, centrality, clustering, and brokerage. These properties reveal things about the network that no individual data point can show.
 - **Dynamic Analysis:** Networks are not static. SNA can track how relationships form, strengthen, weaken, and dissolve over time, revealing the evolution of criminal or terrorist organisations.
 
 ## Key SNA Metrics for Intelligence
@@ -83,7 +83,7 @@ Social Network Analysis (SNA) is a methodological approach to understanding soci
 Several network metrics have proven particularly valuable in intelligence analysis:
 
 - **Degree Centrality:** The number of direct connections a node has. A high-degree node is well-connected and may serve as a hub for information flow. In a criminal network, high-degree individuals are often communicators or coordinators.
-- **Betweenness Centrality:** Measures how often a node sits on the shortest path between other nodes. High-betweenness nodes act as bridges between different parts of the network. Removing them can fragment the network — making them priority targets for disruption.
+- **Betweenness Centrality:** Measures how often a node sits on the shortest path between other nodes. High-betweenness nodes act as bridges between different parts of the network. Removing them can fragment the network - making them priority targets for disruption.
 - **Closeness Centrality:** How quickly a node can reach all other nodes in the network. High-closeness nodes have efficient access to information and can disseminate messages rapidly.
 - **Eigenvector Centrality:** A measure of influence that accounts not just for how many connections a node has, but how well-connected those connections are. A node connected to influential nodes is itself more influential.
 
@@ -91,7 +91,7 @@ Several network metrics have proven particularly valuable in intelligence analys
 
 SNA enables analysts to identify specific roles within a network based on structural position:
 
-- **The Hub:** A central node with many connections. Hubs are visible but vulnerable — their high degree makes them easier to identify through surveillance.
+- **The Hub:** A central node with many connections. Hubs are visible but vulnerable - their high degree makes them easier to identify through surveillance.
 - **The Broker (or Gatekeeper):** A node that bridges otherwise separate clusters. Brokers control information flow between groups and are critical to network cohesion.
 - **The Isolate:** A node with few or no connections. In intelligence networks, isolates may be sleeper agents, compartmented cells, or individuals under active investigation.
 - **The Liaison:** A node connected to multiple clusters without belonging fully to any. Liaisons facilitate coordination between different groups or cells.
@@ -101,10 +101,10 @@ SNA enables analysts to identify specific roles within a network based on struct
 SNA moves from academic concept to operational tool through a systematic analytical process:
 
 1. **Define the Network Boundary:** Which entities should be included? A criminal network's boundaries are rarely clear. Start with known targets and expand outward through their connections.
-2. **Collect Relationship Data:** Gather all available data about interactions between entities — call records, financial transactions, travel together, shared addresses, communications content.
+2. **Collect Relationship Data:** Gather all available data about interactions between entities - call records, financial transactions, travel together, shared addresses, communications content.
 3. **Build the Matrix:** Convert relationship data into a matrix where rows and columns are entities and cells indicate the presence, frequency, or strength of a relationship.
 4. **Visualise and Analyse:** Import the matrix into Analyst's Notebook or a dedicated SNA tool. Apply centrality metrics, identify clusters, and look for structural anomalies.
-5. **Interpret and Report:** Translate network metrics into operational judgements. "N32 has the highest betweenness centrality" becomes "N32 appears to be the primary link between the two cells — disrupting this node would fragment communications."
+5. **Interpret and Report:** Translate network metrics into operational judgements. "N32 has the highest betweenness centrality" becomes "N32 appears to be the primary link between the two cells - disrupting this node would fragment communications."
 
 `
 

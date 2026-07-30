@@ -54,7 +54,7 @@ export function ParallaxHeroOptimized() {
             Intelligence Analyst Academy
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 font-light">
-            Master the art and science of intelligence analysis with cutting-edge training
+            Master the art and science of intelligence analysis with modern training
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

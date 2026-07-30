@@ -37,7 +37,7 @@ export function ComingSoonOverlay({
         {/* Content */}
         <div className="text-center">
           <div className="text-xs uppercase tracking-widest font-semibold text-cyan-400 mb-2">
-            Classified — Under Development
+            Classified - Under Development
           </div>
           <h2 className="text-3xl font-bold text-white mb-3">{title}</h2>
           <p className="text-slate-300 mb-2">{description}</p>

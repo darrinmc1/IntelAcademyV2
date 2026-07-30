@@ -84,7 +84,7 @@ Open source intelligence draws from an enormous range of publicly available info
 - **Broadcast Media:** Television, radio, and podcasts. News broadcasts can provide real-time information from conflict zones or disaster areas, though the analyst must account for editorial bias.
 - **Online Sources:** Websites, forums, blogs, social media platforms, and video-sharing sites. The internet has democratised access to information but also introduced unprecedented volumes of noise and disinformation.
 - **Commercial Data:** Satellite imagery, financial data, shipping records, and business registries. Commercial providers now offer capabilities once reserved for national intelligence agencies.
-- **Grey Literature:** Conference proceedings, academic preprints, technical reports, and working papers. These sit between published and unpublished — often rich in detail but inconsistent in quality control.
+- **Grey Literature:** Conference proceedings, academic preprints, technical reports, and working papers. These sit between published and unpublished - often rich in detail but inconsistent in quality control.
 
 ## Evaluating OSINT Sources
 
@@ -93,7 +93,7 @@ Not all open sources are equally reliable. Analysts must apply the same source e
 - **Proximity:** How close is the source to the event or information? A first-hand account carries more weight than a third-hand retelling.
 - **Motivation:** Why is the source sharing this information? Propaganda, disinformation, and commercial interests can all colour what appears to be objective reporting.
 - **Corroboration:** Can the information be confirmed through independent sources? Single-source OSINT should always be treated as provisional.
-- **Timeliness:** When was the information collected or published? OSINT decays rapidly — a social media post from six months ago may no longer reflect the current situation.
+- **Timeliness:** When was the information collected or published? OSINT decays rapidly - a social media post from six months ago may no longer reflect the current situation.
 
 ## OSINT Tools and Techniques
 

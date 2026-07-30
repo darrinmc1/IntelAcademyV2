@@ -73,7 +73,7 @@ export default async function AdminDashboard() {
     console.error("[admin dashboard] failed to load live data:", error)
   }
 
-  const num = (n: number | undefined) => (stats ? String(n ?? 0) : "—")
+  const num = (n: number | undefined) => (stats ? String(n ?? 0) : " - ")
 
   const statCards = [
     { title: "Published Content", value: num(stats?.publishedContent), icon: BookOpen, href: "/admin/topics" },
@@ -99,7 +99,7 @@ export default async function AdminDashboard() {
 
       {!dbOk && (
         <div className="mb-6 rounded-md border border-destructive/40 bg-destructive/10 p-4 text-sm text-destructive">
-          Live data could not be loaded from the database. Showing placeholders — check the connection and reload.
+          Live data could not be loaded from the database. Showing placeholders - check the connection and reload.
         </div>
       )}
 

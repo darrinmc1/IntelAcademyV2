@@ -195,7 +195,7 @@ export async function updateUserProfile(id: string, data: {
 }) {
   const fields: string[] = []
   
-  // Build dynamic update — using individual queries for safety
+  // Build dynamic update - using individual queries for safety
   if (data.xp !== undefined) {
     await sql`UPDATE users SET xp = ${data.xp}, updated_at = NOW() WHERE id = ${id}`
   }

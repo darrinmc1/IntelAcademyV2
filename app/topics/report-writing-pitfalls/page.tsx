@@ -105,7 +105,7 @@ after the decision has been made.
 ### Pitfall #7: The Echo Chamber
 
 Your report simply repeats conventional wisdom or existing assessments without adding new insights. It's the
-intelligence equivalent of a cover band—technically correct but not bringing anything new to the table.
+intelligence equivalent of a cover band - technically correct but not bringing anything new to the table.
 
 **The Problem:** Failing to challenge assumptions, not considering alternative hypotheses, and
 simply echoing existing views. Your report should add value, not just volume.
@@ -131,11 +131,11 @@ The best intelligence in the world is useless if it's not communicated effective
 pitfalls, you can ensure your reports actually influence decisions rather than collecting dust or becoming
 impromptu coffee coasters.
 
-Remember, your goal is not just to be right—it's to be read, understood, and acted upon. Write reports that
+Remember, your goal is not just to be right - it's to be read, understood, and acted upon. Write reports that
 decision-makers want to read, not reports they feel obligated to skim.
 
 The perfect intelligence report is like a unicorn: everyone has heard of it, but no one has actually seen
-one. But with these tips, you might just create a horse with a party hat—and sometimes, that's close enough.
+one. But with these tips, you might just create a horse with a party hat - and sometimes, that's close enough.
 
 )
 
@@ -155,7 +155,7 @@ Poor report structure is the most common reason analytical products go unread:
 
 - **The Inverted Pyramid:** Place the most important information at the top. A decision-maker should be able to read the first paragraph and understand the key judgement. Subsequent paragraphs provide supporting detail in descending order of importance.
 - **The Wall of Text:** Blocks of text longer than six sentences discourage reading. Break long paragraphs into shorter ones. Use subheadings to guide the reader through the report's structure. Use bullet points for lists of facts or options.
-- **Missing Signposts:** Each section should begin with a sentence that tells the reader what this section covers. "The following section examines three alternative explanations for the observed activity" is a signpost. Without signposts, readers must infer the structure from the content — and often get it wrong.
+- **Missing Signposts:** Each section should begin with a sentence that tells the reader what this section covers. "The following section examines three alternative explanations for the observed activity" is a signpost. Without signposts, readers must infer the structure from the content - and often get it wrong.
 - **Weak Transitions:** Jumping between topics without transitional sentences confuses readers. "Having established the threat actor's capabilities, we now turn to their likely intent" connects two sections and helps the reader follow the analytical argument.
 
 ## Audience Awareness
@@ -164,14 +164,14 @@ The most common cause of ineffective intelligence writing is writing for the wro
 
 - **Know Your Consumer:** A tactical report for an operator needs specific, actionable details and minimal background. A strategic assessment for a policy-maker needs context, alternatives, and implications. Writing the wrong type of report for the consumer guarantees it will not be read.
 - **Assume Limited Time:** Most intelligence consumers have more reading than time. Write as if the reader will only read the first paragraph. If the key judgement is not in that paragraph, you have failed.
-- **Provide Executive Summary:** For reports longer than two pages, include an executive summary or key judgements section at the beginning. This section should be self-contained — the reader should understand the assessment without reading the supporting text.
+- **Provide Executive Summary:** For reports longer than two pages, include an executive summary or key judgements section at the beginning. This section should be self-contained - the reader should understand the assessment without reading the supporting text.
 - **Answer the Question:** Before writing, confirm what question the consumer wants answered. A brilliantly written report that answers the wrong question is worse than a mediocre report that answers the right one.
 
 ## Handling Uncertainty
 
 Intelligence reports must communicate what is known, what is not known, and how confident the analyst is in their assessment:
 
-- **The Confidence Scale:** Use a standardised confidence scale consistently — for example, High Confidence (well-supported by multiple sources), Moderate Confidence (plausible but with gaps), and Low Confidence (speculative or single source). Define what each level means in the report's front matter.
+- **The Confidence Scale:** Use a standardised confidence scale consistently - for example, High Confidence (well-supported by multiple sources), Moderate Confidence (plausible but with gaps), and Low Confidence (speculative or single source). Define what each level means in the report's front matter.
 - **Source Limitations:** Be explicit about the limitations of your sources. A report based on a single source of unknown reliability should carry a lower confidence level than one based on multiple corroborated sources, regardless of how compelling the single source appears.
 - **Alternative Explanations:** Acknowledge alternative explanations for the observed phenomena, even if you ultimately reject them. This demonstrates analytical rigour and prevents consumers from discovering alternatives you failed to consider.
 - **What Would Change Your Assessment:** The most valuable thing an analyst can tell a consumer is what new information would change their assessment. This empowers the consumer to monitor the situation and understand when the analytical picture has fundamentally shifted.

@@ -25,7 +25,7 @@ const phases: CyclePhase[] = [
   {
     id: "collection",
     name: "Collection ",
-    description: "This phase gathers raw information from various sources—human intelligence, signals intelligence, imagery, and open sources—to acquire the data necessary to address the identified intelligence requirements.n",
+    description: "This phase gathers raw information from various sources - human intelligence, signals intelligence, imagery, and open sources - to acquire the data necessary to address the identified intelligence requirements.n",
     color: "#10B981",
     icon: "📡",
     position: { x: 350, y: 120 },

@@ -104,7 +104,7 @@ export function IntelWizard({ tool }: { tool: IntelTool }) {
       incrementFreeTrial()
       setPhase("result")
     } catch (err) {
-      setError("Network error — check your connection and try again.")
+      setError("Network error - check your connection and try again.")
       setPhase("error")
     }
   }, [tool, answers])
@@ -131,7 +131,7 @@ export function IntelWizard({ tool }: { tool: IntelTool }) {
           <Loader2 className="h-6 w-6 animate-spin" />
         </div>
         <div>
-          <p className="text-lg font-semibold text-foreground">Generating your {tool.name.toLowerCase()}&hellip;</p>
+          <p className="text-lg font-semibold text-foreground tabular-nums">Generating your {tool.name.toLowerCase()}&hellip;</p>
           <p className="mt-1 text-sm text-muted-foreground">
             Applying structured analytic techniques to your inputs using AI.
           </p>
@@ -197,7 +197,7 @@ export function IntelWizard({ tool }: { tool: IntelTool }) {
     return (
       <div className="space-y-4">
         <Card className="border-destructive/30 bg-destructive/5 p-6 text-center">
-          <p className="text-lg font-semibold text-destructive">Something went wrong</p>
+          <p className="text-lg font-semibold text-destructive tabular-nums">Something went wrong</p>
           <p className="mt-2 text-sm text-muted-foreground">{error}</p>
           <Button
             variant="outline"
@@ -232,7 +232,7 @@ export function IntelWizard({ tool }: { tool: IntelTool }) {
       </div>
 
       <div className="mt-8">
-        <label htmlFor="answer" className="block text-lg font-medium text-foreground text-balance">
+        <label htmlFor="answer" className="block text-lg font-medium text-foreground text-balance tabular-nums">
           {tool.questions[step]}
         </label>
         <Textarea
@@ -296,7 +296,7 @@ function SubscribeWall() {
       <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-accent/10">
         <Crown className="h-8 w-8 text-accent" />
       </div>
-      <h2 className="mt-6 text-2xl font-bold text-foreground">Unlock unlimited AI intelligence reports</h2>
+      <h2 className="mt-6 text-2xl font-bold text-foreground tabular-nums">enable unlimited AI intelligence reports</h2>
       <p className="mx-auto mt-3 max-w-md text-muted-foreground">
         Free tier: one report with Gemini Flash. Pro subscription unlocks advanced AI models,
         and other advanced models for deeper analysis.

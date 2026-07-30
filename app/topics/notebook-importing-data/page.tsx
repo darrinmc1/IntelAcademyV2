@@ -95,7 +95,7 @@ A structured import process ensures data integrity and maximises analytical valu
 1. **Data Preparation:** Before importing, clean and normalise the source data. Standardise date formats, remove duplicates, resolve inconsistencies in names or identifiers, and ensure that relationship data includes both endpoints.
 2. **Schema Mapping:** Define how fields in the source data map to entity types, link types, and attributes in Analyst's Notebook. For example, a "phone_number" column in the spreadsheet maps to the "Phone" attribute of a "Person" entity type.
 3. **Import Execution:** Run the import and review the results immediately. Check entity counts, link counts, and attribute values to confirm the import matched expectations.
-4. **Validation:** Spot-check imported data against the source to ensure accuracy. Pay particular attention to links — incorrectly imported relationships are harder to spot than missing entities.
+4. **Validation:** Spot-check imported data against the source to ensure accuracy. Pay particular attention to links - incorrectly imported relationships are harder to spot than missing entities.
 5. **Cleanup:** Remove or merge any duplicate entities created by the import process. Apply styling to distinguish imported data from manually entered data.
 
 ## Common Import Pitfalls

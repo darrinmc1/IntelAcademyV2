@@ -15,7 +15,7 @@ uncertainties that keep decision-makers awake at 3 AM wondering if they should h
 instead.
 
 In simpler terms, they&apos;re the &quot;need to know&quot; items that drive intelligence collection, analysis, and
-production. Think of them as the intelligence community&apos;s version of a shopping list—except instead of
+production. Think of them as the intelligence community&apos;s version of a shopping list - except instead of
 &quot;milk, eggs, and bread,&quot; it&apos;s &quot;who, what, where, when, how, and why is this threat actor planning to ruin
 our day?&quot;
 
@@ -94,7 +94,7 @@ export default function IntelligenceRequirementsPage() {
         difficulty="Beginner"
         category="Collection Management"
         mascot="foundations"
-        mascotMessage="Welcome, recruit. Let's learn how to ask for what we actually need—and convince collectors it's not impossible."
+        mascotMessage="Welcome, recruit. Let's learn how to ask for what we actually need - and convince collectors it's not impossible."
       >
         <EnhancedLessonContentLoader content={topicContent} topic="intelligence-requirements" />
       </MicroLesson>

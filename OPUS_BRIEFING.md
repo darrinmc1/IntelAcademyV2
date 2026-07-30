@@ -9,8 +9,8 @@
 ## EXECUTIVE SUMMARY
 
 Two features need implementation:
-1. **Admin Access Control** — Restrict `/admin/*` routes to authenticated admins only (currently open)
-2. **Content Review Workflow** — Create approval process for content (non-admins submit, admins review/approve)
+1. **Admin Access Control** - Restrict `/admin/*` routes to authenticated admins only (currently open)
+2. **Content Review Workflow** - Create approval process for content (non-admins submit, admins review/approve)
 
 **Timeline estimate:** 6-8 hours total  
 **Recommended order:** Task 1 first (blocker), then Task 2
@@ -27,7 +27,7 @@ Two features need implementation:
 - **Email:** Resend API (configured but env vars missing in production)
 
 ### Recent Activity
-- Last commit: `aeb84e1` — "Add honeypot protection to waitlist popup"
+- Last commit: `aeb84e1` - "Add honeypot protection to waitlist popup"
 - Active development (commits every few days)
 - Multiple versions in git history; V3 is current live version
 
@@ -35,7 +35,7 @@ Two features need implementation:
 
 ## SYSTEM-BY-SYSTEM STATUS
 
-### 1. EMAIL SYSTEM — ✅ Partially Functional
+### 1. EMAIL SYSTEM - ✅ Partially Functional
 **Location:** `/lib/email.ts`  
 **What's working:**
 - Resend API integration implemented
@@ -44,7 +44,7 @@ Two features need implementation:
 
 **What's broken:**
 - ❌ Env vars not set in production: `RESEND_API_KEY`, `RESEND_FROM`, `NOTIFY_EMAIL`
-- Currently falls back to warning logs: "RESEND_API_KEY not set — skipping send"
+- Currently falls back to warning logs: "RESEND_API_KEY not set - skipping send"
 - HTML templates use string concatenation (no component reuse)
 - No delivery tracking or bounce handling
 - No A/B testing capability
@@ -53,7 +53,7 @@ Two features need implementation:
 
 ---
 
-### 2. REQUEST TOPIC SYSTEM — ✅ Functional but Incomplete
+### 2. REQUEST TOPIC SYSTEM - ✅ Functional but Incomplete
 **Locations:**
 - API: `/app/api/request-topic/route.ts`
 - Form: `/app/coming-soon/request-topic-form.tsx` + `/app/request-topic/page.tsx`
@@ -67,7 +67,7 @@ Two features need implementation:
 - Publicly accessible at `/request-topic`
 
 **What's broken:**
-- ❌ No database persistence — requests disappear after email
+- ❌ No database persistence - requests disappear after email
 - ❌ No admin UI to view/track/respond to requests
 - ❌ No user confirmation email (only admin notification)
 - No request status tracking or followup workflow
@@ -77,7 +77,7 @@ Two features need implementation:
 
 ---
 
-### 3. UPDATING SYSTEM — ⚠️ Exists but Needs Audit Trail
+### 3. UPDATING SYSTEM - ⚠️ Exists but Needs Audit Trail
 **Locations:** `/app/admin/content-manager/topics/`
 
 **What's working:**
@@ -96,7 +96,7 @@ Two features need implementation:
 
 ---
 
-### 4. REVIEWING SYSTEM — ❌ NOT IMPLEMENTED
+### 4. REVIEWING SYSTEM - ❌ NOT IMPLEMENTED
 **Status:** Does not exist in codebase
 
 **What's needed:**
@@ -114,17 +114,17 @@ Two features need implementation:
 **Status:** ✅ Well-structured, gamification-ready
 
 Tables present:
-- `user_profiles` — core user data + XP, ranks, streaks (no `role` column yet)
-- `lesson_progress` — completion tracking
-- `user_badges` — achievements
-- `leaderboard` — auto-updated rankings
-- `subscriptions` — Stripe integration (prep)
-- `certifications` — cert tracking
+- `user_profiles` - core user data + XP, ranks, streaks (no `role` column yet)
+- `lesson_progress` - completion tracking
+- `user_badges` - achievements
+- `leaderboard` - auto-updated rankings
+- `subscriptions` - Stripe integration (prep)
+- `certifications` - cert tracking
 
 **Missing tables (need to add):**
-- `content_submissions` — for review workflow
-- `review_audit_log` — immutable change history
-- `content_requests` — for request-topic persistence
+- `content_submissions` - for review workflow
+- `review_audit_log` - immutable change history
+- `content_requests` - for request-topic persistence
 
 ---
 
@@ -524,11 +524,11 @@ Scenario: Admin rejects with feedback
 ## RECOMMENDED READING FOR CONTEXT
 
 **In codebase:**
-- `/lib/auth.ts` — JWT implementation (understand before Task 1)
-- `/app/admin/content-manager/topics/topic-editor.tsx` — how content is edited
-- `/app/actions/content-manager.ts` — content save logic
-- `/lib/email.ts` — email integration template
-- `/database/schema.sql` — full schema
+- `/lib/auth.ts` - JWT implementation (understand before Task 1)
+- `/app/admin/content-manager/topics/topic-editor.tsx` - how content is edited
+- `/app/actions/content-manager.ts` - content save logic
+- `/lib/email.ts` - email integration template
+- `/database/schema.sql` - full schema
 
 **Reference:**
 - Next.js middleware docs (for auth patterns)

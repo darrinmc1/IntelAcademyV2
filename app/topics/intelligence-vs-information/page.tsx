@@ -239,7 +239,7 @@ Ensure intelligence products include specific, actionable recommendations that d
 needs of decision-makers.
 
 The analytical process that transforms raw information into intelligence is where value is created.
-Your job is to be the filter, the analyzer, the interpreter—turning noise into signal.
+Your job is to be the filter, the analyzer, the interpreter - turning noise into signal.
 
 )
 `

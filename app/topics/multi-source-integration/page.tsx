@@ -78,7 +78,7 @@ drive your key judgment when it contradicts a high-confidence human report.
 Be transparent about source weighting in your report. Readers deserve to know which sources
 are carrying the most analytical weight and why. Phrases like "Multiple well-placed
 sources confirm..." versus "A single unvetted report suggests..." give the
-reader crucial context.
+reader important context.
 
 ### Step 3: Comparison and Correlation
 
@@ -145,7 +145,7 @@ conclusions.
 
 ## The Principle of Multi-Source Integration
 
-Multi-source integration is the core methodology of intelligence analysis — combining information from multiple collection disciplines to produce assessments that are more reliable than any single source could support. The whole is genuinely greater than the sum of its parts when sources are integrated effectively.
+Multi-source integration is the core methodology of intelligence analysis - combining information from multiple collection disciplines to produce assessments that are more reliable than any single source could support. The whole is genuinely greater than the sum of its parts when sources are integrated effectively.
 
 - **The Analogy of the Blind Men and the Elephant:** Each collection discipline provides a partial view of reality. HUMINT reveals intent but may be influenced by the source's agenda. SIGINT reveals communication patterns but not their meaning. GEOINT reveals physical activity but not its purpose. Only by integrating all perspectives does the complete picture emerge.
 - **Convergence vs. Redundancy:** When multiple independent sources converge on the same conclusion, confidence increases exponentially. But analysts must distinguish genuine convergence (two sources independently pointing to the same conclusion) from redundancy (the same underlying information reported through different channels).
@@ -155,7 +155,7 @@ Multi-source integration is the core methodology of intelligence analysis — co
 
 Effective multi-source integration follows a structured analytical process:
 
-1. **Source Assessment:** Before integrating, assess each source independently — its reliability, access, motivation, and track record. A source with a history of accurate reporting should be weighted differently from a first-time source of unknown reliability.
+1. **Source Assessment:** Before integrating, assess each source independently - its reliability, access, motivation, and track record. A source with a history of accurate reporting should be weighted differently from a first-time source of unknown reliability.
 2. **Temporal Alignment:** Confirm that sources are reporting on the same timeframe. A SIGINT intercept from today and a HUMINT report from three months ago may appear to converge but actually describe different situations. Align all sources to a common temporal reference before integrating.
 3. **Geospatial Correlation:** Confirm that sources are reporting on the same location. Different place names, coordinate systems, or geographic descriptions can lead analysts to integrate reports about completely different places.
 4. **Cross-Cueing:** Use information from one source to task or refine collection through another. A HUMINT report identifying a new target can cue satellite imagery collection to confirm the target's existence and location. This iterative process between collection disciplines produces intelligence that no single source could generate independently.
@@ -166,7 +166,7 @@ Effective multi-source integration follows a structured analytical process:
 Multi-source integration presents persistent challenges that analysts must navigate:
 
 - **The Single Source Trap:** A compelling report from a single source can feel like confirmation when it is actually the only evidence for a conclusion. Analysts must consciously resist the temptation to treat single-source reporting as confirmed by the fact that it fits their hypothesis.
-- **Source Contamination:** When multiple sources draw on the same underlying information — both citing the same news report, both debriefing the same informant — they appear to corroborate each other but actually represent a single source. Analysts must trace each source to its root.
+- **Source Contamination:** When multiple sources draw on the same underlying information - both citing the same news report, both debriefing the same informant - they appear to corroborate each other but actually represent a single source. Analysts must trace each source to its root.
 - **Inconsistent Terminology:** Different collection disciplines use different terminology to describe the same phenomena. A "facility" in GEOINT may be a "location" in HUMINT and a "target" in SIGINT. Standardising terminology across sources is tedious but essential for accurate integration.
 - **Classification Barriers:** Sources at different classification levels may be difficult to integrate because the analyst cannot freely combine information in a single product. Release caveats, dissemination restrictions, and classification differences create practical barriers to integration that require tradecraft to navigate.
 
@@ -175,7 +175,7 @@ Multi-source integration presents persistent challenges that analysts must navig
 Experienced analysts develop specific techniques for integrating across sources:
 
 - **The All-Source Matrix:** A structured spreadsheet or database that captures information from each source in a common format. Each row represents an entity or event; columns represent what each source reports about it. This allows rapid comparison and gap identification.
-- **Temporal Sequencing:** Place all-source information on a common timeline, regardless of the collection discipline. Temporal sequencing often reveals patterns — a HUMINT report of a meeting followed by a SIGINT intercept of unusual communications — that individual source analysis would miss.
+- **Temporal Sequencing:** Place all-source information on a common timeline, regardless of the collection discipline. Temporal sequencing often reveals patterns - a HUMINT report of a meeting followed by a SIGINT intercept of unusual communications - that individual source analysis would miss.
 - **Source Weighting:** Assign explicit confidence weights to each source and factor these into the overall assessment. A well-established source with a history of reliable reporting should carry more weight than a first-time source, even when both report the same information.
 - **Red Team Integration:** Before finalising an all-source assessment, have a colleague independently review the evidence and attempt to reach a different conclusion. This tests whether the integration process is sound or whether it reflects the original analyst's biases.
 

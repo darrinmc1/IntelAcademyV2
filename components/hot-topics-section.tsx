@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Flame, ChevronRight } from "lucide-react"
 
-// Popular topics — TODO: replace with real analytics-driven data when available
+// Popular topics - TODO: replace with real analytics-driven data when available
 const hotTopics = [
   {
     title: "What is Intelligence?",

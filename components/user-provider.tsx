@@ -20,7 +20,7 @@ import {
 } from '@/lib/user-store';
 import { checkForNewBadges } from '@/lib/badge-checker';
 import { getBadge } from '@/data/badges';
-import { triggerBadgeUnlockToast } from '@/components/badge-unlock-toast';
+import { triggerBadgeUnlockToast } from '@/components/badge-enable-toast';
 
 export interface UserContextType {
   profile: UserProfile | null;

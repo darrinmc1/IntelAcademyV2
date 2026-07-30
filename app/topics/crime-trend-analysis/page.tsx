@@ -5,13 +5,13 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Crime Trend Analysis - The Intel Analyst Academy",
-  description: "Master the analysis of crime trends over time — seasonal patterns, detection methods, displacement effects, and the traps that deceive even experienced analysts.",
+  description: "Master the analysis of crime trends over time - seasonal patterns, detection methods, displacement effects, and the traps that deceive even experienced analysts.",
 }
 
-const topicContent = `"Master the analysis of crime trends over time — seasonal patterns, detection methods, displacement effects, and the traps that deceive even experienced analysts.",
+const topicContent = `"Master the analysis of crime trends over time - seasonal patterns, detection methods, displacement effects, and the traps that deceive even experienced analysts.",
 
 A single snapshot of crime data tells you where trouble is today. A trend tells you where
-trouble is going tomorrow — and where it came from last week, last month, and last year.
+trouble is going tomorrow - and where it came from last week, last month, and last year.
 This lesson unpacks the difference between reacting to a spike and understanding a trend.
 You will learn the methods that separate the ephemeral blip from the structural shift, and
 you will learn why your favourite crime statistics are probably lying to you.
@@ -30,7 +30,7 @@ still on holiday and houses sat empty? The question reveals the uncomfortable tr
 Crime does not occur uniformly across time. It clusters by hour, day, month, and season.
 Assaults peak on summer weekends when alcohol flows and temperatures rise. Domestic
 violence calls spike on Christmas Day and New Year's Eve. Burglaries follow school
-holidays and long weekends. Property crime often dips during extreme weather — criminals,
+holidays and long weekends. Property crime often dips during extreme weather - criminals,
 like the rest of us, prefer not to work in a blizzard.
 
 A snapshot that does not account for these temporal patterns is worse than useless: it is
@@ -41,11 +41,11 @@ twenty-eight, twenty-nine, or thirty-one days.
 ### Short-Term vs. Long-Term Trends
 
 Trends operate on multiple timescales, and confusing one for another is a classic analytical
-error. A short-term trend might last days or weeks — a gang conflict that spikes retaliatory
+error. A short-term trend might last days or weeks - a gang conflict that spikes retaliatory
 shootings, or a holiday weekend that sees a predictable rise in DUI arrests. A medium-term
-trend spans months to a year or two — the displacement effect after a new police patrol
+trend spans months to a year or two - the displacement effect after a new police patrol
 strategy is implemented, or the lagged impact of an economic downturn. A long-term trend
-spans years or decades — the decades-long decline in U.S. violent crime since the 1990s, or
+spans years or decades - the decades-long decline in U.S. violent crime since the 1990s, or
 the gradual shift from street-level drug markets to online narcotics distribution.
 
 Always establish your baseline before declaring a trend. A minimum of 12 to 24 months of
@@ -65,7 +65,7 @@ actionable trend intelligence.
 
 A simple line chart of daily crime counts looks like the EEG of a patient having a seizure.
 Daily volatility obscures the underlying direction. Moving averages solve this by averaging
-data points over a fixed window — typically 7, 14, or 28 days — and plotting the smoothed
+data points over a fixed window - typically 7, 14, or 28 days - and plotting the smoothed
 result. A 7-day moving average eliminates day-of-week effects (because Mondays are always
 different from Saturdays). A 28-day moving average reveals monthly trends. When the moving
 average crosses a historical threshold, you have something worth briefing.
@@ -75,8 +75,8 @@ average crosses a historical threshold, you have something worth briefing.
 For analysts with statistical training, time series methods like ARIMA (AutoRegressive
 Integrated Moving Average) decompose crime data into three components: trend (the long-term
 direction), seasonality (the predictable cycles), and residuals (the genuinely unusual
-events). This decomposition is powerful because it isolates the signal you care about — the
-trend — from the seasonal noise that can masquerade as meaningful change. Most modern crime
+events). This decomposition is powerful because it isolates the signal you care about - the
+trend - from the seasonal noise that can masquerade as meaningful change. Most modern crime
 analysis platforms, including those integrated with COMPSTAT processes, use some form of
 time series decomposition under the hood.
 
@@ -95,8 +95,8 @@ COMPSTAT (Computer Statistics) revolutionised American policing in the 1990s by
 institutionalising trend analysis at the command level. Weekly COMPSTAT meetings force
 precinct commanders to explain crime spikes in their sectors using data, not anecdotes.
 The method combines statistical analysis with geographic mapping and accountability
-pressure. When it works, it drives rapid, targeted responses. When it fails — and it often
-fails — it incentivises data manipulation, under-reporting, and the classic "crime of
+pressure. When it works, it drives rapid, targeted responses. When it fails - and it often
+fails - it incentivises data manipulation, under-reporting, and the classic "crime of
 the week" myopia that treats every blip as a crisis.
 
 When using COMPSTAT-style analysis, apply the "three-week rule": do not treat a
@@ -119,15 +119,15 @@ trend-analyst.
 The seasons write the first draft of any crime trend analysis. In temperate climates,
 warm weather brings people outdoors, increases social interaction, and raises the
 incidence of assault, robbery, and theft from vehicles. Cold weather pushes activity
-indoors and shifts crime toward burglary and domestic incidents. Holiday periods —
-Christmas, New Year, summer breaks — produce their own distinctive crime signatures.
+indoors and shifts crime toward burglary and domestic incidents. Holiday periods -
+Christmas, New Year, summer breaks - produce their own distinctive crime signatures.
 An analyst who does not seasonally adjust their data will repeatedly rediscover the same
 annual cycle and call it a finding.
 
 ### Displacement: The Hydra Effect
 
 When police crack down on crime in one area, the criminal activity does not simply
-disappear — it moves. Displacement is the tendency for crime to shift geographically,
+disappear - it moves. Displacement is the tendency for crime to shift geographically,
 temporally, tactically, or target-wise in response to enforcement pressure. A successful
 drug bust at a street corner does not eliminate drug dealing; it moves it three blocks
 over, shifts it to a different time of day, or pushes it indoors. Trend analysts must
@@ -136,23 +136,23 @@ policing when the reality is simply that crime relocated to Sector B.
 
 ### Diffusion of Benefits: The Good Kind of Spread
 
-The flip side of displacement is diffusion of benefits — the phenomenon where crime
+The flip side of displacement is diffusion of benefits - the phenomenon where crime
 reduction effects spread beyond the targeted area or crime type. A focused patrol
 initiative in a known hot spot may also reduce crime in adjacent areas, because the
 perception of increased enforcement deters potential offenders across a wider zone. This
 halo effect is real, measurable, and frequently underrepresented in trend assessments.
 When you see crime dropping in a comparison sector that received no additional resources,
-diffusion — not a coincidental parallel trend — may be the explanation.
+diffusion - not a coincidental parallel trend - may be the explanation.
 
 Criminals are not consultants. When you squeeze one side of their operating environment,
-they do not submit a restructuring plan — they just move to the other side of town and
+they do not submit a restructuring plan - they just move to the other side of town and
 keep working. Displacement is the oldest pattern in the book, yet analysts forget it with
 alarming regularity.
 
 {/* ---- Section 4: When Trends Deceive ---- */}
 
-The hardest lesson in trend analysis is that the data itself can lie. Not maliciously —
-data has no intent — but because the mechanisms that produce crime data are shaped by
+The hardest lesson in trend analysis is that the data itself can lie. Not maliciously -
+data has no intent - but because the mechanisms that produce crime data are shaped by
 human decisions, institutional policies, and structural conditions that have nothing to
 do with actual criminal behaviour.
 
@@ -161,7 +161,7 @@ do with actual criminal behaviour.
 A crime trend that appears in the data may reflect nothing more than a change in how
 crime is recorded. When a police department adopts a new records management system,
 implements mandatory reporting for certain offences, or changes its classification
-guidelines, reported crime rates can shift dramatically overnight — with zero change in
+guidelines, reported crime rates can shift dramatically overnight - with zero change in
 actual victimisation. The most infamous example is the "crime decline" that
 followed the adoption of electronic field reporting in some departments. The decline was
 real in the data; in the real world, officers were simply spending less time filling out
@@ -171,7 +171,7 @@ forms and incidents were being recorded inconsistently during the transition.
 
 Policy decisions at the department, city, or state level can create apparent crime trends
 that have nothing to do with underlying criminality. A decision to decriminalise minor
-drug possession will produce a dramatic drop in drug arrests — which will appear in the
+drug possession will produce a dramatic drop in drug arrests - which will appear in the
 data as a crime trend. A change in domestic violence reporting protocols will produce a
 spike, as previously uncounted incidents enter the official record. The analyst who
 interprets these policy-driven data shifts as changes in criminal behaviour will provide
@@ -179,7 +179,7 @@ confident, policy-relevant advice that is completely wrong.
 
 ### Demographic Shifts: Population as the Hidden Variable
 
-Crime rates are almost always expressed per capita, but the denominator — population —
+Crime rates are almost always expressed per capita, but the denominator - population -
 moves slowly and often invisibly. A city that experiences rapid population growth will
 see its crime counts rise even if the per-capita rate is stable or declining. Conversely,
 a shrinking city may see falling crime counts that mask a rising victimisation rate. The
@@ -228,7 +228,7 @@ export default function CrimetrendanalysisPage() {
     <LessonContainer>
       <MicroLesson
         title="Crime Trend Analysis"
-        subtitle="Master the analysis of crime trends over time — seasonal patterns, detection methods, displacement effects, and the trap"
+        subtitle="Master the analysis of crime trends over time - seasonal patterns, detection methods, displacement effects, and the trap"
         humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
         readTime={15}
         difficulty="Intermediate"

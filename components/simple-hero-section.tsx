@@ -9,7 +9,7 @@ export function SimpleHeroSection() {
   return (
     <SafeParallaxHeader
       title="Intelligence Analyst Academy"
-      subtitle="Master the art and science of intelligence analysis with cutting-edge training"
+      subtitle="Master the art and science of intelligence analysis with modern training"
       backgroundImage="/intelligence-analysis-workspace.png"
       height="xl"
     >

@@ -51,7 +51,7 @@ judgments, and drive action.
 ## 1. Distillation Techniques
 
 **Extracting the most critical elements from complex analysis.** Like making espresso from a
-50-page report—concentrated, potent, and keeping executives awake.
+50-page report - concentrated, potent, and keeping executives awake.
 
 The art of distillation involves identifying and extracting only the most essential information from your
 full analysis. This requires both analytical judgment and writing discipline.
@@ -81,7 +81,7 @@ truly essential and eliminate what's merely interesting.
 limited attention spans and need the important stuff first.
 
 Traditional academic and journalistic writing often builds toward conclusions. Intelligence writing does
-the opposite—it starts with conclusions and then provides supporting evidence. This "front-loading"
+the opposite - it starts with conclusions and then provides supporting evidence. This "front-loading"
 approach ensures that even if the reader only gets through the first paragraph, they'll see your most
 important judgments.
 
@@ -121,7 +121,7 @@ miniaturization technology, detailed in Section 2."
 this now" without actually saying "do this now."
 
 The ultimate purpose of intelligence is to inform decisions. An effective executive summary doesn't just
-present information—it frames that information in ways that highlight implications and support
+present information - it frames that information in ways that highlight implications and support
 decision-making.
 
 Techniques for crafting actionable insights include:
@@ -177,7 +177,7 @@ Mastering the art of executive summary writing is one of the most valuable skill
 professional can develop. By effectively distilling complex analysis, front-loading key judgments, and
 crafting actionable insights, you can ensure your intelligence work has maximum impact on decision-making.
 
-Remember that an executive summary is not just a shorter version of your full report—it's a carefully
+Remember that an executive summary is not just a shorter version of your full report - it's a carefully
 crafted document with its own purpose and audience. It requires different writing techniques and a
 disciplined focus on what matters most to decision-makers.
 

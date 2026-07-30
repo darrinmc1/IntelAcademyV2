@@ -23,7 +23,7 @@ function statusBadge(status: string) {
 }
 
 function fmt(d: string | Date | null) {
-  if (!d) return "—"
+  if (!d) return " - "
   return new Date(d).toLocaleString()
 }
 
@@ -89,7 +89,7 @@ export default async function ReviewsPage({
                 <tr key={s.id} className="border-t hover:bg-gray-50">
                   <td className="px-4 py-2 font-medium">{s.title || s.content_id}</td>
                   <td className="px-4 py-2 text-muted-foreground">{s.type}</td>
-                  <td className="px-4 py-2">{s.submitter_codename || "—"}</td>
+                  <td className="px-4 py-2">{s.submitter_codename || " - "}</td>
                   <td className="px-4 py-2 text-muted-foreground">{fmt(s.updated_at)}</td>
                   <td className="px-4 py-2">
                     <span className={"rounded-full px-2 py-0.5 text-xs " + statusBadge(s.status)}>

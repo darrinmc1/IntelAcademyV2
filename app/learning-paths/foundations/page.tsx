@@ -82,7 +82,7 @@ export default function FoundationsPath() {
           />
           <TopicCard
             title="Types of Intelligence"
-            description="Explore the different flavors of intelligence—each with its own purpose"
+            description="Explore the different flavors of intelligence - each with its own purpose"
             duration="25 min"
             image="/intelligence-types.png"
             path="/topics/intelligence-types"
@@ -181,7 +181,7 @@ export default function FoundationsPath() {
                 </div>
                 <div>
                   <h3 className="font-medium">Intelligence Types</h3>
-                  <p className="text-sm text-muted-foreground">Explore the different flavors of intelligence—each with its own purpose</p>
+                  <p className="text-sm text-muted-foreground">Explore the different flavors of intelligence - each with its own purpose</p>
                   <p className="text-sm text-muted-foreground">25 min read</p>
                 </div>
               </div>

@@ -120,7 +120,7 @@ Commercial Applications
 "When you absolutely, positively need to know what's in that building overnight - satellite imagery is
 there for you."
 
-GEOINT plays a crucial role in military operations by providing situational awareness, target
+GEOINT plays a important role in military operations by providing situational awareness, target
 identification, and battle damage assessment. It helps commanders understand the terrain, enemy positions,
 and potential threats.
 

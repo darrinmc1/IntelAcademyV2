@@ -30,7 +30,7 @@ const resources: Resource[] = [
   {
     title: "Estimative Language Dictionary",
     type: "PDF Reference",
-    description: "Standardised probability expressions for analytical accuracy — consistent interpretation of terms like \"likely\" and \"probable\".",
+    description: "Standardised probability expressions for analytical accuracy - consistent interpretation of terms like \"likely\" and \"probable\".",
     icon: FileText, iconColor: "text-red-400",
     action: "Download Dictionary", tab: "guides",
     status: "available", file: "estimative-language-dictionary.pdf",
@@ -46,7 +46,7 @@ const resources: Resource[] = [
   {
     title: "Professional Writing Checklist",
     type: "PDF Checklist",
-    description: "Quality assurance tool for clear, concise intelligence products — covering structure, grammar, and evidence citation.",
+    description: "Quality assurance tool for clear, concise intelligence products - covering structure, grammar, and evidence citation.",
     icon: CheckSquare, iconColor: "text-emerald-400",
     action: "Download Checklist", tab: "cheatsheets",
     status: "available", file: "professional-writing-checklist.pdf",
@@ -70,7 +70,7 @@ const resources: Resource[] = [
   {
     title: "Risk Assessment Framework",
     type: "PDF",
-    description: "Five-phase framework for evaluating operational hazards — threat identification, vulnerability assessment, risk matrix, and mitigation planning.",
+    description: "Five-phase framework for evaluating operational hazards - threat identification, vulnerability assessment, risk matrix, and mitigation planning.",
     icon: Shield, iconColor: "text-emerald-400",
     action: "Download Framework", tab: "guides",
     status: "available", file: "risk-assessment-framework.pdf",
@@ -86,14 +86,14 @@ const resources: Resource[] = [
   {
     title: "Digital Evidence Documentation",
     type: "PDF Guide",
-    description: "Standards for collecting, preserving, and documenting electronic evidence — chain of custody form, device handling, and admissibility requirements.",
+    description: "Standards for collecting, preserving, and documenting electronic evidence - chain of custody form, device handling, and admissibility requirements.",
     icon: HardDrive, iconColor: "text-purple-400",
     action: "Download Guide", tab: "guides",
     status: "available", file: "digital-evidence-documentation.pdf",
   },
   {
     title: "Intelligence Report Template Library",
-    type: "PDF — 5 Templates",
+    type: "PDF - 5 Templates",
     description: "Five standardised report formats: Strategic Assessment, Tactical Brief, Threat Assessment, Intelligence Requirements Register, and Operational Briefing.",
     icon: FileText, iconColor: "text-cyan-400",
     action: "Download Library", tab: "templates",
@@ -102,7 +102,7 @@ const resources: Resource[] = [
   {
     title: "Daily Briefing Document",
     type: "PDF Template",
-    description: "Standardised format for routine intelligence updates — threat picture, overnight incidents, emerging trends, and priority actions.",
+    description: "Standardised format for routine intelligence updates - threat picture, overnight incidents, emerging trends, and priority actions.",
     icon: FileText, iconColor: "text-cyan-400",
     action: "Download Template", tab: "templates",
     status: "available", file: "daily-briefing-document.pdf",
@@ -117,8 +117,8 @@ const resources: Resource[] = [
   },
   {
     title: "ACH Matrix Templates",
-    type: "PDF — 3 Templates",
-    description: "Analysis of Competing Hypotheses — blank 4-hypothesis matrix, worked example with colour-coded scoring, and sensitivity analysis template.",
+    type: "PDF - 3 Templates",
+    description: "Analysis of Competing Hypotheses - blank 4-hypothesis matrix, worked example with colour-coded scoring, and sensitivity analysis template.",
     icon: Table, iconColor: "text-emerald-400",
     action: "Download Templates", tab: "templates",
     status: "available", file: "ach-matrix-templates.pdf",
@@ -142,7 +142,7 @@ const resources: Resource[] = [
   {
     title: "Collection Plan Template",
     type: "PDF Template",
-    description: "Translates intelligence requirements into taskings — IR register, collection taskings, source register, gap analysis, and reporting requirements.",
+    description: "Translates intelligence requirements into taskings - IR register, collection taskings, source register, gap analysis, and reporting requirements.",
     icon: Table, iconColor: "text-emerald-400",
     action: "Download Template", tab: "templates",
     status: "available", file: "collection-plan-template.pdf",
@@ -165,7 +165,7 @@ const resources: Resource[] = [
   },
   {
     title: "Pattern Analysis Worksheets",
-    type: "PDF — 5 Worksheets",
+    type: "PDF - 5 Worksheets",
     description: "Five worksheets covering temporal, geographic, behavioural/MO, network association, and trend pattern analysis.",
     icon: BarChart2, iconColor: "text-orange-400",
     action: "Download Worksheets", tab: "templates",
@@ -182,7 +182,7 @@ const resources: Resource[] = [
   {
     title: "Pre-Operation Brief Template",
     type: "PDF Template",
-    description: "Full SMEAC format — situation, mission, execution, service support, command & signal, subject intelligence package, and acknowledgement.",
+    description: "Full SMEAC format - situation, mission, execution, service support, command & signal, subject intelligence package, and acknowledgement.",
     icon: Presentation, iconColor: "text-orange-400",
     action: "Download Template", tab: "templates",
     status: "available", file: "pre-operation-brief-template.pdf",
@@ -191,7 +191,7 @@ const resources: Resource[] = [
   {
     title: "Geolocation Toolkit",
     type: "PDF & Digital Tools",
-    description: "Location identification methods — coordinate systems, map reading, landmark identification, and GPS analysis.",
+    description: "Location identification methods - coordinate systems, map reading, landmark identification, and GPS analysis.",
     icon: MapPin, iconColor: "text-red-400",
     action: "Download Toolkit", tab: "guides",
     status: "coming-soon",
@@ -299,7 +299,7 @@ export default function Downloads() {
         <div className="flex items-center gap-3 mb-8 bg-cyan-500/10 border border-cyan-500/20 rounded-xl px-5 py-3">
           <Download className="h-5 w-5 text-cyan-400 shrink-0" />
           <p className="text-sm text-slate-300">
-            <span className="text-cyan-400 font-semibold">{availableCount} resources</span> available now — more added regularly.
+            <span className="text-cyan-400 font-semibold">{availableCount} resources</span> available now - more added regularly.
             Need a specific format?{" "}
             <a href="mailto:info@theintelanalystacademy.com.au" className="text-cyan-400 hover:underline">
               Email us

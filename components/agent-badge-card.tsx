@@ -73,7 +73,7 @@ export function AgentBadgeCard({ progress, size = "md", showProgress = true }: A
         </div>
       )}
 
-      {/* Progress bar for locked (shows how close to unlock) */}
+      {/* Progress bar for locked (shows how close to enable) */}
       {showProgress && isLocked && totalCount > 0 && (
         <div className="w-full mt-3">
           <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">

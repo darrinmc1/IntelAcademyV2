@@ -36,8 +36,8 @@ export default function LearnMore() {
                 organizational resources, geographic location, or career stage.
               </p>
               <p>
-                By providing open access to professional-grade educational resources, we aim to elevate the standard of
-                intelligence analysis across all sectors—from law enforcement and national security to private sector
+                By providing open access to professional-grade educational resources, we aim to improve the standard of
+                intelligence analysis across all sectors - from law enforcement and national security to private sector
                 and academic research.
               </p>
             </div>
@@ -232,7 +232,7 @@ export default function LearnMore() {
                 </p>
                 <ul className="list-disc pl-5 space-y-1">
                   <li>Deepen expertise in specialized areas</li>
-                  <li>Learn cutting-edge analytical techniques</li>
+                  <li>Learn modern analytical techniques</li>
                   <li>Share knowledge with the community</li>
                   <li>Stay current with emerging trends</li>
                   <li>Develop leadership and mentoring skills</li>

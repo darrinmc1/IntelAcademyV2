@@ -192,7 +192,7 @@ export default function ComingSoon() {
                     <li>Achievement system for mastering specific skills</li>
                     <li>Leaderboards for friendly competition</li>
                     <li>Timed challenges to test your analytical speed</li>
-                    <li>Unlock advanced content as you progress</li>
+                    <li>enable advanced content as you progress</li>
                   </ul>
                 </CardContent>
               </div>

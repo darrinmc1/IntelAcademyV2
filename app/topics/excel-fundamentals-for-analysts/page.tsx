@@ -48,7 +48,7 @@ pianist
 
 Despite the existence of fancier, more expensive tools, Excel remains the duct tape of intelligence
 analysis: not always pretty, but it holds everything together. Whether you're tracking threat actors or
-analyzing crime patterns, Excel is often the first tool analysts reach for—right after coffee.
+analyzing crime patterns, Excel is often the first tool analysts reach for - right after coffee.
 
 ### The Excel Analyst's Mantra
 
@@ -112,10 +112,10 @@ Microsoft Excel is one of the most versatile tools available to intelligence ana
 
 Mastering a core set of Excel functions dramatically increases analytical productivity:
 
-- **VLOOKUP and XLOOKUP:** The most important functions for intelligence analysis. They allow analysts to cross-reference data between tables — matching phone numbers to subscriber records, transaction IDs to account holders, or addresses to case files. XLOOKUP, available in modern Excel, is more flexible and should be preferred where available.
-- **PivotTables:** The single most powerful feature in Excel for intelligence analysis. PivotTables allow analysts to aggregate, group, and summarise large datasets with drag-and-drop simplicity. A PivotTable can reveal patterns in thousands of call records — most frequent contacts, busiest times of day, numbers that appear across multiple cases — in seconds.
+- **VLOOKUP and XLOOKUP:** The most important functions for intelligence analysis. They allow analysts to cross-reference data between tables - matching phone numbers to subscriber records, transaction IDs to account holders, or addresses to case files. XLOOKUP, available in modern Excel, is more flexible and should be preferred where available.
+- **PivotTables:** The single most powerful feature in Excel for intelligence analysis. PivotTables allow analysts to aggregate, group, and summarise large datasets with drag-and-drop simplicity. A PivotTable can reveal patterns in thousands of call records - most frequent contacts, busiest times of day, numbers that appear across multiple cases - in seconds.
 - **FILTER and SORT:** Dynamic filtering capabilities allow analysts to isolate subsets of data for focused examination. Combined with conditional formatting, filtering turns a static spreadsheet into an interactive analytical workspace.
-- **TEXT Functions:** LEFT, RIGHT, MID, FIND, and CONCATENATE are essential for cleaning and normalising messy data — extracting area codes from phone numbers, separating full names into first and last, or standardising date formats across datasets.
+- **TEXT Functions:** LEFT, RIGHT, MID, FIND, and CONCATENATE are essential for cleaning and normalising messy data - extracting area codes from phone numbers, separating full names into first and last, or standardising date formats across datasets.
 - **Conditional Formatting:** Applied intelligently, conditional formatting can highlight outliers, flag anomalies, and reveal patterns that would be invisible in raw numerical data. For example, highlighting all transactions above a threshold or all calls shorter than 30 seconds.
 
 ## Data Cleaning Workflows
@@ -124,7 +124,7 @@ Real-world data is almost never analysis-ready. Analysts typically spend 60-80% 
 
 1. **Remove Duplicates:** Use Excel's Remove Duplicates feature to identify and eliminate redundant records. For more nuanced deconfliction, use COUNTIF or UNIQUE functions to flag potential matches for manual review.
 2. **Standardise Formats:** Ensure consistent date formats (use ISO 8601: YYYY-MM-DD), number formats (remove currency symbols for computational analysis), and text casing across all datasets.
-3. **Handle Missing Data:** Decide how to treat blank cells — exclude the record, flag for follow-up, or impute based on other available data. Document the decision so analytical conclusions are reproducible.
+3. **Handle Missing Data:** Decide how to treat blank cells - exclude the record, flag for follow-up, or impute based on other available data. Document the decision so analytical conclusions are reproducible.
 4. **Validate Against Source:** Spot-check cleaned data against the original source to ensure the cleaning process didn't introduce errors. This is especially important when data has been manipulated through multiple formulas and transformations.
 
 `

@@ -93,10 +93,10 @@ Editing Chart Items
 
 ## Selecting Examples for Analysis
 
-The examples and materials you include in an Analyst's Notebook chart are not neutral — they shape how others interpret the data. Careful selection and annotation of example materials ensures that the analysis is transparent, reproducible, and defensible.
+The examples and materials you include in an Analyst's Notebook chart are not neutral - they shape how others interpret the data. Careful selection and annotation of example materials ensures that the analysis is transparent, reproducible, and defensible.
 
 - **Representative Examples:** Choose examples that fairly represent the broader dataset. Cherry-picking examples that support a preferred conclusion undermines analytical integrity.
-- **Anomalous Examples:** Include examples that contradict the prevailing pattern. These are often where the most valuable intelligence insights emerge — the data point that doesn't fit reveals the limits of your understanding.
+- **Anomalous Examples:** Include examples that contradict the prevailing pattern. These are often where the most valuable intelligence insights emerge - the data point that doesn't fit reveals the limits of your understanding.
 - **Temporal Spread:** Ensure examples span the full timeframe of the investigation. Including only recent examples may miss early indicators; including only old examples may miss current developments.
 
 ## Annotating Example Materials

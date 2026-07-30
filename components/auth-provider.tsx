@@ -97,7 +97,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         body: JSON.stringify(profile),
       })
     } catch {
-      // Silently fail sync — localStorage is still the primary store
+      // Silently fail sync - localStorage is still the primary store
     }
   }
 

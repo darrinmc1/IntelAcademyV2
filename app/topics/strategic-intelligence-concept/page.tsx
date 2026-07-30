@@ -5,13 +5,13 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Strategic Intelligence Concept - The Intel Analyst Academy",
-  description: "Master the discipline of strategic intelligence — long-term forecasting, national security strategy, analytical products like NIEs, and the political challenges that threaten objectivity.",
+  description: "Master the discipline of strategic intelligence - long-term forecasting, national security strategy, analytical products like NIEs, and the political challenges that threaten objectivity.",
 }
 
-const topicContent = `"Master the discipline of strategic intelligence — long-term forecasting, national security strategy, analytical products like NIEs, and the political challenges that threaten objectivity.",
+const topicContent = `"Master the discipline of strategic intelligence - long-term forecasting, national security strategy, analytical products like NIEs, and the political challenges that threaten objectivity.",
 
 Tactical intelligence tells you what is happening right now. Strategic intelligence tells
-you what will happen next — and why it matters to the people who decide the fate of
+you what will happen next - and why it matters to the people who decide the fate of
 nations, organisations, and alliances. This lesson unpacks the unique demands of strategic
 analysis: the longer time horizons, the broader scope, the higher-stakes audience, and the
 unforgiving political environment in which strategic intelligence lives or dies. If you
@@ -22,8 +22,8 @@ the most contested, this lesson will give you the answer.
 
 Not every intelligence question is strategic. Knowing the location of a militant training
 camp is tactical. Knowing that the conditions that produce militant recruitment are
-spreading across the Sahel — and what that means for European security in the next decade
-— is strategic. The difference is not just scale. It is a fundamentally different mode of
+spreading across the Sahel - and what that means for European security in the next decade
+- is strategic. The difference is not just scale. It is a fundamentally different mode of
 thinking, with different methods, different products, and different consumers.
 
 ### Time Horizon: The Telescope, Not the Mirror
@@ -33,7 +33,7 @@ intelligence operates in hours, days, or weeks, strategic intelligence looks yea
 decades, ahead. This extended horizon forces analysts to confront uncertainty in a way
 that tactical analysts rarely do. The further you project, the more variables multiply,
 the less reliable your data becomes, and the more you must rely on structured analytical
-techniques, scenario planning, and — let us be honest — informed judgment that borders on
+techniques, scenario planning, and - let us be honest - informed judgment that borders on
 educated intuition. A strategic analyst who claims high confidence about a forecast five
 years out either possesses supernatural powers or has not thought hard enough about what
 could go wrong.
@@ -46,7 +46,7 @@ integration across economic trends, technological competition, diplomatic relati
 demographic trajectories, environmental pressures, and the shifting domestic politics of
 multiple nations. This multi-domain scope is what makes strategic intelligence both
 intellectually exhilarating and professionally humbling. No single analyst can master all
-the relevant domains. The strategic intelligence analyst must therefore be a synthesist —
+the relevant domains. The strategic intelligence analyst must therefore be a synthesist -
 an integrator who draws on subject-matter experts across disciplines and weaves their
 insights into a coherent, multi-dimensional assessment.
 
@@ -56,7 +56,7 @@ The consumers of strategic intelligence are the most powerful people in governme
 industry: heads of state, cabinet secretaries, national security advisors, board members,
 and agency directors. These consumers do not have time for nuance-laden academic prose.
 They need concise, clearly argued assessments that inform decisions they will make today
-or tomorrow — decisions with consequences that will reverberate for years. The proximity
+or tomorrow - decisions with consequences that will reverberate for years. The proximity
 to power creates a constant tension: the closer the analyst is to the decision-maker, the
 greater the risk that analysis bends to fit policy preferences. Managing this tension
 without becoming a policy advocate is the strategic analyst's central ethical challenge.
@@ -68,11 +68,11 @@ the breadth of coverage that strategic questions demand. SIGINT may reveal leade
 intentions. GEOINT may show infrastructure development. HUMINT may provide insight into
 internal regime dynamics. OSINT tracks public discourse and economic indicators. The
 strategic analyst must integrate these disparate streams into a single, coherent picture
-— and must do so without cherry-picking the sources that support a preferred narrative.
+- and must do so without cherry-picking the sources that support a preferred narrative.
 Integration is not aggregation. It is the deliberate, transparent combination of evidence
 from multiple sources, weighted by reliability, and reconciled when they conflict.
 
-When writing a strategic assessment, start with your key judgment — the single most
+When writing a strategic assessment, start with your key judgment - the single most
 important thing your consumer needs to know. Everything else supports or qualifies that
 judgment. If you cannot state your core argument in one sentence, you have not done the
 synthesis work yet.
@@ -84,7 +84,7 @@ in a suit. The trick is making "it depends" sound like actionable guidance.
 
 Strategic intelligence does not exist in a vacuum. It sits at the top of a pipeline that
 connects national security strategy, intelligence priorities, and operational execution.
-Understanding how this pipeline works — and where it breaks — is essential for any analyst
+Understanding how this pipeline works - and where it breaks - is essential for any analyst
 who wants their strategic work to have real-world impact.
 
 ### National Security Strategy: The North Star
@@ -93,7 +93,7 @@ In most mature intelligence systems, the process begins with a National Security
 (NSS) or equivalent document produced by the executive branch. The NSS articulates the
 nation's strategic objectives, identifies threats and opportunities, and sets
 priorities for diplomatic, military, economic, and intelligence activities. The NSS is
-necessarily broad — it is a statement of intent, not an operations order. Its value to
+necessarily broad - it is a statement of intent, not an operations order. Its value to
 the intelligence community is that it provides the strategic context against which every
 intelligence priority should be evaluated. If an intelligence requirement does not trace
 back to an NSS objective, the analyst should ask: why are we collecting this?
@@ -102,8 +102,8 @@ back to an NSS objective, the analyst should ask: why are we collecting this?
 
 The NSS is translated into concrete intelligence requirements through a National
 Intelligence Priorities Framework (NIPF) or equivalent mechanism. The NIPF ranks
-intelligence topics by priority — usually tiered from "highest" to
-"lower" — and allocates collection and analytical resources accordingly.
+intelligence topics by priority - usually tiered from "highest" to
+"lower" - and allocates collection and analytical resources accordingly.
 This is where strategy meets resource allocation. A country that ranks "Great Power
 Competition" as its top priority will structure its intelligence community
 differently from one that ranks "Counterterrorism" first. The analyst who
@@ -117,13 +117,13 @@ assessment that warns of a looming geopolitical shift is useless if it does not 
 into operational guidance that a regional commander, an embassy's country team, or a
 sanctions enforcement unit can act on. The most effective strategic intelligence products
 include a "so what" section that explicitly addresses operational implications
-— not to prescribe policy, but to ensure that the strategic insight does not remain
+- not to prescribe policy, but to ensure that the strategic insight does not remain
 abstract. The strategic-to-operational handoff is the moment when intelligence either
 matters or disappears.
 
 When drafting a strategic assessment, ask yourself: if the policymaker accepts my
-analysis, what three things should they do differently? Include those implications —
-framed as options, not recommendations — in your assessment. It bridges the gap
+analysis, what three things should they do differently? Include those implications -
+framed as options, not recommendations - in your assessment. It bridges the gap
 between strategic insight and operational impact.
 
 The strategy-to-operations pipeline is basically a game of telephone where the message
@@ -134,18 +134,18 @@ needs to know why.
 {/* ---- Section 3: Strategic Analytical Products ---- */}
 
 Strategic intelligence is delivered through a distinctive set of products, each designed
-for a specific purpose and audience. Knowing the product type tells the consumer — and the
-analyst — what level of analysis, certainty, and detail to expect.
+for a specific purpose and audience. Knowing the product type tells the consumer - and the
+analyst - what level of analysis, certainty, and detail to expect.
 
 ### National Intelligence Estimates (NIEs)
 
-The NIE is the flagship analytical product of the U.S. Intelligence Community — and the
+The NIE is the flagship analytical product of the U.S. Intelligence Community - and the
 closest thing intelligence has to a definitive judgment on a strategic issue. An NIE is
 a coordinated, community-wide assessment that represents the consensus view of all
 relevant intelligence agencies. It is drafted by a lead office, coordinated across the
 community through a formal process of comment and dissent, and typically includes a
 section on analytic disagreements when agencies cannot reach consensus. NIEs are
-authoritative but not infallible — the pre-Iraq War 2002 NIE on Iraqi WMD remains the
+authoritative but not infallible - the pre-Iraq War 2002 NIE on Iraqi WMD remains the
 most painful example of how consensus can amplify error rather than correct it. The NIE
 process creates a powerful incentive to converge on a middle ground that may satisfy no
 one and illuminate little.
@@ -166,12 +166,12 @@ simple lack of collection.
 
 Net assessment is a distinct analytical methodology that compares the military, economic,
 and technological capabilities of two or more actors over time. It goes beyond simple
-"bean counting" of tanks and missiles to examine the qualitative factors —
-training, doctrine, leadership, morale, innovation capacity — that determine how
+"bean counting" of tanks and missiles to examine the qualitative factors -
+training, doctrine, leadership, morale, innovation capacity - that determine how
 capabilities will perform in actual conflict. The net assessment approach, pioneered by
 Andrew Marshall at the Pentagon's Office of Net Assessment, has been influential in
 shaping U.S. defence strategy for decades. Its key insight is that the most important
-measure is not absolute capability but relative advantage — and that relative advantage
+measure is not absolute capability but relative advantage - and that relative advantage
 shifts over time as both sides adapt.
 
 ### Long-Term Forecasts and Alternative Futures
@@ -198,8 +198,8 @@ overcoming them.
 
 ### Politicisation: The Pressure to Conform
 
-Politicisation is the corruption of the analytical process by political pressure — whether
-explicit or implicit — to reach a conclusion that supports a preferred policy outcome. It
+Politicisation is the corruption of the analytical process by political pressure - whether
+explicit or implicit - to reach a conclusion that supports a preferred policy outcome. It
 is the strategic analyst's most existential threat. Politicisation can take many
 forms: a policymaker who pressures an analyst to change wording in an assessment; an
 agency culture that rewards analysts who produce work aligned with leadership's
@@ -220,7 +220,7 @@ The intelligence community's preference for consensus is both a strength and a
 vulnerability. Coordinated products like NIEs benefit from the collective expertise of
 multiple agencies, but the coordination process can produce bland, lowest-common-denominator
 assessments that fail to capture the full range of possibilities. Devil's advocacy
-— the deliberate construction of the strongest possible case against the consensus view —
+- the deliberate construction of the strongest possible case against the consensus view -
 is the traditional remedy. But devil's advocacy works only when it is taken seriously.
 Too often, alternative viewpoints are acknowledged in a footnote and quickly forgotten,
 allowing groupthink to survive intact. The best strategic analysis explicitly incorporates
@@ -233,13 +233,13 @@ the way we do. It is the most pervasive cognitive bias in strategic intelligence
 is responsible for some of the most consequential analytical failures in history. American
 analysts assumed that Soviet leaders would behave rationally by Western definitions of
 rationality. Western intelligence assumed that Saddam Hussein's apparent possession
-of WMD would deter him from invasion — ignoring that Hussein's regime valued
+of WMD would deter him from invasion - ignoring that Hussein's regime valued
 internal repression and regime survival over the logic of deterrence as the West
 understood it.
 
 The antidote to mirror imaging is structured empathy: the deliberate, disciplined effort
 to understand how another actor sees the world, what their constraints and incentives are,
-and how their decision-making culture differs from our own. This is not sympathy — it is
+and how their decision-making culture differs from our own. This is not sympathy - it is
 analytical method. The strategic analyst who cannot think like their adversary will
 consistently underestimate the adversary's willingness to take risks, pay costs, and
 pursue objectives that seem irrational from the analyst's cultural vantage point.
@@ -251,7 +251,7 @@ read more about their strategic culture, institutional history, and leadership
 psychology.
 
 Mirror imaging is the analytical equivalent of being surprised that the other team
-doesn't run the same playbook as yours. Of course they don't — they have a
+doesn't run the same playbook as yours. Of course they don't - they have a
 different coach, different players, and a completely different definition of what
 "winning" looks like. Study their playbook.
 
@@ -262,7 +262,7 @@ projecting five years into the future. The three scenarios should be:
 - **Positive Disruption:** A scenario in which a favourable development (economic reform, diplomatic breakthrough, leadership transition to a reformer) shifts the trajectory substantially.
 - **Negative Shock:** A scenario in which a crisis (internal conflict, external aggression, economic collapse, natural disaster) derails the baseline trajectory.
 
-For each scenario, identify two to three signposts — observable events or data points —
+For each scenario, identify two to three signposts - observable events or data points -
 that would indicate the trajectory is moving toward that scenario. Your final product
 should be no longer than one page. The exercise is not about being right; it is about
 demonstrating that you have thought systematically about uncertainty and that you can
@@ -278,7 +278,7 @@ export default function StrategicintelligenceconceptPage() {
     <LessonContainer>
       <MicroLesson
         title="Strategic Intelligence Concept"
-        subtitle="Master the discipline of strategic intelligence — long-term forecasting, national security strategy, analytical products"
+        subtitle="Master the discipline of strategic intelligence - long-term forecasting, national security strategy, analytical products"
         humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
         readTime={15}
         difficulty="Intermediate"

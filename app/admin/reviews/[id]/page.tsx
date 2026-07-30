@@ -8,7 +8,7 @@ import { ReviewActions } from "../review-actions"
 export const dynamic = "force-dynamic"
 
 function fmt(d: string | Date | null) {
-  if (!d) return "—"
+  if (!d) return " - "
   return new Date(d).toLocaleString()
 }
 
@@ -72,7 +72,7 @@ export default async function ReviewDetailPage({
           {submission.reviewer_comments ? (
             <>
               {" "}
-              — <span className="italic">“{submission.reviewer_comments}”</span>
+              - <span className="italic">“{submission.reviewer_comments}”</span>
             </>
           ) : null}
         </div>

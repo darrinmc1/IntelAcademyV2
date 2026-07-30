@@ -14,7 +14,7 @@ In this mission, you'll examine spectacular intelligence failures throughout his
 
 Welcome to the Intelligence Community's Hall of Shame, where we examine the most spectacular "we probably
 should have seen that coming" moments in history. These case studies aren't just fascinating examples of human
-error—they're valuable learning opportunities wrapped in layers of bureaucratic embarrassment.
+error - they're valuable learning opportunities wrapped in layers of bureaucratic embarrassment.
 
 Intelligence agencies have a unique way of describing failures: "unforeseen developments," "intelligence
 gaps," or the ever-popular "alternative success scenario."
@@ -22,8 +22,8 @@ gaps," or the ever-popular "alternative success scenario."
 ###
 Pearl Harbor (1941): The Original "We Should Have Seen It Coming"
 
-Despite numerous warning signs—including intercepted Japanese communications, diplomatic signals, and
-military preparations—the U.S. was caught completely off guard by the attack on Pearl Harbor.
+Despite numerous warning signs - including intercepted Japanese communications, diplomatic signals, and
+military preparations - the U.S. was caught completely off guard by the attack on Pearl Harbor.
 
 **What went wrong:** Information silos, failure to connect dots, and the classic "they
 wouldn't dare" assumption. Turns out, they would dare. They dared quite spectacularly, in fact.
@@ -125,7 +125,7 @@ friends.)
 Am I relying too heavily on past patterns? (History doesn't always repeat itself, sometimes it just posts
 memes about itself.)
 
-Intelligence failures are inevitable—we're trying to predict the future with incomplete information, after
+Intelligence failures are inevitable - we're trying to predict the future with incomplete information, after
 all. The key is to learn from these failures rather than repeat them. As the saying goes, "It's fine to make
 mistakes as long as they're new mistakes."
 
@@ -143,19 +143,19 @@ wrong about something completely different next time. Progress!
 Studying intelligence failures is one of the most effective ways to improve analytical tradecraft. Each failure reveals specific vulnerabilities in collection, analysis, or dissemination that analysts must guard against in their own work.
 
 - **The Pattern of Failure:** Most intelligence failures follow a recognisable pattern: ambiguous signals, organisational pressure toward consensus, confirmation bias in evaluating evidence, and communication breakdowns between analysts and decision-makers.
-- **Systemic vs. Individual Failure:** While it is tempting to attribute intelligence failures to individual incompetence, the most instructive failures are systemic — they reveal weaknesses in organisational culture, analytical methodology, and the relationship between intelligence producers and consumers.
+- **Systemic vs. Individual Failure:** While it is tempting to attribute intelligence failures to individual incompetence, the most instructive failures are systemic - they reveal weaknesses in organisational culture, analytical methodology, and the relationship between intelligence producers and consumers.
 - **The Failure of Imagination:** The 9/11 Commission Report coined this phrase to describe the inability of analysts to imagine novel attack scenarios. Failures of imagination occur when analysts extrapolate from past patterns rather than thinking creatively about how adversaries might adapt.
 
-## Pearl Harbor — The Classic Case
+## Pearl Harbor - The Classic Case
 
 The Japanese attack on Pearl Harbor on December 7, 1941 remains the most studied intelligence failure in history, not because American intelligence lacked warnings but because it failed to act on the warnings it had:
 
-- **Signals Were Present:** American intelligence had broken Japanese diplomatic codes and knew that Japan was preparing for major military action. The US expected an attack somewhere — but assumed it would target the Philippines or Southeast Asia, not Hawaii.
-- **The Failure of Analysis:** Analysts suffered from what would later be called "mirror imaging" — they assumed Japan would act rationally according to American strategic logic. From the Japanese perspective, a preemptive strike on the Pacific Fleet made strategic sense.
+- **Signals Were Present:** American intelligence had broken Japanese diplomatic codes and knew that Japan was preparing for major military action. The US expected an attack somewhere - but assumed it would target the Philippines or Southeast Asia, not Hawaii.
+- **The Failure of Analysis:** Analysts suffered from what would later be called "mirror imaging" - they assumed Japan would act rationally according to American strategic logic. From the Japanese perspective, a preemptive strike on the Pacific Fleet made strategic sense.
 - **Communication Breakdown:** Warnings were transmitted through multiple channels but never reached the tactical commanders who needed them. A warning message was sent by telegram rather than encrypted radio, arriving hours after the attack began.
 - **Lessons for Modern Analysts:** Always consider what an adversary might do, not just what seems strategically rational from your own perspective. Ensure that analytical assessments reach operational consumers through the most direct and timely channels available.
 
-## Iraq WMD — Confirmation Bias in Action
+## Iraq WMD - Confirmation Bias in Action
 
 The 2003 Iraq WMD assessment represents a failure of analytical methodology rather than a failure of collection: analysts had access to the same intelligence but drew conclusions that the evidence did not support:
 
@@ -164,12 +164,12 @@ The 2003 Iraq WMD assessment represents a failure of analytical methodology rath
 - **Groupthink and Advocacy:** The intelligence community operated under implicit pressure to produce conclusions that supported the administration's policy direction. Dissenting views were marginalised, and alternative hypotheses were not systematically considered.
 - **Lessons for Modern Analysts:** ACH was developed partly in response to this failure. The key lesson: actively seek out evidence that contradicts your working hypothesis. If you cannot find such evidence, you are not looking hard enough.
 
-## The Cuban Missile Crisis — A Success Story
+## The Cuban Missile Crisis - A Success Story
 
 The Cuban Missile Crisis is often studied as an intelligence success, close-run, but the analytical process holds valuable lessons:
 
 - **Detection Through Multiple Sources:** U-2 reconnaissance photography detected the missile sites, but the intelligence was cross-checked against HUMINT reporting from Cuban sources, SIGINT intercepts of Soviet communications, and defector debriefs. Multi-source correlation was key.
-- **Structured Analysis Under Pressure:** The EXCOMM deliberated under extreme time pressure but maintained structured analytical discipline — systematically evaluating the consequences of air strikes, blockade, diplomacy, and inaction before recommending a course.
+- **Structured Analysis Under Pressure:** The EXCOMM deliberated under extreme time pressure but maintained structured analytical discipline - systematically evaluating the consequences of air strikes, blockade, diplomacy, and inaction before recommending a course.
 - **Red Team Thinking:** Attorney General Robert Kennedy explicitly played devil's advocate, challenging assumptions and forcing the team to test their conclusions against the worst-case scenario. This red team function prevented groupthink.
 - **Lessons for Modern Analysts:** Even under extreme time pressure, structured analytical techniques improve outcomes. The crisis also demonstrated the importance of having someone in the room whose explicit role is to challenge consensus.
 
