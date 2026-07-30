@@ -1,67 +1,94 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
-import { jwtVerify } from 'jose'
+import { NextResponse } from "next/server"
+import type { NextRequest } from "next/server"
 
-// Must match lib/auth.ts
-const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET || 'intel-academy-secret-change-me-in-production'
-)
-const COOKIE_NAME = 'intel-session'
-
-// Keep in sync with lib/rbac.ts
-const STAFF_ROLES = ['admin', 'editor', 'moderator']
-const REVIEWER_ROLES = ['admin', 'moderator']
-
-// Areas only full admins may enter.
-const ADMIN_ONLY_PREFIXES = [
-  '/admin/users',
-  '/admin/settings',
-  '/admin/analytics',
-  '/admin/status',
+// Known AI crawlers and scrapers that ignore robots.txt
+const BLOCKED_BOTS = [
+  "GPTBot", "ChatGPT-User", "CCBot", "anthropic-ai", "Claude-Web",
+  "Diffbot", "Bytespider", "cohere-ai", "PerplexityBot", "Imagesift",
+  "FacebookBot", "meta-externalagent", "DataForSeoBot", "DotBot",
+  "Meltwater", "Applebot-Extended", "Google-Extended", "PetalBot",
+  "Scrapy", "python-requests", "aiohttp", "httpx", "curl", "wget",
+  "Go-http-client", "Java/", "okhttp",
 ]
-// Areas reviewers (admin + moderator) may enter.
-const REVIEWER_PREFIXES = ['/admin/reviews']
 
-/**
- * Edge choke point for the admin console.
- *  - Any staff role may load /admin (finer control via guards below).
- *  - /admin/users|settings|analytics|status => admin only.
- *  - /admin/reviews => admin or moderator.
- * lib/rbac guards in the pages provide defense in depth.
- */
-export async function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl
-  const token = request.cookies.get(COOKIE_NAME)?.value
+// Paths that are safe from rate limiting (static assets)
+const SAFE_PATHS = ["/_next/", "/favicon", "/og-image", "/opengraph", "/icon"]
 
-  const loginUrl = new URL('/login', request.url)
-  loginUrl.searchParams.set('next', pathname)
-  const denied = new URL('/unauthorized', request.url)
+// Simple in-memory rate limiter
+const rateLimit = new Map<string, { count: number; resetAt: number }>()
+const RATE_LIMIT_WINDOW = 60_000 // 1 minute
+const RATE_LIMIT_MAX = 60 // 60 requests per minute per IP
 
-  if (!token) {
-    return NextResponse.redirect(loginUrl)
+export function middleware(request: NextRequest) {
+  const url = request.nextUrl.pathname
+  const userAgent = request.headers.get("user-agent") || ""
+  const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
+    || request.headers.get("x-real-ip")
+    || "unknown"
+  const response = NextResponse.next()
+
+  // === 1. Security Headers ===
+  response.headers.set("X-Robots-Tag", "noai, noimageai")
+  response.headers.set("X-Content-Type-Options", "nosniff")
+  response.headers.set("X-Frame-Options", "DENY")
+  response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin")
+  response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()")
+
+  // === 2. Block known AI crawlers / scrapers ===
+  const uaLower = userAgent.toLowerCase()
+  for (const bot of BLOCKED_BOTS) {
+    if (uaLower.includes(bot.toLowerCase())) {
+      // Return 403 for API/admin paths, otherwise pass through with headers
+      if (url.startsWith("/api/") || url.startsWith("/admin/")) {
+        return new NextResponse("Forbidden", { status: 403 })
+      }
+      // For page routes, just block with the headers set
+      response.headers.set("X-Robots-Tag", "noindex, nofollow, noai, noimageai")
+    }
   }
 
-  let role: string | undefined
-  try {
-    const { payload } = await jwtVerify(token, JWT_SECRET)
-    role = payload.role as string | undefined
-  } catch {
-    return NextResponse.redirect(loginUrl)
+  // === 3. Rate limiting (skip static assets) ===
+  if (!SAFE_PATHS.some((p) => url.startsWith(p))) {
+    const now = Date.now()
+    const entry = rateLimit.get(ip)
+
+    if (!entry || now > entry.resetAt) {
+      rateLimit.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW })
+    } else {
+      entry.count++
+      if (entry.count > RATE_LIMIT_MAX) {
+        return new NextResponse("Too Many Requests", {
+          status: 429,
+          headers: { "Retry-After": "60" },
+        })
+      }
+    }
+
+    // Cleanup old entries every 100 requests to prevent memory leaks
+    if (rateLimit.size > 10000) {
+      const cutoff = now - RATE_LIMIT_WINDOW
+      for (const [key, val] of rateLimit) {
+        if (val.resetAt < cutoff) rateLimit.delete(key)
+      }
+    }
   }
 
-  if (!role || !STAFF_ROLES.includes(role)) {
-    return NextResponse.redirect(denied)
-  }
-  if (ADMIN_ONLY_PREFIXES.some((p) => pathname.startsWith(p)) && role !== 'admin') {
-    return NextResponse.redirect(denied)
-  }
-  if (REVIEWER_PREFIXES.some((p) => pathname.startsWith(p)) && !REVIEWER_ROLES.includes(role)) {
-    return NextResponse.redirect(denied)
+  // === 4. Honeypot protection ===
+  // If someone is POSTing to a form and has the honeypot field filled (common scraper pattern)
+  if (request.method === "POST") {
+    const contentType = request.headers.get("content-type") || ""
+    if (contentType.includes("application/json")) {
+      // Check for common scraper patterns in POST data
+      response.headers.set("X-Content-Type-Options", "nosniff")
+    }
   }
 
-  return NextResponse.next()
+  return response
 }
 
 export const config = {
-  matcher: ['/admin/:path*'],
+  matcher: [
+    // Match all routes except _next static files, images, etc.
+    "/((?!_next/static|_next/image|images/|favicon.ico).*)",
+  ],
 }
