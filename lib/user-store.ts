@@ -1,4 +1,5 @@
 import { generateCodename } from './codename-generator';
+import { generateUUID } from './utils';
 
 export interface UserProfile {
   id: string;
@@ -23,7 +24,7 @@ const STORAGE_KEY = 'intel-academy-profile';
 function createDefaultProfile(): UserProfile {
   const now = new Date().toISOString();
   return {
-    id: crypto.randomUUID(),
+    id: generateUUID(),
     codename: generateCodename(),
     lessonsViewed: [],
     lessonsCompleted: [],

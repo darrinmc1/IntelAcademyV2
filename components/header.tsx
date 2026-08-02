@@ -71,7 +71,7 @@ export function Header() {
     setActiveDropdown(null)
   }
 
-  const isStaff = isAuthenticated && user && ['admin', 'editor', 'moderator'].includes(user.role)
+  const isStaff = isAuthenticated && user && ['admin', 'editor', 'moderator'].includes(user.role ?? '')
 
   const mainNavItems = [
     {

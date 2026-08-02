@@ -1,12 +1,25 @@
 import { SignJWT, jwtVerify } from 'jose'
 import { cookies } from 'next/headers'
 
+// Require a real secret in production — never silently fall back to a known
+// default, which would let anyone forge a session cookie.
+const rawSecret = process.env.JWT_SECRET
+if (!rawSecret && process.env.NODE_ENV === 'production') {
+  throw new Error('JWT_SECRET environment variable is required in production')
+}
 const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET || 'intel-academy-secret-change-me-in-production'
+  rawSecret || 'intel-academy-dev-only-secret'
 )
 const COOKIE_NAME = 'intel-session'
 
 export type UserRole = 'admin' | 'moderator' | 'editor' | 'viewer' | 'user'
+
+// Roles allowed into the /admin area.
+export const ADMIN_ROLES: UserRole[] = ['admin', 'moderator', 'editor']
+
+export function isAdminRole(role: UserRole | undefined | null): boolean {
+  return !!role && ADMIN_ROLES.includes(role)
+}
 
 export interface AuthUser {
   id: string
@@ -20,11 +33,11 @@ export interface AuthUser {
  * Create a JWT token for a user
  */
 export async function createToken(user: AuthUser): Promise<string> {
-  return new SignJWT({ 
-    id: user.id, 
-    email: user.email, 
+  return new SignJWT({
+    id: user.id,
+    email: user.email,
     codename: user.codename,
-    role: user.role || 'user'
+    role: user.role || 'user',
   })
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
@@ -74,4 +87,16 @@ export async function setAuthCookie(token: string) {
 export async function clearAuthCookie() {
   const cookieStore = await cookies()
   cookieStore.delete(COOKIE_NAME)
+}
+
+/**
+ * Ensure the current user has an admin-capable role. Throws if not — use to
+ * guard server actions and admin-only API routes.
+ */
+export async function requireAdmin(): Promise<AuthUser> {
+  const user = await getCurrentUser()
+  if (!user || !isAdminRole(user.role)) {
+    throw new Error('Unauthorized: admin access required')
+  }
+  return user
 }

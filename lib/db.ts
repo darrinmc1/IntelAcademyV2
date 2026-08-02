@@ -26,6 +26,20 @@ export async function initDatabase() {
   // Idempotent migration: add role to pre-existing users tables
   await sql`ALTER TABLE users ADD COLUMN IF NOT EXISTS role TEXT DEFAULT 'user'`
 
+  // PIN auth, lockout, and PIN-reset migrations.
+  // password_hash now stores the bcrypt hash of the 4-digit PIN.
+  await sql`ALTER TABLE users ADD COLUMN IF NOT EXISTS failed_attempts INTEGER DEFAULT 0`
+  await sql`ALTER TABLE users ADD COLUMN IF NOT EXISTS locked BOOLEAN DEFAULT FALSE`
+  await sql`ALTER TABLE users ADD COLUMN IF NOT EXISTS reset_token TEXT`
+  await sql`ALTER TABLE users ADD COLUMN IF NOT EXISTS reset_token_expiry TIMESTAMP`
+  // Case-insensitive uniqueness for codenames, since login keys off them.
+  // Non-fatal: legacy duplicate codenames shouldn't break auth.
+  try {
+    await sql`CREATE UNIQUE INDEX IF NOT EXISTS users_codename_lower_idx ON users (LOWER(codename))`
+  } catch (err) {
+    console.warn('Could not create unique codename index (likely pre-existing duplicates):', err)
+  }
+
   // Content review workflow tables (migration 002)
   await sql`
     CREATE TABLE IF NOT EXISTS content_submissions (
@@ -144,6 +158,81 @@ export async function getUserByEmail(email: string) {
 export async function getUserById(id: string) {
   const result = await sql`SELECT * FROM users WHERE id = ${id}`
   return result.rows[0] || null
+}
+
+/**
+ * Get user by codename (case-insensitive). PIN login keys off this.
+ */
+export async function getUserByCodename(codename: string) {
+  const result = await sql`SELECT * FROM users WHERE LOWER(codename) = LOWER(${codename})`
+  return result.rows[0] || null
+}
+
+/**
+ * Get user by an active (non-expired) PIN reset token (SHA-256 hash stored).
+ */
+export async function getUserByResetToken(tokenHash: string) {
+  const result = await sql`
+    SELECT * FROM users
+    WHERE reset_token = ${tokenHash}
+      AND reset_token_expiry IS NOT NULL
+      AND reset_token_expiry > NOW()
+  `
+  return result.rows[0] || null
+}
+
+/**
+ * Increment the failed-attempt counter and return the new count.
+ */
+export async function incrementFailedAttempts(id: string): Promise<number> {
+  const result = await sql`
+    UPDATE users
+    SET failed_attempts = failed_attempts + 1, updated_at = NOW()
+    WHERE id = ${id}
+    RETURNING failed_attempts
+  `
+  return result.rows[0]?.failed_attempts ?? 0
+}
+
+/**
+ * Lock an account until the PIN is reset.
+ */
+export async function lockAccount(id: string) {
+  await sql`UPDATE users SET locked = TRUE, updated_at = NOW() WHERE id = ${id}`
+}
+
+/**
+ * Reset the failed-attempt counter (e.g. after a successful login).
+ */
+export async function resetFailedAttempts(id: string) {
+  await sql`UPDATE users SET failed_attempts = 0, updated_at = NOW() WHERE id = ${id}`
+}
+
+/**
+ * Store a hashed PIN reset token and its expiry for a user.
+ */
+export async function setResetToken(id: string, tokenHash: string, expiry: Date) {
+  await sql`
+    UPDATE users
+    SET reset_token = ${tokenHash}, reset_token_expiry = ${expiry.toISOString()}, updated_at = NOW()
+    WHERE id = ${id}
+  `
+}
+
+/**
+ * Set a new PIN hash, unlock the account, clear attempts and the reset token.
+ */
+export async function updatePin(id: string, pinHash: string) {
+  await sql`
+    UPDATE users
+    SET password_hash = ${pinHash},
+        locked = FALSE,
+        failed_attempts = 0,
+        reset_token = NULL,
+        reset_token_expiry = NULL,
+        updated_at = NOW()
+    WHERE id = ${id}
+  `
 }
 
 /**

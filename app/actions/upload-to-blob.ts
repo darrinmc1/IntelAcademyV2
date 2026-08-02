@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache"
 import type { ImageMetadata } from "@/utils/blob-storage"
 import { safeRevalidatePath } from "@/utils/revalidation"
+import { requireAdmin } from "@/lib/auth"
 
 // Function to handle image uploads without using Blob
 export async function uploadImageFromUrlToBlob(
@@ -110,6 +111,9 @@ export async function migratePublicImagesToBlob(
 
 export async function uploadToBlobAction(formData: FormData) {
   try {
+    // Only admins may upload.
+    await requireAdmin()
+
     const file = formData.get("file") as File
     if (!file) {
       return { success: false, error: "No file provided" }

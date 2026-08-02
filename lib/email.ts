@@ -172,3 +172,23 @@ export async function sendReviewRejected(args: {
   );
   return send(args.to, subject, html);
 }
+
+/** Sent to a user who requested a 4-digit PIN reset. Link expires in 1 hour. */
+export async function sendPinResetEmail(
+  email: string,
+  codename: string,
+  resetUrl: string
+) {
+  const subject = `Reset your ${SITE_NAME} PIN`;
+  const html = shell(
+    "PIN reset requested",
+    `<p>Agent <strong>${codename}</strong>,</p>
+     <p>Click below to set a new 4-digit PIN. This link expires in 1 hour.</p>
+     <p style="text-align:center;margin:28px 0;">
+       <a href="${resetUrl}" style="background:#2E4A7C;color:#fff;text-decoration:none;padding:12px 24px;border-radius:8px;font-weight:bold;display:inline-block;">Reset your PIN</a>
+     </p>
+     <p style="font-size:12px;color:#666;">Or paste this link into your browser:<br/>${resetUrl}</p>
+     <p style="font-size:12px;color:#666;">If you didn't request this, ignore this email — your PIN won't change.</p>`
+  );
+  return send(email, subject, html);
+}

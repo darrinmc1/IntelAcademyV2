@@ -13,10 +13,10 @@ export default function RegisterPage() {
   const { register } = useAuth()
   const { profile } = useUser()
   const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [confirmPassword, setConfirmPassword] = useState("")
+  const [pin, setPin] = useState("")
+  const [confirmPin, setConfirmPin] = useState("")
   const [codename, setCodename] = useState(profile?.codename || generateCodename())
-  const [showPassword, setShowPassword] = useState(false)
+  const [showPin, setShowPin] = useState(false)
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
   const [migrateProgress, setMigrateProgress] = useState(true)
@@ -29,12 +29,12 @@ export default function RegisterPage() {
     e.preventDefault()
     setError("")
 
-    if (password !== confirmPassword) {
-      setError("Passwords don't match. An analyst should notice these things.")
+    if (!/^\d{4}$/.test(pin)) {
+      setError("Your PIN must be exactly 4 digits.")
       return
     }
-    if (password.length < 6) {
-      setError("Password must be at least 6 characters. 'password' doesn't count.")
+    if (pin !== confirmPin) {
+      setError("PINs don't match. An analyst should notice these things.")
       return
     }
 
@@ -51,7 +51,7 @@ export default function RegisterPage() {
       lastVisitDate: profile.lastVisitDate,
     } : undefined
 
-    const result = await register(email, password, codename, existingProfile)
+    const result = await register(email, pin, codename, existingProfile)
     
     if (result.success) {
       router.push("/profile")
@@ -121,39 +121,50 @@ export default function RegisterPage() {
               />
             </div>
 
-            {/* Password */}
+            {/* PIN */}
             <div>
-              <label className="block text-sm font-medium text-slate-300 mb-1.5">Password</label>
+              <label className="block text-sm font-medium text-slate-300 mb-1.5">4-Digit PIN</label>
               <div className="relative">
                 <input
-                  type={showPassword ? "text" : "password"}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Min 6 characters (not 'password123')"
+                  type={showPin ? "text" : "password"}
+                  inputMode="numeric"
+                  pattern="\d{4}"
+                  maxLength={4}
+                  value={pin}
+                  onChange={(e) => setPin(e.target.value.replace(/\D/g, "").slice(0, 4))}
+                  placeholder="••••"
                   required
                   className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-500 
+                             tracking-[0.5em] text-center text-lg
                              focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all pr-10"
                 />
                 <button
                   type="button"
-                  onClick={() => setShowPassword(!showPassword)}
+                  onClick={() => setShowPin(!showPin)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300"
                 >
-                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                  {showPin ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                 </button>
               </div>
+              <p className="text-xs text-slate-500 mt-1.5">
+                Choose 4 digits you'll remember. After 5 wrong tries your account locks until you reset it by email.
+              </p>
             </div>
 
-            {/* Confirm Password */}
+            {/* Confirm PIN */}
             <div>
-              <label className="block text-sm font-medium text-slate-300 mb-1.5">Confirm Password</label>
+              <label className="block text-sm font-medium text-slate-300 mb-1.5">Confirm PIN</label>
               <input
                 type="password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                placeholder="Type it again, Agent"
+                inputMode="numeric"
+                pattern="\d{4}"
+                maxLength={4}
+                value={confirmPin}
+                onChange={(e) => setConfirmPin(e.target.value.replace(/\D/g, "").slice(0, 4))}
+                placeholder="••••"
                 required
                 className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-500 
+                           tracking-[0.5em] text-center text-lg
                            focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all"
               />
             </div>

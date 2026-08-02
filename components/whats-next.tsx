@@ -177,9 +177,9 @@ export function WhatsNext({ anotherTopic, moreLearning, advancedLearning, title,
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
-              <Link href="/forum">
+              <Link href="/feedback">
                 <Button className="w-full group" variant="outline">
-                  Visit Our Forum
+                  Send Feedback
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>

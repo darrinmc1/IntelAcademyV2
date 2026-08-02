@@ -21,8 +21,8 @@ interface AuthContextType {
   user: AuthUser | null
   isLoading: boolean
   isAuthenticated: boolean
-  login: (email: string, password: string) => Promise<{ success: boolean; error?: string }>
-  register: (email: string, password: string, codename?: string, existingProfile?: any) => Promise<{ success: boolean; error?: string }>
+  login: (codename: string, pin: string) => Promise<{ success: boolean; error?: string; locked?: boolean }>
+  register: (email: string, pin: string, codename?: string, existingProfile?: any) => Promise<{ success: boolean; error?: string }>
   logout: () => Promise<void>
   syncProfile: (profile: any) => Promise<void>
   refreshUser: () => Promise<void>
@@ -51,15 +51,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }
 
-  async function login(email: string, password: string) {
+  async function login(codename: string, pin: string) {
     try {
       const res = await fetch("/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ codename, pin }),
       })
       const data = await res.json()
-      if (!res.ok) return { success: false, error: data.error }
+      if (!res.ok) return { success: false, error: data.error, locked: data.locked }
       setUser(data.user)
       return { success: true }
     } catch {
@@ -67,12 +67,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }
 
-  async function register(email: string, password: string, codename?: string, existingProfile?: any) {
+  async function register(email: string, pin: string, codename?: string, existingProfile?: any) {
     try {
       const res = await fetch("/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password, codename, existingProfile }),
+        body: JSON.stringify({ email, pin, codename, existingProfile }),
       })
       const data = await res.json()
       if (!res.ok) return { success: false, error: data.error }
@@ -97,7 +97,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         body: JSON.stringify(profile),
       })
     } catch {
-      // Silently fail sync - localStorage is still the primary store
+      // Silently fail sync — localStorage is still the primary store
     }
   }
 

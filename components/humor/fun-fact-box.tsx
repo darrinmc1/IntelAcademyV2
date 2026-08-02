@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { Card } from "@/components/ui/card"
 import { Lightbulb, RefreshCw } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -15,17 +15,17 @@ export function FunFactBox({ category = "intelligence", className = "" }: FunFac
   const [funFact, setFunFact] = useState("")
   const [isVisible, setIsVisible] = useState(false)
 
-  const refreshFact = () => {
+  const refreshFact = useCallback(() => {
     setIsVisible(false)
     setTimeout(() => {
       setFunFact(getRandomFunFact(category))
       setIsVisible(true)
     }, 200)
-  }
+  }, [category])
 
   useEffect(() => {
     refreshFact()
-  }, [category])
+  }, [refreshFact])
 
   return (
     <Card className={`p-4 bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-l-blue-500 ${className}`}>

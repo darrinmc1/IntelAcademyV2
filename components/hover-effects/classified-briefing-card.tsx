@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Eye, EyeOff, Lock, enable, Shield, AlertTriangle, Clock, User, FileText } from "lucide-react"
+import { Eye, EyeOff, Lock, Unlock, Shield, AlertTriangle, Clock, User, FileText } from "lucide-react"
 
 interface ClassifiedBriefingCardProps {
   title: string
@@ -200,7 +200,7 @@ export function ClassifiedBriefingCard({
             } overflow-hidden`}
           >
             <div className="bg-green-800 text-green-100 p-3 rounded font-mono text-sm mb-4 flex items-center gap-2">
-              <enable className="h-4 w-4" />
+              <Unlock className="h-4 w-4" />
               ACCESS GRANTED - CLEARANCE LEVEL: {clearanceRequired}
             </div>
           </div>

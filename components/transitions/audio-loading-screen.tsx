@@ -10,6 +10,15 @@ interface AudioLoadingScreenProps {
   message?: string
 }
 
+// Static — defined at module scope so its identity is stable across renders.
+const loadingMessages = [
+  "Initializing secure connection...",
+  "Authenticating credentials...",
+  "Loading intelligence modules...",
+  "Preparing workspace...",
+  "Access granted.",
+]
+
 export function AudioLoadingScreen({
   isLoading,
   message = "Accessing Intelligence Systems...",
@@ -17,14 +26,6 @@ export function AudioLoadingScreen({
   const [progress, setProgress] = useState(0)
   const [currentMessage, setCurrentMessage] = useState(message)
   const { playSound } = useAudioCues({ volume: 0.15 })
-
-  const loadingMessages = [
-    "Initializing secure connection...",
-    "Authenticating credentials...",
-    "Loading intelligence modules...",
-    "Preparing workspace...",
-    "Access granted.",
-  ]
 
   useEffect(() => {
     if (!isLoading) return
