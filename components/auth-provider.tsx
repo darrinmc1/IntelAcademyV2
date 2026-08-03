@@ -21,7 +21,7 @@ interface AuthContextType {
   user: AuthUser | null
   isLoading: boolean
   isAuthenticated: boolean
-  login: (codename: string, pin: string) => Promise<{ success: boolean; error?: string; locked?: boolean }>
+  login: (identifier: string, pin: string) => Promise<{ success: boolean; error?: string; locked?: boolean }>
   register: (email: string, pin: string, codename?: string, existingProfile?: any) => Promise<{ success: boolean; error?: string }>
   logout: () => Promise<void>
   syncProfile: (profile: any) => Promise<void>
@@ -51,12 +51,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }
 
-  async function login(codename: string, pin: string) {
+  async function login(identifier: string, pin: string) {
     try {
       const res = await fetch("/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ codename, pin }),
+        body: JSON.stringify({ identifier, pin }),
       })
       const data = await res.json()
       if (!res.ok) return { success: false, error: data.error, locked: data.locked }

@@ -9,7 +9,7 @@ import { Shield, Eye, EyeOff, LogIn, AlertCircle, Lock } from "lucide-react"
 export default function LoginPage() {
   const router = useRouter()
   const { login } = useAuth()
-  const [codename, setCodename] = useState("")
+  const [email, setEmail] = useState("")
   const [pin, setPin] = useState("")
   const [showPin, setShowPin] = useState(false)
   const [error, setError] = useState("")
@@ -27,7 +27,7 @@ export default function LoginPage() {
     }
 
     setLoading(true)
-    const result = await login(codename.trim(), pin)
+    const result = await login(email.trim(), pin)
 
     if (result.success) {
       // Return to the page the user was sent from (e.g. /admin), if it's a safe
@@ -70,14 +70,14 @@ export default function LoginPage() {
 
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-slate-300 mb-1.5">Agent Codename</label>
+              <label className="block text-sm font-medium text-slate-300 mb-1.5">Email</label>
               <input
-                type="text"
-                value={codename}
-                onChange={(e) => setCodename(e.target.value)}
-                placeholder="Shadow Falcon"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="agent@example.com"
                 required
-                autoComplete="username"
+                autoComplete="email"
                 className="w-full px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-slate-500 
                            focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all"
               />

@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import bcrypt from 'bcryptjs'
 import {
+  getUserByEmail,
   getUserByCodename,
   getUserProfile,
   initDatabase,
@@ -16,14 +17,20 @@ export async function POST(request: Request) {
   try {
     await initDatabase()
 
-    const { codename, pin } = await request.json()
+    // Accept email (preferred) or codename as the identifier.
+    const { email, codename, identifier, pin } = await request.json()
+    const id = String(identifier || email || codename || '').trim()
 
-    if (!codename || !pin) {
-      return NextResponse.json({ error: 'Codename and PIN are required' }, { status: 400 })
+    if (!id || !pin) {
+      return NextResponse.json({ error: 'Email and PIN are required' }, { status: 400 })
     }
 
-    const user = await getUserByCodename(String(codename).trim())
-    // Generic message so we don't reveal which codenames exist.
+    // Look up by email first, then fall back to codename.
+    let user = await getUserByEmail(id.toLowerCase())
+    if (!user) {
+      user = await getUserByCodename(id)
+    }
+    // Generic message so we don't reveal which accounts exist.
     if (!user) {
       return NextResponse.json({ error: 'Invalid credentials. Check your intel.' }, { status: 401 })
     }
