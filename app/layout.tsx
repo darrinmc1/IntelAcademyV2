@@ -85,13 +85,13 @@ export default function RootLayout({
               </main>
               <Footer />
               <ScrollToTop />
-              <FeedbackWidget />
+              <feedback-widget />
               <Toaster position="top-right" theme="dark" richColors />
             </HumorProvider>
           </AuthProvider>
         </UserProvider>
         <WaitlistPopup />
-        <FeedbackWidget />
+        <feedback-widget />
       </body>
     </html>
   )
