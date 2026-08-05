@@ -4,7 +4,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import EmailInterest from "./email-interest"
 
-export default function LessonInDevelopment() {
+export default async function LessonInDevelopment({
+  searchParams,
+}: {
+  searchParams: Promise<{ lesson?: string }>
+}) {
+  const { lesson } = await searchParams
   return (
     <div className="container max-w-4xl py-12">
       <Link
@@ -55,12 +60,16 @@ export default function LessonInDevelopment() {
             <div>
               <h3 className="text-lg font-medium">Express Your Interest</h3>
               <p className="text-muted-foreground mt-1 mb-4">
-                Let us know you&apos;re interested in this topic, and we&apos;ll prioritize its development and notify you when
-                it&apos;s ready.
+                {lesson ? (
+                  <>Interested in <strong>{lesson}</strong>? Let us know and we&apos;ll prioritize it and notify you when it&apos;s ready.</>
+                ) : (
+                  <>Let us know you&apos;re interested in this topic, and we&apos;ll prioritize its development and notify you when it&apos;s ready.</>
+                )}
               </p>
               <EmailInterest
                 subject="Interest in this lesson"
                 body="I'm interested in this lesson. Please notify me when it's available."
+                lesson={lesson}
               >
                 Notify Me
               </EmailInterest>
@@ -71,12 +80,11 @@ export default function LessonInDevelopment() {
               <p className="text-muted-foreground mt-1 mb-4">
                 Have another idea for a lesson? We&apos;d love to hear it.
               </p>
-              <EmailInterest
-                subject="New Lesson Idea"
-                body="I have an idea for a new lesson:"
-              >
-                Suggest a Topic
-              </EmailInterest>
+              <Button asChild variant="outline">
+                <Link href="/request-topic">
+                  Suggest a Topic
+                </Link>
+              </Button>
             </div>
           </div>
         </CardContent>

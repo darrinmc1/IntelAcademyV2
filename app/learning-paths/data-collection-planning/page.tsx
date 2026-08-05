@@ -59,28 +59,28 @@ export default function DataCollectionPlanningPage() {
             title="Collection Planning Process"
             description="Understand the step-by-step process for developing systematic collection plans."
             imageSrc="/planning-process.png"
-            href="/lesson-in-development"
+            href={`/lesson-in-development?lesson=${encodeURIComponent("Collection Planning Process")}`}
             duration="20 min"
           />
           <TopicCardWithImage
             title="Source Selection & Evaluation"
             description="Learn criteria for selecting and evaluating appropriate intelligence sources for reliability."
             imageSrc="/source-selection.png"
-            href="/lesson-in-development"
+            href={`/lesson-in-development?lesson=${encodeURIComponent("Source Selection & Evaluation")}`}
             duration="18 min"
           />
           <TopicCardWithImage
             title="OSINT Collection Strategies"
             description="Develop systematic plans for collecting and organizing open-source intelligence effectively."
             imageSrc="/osint-strategies.png"
-            href="/lesson-in-development"
+            href={`/lesson-in-development?lesson=${encodeURIComponent("OSINT Collection Strategies")}`}
             duration="25 min"
           />
           <TopicCardWithImage
             title="Collection Operations Security"
             description="Learn how to incorporate security considerations and risk management into collection planning."
             imageSrc="/operations-security.png"
-            href="/lesson-in-development"
+            href={`/lesson-in-development?lesson=${encodeURIComponent("Collection Operations Security")}`}
             duration="22 min"
           />
         </div>
