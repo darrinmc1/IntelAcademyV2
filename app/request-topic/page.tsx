@@ -13,26 +13,13 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
-import { submitTopicRequestAction } from "@/app/actions/topic-requests"
-
-const CATEGORIES = [
-  { value: "Foundations", label: "Foundations of Intelligence" },
-  { value: "OSINT", label: "OSINT" },
-  { value: "Analyst's Notebook", label: "Analyst's Notebook" },
-  { value: "Analytical Techniques", label: "Analytical Techniques" },
-  { value: "Data Collection", label: "Data Collection" },
-  { value: "Excel", label: "Excel for Analysts" },
-  { value: "Other", label: "Other" },
-]
+import { useSearchParams } from "next/navigation"
 
 export default function RequestTopicPage() {
-  const [title, setTitle] = useState("")
-  const [category, setCategory] = useState("")
-  const [description, setDescription] = useState("")
-  const [experience, setExperience] = useState("")
+  const searchParams = useSearchParams()
+  const [text, setText] = useState(searchParams.get("topic") || "")
   const [email, setEmail] = useState("")
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
@@ -40,37 +27,36 @@ export default function RequestTopicPage() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    if (!title.trim() || !description.trim()) {
-      toast({ title: "Error", description: "Please fill in required fields", variant: "destructive" })
-      return
-    }
-
     setLoading(true)
     try {
-      const result = await submitTopicRequestAction({
-        topic_title: title,
-        category: category || undefined,
-        description,
-        experience_level: experience || undefined,
-        email: email || undefined,
+      const page = typeof window !== "undefined" ? window.location.href : ""
+      const message = text.trim() || "Topic priority request (no details provided)"
+      const res = await fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          category: "Content Request",
+          message,
+          email: email.trim() || undefined,
+          page,
+        }),
       })
-
-      if (result.ok) {
-        if (result.emailWarning) {
-          toast({ title: "Submitted - notification issue", description: result.emailWarning, variant: "destructive" })
-        } else {
-          toast({ title: "Request submitted", description: result.message })
-        }
-        setTitle("")
-        setCategory("")
-        setDescription("")
-        setExperience("")
+      const data = await res.json()
+      if (res.ok) {
+        toast({ title: "Request submitted", description: "Thanks! We'll prioritize this topic." })
+        setText("")
         setEmail("")
         setSuccess(true)
         setTimeout(() => setSuccess(false), 5000)
       } else {
-        toast({ title: "Error", description: result.message, variant: "destructive" })
+        toast({
+          title: "Error",
+          description: data.error || "Something went wrong. Please try again.",
+          variant: "destructive",
+        })
       }
+    } catch {
+      toast({ title: "Error", description: "Network error. Please try again.", variant: "destructive" })
     } finally {
       setLoading(false)
     }
@@ -102,10 +88,8 @@ export default function RequestTopicPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Topic Request Form</CardTitle>
-            <CardDescription>
-              Please provide as much detail as possible to help us understand your needs.
-            </CardDescription>
+            <CardTitle>Topic Request</CardTitle>
+            <CardDescription>Optional — just tell us what you'd like and we'll take it from there.</CardDescription>
           </CardHeader>
           <CardContent>
             {success && (
@@ -116,56 +100,14 @@ export default function RequestTopicPage() {
 
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="space-y-2">
-                <Label htmlFor="topic-title">Topic Title *</Label>
-                <Input
-                  id="topic-title"
-                  placeholder="e.g., Advanced Social Media Intelligence Techniques"
-                  value={title}
-                  onChange={(e) => setTitle(e.target.value)}
-                  required
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="category">Category</Label>
-                <Select value={category} onValueChange={setCategory}>
-                  <SelectTrigger id="category">
-                    <SelectValue placeholder="Select a category" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {CATEGORIES.map((cat) => (
-                      <SelectItem key={cat.value} value={cat.value}>
-                        {cat.label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="description">Description *</Label>
+                <Label htmlFor="topic-details">What would you like to learn about? (optional)</Label>
                 <Textarea
-                  id="description"
-                  placeholder="Please describe what you'd like to learn about this topic and why it would be valuable."
-                  rows={5}
-                  value={description}
-                  onChange={(e) => setDescription(e.target.value)}
-                  required
+                  id="topic-details"
+                  placeholder="e.g., Advanced Social Media Intelligence Techniques — anything you tell us helps us prioritize."
+                  value={text}
+                  onChange={(e) => setText(e.target.value)}
+                  rows={4}
                 />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="experience-level">Your Experience Level</Label>
-                <Select value={experience} onValueChange={setExperience}>
-                  <SelectTrigger id="experience-level">
-                    <SelectValue placeholder="Select your experience level" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="beginner">Beginner</SelectItem>
-                    <SelectItem value="intermediate">Intermediate</SelectItem>
-                    <SelectItem value="advanced">Advanced</SelectItem>
-                  </SelectContent>
-                </Select>
               </div>
 
               <div className="space-y-2">
@@ -185,11 +127,10 @@ export default function RequestTopicPage() {
               <Button type="submit" className="w-full" disabled={loading}>
                 {loading ? (
                   <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Submitting...
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting…
                   </>
                 ) : (
-                  "Submit Request"
+                  "Request Priority"
                 )}
               </Button>
             </form>

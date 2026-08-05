@@ -11,17 +11,26 @@ import { useToast } from "@/components/ui/use-toast"
 export function RequestTopicForm() {
   const { toast } = useToast()
   const [email, setEmail] = useState("")
-  const [topic, setTopic] = useState("")
-  const [description, setDescription] = useState("")
+  const [text, setText] = useState("")
+  const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setLoading(true)
     try {
-      const response = await fetch("/api/request-topic", {
+      const page = typeof window !== "undefined" ? window.location.href : ""
+      const message = text.trim() || "Topic request (no details provided)"
+      const response = await fetch("/api/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, topic, description }),
+        body: JSON.stringify({
+          category: "Content Request",
+          message,
+          email: email.trim() || undefined,
+          page,
+        }),
       })
+      const data = await response.json()
 
       if (response.ok) {
         toast({
@@ -29,10 +38,13 @@ export function RequestTopicForm() {
           description: "Thanks for your feedback. We'll review your topic suggestion.",
         })
         setEmail("")
-        setTopic("")
-        setDescription("")
+        setText("")
       } else {
-        throw new Error("Failed to submit request")
+        toast({
+          title: "Error",
+          description: data.error || "Something went wrong. Please try again later.",
+          variant: "destructive",
+        })
       }
     } catch (error) {
       toast({
@@ -40,6 +52,8 @@ export function RequestTopicForm() {
         description: "Something went wrong. Please try again later.",
         variant: "destructive",
       })
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -48,49 +62,33 @@ export function RequestTopicForm() {
       <CardHeader>
         <CardTitle>Request a New Topic</CardTitle>
         <CardDescription>
-          Have an idea for a new lesson or learning path? Let us know! For more detailed suggestions, you can also email us at{" "}
-          <a href="mailto:info@TheIntelAnalystAcademy.com" className="text-blue-600 hover:underline">
-            info@TheIntelAnalystAcademy.com
-          </a>
-          .
+          Have an idea for a new lesson or learning path? Let us know — everything is optional.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="topic-details">What would you like to learn? (optional)</Label>
+            <Textarea
+              id="topic-details"
+              placeholder="e.g., AI in Intelligence Analysis"
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              rows={3}
+            />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="email">Email (optional)</Label>
             <Input
               id="email"
               type="email"
               placeholder="your@email.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              required
             />
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="topic">Topic</Label>
-            <Input
-              id="topic"
-              type="text"
-              placeholder="e.g., AI in Intelligence Analysis"
-              value={topic}
-              onChange={(e) => setTopic(e.target.value)}
-              required
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="description">Description</Label>
-            <Textarea
-              id="description"
-              placeholder="Tell us more about what you'd like to learn."
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-              required
-            />
-          </div>
-          <Button type="submit" className="w-full">
-            Submit Request
+          <Button type="submit" className="w-full" disabled={loading}>
+            {loading ? "Submitting…" : "Submit Request"}
           </Button>
         </form>
       </CardContent>

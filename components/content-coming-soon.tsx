@@ -39,7 +39,7 @@ export function ContentComingSoon({ topicTitle, category, estimatedDate }: Conte
         <CardFooter className="flex flex-col space-y-4 pt-0">
           <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
             <Button asChild variant="outline">
-              <Link href="/request-topic">
+              <Link href={`/request-topic?topic=${encodeURIComponent(topicTitle)}`}>
                 <Mail className="mr-2 h-4 w-4" />
                 Request Priority
               </Link>
