@@ -27,7 +27,7 @@ export function FeedbackWidget() {
           category,
           message,
           email: email || undefined,
-          page: typeof window !== "undefined" ? window.location.pathname : undefined,
+          page: typeof window !== "undefined" ? window.location.href : undefined,
         }),
       })
 

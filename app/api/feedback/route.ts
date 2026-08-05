@@ -45,11 +45,23 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ message: "Thank you for your feedback." });
   }
 
+  // Resolve full page URL (widget may send a relative path).
+  const origin =
+    req.headers.get("origin") ??
+    (req.headers.get("host") ? `https://${req.headers.get("host")}` : null);
+  const pageUrl =
+    page && page.startsWith("http")
+      ? page
+      : origin && page
+        ? `${origin}${page.startsWith("/") ? page : `/${page}`}`
+        : null;
+
   const result = await submitFeedbackAction({
     category: category ?? "",
     rating: typeof rating === "number" ? rating : undefined,
     message: message ?? "",
     page,
+    page_url: pageUrl ?? undefined,
     email,
     ip,
   });
