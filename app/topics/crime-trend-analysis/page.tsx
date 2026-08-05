@@ -218,8 +218,6 @@ Write a one-paragraph assessment that either confirms the trend as genuine or ex
 which of these distorting factors is at play. Include your level of confidence and what
 additional data you would need to be more certain.
 
-{/* ---- WhatsNext Links ---- */}
-
 )
 `
 

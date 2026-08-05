@@ -159,7 +159,7 @@ export function EnhancedLessonContent({ content, topic }: EnhancedLessonContentP
       {processedContent}
 
       {/* Final summary section */}
-      <div className="mt-12 p-6 bg-blue-50 rounded-lg border border-blue-100">
+      <div className="mt-12 p-6 bg-blue-50 rounded-lg border border-blue-100 text-slate-900">
         <h2 className="text-2xl font-bold mb-4">Key Takeaways</h2>
         <p className="text-lg mb-4">
           In this lesson, you've learned about {topic.replace(/-/g, " ")}. Remember these important points:
