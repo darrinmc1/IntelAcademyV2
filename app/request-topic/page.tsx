@@ -19,7 +19,8 @@ import { useSearchParams } from "next/navigation"
 
 export default function RequestTopicPage() {
   const searchParams = useSearchParams()
-  const [text, setText] = useState(searchParams.get("topic") || "")
+  const topicFromUrl = searchParams.get("topic") || ""
+  const [text, setText] = useState(topicFromUrl)
   const [email, setEmail] = useState("")
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
@@ -30,7 +31,11 @@ export default function RequestTopicPage() {
     setLoading(true)
     try {
       const page = typeof window !== "undefined" ? window.location.href : ""
-      const message = text.trim() || "Topic priority request (no details provided)"
+      const message =
+        text.trim() ||
+        (topicFromUrl
+          ? `Topic priority request: ${topicFromUrl}`
+          : "Topic priority request (no details provided)")
       const res = await fetch("/api/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
