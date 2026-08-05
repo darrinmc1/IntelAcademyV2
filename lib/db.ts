@@ -489,11 +489,24 @@ export async function submitFeedback(args: {
   page?: string
   email?: string
   ip?: string
+  // NEW: Page-specific fields
+  page_url?: string
+  page_title?: string
+  feedback_type?: 'bug' | 'suggestion' | 'feature_request' | 'content_request' | 'general'
 }): Promise<string> {
   const r = await sql`
-    INSERT INTO feedback (category, rating, message, page, email, ip_address)
-    VALUES (${args.category}, ${args.rating ?? null}, ${args.message}, 
-            ${args.page ?? null}, ${args.email ?? null}, ${args.ip ?? null})
+    INSERT INTO feedback (category, rating, message, page, email, ip_address, page_url, page_title, feedback_type)
+    VALUES (
+      ${args.category}, 
+      ${args.rating ?? null}, 
+      ${args.message}, 
+      ${args.page ?? null}, 
+      ${args.email ?? null}, 
+      ${args.ip ?? null},
+      ${args.page_url ?? null},
+      ${args.page_title ?? null},
+      ${args.feedback_type ?? 'general'}
+    )
     RETURNING id
   `
   return r.rows[0].id

@@ -162,7 +162,7 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-4 xl:gap-6 ml-6">
             {!authLoading && mainNavItems.map((item) =>
               item.hasDropdown ? (
-                <div key={item.id} className="relative">
+                <div key={item.id} className="relative group">
                   <button
                     onClick={() => toggleDropdown(item.id)}
                     className={cn(
@@ -171,8 +171,33 @@ export function Header() {
                     )}
                   >
                     {item.label}
-                    <ChevronDown className="h-4 w-4" />
+                    <ChevronDown className={cn("h-4 w-4 transition-transform", activeDropdown === item.id && "rotate-180")} />
                   </button>
+                  
+                  {activeDropdown === item.id && (
+                    <div className="absolute left-0 mt-0 w-48 bg-slate-900/95 border border-white/10 rounded-lg shadow-xl backdrop-blur-xl py-2 z-50">
+                      {item.id === "learning" && (
+                        <>
+                          <Link href="/learning-paths" className="block px-4 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-cyan-400 transition-colors" onClick={closeDropdowns}>
+                            Learning Paths
+                          </Link>
+                          <Link href="/topics" className="block px-4 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-cyan-400 transition-colors" onClick={closeDropdowns}>
+                            Topics
+                          </Link>
+                        </>
+                      )}
+                      {item.id === "resources" && (
+                        <>
+                          <Link href="/downloads" className="block px-4 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-cyan-400 transition-colors" onClick={closeDropdowns}>
+                            Downloads
+                          </Link>
+                          <Link href="/forum" className="block px-4 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-cyan-400 transition-colors" onClick={closeDropdowns}>
+                            Forum
+                          </Link>
+                        </>
+                      )}
+                    </div>
+                  )}
                 </div>
               ) : (
                 <Link

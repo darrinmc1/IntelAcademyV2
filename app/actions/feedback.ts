@@ -17,10 +17,15 @@ export async function submitFeedbackAction(args: {
   page?: string
   email?: string
   ip?: string
+  // NEW: Page context (auto-captured from client)
+  page_url?: string
+  page_title?: string
+  feedback_type?: 'bug' | 'suggestion' | 'feature_request' | 'content_request' | 'general'
 }): Promise<FeedbackResult> {
-  // Validate
-  if (!args.category || !VALID_CATEGORIES.includes(args.category)) {
-    return { ok: false, message: "Invalid feedback category" }
+ // Validate feedback_type if provided
+  const VALID_FEEDBACK_TYPES = ['bug', 'suggestion', 'feature_request', 'content_request', 'general']
+  if (args.feedback_type && !VALID_FEEDBACK_TYPES.includes(args.feedback_type)) {
+    return { ok: false, message: "Invalid feedback type" }
   }
   if (!args.message?.trim()) {
     return { ok: false, message: "Feedback message is required" }
@@ -30,18 +35,22 @@ export async function submitFeedbackAction(args: {
   }
 
   try {
-    const id = await submitFeedback({
+const id = await submitFeedback({
       category: args.category,
       rating: args.rating,
       message: args.message.trim(),
       page: args.page,
       email: args.email?.trim(),
       ip: args.ip,
+      // Include page context
+      page_url: args.page_url,
+      page_title: args.page_title,
+      feedback_type: args.feedback_type || 'general',
     })
 
     // Notify admin
     const pending = await getPendingFeedbackCount()
-    await sendAdminNotification({
+   await sendAdminNotification({
       kind: "feedback",
       payload: {
         category: args.category,
@@ -50,6 +59,10 @@ export async function submitFeedbackAction(args: {
         page: args.page || " - ",
         email: args.email || " - ",
         pending_count: pending,
+        // Include new context
+        page_url: args.page_url || " - ",
+        page_title: args.page_title || " - ",
+        feedback_type: args.feedback_type || "general",
       },
     })
 

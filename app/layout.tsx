@@ -14,7 +14,8 @@ import { UserProvider } from "@/components/user-provider"
 import { AuthProvider } from "@/components/auth-provider"
 import { Toaster } from "sonner"
 import { HumorProvider } from "@/components/humor-provider"
-import { FeedbackWidget } from "@/components/feedback-widget"
+
+import { FeedbackWidget } from '@/components/feedback-widget'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -90,6 +91,7 @@ export default function RootLayout({
           </AuthProvider>
         </UserProvider>
         <WaitlistPopup />
+        <FeedbackWidget />
       </body>
     </html>
   )
