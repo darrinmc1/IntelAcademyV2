@@ -56,10 +56,10 @@ export default function TacticalIntelligencePage() {
         </div>
       </div>
 
-      <Alert className="mb-6 bg-amber-50 border-amber-200">
-        <Coffee className="h-5 w-5" />
-        <AlertTitle>Analyst Humor Corner</AlertTitle>
-        <AlertDescription>
+      <Alert className="mb-6 bg-amber-50 border-amber-200 text-gray-900">
+        <Coffee className="h-5 w-5 text-amber-600" />
+        <AlertTitle className="text-gray-900">Analyst Humor Corner</AlertTitle>
+        <AlertDescription className="text-gray-800">
           How many tactical intelligence analysts does it take to change a light bulb?
           <br />
           Just one, but they&apos;ll need it done before you finish asking the question, and they&apos;ll complain about the lack
@@ -98,31 +98,31 @@ export default function TacticalIntelligencePage() {
           />
         </div>
 
-        <div className="p-6 bg-blue-50 rounded-lg mb-8 border border-blue-100">
-          <h3 className="text-xl font-bold mb-3 flex items-center">
-            <Brain className="mr-2 h-5 w-5 text-blue-500" />
+        <div className="p-6 bg-blue-50 rounded-lg mb-8 border border-blue-100 text-gray-900">
+          <h3 className="text-xl font-bold mb-3 flex items-center text-gray-900">
+            <Brain className="mr-2 h-5 w-5 text-blue-600" />
             The Tactical Analyst's Mindset
           </h3>
-          <p className="mb-4">
+          <p className="mb-4 text-gray-800">
             Tactical intelligence is like making dinner with whatever&apos;s in your fridge when unexpected guests arrive.
             You work with what you have, it&apos;s never perfect, but somehow you make it work before anyone notices the
             panic in your eyes.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white p-4 rounded-md border border-blue-100">
-              <h4 className="font-medium flex items-center">
+              <h4 className="font-medium flex items-center text-gray-900">
                 <Zap className="mr-2 h-4 w-4 text-amber-500" /> Speed Over Perfection
               </h4>
-              <p className="text-sm">
+              <p className="text-sm text-gray-700">
                 &quot;I&apos;d rather be 80% right now than 100% right when it&apos;s too late&quot; - tactical analysts everywhere, usually
                 while chugging energy drinks
               </p>
             </div>
             <div className="bg-white p-4 rounded-md border border-blue-100">
-              <h4 className="font-medium flex items-center">
-                <Shield className="mr-2 h-4 w-4 text-green-500" /> Actionable Over Academic
+              <h4 className="font-medium flex items-center text-gray-900">
+                <Shield className="mr-2 h-4 w-4 text-green-600" /> Actionable Over Academic
               </h4>
-              <p className="text-sm">
+              <p className="text-sm text-gray-700">
                 If your analysis can&apos;t fit on a sticky note that can be slapped on a commander&apos;s laptop, you&apos;re writing
                 a dissertation, not tactical intelligence
               </p>
