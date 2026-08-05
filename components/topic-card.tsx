@@ -23,12 +23,12 @@ const TopicCard: React.FC<TopicCardProps> = ({ title, description, image, path, 
       <div className="p-4">
         <div className="flex items-center mb-2">
           {icon && <div className="mr-2">{icon}</div>}
-          <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
+          <h3 className="text-lg font-semibold text-gray-100">{title}</h3>
         </div>
-        <p className="mt-2 text-gray-600">{description}</p>
-        {humor && <p className="mt-2 text-sm text-gray-500 italic">{humor}</p>}
+        <p className="mt-2 text-gray-300">{description}</p>
+        {humor && <p className="mt-2 text-sm text-gray-400 italic">{humor}</p>}
         <div className="mt-4 flex justify-between items-center">
-          <div className="text-sm text-gray-500">{duration}</div>
+          <div className="text-sm text-gray-400">{duration}</div>
         </div>
       </div>
     </a>
