@@ -118,7 +118,7 @@ into operational guidance that a regional commander, an embassy's country team, 
 sanctions enforcement unit can act on. The most effective strategic intelligence products
 include a "so what" section that explicitly addresses operational implications
 - not to prescribe policy, but to ensure that the strategic insight does not remain
-abstract. The strategic-to-operational handoff is the moment when intelligence either
+abstract. The strategy-to-operational handoff is the moment when intelligence either
 matters or disappears.
 
 When drafting a strategic assessment, ask yourself: if the policymaker accepts my
@@ -239,8 +239,8 @@ understood it.
 
 The antidote to mirror imaging is structured empathy: the deliberate, disciplined effort
 to understand how another actor sees the world, what their constraints and incentives are,
-and how their decision-making culture differs from our own. This is not sympathy - it is
-analytical method. The strategic analyst who cannot think like their adversary will
+and how their decision-making culture differs from our own. This is not sympathy - it
+is analytical method. The strategic analyst who cannot think like their adversary will
 consistently underestimate the adversary's willingness to take risks, pay costs, and
 pursue objectives that seem irrational from the analyst's cultural vantage point.
 
@@ -267,7 +267,6 @@ that would indicate the trajectory is moving toward that scenario. Your final pr
 should be no longer than one page. The exercise is not about being right; it is about
 demonstrating that you have thought systematically about uncertainty and that you can
 communicate multiple futures without confusing your consumer.
-
 
 
 {/* ---- Section 5: What's Next? ---- */}
