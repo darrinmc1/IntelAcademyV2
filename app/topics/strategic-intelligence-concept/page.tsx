@@ -268,7 +268,6 @@ should be no longer than one page. The exercise is not about being right; it is 
 demonstrating that you have thought systematically about uncertainty and that you can
 communicate multiple futures without confusing your consumer.
 
-)
 `
 
 export default function StrategicintelligenceconceptPage() {
@@ -281,7 +280,7 @@ export default function StrategicintelligenceconceptPage() {
         readTime={15}
         difficulty="Intermediate"
         category="Intelligence Analysis"
-        mascot="foundations"
+        mascot="strategic-intelligence-concept"
         mascotMessage="Another day, another intelligence problem to solve. Let's get to work."
       >
         <EnhancedLessonContentLoader content={topicContent} topic="strategic-intelligence-concept" />
