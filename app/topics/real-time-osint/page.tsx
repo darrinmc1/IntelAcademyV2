@@ -142,7 +142,7 @@ export default function RealtimeosintPage() {
         mascot="foundations"
         mascotMessage="Another day, another intelligence problem to solve. Let's get to work."
       >
-        <EnhancedLessonContentLoader content={topicContent} topic="real-time-osint" />
+        <EnhancedLessonContentLoader content={topicContent} topic="real-time-osint" className="text-gray-800" />
       </MicroLesson>
     </LessonContainer>
   )
