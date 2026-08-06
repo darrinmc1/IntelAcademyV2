@@ -15,8 +15,7 @@ high-speed, high-stress art of collecting and analyzing open source intelligence
 waiting for tomorrow's news is so last century.
 
 "Real-time OSINT analyst: Someone who can tell you what's happening halfway around the world faster than you
-can figure out what's happening in your own staff meeting." -{" "}
-The Unofficial Intelligence Analyst's Dictionary
+can figure out what's happening in your own staff meeting." - The Unofficial Intelligence Analyst's Dictionary
 
 ## Introduction to Real-Time OSINT (Or: How to Give Yourself an Ulcer in Record Time)
 
