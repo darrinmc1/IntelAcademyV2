@@ -15,7 +15,8 @@ high-speed, high-stress art of collecting and analyzing open source intelligence
 waiting for tomorrow's news is so last century.
 
 "Real-time OSINT analyst: Someone who can tell you what's happening halfway around the world faster than you
-can figure out what's happening in your own staff meeting." - The Unofficial Intelligence Analyst's Dictionary
+can figure out what's happening in your own staff meeting." -{" "}
+The Unofficial Intelligence Analyst's Dictionary
 
 ## Introduction to Real-Time OSINT (Or: How to Give Yourself an Ulcer in Record Time)
 
@@ -125,7 +126,8 @@ Real-time OSINT is only as valuable as its accuracy. Verification must be built 
 - **Geolocation:** Whenever possible, verify the location of reported events using geospatial data - check the reported location against maps, satellite imagery, and other geolocated content.
 - **Temporal Consistency:** Does the chronology of reported events make sense? Inconsistencies in timestamps, lighting conditions, weather, or other temporal markers can indicate fabricated or misattributed content.
 - **Open Source Forensics:** For visual content, examine metadata, reverse image search, and check for signs of manipulation. Deepfakes and AI-generated content are an increasing challenge for real-time OSINT verification.
-"
+
+`
 
 export default function RealtimeosintPage() {
   return (
