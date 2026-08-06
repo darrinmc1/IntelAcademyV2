@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Strategic Intelligence Products for Intel Analysts",
+    description: "An in-depth look at the various types of strategic intelligence products used by intelligence analysts, their purpose, and how to effectively produce them.",
+    image: "/strategic-intelligence-products-intel-analyst-academy.png",
+    href: "/topics/strategic-intelligence-products-intel-analyst-academy",
+    category: "Intelligence Analysis",
+    estimatedTime: "20 min",
+    completed: false,
+    learningObjectives: [
+      "Identify the purpose and types of strategic intelligence products.",
+      "Understand the key elements of effective strategic analysis.",
+      "Recognize the importance of audience and clear communication in intelligence products.",
+    ],
+  },
+  {
     title: "What is Intelligence?",
     description: "Understand the fundamental concepts and definitions of intelligence analysis.",
     image: "/what-is-intelligence.png",
