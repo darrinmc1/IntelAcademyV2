@@ -133,7 +133,7 @@ export default function RealtimeosintPage() {
   return (
     <LessonContainer>
       <MicroLesson
-        title="Real-Time OSINT"
+        title={<span style={{ color: 'black' }}>Real-Time OSINT</span>}
         subtitle="Learn about real-time open source intelligence techniques and applications."
         humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
         readTime={15}
