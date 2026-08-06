@@ -258,9 +258,9 @@ different coach, different players, and a completely different definition of wha
 Your task: produce a three-scenario strategic forecast for a country of your choice,
 projecting five years into the future. The three scenarios should be:
 
-- **Baseline / Most Likely:** The trajectory that current trends suggest, assuming no major discontinuities.
-- **Positive Disruption:** A scenario in which a favourable development (economic reform, diplomatic breakthrough, leadership transition to a reformer) shifts the trajectory substantially.
-- **Negative Shock:** A scenario in which a crisis (internal conflict, external aggression, economic collapse, natural disaster) derails the baseline trajectory.
+- <span style="color: black;">**Baseline / Most Likely:** The trajectory that current trends suggest, assuming no major discontinuities.</span>
+- <span style="color: black;">**Positive Disruption:** A scenario in which a favourable development (economic reform, diplomatic breakthrough, leadership transition to a reformer) shifts the trajectory substantially.</span>
+- <span style="color: black;">**Negative Shock:** A scenario in which a crisis (internal conflict, external aggression, economic collapse, natural disaster) derails the baseline trajectory.</span>
 
 For each scenario, identify two to three signposts - observable events or data points -
 that would indicate the trajectory is moving toward that scenario. Your final product
