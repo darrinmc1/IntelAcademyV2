@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Master the discipline of strategic intelligence - long-term forecasting, national security strategy, analytical products like NIEs, and the political challenges that threaten objectivity.",
 }
 
-const topicContent = `Master the discipline of strategic intelligence - long-term forecasting, national security strategy, analytical products like NIEs, and the political challenges that threaten objectivity.`, 
+const topicContent = `"Master the discipline of strategic intelligence - long-term forecasting, national security strategy, analytical products like NIEs, and the political challenges that threaten objectivity.",
 
 Tactical intelligence tells you what is happening right now. Strategic intelligence tells
 you what will happen next - and why it matters to the people who decide the fate of
@@ -222,8 +222,8 @@ multiple agencies, but the coordination process can produce bland, lowest-common
 assessments that fail to capture the full range of possibilities. Devil's advocacy
 - the deliberate construction of the strongest possible case against the consensus view -
 is the traditional remedy. But devil's advocacy works only when it is taken seriously. Too
-often, alternative viewpoints are acknowledged in a footnote and quickly forgotten, allowing
-groupthink to survive intact. The best strategic analysis explicitly incorporates
+often, alternative viewpoints are acknowledged in a footnote and quickly forgotten,
+allowing groupthink to survive intact. The best strategic analysis explicitly incorporates
 competing hypotheses and assigns them narrative weight proportionate to their plausibility.
 
 ### The Mirror Imaging Problem
@@ -239,8 +239,8 @@ understood it.
 
 The antidote to mirror imaging is structured empathy: the deliberate, disciplined effort
 to understand how another actor sees the world, what their constraints and incentives are,
-and how their decision-making culture differs from our own. This is not sympathy - it is
-analytical method. The strategic analyst who cannot think like their adversary will
+and how their decision-making culture differs from our own. This is not sympathy - it
+is analytical method. The strategic analyst who cannot think like their adversary will
 consistently underestimate the adversary's willingness to take risks, pay costs, and
 pursue objectives that seem irrational from the analyst's cultural vantage point.
 
