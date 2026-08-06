@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Master the discipline of strategic intelligence - long-term forecasting, national security strategy, analytical products like NIEs, and the political challenges that threaten objectivity.",
 }
 
-const topicContent = `"Master the discipline of strategic intelligence - long-term forecasting, national security strategy, analytical products like NIEs, and the political challenges that threaten objectivity.",
+const topicContent = """Master the discipline of strategic intelligence - long-term forecasting, national security strategy, analytical products like NIEs, and the political challenges that threaten objectivity.",
 
 Tactical intelligence tells you what is happening right now. Strategic intelligence tells
 you what will happen next - and why it matters to the people who decide the fate of
@@ -118,7 +118,7 @@ into operational guidance that a regional commander, an embassy's country team, 
 sanctions enforcement unit can act on. The most effective strategic intelligence products
 include a "so what" section that explicitly addresses operational implications
 - not to prescribe policy, but to ensure that the strategic insight does not remain
-abstract. The strategic-to-operational handoff is the moment when intelligence either
+abstract. The strategy-to-operational handoff is the moment when intelligence either
 matters or disappears.
 
 When drafting a strategic assessment, ask yourself: if the policymaker accepts my
@@ -185,9 +185,9 @@ than another. Long-term forecasts are the most intellectually demanding strategi
 because they require the analyst to be explicit about assumptions, comfortable with
 ambiguity, and willing to imagine futures that depart radically from the present.
 
-Writing a long-term forecast is like predicting the weather for next year on this day:
-you know it will be something, but "partly cloudy with a chance of geopolitical
-upheaval" covers a lot of ground. The signposts matter more than the prediction.
+Writing a long-term forecast is like predicting the weather for next year on this day: you
+know it will be something, but "partly cloudy with a chance of geopolitical upheaval"
+covers a lot of ground. The signposts matter more than the prediction.
 
 {/* ---- Section 4: Challenges in Strategic Intelligence ---- */}
 
@@ -221,9 +221,9 @@ vulnerability. Coordinated products like NIEs benefit from the collective expert
 multiple agencies, but the coordination process can produce bland, lowest-common-denominator
 assessments that fail to capture the full range of possibilities. Devil's advocacy
 - the deliberate construction of the strongest possible case against the consensus view -
-is the traditional remedy. But devil's advocacy works only when it is taken seriously.
-Too often, alternative viewpoints are acknowledged in a footnote and quickly forgotten,
-allowing groupthink to survive intact. The best strategic analysis explicitly incorporates
+is the traditional remedy. But devil's advocacy works only when it is taken seriously. Too
+often, alternative viewpoints are acknowledged in a footnote and quickly forgotten, allowing
+groupthink to survive intact. The best strategic analysis explicitly incorporates
 competing hypotheses and assigns them narrative weight proportionate to their plausibility.
 
 ### The Mirror Imaging Problem
@@ -255,18 +255,18 @@ doesn't run the same playbook as yours. Of course they don't - they have a
 different coach, different players, and a completely different definition of what
 "winning" looks like. Study their playbook.
 
-Your task: produce a three-scenario strategic forecast for a country of your choice,
-projecting five years into the future. The three scenarios should be:
+Your task: produce a three-scenario strategic forecast for a country of your choice, projecting
+five years into the future. The three scenarios should be:
 
 - **Baseline / Most Likely:** The trajectory that current trends suggest, assuming no major discontinuities.
 - **Positive Disruption:** A scenario in which a favourable development (economic reform, diplomatic breakthrough, leadership transition to a reformer) shifts the trajectory substantially.
 - **Negative Shock:** A scenario in which a crisis (internal conflict, external aggression, economic collapse, natural disaster) derails the baseline trajectory.
 
-For each scenario, identify two to three signposts - observable events or data points -
-that would indicate the trajectory is moving toward that scenario. Your final product
-should be no longer than one page. The exercise is not about being right; it is about
-demonstrating that you have thought systematically about uncertainty and that you can
-communicate multiple futures without confusing your consumer.
+For each scenario, identify two to three signposts - observable events or data points - that
+would indicate the trajectory is moving toward that scenario. Your final product should be
+no longer than one page. The exercise is not about being right; it is about demonstrating
+that you have thought systematically about uncertainty and that you can communicate multiple
+futures without confusing your consumer.
 
 )
 `
