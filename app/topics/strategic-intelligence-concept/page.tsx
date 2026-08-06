@@ -185,9 +185,9 @@ than another. Long-term forecasts are the most intellectually demanding strategi
 because they require the analyst to be explicit about assumptions, comfortable with
 ambiguity, and willing to imagine futures that depart radically from the present.
 
-Writing a long-term forecast is like predicting the weather for next year on this day:
-you know it will be something, but "partly cloudy with a chance of geopolitical
-upheaval" covers a lot of ground. The signposts matter more than the prediction.
+Writing a long-term forecast is like predicting the weather for next year on this day: you
+know it will be something, but "partly cloudy with a chance of geopolitical upheaval"
+covers a lot of ground. The signposts matter more than the prediction.
 
 {/* ---- Section 4: Challenges in Strategic Intelligence ---- */}
 
@@ -199,8 +199,8 @@ overcoming them.
 ### Politicisation: The Pressure to Conform
 
 Politicisation is the corruption of the analytical process by political pressure - whether
-explicit or implicit - to reach a conclusion that supports a preferred policy outcome. It
-is the strategic analyst's most existential threat. Politicisation can take many
+explicit or implicit - to reach a conclusion that supports a preferred policy outcome.
+It is the strategic analyst's most existential threat. Politicisation can take many
 forms: a policymaker who pressures an analyst to change wording in an assessment; an
 agency culture that rewards analysts who produce work aligned with leadership's
 agenda; or the subtler, more insidious self-censorship that happens when an analyst
@@ -268,7 +268,16 @@ should be no longer than one page. The exercise is not about being right; it is 
 demonstrating that you have thought systematically about uncertainty and that you can
 communicate multiple futures without confusing your consumer.
 
-)
+
+
+{/* ---- Section 5: What's Next? ---- */}
+
+*   [Strategic Intelligence Concept](https://theintelanalystacademy.com/topics/strategic-intelligence-concept)
+*   [Intelligence Cycle](https://theintelanalystacademy.com/topics/intelligence-cycle)
+*   [Intelligence Analysis](https://theintelanalystacademy.com/topics/intelligence-analysis)
+*   [National Security Strategy](https://theintelanalystacademy.com/topics/national-security-strategy)
+*   [Intelligence Reform](https://theintelanalystacademy.com/topics/intelligence-reform)
+
 `
 
 export default function StrategicintelligenceconceptPage() {
