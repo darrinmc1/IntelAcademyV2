@@ -268,6 +268,9 @@ should be no longer than one page. The exercise is not about being right; it is 
 demonstrating that you have thought systematically about uncertainty and that you can
 communicate multiple futures without confusing your consumer.
 
+
+[WhatsNext Links]
+- [Strategic Intelligence Concept](https://theintelanalystacademy.com/topics/strategic-intelligence-concept)
 `
 
 export default function StrategicintelligenceconceptPage() {
