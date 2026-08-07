@@ -1,0 +1,5 @@
+# Auto-review disabled (2026-08-07): every PR was burning CodeRabbit free-tier quota
+# and spamming notifications. Review only when explicitly requested via: @coderabbitai review
+reviews:
+  auto_review:
+    enabled: false
