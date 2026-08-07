@@ -138,7 +138,7 @@ export default function RealtimeosintPage() {
         readTime={15}
         difficulty="Intermediate"
         category="Intelligence Analysis"
-        mascot="real-time-osint"
+        mascot="/real-time-osint.png"
         mascotMessage="Another day, another intelligence problem to solve. Let's get to work."
       >
         <EnhancedLessonContentLoader content={topicContent} topic="real-time-osint" />
