@@ -84,7 +84,7 @@ export function EnhancedLessonContentWithHumor({ content, topic, title }: Enhanc
               <div className="my-6 relative">
                 <SimpleImage
                   src={`/${topic}.png`}
-                  fallbackSrc="/abstract-colorful-swirls.png"}
+                  fallbackSrc="/abstract-colorful-swirls.png"
                   alt={`Illustration for ${heading || topic}`}
                   width={600}
                   height={300}
@@ -128,7 +128,7 @@ export function EnhancedLessonContentWithHumor({ content, topic, title }: Enhanc
       <div className="mb-10 relative">
         <SimpleImage
           src={`/${topic}.png`}
-          fallbackSrc="/abstract-colorful-swirls.png"}
+          fallbackSrc="/abstract-colorful-swirls.png"
           alt={`${topic} concept illustration`}
           width={700}
           height={300}
