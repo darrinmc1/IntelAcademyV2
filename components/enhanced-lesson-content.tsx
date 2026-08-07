@@ -11,6 +11,11 @@ interface EnhancedLessonContentProps {
   topic: string
 }
 
+// Render `**bold**` markers (the content convention across topic pages) as <strong>.
+function renderInline(text: string): React.ReactNode[] {
+  return text.split(/\*\*(.+?)\*\*/g).map((part, i) => (i % 2 === 1 ? <strong key={i}>{part}</strong> : part))
+}
+
 export function EnhancedLessonContent({ content, topic }: EnhancedLessonContentProps) {
   const [processedContent, setProcessedContent] = useState<React.ReactNode[]>([])
 
@@ -52,7 +57,7 @@ export function EnhancedLessonContent({ content, topic }: EnhancedLessonContentP
                 <ul className="list-disc pl-5 space-y-2">
                   {listItems.map((item, i) => (
                     <li key={i} className="text-base">
-                      {item}
+                      {renderInline(item)}
                     </li>
                   ))}
                 </ul>
@@ -69,7 +74,7 @@ export function EnhancedLessonContent({ content, topic }: EnhancedLessonContentP
               key={`quote-${sectionIndex}-${paragraphIndex}`}
               className="my-6 p-4 bg-amber-50 border-l-4 border-l-amber-500 text-slate-900"
             >
-              <blockquote className="text-lg italic">{quoteContent}</blockquote>
+              <blockquote className="text-lg italic">{renderInline(quoteContent)}</blockquote>
             </Card>
           )
         }
@@ -77,7 +82,7 @@ export function EnhancedLessonContent({ content, topic }: EnhancedLessonContentP
         // Regular paragraph
         return (
           <div key={`para-${sectionIndex}-${paragraphIndex}`}>
-            <p className="text-lg my-4 leading-relaxed">{paragraph}</p>
+            <p className="text-lg my-4 leading-relaxed">{renderInline(paragraph)}</p>
           </div>
         )
       })
