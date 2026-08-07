@@ -89,7 +89,7 @@ export function EnhancedLessonContent({ content, topic }: EnhancedLessonContentP
               <div className="my-6 relative">
                 <SimpleImage
                   src={`/${topic}.png`}
-                  fallbackSrc="/abstract-colorful-swirls.png"}
+                  fallbackSrc="/abstract-colorful-swirls.png"
                   alt={`Illustration for ${heading || topic}`}
                   width={600}
                   height={300}
@@ -112,7 +112,7 @@ export function EnhancedLessonContent({ content, topic }: EnhancedLessonContentP
             <div className="mt-6 mb-8 relative">
               <SimpleImage
                 src={`/${topic}.png`}
-                fallbackSrc="/placeholder.svg"
+                fallbackSrc="/abstract-colorful-swirls.png"
                 alt={`Summary of ${heading}`}
                 width={500}
                 height={250}
@@ -138,7 +138,7 @@ export function EnhancedLessonContent({ content, topic }: EnhancedLessonContentP
       <div className="mb-10 relative">
         <SimpleImage
           src={`/${topic}.png`}
-          fallbackSrc="/abstract-colorful-swirls.png"}
+          fallbackSrc="/abstract-colorful-swirls.png"
           alt={`${topic} concept illustration`}
           width={700}
           height={300}
