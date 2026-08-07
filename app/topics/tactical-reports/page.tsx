@@ -109,11 +109,6 @@ Tactical intelligence is only useful if it reaches the right consumer at the rig
 - **Digital Dissemination:** Modern tactical reporting systems deliver intelligence directly to handheld devices and vehicle-mounted terminals in near real-time.
 - **Verbal Briefings:** For time-critical tactical intelligence, a verbal briefing delivered face-to-face or over encrypted voice channels may precede the written report.
 - **Classification and Caveats:** Tactical reports often contain sensitive sources or methods. Proper classification, handling instructions, and dissemination restrictions protect both the intelligence and the sources who provided it.
-
-
-[WhatsNext Links]
-
-- [WhatsNext](https://theintelanalystacademy.com/topics/tactical-reports)
 `
 
 export default function TacticalreportsPage() {
