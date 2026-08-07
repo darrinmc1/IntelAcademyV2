@@ -17,14 +17,14 @@ export function EnhancedLessonContent({ content, topic }: EnhancedLessonContentP
   useEffect(() => {
     if (!content) return
 
-    const sections = content.split(/(?=## )/g)
+    const sections = content.split(/(?=^#{2,3} )/gm)
     const processedSections = sections.map((section, sectionIndex) => {
       // Process headings
-      const headingMatch = section.match(/^## (.*)$/m)
+      const headingMatch = section.match(/^#{2,3} (.*)$/m)
       const heading = headingMatch ? headingMatch[1] : ""
 
       // Remove the heading from the section content
-      const sectionContent = headingMatch ? section.replace(/^## .*$/m, "") : section
+      const sectionContent = headingMatch ? section.replace(/^#{2,3} .*$/m, "") : section
 
       // Split into paragraphs
       const paragraphs = sectionContent.split(/\n\n+/)
@@ -74,30 +74,10 @@ export function EnhancedLessonContent({ content, topic }: EnhancedLessonContentP
           )
         }
 
-        // Regular paragraph - add images every 2-3 paragraphs
-        const shouldAddImage =
-          paragraphIndex > 0 &&
-          paragraphIndex % 3 === 0 &&
-          !paragraph.trim().startsWith("- ") &&
-          !paragraph.trim().startsWith(">")
-
+        // Regular paragraph
         return (
           <div key={`para-${sectionIndex}-${paragraphIndex}`}>
             <p className="text-lg my-4 leading-relaxed">{paragraph}</p>
-
-            {shouldAddImage && (
-              <div className="my-6 relative">
-                <SimpleImage
-                  src={`/${topic}.png`}
-                  fallbackSrc="/abstract-colorful-swirls.png"
-                  alt={`Illustration for ${heading || topic}`}
-                  width={600}
-                  height={300}
-                  className="rounded-lg mx-auto shadow-md"
-                />
-                <p className="text-sm text-center text-gray-500 mt-2">{heading || topic} - Visual representation</p>
-              </div>
-            )}
           </div>
         )
       })
@@ -106,21 +86,6 @@ export function EnhancedLessonContent({ content, topic }: EnhancedLessonContentP
         <section key={`section-${sectionIndex}`} className="mb-12">
           {heading && <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-200">{heading}</h2>}
           {processedParagraphs}
-
-          {/* Add a section summary image */}
-          {heading && sectionIndex > 0 && (
-            <div className="mt-6 mb-8 relative">
-              <SimpleImage
-                src={`/${topic}.png`}
-                fallbackSrc="/abstract-colorful-swirls.png"
-                alt={`Summary of ${heading}`}
-                width={500}
-                height={250}
-                className="rounded-lg mx-auto shadow-md"
-              />
-              <p className="text-sm text-center text-gray-500 mt-2">Summary: Key concepts of {heading}</p>
-            </div>
-          )}
         </section>
       )
     })

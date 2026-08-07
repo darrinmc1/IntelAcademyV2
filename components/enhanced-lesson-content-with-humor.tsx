@@ -23,11 +23,11 @@ export function EnhancedLessonContentWithHumor({ content, topic, title }: Enhanc
   useEffect(() => {
     if (!content) return
 
-    const sections = content.split(/(?=## )/g)
+    const sections = content.split(/(?=^#{2,3} )/gm)
     const processedSections = sections.map((section, sectionIndex) => {
-      const headingMatch = section.match(/^## (.*)$/m)
+      const headingMatch = section.match(/^#{2,3} (.*)$/m)
       const heading = headingMatch ? headingMatch[1] : ""
-      const sectionContent = headingMatch ? section.replace(/^## .*$/m, "") : section
+      const sectionContent = headingMatch ? section.replace(/^#{2,3} .*$/m, "") : section
 
       const paragraphs = sectionContent.split(/\n\n+/)
 
@@ -78,21 +78,6 @@ export function EnhancedLessonContentWithHumor({ content, topic, title }: Enhanc
             {paragraphIndex === 2 && sectionIndex === 2 && <SpyMovieCritique topic={topic} />}
 
             {paragraphIndex === 1 && sectionIndex === 3 && <CoffeeBreakWisdom />}
-
-            {/* Add images every few paragraphs */}
-            {paragraphIndex > 0 && paragraphIndex % 3 === 0 && (
-              <div className="my-6 relative">
-                <SimpleImage
-                  src={`/${topic}.png`}
-                  fallbackSrc="/abstract-colorful-swirls.png"
-                  alt={`Illustration for ${heading || topic}`}
-                  width={600}
-                  height={300}
-                  className="rounded-lg mx-auto shadow-md"
-                />
-                <p className="text-sm text-center text-gray-500 mt-2">{heading || topic} - Visual representation</p>
-              </div>
-            )}
           </div>
         )
       })
