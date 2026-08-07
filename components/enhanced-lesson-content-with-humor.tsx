@@ -41,7 +41,7 @@ export function EnhancedLessonContentWithHumor({ content, topic, title }: Enhanc
 
           return (
             <div key={`list-${sectionIndex}-${paragraphIndex}`} className="my-6">
-              <Card className="bg-slate-50 p-4 border-l-4 border-l-blue-500">
+              <Card className="bg-slate-50 p-4 border-l-4 border-l-blue-500 text-slate-900">
                 <ul className="list-disc pl-5 space-y-2">
                   {listItems.map((item, i) => (
                     <li key={i} className="text-base">
@@ -60,7 +60,7 @@ export function EnhancedLessonContentWithHumor({ content, topic, title }: Enhanc
           return (
             <Card
               key={`quote-${sectionIndex}-${paragraphIndex}`}
-              className="my-6 p-4 bg-amber-50 border-l-4 border-l-amber-500"
+              className="my-6 p-4 bg-amber-50 border-l-4 border-l-amber-500 text-slate-900"
             >
               <blockquote className="text-lg italic">{quoteContent}</blockquote>
             </Card>
