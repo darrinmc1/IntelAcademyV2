@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Collection Planning Process for Intel Analysts",
+    description: "Master the systematic approach to gathering intelligence, from defining requirements to evaluating collection efforts.",
+    image: "/collection-planning-process-for-intel-analysts.png",
+    href: "/topics/collection-planning-process-for-intel-analysts",
+    category: "Intelligence Analysis",
+    estimatedTime: "10 min",
+    completed: false,
+    learningObjectives: [
+      "Understand the key phases of the intelligence collection planning process.",
+      "Identify methods for defining and prioritizing intelligence requirements.",
+      "Recognize the importance of source assessment and collection strategy development.",
+    ],
+  },
+  {
     title: "Strategic Intelligence Products for Intel Analysts",
     description: "An in-depth look at the various types of strategic intelligence products used by intelligence analysts, their purpose, and how to effectively produce them.",
     image: "/strategic-intelligence-products-intel-analyst-academy.png",
