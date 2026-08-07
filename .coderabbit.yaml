@@ -1,5 +1,7 @@
 # Auto-review disabled (2026-08-07): every PR was burning CodeRabbit free-tier quota
 # and spamming notifications. Review only when explicitly requested via: @coderabbitai review
+# review_status: false (2026-08-07): also kills the "Review skipped" status comment on every PR
 reviews:
+  review_status: false
   auto_review:
     enabled: false
