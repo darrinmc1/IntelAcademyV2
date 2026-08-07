@@ -88,8 +88,8 @@ export function EnhancedLessonContent({ content, topic }: EnhancedLessonContentP
             {shouldAddImage && (
               <div className="my-6 relative">
                 <SimpleImage
-                  src={`/${topic}/${topic}-${((sectionIndex + paragraphIndex) % 5) + 1}.png`}
-                  fallbackSrc={`/placeholder.svg || topic)}`}
+                  src={`/${topic}.png`}
+                  fallbackSrc="/abstract-colorful-swirls.png"}
                   alt={`Illustration for ${heading || topic}`}
                   width={600}
                   height={300}
@@ -111,7 +111,7 @@ export function EnhancedLessonContent({ content, topic }: EnhancedLessonContentP
           {heading && sectionIndex > 0 && (
             <div className="mt-6 mb-8 relative">
               <SimpleImage
-                src={`/${topic}/${topic}-summary-${(sectionIndex % 3) + 1}.png`}
+                src={`/${topic}.png`}
                 fallbackSrc="/placeholder.svg"
                 alt={`Summary of ${heading}`}
                 width={500}
@@ -137,8 +137,8 @@ export function EnhancedLessonContent({ content, topic }: EnhancedLessonContentP
       {/* Hero image for the topic */}
       <div className="mb-10 relative">
         <SimpleImage
-          src={`/${topic}/${topic}-hero.png`}
-          fallbackSrc={`/placeholder.svg)}`}
+          src={`/${topic}.png`}
+          fallbackSrc="/abstract-colorful-swirls.png"}
           alt={`${topic} concept illustration`}
           width={700}
           height={300}
