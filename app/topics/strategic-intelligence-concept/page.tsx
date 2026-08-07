@@ -285,6 +285,7 @@ export default function StrategicintelligenceconceptPage() {
         category="Intelligence Analysis"
         mascot="strategic-intelligence-concept"
         mascotMessage="Another day, another intelligence problem to solve. Let's get to work."
+        startLearningButtonClass="border border-gray-400 hover:border-gray-700"
       >
         <EnhancedLessonContentLoader content={topicContent} topic="strategic-intelligence-concept" />
       </MicroLesson>
