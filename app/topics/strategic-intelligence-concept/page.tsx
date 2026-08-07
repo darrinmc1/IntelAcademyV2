@@ -283,7 +283,7 @@ export default function StrategicintelligenceconceptPage() {
         readTime={15}
         difficulty="Intermediate"
         category="Intelligence Analysis"
-        mascot="strategic-intelligence-concept"
+        mascot="/strategic-intelligence-concept.png"
         mascotMessage="Another day, another intelligence problem to solve. Let's get to work."
       >
         <EnhancedLessonContentLoader content={topicContent} topic="strategic-intelligence-concept" />
