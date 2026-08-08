@@ -112,7 +112,7 @@ Tactical intelligence is only useful if it reaches the right consumer at the rig
 
 [WhatsNext Links]
 
-- [WhatsNext](https://theintelanalystacademy.com/topics/tactical-reports)
+- [WhatsNext](https://theintelanalystacademy.com/topics/report-writing)
 
 `
 
