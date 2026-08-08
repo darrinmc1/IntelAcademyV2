@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Strategic Intelligence Products",
+    description: "An overview of the various types of strategic intelligence products used in analysis and decision-making.",
+    image: "/strategic-intelligence-products.png",
+    href: "/topics/strategic-intelligence-products",
+    category: "Intelligence Analysis",
+    estimatedTime: "10 min",
+    completed: false,
+    learningObjectives: [
+      "Differentiate between tactical, operational, and strategic intelligence.",
+      "Identify and describe common types of strategic intelligence products.",
+      "Understand the key characteristics of effective strategic intelligence products.",
+    ],
+  },
+  {
     title: "Collection Planning Process for Intel Analysts",
     description: "Master the systematic approach to gathering intelligence, from defining requirements to evaluating collection efforts.",
     image: "/collection-planning-process-for-intel-analysts.png",
