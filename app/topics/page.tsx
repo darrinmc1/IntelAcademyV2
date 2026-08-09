@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Collection Planning Process: Incorporating Feedback",
+    description: "This lesson explores the critical role of feedback in refining and optimizing the collection planning process within intelligence operations.",
+    image: "/collection-planning-process-feedback.png",
+    href: "/topics/collection-planning-process-feedback",
+    category: "Intelligence Operations",
+    estimatedTime: "10 min",
+    completed: false,
+    learningObjectives: [
+      "Understand the iterative nature of the collection planning process.",
+      "Identify key sources of feedback within intelligence operations.",
+      "Learn strategies for integrating feedback to improve collection efforts.",
+    ],
+  },
+  {
     title: "Introduction to Link Analysis",
     description: "This lesson provides a foundational understanding of link analysis, a crucial intelligence technique for uncovering hidden relationships and patterns within data.",
     image: "/introduction-to-link-analysis.png",
