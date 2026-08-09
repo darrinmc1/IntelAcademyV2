@@ -15,6 +15,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
+import Link from "next/link"
 import { useSearchParams } from "next/navigation"
 
 export default function RequestTopicPage() {
@@ -52,7 +53,6 @@ export default function RequestTopicPage() {
         setText("")
         setEmail("")
         setSuccess(true)
-        setTimeout(() => setSuccess(false), 5000)
       } else {
         toast({
           title: "Error",
@@ -97,12 +97,22 @@ export default function RequestTopicPage() {
             <CardDescription>Optional — just tell us what you'd like and we'll take it from there.</CardDescription>
           </CardHeader>
           <CardContent>
-            {success && (
-              <div className="mb-6 rounded-md bg-green-50 p-4 text-sm text-green-800">
-                Thank you! Your request has been received. We&apos;ll notify you when this topic is available.
+            {success ? (
+              <div className="space-y-4">
+                <div className="rounded-md bg-green-50 p-4 text-sm text-green-800">
+                  <p className="font-semibold mb-1">Thank you! Your request has been received.</p>
+                  <p>We&apos;ll take it from here — new topics are added as fast as we can produce them. You can browse everything we already have in the meantime.</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button asChild>
+                    <Link href="/topics/all-topics">Browse all topics</Link>
+                  </Button>
+                  <Button variant="outline" onClick={() => setSuccess(false)}>
+                    Request another topic
+                  </Button>
+                </div>
               </div>
-            )}
-
+            ) : (
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="space-y-2">
                 <Label htmlFor="topic-details">What would you like to learn about? (optional)</Label>
@@ -139,6 +149,7 @@ export default function RequestTopicPage() {
                 )}
               </Button>
             </form>
+            )}
           </CardContent>
         </Card>
       </div>
