@@ -16,4 +16,3 @@ This is the Intel Academy application built with Next.js.
 
 **Current commit should be: 99218fe**
 
-<!-- approval-test-1786248947 -->
