@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Threat Assessment: Methodologies for Evaluating and Prioritizing Threats",
+    description: "Explore various methodologies used by intelligence analysts to effectively evaluate and prioritize potential threats, ensuring resources are allocated efficiently.",
+    image: "/threat-assessment-methodologies.png",
+    href: "/topics/threat-assessment-methodologies",
+    category: "Intelligence Analysis",
+    estimatedTime: "15 min",
+    completed: false,
+    learningObjectives: [
+      "Identify key components of a threat assessment.",
+      "Compare and contrast different threat assessment methodologies.",
+      "Select appropriate methodologies based on intelligence requirements and available resources.",
+    ],
+  },
+  {
     title: "Analytical Techniques for Intelligence Analysts",
     description: "Explore structured methods designed to enhance critical thinking and improve the quality of intelligence analysis.",
     image: "/analytical-techniques-for-intel-analysts.png",
