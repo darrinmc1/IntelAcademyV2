@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Understanding Intel Analysis Feedback Loops",
+    description: "Explore the critical role of feedback loops in refining intelligence analysis, ensuring accuracy, and improving future assessments.",
+    image: "/understanding-intel-analysis-feedback-loops.png",
+    href: "/topics/understanding-intel-analysis-feedback-loops",
+    category: "Intelligence Analysis",
+    estimatedTime: "12 min",
+    completed: false,
+    learningObjectives: [
+      "Identify different types of feedback loops in intelligence analysis.",
+      "Explain the importance of structured feedback for analytical improvement.",
+      "Recognize challenges and strategies for implementing effective feedback mechanisms.",
+    ],
+  },
+  {
     title: "User Content Feedback Loops in Intel Analysis",
     description: "Explore the critical role of user feedback in refining and improving intelligence analysis content, ensuring relevance and accuracy.",
     image: "/user-content-feedback-loops.png",
