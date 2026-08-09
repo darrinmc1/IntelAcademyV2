@@ -18,7 +18,7 @@ unforgiving political environment in which strategic intelligence lives or dies.
 have ever wondered why the most important assessments in the intelligence community are also
 the most contested, this lesson will give you the answer.
 
-{/* ---- Section 1: What Makes Intelligence "Strategic"? ---- */}
+### Section 1: What Makes Intelligence "Strategic"?
 
 Not every intelligence question is strategic. Knowing the location of a militant training
 camp is tactical. Knowing that the conditions that produce militant recruitment are
@@ -80,7 +80,7 @@ synthesis work yet.
 Strategic analysts are the only people in the world who get paid to say "it depends"
 in a suit. The trick is making "it depends" sound like actionable guidance.
 
-{/* ---- Section 2: The Strategy-to-Operations Pipeline ---- */}
+### Section 2: The Strategy-to-Operations Pipeline
 
 Strategic intelligence does not exist in a vacuum. It sits at the top of a pipeline that
 connects national security strategy, intelligence priorities, and operational execution.
@@ -131,7 +131,7 @@ starts as "the geopolitical order is shifting" and ends as "Lieutenant,
 patrol the south quadrant on Tuesday." The pipeline matters because the lieutenant
 needs to know why.
 
-{/* ---- Section 3: Strategic Analytical Products ---- */}
+### Section 3: Strategic Analytical Products
 
 Strategic intelligence is delivered through a distinctive set of products, each designed
 for a specific purpose and audience. Knowing the product type tells the consumer - and the
@@ -189,7 +189,7 @@ Writing a long-term forecast is like predicting the weather for next year on thi
 you know it will be something, but "partly cloudy with a chance of geopolitical
 upheaval" covers a lot of ground. The signposts matter more than the prediction.
 
-{/* ---- Section 4: Challenges in Strategic Intelligence ---- */}
+### Section 4: Challenges in Strategic Intelligence
 
 Strategic intelligence is produced under conditions that would break most other analytical
 disciplines. The stakes are higher, the timelines are longer, the evidence is thinner, and
