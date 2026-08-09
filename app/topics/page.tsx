@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Modus Operandi Analysis: Techniques for Identifying and Analyzing Criminal Methods and Behaviors",
+    description: "Explore the core principles and practical techniques of Modus Operandi (MO) analysis, a critical skill for intelligence analysts in understanding and predicting criminal actions.",
+    image: "/modus-operandi-analysis-techniques.png",
+    href: "/topics/modus-operandi-analysis-techniques",
+    category: "Intelligence Analysis",
+    estimatedTime: "15 min",
+    completed: false,
+    learningObjectives: [
+      "Define Modus Operandi (MO) and its components.",
+      "Identify key techniques used in MO analysis.",
+      "Explain the practical applications of MO analysis in intelligence.",
+    ],
+  },
+  {
     title: "What is Crime Series Analysis?",
     description: "An introduction to the fundamentals of crime series analysis and its importance in law enforcement.",
     image: "/what-is-crime-series-analysis.png",
