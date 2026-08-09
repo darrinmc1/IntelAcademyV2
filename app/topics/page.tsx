@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Predictive Patterning: Using Historical Series Data to Predict Future Criminal Activity",
+    description: "Explore the foundational concepts of predictive patterning in intelligence analysis, focusing on how historical series data can be leveraged to forecast potential criminal activities.",
+    image: "/predictive-patterning-using-historical-series-data-to-predict-future-criminal-ac.png",
+    href: "/topics/predictive-patterning-using-historical-series-data-to-predict-future-criminal-ac",
+    category: "Intelligence Analysis",
+    estimatedTime: "20 min",
+    completed: false,
+    learningObjectives: [
+      "Identify key components of historical series data relevant to criminal activity.",
+      "Describe common temporal, spatial, and behavioral patterns in crime.",
+      "Recognize the tools and challenges associated with predictive patterning.",
+    ],
+  },
+  {
     title: "Series Pattern Detection: Statistical and Analytical Methods for Identifying Crime Series",
     description: "Explore statistical and analytical techniques used by intelligence analysts to detect patterns in crime series, enabling proactive intervention and resource allocation.",
     image: "/series-pattern-detection-statistical-analytical-methods-crime-series.png",
