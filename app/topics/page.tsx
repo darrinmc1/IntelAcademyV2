@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Crime Linkage Techniques: Connecting Crimes Through Evidence",
+    description: "Explore the fundamental methods used by intelligence analysts to link seemingly unrelated crimes by examining behavioral patterns and physical evidence, enhancing investigative efficiency.",
+    image: "/crime-linkage-techniques.png",
+    href: "/topics/crime-linkage-techniques",
+    category: "Intelligence Analysis",
+    estimatedTime: "15 min",
+    completed: false,
+    learningObjectives: [
+      "Identify key components of Modus Operandi (MO) and criminal signature.",
+      "Analyze victimology to establish connections between crimes.",
+      "Understand the role of physical evidence in crime linkage.",
+    ],
+  },
+  {
     title: "Modus Operandi Analysis: Techniques for Identifying and Analyzing Criminal Methods and Behaviors",
     description: "Explore the core principles and practical techniques of Modus Operandi (MO) analysis, a critical skill for intelligence analysts in understanding and predicting criminal actions.",
     image: "/modus-operandi-analysis-techniques.png",
