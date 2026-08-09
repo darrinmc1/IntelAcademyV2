@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "User Content Feedback Loops in Intel Analysis",
+    description: "Explore the critical role of user feedback in refining and improving intelligence analysis content, ensuring relevance and accuracy.",
+    image: "/user-content-feedback-loops.png",
+    href: "/topics/user-content-feedback-loops",
+    category: "Intelligence Analysis",
+    estimatedTime: "10 min",
+    completed: false,
+    learningObjectives: [
+      "Understand the definition and purpose of user feedback loops in intelligence.",
+      "Identify the benefits of incorporating user feedback into intelligence analysis.",
+      "Recognize key methods for implementing effective feedback mechanisms.",
+    ],
+  },
+  {
     title: "Feedback and Content Request for Intel Analyst Academy",
     description: "This lesson addresses a user feedback request regarding missing content for 'start links' on the Intel Analyst Academy platform, outlining a process for identifying and rectifying such issues.",
     image: "/feedback-content-request-for-analyst-academy.png",
