@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "What is Crime Series Analysis?",
+    description: "An introduction to the fundamentals of crime series analysis and its importance in law enforcement.",
+    image: "/what-is-crime-series-analysis.png",
+    href: "/topics/what-is-crime-series-analysis",
+    category: "Intelligence Analysis",
+    estimatedTime: "15 min",
+    completed: false,
+    learningObjectives: [
+      "Define crime series analysis and its core components.",
+      "Explain the importance of CSA in law enforcement investigations.",
+      "Identify the key steps and challenges involved in CSA.",
+    ],
+  },
+  {
     title: "Risk Factor Indicators for Intelligence Analysis",
     description: "This lesson explores key indicators that analysts use to identify and assess potential risks in intelligence operations and geopolitical landscapes.",
     image: "/risk-factor-indicators-for-intel-analysis.png",
