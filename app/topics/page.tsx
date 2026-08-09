@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "User Content Feedback: Intel Analyst Academy",
+    description: "A guide to addressing user feedback on content gaps within the Intel Analyst Academy, focusing on identifying and filling missing links.",
+    image: "/user-content-feedback-intel-analyst-academy.png",
+    href: "/topics/user-content-feedback-intel-analyst-academy",
+    category: "Content Management",
+    estimatedTime: "15 min",
+    completed: false,
+    learningObjectives: [
+      "Identify and categorize user feedback related to missing content.",
+      "Investigate the root cause of broken or placeholder links.",
+      "Develop and implement strategies for resolving content gaps.",
+    ],
+  },
+  {
     title: "User Content Request Feedback Loop",
     description: "Understand how user feedback on content requests can be integrated into the Intel Analyst Academy workflow to improve resource development and relevance.",
     image: "/user-content-request-feedback.png",
