@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Advanced Techniques in Crime Series Analysis",
+    description: "Explore sophisticated methodologies for analyzing patterns and trends within crime series, moving beyond basic statistical approaches to uncover deeper insights.",
+    image: "/advanced-techniques-in-crime-series-analysis.png",
+    href: "/topics/advanced-techniques-in-crime-series-analysis",
+    category: "Criminology",
+    estimatedTime: "15 min",
+    completed: false,
+    learningObjectives: [
+      "Apply advanced spatial-temporal analysis techniques to crime series.",
+      "Utilize network analysis to understand criminal group structures.",
+      "Implement machine learning for crime series prediction and classification.",
+    ],
+  },
+  {
     title: "Understanding Intel Analysis Feedback Loops",
     description: "Explore the critical role of feedback loops in refining intelligence analysis, ensuring accuracy, and improving future assessments.",
     image: "/understanding-intel-analysis-feedback-loops.png",
