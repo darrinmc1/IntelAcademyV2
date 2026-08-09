@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Introduction to Link Analysis",
+    description: "This lesson provides a foundational understanding of link analysis, a crucial intelligence technique for uncovering hidden relationships and patterns within data.",
+    image: "/introduction-to-link-analysis.png",
+    href: "/topics/introduction-to-link-analysis",
+    category: "Intelligence Analysis",
+    estimatedTime: "15 min",
+    completed: false,
+    learningObjectives: [
+      "Define link analysis and its core components.",
+      "Identify the key benefits of using link analysis in intelligence.",
+      "Recognize common methods and concepts used in link analysis.",
+    ],
+  },
+  {
     title: "Advanced Techniques in Crime Series Analysis",
     description: "Explore sophisticated methodologies for analyzing patterns and trends within crime series, moving beyond basic statistical approaches to uncover deeper insights.",
     image: "/advanced-techniques-in-crime-series-analysis.png",
