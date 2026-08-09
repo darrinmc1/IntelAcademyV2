@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Analytical Techniques for Intelligence Analysts",
+    description: "Explore structured methods designed to enhance critical thinking and improve the quality of intelligence analysis.",
+    image: "/analytical-techniques-for-intel-analysts.png",
+    href: "/topics/analytical-techniques-for-intel-analysts",
+    category: "Intelligence Analysis",
+    estimatedTime: "10 min",
+    completed: false,
+    learningObjectives: [
+      "Identify common cognitive biases affecting intelligence analysis.",
+      "Describe and apply at least two structured analytical techniques (e.g., ACH, KAC).",
+      "Explain the importance of challenging assumptions and considering alternative hypotheses.",
+    ],
+  },
+  {
     title: "Target Profiling: Developing Profiles of High-Value Targets",
     description: "Learn the essential techniques for developing comprehensive profiles of high-value targets, a critical skill for intelligence analysis.",
     image: "/target-profiling-developing-profiles-of-high-value-targets.png",
