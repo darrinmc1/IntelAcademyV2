@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Feedback and Content Request for Intel Analyst Academy",
+    description: "This lesson addresses a user feedback request regarding missing content for 'start links' on the Intel Analyst Academy platform, outlining a process for identifying and rectifying such issues.",
+    image: "/feedback-content-request-for-analyst-academy.png",
+    href: "/topics/feedback-content-request-for-analyst-academy",
+    category: "Intel Analysis",
+    estimatedTime: "10 min",
+    completed: false,
+    learningObjectives: [
+      "Understand the importance of link integrity in online learning platforms.",
+      "Implement a systematic process for addressing user feedback on missing content.",
+      "Recognize the value of proactive content maintenance and quality assurance.",
+    ],
+  },
+  {
     title: "Strategic Intelligence Products Overview",
     description: "An introduction to the various types of strategic intelligence products used in analysis and decision-making.",
     image: "/strategic-intelligence-products-overview.png",
