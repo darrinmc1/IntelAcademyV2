@@ -10,42 +10,42 @@ export default function AnalysisTechniquesPage() {
     {
       title: "Crime Series Analysis",
       description: "Techniques for identifying and analyzing related criminal incidents",
-      path: "/learning-paths/crime-series-analysis",
+      path: "/topics/crime-series-analysis",
     },
     {
       title: "Hot Spot Analysis",
       description: "Geographic concentration of crime and strategic response planning",
-      path: "/learning-paths/hot-spot-analysis",
+      path: "/topics/hot-spot-analysis",
     },
     {
       title: "Network Analysis",
       description: "Mapping relationships between entities in criminal networks",
-      path: "/learning-paths/network-analysis",
+      path: "/topics/network-analysis",
     },
     {
       title: "Target Profiling",
       description: "Developing profiles of high-value targets",
-      path: "/learning-paths/target-profiling",
+      path: "/topics/target-profiling",
     },
     {
       title: "Crime Trend Analysis",
       description: "Identifying and forecasting patterns in criminal activity",
-      path: "/learning-paths/crime-trend-analysis",
+      path: "/topics/crime-trend-analysis",
     },
     {
       title: "Analytical Techniques",
       description: "Structured methods to improve your analytical thinking",
-      path: "/learning-paths/analytical-techniques",
+      path: "/topics/analytical-techniques-for-intel-analysts",
     },
     {
       title: "Cognitive Bias in Intelligence",
       description: "Recognizing and mitigating cognitive biases in analysis",
-      path: "/learning-paths/cognitive-bias",
+      path: "/topics/cognitive-biases",
     },
     {
       title: "Threat Assessment",
       description: "Methodologies for evaluating and prioritizing threats",
-      path: "/learning-paths/threat-assessment",
+      path: "/topics/threat-assessment-models",
     },
   ]
 
