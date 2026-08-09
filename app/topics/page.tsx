@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Link Analysis: Uncovering Hidden Connections",
+    description: "Learn the fundamental techniques of link analysis to identify relationships and patterns within data, crucial for intelligence gathering and investigative work.",
+    image: "/link-analysis-uncovering-hidden-connections.png",
+    href: "/topics/link-analysis-uncovering-hidden-connections",
+    category: "Intelligence Analysis",
+    estimatedTime: "15 min",
+    completed: false,
+    learningObjectives: [
+      "Identify key entities and relationships in data.",
+      "Understand common link analysis techniques and metrics.",
+      "Apply link analysis to uncover hidden connections in intelligence scenarios.",
+    ],
+  },
+  {
     title: "User Content Feedback: Intel Analyst Academy",
     description: "A guide to addressing user feedback on content gaps within the Intel Analyst Academy, focusing on identifying and filling missing links.",
     image: "/user-content-feedback-intel-analyst-academy.png",
