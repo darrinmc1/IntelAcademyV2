@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Strategic Intelligence Products Overview",
+    description: "An introduction to the various types of strategic intelligence products used in analysis and decision-making.",
+    image: "/strategic-intelligence-products-overview.png",
+    href: "/topics/strategic-intelligence-products-overview",
+    category: "Intelligence Analysis",
+    estimatedTime: "10 min",
+    completed: false,
+    learningObjectives: [
+      "Identify the purpose and characteristics of strategic intelligence products.",
+      "Describe common types of strategic intelligence products.",
+      "Explain the importance of strategic intelligence for decision-making.",
+    ],
+  },
+  {
     title: "Strategic Intelligence Products",
     description: "An overview of the various types of strategic intelligence products used in analysis and decision-making.",
     image: "/strategic-intelligence-products.png",
