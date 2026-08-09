@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "User Content Request Feedback Loop",
+    description: "Understand how user feedback on content requests can be integrated into the Intel Analyst Academy workflow to improve resource development and relevance.",
+    image: "/user-content-request-feedback.png",
+    href: "/topics/user-content-request-feedback",
+    category: "Content Management",
+    estimatedTime: "12 min",
+    completed: false,
+    learningObjectives: [
+      "Identify common causes of unresolved content request loops.",
+      "Outline steps for establishing a comprehensive user feedback system.",
+      "Describe methods for communicating feedback resolution to users.",
+    ],
+  },
+  {
     title: "Collection Planning Process: Incorporating Feedback",
     description: "This lesson explores the critical role of feedback in refining and optimizing the collection planning process within intelligence operations.",
     image: "/collection-planning-process-feedback.png",
