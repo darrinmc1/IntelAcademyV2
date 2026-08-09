@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Repeat Offender Profiling: Identifying and Analyzing Patterns of Repeat Offenders",
+    description: "This lesson delves into the critical intelligence discipline of repeat offender profiling, equipping analysts with the methods to identify and analyze the behavioral patterns of individuals who repeatedly engage in criminal activity.",
+    image: "/repeat-offender-profiling-identifying-and-analyzing-patterns-of-repeat-offenders.png",
+    href: "/topics/repeat-offender-profiling-identifying-and-analyzing-patterns-of-repeat-offenders",
+    category: "Intelligence Analysis",
+    estimatedTime: "12 min",
+    completed: false,
+    learningObjectives: [
+      "Identify the core components of repeat offender profiling (MO, signature, victimology).",
+      "Describe common methodologies used in analyzing repeat offender behavior.",
+      "Recognize the applications of repeat offender profiling in various intelligence disciplines.",
+    ],
+  },
+  {
     title: "Crime Linkage Techniques: Connecting Crimes Through Evidence",
     description: "Explore the fundamental methods used by intelligence analysts to link seemingly unrelated crimes by examining behavioral patterns and physical evidence, enhancing investigative efficiency.",
     image: "/crime-linkage-techniques.png",
