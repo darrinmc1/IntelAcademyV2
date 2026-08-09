@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Target Profiling: Developing Profiles of High-Value Targets",
+    description: "Learn the essential techniques for developing comprehensive profiles of high-value targets, a critical skill for intelligence analysis.",
+    image: "/target-profiling-developing-profiles-of-high-value-targets.png",
+    href: "/topics/target-profiling-developing-profiles-of-high-value-targets",
+    category: "Intelligence Analysis",
+    estimatedTime: "10 min",
+    completed: false,
+    learningObjectives: [
+      "Understand the definition and importance of High-Value Targets (HVTs).",
+      "Identify the key components required for a comprehensive target profile.",
+      "Describe the iterative process and challenges involved in target profiling.",
+    ],
+  },
+  {
     title: "Predictive Patterning: Using Historical Series Data to Predict Future Criminal Activity",
     description: "Explore the foundational concepts of predictive patterning in intelligence analysis, focusing on how historical series data can be leveraged to forecast potential criminal activities.",
     image: "/predictive-patterning-using-historical-series-data-to-predict-future-criminal-ac.png",
