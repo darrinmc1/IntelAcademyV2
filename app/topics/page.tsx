@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Series Pattern Detection: Statistical and Analytical Methods for Identifying Crime Series",
+    description: "Explore statistical and analytical techniques used by intelligence analysts to detect patterns in crime series, enabling proactive intervention and resource allocation.",
+    image: "/series-pattern-detection-statistical-analytical-methods-crime-series.png",
+    href: "/topics/series-pattern-detection-statistical-analytical-methods-crime-series",
+    category: "Intelligence Analysis",
+    estimatedTime: "15 min",
+    completed: false,
+    learningObjectives: [
+      "Identify statistical methods for detecting crime series.",
+      "Understand the role of spatial and temporal analysis in pattern detection.",
+      "Apply analytical techniques to interpret crime series data.",
+    ],
+  },
+  {
     title: "Repeat Offender Profiling: Identifying and Analyzing Patterns of Repeat Offenders",
     description: "This lesson delves into the critical intelligence discipline of repeat offender profiling, equipping analysts with the methods to identify and analyze the behavioral patterns of individuals who repeatedly engage in criminal activity.",
     image: "/repeat-offender-profiling-identifying-and-analyzing-patterns-of-repeat-offenders.png",
