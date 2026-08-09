@@ -7,20 +7,6 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
-    title: "Risk Factor Indicators for Intelligence Analysis",
-    description: "This lesson explores key indicators that analysts use to identify and assess potential risks in intelligence operations and geopolitical landscapes.",
-    image: "/risk-factor-indicators-for-intel-analysis.png",
-    href: "/topics/risk-factor-indicators-for-intel-analysis",
-    category: "Intelligence Analysis",
-    estimatedTime: "15 min",
-    completed: false,
-    learningObjectives: [
-      "Identify different categories of risk factor indicators.",
-      "Understand the role of an intelligence analyst in indicator analysis.",
-      "Recognize challenges inherent in analyzing risk indicators.",
-    ],
-  },
-  {
     title: "Advanced Crime Series Analysis: Predictive Modeling and Resource Allocation",
     description: "Explore advanced techniques in crime series analysis, focusing on predictive modeling for crime forecasting and optimizing resource allocation for law enforcement.",
     image: "/advanced-crime-series-analysis-predictive-modeling-resource-allocation.png",
