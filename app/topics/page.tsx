@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Tactical Warning Fundamentals",
+    description: "Understand the core principles of tactical warning, distinguishing it from strategic warning, navigating the warning paradox, and learning how analysts generate actionable intelligence for field commanders.",
+    image: "/tactical-warning-fundamentals.png",
+    href: "/topics/tactical-warning-fundamentals",
+    category: "Intelligence Analysis",
+    estimatedTime: "15 min",
+    completed: false,
+    learningObjectives: [
+      "Differentiate between tactical and strategic warning.",
+      "Explain the challenges posed by the warning paradox.",
+      "Describe the process of producing actionable tactical warning.",
+    ],
+  },
+  {
     title: "Strategic Intelligence Products",
     description: "An overview of the various types of strategic intelligence products used in analysis and decision-making.",
     image: "/strategic-intelligence-products.png",
