@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "AI Prompt Injection Defense",
+    description: "Learn to identify and defend against prompt injection attacks targeting AI models, protecting your systems and data.",
+    image: "/ai-prompt-injection-defense.png",
+    href: "/topics/ai-prompt-injection-defense",
+    category: "Cybersecurity",
+    estimatedTime: "10 min",
+    completed: false,
+    learningObjectives: [
+      "Identify common prompt injection attack vectors.",
+      "Understand the risks associated with AI prompt injection.",
+      "Implement strategies to defend AI models against prompt injection.",
+    ],
+  },
+  {
     title: "Threat Assessment: Methodologies for Evaluating and Prioritizing Threats",
     description: "Explore various methodologies used by intelligence analysts to effectively evaluate and prioritize potential threats, ensuring resources are allocated efficiently.",
     image: "/threat-assessment-methodologies.png",
