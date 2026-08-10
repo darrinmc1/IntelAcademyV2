@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Strategic Intelligence: A Refined Concept",
+    description: "This lesson revisits the core concept of strategic intelligence, breaking down complex ideas into digestible sections for enhanced understanding and application.",
+    image: "/strategic-intelligence-concept-revisited.png",
+    href: "/topics/strategic-intelligence-concept-revisited",
+    category: "Intelligence Studies",
+    estimatedTime: "15 min",
+    completed: false,
+    learningObjectives: [
+      "Define strategic intelligence and differentiate it from tactical and operational intelligence.",
+      "Identify the key pillars that constitute strategic intelligence.",
+      "Recognize the inherent challenges in producing and utilizing strategic intelligence.",
+    ],
+  },
+  {
     title: "Risk Factor Indicators for Intelligence Analysts",
     description: "Learn to identify and analyze key indicators of risk in intelligence analysis, enhancing your ability to anticipate threats and inform decision-making.",
     image: "/risk-factor-indicators-for-analysts.png",
