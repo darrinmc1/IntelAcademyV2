@@ -28,6 +28,10 @@ export function HeroSection() {
             {/* Subtle inner animated ring effect */}
             <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
+            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-1.5 mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300">
+              Intelligence Analysis Training
+            </div>
+
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-md">
               Master the Art of
               <span className="block text-gradient-primary mt-2">Intelligence Analysis</span>
