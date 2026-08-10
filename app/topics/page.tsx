@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Risk Factor Indicators for Intelligence Analysis",
+    description: "This lesson explores how to identify and analyze risk factor indicators within intelligence data to anticipate potential threats and opportunities.",
+    image: "/risk-factor-indicators-for-intelligence-analysis.png",
+    href: "/topics/risk-factor-indicators-for-intelligence-analysis",
+    category: "Intelligence Analysis",
+    estimatedTime: "15 min",
+    completed: false,
+    learningObjectives: [
+      "Define and identify various types of risk factor indicators.",
+      "Describe the process for analyzing identified risk factor indicators.",
+      "Recognize the challenges associated with indicator analysis in intelligence.",
+    ],
+  },
+  {
     title: "Advanced Crime Series Analysis Techniques",
     description: "Explore sophisticated methodologies for analyzing crime series, moving beyond basic pattern recognition to understand complex temporal and spatial relationships.",
     image: "/advanced-crime-series-analysis-techniques.png",
