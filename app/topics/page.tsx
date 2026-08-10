@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Identifying and Analyzing Risk Factors and Indicators",
+    description: "Learn to identify potential risks and analyze their indicators for better threat assessment and mitigation.",
+    image: "/identifying-and-analyzing-risk-factors-and-indicators.png",
+    href: "/topics/identifying-and-analyzing-risk-factors-and-indicators",
+    category: "Risk Management",
+    estimatedTime: "15 min",
+    completed: false,
+    learningObjectives: [
+      "Distinguish between risk factors and risk indicators.",
+      "Identify common categories of risk factors.",
+      "Develop specific indicators for potential risks.",
+    ],
+  },
+  {
     title: "Risk Factor Indicators for Intelligence Analysis",
     description: "This lesson explores how to identify and analyze risk factor indicators within intelligence data to anticipate potential threats and opportunities.",
     image: "/risk-factor-indicators-for-intelligence-analysis.png",
