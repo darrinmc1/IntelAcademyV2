@@ -1,5 +1,6 @@
 import type { ReactNode } from "react"
 import { AutoLessonComplete } from "@/components/auto-lesson-complete"
+import { TopicWhereNext } from "@/components/topic-where-next"
 
 interface LessonContainerProps {
   children: ReactNode
@@ -12,6 +13,7 @@ export function LessonContainer({ children, className = "" }: LessonContainerPro
       {children}
       <div className="mt-10 pt-8 border-t border-white/10">
         <AutoLessonComplete />
+        <TopicWhereNext />
       </div>
     </div>
   )
