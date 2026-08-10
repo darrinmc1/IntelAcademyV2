@@ -57,30 +57,6 @@ Consider these best practices when working with identities and labels in your ch
 - Consider using multi-line labels to organize information logically
 - Ensure that identity fields are properly mapped during data imports
 
-### Related Topics
-
--
-
-Creating a Chart
-
--
-
-Editing Chart Items
-
--
-
-Creating Entity Relationship Charts
-
-### Next Steps
-
--
-
-Creating a Chart
-
--
-
-Example Materials in Analyst's Notebook
-
 ## The Importance of Identity Resolution
 
 In any intelligence investigation, the fundamental analytical task is connecting identities to individuals. A single person may use multiple names, aliases, phone numbers, email addresses, social media accounts, and physical addresses. Identity resolution - determining which identifiers belong to the same person - is the foundation upon which all other analysis rests.

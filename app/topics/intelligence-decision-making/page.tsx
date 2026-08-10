@@ -262,30 +262,6 @@ Effective intelligence-based decision making is not simply about having more inf
 having the right information, properly analyzed and clearly communicated, at the right time to support
 specific decisions.
 
-## Continue Your Learning
-
-###
-
-Related Topics
-
--
-
-What is Intelligence
-
--
-
-Information vs Intelligence
-
--
-
-The Intelligence Cycle
-
-### Ready to Apply This Knowledge?
-Explore our learning paths to deepen your understanding of intelligence analysis.
-
-View Learning Paths
-
-)
 `
 
 export default function IntelligencedecisionmakingPage() {

@@ -307,30 +307,6 @@ provides the necessary raw material, it is the analytical process that creates t
 effective decision-making. Understanding this distinction is fundamental to producing and consuming
 intelligence effectively.
 
-## Continue Your Learning
-
-###
-
-Related Topics
-
--
-
-What is Intelligence
-
--
-
-The Intelligence Cycle
-
--
-
-Intelligence in Decision Making
-
-### Ready to Apply This Knowledge?
-Explore our learning paths to deepen your understanding of intelligence analysis.
-
-View Learning Paths
-
-)
 `
 
 export default function InformationvsintelligencePage() {

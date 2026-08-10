@@ -1090,25 +1090,6 @@ Sourcing and Attribution
 Scope Control
 ](#)
 
-### Related Topics
-
--
-
-Writing Executive Summaries
-
--
-
-Verbal Briefing Techniques
-
--
-
-Report Writing Pitfalls
-
--
-
-Estimative Language
-
-)
 `
 
 export default function IntelligencereportfundamentalsPage() {

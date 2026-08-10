@@ -272,25 +272,6 @@ and credible intelligence briefings in any setting.
 5. Confidence Calibration
 ](#)
 
-### Related Topics
-
--
-
-Intelligence Report Fundamentals
-
--
-
-Writing Executive Summaries
-
--
-
-Intelligence Storytelling
-
--
-
-Visual Aids for Intelligence
-
-)
 `
 
 export default function VerbalbriefingtechniquesPage() {

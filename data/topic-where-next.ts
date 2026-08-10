@@ -14,6 +14,7 @@ export interface WhereNextOption {
 export interface TopicWhereNext {
   similar?: WhereNextOption
   more?: WhereNextOption
+  advanced?: WhereNextOption
 }
 
 const whereNextMap: Record<string, TopicWhereNext> = {
@@ -409,7 +410,7 @@ export function getTopicWhereNext(slug: string): TopicWhereNext {
   if (entry) return entry
 
   // Learning path slugs: reuse the curated "What's Next?" recommendations
-  // anotherTopic -> similar subject, moreLearning -> more on same subject
+  // anotherTopic -> similar subject, moreLearning -> more on same subject, advancedLearning -> advanced
   const pathRec = whatsNextMap[slug as keyof typeof whatsNextMap]
   if (pathRec) {
     return {
@@ -423,8 +424,26 @@ export function getTopicWhereNext(slug: string): TopicWhereNext {
         description: pathRec.moreLearning.description,
         path: pathRec.moreLearning.path,
       },
+      advanced: pathRec.advancedLearning
+        ? {
+            title: pathRec.advancedLearning.title,
+            description: pathRec.advancedLearning.description,
+            path: pathRec.advancedLearning.path,
+          }
+        : {
+            title: "Advanced Topics",
+            description: "Challenge yourself with our advanced intelligence topics.",
+            path: "/advanced-topics",
+          },
     }
   }
 
-  return fallback
+  return {
+    ...fallback,
+    advanced: {
+      title: "Advanced Topics",
+      description: "Challenge yourself with our advanced intelligence topics.",
+      path: "/advanced-topics",
+    },
+  }
 }

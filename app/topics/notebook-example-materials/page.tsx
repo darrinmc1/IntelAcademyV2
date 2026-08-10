@@ -65,32 +65,6 @@ Notebook:
 - Note how relationships are established between entities during import
 - Use these specifications as templates for your own data imports
 
-### Related Topics
-
--
-
-Creating a Chart
-
--
-
-Importing an Example Dataset
-
--
-
-Creating Entity Relationship Charts
-
-### Next Steps
-
--
-
-Importing an Example Dataset
-
--
-
-Editing Chart Items
-
-)
-
 ## Selecting Examples for Analysis
 
 The examples and materials you include in an Analyst's Notebook chart are not neutral - they shape how others interpret the data. Careful selection and annotation of example materials ensures that the analysis is transparent, reproducible, and defensible.

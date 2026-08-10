@@ -70,32 +70,6 @@ Once you've created your chart, it's important to save and manage it properly:
 - Consider using version numbers in filenames for tracking changes
 - Regularly save your work to prevent data loss
 
-### Related Topics
-
--
-
-Identities and Labels
-
--
-
-Editing Chart Items
-
--
-
-Creating Entity Relationship Charts
-
-### Next Steps
-
--
-
-Example Materials in Analyst's Notebook
-
--
-
-Importing an Example Dataset
-
-)
-
 ## Creating Your First Chart
 
 Starting a new chart in Analyst's Notebook requires planning beyond simply placing entities on the canvas. A well-structured chart begins with a clear analytical question and a defined scope.

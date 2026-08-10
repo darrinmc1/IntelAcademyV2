@@ -206,25 +206,6 @@ attention, convey critical information, and drive informed decisions.
 Executive Summary Template
 ](#)
 
-### Related Topics
-
--
-
-Intelligence Report Fundamentals
-
--
-
-Verbal Briefing Techniques
-
--
-
-Estimative Language
-
--
-
-Intelligence Storytelling
-
-)
 `
 
 export default function WritingexecutivesummariesPage() {
