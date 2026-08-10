@@ -1,4 +1,5 @@
 "use client"
+import { TopicWhereNext } from "@/components/topic-where-next"
 
 export default function CrimeLinkageTechniquesPage() {
   return (
@@ -15,6 +16,7 @@ export default function CrimeLinkageTechniquesPage() {
           training on crime linkage analysis techniques.
         </p>
       </div>
+      <TopicWhereNext />
     </div>
   )
 }

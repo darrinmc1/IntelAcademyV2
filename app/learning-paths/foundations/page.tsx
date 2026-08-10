@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/breadcrumb"
 import { TopicCard } from "@/components/topic-card"
 import { LearningFormats } from "@/components/learning-formats"
-import { WhatsNextCompact } from "@/components/whats-next-compact"
+import { TopicWhereNext } from "@/components/topic-where-next"
 
 export const metadata: Metadata = {
   title: "Fundamentals of Intelligence Analysis | Learning Path",
@@ -20,24 +20,6 @@ export const metadata: Metadata = {
 }
 
 export default function FoundationsPath() {
-  const whatsNextRecommendations = {
-    anotherTopic: {
-      title: "OSINT Essentials",
-      description: "Learn the fundamentals of open-source intelligence gathering",
-      path: "/learning-paths/osint",
-    },
-    moreLearning: {
-      title: "Analytical Techniques",
-      description: "Master structured analytic techniques for intelligence analysis",
-      path: "/learning-paths/analytical-techniques",
-    },
-    advancedLearning: {
-      title: "Intelligence Ethics",
-      description: "Explore ethical considerations in intelligence analysis",
-      path: "/learning-paths/intelligence-ethics",
-    },
-  }
-
   return (
     <div className="container mx-auto px-4 py-8">
       
@@ -239,11 +221,7 @@ export default function FoundationsPath() {
 
 
 
-      <WhatsNextCompact
-        anotherTopic={whatsNextRecommendations.anotherTopic}
-        moreLearning={whatsNextRecommendations.moreLearning}
-        advancedLearning={whatsNextRecommendations.advancedLearning}
-      />
+      <TopicWhereNext />
     </div>
   )
 }

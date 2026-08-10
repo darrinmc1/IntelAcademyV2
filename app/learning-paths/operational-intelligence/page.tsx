@@ -13,28 +13,10 @@ import {
 import { TopicCard } from "@/components/topic-card"
 import { LearningFormats } from "@/components/learning-formats"
 import { StaticImage } from "@/components/static-image"
-import { WhatsNextCompact } from "@/components/whats-next-compact"
+import { TopicWhereNext } from "@/components/topic-where-next"
 import { OperationalIntelligenceObjectives } from "@/components/learning-objectives/operational-intelligence-objectives"
 
 export default function OperationalIntelligencePage() {
-  const whatsNextRecommendations = {
-    anotherTopic: {
-      title: "Crime Series Analysis",
-      description: "Learn to identify and analyze linked criminal activities",
-      path: "/learning-paths/crime-series-analysis",
-    },
-    moreLearning: {
-      title: "Hot Spot Analysis",
-      description: "Master geographic crime pattern analysis",
-      path: "/learning-paths/hot-spot-analysis",
-    },
-    advancedLearning: {
-      title: "Network Analysis",
-      description: "Advanced techniques for mapping criminal networks",
-      path: "/learning-paths/network-analysis",
-    },
-  }
-
   return (
     <div className="container mx-auto px-4 py-8">
       
@@ -421,11 +403,7 @@ export default function OperationalIntelligencePage() {
         </div>
       </section>
 
-      <WhatsNextCompact
-        anotherTopic={whatsNextRecommendations.anotherTopic}
-        moreLearning={whatsNextRecommendations.moreLearning}
-        advancedLearning={whatsNextRecommendations.advancedLearning}
-      />
+      <TopicWhereNext />
     </div>
   )
 }

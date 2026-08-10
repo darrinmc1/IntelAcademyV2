@@ -8,6 +8,7 @@ import { FeaturedResource } from "@/components/featured-resource"
 import { LearningFormats } from "@/components/learning-formats"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { TopicWhereNext } from "@/components/topic-where-next"
 
 export default function AnalystNotebookPage() {
   // Define a placeholder image for the banner
@@ -409,6 +410,7 @@ export default function AnalystNotebookPage() {
           </div>
         </div>
       </div>
+      <TopicWhereNext />
     </div>
   )
 }

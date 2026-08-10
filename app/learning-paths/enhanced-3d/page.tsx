@@ -5,6 +5,7 @@ import { LearningPathCard3D } from "@/components/3d-effects/learning-path-card-3
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { learningPaths } from "@/data/learning-paths"
+import { TopicWhereNext } from "@/components/topic-where-next"
 
 export default function Enhanced3DLearningPathsPage() {
   const [intensity, setIntensity] = useState<"subtle" | "medium" | "strong">("subtle")
@@ -133,6 +134,7 @@ export default function Enhanced3DLearningPathsPage() {
           </Card>
         </div>
       </div>
+      <TopicWhereNext />
     </div>
   )
 }

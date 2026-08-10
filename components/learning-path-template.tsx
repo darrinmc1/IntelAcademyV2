@@ -1,6 +1,5 @@
 import type { ReactNode } from "react"
-import { WhatsNextCompact } from "@/components/whats-next-compact"
-import { getWhatsNextRecommendations } from "@/data/whats-next-recommendations"
+import { TopicWhereNext } from "@/components/topic-where-next"
 
 interface LearningPathTemplateProps {
   children: ReactNode
@@ -15,20 +14,13 @@ interface LearningPathTemplateProps {
 }
 
 export function LearningPathTemplate({ children, pathSlug }: LearningPathTemplateProps) {
-  // Get the "What's Next?" recommendations for this learning path
-  const whatsNextRecommendations = getWhatsNextRecommendations(pathSlug as any)
-
   return (
     <>
       {/* Main content */}
       {children}
 
-      {/* What's Next section */}
-      <WhatsNextCompact
-        anotherTopic={whatsNextRecommendations.anotherTopic}
-        moreLearning={whatsNextRecommendations.moreLearning}
-        advancedLearning={whatsNextRecommendations.advancedLearning}
-      />
+      {/* Where to Next section */}
+      <TopicWhereNext />
     </>
   )
 }

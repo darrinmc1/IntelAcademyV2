@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { LearningFormats } from "@/components/learning-formats"
+import { TopicWhereNext } from "@/components/topic-where-next"
 
 export const metadata = {
   title: "Crime Trend Analysis | The Intel Analyst Academy",
@@ -166,6 +167,7 @@ export default function CrimeTrendAnalysisPage() {
           </div>
         </div>
       </div>
+      <TopicWhereNext />
     </main>
   )
 }

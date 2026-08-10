@@ -13,27 +13,9 @@ import {
 import { TopicCard } from "@/components/topic-card"
 import { LearningFormats } from "@/components/learning-formats"
 import { StaticImage } from "@/components/static-image"
-import { WhatsNextCompact } from "@/components/whats-next-compact"
+import { TopicWhereNext } from "@/components/topic-where-next"
 
 export default function OSINTPage() {
-  const whatsNextRecommendations = {
-    anotherTopic: {
-      title: "Digital Intelligence",
-      description: "Advanced techniques for digital evidence gathering",
-      path: "/learning-paths/digital-intelligence",
-    },
-    moreLearning: {
-      title: "Source Evaluation",
-      description: "Learn to assess source reliability and credibility",
-      path: "/learning-paths/source-evaluation",
-    },
-    advancedLearning: {
-      title: "Advanced Analytics",
-      description: "Master structured analytical techniques",
-      path: "/learning-paths/analytical-techniques",
-    },
-  }
-
   return (
     <div className="container mx-auto px-4 py-8">
       
@@ -144,11 +126,7 @@ export default function OSINTPage() {
         </Card>
       </section>
 
-      <WhatsNextCompact
-        anotherTopic={whatsNextRecommendations.anotherTopic}
-        moreLearning={whatsNextRecommendations.moreLearning}
-        advancedLearning={whatsNextRecommendations.advancedLearning}
-      />
+      <TopicWhereNext />
     </div>
   )
 }

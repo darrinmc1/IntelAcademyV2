@@ -1,6 +1,7 @@
 "use client"
 
 import { EnhancedLearningPathCard } from "@/components/enhanced-learning-path-card"
+import { TopicWhereNext } from "@/components/topic-where-next"
 
 // Extreme test cases for data resilience
 const extremeTestCases = [
@@ -85,6 +86,7 @@ export default function TestResiliencePage() {
           validation and error handling is working correctly!
         </p>
       </div>
+      <TopicWhereNext />
     </div>
   )
 }

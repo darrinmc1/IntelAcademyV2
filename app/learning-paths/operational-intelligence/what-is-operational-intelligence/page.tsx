@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/breadcrumb"
 import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
+import { TopicWhereNext } from "@/components/topic-where-next"
 
 export default function WhatIsOperationalIntelligence() {
   return (
@@ -231,6 +232,7 @@ export default function WhatIsOperationalIntelligence() {
           </Button>
         </div>
       </div>
+      <TopicWhereNext />
     </div>
   )
 }

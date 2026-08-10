@@ -11,7 +11,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { StaticImage } from "@/components/static-image"
-import { PathWhatsNext } from "@/components/path-whats-next"
+import { TopicWhereNext } from "@/components/topic-where-next"
 
 export default function ReportWritingPath() {
   return (
@@ -560,7 +560,7 @@ export default function ReportWritingPath() {
       </section>
 
       {/* What's Next section - placed between topic list and footer */}
-      <PathWhatsNext pathSlug="report-writing" />
+      <TopicWhereNext />
     </div>
   )
 }

@@ -6,6 +6,7 @@ import { SkillRequirements } from "@/components/skill-requirements"
 import { advancedTopicRequirements } from "@/data/advanced-topic-requirements"
 import { NetworkExamples } from "@/components/network-examples"
 import { NetworkToolsTutorials } from "@/components/network-tools-tutorials"
+import { TopicWhereNext } from "@/components/topic-where-next"
 
 export async function generateStaticParams() {
   return Object.keys(advancedTopicRequirements).map((topicId) => ({
@@ -194,6 +195,7 @@ export default async function AdvancedTopicPage({ params }: AdvancedTopicPagePro
           </div>
         </div>
       </div>
+      <TopicWhereNext />
     </div>
   )
 }

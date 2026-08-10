@@ -15,7 +15,7 @@ import { LearningFormats } from "@/components/learning-formats"
 import type { Metadata } from "next"
 import { TopicList } from "@/components/topic-list"
 import { StaticImage } from "@/components/static-image"
-import { PathWhatsNext } from "@/components/path-whats-next"
+import { TopicWhereNext } from "@/components/topic-where-next"
 import { getTopicsForPath } from "@/utils/topic-helpers"
 
 export const metadata: Metadata = {
@@ -409,7 +409,7 @@ export default function FinancialIntelligencePage() {
         <TopicList topics={getTopicsForPath("financial-intelligence")} category="financial-intelligence" />
 
         {/* What's Next section - placed between topic list and footer */}
-        <PathWhatsNext pathSlug="financial-intelligence" />
+        <TopicWhereNext />
       </section>
     </div>
   )

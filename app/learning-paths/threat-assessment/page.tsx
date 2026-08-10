@@ -13,6 +13,7 @@ import {
 import { LearningFormats } from "@/components/learning-formats"
 
 import { TopicCard } from "@/components/topic-card"
+import { TopicWhereNext } from "@/components/topic-where-next"
 
 export default function ThreatAssessmentPath() {
   return (
@@ -381,6 +382,7 @@ export default function ThreatAssessmentPath() {
           </CardContent>
         </Card>
       </section>
+      <TopicWhereNext />
     </div>
   )
 }

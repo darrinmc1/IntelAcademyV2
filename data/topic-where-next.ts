@@ -3,6 +3,8 @@
 //   similar - another topic on a similar subject
 //   more    - the learning path (more lessons on the same subject)
 
+import { whatsNextMap } from "./whats-next-recommendations"
+
 export interface WhereNextOption {
   title: string
   description: string
@@ -403,5 +405,26 @@ const fallback: TopicWhereNext = {
 };
 
 export function getTopicWhereNext(slug: string): TopicWhereNext {
-  return whereNextMap[slug] || fallback
+  const entry = whereNextMap[slug]
+  if (entry) return entry
+
+  // Learning path slugs: reuse the curated "What's Next?" recommendations
+  // anotherTopic -> similar subject, moreLearning -> more on same subject
+  const pathRec = whatsNextMap[slug as keyof typeof whatsNextMap]
+  if (pathRec) {
+    return {
+      similar: {
+        title: pathRec.anotherTopic.title,
+        description: pathRec.anotherTopic.description,
+        path: pathRec.anotherTopic.path,
+      },
+      more: {
+        title: pathRec.moreLearning.title,
+        description: pathRec.moreLearning.description,
+        path: pathRec.moreLearning.path,
+      },
+    }
+  }
+
+  return fallback
 }

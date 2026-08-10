@@ -6,6 +6,7 @@ import Link from "next/link"
 import { TopicCardWithImage } from "@/components/topic-card-with-image"
 import { FeaturedResource } from "@/components/featured-resource"
 import { LearningFormats } from "@/components/learning-formats"
+import { TopicWhereNext } from "@/components/topic-where-next"
 
 export default function AnalyticalTechniquesPage() {
   return (
@@ -147,6 +148,7 @@ export default function AnalyticalTechniquesPage() {
           </div>
         </div>
       </div>
+      <TopicWhereNext />
     </div>
   )
 }

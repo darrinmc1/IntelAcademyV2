@@ -7,6 +7,7 @@ export const metadata = {
 }
 
 import React from "react"
+import { TopicWhereNext } from "@/components/topic-where-next"
 export default function TargetProfilingPage() {
   return (
     <main className="container mx-auto px-4 py-12">
@@ -159,6 +160,7 @@ export default function TargetProfilingPage() {
           </div>
         </div>
       </div>
+      <TopicWhereNext />
     </main>
   )
 }

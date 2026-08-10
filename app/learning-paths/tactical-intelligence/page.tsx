@@ -13,28 +13,10 @@ import {
 import { TopicCard } from "@/components/topic-card"
 import { LearningFormats } from "@/components/learning-formats"
 import { StaticImage } from "@/components/static-image"
-import { WhatsNextCompact } from "@/components/whats-next-compact"
+import { TopicWhereNext } from "@/components/topic-where-next"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
 export default function TacticalIntelligencePage() {
-  const whatsNextRecommendations = {
-    anotherTopic: {
-      title: "OSINT Essentials",
-      description: "Learn open-source intelligence gathering techniques",
-      path: "/learning-paths/osint",
-    },
-    moreLearning: {
-      title: "Operational Intelligence",
-      description: "Bridge the gap between tactical and strategic intelligence",
-      path: "/learning-paths/operational-intelligence",
-    },
-    advancedLearning: {
-      title: "Advanced Analytics",
-      description: "Master complex analytical techniques and tools",
-      path: "/learning-paths/analytical-techniques",
-    },
-  }
-
   return (
     <div className="container mx-auto px-4 py-8">
       
@@ -188,11 +170,7 @@ export default function TacticalIntelligencePage() {
         </Card>
       </section>
 
-      <WhatsNextCompact
-        anotherTopic={whatsNextRecommendations.anotherTopic}
-        moreLearning={whatsNextRecommendations.moreLearning}
-        advancedLearning={whatsNextRecommendations.advancedLearning}
-      />
+      <TopicWhereNext />
     </div>
   )
 }

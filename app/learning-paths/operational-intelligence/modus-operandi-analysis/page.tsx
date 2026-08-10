@@ -1,4 +1,5 @@
 "use client"
+import { TopicWhereNext } from "@/components/topic-where-next"
 
 export default function ModusOperandiAnalysisPage() {
   return (
@@ -15,6 +16,7 @@ export default function ModusOperandiAnalysisPage() {
           training on modus operandi analysis techniques.
         </p>
       </div>
+      <TopicWhereNext />
     </div>
   )
 }

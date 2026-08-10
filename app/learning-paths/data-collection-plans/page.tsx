@@ -6,6 +6,7 @@ import Link from "next/link"
 import { TopicCardWithImage } from "@/components/topic-card-with-image"
 import { FeaturedResource } from "@/components/featured-resource"
 import { LearningFormats } from "@/components/learning-formats"
+import { TopicWhereNext } from "@/components/topic-where-next"
 
 export default function DataCollectionPlansPage() {
   return (
@@ -180,6 +181,7 @@ export default function DataCollectionPlansPage() {
           </div>
         </div>
       </div>
+      <TopicWhereNext />
     </div>
   )
 }
