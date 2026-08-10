@@ -13,9 +13,7 @@ const topicContent = `You'll learn the five phases of the intelligence cycle, un
 
 ## The Five Phases
 
-${['Direction', 'Collection', 'Processing', 'Analysis', 'Dissemination'].map((phase, idx) => (
-<p key={idx}><strong>Phase ${idx + 1}:</strong> ${phase}</p>
-)).join('')}
+${['Direction', 'Collection', 'Processing', 'Analysis', 'Dissemination'].map((phase, idx) => `- **Phase ${idx + 1}:** ${phase}`).join('\n')}
 
 The intelligence cycle is a continuous, systematic process that transforms raw information into actionable intelligence. Each phase builds on the previous one, creating a feedback loop that improves intelligence quality over time.
 
