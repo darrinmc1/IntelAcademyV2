@@ -139,8 +139,8 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
   },
   "information-vs-intelligence": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "The Intelligence Cycle", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/intelligence-cycle" },
+    more: { title: "Intelligence Foundations", description: "Continue with the Intelligence Foundations learning path for more lessons on this subject.", path: "/learning-paths/foundations" },
   },
   "intelligence-briefings": {
     similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
