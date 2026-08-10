@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Strategic Intelligence Products: Bridging the Gap Between Information and Action",
+    description: "Explore the critical role of strategic intelligence products in transforming raw information into actionable insights for decision-makers.",
+    image: "/strategic-intelligence-products-bridging-the-gap-between-information-and-action.png",
+    href: "/topics/strategic-intelligence-products-bridging-the-gap-between-information-and-action",
+    category: "Intelligence Studies",
+    estimatedTime: "10 min",
+    completed: false,
+    learningObjectives: [
+      "Define strategic intelligence products and their purpose.",
+      "Explain the information-to-action continuum and the role of strategic intelligence.",
+      "Identify key characteristics of effective strategic intelligence products.",
+    ],
+  },
+  {
     title: "Identifying and Analyzing Risk Factors and Indicators",
     description: "Learn to identify potential risks and analyze their indicators for better threat assessment and mitigation.",
     image: "/identifying-and-analyzing-risk-factors-and-indicators.png",
