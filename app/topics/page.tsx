@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Advanced Crime Series Analysis Techniques",
+    description: "Explore sophisticated methodologies for analyzing crime series, moving beyond basic pattern recognition to understand complex temporal and spatial relationships.",
+    image: "/advanced-crime-series-analysis-techniques.png",
+    href: "/topics/advanced-crime-series-analysis-techniques",
+    category: "Intelligence Analysis",
+    estimatedTime: "12 min",
+    completed: false,
+    learningObjectives: [
+      "Apply advanced temporal analysis techniques to crime series.",
+      "Integrate spatial and temporal data for dynamic crime pattern understanding.",
+      "Utilize predictive modeling for crime series forecasting and risk assessment.",
+    ],
+  },
+  {
     title: "AI Prompt Injection Defense",
     description: "Learn to identify and defend against prompt injection attacks targeting AI models, protecting your systems and data.",
     image: "/ai-prompt-injection-defense.png",
