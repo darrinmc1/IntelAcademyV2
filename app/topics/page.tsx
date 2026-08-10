@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Risk Factor Indicators for Intel Analysts",
+    description: "This lesson explores key indicators that intelligence analysts use to identify and assess potential risks in various scenarios.",
+    image: "/risk-factor-indicators-for-intel-analysts.png",
+    href: "/topics/risk-factor-indicators-for-intel-analysts",
+    category: "Intelligence Analysis",
+    estimatedTime: "15 min",
+    completed: false,
+    learningObjectives: [
+      "Identify various types of risk factor indicators.",
+      "Understand the analytical process for evaluating risk indicators.",
+      "Recognize challenges in the detection and interpretation of risk indicators.",
+    ],
+  },
+  {
     title: "Strategic Intelligence Products: Bridging the Gap Between Information and Action",
     description: "Explore the critical role of strategic intelligence products in transforming raw information into actionable insights for decision-makers.",
     image: "/strategic-intelligence-products-bridging-the-gap-between-information-and-action.png",
