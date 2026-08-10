@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Examine historical intelligence failures, their causes, and lessons learned to improve future analysis.",
 }
 
-const topicContent = `"Examine historical intelligence failures, their causes, and lessons learned to improve future analysis.",
-
-In this mission, you'll examine spectacular intelligence failures throughout history, identify the common patterns that led to catastrophic mistakes, and learn how to avoid becoming the next case study in the "Hall of Shame."
+const topicContent = `In this mission, you'll examine spectacular intelligence failures throughout history, identify the common patterns that led to catastrophic mistakes, and learn how to avoid becoming the next case study in the "Hall of Shame."
 
 Welcome to the Intelligence Community's Hall of Shame, where we examine the most spectacular "we probably
 should have seen that coming" moments in history. These case studies aren't just fascinating examples of human
@@ -135,9 +133,6 @@ and impact of intelligence failures.
 
 Intelligence analysis is the art of being wrong with confidence, learning why you were wrong, and then being
 wrong about something completely different next time. Progress!
-
-)
-
 ## Lessons from Major Intelligence Failures
 
 Studying intelligence failures is one of the most effective ways to improve analytical tradecraft. Each failure reveals specific vulnerabilities in collection, analysis, or dissemination that analysts must guard against in their own work.
@@ -171,9 +166,7 @@ The Cuban Missile Crisis is often studied as an intelligence success, close-run,
 - **Detection Through Multiple Sources:** U-2 reconnaissance photography detected the missile sites, but the intelligence was cross-checked against HUMINT reporting from Cuban sources, SIGINT intercepts of Soviet communications, and defector debriefs. Multi-source correlation was key.
 - **Structured Analysis Under Pressure:** The EXCOMM deliberated under extreme time pressure but maintained structured analytical discipline - systematically evaluating the consequences of air strikes, blockade, diplomacy, and inaction before recommending a course.
 - **Red Team Thinking:** Attorney General Robert Kennedy explicitly played devil's advocate, challenging assumptions and forcing the team to test their conclusions against the worst-case scenario. This red team function prevented groupthink.
-- **Lessons for Modern Analysts:** Even under extreme time pressure, structured analytical techniques improve outcomes. The crisis also demonstrated the importance of having someone in the room whose explicit role is to challenge consensus.
-
-`
+- **Lessons for Modern Analysts:** Even under extreme time pressure, structured analytical techniques improve outcomes. The crisis also demonstrated the importance of having someone in the room whose explicit role is to challenge consensus.`
 
 export default function IntelligencefailuresPage() {
   return (

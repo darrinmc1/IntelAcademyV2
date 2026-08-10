@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to fuse information from HUMINT, SIGINT, OSINT, and other disciplines into coherent, reliable intelligence assessments.",
 }
 
-const topicContent = `"Learn how to fuse information from HUMINT, SIGINT, OSINT, and other disciplines into coherent, reliable intelligence assessments.",
-
-Single-source intelligence is like a single witness in a courtroom -- it can be valuable, but
+const topicContent = `Single-source intelligence is like a single witness in a courtroom -- it can be valuable, but
 it can also be wrong, incomplete, or deliberately misleading. Multi-source integration (also
 called "fusion") is the process of combining information from different intelligence
 disciplines to build a more complete, more reliable, and more defensible picture. This lesson
@@ -140,9 +138,6 @@ The lesson is not that single sources are useless. It is that **single-source
 assessments should be labeled as such**, with appropriate confidence levels, and
 should drive collection efforts to fill the gap rather than being treated as settled
 conclusions.
-
-)
-
 ## The Principle of Multi-Source Integration
 
 Multi-source integration is the core methodology of intelligence analysis - combining information from multiple collection disciplines to produce assessments that are more reliable than any single source could support. The whole is genuinely greater than the sum of its parts when sources are integrated effectively.
@@ -177,9 +172,7 @@ Experienced analysts develop specific techniques for integrating across sources:
 - **The All-Source Matrix:** A structured spreadsheet or database that captures information from each source in a common format. Each row represents an entity or event; columns represent what each source reports about it. This allows rapid comparison and gap identification.
 - **Temporal Sequencing:** Place all-source information on a common timeline, regardless of the collection discipline. Temporal sequencing often reveals patterns - a HUMINT report of a meeting followed by a SIGINT intercept of unusual communications - that individual source analysis would miss.
 - **Source Weighting:** Assign explicit confidence weights to each source and factor these into the overall assessment. A well-established source with a history of reliable reporting should carry more weight than a first-time source, even when both report the same information.
-- **Red Team Integration:** Before finalising an all-source assessment, have a colleague independently review the evidence and attempt to reach a different conclusion. This tests whether the integration process is sound or whether it reflects the original analyst's biases.
-
-`
+- **Red Team Integration:** Before finalising an all-source assessment, have a colleague independently review the evidence and attempt to reach a different conclusion. This tests whether the integration process is sound or whether it reflects the original analyst's biases.`
 
 export default function MultisourceintegrationPage() {
   return (

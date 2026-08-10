@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn the six core attributes of a high-quality intelligence report and how to apply the &#x27;would I act on this?&#x27; test.",
 }
 
-const topicContent = `"Learn the six core attributes of a high-quality intelligence report and how to apply the 'would I act on this?' test.",
-
-Every intelligence organization in the world produces reports. Most of them are technically competent.
+const topicContent = `Every intelligence organization in the world produces reports. Most of them are technically competent.
 Far fewer actually change decisions. The gap between a report that gets read and one that gets filed
 comes down to six measurable attributes: timeliness, relevance, accuracy, clarity, conciseness,
 and predictive value. Master these, and your analysis moves from the "maybe later" pile to the
@@ -152,9 +150,6 @@ measured in real-world outcomes.
 That is the stakes of this profession. Every time you sit down to write, you are not just
 completing a task -- you are building the bridge between what is known and what is decided.
 Make that bridge sturdy.
-
-)
-
 ## Defining a Good Intelligence Report
 
 A good intelligence report is not simply a well-written document. It is a document that meets the consumer's needs, informs a decision, and withstands scrutiny. These criteria are more demanding than standard writing quality and require specific analytical tradecraft:
@@ -190,9 +185,7 @@ Before publishing any intelligence report, analysts should apply systematic qual
 - **The Straw Man Test:** Have you presented the strongest version of alternative explanations, or have you set up weak alternatives that are easy to dismiss? A rigorous assessment engages seriously with competing interpretations.
 - **The Source Test:** Can you trace every factual claim to a specific source? Is the source reliable for this specific claim? Would you defend this source attribution to a sceptical reviewer?
 - **The Confidence Check:** Is your stated confidence level consistent with the evidence? Have you communicated what is uncertain as clearly as what is certain? Consumers should understand not just what you think but how sure you are.
-- **The Consumer Test:** Would the intended consumer understand this report without additional explanation? If not, revise for clarity before publication.
-
-`
+- **The Consumer Test:** Would the intended consumer understand this report without additional explanation? If not, revise for clarity before publication.`
 
 export default function GoodintelligencereportPage() {
   return (

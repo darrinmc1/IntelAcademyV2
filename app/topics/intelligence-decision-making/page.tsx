@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how intelligence supports effective decision-making processes across various domains and the critical role it plays in reducing uncertainty.",
 }
 
-const topicContent = `"Learn how intelligence supports effective decision-making processes across various domains and the critical role it plays in reducing uncertainty.",
-
-In this lesson, you'll discover:
+const topicContent = `In this lesson, you'll discover:
 
 - How intelligence reduces uncertainty in complex decisions
 - The continuous cycle between decisions and intelligence requirements
@@ -260,9 +258,7 @@ intelligence-decision relationship.
 
 Effective intelligence-based decision making is not simply about having more information - it's about
 having the right information, properly analyzed and clearly communicated, at the right time to support
-specific decisions.
-
-`
+specific decisions.`
 
 export default function IntelligencedecisionmakingPage() {
   return (

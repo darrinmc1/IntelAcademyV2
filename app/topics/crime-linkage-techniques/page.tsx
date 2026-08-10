@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Explore the fundamental methods used by intelligence analysts to link seemingly unrelated crimes by examining behavioral patterns and physical evidence, enhancing investigative efficiency.",
 }
 
-const topicContent = `"Explore the fundamental methods used by intelligence analysts to link seemingly unrelated crimes by examining behavioral patterns and physical evidence, enhancing investigative efficiency.",
-
-## Crime Linkage Techniques: Connecting Crimes Through Evidence
+const topicContent = `## Crime Linkage Techniques: Connecting Crimes Through Evidence
 
 In the realm of intelligence analysis, the ability to connect disparate criminal events is paramount. Crime linkage techniques are the analytical tools and methodologies employed to identify relationships between two or more crimes, often based on similarities in offender behavior or physical evidence. This process is crucial for identifying serial offenders, understanding criminal patterns, and allocating investigative resources more effectively.
 
@@ -76,8 +74,7 @@ It is important to acknowledge the challenges inherent in crime linkage. MOs can
 
 ### Conclusion
 
-Crime linkage techniques are indispensable tools for intelligence analysts. By meticulously examining behavioral patterns, physical evidence, and victim characteristics, analysts can unravel complex criminal networks, identify serial offenders, and provide crucial insights to support investigations. The effective application of these techniques requires a deep understanding of criminal behavior, meticulous attention to detail, and a commitment to objective analysis.
-`
+Crime linkage techniques are indispensable tools for intelligence analysts. By meticulously examining behavioral patterns, physical evidence, and victim characteristics, analysts can unravel complex criminal networks, identify serial offenders, and provide crucial insights to support investigations. The effective application of these techniques requires a deep understanding of criminal behavior, meticulous attention to detail, and a commitment to objective analysis.`
 
 export default function CrimeLinkageTechniquesPage() {
   return (

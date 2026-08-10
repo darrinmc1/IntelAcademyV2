@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 
 const topicContent = `← Back to Analyst's Notebook Learning Path
 
-# Analyst's Notebook Fundamentals
 
 Where intelligence analysts pretend to be CSI detectives with fancy software instead of sunglasses.
 
@@ -106,11 +105,6 @@ Creating Entity Relationship Charts (Connect ALL the Dots!)
 -
 
 Timeline Visualization (Time Is A Flat Circle, But Your Chart Shouldn't Be)
-
-{/* What's Next Section */}
-
-)
-
 ## What is Analyst's Notebook?
 
 IBM i2 Analyst's Notebook is the most widely used visual analysis tool in law enforcement, intelligence, and corporate security. It transforms complex relational data into visual charts that reveal patterns, networks, and connections that would be difficult or impossible to see in text-based formats.
@@ -137,9 +131,7 @@ Analyst's Notebook provides several analytical capabilities that distinguish it 
 - **Timeline Analysis:** Chart entities and events on a common timeline to reveal sequences, gaps, and temporal patterns. Timeline analysis is essential for understanding the chronology of complex investigations.
 - **Social Network Analysis:** Built-in SNA metrics (degree centrality, betweenness centrality, etc.) quantify the structural position of entities within a network. These metrics can identify key players, brokers, and peripheral actors.
 - **Entity Resolution:** Tools to identify and merge duplicate entities - when the same person appears under slightly different names or with different identifying information across multiple data sources.
-- **Chart Comparison:** Compare two versions of a chart to identify what has changed - new entities, new links, or relationships that have been modified or removed.
-
-`
+- **Chart Comparison:** Compare two versions of a chart to identify what has changed - new entities, new links, or relationships that have been modified or removed.`
 
 export default function AnalystsnotebookfundamentalsPage() {
   return (

@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Explore various methodologies used by intelligence analysts to effectively evaluate and prioritize potential threats, ensuring resources are allocated efficiently.",
 }
 
-const topicContent = `"Explore various methodologies used by intelligence analysts to effectively evaluate and prioritize potential threats, ensuring resources are allocated efficiently.",
-
-## Threat Assessment: Methodologies for Evaluating and Prioritizing Threats
+const topicContent = `## Threat Assessment: Methodologies for Evaluating and Prioritizing Threats
 
 In the dynamic world of intelligence, accurately assessing and prioritizing threats is paramount. A threat assessment is a systematic process of identifying potential threats, analyzing their likelihood and impact, and ranking them to inform decision-making and resource allocation. Without robust methodologies, analysts risk being overwhelmed by the sheer volume of information or focusing on low-priority issues while neglecting critical dangers.
 
@@ -80,8 +78,7 @@ The selection of a threat assessment methodology is not a one-size-fits-all deci
 
 Often, a hybrid approach combining elements of different methodologies yields the most comprehensive and robust threat assessments. For instance, a qualitative assessment might be used for initial screening, followed by a more quantitative or scenario-based analysis for high-priority threats.
 
-By understanding and applying these methodologies, intelligence analysts can move beyond simply identifying potential dangers to proactively and effectively managing risks, thereby safeguarding national security, organizational integrity, and individual safety.
-`
+By understanding and applying these methodologies, intelligence analysts can move beyond simply identifying potential dangers to proactively and effectively managing risks, thereby safeguarding national security, organizational integrity, and individual safety.`
 
 export default function ThreatAssessmentMethodologiesPage() {
   return (

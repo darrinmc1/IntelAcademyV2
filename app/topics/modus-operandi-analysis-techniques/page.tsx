@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Explore the core principles and practical techniques of Modus Operandi (MO) analysis, a critical skill for intelligence analysts in understanding and predicting criminal actions.",
 }
 
-const topicContent = `"Explore the core principles and practical techniques of Modus Operandi (MO) analysis, a critical skill for intelligence analysts in understanding and predicting criminal actions.",
-
-## Modus Operandi Analysis: Techniques for Identifying and Analyzing Criminal Methods and Behaviors
+const topicContent = `## Modus Operandi Analysis: Techniques for Identifying and Analyzing Criminal Methods and Behaviors
 
 In the realm of intelligence analysis, understanding the 'how' behind criminal activity is as crucial as understanding the 'who' or 'why.' Modus Operandi (MO) analysis provides a systematic framework for dissecting the methods, behaviors, and patterns employed by individuals or groups to commit crimes. This discipline is not merely about cataloging actions; it's about inferring intent, predicting future behavior, and ultimately, disrupting criminal enterprises. For intelligence analysts, mastering MO analysis is a cornerstone for effective threat assessment and operational planning.
 
@@ -60,8 +58,7 @@ MO analysis is not just an academic exercise; it has profound practical implicat
 
 Despite its utility, MO analysis is not without challenges. Offenders can deliberately alter their MO to evade detection, adopt the MO of others, or operate in ways that are not easily compartmentalized. Furthermore, incomplete or inaccurate data can lead to flawed conclusions. Analysts must remain critical, acknowledging the dynamic nature of criminal behavior and the potential for misinterpretation.
 
-In conclusion, Modus Operandi analysis is a vital analytical technique for intelligence professionals. By systematically identifying, documenting, and analyzing the characteristic methods and behaviors of offenders, analysts can gain crucial insights into criminal operations, enhance investigative efforts, and contribute significantly to national security.
-`
+In conclusion, Modus Operandi analysis is a vital analytical technique for intelligence professionals. By systematically identifying, documenting, and analyzing the characteristic methods and behaviors of offenders, analysts can gain crucial insights into criminal operations, enhance investigative efforts, and contribute significantly to national security.`
 
 export default function ModusOperandiAnalysisTechniquesPage() {
   return (

@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about real-time open source intelligence techniques and applications.",
 }
 
-const topicContent = `# Real-Time OSINT
-
-Real-time OSINT is what happens when regular OSINT puts on running shoes and chugs an energy drink. It's the
+const topicContent = `Real-time OSINT is what happens when regular OSINT puts on running shoes and chugs an energy drink. It's the
 high-speed, high-stress art of collecting and analyzing open source intelligence as events unfold - because
 waiting for tomorrow's news is so last century.
 
@@ -124,9 +122,7 @@ Real-time OSINT is only as valuable as its accuracy. Verification must be built 
 - **Cross-Validation:** Do not rely on a single real-time source. Confirm significant information through at least two independent sources before reporting it as fact.
 - **Geolocation:** Whenever possible, verify the location of reported events using geospatial data - check the reported location against maps, satellite imagery, and other geolocated content.
 - **Temporal Consistency:** Does the chronology of reported events make sense? Inconsistencies in timestamps, lighting conditions, weather, or other temporal markers can indicate fabricated or misattributed content.
-- **Open Source Forensics:** For visual content, examine metadata, reverse image search, and check for signs of manipulation. Deepfakes and AI-generated content are an increasing challenge for real-time OSINT verification.
-
-`
+- **Open Source Forensics:** For visual content, examine metadata, reverse image search, and check for signs of manipulation. Deepfakes and AI-generated content are an increasing challenge for real-time OSINT verification.`
 
 export default function RealtimeosintPage() {
   return (

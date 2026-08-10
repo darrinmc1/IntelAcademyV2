@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Explore the ethical considerations and dilemmas in intelligence work and how to navigate them responsibly.",
 }
 
-const topicContent = `"Explore the ethical considerations and dilemmas in intelligence work and how to navigate them responsibly.",
-
-In this mission, you'll learn how ethical guardrails keep intelligence operations from going off a cliff, explore the tension between security and liberty, and develop judgment that lets you make decisions you can defend both professionally and personally.
+const topicContent = `In this mission, you'll learn how ethical guardrails keep intelligence operations from going off a cliff, explore the tension between security and liberty, and develop judgment that lets you make decisions you can defend both professionally and personally.
 
 Welcome to intelligence ethics, where we explore the fascinating intersection of "what we can do" and "what we
 should do." It's like having a devil on one shoulder whispering "Think of all the intelligence you could
@@ -162,9 +160,6 @@ right matters.
 Remember: The goal of intelligence ethics is to ensure that when future historians write about your agency,
 they use phrases like "valuable contribution to national security" rather than "horrifying violation of
 basic human rights." Aim high!
-
-)
-
 ## The Ethical Framework for Intelligence
 
 Intelligence professionals operate in a uniquely challenging ethical environment. They are authorised to deceive, to collect information without the subject's knowledge or consent, and in some circumstances to influence events covertly. These authorities, necessary for effective intelligence work, create ethical obligations that distinguish intelligence from other information professions:
@@ -189,9 +184,7 @@ Analysts face distinctive ethical challenges in their daily work:
 - **Policy Advocacy vs. Objective Analysis:** The most persistent ethical challenge for intelligence analysts is maintaining analytical independence from policy preferences. Analysts who tailor their assessments to support a preferred policy outcome are not providing intelligence - they are providing advocacy. The ethical obligation is to report what the evidence shows, not what the consumer wants to hear.
 - **Cherry-Picking Evidence:** The inclination to select evidence that supports a preferred conclusion while discounting contradictory evidence is both a cognitive bias and an ethical failure. Analysts have an affirmative ethical obligation to seek out and fairly consider evidence that challenges their working hypotheses.
 - **Classification and Secrecy:** Analysts must navigate the tension between transparency (providing consumers with enough information to evaluate the assessment) and secrecy (protecting sources and methods). Using classification to hide analytical weaknesses - rather than to protect legitimate sources - is an ethical violation.
-- **Speaking Truth to Power:** Analysts have an ethical obligation to communicate their assessments clearly and honestly, even when the assessment is unwelcome or contradicts established policy. The intelligence professional's duty is to the facts, not to organisational or political convenience.
-
-`
+- **Speaking Truth to Power:** Analysts have an ethical obligation to communicate their assessments clearly and honestly, even when the assessment is unwelcome or contradicts established policy. The intelligence professional's duty is to the facts, not to organisational or political convenience.`
 
 export default function IntelligenceethicsPage() {
   return (

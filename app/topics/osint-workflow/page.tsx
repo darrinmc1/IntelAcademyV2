@@ -158,9 +158,6 @@ Essential Templates
 Develop your own OSINT workflow checklist based on your specific requirements and environment. Regularly
 review and update your processes based on lessons learned and new tools or techniques. A well-refined
 workflow is often the difference between amateur internet searching and professional intelligence gathering.
-
-)
-
 ## The OSINT Workflow
 
 Open Source Intelligence requires a structured workflow to manage the volume, variety, and velocity of publicly available information. Without a systematic approach, analysts quickly become overwhelmed by data and produce analysis that is reactive rather than purposeful:
@@ -212,9 +209,7 @@ OSINT products follow the same dissemination standards as classified intelligenc
 
 - **Source Transparency:** Unlike classified intelligence, which protects sources through classification markings, OSINT products can often cite sources directly. However, analyst should consider whether citing a source could endanger the source or reveal analytical methods.
 - **Timeliness:** OSINT products may have shorter shelf lives than classified products because the underlying open sources are updated continuously. Date and time stamps on OSINT products are essential for consumers to assess currency.
-- **Methodological Transparency:** OSINT consumers benefit from understanding how the information was collected and analysed. A brief methodological note - sources used, search terms, timeframe - helps consumers evaluate the product's reliability and relevance.
-
-`
+- **Methodological Transparency:** OSINT consumers benefit from understanding how the information was collected and analysed. A brief methodological note - sources used, search terms, timeframe - helps consumers evaluate the product's reliability and relevance.`
 
 export default function OsintworkflowPage() {
   return (

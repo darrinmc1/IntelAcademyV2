@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about intelligence products beyond the standard report -- briefings, target packages, threat assessments, and more.",
 }
 
-const topicContent = `"Learn about intelligence products beyond the standard report -- briefings, target packages, threat assessments, and more.",
-
-The standard intelligence report is the bread and butter of the IC, but it is far from
+const topicContent = `The standard intelligence report is the bread and butter of the IC, but it is far from
 the only tool in your toolbox. From the rapid-fire daily brief to the exhaustive
 intelligence estimate, each product type exists because decision-makers need different
 information in different formats at different speeds. This lesson covers the major
@@ -183,10 +181,7 @@ text message would do. Use this quick decision matrix:
 When you are unsure which product type to use, ask the consumer. A five-minute
 conversation about what they need and when they need it will save you days of work
 on the wrong product. The best analysts spend as much time understanding the question
-as they do answering it.
-
-)
-`
+as they do answering it.`
 
 export default function SpecializedintelligenceproductsPage() {
   return (

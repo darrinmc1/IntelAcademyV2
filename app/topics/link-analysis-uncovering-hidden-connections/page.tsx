@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn the fundamental techniques of link analysis to identify relationships and patterns within data, crucial for intelligence gathering and investigative work.",
 }
 
-const topicContent = `"Learn the fundamental techniques of link analysis to identify relationships and patterns within data, crucial for intelligence gathering and investigative work.",
-
-## Link Analysis: Uncovering Hidden Connections
+const topicContent = `## Link Analysis: Uncovering Hidden Connections
 
 In the realm of intelligence analysis, the ability to discern relationships and patterns within seemingly disparate pieces of information is paramount. Link analysis is a powerful methodology that enables analysts to visualize and understand these connections, transforming raw data into actionable intelligence. This lesson will delve into the core principles and practical applications of link analysis, equipping you with the skills to uncover hidden networks and influence operations.
 
@@ -85,8 +83,7 @@ Despite its power, link analysis presents challenges:
 
 ### Conclusion
 
-Link analysis is an essential skill for any intelligence professional. By systematically identifying and visualizing connections between entities, analysts can gain profound insights into complex situations, uncover hidden actors and relationships, and ultimately provide more effective intelligence support. Mastering the principles of link analysis empowers you to see the unseen and understand the intricate web of interactions that shape events.
-`
+Link analysis is an essential skill for any intelligence professional. By systematically identifying and visualizing connections between entities, analysts can gain profound insights into complex situations, uncover hidden actors and relationships, and ultimately provide more effective intelligence support. Mastering the principles of link analysis empowers you to see the unseen and understand the intricate web of interactions that shape events.`
 
 export default function LinkAnalysisUncoveringHiddenConnectionsPage() {
   return (

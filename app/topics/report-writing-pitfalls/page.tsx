@@ -136,9 +136,6 @@ decision-makers want to read, not reports they feel obligated to skim.
 
 The perfect intelligence report is like a unicorn: everyone has heard of it, but no one has actually seen
 one. But with these tips, you might just create a horse with a party hat - and sometimes, that's close enough.
-
-)
-
 ## Common Report Writing Mistakes
 
 Even experienced intelligence analysts fall into predictable writing traps. Recognising these pitfalls is the first step toward avoiding them:
@@ -174,9 +171,7 @@ Intelligence reports must communicate what is known, what is not known, and how 
 - **The Confidence Scale:** Use a standardised confidence scale consistently - for example, High Confidence (well-supported by multiple sources), Moderate Confidence (plausible but with gaps), and Low Confidence (speculative or single source). Define what each level means in the report's front matter.
 - **Source Limitations:** Be explicit about the limitations of your sources. A report based on a single source of unknown reliability should carry a lower confidence level than one based on multiple corroborated sources, regardless of how compelling the single source appears.
 - **Alternative Explanations:** Acknowledge alternative explanations for the observed phenomena, even if you ultimately reject them. This demonstrates analytical rigour and prevents consumers from discovering alternatives you failed to consider.
-- **What Would Change Your Assessment:** The most valuable thing an analyst can tell a consumer is what new information would change their assessment. This empowers the consumer to monitor the situation and understand when the analytical picture has fundamentally shifted.
-
-`
+- **What Would Change Your Assessment:** The most valuable thing an analyst can tell a consumer is what new information would change their assessment. This empowers the consumer to monitor the situation and understand when the analytical picture has fundamentally shifted.`
 
 export default function ReportwritingpitfallsPage() {
   return (

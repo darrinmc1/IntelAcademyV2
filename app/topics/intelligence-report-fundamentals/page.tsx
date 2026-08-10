@@ -8,38 +8,7 @@ export const metadata: Metadata = {
   description: "Learn the core principles of effective intelligence reporting",
 }
 
-const topicContent = `Breadcrumb,
-BreadcrumbItem,
-BreadcrumbLink,
-BreadcrumbList,
-BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Card, CardContent } from "@/components/ui/card"
-import { StaticImage } from "@/components/static-image"
-import { WhatsNext } from "@/components/whats-next"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-
-export const metadata: Metadata = {
-title: "Intelligence Report Fundamentals | The Intel Analyst Academy",
-description: "Learn the core principles of effective intelligence reporting",
-
-Home
-
-Topics
-
-Report Writing
-
-Intelligence Report Fundamentals
-
-Back to Report Writing
-
-# Intelligence Report Fundamentals
-
-20 min read
-
-Core Topic
-
-## Introduction
+const topicContent = `## Introduction
 
 Intelligence reports are the primary means by which analysts communicate their findings to
 decision-makers. Mastering the fundamentals of report writing is essential for any intelligence
@@ -1066,31 +1035,7 @@ judgments
 -
 
 Remember that the purpose of intelligence reporting is to inform decisions, not to showcase your
-research
-
-### In This Topic
-
--
-[
-Structure and Organization
-](#)
-
--
-[
-Precision Language
-](#)
-
--
-[
-Sourcing and Attribution
-](#)
-
--
-[
-Scope Control
-](#)
-
-`
+research`
 
 export default function IntelligencereportfundamentalsPage() {
   return (

@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Understand the critical differences between raw information and processed intelligence, and how analysts transform data into actionable insights.",
 }
 
-const topicContent = `"Understand the critical differences between raw information and processed intelligence, and how analysts transform data into actionable insights.",
-
-In this lesson, you'll learn:
+const topicContent = `In this lesson, you'll learn:
 
 - The fundamental definitions and distinctions between information and intelligence
 - The value-adding process that transforms data into insights
@@ -239,10 +237,7 @@ Ensure intelligence products include specific, actionable recommendations that d
 needs of decision-makers.
 
 The analytical process that transforms raw information into intelligence is where value is created.
-Your job is to be the filter, the analyzer, the interpreter - turning noise into signal.
-
-)
-`
+Your job is to be the filter, the analyzer, the interpreter - turning noise into signal.`
 
 export default function IntelligencevsinformationPage() {
   return (

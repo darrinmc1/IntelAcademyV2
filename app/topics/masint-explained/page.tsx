@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about masint explained in intelligence analysis.",
 }
 
-const topicContent = `# MASINT Explained
-
-## What is MASINT?
+const topicContent = `## What is MASINT?
 
 "It's like being a scientific detective, but your evidence comes from really expensive machines that beep
 mysteriously."
@@ -102,9 +100,7 @@ MASINT presents unique challenges that distinguish it from other intelligence di
 - **Data Volume:** MASINT sensors generate enormous quantities of data. Processing and storing this data requires significant computational infrastructure and specialised software.
 - **Signature Libraries:** Interpreting MASINT data requires extensive libraries of known signatures - the acoustic profile of a particular helicopter model, the infrared signature of a specific missile type. Building and maintaining these libraries is resource-intensive.
 - **Environmental Interference:** Weather, terrain, and atmospheric conditions can degrade sensor performance. Cloud cover blocks optical sensors, thermal gradients distort acoustic signals, and electromagnetic interference affects radar.
-- **Analyst Expertise:** MASINT analysts require deep scientific and engineering knowledge. The shortage of qualified personnel is a persistent constraint on MASINT capabilities across nearly all intelligence services.
-
-`
+- **Analyst Expertise:** MASINT analysts require deep scientific and engineering knowledge. The shortage of qualified personnel is a persistent constraint on MASINT capabilities across nearly all intelligence services.`
 
 export default function MasintexplainedPage() {
   return (

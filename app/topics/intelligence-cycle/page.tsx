@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 
 const topicContent = `You'll learn the five phases of the intelligence cycle, understand how each phase feeds into the next, and discover why this systematic approach prevents analysts from just winging it.
 
-{/* Overview Section */}
 
 ## The Five Phases
 
@@ -25,7 +24,6 @@ const topicContent = `You'll learn the five phases of the intelligence cycle, un
 
 The intelligence cycle is a continuous, systematic process that transforms raw information into actionable intelligence. Each phase builds on the previous one, creating a feedback loop that improves intelligence quality over time.
 
-{/* Phase 1: Direction */}
 
 ### Phase 1: Direction
 
@@ -45,7 +43,6 @@ Establish timelines and quality standards
 
 This is where someone in a suit says "find out everything about X" and walks away. Your job is to figure out what "everything" actually means.
 
-{/* Phase 2: Collection */}
 
 ### Phase 2: Collection
 
@@ -65,7 +62,6 @@ Geospatial intelligence
 
 Don't try to collect everything. Intelligence requirements should focus collection efforts on what's actually needed. Unfocused collection creates noise that buries signal.
 
-{/* Phase 3: Processing */}
 
 ### Phase 3: Processing
 
@@ -87,7 +83,6 @@ Database entry and indexing
 
 Quality control and validation
 
-{/* Phase 4: Analysis */}
 
 ### Phase 4: Analysis
 
@@ -97,7 +92,6 @@ Good analysis connects dots, identifies gaps, distinguishes between facts and as
 
 This is the part where you stare at data until it confesses. Sometimes it cooperates. Sometimes it lawyers up.
 
-{/* Phase 5: Dissemination */}
 
 ### Phase 5: Dissemination
 
@@ -105,7 +99,6 @@ Intelligence is only valuable if it reaches decision-makers. Dissemination is ab
 
 Tailor your output to your audience. A general officer needs different information presented differently than a tactical unit commander. Know your consumer and deliver accordingly.
 
-{/* Deep Dive: Why It's a Cycle */}
 
 The intelligence cycle isn't called a cycle for nothing. After dissemination, feedback loops back to direction. Decision-makers consuming your intelligence might have new questions. Collectors might discover gaps. Analysis might reveal new requirements.
 
@@ -129,7 +122,6 @@ Assumptions are continuously tested and refined
 
 The worst intelligence work treats the cycle as a line: "I analyzed this, now I'm done." Great intelligence work embraces the cycle: "This is what I know now. Here's what I don't know. Here's what might change my assessment."
 
-{/* Field Exercise */}
 
 Your boss says: "I need to know if Company X is planning to expand into our market."
 
@@ -153,9 +145,6 @@ Analysis: Assess capital availability, strategic fit, management intent, competi
 
 Dissemination: Present findings in a briefing with your assessment and confidence levels. Identify gaps that need more collection.
 
-{/* Debrief */}
-
-{/* Next Lesson */}
 
 ## The Intelligence Cycle Framework
 
@@ -216,9 +205,7 @@ Feedback closes the intelligence cycle and drives continuous improvement:
 
 - **Consumer Feedback:** Did the intelligence meet the consumer's needs? Was it timely? Was it relevant? Was it actionable? Direct consumer feedback is the most valuable input for improving intelligence production.
 - **Analytical Accountability:** Were the assessments accurate? What was missed? What would the analyst do differently? Systematic review of past assessments - including assessments that were right and those that were wrong - improves analytical tradecraft.
-- **Process Improvement:** Feedback should lead to changes in requirements, collection strategies, analytical methods, and production formats. An intelligence organisation that does not learn from feedback is an organisation that repeats its mistakes.
-
-`
+- **Process Improvement:** Feedback should lead to changes in requirements, collection strategies, analytical methods, and production formats. An intelligence organisation that does not learn from feedback is an organisation that repeats its mistakes.`
 
 export default function IntelligencecyclePage() {
   return (

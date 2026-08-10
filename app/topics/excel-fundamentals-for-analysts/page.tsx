@@ -8,11 +8,8 @@ export const metadata: Metadata = {
   description: "Master essential Excel functions and features specifically relevant to intelligence analysis workflows.",
 }
 
-const topicContent = `"Master essential Excel functions and features specifically relevant to intelligence analysis workflows.",
+const topicContent = `← Back to Excel for Analysts Learning Path
 
-← Back to Excel for Analysts Learning Path
-
-# Excel Fundamentals for Analysts
 
 Master the spreadsheet software that's simultaneously the most loved and hated tool in intelligence analysis.
 
@@ -97,9 +94,6 @@ Pivot Tables: Excel's Answer to "But What Does It All Mean?"
 -
 
 Data Visualization: Making Pretty Pictures That Actually Mean Something
-
-)
-
 ## Excel as an Analytical Tool
 
 Microsoft Excel is one of the most versatile tools available to intelligence analysts. While specialised analytical platforms have their place, Excel's accessibility, flexibility, and breadth of functionality make it indispensable for data preparation, preliminary analysis, and rapid reporting.
@@ -125,9 +119,7 @@ Real-world data is almost never analysis-ready. Analysts typically spend 60-80% 
 1. **Remove Duplicates:** Use Excel's Remove Duplicates feature to identify and eliminate redundant records. For more nuanced deconfliction, use COUNTIF or UNIQUE functions to flag potential matches for manual review.
 2. **Standardise Formats:** Ensure consistent date formats (use ISO 8601: YYYY-MM-DD), number formats (remove currency symbols for computational analysis), and text casing across all datasets.
 3. **Handle Missing Data:** Decide how to treat blank cells - exclude the record, flag for follow-up, or impute based on other available data. Document the decision so analytical conclusions are reproducible.
-4. **Validate Against Source:** Spot-check cleaned data against the original source to ensure the cleaning process didn't introduce errors. This is especially important when data has been manipulated through multiple formulas and transformations.
-
-`
+4. **Validate Against Source:** Spot-check cleaned data against the original source to ensure the cleaning process didn't introduce errors. This is especially important when data has been manipulated through multiple formulas and transformations.`
 
 export default function ExcelfundamentalsforanalystsPage() {
   return (

@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Master the art of writing tight, actionable executive summaries using BLUF, the five-paragraph formula, and ruthless editing.",
 }
 
-const topicContent = `"Master the art of writing tight, actionable executive summaries using BLUF, the five-paragraph formula, and ruthless editing.",
-
-The executive summary is the most valuable real estate in any intelligence product.
+const topicContent = `The executive summary is the most valuable real estate in any intelligence product.
 It is also the most mistreated. Analysts treat it as a afterthought - a quick
 condensation slapped onto the front of a finished report. In reality, it is the only
 part most decision-makers will ever read. This lesson will teach you how to write
@@ -18,7 +16,6 @@ executive summaries that deliver the bottom line at the top, follow a battle-tes
 five-paragraph structure, survive the red pen of ruthless editing, and pass the
 one-page test every time.
 
-{/* ---- Section 1: Bottom Line at the Top ---- */}
 
 There is a reason the U.S. military codified the BLUF (Bottom Line Up Front) principle
 decades ago: it works. Decision-makers do not have the time or inclination to read your
@@ -68,7 +65,6 @@ Write your key judgment on a sticky note before you write the summary. If the st
 note does not fit on a real sticky note, your judgment is not sharp enough. Trim
 until it fits.
 
-{/* ---- Section 2: The Five-Paragraph Formula ---- */}
 
 Every intelligence executive summary should follow a variation of the SMEAC
 (Situation, Mission, Execution, Administration/Logistics, Command/Signal) format
@@ -114,7 +110,6 @@ reason it has survived: because anything that is five paragraphs long can be rea
 under two minutes, and anything that takes longer than two minutes to read will not
 be read.
 
-{/* ---- Section 3: Killing Your Darlings ---- */}
 
 Every analyst has a beloved paragraph they fought hard to write. Maybe it contains a
 particularly elegant turn of phrase. Maybe it connects two disparate data points in
@@ -163,7 +158,6 @@ Read your executive summary out loud. Every time you hear a word that feels
 unnecessary, strike it. Then read it again. After three passes, compare the
 original to the final version. The difference will shock you.
 
-{/* ---- Section 4: The One-Page Test ---- */}
 
 There is a simple rule in intelligence writing: if your executive summary is longer
 than one page, it is not an executive summary. It is an abstract, a précis, or a
@@ -215,10 +209,7 @@ process."
 **Challenge:** Rewrite this to pass the one-page test. Apply BLUF by
 inventing a concrete key judgment. Structure the result into the five-paragraph SMEAC
 format. Strike every word that does not carry analytical weight. When you are done,
-the original should look like a rough draft - because it is.
-
-)
-`
+the original should look like a rough draft - because it is.`
 
 export default function ExecutivesummariesPage() {
   return (

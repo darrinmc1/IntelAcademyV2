@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "An introduction to the various types of strategic intelligence products used in analysis and decision-making.",
 }
 
-const topicContent = `"An introduction to the various types of strategic intelligence products used in analysis and decision-making.",
-
-## Understanding Strategic Intelligence Products
+const topicContent = `## Understanding Strategic Intelligence Products
 
 In the realm of intelligence, the ultimate goal is to inform decision-making, particularly at the highest levels of government and military. This is achieved through the creation and dissemination of intelligence products. While tactical and operational intelligence focus on immediate and mid-term threats and opportunities, strategic intelligence products look further ahead, addressing the long-term trends, capabilities, intentions, and potential future scenarios that can impact national security and interests. These products are crucial for policymakers, military planners, and senior leaders to understand the broader geopolitical landscape and make informed, forward-looking decisions.
 
@@ -48,8 +46,7 @@ Creating strategic intelligence products is a complex, multi-stage process. It b
 
 ### Conclusion
 
-Strategic intelligence products are indispensable tools for navigating the complexities of the global landscape and preparing for the future. By providing foresight, context, and deep analytical insight, they empower leaders to make informed, strategic decisions that safeguard national interests and promote long-term security. Understanding the purpose, characteristics, and types of these products is fundamental for anyone involved in the intelligence enterprise or in high-level policy development.
-`
+Strategic intelligence products are indispensable tools for navigating the complexities of the global landscape and preparing for the future. By providing foresight, context, and deep analytical insight, they empower leaders to make informed, strategic decisions that safeguard national interests and promote long-term security. Understanding the purpose, characteristics, and types of these products is fundamental for anyone involved in the intelligence enterprise or in high-level policy development.`
 
 export default function StrategicIntelligenceProductsOverviewPage() {
   return (

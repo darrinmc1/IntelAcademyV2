@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "An overview of the various types of strategic intelligence products used in analysis and decision-making.",
 }
 
-const topicContent = `"An overview of the various types of strategic intelligence products used in analysis and decision-making.",
-
-## Strategic Intelligence Products
+const topicContent = `## Strategic Intelligence Products
 
 In the realm of intelligence analysis, the ultimate goal is to provide actionable insights that inform decision-making. These insights are typically packaged into what are known as intelligence products. While tactical and operational intelligence products focus on immediate threats and battlefield conditions, strategic intelligence products are designed to inform long-term planning, policy formulation, and the understanding of complex, enduring issues. They bridge the gap between raw information and high-level strategic thinking.
 
@@ -51,8 +49,7 @@ Regardless of their specific format, effective strategic intelligence products s
 *   **Actionability:** While not dictating policy, the insights provided should be relevant and useful for informing decisions.
 *   **Acknowledgement of Uncertainty:** Strategic environments are inherently uncertain. Effective products clearly articulate the range of possibilities, assumptions made, and potential risks.
 
-In conclusion, strategic intelligence products are vital tools for navigating the complexities of the global landscape. They empower leaders with the foresight and understanding necessary to make informed decisions that shape the future.
-`
+In conclusion, strategic intelligence products are vital tools for navigating the complexities of the global landscape. They empower leaders with the foresight and understanding necessary to make informed decisions that shape the future.`
 
 export default function StrategicIntelligenceProductsPage() {
   return (

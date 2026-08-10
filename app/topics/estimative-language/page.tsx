@@ -8,15 +8,12 @@ export const metadata: Metadata = {
   description: "Master the use of estimative language to convey probability and confidence in intelligence assessments, including the Kent scale and common pitfalls.",
 }
 
-const topicContent = `"Master the use of estimative language to convey probability and confidence in intelligence assessments, including the Kent scale and common pitfalls.",
-
-Intelligence analysts almost never deal in certainty. The future is murky, sources are
+const topicContent = `Intelligence analysts almost never deal in certainty. The future is murky, sources are
 incomplete, and the adversary is not cooperating with your timeline. Estimative language
 is the disciplined system analysts use to communicate how likely something is and how
 confident they are in that judgment. Get it right, and you empower decision-makers. Get
 it wrong, and you could launch a crisis -- or miss one entirely.
 
-{/* ---- Section 1: The Kent Scale and Its History ---- */}
 
 The modern framework for estimative language traces back to **Sherman Kent**,
 the father of modern intelligence analysis. In the 1960s, Kent noticed that when CIA
@@ -68,7 +65,6 @@ When your report will be read across agencies or by coalition partners, include 
 brief footnote defining your probability terms. Two sentences can prevent a
 misunderstanding that leads to very expensive decisions.
 
-{/* ---- Section 2: Confidence vs Probability ---- */}
 
 One of the most misunderstood distinctions in intelligence writing is the difference
 between **probability** and **confidence**. They answer
@@ -111,7 +107,6 @@ Confusing confidence and probability is like confusing "I'm pretty sure I locked
 door" with "the door is probably locked." One is about your memory; the other is
 about the door. Both matter, but they are not the same thing.
 
-{/* ---- Section 3: Common Misuses ---- */}
 
 Even analysts who know the scale make mistakes in application. Here are the most
 frequent offenders:
@@ -156,7 +151,6 @@ instance of likely, unlikely, possible, probable, and may. For each one, verify:
 (1) it maps to a specific probability range, (2) it is consistent with other uses in
 the same report, and (3) it includes a timeframe.
 
-{/* ---- Section 4: Before and After Examples ---- */}
 
 Let us put it all together with full before-and-after examples drawn from common
 intelligence writing scenarios.
@@ -191,10 +185,7 @@ confidence level, a timeframe, and the supporting evidence**. This is the gold
 standard for estimative writing.
 
 The before version of Example 1 is the analytical equivalent of a fortune cookie.
-Technically true, but nobody is going to scramble fighter jets over it.
-
-)
-`
+Technically true, but nobody is going to scramble fighter jets over it.`
 
 export default function EstimativelanguagePage() {
   return (

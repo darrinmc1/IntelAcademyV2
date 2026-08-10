@@ -23,7 +23,6 @@ recognition is a superpower, but it is also a trap.
 By the end, you will understand why the third burglary in a neighborhood is not just
 three burglaries. It is a series. And a series is a problem you can solve.
 
-{/* ---- Section 1: MO vs. Signature ---- */}
 
 If there is one concept that separates competent crime series analysts from great ones,
 it is the ability to distinguish between modus operandi (MO) and signature. These terms
@@ -86,7 +85,6 @@ MO is what the offender does. Signature is why the offender does it. If the MO i
 
 When building a crime series case file, track MO and signature **separately**. Create two columns: one for "what they did to commit the crime" and one for "what they did that was unnecessary but consistent." The second column is where the real linkages live.
 
-{/* ---- Section 2: Linkage Analysis Methods ---- */}
 
 Linking crimes to a common offender is the central task of crime series analysis.
 No single method is sufficient - the best analysts use a multi-faceted approach,
@@ -151,7 +149,6 @@ Geographic profiling is essentially saying "your crimes form a circle, and you l
 
 Build your linkage case incrementally. Start with one strong indicator (e.g., matching signature element), then layer on additional methods. An investigative threshold might be reached with behavioral evidence alone, but a prosecutorial threshold requires at least two independent linkage methods - ideally including physical evidence.
 
-{/* ---- Section 3: Operational Correlation ---- */}
 
 Identifying a crime series is only half the battle. The other half is operational:
 coordinating the investigative response, sharing information across jurisdictions,
@@ -200,7 +197,6 @@ sharing and coordinated action.
 
 Multi-jurisdictional task forces were invented because criminals figured out that a police officer chasing a suspect across a county line would stop and shrug. The task force was the answer. The meetings, however, are still longer than they need to be.
 
-{/* ---- Section 4: Challenges and Pitfalls ---- */}
 
 Crime series analysis is high-stakes work. Linking crimes correctly solves cases and
 prevents future offenses. Linking them incorrectly - or failing to link them at all -
@@ -263,10 +259,7 @@ investigators suspect they are linked. Here is what you know:
 - Would you link these into a series? If yes, at what confidence level? If no, why not?
 - What additional information would you request to strengthen or weaken the linkage hypothesis?
 
-Bonus: Assume Burglary 1 and 2 occurred in the same precinct but Burglary 3 is in a neighboring jurisdiction. How does this affect your analysis?
-
-)
-`
+Bonus: Assume Burglary 1 and 2 occurred in the same precinct but Burglary 3 is in a neighboring jurisdiction. How does this affect your analysis?`
 
 export default function CrimeseriesanalysisPage() {
   return (

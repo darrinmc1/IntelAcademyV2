@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Master the systematic approach to gathering intelligence, from defining requirements to evaluating collection efforts.",
 }
 
-const topicContent = `"Master the systematic approach to gathering intelligence, from defining requirements to evaluating collection efforts.",
-
-## The Collection Planning Process: A Foundation for Effective Intelligence
+const topicContent = `## The Collection Planning Process: A Foundation for Effective Intelligence
 
 In the realm of intelligence analysis, the quality of actionable insights is directly proportional to the quality of the raw information collected. The Collection Planning Process is the systematic, disciplined approach that underpins effective intelligence gathering. It's not simply about acquiring data; it's about acquiring the *right* data, at the *right* time, to answer specific intelligence questions. This process ensures that limited resources are utilized efficiently and that the intelligence produced is relevant, timely, and accurate.
 
@@ -59,8 +57,7 @@ While not strictly part of *planning* collection, the subsequent processing, exp
 
 ### Conclusion
 
-The Collection Planning Process is a cyclical and iterative endeavor. It demands rigorous analysis, strategic thinking, and constant adaptation. By systematically defining requirements, developing sound strategies, meticulously planning and tasking assets, and continuously monitoring and evaluating efforts, intelligence analysts can ensure that their collection activities yield the high-quality information necessary to support critical decision-making and provide a decisive advantage.
-`
+The Collection Planning Process is a cyclical and iterative endeavor. It demands rigorous analysis, strategic thinking, and constant adaptation. By systematically defining requirements, developing sound strategies, meticulously planning and tasking assets, and continuously monitoring and evaluating efforts, intelligence analysts can ensure that their collection activities yield the high-quality information necessary to support critical decision-making and provide a decisive advantage.`
 
 export default function CollectionPlanningProcessForIntelAnalystsPage() {
   return (

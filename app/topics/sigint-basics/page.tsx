@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Master the fundamentals of SIGINT - COMINT, ELINT, FISINT, collection methods, cryptanalysis, and the historical triumphs and fiascos that shaped the discipline.",
 }
 
-const topicContent = `"Master the fundamentals of SIGINT - COMINT, ELINT, FISINT, collection methods, cryptanalysis, and the historical triumphs and fiascos that shaped the discipline.",
-
-Signals Intelligence - SIGINT - is the discipline of collecting and analysing
+const topicContent = `Signals Intelligence - SIGINT - is the discipline of collecting and analysing
 electronic signals to produce actionable intelligence. It is the largest technical
 collection discipline in the intelligence community, responsible for the majority of
 raw intelligence volume in most Western agencies. From the crackle of a shortwave
@@ -29,7 +27,6 @@ technically brilliant and socially ambidextrous only with machines. If you find
 yourself explaining frequency-hopping spread spectrum at a cocktail party, you may
 already be one of us.
 
-{/* ---- Section 1: COMINT, ELINT, FISINT ---- */}
 
 SIGINT is not a monolith. It breaks down into three primary sub-disciplines, each
 targeting a different flavour of electromagnetic emission. Knowing which one you are
@@ -95,7 +92,6 @@ At a Glance: The Three SIGINT Pillars
 - **ELINT** - Non-communication emitters (radar, beacons). Legal constraints: moderate.
 - **FISINT** - Weapons & instrumentation telemetry. Legal constraints: depends on the platform.
 
-{/* ---- Section 2: How Signals Are Actually Collected ---- */}
 
 There is a persistent myth that SIGINT is a matter of pointing a big antenna at the
 sky and "recording everything." In reality, signal collection is a
@@ -145,7 +141,6 @@ that environment?" "What countermeasures is the target using?" If
 you cannot answer all three, you are guessing - and guessing in SIGINT gets people
 killed.
 
-{/* ---- Section 3: Crypto Wars ---- */}
 
 SIGINT without cryptanalysis is just eavesdropping on conversations the target is
 happy for you to hear. The moment a target encrypts their communications - and
@@ -198,7 +193,6 @@ let you break it. The most sophisticated counterintelligence operation in SIGINT
 history involved feeding an adversary encrypted traffic with a deliberate weakness
 - and watching them build intelligence on the lies they swallowed.
 
-{/* ---- Section 4: Historical SIGINT Triumphs and Fiascos ---- */}
 
 Some of the greatest victories - and most devastating failures - in intelligence
 history are SIGINT stories. They teach us what the discipline can achieve when it
@@ -258,7 +252,6 @@ Study the histories. Midway teaches you tradecraft. Venona teaches you patience.
 Room 641A teaches you that no collection is worth the loss of your agency's
 credibility. Every SIGINT professional should know all three stories cold.
 
-{/* ---- Field Exercise ---- */}
 
 You are a SIGINT analyst assigned to a Joint Intelligence Centre. A friendly
 signals unit has provided you with a log of unusual radio emissions detected on an
@@ -274,10 +267,7 @@ short intelligence note (no more than 200 words) that:
 
 Hint: Start by separating communications signals from non-communications signals.
 The radar emissions are ELINT; the encrypted voice channels are COMINT. A missile
-telemetry burst would be FISINT - but do you have the platform to catch it?
-
-)
-`
+telemetry burst would be FISINT - but do you have the platform to catch it?`
 
 export default function SigintbasicsPage() {
   return (

@@ -10,14 +10,10 @@ export const metadata: Metadata = {
 
 const topicContent = `const DataVisualizationIntelligencePage: React.FC = () => {
 
-{/* Header */}
-
-# Data Visualization in Intelligence Analysis
 
 Master the art of visualizing complex intelligence data through interactive D3.js visualizations. Learn how
 different chart types can reveal patterns, relationships, and insights in intelligence workflows.
 
-{/* Learning Objectives */}
 
 ## Learning Objectives
 
@@ -57,9 +53,6 @@ Visual storytelling for intelligence briefings
 •
 Critical thinking through visual analysis
 
-{/* Interactive Visualizations */}
-
-{/* Sankey Diagram Section */}
 
 ## 1. Data Flow Visualization with Sankey Diagrams
 
@@ -77,9 +70,7 @@ processing volumes, and transformation pathways.
 -
 • **Path Analysis:** Trace how raw data becomes actionable intelligence
 
-{/* Hierarchy Chart Section */}
 
-##
 2. Organizational Structure with Hierarchy Charts
 
 ### Key Concepts
@@ -96,7 +87,6 @@ within intelligence organizations.
 -
 • **Role Relationships:** Understanding organizational dynamics
 
-{/* Process Flow Section */}
 
 ## 3. Process Flow Visualization
 
@@ -114,7 +104,6 @@ measures.
 -
 • **Animation:** Understanding temporal aspects of processes
 
-{/* Network Analysis Section */}
 
 ## 4. Network Analysis for Intelligence
 
@@ -132,7 +121,6 @@ relationships and identify key players.
 -
 • **Entity Types:** Color coding for different categories
 
-{/* Best Practices */}
 
 ## Best Practices for Intelligence Data Visualization
 
@@ -165,7 +153,6 @@ Use anonymized or synthetic data for training and demonstration purposes.
 
 Implement appropriate access controls for interactive visualizations containing sensitive data.
 
-{/* Tools and Technologies */}
 
 ## Tools and Technologies
 
@@ -195,33 +182,24 @@ Open-source network analysis and visualization software.
 - • Layout algorithms
 - • Statistical metrics
 
-{/* Next Steps */}
 
 ## Next Steps
 
 Ready to apply these visualization techniques to real intelligence scenarios?
-
-[
 #### Analytical Techniques
 Learn structured analytical methods that complement visualization
 ](/learning-paths/analytical-techniques)
-[
 #### Data Collection Planning
 
 Understand how to plan data collection for effective visualization
 
 ](/learning-paths/data-collection-planning)
-[
 #### More Visualizations
 
 Explore additional interactive intelligence workflow visualizations
 
 ](/visualizations/intelligence-workflows)
-
-)
-
-export default DataVisualizationIntelligencePage
-`
+export default DataVisualizationIntelligencePage`
 
 export default function DatavisualizationintelligencePage() {
   return (

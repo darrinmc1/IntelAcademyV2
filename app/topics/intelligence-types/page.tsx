@@ -8,28 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about intelligence types in intelligence analysis.",
 }
 
-const topicContent = `Breadcrumb,
-BreadcrumbItem,
-BreadcrumbLink,
-BreadcrumbList,
-BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-
-Home
-
-Learning Paths
-
-Foundations of Intelligence
-
-Types of Intelligence
-
-Back to Foundations of Intelligence
-
-# Types of Intelligence
-
-Intelligence is collected from various sources using different methods - think of it as having multiple
+const topicContent = `Intelligence is collected from various sources using different methods - think of it as having multiple
 spies in your entourage, each with their own special talents. These collection disciplines, often referred
 to by their acronyms (because intelligence folks LOVE their alphabet soup), each have unique
 characteristics, strengths, and limitations.
@@ -39,13 +18,6 @@ provides a different perspective. It's like the parable of the blind men and the
 case, we're trying to piece together what the elephant had for breakfast, where it's going, and whether it
 poses a national security threat.
 
-HUMINT
-OSINT
-SIGINT
-GEOINT
-MASINT
-FININT
-TECHINT
 
 ## HUMINT (Human Intelligence)
 
@@ -365,12 +337,8 @@ their text messages, security camera footage, and bank statements.
 Understanding these types helps intelligence professionals select the right collection methods and
 analytical approaches
 
-Back to Learning Path
 
-Next Topic: HUMINT (Human Intelligence) Basics
-
-)
-`
+Next Topic: HUMINT (Human Intelligence) Basics`
 
 export default function IntelligencetypesPage() {
   return (

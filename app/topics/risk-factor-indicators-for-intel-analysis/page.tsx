@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "This lesson explores key indicators that analysts use to identify and assess potential risks in intelligence operations and geopolitical landscapes.",
 }
 
-const topicContent = `"This lesson explores key indicators that analysts use to identify and assess potential risks in intelligence operations and geopolitical landscapes.",
-
-## Understanding Risk Factor Indicators in Intelligence Analysis
+const topicContent = `## Understanding Risk Factor Indicators in Intelligence Analysis
 
 In the dynamic world of intelligence analysis, identifying and understanding potential risks is paramount. Risk factor indicators are the observable signals, patterns, or anomalies that suggest an increased likelihood of a specific negative event or outcome. These indicators are not definitive proof of future events, but rather serve as early warnings that warrant further investigation and analysis. For intelligence analysts, mastering the identification and interpretation of these indicators is crucial for providing timely and actionable insights to decision-makers.
 
@@ -60,8 +58,7 @@ Analyzing risk factor indicators is not without its challenges:
 *   **False Positives and Negatives:** Indicators can be misinterpreted, leading to false alarms (false positives) or missed threats (false negatives).
 *   **Dynamic Environments:** The threat landscape is constantly evolving, requiring analysts to continuously adapt their methods and stay abreast of new threats and indicators.
 
-Despite these challenges, the systematic identification and analysis of risk factor indicators remain a cornerstone of effective intelligence analysis. By developing a keen eye for subtle changes and understanding the complex interplay of factors that contribute to risk, analysts can provide invaluable foresight and support informed decision-making in an increasingly complex world.
-`
+Despite these challenges, the systematic identification and analysis of risk factor indicators remain a cornerstone of effective intelligence analysis. By developing a keen eye for subtle changes and understanding the complex interplay of factors that contribute to risk, analysts can provide invaluable foresight and support informed decision-making in an increasingly complex world.`
 
 export default function RiskFactorIndicatorsForIntelAnalysisPage() {
   return (

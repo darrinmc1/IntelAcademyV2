@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 
 const topicContent = `You'll learn core OSINT techniques including search engine operators, social media intelligence, public records research, and how to verify what you find. These skills form the foundation of modern intelligence gathering.
 
-{/* What is OSINT */}
 
 ## What is OSINT?
 
@@ -22,41 +21,34 @@ OSINT is legal when conducted properly, ethical, and incredibly powerful. It's t
 
 OSINT analysts are basically professional Googlers. But don't let the simplicity fool you - there's a reason "Google it" isn't an intelligence methodology.
 
-{/* Core Techniques */}
 
 ## Core OSINT Techniques
 
-{/* Search Engine Operators */}
 
 ### Search Engine Operators
 
 Advanced search syntax to refine and target your queries. Google dorking, Bing, specialized search engines.
 
-{/* Social Media Intelligence */}
 
 ### Social Media Intelligence
 
 Mining profiles, metadata, connections, and behavior patterns across LinkedIn, Twitter, Facebook, Instagram, and niche platforms.
 
-{/* Public Records */}
 
 ### Public Records
 
 Government databases, court records, corporate filings, property records, business licenses, and regulatory documents.
 
-{/* Website Analysis */}
 
 ### Website Analysis
 
 WHOIS lookups, DNS records, archive.org snapshots, technology stack identification, and historical site changes.
 
-{/* Image & Video Analysis */}
 
 ### Image & Video Analysis
 
 Reverse image search, EXIF metadata extraction, geolocation analysis, facial recognition tools, and video analysis techniques.
 
-{/* Google Dorking */}
 
 ### Google Dorking Basics
 
@@ -81,7 +73,6 @@ Start broad, then narrow. "Company X" → "Company X filetype:pdf" → "Company 
 
 Google dorking sounds illegal. It isn't. It's just using search operators that Google themselves documented. You're literally reading the manual.
 
-{/* The OSINT Workflow */}
 
 ### The OSINT Workflow
 
@@ -112,7 +103,6 @@ Evaluate reliability, identify patterns, connect dots, assess confidence levels,
 #### Report
 Present findings with sources, methodology, confidence levels, and recommendations for further collection.
 
-{/* Deep Dive: Ethics and Legal Boundaries */}
 
 Just because you CAN find something doesn't mean you CAN USE it or SHOULD. OSINT operates in a gray area, and understanding the boundaries is critical.
 
@@ -174,7 +164,6 @@ Following individuals on social media to monitor their activity
 
 When in doubt, ask your organization's legal or compliance team. Reputation is everything in intelligence work.
 
-{/* Field Exercise */}
 
 Using only publicly available information and a search engine, find 3 pieces of verifiable information about any public company (not a person).
 
@@ -200,12 +189,7 @@ Step 3 - Use search operators: site:sec.gov for filings, site:investors.[company
 
 Step 4 - Cross-reference: Find the same information from multiple sources. If three independent sources say the same thing, confidence is higher.
 
-Step 5 - Document everything: Write down where you found it, when you found it, and how reliable you think the source is.
-
-{/* Debrief */}
-
-{/* Next Lesson */}
-`
+Step 5 - Document everything: Write down where you found it, when you found it, and how reliable you think the source is.`
 
 export default function OsinttechniquesPage() {
   return (

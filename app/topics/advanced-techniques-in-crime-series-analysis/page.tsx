@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Explore sophisticated methodologies for analyzing patterns and trends within crime series, moving beyond basic statistical approaches to uncover deeper insights.",
 }
 
-const topicContent = `"Explore sophisticated methodologies for analyzing patterns and trends within crime series, moving beyond basic statistical approaches to uncover deeper insights.",
-
-## Advanced Techniques in Crime Series Analysis
+const topicContent = `## Advanced Techniques in Crime Series Analysis
 
 Crime series analysis is a critical component of modern law enforcement and criminological research. While basic statistical methods can identify simple trends, advanced techniques offer a more nuanced understanding of complex criminal behaviors, spatial-temporal patterns, and predictive modeling. This lesson delves into these sophisticated methodologies, equipping analysts with the tools to uncover deeper insights and improve strategic responses.
 
@@ -56,8 +54,7 @@ Implementing advanced techniques requires significant computational resources, h
 
 ### Conclusion
 
-Advanced techniques in crime series analysis transform raw data into actionable intelligence. By integrating spatial-temporal dynamics, network structures, machine learning, and sophisticated profiling, analysts can gain a profound understanding of criminal behavior, enabling more effective prevention, intervention, and investigative strategies. Continuous learning and adaptation to new methodologies are essential for staying ahead in the evolving landscape of crime analysis.
-`
+Advanced techniques in crime series analysis transform raw data into actionable intelligence. By integrating spatial-temporal dynamics, network structures, machine learning, and sophisticated profiling, analysts can gain a profound understanding of criminal behavior, enabling more effective prevention, intervention, and investigative strategies. Continuous learning and adaptation to new methodologies are essential for staying ahead in the evolving landscape of crime analysis.`
 
 export default function AdvancedTechniquesInCrimeSeriesAnalysisPage() {
   return (

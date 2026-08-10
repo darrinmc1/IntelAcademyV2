@@ -8,11 +8,8 @@ export const metadata: Metadata = {
   description: "Learn how to create a new chart, add entities and links, and begin building a basic network in Analyst&#x27;s Notebook.",
 }
 
-const topicContent = `"Learn how to create a new chart, add entities and links, and begin building a basic network in Analyst's Notebook.",
+const topicContent = `← Back to Analyst's Notebook Learning Path
 
-← Back to Analyst's Notebook Learning Path
-
-# Creating a Chart in Analyst's Notebook
 
 Learn how to create a new chart, add entities and links, and begin building a basic network
 
@@ -94,9 +91,7 @@ Links define the structure of the chart and require as much care as entity creat
 - **Link Direction:** Understand when links should be directed (A calls B) versus undirected (A and B are siblings). Directed links enable analysis of flow and hierarchy.
 - **Link Semantics:** Use precise link types rather than generic "associated with" links. A "subscriber of" link between a person and a phone number carries more analytical weight than a generic "related to" link.
 - **Temporal Links:** Where possible, include temporal attributes on links - when a call was made, when a transaction occurred. Temporal links enable timeline analysis and can reveal patterns and rhythms.
-- **Strength and Frequency:** Where data supports it, encode the strength or frequency of a relationship as a link attribute. A phone number that appears 200 times in call records is more significant than one that appears twice.
-
-`
+- **Strength and Frequency:** Where data supports it, encode the strength or frequency of a relationship as a link attribute. A phone number that appears 200 times in call records is more significant than one that appears twice.`
 
 export default function NotebookcreatingchartPage() {
   return (

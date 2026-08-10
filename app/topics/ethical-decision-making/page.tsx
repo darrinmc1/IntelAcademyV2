@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn frameworks and models for making ethical decisions in intelligence work, from classic ethical theories to practical step-by-step decision-making processes.",
 }
 
-const topicContent = `"Learn frameworks and models for making ethical decisions in intelligence work, from classic ethical theories to practical step-by-step decision-making processes.",
-
-Ethics in intelligence is not an abstract philosophical exercise. It is a practical
+const topicContent = `Ethics in intelligence is not an abstract philosophical exercise. It is a practical
 necessity. Every day, intelligence professionals face decisions that have real
 consequences for national security, individual rights, and democratic governance.
 Should we use information obtained under duress? How much collateral collection is
@@ -22,7 +20,6 @@ ethical theories apply to intelligence work, how to use a structured decision-ma
 model, and how to apply these tools to real-world ethical dilemmas. Because in
 intelligence, the right answer is rarely obvious - but the wrong one can be career-ending.
 
-{/* ---- Section 1: Ethics in Intelligence: Why It Matters ---- */}
 
 Ethics might seem like a luxury in a field where the stakes involve national security
 and human lives. In reality, ethics is a necessity - not because intelligence
@@ -78,7 +75,6 @@ decision were on the front page of tomorrow's newspaper, would I still feel good
 about it?" This is not a perfect ethical test, but it is a surprisingly effective
 gut check for identifying decisions that are likely to be problematic.
 
-{/* ---- Section 2: Ethical Frameworks Applied to Intelligence ---- */}
 
 Western philosophy offers three major ethical frameworks that are useful for analyzing
 intelligence dilemmas. Each framework approaches ethical questions from a different
@@ -152,7 +148,6 @@ rights are being violated, and virtue ethics to reflect on what kind of
 professional you want to be. None of the three frameworks alone is sufficient,
 but together they form a robust analytical toolkit.
 
-{/* ---- Section 3: The Ethical Decision-Making Model ---- */}
 
 When facing an ethical dilemma, having a structured process to work through can make
 the difference between a defensible decision and one that collapses under scrutiny.
@@ -217,7 +212,6 @@ agreed with each other.
 work in a congressional hearing. The ethical standards for intelligence professionals
 are higher than the playground standard for a reason.
 
-{/* ---- Section 4: Case Studies and Application ---- */}
 
 The best way to develop ethical judgment is to practice on real-world cases. The
 following case studies present ethical dilemmas drawn from actual intelligence
@@ -292,10 +286,7 @@ Your task:
 
 Hint: The U.S. citizen child's Fourth Amendment rights do not disappear because their
 parent is a foreign intelligence officer. "Collateral collection" has limits - and
-ethics requires you to think about where they are.
-
-)
-`
+ethics requires you to think about where they are.`
 
 export default function EthicaldecisionmakingPage() {
   return (

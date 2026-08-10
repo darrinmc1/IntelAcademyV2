@@ -8,44 +8,8 @@ export const metadata: Metadata = {
   description: "Learn from good and bad examples of intelligence reports.",
 }
 
-const topicContent = `Breadcrumb,
-BreadcrumbItem,
-BreadcrumbLink,
-BreadcrumbList,
-BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { StaticImage } from "@/components/static-image"
-import { WhatsNext } from "@/components/whats-next"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+const topicContent = `Learning to distinguish between effective and ineffective intelligence reporting is a critical skill. This section provides examples of both good and bad reports, with explanations to help you understand the key principles in practice.
 
-export const metadata: Metadata = {
-title: "Intelligence Report Examples | The Intel Analyst Academy",
-description: "Learn from good and bad examples of intelligence reports.",
-
-Home
-
-Topics
-
-Report Writing
-
-Intelligence Report Examples
-
-Back to Report Writing
-
-# Intelligence Report Examples
-
-Learning to distinguish between effective and ineffective intelligence reporting is a critical skill. This section provides examples of both good and bad reports, with explanations to help you understand the key principles in practice.
-
-Good Example 1
-Good Example 2
-Good Example 3
-Bad Example 1
-Bad Example 2
-Bad Example 3
-
-{/* Good Report Examples */}
 
 Good Example 1: Strategic Assessment
 
@@ -119,7 +83,6 @@ Why This Is a Good Report
 - **Specificity:** It provides a precise location and description of the threat.
 - **Audience-Appropriate:** It is formatted for a tactical user who needs to make a split-second decision.
 
-{/* Bad Report Examples */}
 
 Bad Example 1: Vague and Unfocused
 
@@ -182,10 +145,7 @@ How to Improve It
 - **Cite Evidence:** Every assessment must be linked to a source (e.g., "Satellite imagery from 08 July shows...").
 - **Use Estimative Language:** Frame conclusions as assessments with clear levels of confidence (e.g., "We assess with high confidence...").
 - **Acknowledge Alternatives:** A good report will consider other plausible explanations and explain why the primary conclusion is more likely.
-- **Separate Analysis from Policy:** The analyst's job is to assess the situation, not to recommend a course of action. Stick to the analysis.
-
-)
-`
+- **Separate Analysis from Policy:** The analyst's job is to assess the situation, not to recommend a course of action. Stick to the analysis.`
 
 export default function IntelligencereportexamplesPage() {
   return (

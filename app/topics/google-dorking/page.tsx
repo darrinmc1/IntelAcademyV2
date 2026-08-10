@@ -106,9 +106,6 @@ Use Google's tools to filter by date ranges for time-sensitive intelligence.
 
 Create a personal collection of effective dork queries for different types of investigations. This "dork
 library" will save time and improve consistency in your OSINT research.
-
-)
-
 ## What is Google Dorking?
 
 Google Dorking - also known as Google hacking - is the practice of using advanced search operators to find information that website owners did not intend to make publicly accessible, or that is difficult to locate through standard searches. For intelligence analysts, Google Dorking is a core OSINT technique for discovering exposed data, identifying vulnerabilities, and mapping digital infrastructure.
@@ -153,9 +150,7 @@ Google Dorking has proven valuable in numerous intelligence and investigative co
 - **Corporate Intelligence:** Discovering competitor pricing lists, unreleased product documentation, or internal strategy documents exposed through misconfigured servers.
 - **Investigative Journalism:** Journalists have used Google Dorking to uncover police manuals, government contracts, and internal corporate communications that were inadvertently made public.
 - **Cybersecurity Assessment:** Red teams and penetration testers use Google Dorking as a reconnaissance tool to identify exposed assets, vulnerable systems, and potential entry points before conducting more intrusive testing.
-- **Counter-Intelligence:** Monitoring for exposed sensitive data within one's own organisation - discovering that a sensitive document has been inadvertently indexed before adversaries find it.
-
-`
+- **Counter-Intelligence:** Monitoring for exposed sensitive data within one's own organisation - discovering that a sensitive document has been inadvertently indexed before adversaries find it.`
 
 export default function GoogledorkingPage() {
   return (

@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Explore statistical and analytical techniques used by intelligence analysts to detect patterns in crime series, enabling proactive intervention and resource allocation.",
 }
 
-const topicContent = `"Explore statistical and analytical techniques used by intelligence analysts to detect patterns in crime series, enabling proactive intervention and resource allocation.",
-
-## Series Pattern Detection: Statistical and Analytical Methods for Identifying Crime Series
+const topicContent = `## Series Pattern Detection: Statistical and Analytical Methods for Identifying Crime Series
 
 In the realm of intelligence analysis, particularly within law enforcement and security contexts, the ability to identify and understand crime series is paramount. A crime series, defined as a sequence of crimes that share common characteristics and are believed to be committed by the same offender or group of offenders, presents a significant challenge. Proactively detecting these series allows for more effective resource allocation, targeted investigations, and ultimately, the prevention of further criminal activity. This lesson delves into the statistical and analytical methods employed by intelligence analysts to uncover these elusive patterns.
 
@@ -79,8 +77,7 @@ Advanced techniques like clustering algorithms (e.g., K-means) can automatically
 
 ### Conclusion
 
-The detection of crime series is a sophisticated process that blends rigorous statistical analysis with insightful analytical interpretation. By leveraging temporal, spatial, and attribute-based data, analysts can identify the subtle yet critical patterns that link individual crimes into a series. The continuous development and application of these statistical and analytical methods are essential for modern intelligence operations aimed at disrupting criminal activity and enhancing public safety.
-`
+The detection of crime series is a sophisticated process that blends rigorous statistical analysis with insightful analytical interpretation. By leveraging temporal, spatial, and attribute-based data, analysts can identify the subtle yet critical patterns that link individual crimes into a series. The continuous development and application of these statistical and analytical methods are essential for modern intelligence operations aimed at disrupting criminal activity and enhancing public safety.`
 
 export default function SeriesPatternDetectionStatisticalAnalyticalMethodsCrimeSeriesPage() {
   return (

@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to develop and present actionable recommendations in your intelligence reports using the SMART framework.",
 }
 
-const topicContent = `"Learn how to develop and present actionable recommendations in your intelligence reports using the SMART framework.",
-
-Intelligence analysts walk a razor-thin line between informing decisions and making them.
+const topicContent = `Intelligence analysts walk a razor-thin line between informing decisions and making them.
 This lesson covers when recommendations are appropriate, how to structure them using the
 SMART framework, and how to present options without overstepping the analyst-policymaker
 boundary. You will learn to link your analysis directly to action, stress-test your
@@ -166,9 +164,6 @@ when you were right.
 The ideal analyst-policymaker relationship is like a good GPS: you provide the best
 route, they decide whether to take it, and when they ignore you and drive into a lake,
 you calmly say "recalculating."
-
-)
-
 ## What Makes a Good Recommendation?
 
 Intelligence recommendations are analytical judgements that go beyond assessment to suggest specific actions. A well-constructed recommendation is specific, actionable, grounded in evidence, and sensitive to the consumer's decision-making context:
@@ -204,9 +199,7 @@ Recommendations should be integrated into the intelligence report structure, not
 - **Placement:** Recommendations appear after the key judgement and supporting evidence, as the logical conclusion of the analytical argument. They should not precede the evidence that supports them.
 - **Prioritisation:** When multiple recommendations are offered, they should be prioritised. The consumer should know which action is most important and which can be deferred.
 - **Explicit Connection:** Each recommendation should be explicitly connected to the preceding analysis. "Based on the assessment that [key judgement], we recommend [specific action]."
-- **Separate Recommendations from Findings:** Avoid the common error of embedding recommendations within analytical findings. "The target is likely at Location X, and we should task imagery" confuses assessment with recommendation. Keep them structurally separate.
-
-`
+- **Separate Recommendations from Findings:** Avoid the common error of embedding recommendations within analytical findings. "The target is likely at Location X, and we should task imagery" confuses assessment with recommendation. Keep them structurally separate.`
 
 export default function RecommendationframeworkPage() {
   return (

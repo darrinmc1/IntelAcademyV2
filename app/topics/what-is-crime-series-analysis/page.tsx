@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "An introduction to the fundamentals of crime series analysis and its importance in law enforcement.",
 }
 
-const topicContent = `"An introduction to the fundamentals of crime series analysis and its importance in law enforcement.",
-
-## Understanding Crime Series Analysis
+const topicContent = `## Understanding Crime Series Analysis
 
 In the complex world of law enforcement and criminal investigations, understanding patterns and connections between seemingly disparate events is crucial. This is where Crime Series Analysis (CSA) comes into play. CSA is a specialized analytical methodology used to identify, group, and understand series of crimes that are believed to be linked by a common offender or group of offenders.
 
@@ -56,8 +54,7 @@ Despite its importance, CSA is not without its challenges:
 
 ### Conclusion
 
-Crime Series Analysis is a powerful tool in the arsenal of law enforcement. By systematically identifying and analyzing patterns of criminal behavior, analysts and investigators can bring perpetrators to justice, prevent future crimes, and enhance the overall safety and security of communities. It transforms individual incidents into a cohesive narrative, revealing the underlying criminal activity and guiding efforts to disrupt it.
-`
+Crime Series Analysis is a powerful tool in the arsenal of law enforcement. By systematically identifying and analyzing patterns of criminal behavior, analysts and investigators can bring perpetrators to justice, prevent future crimes, and enhance the overall safety and security of communities. It transforms individual incidents into a cohesive narrative, revealing the underlying criminal activity and guiding efforts to disrupt it.`
 
 export default function WhatIsCrimeSeriesAnalysisPage() {
   return (

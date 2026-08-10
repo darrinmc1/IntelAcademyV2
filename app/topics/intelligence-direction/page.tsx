@@ -8,26 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about intelligence direction in intelligence analysis.",
 }
 
-const topicContent = `Breadcrumb,
-BreadcrumbItem,
-BreadcrumbLink,
-BreadcrumbList,
-BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-
-Home
-
-Learning Paths
-
-Foundations of Intelligence
-
-The Intelligence Cycle
-
-Intelligence Direction
-
-# Intelligence Direction: Setting the Course
-##
-Defining what intelligence is needed and why
+const topicContent = `Defining what intelligence is needed and why
 
 Intelligence Direction is the important first phase of the intelligence cycle. It involves identifying the information needs of decision-makers and translating them into specific intelligence requirements.
 
@@ -206,17 +187,7 @@ Gathering feedback requires more than just asking "How did we do?" It requires:
 - **The Not-Invented-Here Syndrome:** Resistance to external ideas
 
 "Intelligence feedback and refinement is like marriage counseling for your organization - it requires honest communication, willingness to change, and the maturity to admit when you're wrong. The good news is that unlike marriage counseling, you don't have to split custody of the office coffee machine if things don't work out."
-The Five Stages of Intelligence Feedback: 1) Denial ("Our process is fine!"), 2) Anger ("Who are they to criticize us?"), 3) Bargaining ("Maybe we could just tweak this one little thing..."), 4) Depression ("We're terrible at everything"), 5) Acceptance ("Okay, let's figure out how to improve"). The secret is that professional intelligence organizations skip straight to stage 5, unless it's Monday morning and the coffee hasn't kicked in yet.
-
-Back to The Intelligence Cycle
-
-{/* Add a link to the next topic if applicable */}
-{/*
-Next Topic: Intelligence Collection
-*/}
-
-)
-`
+The Five Stages of Intelligence Feedback: 1) Denial ("Our process is fine!"), 2) Anger ("Who are they to criticize us?"), 3) Bargaining ("Maybe we could just tweak this one little thing..."), 4) Depression ("We're terrible at everything"), 5) Acceptance ("Okay, let's figure out how to improve"). The secret is that professional intelligence organizations skip straight to stage 5, unless it's Monday morning and the coffee hasn't kicked in yet.`
 
 export default function IntelligencedirectionPage() {
   return (

@@ -15,7 +15,6 @@ a network. Understanding who is connected to whom - and what those connections m
 will learn the fundamentals of network analysis, the key measures that reveal hidden
 power structures, and how to read a network chart like an operational picture.
 
-{/* ---- Section 1: Nodes, Edges, and the Fine Art of Connecting Dots ---- */}
 
 Every network analysis begins with two basic building blocks: nodes and edges. A
 ** node** (also called a vertex) represents an entity - a person, a
@@ -55,7 +54,6 @@ throwing 500 nodes on the screen because the data is available. A useful network
 chart has between 15 and 60 nodes for manual analysis. Beyond that, you need
 automated clustering. Your eyeballs are good - but they are not that good.
 
-{/* ---- Section 2: Centrality ---- */}
 
 Not all nodes are created equal. Some people in a network barely matter - they
 know one person and do one thing. Others are linchpins. Centrality measures are
@@ -125,7 +123,6 @@ Eigenvector
 Weighted by the importance of your connections
 Who is connected to power?
 
-{/* ---- Section 3: Reading the Tea Leaves of a Network Chart ---- */}
 
 Once you have built your network and calculated your metrics, the real analysis
 begins. A network chart is not a conclusion - it is a starting point. Here is how
@@ -165,7 +162,6 @@ A network with no clusters and everyone connected to everyone else is not a
 criminal network. It is a poorly planned office party. Real operations have
 compartments.
 
-{/* ---- Section 4: Directed vs. Undirected ---- */}
 
 Not all relationships are two-way. Some edges have a direction - a phone call goes
 from caller to receiver; money flows from payer to recipient; an order travels from
@@ -238,8 +234,7 @@ Questions:
 - Who has the highest degree centrality?
 - Who has the highest betweenness centrality? (Hint: who connects the separate clusters?)
 - If you had to arrest exactly one person to disrupt the network, who would it be and why?
-- What does the asymmetric call pattern between A and F tell you?
-`
+- What does the asymmetric call pattern between A and F tell you?`
 
 export default function NetworkanalysisPage() {
   return (

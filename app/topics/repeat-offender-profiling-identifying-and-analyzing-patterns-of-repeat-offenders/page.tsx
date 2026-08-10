@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "This lesson delves into the critical intelligence discipline of repeat offender profiling, equipping analysts with the methods to identify and analyze the behavioral patterns of individuals who repeatedly engage in criminal activity.",
 }
 
-const topicContent = `"This lesson delves into the critical intelligence discipline of repeat offender profiling, equipping analysts with the methods to identify and analyze the behavioral patterns of individuals who repeatedly engage in criminal activity.",
-
-## Repeat Offender Profiling: Identifying and Analyzing Patterns of Repeat Offenders
+const topicContent = `## Repeat Offender Profiling: Identifying and Analyzing Patterns of Repeat Offenders
 
 In the realm of intelligence analysis, understanding the motivations and methodologies of individuals who repeatedly engage in criminal or malicious activities is paramount. Repeat offender profiling, often referred to as serial offender analysis, is a specialized discipline focused on identifying, analyzing, and predicting the behavior of such individuals. This lesson will explore the core concepts, methodologies, and applications of repeat offender profiling within an intelligence context.
 
@@ -64,8 +62,7 @@ Repeat offender profiling is not confined to traditional law enforcement. It is 
 
 *   **Economic Espionage:** Identifying individuals or groups repeatedly engaged in intellectual property theft or market manipulation.
 
-By mastering the principles of repeat offender profiling, intelligence analysts can move beyond reactive responses to proactive threat identification and mitigation, enhancing security and operational effectiveness.
-`
+By mastering the principles of repeat offender profiling, intelligence analysts can move beyond reactive responses to proactive threat identification and mitigation, enhancing security and operational effectiveness.`
 
 export default function RepeatOffenderProfilingIdentifyingAndAnalyzingPatternsOfRepeatOffendersPage() {
   return (

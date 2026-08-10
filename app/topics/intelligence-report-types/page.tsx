@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Understand the three levels of intelligence reporting -- strategic, operational, and tactical -- and learn when to use each.",
 }
 
-const topicContent = `"Understand the three levels of intelligence reporting -- strategic, operational, and tactical -- and learn when to use each.",
-
-Intelligence reporting is not one-size-fits-all. A report designed for the National Security
+const topicContent = `Intelligence reporting is not one-size-fits-all. A report designed for the National Security
 Council looks nothing like one written for a patrol leader in the field, and both look nothing
 like the product supporting a regional campaign planner. Understanding the three tiers --
 strategic, operational, and tactical -- is fundamental to writing analysis that actually
@@ -142,9 +140,6 @@ this mission safely and effectively right now?"
 The biggest mistake analysts make is writing at the wrong level for their audience. A tactical
 consumer does not need your strategic context. A strategic consumer does not need your tactical
 details. Know who you are writing for and pitch your product accordingly.
-
-)
-
 ## The Intelligence Report Taxonomy
 
 Intelligence reports are not a single product type but a family of related products, each designed for a specific purpose, consumer, and timeframe. Understanding the taxonomy of intelligence reports helps analysts choose the right format for their findings and helps consumers know what to expect from each product type:
@@ -180,9 +175,7 @@ Adapting report style to the consumer is a critical analytical skill:
 - **Senior Decision-Makers:** Short, direct, bottom-line up front. These consumers have limited time and need the key judgement in the first paragraph. Supporting detail can follow, but the conclusion must lead.
 - **Operational Consumers:** Specific, actionable, and time-sensitive. Operators need to know who, what, where, when, and how in the first few lines. They also need to know the reliability of the intelligence so they can factor uncertainty into their operational planning.
 - **Analytical Peers:** Detailed, rigorous, and well-sourced. Other analysts need to understand the methodology, the sources, and the analytical reasoning that produced the assessment. They will evaluate the product's logic and evidentiary basis.
-- **External Partners:** Contextual, collaborative, and appropriately sanitised. Intelligence shared with foreign partners or other agencies must provide enough context to be useful while protecting sources, methods, and sensitive collection capabilities.
-
-`
+- **External Partners:** Contextual, collaborative, and appropriately sanitised. Intelligence shared with foreign partners or other agencies must provide enough context to be useful while protecting sources, methods, and sensitive collection capabilities.`
 
 export default function IntelligencereporttypesPage() {
   return (

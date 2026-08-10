@@ -8,31 +8,17 @@ export const metadata: Metadata = {
   description: "Learn the basics of Geospatial Intelligence and satellite imagery analysis",
 }
 
-const topicContent = `{/* Breadcrumb Navigation */}
-
-Back to Learning Paths
-
-{/* Page Header */}
-
-# GEOINT Fundamentals
-
-Master the art of seeing the world from above and understanding what it all means.
+const topicContent = `Master the art of seeing the world from above and understanding what it all means.
 
 18 min total
 Intermediate level
 
-{/* Main Content */}
-
-{/* Section 1: What is GEOINT */}
 
 ## What is Geospatial Intelligence (GEOINT)?
 
 "It's like being a detective, but your crime scene is the entire planet and your magnifying glass is a
 satellite."
 
-6 min read
-
-{/* Visual Representation */}
 
 ###
 
@@ -68,16 +54,12 @@ Fun Fact:
 Modern satellite imagery can be so detailed that analysts can identify individual vehicles, but contrary
 to what movies show, you still can't read license plates from space. Yet.
 
-{/* Section 2: GEOINT Applications */}
 
 ## GEOINT Applications
 
 "From tracking bad guys to predicting natural disasters - if it happens on Earth, we're probably watching
 it from space."
 
-6 min read
-
-{/* Applications Grid */}
 
 ###
 
@@ -133,14 +115,12 @@ Beyond military applications, GEOINT supports disaster response, urban planning,
 and commercial intelligence. Companies use geospatial analysis for market research, site selection, and
 supply chain optimization.
 
-{/* Section 3: GEOINT Challenges */}
 
 ## GEOINT Challenges and Limitations
 
 "Cloud cover is the natural enemy of satellite analysts everywhere. Mother Nature: 1, Intelligence
 Community: 0."
 
-6 min read
 
 ### Technical Challenges
 
@@ -181,7 +161,6 @@ Emerging technologies like artificial intelligence, machine learning, and hypers
 revolutionizing GEOINT capabilities. Automated change detection, pattern recognition, and real-time
 analysis are becoming standard tools.
 
-{/* Knowledge Check */}
 
 ## Knowledge Check
 
@@ -205,7 +184,6 @@ Satellite malfunctions
 
 Budget cuts
 
-{/* Next Steps */}
 
 ## Next Steps
 
@@ -218,10 +196,7 @@ Imagery Analysis Techniques
 
 GIS for Intelligence Analysis
 
-Return to Learning Paths
-
-)
-`
+Return to Learning Paths`
 
 export default function GeointfundamentalsPage() {
   return (

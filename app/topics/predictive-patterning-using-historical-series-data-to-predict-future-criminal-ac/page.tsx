@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Explore the foundational concepts of predictive patterning in intelligence analysis, focusing on how historical series data can be leveraged to forecast potential criminal activities.",
 }
 
-const topicContent = `"Explore the foundational concepts of predictive patterning in intelligence analysis, focusing on how historical series data can be leveraged to forecast potential criminal activities.",
-
-## Predictive Patterning: Using Historical Series Data to Predict Future Criminal Activity
+const topicContent = `## Predictive Patterning: Using Historical Series Data to Predict Future Criminal Activity
 
 Predictive patterning is a critical analytical technique within intelligence operations, focused on identifying and forecasting future events or behaviors by analyzing historical data. In the realm of criminal activity, this involves dissecting past occurrences to discern trends, cycles, and anomalies that can illuminate potential future hotspots or modus operandi. This lesson delves into the core principles of predictive patterning, emphasizing the utilization of historical series data.
 
@@ -67,8 +65,7 @@ Despite its power, predictive patterning is not without its challenges:
 
 ### Conclusion
 
-Predictive patterning, when applied rigorously and ethically, is a powerful tool for intelligence analysts. By meticulously analyzing historical series data for temporal, spatial, and behavioral patterns, analysts can develop informed forecasts of future criminal activity. This proactive approach allows law enforcement and security agencies to allocate resources more effectively, deter crime, and enhance public safety. Continuous refinement of methodologies and a critical awareness of limitations are key to maximizing the utility of predictive patterning in the dynamic landscape of criminal behavior.
-`
+Predictive patterning, when applied rigorously and ethically, is a powerful tool for intelligence analysts. By meticulously analyzing historical series data for temporal, spatial, and behavioral patterns, analysts can develop informed forecasts of future criminal activity. This proactive approach allows law enforcement and security agencies to allocate resources more effectively, deter crime, and enhance public safety. Continuous refinement of methodologies and a critical awareness of limitations are key to maximizing the utility of predictive patterning in the dynamic landscape of criminal behavior.`
 
 export default function PredictivePatterningUsingHistoricalSeriesDataToPredictFutureCriminalAcPage() {
   return (

@@ -24,7 +24,6 @@ cryptocurrency and fintech that keep FININT analysts employed in perpetuity.
 By the end, you will understand why the most terrifying question you can ask a criminal
 is not "where were you?" but "where did the money go?"
 
-{/* ---- Section 1: What is Financial Intelligence? ---- */}
 
 Financial Intelligence - FININT - is the systematic collection, analysis, and
 dissemination of information derived from financial data. It sits at the intersection
@@ -58,7 +57,6 @@ FININT analysts are what happens when you cross a forensic accountant with a det
 
 The best FININT analysts think like criminals - not to sympathize with them, but to anticipate their next move. When you understand how a launderer thinks, you know where to look before the transaction even happens.
 
-{/* ---- Section 2: The Three Stages of Money Laundering ---- */}
 
 Money laundering sounds complicated, but the underlying concept is simple: take dirty
 money and make it look clean. The process almost always follows three stages:
@@ -110,7 +108,6 @@ Integration methods include:
 
 When analyzing potential laundering, focus on the **gap between economic reality and financial activity**. A restaurant that reports $2 million in annual revenue but has four tables and a menu with eight items is not a successful business - it is a platform for placement.
 
-{/* ---- Section 3: Suspicious Activity Reports and Red Flags ---- */}
 
 The financial intelligence community relies on a reporting infrastructure designed to
 catch suspicious activity before it disappears into the ether. The two most important
@@ -153,7 +150,6 @@ right. Here are classic red flags:
 
 If a company registered in a Caribbean tax haven sends an invoice to a shell company in Cyprus for "consulting services" and the only consultation involved was "how to hide $5 million" - that is what FININT analysts call a "professional courtesy."
 
-{/* ---- Section 4: Following the Digital Trail ---- */}
 
 The digital revolution has been a double-edged sword for financial intelligence. On one
 hand, it has created unprecedented transparency - every digital transaction leaves a
@@ -211,10 +207,7 @@ Virgin Islands with no publicly identifiable ownership.
 - Flags the specific red flags and explains their significance.
 - Recommends the next investigative steps, including what other INTs you would task.
 
-Bonus points if you can guess how many shell companies stand between the BVI entity and the ultimate beneficial owner. (Hint: it is never just one.)
-
-)
-`
+Bonus points if you can guess how many shell companies stand between the BVI entity and the ultimate beneficial owner. (Hint: it is never just one.)`
 
 export default function FinintbasicsPage() {
   return (

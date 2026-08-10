@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Explore structured threat assessment models including DHS NTAS, CARVER, and OCTAVE, and learn how qualitative and quantitative approaches differ for security analysis.",
 }
 
-const topicContent = `"Explore structured threat assessment models including DHS NTAS, CARVER, and OCTAVE, and learn how qualitative and quantitative approaches differ for security analysis.",
-
-In the previous lesson, you learned what threat assessment is. Now it is time to get
+const topicContent = `In the previous lesson, you learned what threat assessment is. Now it is time to get
 specific. A threat assessment model is a structured framework that ensures consistency,
 rigour, and reproducibility in your analysis. Without a model, every assessment is a
 snowflake -- unique, drifting, and likely to melt under scrutiny.
@@ -19,7 +17,6 @@ This lesson covers why structured models matter, surveys three widely used frame
 examines the qualitative-versus-quantitative debate, and introduces the 4 Ds mitigation
 framework. By the end, you will know which tool to reach for and when.
 
-{/* ---- Section 1: Why Structured Models ---- */}
 
 Here is an uncomfortable fact: the human brain is terrible at estimating risk. We
 overestimate vivid, dramatic threats (sharks, terrorism, your neighbour's new drone)
@@ -57,7 +54,6 @@ Before you apply any model, write down your raw, unstructured assessment first. 
 run the model and compare. The gap between your gut feeling and the model output is
 where your biases live. Pay attention to that gap.
 
-{/* ---- Section 2: A Toolbox of Models ---- */}
 
 There are dozens of threat assessment models. Most of them are variations on the same
 themes. Here are three that cover the spectrum from tactical to strategic, physical to
@@ -106,7 +102,6 @@ The best analysts maintain a mental (or literal) checklist of models and choose 
 on three variables: time available, audience sophistication, and the nature of the
 threat (physical, cyber, or hybrid). If you only know one model, you will misapply it.
 
-{/* ---- Section 3: Qualitative vs. Quantitative ---- */}
 
 Every threat assessment model eventually confronts the same question: do you express
 your findings in words or numbers? The answer, as with most things in intelligence, is
@@ -150,7 +145,6 @@ A quantitative model with bad data is like a GPS that does not know where the ro
 It will give you precise turn-by-turn directions to a cliff, and you will arrive exactly
 on time.
 
-{/* ---- Section 4: The 4 Ds ---- */}
 
 Once you have assessed the threat, you need to do something about it. The 4 Ds framework
 provides a structured approach to mitigation. It originated in physical security but
@@ -191,7 +185,6 @@ gaps are. If you have strong detection and weak delay, put resources into access
 control. If you have strong deterrence but poor detection, you are flying blind. Let
 the assessment drive the allocation.
 
-{/* ---- Field Exercise ---- */}
 
 Scenario: The Regional Data Centre
 
@@ -211,12 +204,7 @@ and identify the top priority vulnerability.
 detect, delay, and defend. Which D needs the most attention?
 
 Hint: The lack of a SOC and after-hours incident response means one of the Ds is
-essentially missing. Which one, and what would you recommend as the first fix?
-
-{/* ---- Debrief ---- */}
-
-)
-`
+essentially missing. Which one, and what would you recommend as the first fix?`
 
 export default function ThreatassessmentmodelsPage() {
   return (

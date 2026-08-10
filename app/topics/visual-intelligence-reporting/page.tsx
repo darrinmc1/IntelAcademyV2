@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to use charts, maps, timelines, and graphics to create more effective intelligence reports.",
 }
 
-const topicContent = `"Learn how to use charts, maps, timelines, and graphics to create more effective intelligence reports.",
-
-Intelligence reports live or die by their ability to communicate complex information
+const topicContent = `Intelligence reports live or die by their ability to communicate complex information
 quickly. Visuals -- charts, maps, timelines, link diagrams, and infographics -- are
 not decorations. They are analytic tools that can convey patterns, relationships, and
 trends far more efficiently than text alone. This lesson covers when visuals beat text,
@@ -178,10 +176,7 @@ be distributed digitally. Screen readers cannot parse a JPEG of a chart.
 Before finalizing any visual, show it to someone unfamiliar with your analysis and
 ask them what they see. If their takeaway does not match your intended message, the
 chart needs work -- no matter how accurate the underlying data. A chart that is
-technically correct but routinely misread is a liability, not an asset.
-
-)
-`
+technically correct but routinely misread is a liability, not an asset.`
 
 export default function VisualintelligencereportingPage() {
   return (

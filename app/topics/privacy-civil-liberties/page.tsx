@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Understanding the complex balance between intelligence collection needs and the protection of privacy rights and civil liberties in democratic societies.",
 }
 
-const topicContent = `"Understanding the complex balance between intelligence collection needs and the protection of privacy rights and civil liberties in democratic societies.",
-
-Privacy and civil liberties sit at the heart of the tension between security and
+const topicContent = `Privacy and civil liberties sit at the heart of the tension between security and
 freedom. Intelligence agencies need information to protect national security, but
 the methods they use to collect that information can intrude on the privacy of
 citizens and erode the civil liberties that democratic societies exist to protect.
@@ -22,7 +20,6 @@ the frameworks used to balance security needs against individual rights. Because
 protecting a free society by undermining its freedoms is a paradox that deserves
 serious examination.
 
-{/* ---- Section 1: The Privacy-Intelligence Paradox ---- */}
 
 Here is the fundamental problem: intelligence agencies exist to protect democratic
 societies and the freedoms they cherish. But the tools intelligence agencies use -
@@ -87,7 +84,6 @@ I be comfortable with this program if it were publicly disclosed tomorrow?" If
 the answer is no, the program likely has a legitimacy problem that no amount of
 legal authorization can fully resolve.
 
-{/* ---- Section 2: Fourth Amendment and Its Digital Interpretations ---- */}
 
 The Fourth Amendment to the U.S. Constitution protects against "unreasonable searches
 and seizures" and requires warrants based on probable cause. For most of American
@@ -155,7 +151,6 @@ warrant required? (3) Is there a special need (like foreign intelligence collect
 that might justify an exception? Layer three is where intelligence lawyers earn
 their salaries.
 
-{/* ---- Section 3: Data Collection and Civil Liberties in the Digital Age ---- */}
 
 The digital transformation of communications has fundamentally changed the scale and
 scope of intelligence collection. Where intelligence agencies once had to physically
@@ -223,7 +218,6 @@ surveillance authority in the U.S. intelligence community. Understanding its
 provisions, limitations, and reauthorization history is essential for any
 intelligence professional working in the legal or policy space.
 
-{/* ---- Section 4: Balancing Framework ---- */}
 
 Given the tension between intelligence needs and privacy rights, how do democratic
 societies strike the right balance? The answer lies in a framework of principles
@@ -299,10 +293,7 @@ Your task:
 - Draft a one-paragraph privacy impact statement that an agency head could present to Congress.
 
 Hint: "But it's public data" is not a complete answer to privacy concerns. The
-aggregation and analysis of public data raises its own set of civil liberties issues.
-
-)
-`
+aggregation and analysis of public data raises its own set of civil liberties issues.`
 
 export default function PrivacycivillibertiesPage() {
   return (

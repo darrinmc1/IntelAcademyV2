@@ -8,15 +8,12 @@ export const metadata: Metadata = {
   description: "Master the principles of clear, effective writing for intelligence reports including active voice, plain language, and sentence surgery techniques.",
 }
 
-const topicContent = `"Master the principles of clear, effective writing for intelligence reports including active voice, plain language, and sentence surgery techniques.",
-
-Clear writing is the difference between intelligence that drives action and intelligence
+const topicContent = `Clear writing is the difference between intelligence that drives action and intelligence
 that drives your reader to a nap. In this lesson, you will learn how to strip the fog
 from your prose, wield active voice like a scalpel, and apply the "grandmother
 test" to every sentence you write. Your analysis deserves to be understood -- let's
 make sure it is.
 
-{/* ---- Section 1: Active vs Passive Voice ---- */}
 
 If there is a single change that will improve your intelligence writing overnight, it is
 switching from passive to active voice. Passive voice hides the actor, buries the action,
@@ -56,7 +53,6 @@ sentence still makes grammatical sense, it is passive voice.
 "The report was written [by zombies]" -- passive.
 "The analyst wrote the report" -- active. No zombies possible.
 
-{/* ---- Section 2: The Grandmother Test & Plain Language ---- */}
 
 Intelligence analysts love jargon. Acronyms multiply like rabbits, and polysyllabic
 words make us feel smart. But here is the uncomfortable truth: if your grandmother
@@ -97,7 +93,6 @@ Create a personal "banned words" list. Every time you catch yourself writing a
 bloated word, add it to the list and note its simpler replacement. Over time, plain
 language becomes your default setting.
 
-{/* ---- Section 3: Sentence Surgery ---- */}
 
 Good intelligence writing is lean. Every word must earn its place. Sentence surgery is
 the practice of systematically trimming fat from your prose without losing substance.
@@ -150,7 +145,6 @@ Read your draft aloud. If you run out of breath before reaching the period, the
 sentence is too long. If you stumble over a word, it is probably the wrong word.
 Your ear catches what your eyes miss.
 
-{/* ---- Section 4: Writing for Your Audience ---- */}
 
 The same intelligence can be presented in vastly different ways depending on the
 audience. A tactical military briefing reads nothing like a presidential daily brief,
@@ -185,10 +179,7 @@ Specific
 
 Writing "a significant number of troops" is the analytical equivalent of telling
 your boss "I did some work today." How many troops? Where? When? Your reader
-should not have to play 20 questions with your report.
-
-)
-`
+should not have to play 20 questions with your report.`
 
 export default function ClearwritingprinciplesPage() {
   return (

@@ -8,15 +8,12 @@ export const metadata: Metadata = {
   description: "Master the analysis of crime trends over time - seasonal patterns, detection methods, displacement effects, and the traps that deceive even experienced analysts.",
 }
 
-const topicContent = `"Master the analysis of crime trends over time - seasonal patterns, detection methods, displacement effects, and the traps that deceive even experienced analysts.",
-
-A single snapshot of crime data tells you where trouble is today. A trend tells you where
+const topicContent = `A single snapshot of crime data tells you where trouble is today. A trend tells you where
 trouble is going tomorrow - and where it came from last week, last month, and last year.
 This lesson unpacks the difference between reacting to a spike and understanding a trend.
 You will learn the methods that separate the ephemeral blip from the structural shift, and
 you will learn why your favourite crime statistics are probably lying to you.
 
-{/* ---- Section 1: Why Trends Matter More Than Snapshots ---- */}
 
 Imagine you arrive at a crime briefing in January. The analyst points at a map and declares
 that burglaries are up 40% this week compared to the weekly average. The room buzzes with
@@ -55,7 +52,6 @@ at noise, not signal. Plot the data before you pontificate.
 Reporting a crime trend based on two weeks of data is like declaring the start of summer
 because you had one warm Tuesday in March. Statistically ambitious; analytically bankrupt.
 
-{/* ---- Section 2: Methods for Detecting Trends ---- */}
 
 The analytical toolbox for trend detection is deep, but most analysts only reach for the
 simplest tools. Here we cover the essential methods that turn raw incident data into
@@ -107,7 +103,6 @@ variation.
 COMPSTAT meetings are where data meets its match: a precinct commander with a creative
 definition of the word "declining." Always audit the numbers. Always.
 
-{/* ---- Section 3: The Usual Patterns ---- */}
 
 Crime trends are not random. They follow repeatable patterns driven by human behaviour,
 environmental factors, and the adaptive responses of both criminals and law enforcement.
@@ -149,7 +144,6 @@ they do not submit a restructuring plan - they just move to the other side of to
 keep working. Displacement is the oldest pattern in the book, yet analysts forget it with
 alarming regularity.
 
-{/* ---- Section 4: When Trends Deceive ---- */}
 
 The hardest lesson in trend analysis is that the data itself can lie. Not maliciously -
 data has no intent - but because the mechanisms that produce crime data are shaped by
@@ -216,10 +210,7 @@ supervisor, your task is to investigate three alternative explanations:
 
 Write a one-paragraph assessment that either confirms the trend as genuine or explains
 which of these distorting factors is at play. Include your level of confidence and what
-additional data you would need to be more certain.
-
-)
-`
+additional data you would need to be more certain.`
 
 export default function CrimetrendanalysisPage() {
   return (

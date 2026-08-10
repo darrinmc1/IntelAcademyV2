@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to write operational intelligence reports that support campaigns, sustained operations, and theater-level decision-making.",
 }
 
-const topicContent = `"Learn how to write operational intelligence reports that support campaigns, sustained operations, and theater-level decision-making.",
-
-Operational intelligence is the middle child of the intelligence family -- often overlooked but
+const topicContent = `Operational intelligence is the middle child of the intelligence family -- often overlooked but
 absolutely essential. It supports the planners and commanders who translate strategic objectives
 into executable campaigns. This lesson covers the operational environment assessment, the key
 elements of an operational report, how to sync with the planning cycle, and the unique
@@ -163,9 +161,6 @@ routes, which requires tactical-level surveillance of key nodes."
 movement along Route Alpha. At the operational level, this suggests the adversary is
 repositioning forces for a spring offensive, which has strategic implications for regional
 stability."
-
-)
-
 ## The Role of Operational Reports
 
 Operational reports are the primary vehicle for communicating intelligence that directly supports ongoing operations. Unlike strategic assessments, which inform long-term planning, operational reports are produced and consumed in the same timeframe as the operations they support - often hours or minutes before the operation commences:
@@ -200,9 +195,7 @@ The relationship between intelligence producers and operational consumers is cri
 - **Embedded Analysts:** Many military and law enforcement organisations embed intelligence analysts directly with operational units. Embedded analysts develop a deeper understanding of operational needs and can produce more relevant intelligence faster than analysts working from a remote headquarters.
 - **The Intelligence Push:** In a well-functioning intelligence-operations relationship, intelligence is pushed to operators based on their anticipated needs, not pulled based on requests. The analyst anticipates what the operator will need next and produces it before being asked.
 - **After-Action Review:** Following every operation, the intelligence that supported it should be reviewed. What was accurate? What was missed? What could have been better? The after-action review is the most effective mechanism for improving operational intelligence.
-- **Trust Development:** Operators trust intelligence they have seen validated through operational outcomes. New intelligence units or analysts must build this trust over time through consistent, accurate reporting. Trust once broken - through an inaccurate report that leads to a failed operation - is difficult to rebuild.
-
-`
+- **Trust Development:** Operators trust intelligence they have seen validated through operational outcomes. New intelligence units or analysts must build this trust over time through consistent, accurate reporting. Trust once broken - through an inaccurate report that leads to a failed operation - is difficult to rebuild.`
 
 export default function OperationalreportsPage() {
   return (

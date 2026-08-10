@@ -8,15 +8,8 @@ export const metadata: Metadata = {
   description: "Learn methods and techniques for long-term intelligence forecasting to anticipate future threats and opportunities.",
 }
 
-const topicContent = `"Learn methods and techniques for long-term intelligence forecasting to anticipate future threats and opportunities.",
+const topicContent = `Methods and techniques for long-term intelligence forecasting
 
-{/* Hero Section */}
-
-# Strategic Forecasting
-
-Methods and techniques for long-term intelligence forecasting
-
-{/* Introduction */}
 
 ## Understanding Strategic Forecasting
 
@@ -29,7 +22,6 @@ d'état.
 general public." -{" "}
 The Unofficial Intelligence Analyst's Dictionary
 
-##
 What is Strategic Forecasting? (Or: Professional Crystal Ball Gazing)
 
 Strategic forecasting involves analyzing current trends, patterns, and indicators to predict future
@@ -91,7 +83,6 @@ where none exist and ignore information that contradicts your beliefs
 - **The Butterfly Effect:** Small changes can have massive, unpredictable consequences - and
 there are approximately 7 billion butterflies flapping their wings at any given moment
 
-##
 Famous Forecasting Failures (Or: You're in Good Company When You're Wrong)
 
 Even the best strategic forecasters get it spectacularly wrong sometimes. Some notable examples:
@@ -129,7 +120,6 @@ Focuses on strategic-level concerns (the boring but important stuff)
 
 Deals with uncertainty (a.k.a. being professionally wrong...sometimes)
 
-{/* Core Methodologies */}
 
 ## Core Strategic Forecasting Methodologies
 
@@ -281,7 +271,6 @@ To understand non-linear relationships
 
 When testing policy interventions
 
-{/* Advanced Techniques */}
 
 ## Advanced Forecasting Techniques
 
@@ -354,7 +343,6 @@ interdependencies.
 This technique is particularly valuable for understanding complex geopolitical situations where multiple
 factors interact.
 
-{/* Case Study */}
 
 ## Case Study: Strategic Forecasting in Practice
 
@@ -400,7 +388,6 @@ Accelerating technological change creating both opportunities and vulnerabilitie
 Climate Impacts:
 Increasing climate-related challenges affecting resources, migration, and conflict
 
-{/* Challenges and Limitations */}
 
 ## Challenges and Limitations in Strategic Forecasting
 
@@ -478,7 +465,6 @@ Forecasts often operate within political and organizational contexts that can di
 **Mitigation strategy:** Create institutional safeguards for analytical independence,
 anonymous forecasting mechanisms, and systematic tracking of forecast accuracy.
 
-{/* Best Practices */}
 
 ## Best Practices for Strategic Forecasting
 
@@ -560,7 +546,6 @@ The most useful strategic forecasts balance specificity with decision relevance:
 "A precise forecast about an irrelevant issue is less valuable than a somewhat less precise forecast
 about a critical strategic concern."
 
-{/* Tools and Resources */}
 
 ## Tools and Resources for Strategic Forecasters
 
@@ -609,7 +594,6 @@ Nate Silver's exploration of probabilistic thinking and prediction.
 
 Daniel Kahneman's work on cognitive biases that affect judgment and decision-making.
 
-{/* Practical Exercise */}
 
 ## Practical Exercise: Mini Scenario Analysis
 
@@ -687,12 +671,7 @@ it
 - Multiple methods exist to make your guesses look more scientific and credible
 - The best forecasters are wrong slightly less often than everyone else
 -
-Always include multiple scenarios in your forecast so you can claim you predicted whatever actually happens
-
-{/* What's Next */}
-
-)
-`
+Always include multiple scenarios in your forecast so you can claim you predicted whatever actually happens`
 
 export default function StrategicforecastingPage() {
   return (

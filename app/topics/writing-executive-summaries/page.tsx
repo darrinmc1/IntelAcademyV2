@@ -8,37 +8,7 @@ export const metadata: Metadata = {
   description: "Master the art of creating concise and impactful executive summaries",
 }
 
-const topicContent = `Breadcrumb,
-BreadcrumbItem,
-BreadcrumbLink,
-BreadcrumbList,
-BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Card, CardContent } from "@/components/ui/card"
-import { StaticImage } from "@/components/static-image"
-import { WhatsNext } from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Writing Executive Summaries | The Intel Analyst Academy",
-description: "Master the art of creating concise and impactful executive summaries",
-
-Home
-
-Topics
-
-Report Writing
-
-Writing Executive Summaries
-
-Back to Report Writing
-
-# Writing Executive Summaries
-
-15 min read
-
-Core Topic
-
-## Introduction
+const topicContent = `## Introduction
 
 Executive summaries are perhaps the most critical component of any intelligence report. For many senior
 decision-makers, the executive summary is the only part of your report they'll read. Your ability to
@@ -182,31 +152,7 @@ crafted document with its own purpose and audience. It requires different writin
 disciplined focus on what matters most to decision-makers.
 
 With practice and attention to these principles, you can create executive summaries that capture
-attention, convey critical information, and drive informed decisions.
-
-### In This Topic
-
--
-[
-1. Distillation Techniques
-](#)
-
--
-[
-2. Front-Loading Key Judgments
-](#)
-
--
-[
-3. Crafting Actionable Insights
-](#)
-
--
-[
-Executive Summary Template
-](#)
-
-`
+attention, convey critical information, and drive informed decisions.`
 
 export default function WritingexecutivesummariesPage() {
   return (

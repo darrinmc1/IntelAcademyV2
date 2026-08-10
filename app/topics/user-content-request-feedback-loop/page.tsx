@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "This lesson explores the critical importance of establishing and managing a feedback loop for user content requests within an intelligence analysis environment.",
 }
 
-const topicContent = `"This lesson explores the critical importance of establishing and managing a feedback loop for user content requests within an intelligence analysis environment.",
-
-## The User Content Request Feedback Loop
+const topicContent = `## The User Content Request Feedback Loop
 
 In the dynamic world of intelligence analysis, the efficient and effective handling of user content requests is paramount. These requests, originating from various stakeholders across government agencies, military branches, and even private sector partners, form the lifeblood of actionable intelligence. However, the mere submission of a request is only the first step. A crucial, yet often overlooked, component of this process is the establishment and maintenance of a robust feedback loop. This lesson delves into why this loop is indispensable for intel analysts and how its absence can lead to significant inefficiencies and misunderstandings.
 
@@ -50,8 +48,7 @@ When a feedback loop is broken or nonexistent, user content requests can fall in
 
 ### Conclusion
 
-The user content request feedback loop is not a mere administrative formality; it is a strategic imperative for effective intelligence analysis. By prioritizing clear communication, proactive engagement, and a commitment to understanding user needs, intelligence organizations can transform their request handling processes from a potential source of friction into a powerful engine for delivering timely, relevant, and actionable intelligence. The "black hole" of unanswered questions and unacknowledged effort can be closed, fostering stronger partnerships and more impactful intelligence.
-`
+The user content request feedback loop is not a mere administrative formality; it is a strategic imperative for effective intelligence analysis. By prioritizing clear communication, proactive engagement, and a commitment to understanding user needs, intelligence organizations can transform their request handling processes from a potential source of friction into a powerful engine for delivering timely, relevant, and actionable intelligence. The "black hole" of unanswered questions and unacknowledged effort can be closed, fostering stronger partnerships and more impactful intelligence.`
 
 export default function UserContentRequestFeedbackLoopPage() {
   return (

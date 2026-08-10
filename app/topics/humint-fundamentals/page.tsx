@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Master human intelligence tradecraft - source typology, the MICE framework, the recruitment cycle, and the handler&#x27;s craft of communication, validation, and protection.",
 }
 
-const topicContent = `"Master human intelligence tradecraft - source typology, the MICE framework, the recruitment cycle, and the handler's craft of communication, validation, and protection.",
-
-Human Intelligence - HUMINT - is the oldest intelligence discipline in existence.
+const topicContent = `Human Intelligence - HUMINT - is the oldest intelligence discipline in existence.
 Long before satellites, signals intercepts, or open-source scraping, intelligence
 was gathered the old-fashioned way: one human being talking to another. Despite
 billions of dollars poured into technical collection, HUMINT remains
@@ -30,7 +28,6 @@ for protection or predation. The professional handler never forgets that the per
 on the other side of the table is a human being - and that the relationship, however
 transactional, carries obligations.
 
-{/* ---- Section 1: Sources, Assets, and the Fine Art of Human Collection ---- */}
 
 Before you can recruit anyone, you must understand the taxonomy of human sources.
 The terminology is precise, and using the wrong word can reveal more than you intend
@@ -89,7 +86,6 @@ piece of intelligence. Is this an unwitting source? A witting asset? A recruited
 agent? The legal and operational frameworks differ for each - and so do the
 protection measures you must put in place.
 
-{/* ---- Section 2: The MICE Framework ---- */}
 
 Understanding why people become intelligence sources is the foundation of
 recruitment tradecraft. The MICE framework - Money, Ideology, Coercion, Ego -
@@ -167,7 +163,6 @@ MICE at a Glance
 - **Coercion** - Last resort. Unreliable, dangerous, breeds resentment.
 - **Ego** - Underestimated. Needs constant validation. Thrives on attention.
 
-{/* ---- Section 3: The Recruitment Cycle ---- */}
 
 Recruitment is not a single moment. It is a four-phase cycle that can take weeks,
 months, or years. Each phase has its own objectives, risks, and tradecraft
@@ -236,7 +231,6 @@ and - above all - keep them alive. The handler is also responsible for detecting
 when the source has been compromised, is being run as a double agent, or has become
 a liability.
 
-{/* ---- Section 4: The Handler's Craft ---- */}
 
 The handler is the most important person in any HUMINT operation. A brilliant source
 managed by a poor handler is a lost asset. An average source managed by a
@@ -313,7 +307,6 @@ operational security procedures rigorously, and accept that they may be the targ
 of the other side's counterintelligence efforts. In HUMINT, paranoia is not a
 character flaw - it is a survival skill.
 
-{/* ---- Field Exercise ---- */}
 
 You are a junior handler assigned to a foreign embassy in a non-hostile but
 competitive capital. Your targeting officer has identified a mid-level defence
@@ -336,10 +329,7 @@ open-source research, your team has developed the following profile:
 Hint: Multiple motivations are present. The watch suggests money - or ego. The
 passed-over promotions suggest ego and possibly ideology. The struggling business
 suggests financial pressure. Your strategy should leverage the strongest motivator
-while keeping the others in reserve.
-
-)
-`
+while keeping the others in reserve.`
 
 export default function HumintfundamentalsPage() {
   return (

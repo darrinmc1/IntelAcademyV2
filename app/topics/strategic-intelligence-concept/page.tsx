@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Master the discipline of strategic intelligence - long-term forecasting, national security strategy, analytical products like NIEs, and the political challenges that threaten objectivity.",
 }
 
-const topicContent = `"Master the discipline of strategic intelligence - long-term forecasting, national security strategy, analytical products like NIEs, and the political challenges that threaten objectivity.",
-
-Tactical intelligence tells you what is happening right now. Strategic intelligence tells
+const topicContent = `Tactical intelligence tells you what is happening right now. Strategic intelligence tells
 you what will happen next - and why it matters to the people who decide the fate of
 nations, organisations, and alliances. This lesson unpacks the unique demands of strategic
 analysis: the longer time horizons, the broader scope, the higher-stakes audience, and the
@@ -266,10 +264,7 @@ For each scenario, identify two to three signposts - observable events or data p
 that would indicate the trajectory is moving toward that scenario. Your final product
 should be no longer than one page. The exercise is not about being right; it is about
 demonstrating that you have thought systematically about uncertainty and that you can
-communicate multiple futures without confusing your consumer.
-
-
-`
+communicate multiple futures without confusing your consumer.`
 
 export default function StrategicintelligenceconceptPage() {
   return (

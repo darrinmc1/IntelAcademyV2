@@ -64,21 +64,14 @@ Explore related topics to deepen your understanding of intelligence fundamentals
 #### The Intelligence Cycle
 
 Learn the systematic process used to convert information into intelligence
-
-[
 Start Learning →
 ](/topics/intelligence-cycle)
 
 #### Types of Intelligence
 
 Explore the different categories and classifications of intelligence
-
-[
 Start Learning →
-](/topics/intelligence-types)
-
-)
-`
+](/topics/intelligence-types)`
 
 export default function SampletopicPage() {
   return (

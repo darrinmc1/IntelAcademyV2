@@ -8,37 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to effectively present intelligence findings verbally",
 }
 
-const topicContent = `Breadcrumb,
-BreadcrumbItem,
-BreadcrumbLink,
-BreadcrumbList,
-BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Card, CardContent } from "@/components/ui/card"
-import { StaticImage } from "@/components/static-image"
-import { WhatsNext } from "@/components/whats-next"
-
-export const metadata: Metadata = {
-title: "Verbal Briefing Techniques | The Intel Analyst Academy",
-description: "Learn how to effectively present intelligence findings verbally",
-
-Home
-
-Topics
-
-Report Writing
-
-Verbal Briefing Techniques
-
-Back to Report Writing
-
-# Verbal Briefing Techniques
-
-25 min read
-
-Core Topic
-
-## Introduction
+const topicContent = `## Introduction
 
 Written reports are the backbone of intelligence communication, but verbal briefings often have the most
 immediate impact on decision-makers. A well-delivered verbal briefing can convey urgency, nuance, and
@@ -243,36 +213,7 @@ intelligence communication often combines both approaches - detailed written ana
 record, supported by impactful verbal briefings that highlight key points and facilitate discussion.
 
 With practice and attention to these techniques, you can develop the ability to deliver clear, compelling,
-and credible intelligence briefings in any setting.
-
-### In This Topic
-
--
-[
-1. Preparation Strategies
-](#)
-
--
-[
-2. Narrative Construction
-](#)
-
--
-[
-3. Visual Aid Integration
-](#)
-
--
-[
-4. Handling Questions
-](#)
-
--
-[
-5. Confidence Calibration
-](#)
-
-`
+and credible intelligence briefings in any setting.`
 
 export default function VerbalbriefingtechniquesPage() {
   return (

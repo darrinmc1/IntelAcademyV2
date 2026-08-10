@@ -10,9 +10,7 @@ export const metadata: Metadata = {
 
 const topicContent = `By the end of this lesson, you'll understand what intelligence actually is, how it differs from raw information, and why it matters for decision-making. You'll also learn the key areas where intelligence creates real-world impact.
 
-{/* Defining Intelligence Section */}
 
-##
 Defining Intelligence (The Non-IQ Kind)
 
 Intelligence is processed information. But that's too simple. Really, intelligence
@@ -25,7 +23,6 @@ we do about it?" Raw data just sits there. Intelligence moves you forward.
 
 It's like having superpowers, except your superpower is being really good at Google and asking the right questions.
 
-{/* Process Flow Grid */}
 
 ### Raw Information
 Facts, observations, data points
@@ -51,12 +48,9 @@ The key phrase: "processed into a form suitable for use." That's what separates
 intelligence from information. Intelligence is purposeful. It's designed to change
 understanding and enable better decisions.
 
-{/* Intelligence vs Information Section */}
 
-##
 Intelligence vs Information (They're Not the Same)
 
-{/* Information Card */}
 
 ### Information
 
@@ -80,7 +74,6 @@ Requires further processing
 •
 Example: "Three vehicles spotted moving north"
 
-{/* Intelligence Card */}
 
 ### Intelligence
 
@@ -137,11 +130,9 @@ A statistic by itself. Intelligence would involve analysis: "Increased traffic
 suggests testing prior to a DDoS attack" or "Traffic pattern indicates normal
 seasonal behavior."
 
-{/* Value of Intelligence Section */}
 
 ## Why Intelligence Matters
 
-{/* National Security */}
 
 ### National Security
 
@@ -151,7 +142,6 @@ prevents attacks.
 
 Strategic + Operational Value
 
-{/* Business Strategy */}
 
 ### Business Strategy
 
@@ -161,7 +151,6 @@ with confidence.
 
 Strategic Value
 
-{/* Law Enforcement */}
 
 ### Law Enforcement
 
@@ -170,7 +159,6 @@ investigators solve crimes and prevent future offenses.
 
 Tactical + Operational Value
 
-{/* Military Operations */}
 
 ### Military Operations
 
@@ -181,8 +169,7 @@ Tactical Value
 
 Good intelligence is like having tomorrow's newspaper today. Bad intelligence is like having yesterday's weather forecast.
 
-**The Cost of Poor Intelligence** Decisions made without intelligence are just guesses. Decisions made with poor intelligence are worse - they're confident guesses. History is full of catastrophic failures caused by bad intelligence or ignoring good intelligence. As a future intelligence professional, your job is to make sure decision-makers never have to guess.
-`
+**The Cost of Poor Intelligence** Decisions made without intelligence are just guesses. Decisions made with poor intelligence are worse - they're confident guesses. History is full of catastrophic failures caused by bad intelligence or ignoring good intelligence. As a future intelligence professional, your job is to make sure decision-makers never have to guess.`
 
 export default function WhatisintelligencePage() {
   return (

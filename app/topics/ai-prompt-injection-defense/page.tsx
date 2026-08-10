@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn to identify and defend against prompt injection attacks targeting AI models, protecting your systems and data.",
 }
 
-const topicContent = `"Learn to identify and defend against prompt injection attacks targeting AI models, protecting your systems and data.",
-
-## Understanding and Defending Against AI Prompt Injection
+const topicContent = `## Understanding and Defending Against AI Prompt Injection
 
 Artificial intelligence (AI) models, particularly large language models (LLMs), have revolutionized how we interact with technology. However, their increasing integration into sensitive systems brings new vulnerabilities. One of the most significant emerging threats is **prompt injection**, a sophisticated attack vector that manipulates AI's input to achieve unintended or malicious outcomes.
 
@@ -66,8 +64,7 @@ Mitigating prompt injection requires a multi-layered approach, combining technic
 
 ### The Evolving Landscape
 
-Prompt injection is a rapidly evolving threat. As AI models become more powerful and integrated, attackers will undoubtedly find new and creative ways to exploit them. Continuous research, proactive defense strategies, and a vigilant approach are crucial for staying ahead of these threats. By understanding the mechanics of prompt injection and implementing robust defense mechanisms, organizations can harness the power of AI more securely and responsibly.
-`
+Prompt injection is a rapidly evolving threat. As AI models become more powerful and integrated, attackers will undoubtedly find new and creative ways to exploit them. Continuous research, proactive defense strategies, and a vigilant approach are crucial for staying ahead of these threats. By understanding the mechanics of prompt injection and implementing robust defense mechanisms, organizations can harness the power of AI more securely and responsibly.`
 
 export default function AiPromptInjectionDefensePage() {
   return (

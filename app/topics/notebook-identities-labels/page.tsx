@@ -8,11 +8,8 @@ export const metadata: Metadata = {
   description: "Learn how to use identity and label item properties in i2 Analyst&amp;apos;s Notebook for effective chart creation.",
 }
 
-const topicContent = `"Learn how to use identity and label item properties in i2 Analyst's Notebook for effective chart creation.",
+const topicContent = `← Back to Analyst's Notebook Learning Path
 
-← Back to Analyst's Notebook Learning Path
-
-# Identities and Labels in Analyst's Notebook
 
 Master the fundamental concepts of identities and labels for effective chart creation and analysis
 
@@ -91,9 +88,7 @@ Effective label and identity management in Analyst's Notebook requires disciplin
 - **Source Attribution:** Every label and identity link should be attributed to its source. When information comes from multiple sources, track which source provided which identifier.
 - **Confidence Scoring:** Use a consistent confidence scale for identity resolution. A rule of thumb: a confirmed phone number linked to a known address scores higher than two individuals using the same type of disposable phone.
 - **Regular Review:** As investigations progress, new information may confirm or challenge existing identity resolutions. Periodically review resolved identities against fresh data.
-- **Deconfliction:** In larger investigations, multiple analysts may be working on the same targets. Centralised identity management prevents duplicated effort and conflicting conclusions.
-
-`
+- **Deconfliction:** In larger investigations, multiple analysts may be working on the same targets. Centralised identity management prevents duplicated effort and conflicting conclusions.`
 
 export default function NotebookidentitieslabelsPage() {
   return (

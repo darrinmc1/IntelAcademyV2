@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Explore advanced techniques in crime series analysis, focusing on predictive modeling for crime forecasting and optimizing resource allocation for law enforcement.",
 }
 
-const topicContent = `"Explore advanced techniques in crime series analysis, focusing on predictive modeling for crime forecasting and optimizing resource allocation for law enforcement.",
-
-## Advanced Crime Series Analysis: Predictive Modeling and Resource Allocation
+const topicContent = `## Advanced Crime Series Analysis: Predictive Modeling and Resource Allocation
 
 In the realm of intelligence analysis, understanding and predicting crime patterns is paramount. Beyond basic trend identification, advanced methodologies delve into predictive modeling and strategic resource allocation, transforming raw data into actionable insights that can proactively combat criminal activity. This lesson focuses on the sophisticated techniques employed to forecast crime series and optimize the deployment of law enforcement resources.
 
@@ -59,8 +57,7 @@ While powerful, predictive crime analysis and resource allocation are fraught wi
 
 ### Conclusion
 
-Advanced crime series analysis, through sophisticated predictive modeling and intelligent resource allocation, offers law enforcement agencies unprecedented capabilities to combat crime. By leveraging temporal and spatial data with advanced analytical techniques, agencies can move towards a more proactive, efficient, and effective approach to public safety. However, the ethical implications must be carefully managed to ensure these powerful tools are used responsibly and equitably.
-`
+Advanced crime series analysis, through sophisticated predictive modeling and intelligent resource allocation, offers law enforcement agencies unprecedented capabilities to combat crime. By leveraging temporal and spatial data with advanced analytical techniques, agencies can move towards a more proactive, efficient, and effective approach to public safety. However, the ethical implications must be carefully managed to ensure these powerful tools are used responsibly and equitably.`
 
 export default function AdvancedCrimeSeriesAnalysisPredictiveModelingResourceAllocationPage() {
   return (

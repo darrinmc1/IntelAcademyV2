@@ -8,11 +8,8 @@ export const metadata: Metadata = {
   description: "Explore the example charts and import specifications provided with i2 Analyst&amp;apos;s Notebook for practice and learning.",
 }
 
-const topicContent = `"Explore the example charts and import specifications provided with i2 Analyst's Notebook for practice and learning.",
+const topicContent = `← Back to Analyst's Notebook Learning Path
 
-← Back to Analyst's Notebook Learning Path
-
-# Example Materials in Analyst's Notebook
 
 Explore the example charts and import specifications provided with i2 Analyst's Notebook
 
@@ -88,9 +85,7 @@ Analyst's Notebook templates standardise the presentation of common entity and l
 
 - **Entity Templates:** Pre-configure standard entity types (Person, Organisation, Location, Event) with the attributes most relevant to your investigation. For example, a Person template might include fields for Name, Alias, DOB, Phone, Email, and Status.
 - **Link Templates:** Standardise how different relationship types are displayed. A phone call link might show duration and frequency; a financial link might show amount and currency.
-- **Chart Templates:** For recurring investigation types (fraud networks, terrorist cells, organised crime groups), create chart templates that pre-populate the analytical framework, saving setup time on each new case.
-
-`
+- **Chart Templates:** For recurring investigation types (fraud networks, terrorist cells, organised crime groups), create chart templates that pre-populate the analytical framework, saving setup time on each new case.`
 
 export default function NotebookexamplematerialsPage() {
   return (

@@ -8,22 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about what is strategic intelligence in intelligence analysis.",
 }
 
-const topicContent = `Breadcrumb,
-BreadcrumbItem,
-BreadcrumbLink,
-BreadcrumbList,
-BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-
-Home
-
-Topics
-
-What is Strategic Intelligence?
-
-# What is Strategic Intelligence?
-
-Strategic intelligence is a specialized form of intelligence focused on providing insights and analysis to
+const topicContent = `Strategic intelligence is a specialized form of intelligence focused on providing insights and analysis to
 support long-term planning and high-level decision making. Unlike tactical intelligence, which addresses
 immediate operational needs, strategic intelligence takes a broader view, examining trends, patterns, and
 developments that may impact an organization or nation over months or years.
@@ -114,9 +99,6 @@ complex and rapidly changing world. By providing insights into long-term trends 
 intelligence enables leaders to make more informed decisions about the future direction of their
 organizations, allocate resources more effectively, and develop robust strategies to address emerging
 challenges and opportunities.
-
-)
-
 ## Defining Strategic Intelligence
 
 Strategic intelligence is intelligence that supports long-term policy, planning, and decision-making at the highest levels of an organisation or government. Unlike tactical intelligence, which addresses immediate operational questions, strategic intelligence provides the contextual understanding that shapes how decision-makers think about the future.
@@ -151,9 +133,7 @@ Common strategic intelligence products include:
 - **National Intelligence Estimates (NIEs):** The highest-level coordinated intelligence assessments in the US system, NIEs represent the consensus judgement of the entire Intelligence Community on a strategic issue.
 - **Strategic Early Warning Reports:** Products that identify emerging threats or opportunities before they become obvious, giving decision-makers time to prepare or respond.
 - **Capability Assessments:** Evaluations of an adversary's military, economic, or technological capabilities over a multi-year timeframe.
-- **Regional Strategic Assessments:** Comprehensive analyses of a country or region's political, economic, and security trajectory, typically produced annually.
-
-`
+- **Regional Strategic Assessments:** Comprehensive analyses of a country or region's political, economic, and security trajectory, typically produced annually.`
 
 export default function WhatisstrategicintelligencePage() {
   return (

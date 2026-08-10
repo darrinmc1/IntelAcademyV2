@@ -8,15 +8,12 @@ export const metadata: Metadata = {
   description: "Learn how to effectively present data in intelligence reports using the right charts, tables, and visual design principles.",
 }
 
-const topicContent = `"Learn how to effectively present data in intelligence reports using the right charts, tables, and visual design principles.",
-
-Data does not speak for itself -- it needs a translator. As an intelligence analyst,
+const topicContent = `Data does not speak for itself -- it needs a translator. As an intelligence analyst,
 your job is to transform raw numbers, frequencies, and patterns into visual stories
 that decision-makers can absorb in seconds. In this lesson, you will learn how to
 choose the right chart type, avoid the cardinal sins of data presentation, and design
 visuals that clarify rather than confuse.
 
-{/* ---- Section 1: Choosing the Right Chart Type ---- */}
 
 The single most important decision in data presentation is choosing the right visual
 format. The wrong chart type can actively mislead your reader, even when the underlying
@@ -62,7 +59,6 @@ When in doubt, ask: "Does my reader need the pattern or the precise numbers?"
 If they need the pattern, use a chart. If they need the numbers, use a table.
 If they need both, use a chart with a supporting data table below it.
 
-{/* ---- Section 2: Design Principles ---- */}
 
 Even the right chart type can mislead if the design is sloppy. Color choices, axis
 scales, and labeling decisions all shape how the reader interprets your data -- for
@@ -103,7 +99,6 @@ Truncating the Y-axis is the data visualization version of "technically correct 
 deeply misleading" -- the kind of thing that gets analysts a quiet talking-to from
 the quality review team.
 
-{/* ---- Section 3: Annotating and Contextualizing ---- */}
 
 A chart without context is just a pretty picture. Annotations transform a visual from
 "interesting" to "actionable" by telling the reader exactly what they should notice
@@ -139,7 +134,6 @@ Use the "five-second rule": show your chart to a colleague for five seconds, the
 take it away. Ask them what the main message was. If they cannot tell you, your
 annotation and design need work.
 
-{/* ---- Section 4: Common Data Presentation Sins ---- */}
 
 Edward Tufte coined the term "chart junk" to describe all the visual clutter that
 adds no information: decorative gridlines, 3D effects, gradient fills, unnecessary
@@ -172,10 +166,7 @@ Always cite where the numbers came from.
 
 Apply the "data-ink ratio" test: what percentage of the ink (or pixels) in your
 chart represents actual data? Remove everything that does not. Gridlines, borders,
-background fills, and decorative elements should be minimized or eliminated.
-
-)
-`
+background fills, and decorative elements should be minimized or eliminated.`
 
 export default function DatapresentationPage() {
   return (

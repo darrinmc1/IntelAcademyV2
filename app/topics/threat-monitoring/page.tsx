@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Master the discipline of continuous threat monitoring - building dashboards, setting tripwires, and avoiding alert fatigue in intelligence operations.",
 }
 
-const topicContent = `"Master the discipline of continuous threat monitoring - building dashboards, setting tripwires, and avoiding alert fatigue in intelligence operations.",
-
-Threat monitoring is the continuous, systematic observation of the operational
+const topicContent = `Threat monitoring is the continuous, systematic observation of the operational
 environment for indicators of emerging threats. It is the intelligence equivalent of
 standing watch - except the horizon never ends, the threats keep evolving, and nobody
 sends a relief shift just because you are tired.
@@ -20,7 +18,6 @@ threat dashboards that actually get used, the art of setting effective tripwires
 how to keep your alert system from crying wolf so often that everybody stops listening.
 By the end, you will understand why monitoring is not just a tool - it is a mindset.
 
-{/* ---- Section 1: Continuous vs. One-Shot ---- */}
 
 A common misconception among new analysts is that threat monitoring means watching
 everything all the time. It does not - and it cannot. Resources are finite, attention
@@ -62,7 +59,6 @@ Define your escalation triggers before you need them. It is easy to promote a th
 to continuous monitoring when you have a clear, pre-agreed criterion. It is harder to
 have that conversation under time pressure while something is already on fire.
 
-{/* ---- Section 2: Building a Threat Dashboard ---- */}
 
 A threat dashboard is only useful if people actually look at it. The history of
 intelligence is littered with beautifully designed dashboards that were opened once,
@@ -101,7 +97,6 @@ thresholds that made sense six months ago may now be either screaming into silen
 complacently missing real threats. If you have not adjusted a threshold in a year,
 you are probably not paying attention.
 
-{/* ---- Section 3: The Tripwire Concept ---- */}
 
 A tripwire is a predefined event or condition that, when observed, triggers an automatic
 escalation in response. Tripwires are the backbone of any effective monitoring system
@@ -149,7 +144,6 @@ What would you change to reduce that risk?
 
 Time: 20 minutes | Tools: Notebook or document
 
-{/* ---- Section 4: Alert Fatigue ---- */}
 
 Alert fatigue is the gradual desensitisation of analysts and decision-makers to warning
 signals caused by an excessive volume of alerts. It is one of the most dangerous
@@ -197,10 +191,7 @@ an actual crisis unfolds at 9 AM. Tune your system. Your analysts have enough pr
 Track your "time to indifference." Measure how long it takes an analyst to stop
 reacting to a new alert type after it is introduced. If the average response time
 drops below 30 seconds within two weeks, you have a noise problem, not an attention
-problem. Fix the signal before you blame the receiver.
-
-)
-`
+problem. Fix the signal before you blame the receiver.`
 
 export default function ThreatmonitoringPage() {
   return (

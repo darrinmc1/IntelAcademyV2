@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to structure the main body of your intelligence reports using chronological, thematic, geographical, and other frameworks.",
 }
 
-const topicContent = `"Learn how to structure the main body of your intelligence reports using chronological, thematic, geographical, and other frameworks.",
-
-The main body is where your analysis lives or dies. You can nail the executive summary and
+const topicContent = `The main body is where your analysis lives or dies. You can nail the executive summary and
 craft perfect key judgments, but if the main body is a disorganized wall of text, your reader
 will lose confidence in your thinking -- even if the thinking is brilliant. This lesson covers
 the four primary organizational structures, when to use each one, how to handle hybrid
@@ -154,9 +152,6 @@ Useful techniques include:
 
 Avoid abrupt topic changes without transitions. If the reader feels a "wait, why are we
 talking about this now?" reaction, you have skipped a transition.
-
-)
-
 ## Structuring the Main Body
 
 The main body of an intelligence report carries the analytical argument from the key judgement to the supporting evidence. Its structure determines whether the consumer follows and accepts the reasoning or becomes confused and disengaged:
@@ -191,9 +186,7 @@ Different types of analytical problems require different structural approaches:
 - **Descriptive Reports:** For reports that describe a situation or event, a chronological or geographic structure works best. Describe what happened, when it happened, where it happened, and who was involved before assessing significance.
 - **Predictive Reports:** For reports that forecast future developments, a structure that presents the assessment, then the supporting evidence, then alternative scenarios works best. The consumer should understand the primary assessment before being presented with alternatives.
 - **Warning Reports:** For warning intelligence, the structure should lead with the warning, then the evidence supporting it, then the time window for action. Warning reports should minimise background and context - if the consumer needs to act in hours, they do not need a history lesson.
-- **Estimative Reports:** For estimates of adversary capabilities or intentions, a structure that presents the key judgement, then the evidence, then alternative explanations, then implications for the consumer, provides the analytical depth estimative consumers need.
-
-`
+- **Estimative Reports:** For estimates of adversary capabilities or intentions, a structure that presents the key judgement, then the evidence, then alternative explanations, then implications for the consumer, provides the analytical depth estimative consumers need.`
 
 export default function MainbodyorganizationPage() {
   return (

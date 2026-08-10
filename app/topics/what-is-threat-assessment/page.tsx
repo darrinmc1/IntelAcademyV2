@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn the fundamentals of threat assessment including the differences between threats, risks, and vulnerabilities, the four-step assessment process, threat actor profiles, and the capability-intent model.",
 }
 
-const topicContent = `"Learn the fundamentals of threat assessment including the differences between threats, risks, and vulnerabilities, the four-step assessment process, threat actor profiles, and the capability-intent model.",
-
-Threat assessment is the systematic process of identifying, characterizing, and evaluating
+const topicContent = `Threat assessment is the systematic process of identifying, characterizing, and evaluating
 threats to determine what could cause harm and how likely that harm is to occur. It is the
 foundation upon which all security decisions are built. Without a proper threat assessment,
 you are guessing -- and guessing is how threats become attacks.
@@ -20,7 +18,6 @@ vulnerability), walk through the four-step assessment process, meet the cast of 
 who might be targeting you, and understand why capability without intent is just expensive
 showmanship.
 
-{/* ---- Section 1: Threat vs. Risk vs. Vulnerability ---- */}
 
 These three terms get thrown around like jargon confetti at an intelligence conference.
 But they mean very different things, and confusing them leads to bad analysis. Let us
@@ -68,7 +65,6 @@ A simple mnemonic: a threat is the wolf, a vulnerability is the unlocked gate, a
 risk is whether the wolf notices the gate and decides dinner is on the other side.
 If any element is missing, the equation changes.
 
-{/* ---- Section 2: Four-Step Process ---- */}
 
 Threat assessment is not staring at a whiteboard and hoping inspiration strikes. It is a
 structured, repeatable process. Think of it as a dance with four moves. You can do them
@@ -107,7 +103,6 @@ Do not skip Step 1 just because you think you already know the threats. Confirma
 bias loves a shortcut. A thorough identification phase often reveals threats that
 everyone assumed were someone else's problem.
 
-{/* ---- Section 3: Threat Actor Profiles ---- */}
 
 Threats do not float around in the abstract. They come from specific actors with specific
 motivations and specific methods. Understanding who is out there is half the assessment.
@@ -149,7 +144,6 @@ data leaks, and doxing. They want an audience more than they want your data.
 Ideological actors are like motivational speakers with malware. They really want you to
 understand their message, and they will crash your website to make sure you do.
 
-{/* ---- Section 4: Capability and Intent ---- */}
 
 This is the core model that separates analytical threat assessment from paranoid
 speculation. A complete threat requires both **capability** (can the actor
@@ -197,7 +191,6 @@ Intent indicators can be subtle -- leadership changes, public statements, shifts
 rhetoric, unusual reconnaissance activity. Watch for the intent shift. Capability
 changes slowly. Intent can change in a press release.
 
-{/* ---- Field Exercise ---- */}
 
 Scenario: Midnight Data Access
 
@@ -213,12 +206,7 @@ actors who could be involved, characterise their capability and intent, evaluate
 risk level, and recommend at least three actions the company should take.
 
 Hint: Consider both insider and external possibilities. The credential was legitimate,
-but that does not mean the person holding it was.
-
-{/* ---- Debrief ---- */}
-
-)
-`
+but that does not mean the person holding it was.`
 
 export default function WhatisthreatassessmentPage() {
   return (

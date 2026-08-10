@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 
 const topicContent = `← Back to Analyst's Notebook Learning Path
 
-# Social Network Analysis
 
 Apply social network analysis techniques to identify key actors and relationships in networks.
 
@@ -104,9 +103,7 @@ SNA moves from academic concept to operational tool through a systematic analyti
 2. **Collect Relationship Data:** Gather all available data about interactions between entities - call records, financial transactions, travel together, shared addresses, communications content.
 3. **Build the Matrix:** Convert relationship data into a matrix where rows and columns are entities and cells indicate the presence, frequency, or strength of a relationship.
 4. **Visualise and Analyse:** Import the matrix into Analyst's Notebook or a dedicated SNA tool. Apply centrality metrics, identify clusters, and look for structural anomalies.
-5. **Interpret and Report:** Translate network metrics into operational judgements. "N32 has the highest betweenness centrality" becomes "N32 appears to be the primary link between the two cells - disrupting this node would fragment communications."
-
-`
+5. **Interpret and Report:** Translate network metrics into operational judgements. "N32 has the highest betweenness centrality" becomes "N32 appears to be the primary link between the two cells - disrupting this node would fragment communications."`
 
 export default function NotebooksocialnetworkanalysisPage() {
   return (

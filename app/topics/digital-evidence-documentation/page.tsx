@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to properly document, preserve, and report on digital evidence for intelligence and legal proceedings.",
 }
 
-const topicContent = `"Learn how to properly document, preserve, and report on digital evidence for intelligence and legal proceedings.",
-
-Digital evidence -- social media posts, emails, server logs, metadata, device images,
+const topicContent = `Digital evidence -- social media posts, emails, server logs, metadata, device images,
 and OSINT screenshots -- forms the backbone of modern intelligence analysis. But
 unlike a physical document in a filing cabinet, digital evidence can be altered,
 deleted, or rendered inadmissible by a single procedural error. This lesson covers the
@@ -215,10 +213,7 @@ The checklist should cover: device identification, write-blocker verification,
 imaging, hash generation and comparison, chain of custody entry, secure storage
 confirmation, and tool/version documentation. Checklists are not a sign of
 inexperience -- they are a sign of professionalism. Pilots use them. Surgeons use
-them. You should too.
-
-)
-`
+them. You should too.`
 
 export default function DigitalevidencedocumentationPage() {
   return (

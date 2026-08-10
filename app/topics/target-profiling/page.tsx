@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Master the art of target profiling - building comprehensive intelligence profiles of persons of interest through structured analysis and confidence-based gap assessment.",
 }
 
-const topicContent = `"Master the art of target profiling - building comprehensive intelligence profiles of persons of interest through structured analysis and confidence-based gap assessment.",
-
-Target profiling is the systematic process of constructing a comprehensive operational
+const topicContent = `Target profiling is the systematic process of constructing a comprehensive operational
 picture of a person of interest - their identity, associations, capabilities, intentions,
 and vulnerabilities. It is not guesswork, not stereotyping, and certainly not the
 dramatised version you have seen on television. It is a structured analytical method
@@ -21,7 +19,6 @@ profile, how to identify and manage gaps in your knowledge, and when your profil
 outlived its usefulness. By the end, you will know how to build a living document that
 informs operations rather than gathering dust in a folder labelled "unsorted."
 
-{/* ---- Section 1: Profiles Are Not Character Assassination ---- */}
 
 Let us clear something up immediately: intelligence target profiling has almost nothing
 in common with what you see on crime procedurals. The FBI profiler who stares at a crime
@@ -59,7 +56,6 @@ Keep a "known unknowns" log alongside your profile. Every time you add a fact,
 note one thing you still do not know. This keeps your ego in check and your collection
 manager employed.
 
-{/* ---- Section 2: The Five-Factor Framework ---- */}
 
 The five-factor framework provides a structured approach to building a target profile.
 These five lenses ensure you cover the critical dimensions of any person of interest
@@ -117,7 +113,6 @@ Lay out the five factors as columns in a simple table. Rate each factor on a sca
 1–5 for both "what we know" and "confidence in what we know." The gap between
 these two scores tells you exactly where to focus your collection efforts.
 
-{/* ---- Section 3: The Empty Chair ---- */}
 
 In target profiling, what you do not know is often more important than what you do know.
 Unacknowledged gaps in your knowledge are the leading cause of operational failures.
@@ -165,7 +160,6 @@ legitimate or illegitimate sources provide the target's primary income?"
 
 Time: 15 minutes | Tools: Notebook, browser for open-source checks
 
-{/* ---- Section 4: Living Documents ---- */}
 
 A target profile is never finished. The moment you declare it complete is the moment it
 begins to decay. Targets move, change jobs, acquire new skills, lose old connections,
@@ -200,10 +194,7 @@ Sometimes an update is not enough. You need to start from scratch when:
 Set a calendar reminder to review every active profile at least once per quarter.
 If the reminder fires and you realise nothing has changed on the target in three
 months, ask yourself: is that because nothing has changed, or because we stopped
-collecting? The answer determines your next move.
-
-)
-`
+collecting? The answer determines your next move.`
 
 export default function TargetprofilingPage() {
   return (

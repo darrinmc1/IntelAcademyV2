@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 
 const topicContent = `← Back to Analyst's Notebook Learning Path
 
-# Creating Entity Relationship Charts
 
 Master the art of making boxes and lines tell stories that would make detective shows jealous.
 
@@ -109,9 +108,6 @@ Timeline Visualization (Time Is A Flat Circle, But Your Chart Shouldn't Be)
 -
 
 Social Network Analysis (Finding the Popular Kids in Criminal Networks)
-
-)
-
 ## What Are Entity-Relationship Charts?
 
 Entity-relationship (ER) charts are a visual analytical tool used to map and analyse the connections between people, organisations, locations, events, and other entities relevant to an intelligence investigation. Unlike generic association charts, ER charts in an intelligence context incorporate analytical weighting, temporal context, and evidentiary standards.
@@ -146,9 +142,7 @@ Common mistakes in ER chart construction and interpretation include:
 
 - **Over-Inclusion:** Including every entity and relationship without analytical triage produces an unreadable chart. Apply the "so what?" test - if removing an entity wouldn't change the analytical picture, consider whether it needs to be in the chart.
 - **Assuming Absence Means Absence:** The absence of a visible connection does not mean no connection exists. It may mean the connection operates through channels not captured in available data - encrypted communications, in-person meetings, or cutout intermediaries.
-- **Presenting Correlation as Causation:** Two entities that both connect to a third entity are not necessarily connected to each other. A correlation in the chart may reflect a common activity rather than a direct relationship.
-
-`
+- **Presenting Correlation as Causation:** Two entities that both connect to a third entity are not necessarily connected to each other. A correlation in the chart may reflect a common activity rather than a direct relationship.`
 
 export default function EntityrelationshipchartsPage() {
   return (

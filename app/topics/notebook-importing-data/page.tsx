@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 
 const topicContent = `← Back to Analyst's Notebook Learning Path
 
-# Importing and Managing Data
 
 Learn how to import data from various sources and manage large datasets effectively.
 
@@ -105,9 +104,7 @@ Even experienced analysts encounter common issues when importing data:
 - **Date Format Mismatches:** Different systems use different date formats (DD/MM/YYYY vs MM/DD/YYYY, Unix timestamps, ISO 8601). Ensure your import settings match the source data format.
 - **Unicode and Special Characters:** Names and locations may include characters that don't translate cleanly between systems. Test imports with a small sample before running a full import.
 - **Duplicate Entities:** If the same person appears in multiple source records with slightly different names ("John Smith" vs "Jon Smith"), the import will create separate entities that must be manually merged.
-- **Missing Link Endpoints:** Relationship data (calls, meetings, transactions) requires both a source and a target. Records missing one endpoint will fail to import as links.
-
-`
+- **Missing Link Endpoints:** Relationship data (calls, meetings, transactions) requires both a source and a target. Records missing one endpoint will fail to import as links.`
 
 export default function NotebookimportingdataPage() {
   return (

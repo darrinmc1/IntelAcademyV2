@@ -8,15 +8,12 @@ export const metadata: Metadata = {
   description: "Learn why all intelligence conclusions must be supported by evidence, how to evaluate sources, and how to build a credible evidence trail.",
 }
 
-const topicContent = `"Learn why all intelligence conclusions must be supported by evidence, how to evaluate sources, and how to build a credible evidence trail.",
-
-In intelligence analysis, a conclusion without evidence is just an opinion -- and
+const topicContent = `In intelligence analysis, a conclusion without evidence is just an opinion -- and
 opinions do not survive peer review, congressional oversight, or the harsh light of
 being wrong. This lesson covers the evidence chain, source evaluation frameworks,
 how to distinguish facts from analytical judgments, and the costly lessons of what
 happens when evidence standards slip.
 
-{/* ---- Section 1: The Evidence Chain ---- */}
 
 Every analytical judgment sits atop a chain of evidence. If any link in that chain is
 weak, missing, or fabricated, the entire conclusion is compromised. Understanding this
@@ -49,7 +46,6 @@ When reviewing your own work, try the "prove it" test: for each analytical
 judgment, ask "What is my evidence?" If you cannot point to specific, cited
 information, the judgment is unsupported and needs either evidence or a caveat.
 
-{/* ---- Section 2: Source Evaluation ---- */}
 
 Not all evidence is created equal. A corroborated signals intelligence intercept
 carries different weight than a single-source rumor from an untested informant. Source
@@ -94,7 +90,6 @@ bad sources agreeing with each other.
 Three unreliable sources confirming each other is not corroboration. It is a book
 club for rumors.
 
-{/* ---- Section 3: Facts vs Judgments ---- */}
 
 One of the most critical skills in evidence-based writing is clearly separating what
 you **know** from what you **think**. Facts are observable and
@@ -136,7 +131,6 @@ Use explicit signpost language: "The evidence indicates..." for facts,
 "We assess that..." for judgments, and "An alternative interpretation is..."
 for competing hypotheses. This transparency builds trust with your reader.
 
-{/* ---- Section 4: The Iraq WMD Lesson ---- */}
 
 No discussion of evidence-based intelligence is complete without acknowledging the
 most consequential evidence failure in modern intelligence history: the 2002 National
@@ -175,10 +169,7 @@ handles evidence:
 Treat every piece of evidence as if it will be scrutinized in a post-mortem
 investigation -- because someday it might be. Document your evidence trail, flag
 your assumptions, and make your confidence level explicit. Your future self (and
-your institution's credibility) will thank you.
-
-)
-`
+your institution's credibility) will thank you.`
 
 export default function EvidencebasedconclusionsPage() {
   return (

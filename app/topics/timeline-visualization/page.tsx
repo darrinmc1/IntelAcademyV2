@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 
 const topicContent = `← Back to Analyst's Notebook Learning Path
 
-# Timeline Visualization
 
 Create temporal analysis charts to visualize events over time and identify patterns.
 
@@ -101,9 +100,7 @@ Modern intelligence analysis relies on specialised timeline tools and techniques
 - **Analyst's Notebook:** IBM i2 Analyst's Notebook provides dedicated timeline visualisation with linked analysis, allowing analysts to connect events, entities, and relationships in a single view.
 - **Maltego:** While primarily a link analysis tool, Maltego's timeline view helps analysts sequence digital relationships and communications patterns.
 - **Custom Spreadsheets:** For many analytical problems, a well-structured spreadsheet with conditional formatting, filters, and sorting provides the most flexible timeline environment.
-- **Gantt-Style Tools:** Project management tools adapted for intelligence analysis can visualise overlapping activities, duration of operations, and resource allocation over time.
-
-`
+- **Gantt-Style Tools:** Project management tools adapted for intelligence analysis can visualise overlapping activities, duration of operations, and resource allocation over time.`
 
 export default function TimelinevisualizationPage() {
   return (

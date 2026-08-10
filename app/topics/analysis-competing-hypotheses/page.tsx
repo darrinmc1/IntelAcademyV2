@@ -8,11 +8,8 @@ export const metadata: Metadata = {
   description: "Master the systematic evaluation of multiple hypotheses to avoid confirmation bias in intelligence analysis.",
 }
 
-const topicContent = `"Master the systematic evaluation of multiple hypotheses to avoid confirmation bias in intelligence analysis.",
+const topicContent = `← Back to Analytical Techniques
 
-← Back to Analytical Techniques
-
-# Analysis of Competing Hypotheses
 
 Or: How to Prove Yourself Wrong in the Most Structured Way Possible
 
@@ -110,9 +107,6 @@ Assumptions Check: Questioning Everything You Hold Dear
 -
 
 Indicators Development: Crystal Ball Not Required
-
-)
-
 ## What is Analysis of Competing Hypotheses?
 
 Analysis of Competing Hypotheses (ACH) is one of the most widely taught structured analytical techniques in the intelligence community. Developed by Richards Heuer, ACH addresses a fundamental cognitive challenge: analysts naturally gravitate toward a single explanation and interpret subsequent evidence to support it. ACH forces the systematic consideration of multiple explanations before evidence is evaluated.
@@ -141,9 +135,7 @@ Even experienced analysts make predictable errors when applying ACH:
 - **Including the Hypothesis You Want to Be True:** Analysts may unconsciously include a favoured hypothesis and then treat the matrix as confirmation. The technique works best when hypotheses are generated before evidence is reviewed.
 - **Neglecting the Null Hypothesis:** The "nothing unusual is happening" hypothesis is often dismissed too quickly. Strategic surprises often occur because analysts rejected the null hypothesis based on ambiguous evidence.
 - **Evidence that Fits Everything:** Generic evidence - "the country has a history of regional tensions" - is consistent with many hypotheses and is not diagnostically useful. ACH works best when evidence is specific and discriminating.
-- **Treating ACH Output as Truth:** ACH is a thinking tool, not a truth machine. The matrix reflects the analyst's current understanding and is limited by the quality and completeness of available evidence.
-
-`
+- **Treating ACH Output as Truth:** ACH is a thinking tool, not a truth machine. The matrix reflects the analyst's current understanding and is limited by the quality and completeness of available evidence.`
 
 export default function AnalysiscompetinghypothesesPage() {
   return (

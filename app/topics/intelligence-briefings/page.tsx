@@ -23,7 +23,6 @@ techniques that separate the briefers from the bore-ers.
 The goal is simple: make your audience remember what you said. Because if they do
 not remember it, they cannot act on it.
 
-{/* ---- Section 1: Briefing vs. Report ---- */}
 
 The single biggest mistake new analysts make is treating a briefing like a spoken
 report. A report and a briefing are fundamentally different communication forms,
@@ -68,7 +67,6 @@ The shortest briefing in history: "Sir, they are coming over the wall." Three se
 
 Write your briefing script like a journalist writes a news article: start with the headline (your key judgment), then the most important details, then the context. If you only have thirty seconds, your audience gets the headline. That is the test.
 
-{/* ---- Section 2: Types of Intelligence Briefings ---- */}
 
 Not all briefings are created equal. The format, depth, and tone of a briefing should
 change based on the audience, the occasion, and the urgency of the intelligence. Here
@@ -120,7 +118,6 @@ in form is punished during time-sensitive operations. Save innovation for the de
 
 The morning brief is the intelligence version of small talk, except instead of discussing the weather, you are discussing which adversary just moved a brigade. Somehow, one of these is still harder to navigate than the other.
 
-{/* ---- Section 3: The Anatomy of a Great Briefing ---- */}
 
 Great briefings do not happen by accident. They are built, piece by piece, with
 deliberate attention to structure, content, and delivery. Here is the anatomy of a
@@ -178,7 +175,6 @@ When preparing Q&A, identify the three hardest questions the audience could ask 
 
 The Q&A session is where analysts discover that their perfectly prepared 20-slide briefing was merely the opening act for a conversation they did not rehearse. The good news: if you know your material, the Q&A is where you actually shine. The bad news: if you do not, it is where the audience finds out.
 
-{/* ---- Section 4: Briefing Delivery - Master the Room ---- */}
 
 Content gets you invited to the briefing. Delivery determines whether you get invited
 back. The best analysis in the world is useless if delivered poorly. Here is how to
@@ -245,10 +241,7 @@ have five minutes maximum.
 - Anticipate one likely hostile question and prepare a one-sentence response.
 
 Bonus challenge: your deputy minister has a reputation for interrupting at 45 seconds.
-Structure your briefing so the most important sentence comes first.
-
-)
-`
+Structure your briefing so the most important sentence comes first.`
 
 export default function IntelligencebriefingsPage() {
   return (

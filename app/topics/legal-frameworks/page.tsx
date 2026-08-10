@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Explore the legal frameworks, statutes, and international laws that govern intelligence activities and define the boundaries of lawful intelligence work.",
 }
 
-const topicContent = `"Explore the legal frameworks, statutes, and international laws that govern intelligence activities and define the boundaries of lawful intelligence work.",
-
-Intelligence operations do not exist in a legal vacuum. Despite what action movies suggest,
+const topicContent = `Intelligence operations do not exist in a legal vacuum. Despite what action movies suggest,
 spies do not operate on a "shoot first, ask for forgiveness never" basis. Every
 intelligence activity - from surveillance to recruitment to analysis - operates within
 a dense web of laws, regulations, and executive orders that define what is allowed, what
@@ -21,7 +19,6 @@ intelligence, understand the oversight ecosystem that enforces compliance, and l
 how to identify when an operation is operating within - or beyond - its legal mandate.
 Because nothing ruins an intelligence career faster than a well-deserved felony charge.
 
-{/* ---- Section 1: Why Intelligence Isn't Just James Bond ---- */}
 
 Popular culture has done intelligence work a disservice. James Bond blows up buildings,
 seduces targets, and drinks martinis while technically on the clock. Real intelligence
@@ -66,7 +63,6 @@ Constitution, not the statute. If the activity would violate a constitutional ri
 if done by a police officer, it likely raises constitutional concerns when done by
 an intelligence agency too - regardless of what the specific statute says.
 
-{/* ---- Section 2: Domestic Legal Frameworks ---- */}
 
 Every country with an intelligence apparatus has some form of domestic legal framework
 governing its activities. These frameworks vary enormously - from comprehensive
@@ -135,7 +131,6 @@ than you'd imagine. There are no hidden panels, no secret handshakes, and
 disappointingly few trench coats. Just judges, lawyers, and a very good
 paper-shredding service.
 
-{/* ---- Section 3: International Law and Intelligence ---- */}
 
 Intelligence activities do not stop at borders - but the law does. International law
 creates a complex operating environment where an activity that is perfectly legal in
@@ -193,7 +188,6 @@ they represent the most authoritative analysis available on how existing legal
 frameworks apply to the digital domain - including intelligence-related cyber
 activities like hacking, surveillance, and data exfiltration.
 
-{/* ---- Section 4: The Oversight Ecosystem ---- */}
 
 Legal frameworks are only as good as the oversight mechanisms that enforce them.
 Without effective oversight, statutory restrictions become suggestions, and
@@ -266,10 +260,7 @@ Your task:
 - Draft a one-paragraph legal analysis explaining whether the operation can proceed and under what conditions.
 
 Hint: The Vienna Convention on Diplomatic Relations and the Fourth Amendment are
-both relevant. And no, you cannot simply call it "national security" and skip the warrant.
-
-)
-`
+both relevant. And no, you cannot simply call it "national security" and skip the warrant.`
 
 export default function LegalframeworksPage() {
   return (

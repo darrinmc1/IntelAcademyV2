@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about what is osint in intelligence analysis.",
 }
 
-const topicContent = `# What is OSINT?
-
-_"Professional internet stalking with a badge and a really good understanding of privacy settings."_
+const topicContent = `_"Professional internet stalking with a badge and a really good understanding of privacy settings."_
 
 OSINT, or Open Source Intelligence, is the practice of collecting and analyzing information that is publicly
 available. This information can come from a variety of sources, including:
@@ -102,9 +100,7 @@ Professional OSINT practitioners use a range of specialised tools to collect, fi
 - **Search Operators:** Advanced Google operators (site:, filetype:, intitle:, inurl:) allow precise targeting of information within specific domains or file formats.
 - **Social Media Analysis Tools:** Tools like Maltego, SpiderFoot, and theHarvester automate the collection of publicly available information about individuals, domains, and organisations.
 - **Image Analysis:** Reverse image search (Google Images, TinEye) and metadata extraction (EXIF data) can reveal the origin, location, and history of photographs.
-- **Archived Content:** Services like the Wayback Machine allow analysts to view historical versions of websites, uncovering content that has since been removed or altered.
-
-`
+- **Archived Content:** Services like the Wayback Machine allow analysts to view historical versions of websites, uncovering content that has since been removed or altered.`
 
 export default function WhatisosintPage() {
   return (

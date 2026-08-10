@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Master the standard sections of an intelligence report -- from executive summary to appendices -- and learn how each component serves the reader.",
 }
 
-const topicContent = `"Master the standard sections of an intelligence report -- from executive summary to appendices -- and learn how each component serves the reader.",
-
-A standardized report structure is not bureaucratic busywork -- it is a contract with your reader.
+const topicContent = `A standardized report structure is not bureaucratic busywork -- it is a contract with your reader.
 Decision-makers who receive dozens of reports a day rely on predictable formats to find the
 information they need fast. This lesson breaks down each standard component, explains its purpose,
 walks through common mistakes, and shows how the pieces work together to create a coherent
@@ -146,9 +144,6 @@ the evidence. When all components align, the reader experiences a smooth flow fr
 When they do not align -- when the executive summary promises something the analysis does
 not deliver, or the key judgments contradict the outlook -- the reader loses trust. Internal
 consistency is not optional.
-
-)
-
 ## Anatomy of an Intelligence Report
 
 Every intelligence report, regardless of type or format, shares common structural components. Understanding these components helps analysts write more effective reports and helps consumers navigate them efficiently:
@@ -183,9 +178,7 @@ Beyond formatting, the structure of an intelligence report reflects the rigour o
 - **Transparency:** The report should make clear how the analyst reached their conclusion. What evidence was considered? What alternative explanations were evaluated? What assumptions were made?
 - **Confidence Communication:** Every assessment should include a confidence statement - high, moderate, or low - that reflects the quality and quantity of supporting evidence. Confidence should be stated explicitly, not implied through hedging language.
 - **Assumption Caveats:** Key assumptions should be identified and their potential impact on the assessment discussed. "This assessment assumes that current economic trends continue. A sharp recession would fundamentally alter the strategic calculus."
-- **Outlier Scenarios:** Acknowledging outlier scenarios - low-probability, high-impact events - demonstrates analytical thoroughness and prepares consumers for possibilities they might not have considered. Outlier scenarios should be clearly labelled as such, not presented as alternative primary assessments.
-
-`
+- **Outlier Scenarios:** Acknowledging outlier scenarios - low-probability, high-impact events - demonstrates analytical thoroughness and prepares consumers for possibilities they might not have considered. Outlier scenarios should be clearly labelled as such, not presented as alternative primary assessments.`
 
 export default function IntelligencereportcomponentsPage() {
   return (

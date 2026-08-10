@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn the essential techniques for developing comprehensive profiles of high-value targets, a critical skill for intelligence analysis.",
 }
 
-const topicContent = `"Learn the essential techniques for developing comprehensive profiles of high-value targets, a critical skill for intelligence analysis.",
-
-## Target Profiling: Developing Profiles of High-Value Targets
+const topicContent = `## Target Profiling: Developing Profiles of High-Value Targets
 
 In the realm of intelligence analysis, understanding your adversary is paramount. Target profiling is a systematic process used to develop a detailed understanding of individuals, groups, or entities that represent significant threats or hold critical information. This process moves beyond simple identification to a deep dive into their characteristics, behaviors, networks, and motivations. Effectively profiling high-value targets (HVTs) is crucial for informing decision-making, mitigating risks, and achieving strategic objectives.
 
@@ -74,8 +72,7 @@ Target profiling is fraught with challenges:
 
 ### Conclusion
 
-Target profiling is an indispensable skill for intelligence analysts. It transforms raw data into a nuanced understanding of HVTs, enabling informed strategic decisions, effective operational planning, and enhanced security. By systematically gathering, analyzing, and synthesizing information across multiple dimensions, analysts can build comprehensive profiles that illuminate the intentions, capabilities, and vulnerabilities of those who pose the greatest challenges.
-`
+Target profiling is an indispensable skill for intelligence analysts. It transforms raw data into a nuanced understanding of HVTs, enabling informed strategic decisions, effective operational planning, and enhanced security. By systematically gathering, analyzing, and synthesizing information across multiple dimensions, analysts can build comprehensive profiles that illuminate the intentions, capabilities, and vulnerabilities of those who pose the greatest challenges.`
 
 export default function TargetProfilingDevelopingProfilesOfHighValueTargetsPage() {
   return (

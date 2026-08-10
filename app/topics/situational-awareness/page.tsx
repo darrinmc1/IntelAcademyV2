@@ -16,7 +16,6 @@ learn the OODA loop framework, how to build a common operating picture, the thre
 levels of SA according to Endsley's model, and the most common failure mode
 that gets analysts killed or outmaneuvered: cognitive tunneling.
 
-{/* ---- Section 1: The OODA Loop ---- */}
 
 Developed by United States Air Force Colonel John Boyd, the OODA loop is the
 foundational framework for decision-making under uncertainty. OODA stands for
@@ -67,7 +66,6 @@ because your actions create disorientation. Feints, decoys, and information
 operations all serve to jam an opponent's Orientation phase. Make them
 observe things that do not make sense.
 
-{/* ---- Section 2: Building a Common Operating Picture ---- */}
 
 A Common Operating Picture (COP) is a shared display of relevant information that
 gives all participants in an operation the same understanding of the situation.
@@ -103,7 +101,6 @@ for 10 seconds, then look away and ask them to describe the situation. If they
 get it mostly right, your COP works. If they describe something unrecognizable,
 redesign it.
 
-{/* ---- Section 3: The Three Levels ---- */}
 
 Dr. Mica Endsley developed the most widely accepted model of situational awareness,
 defining it across three ascending levels. Each level builds on the one before it.
@@ -151,7 +148,6 @@ ones that actually change decisions deliver Level 3. If your report says "we
 saw a thing" without telling anyone what it means or what happens next, you
 are a scribe, not an analyst.
 
-{/* ---- Section 4: Cognitive Tunneling ---- */}
 
 Cognitive tunneling is the single most dangerous failure of situational awareness.
 It occurs when an analyst becomes so focused on one element of the environment that
@@ -219,8 +215,7 @@ Tasks (execute the 90-second scan discipline):
 - Identify what Level 1 information needs immediate re-perception (what is stale?).
 - Comprehend: what does the cell tower signal spike combined with the checkpoint observation suggest at Level 2?
 - Project: what is your Level 3 assessment for the inbound convoy? What would you recommend?
-- What are you most likely missing because the environment is quiet and you have been sitting in the same chair for four hours?
-`
+- What are you most likely missing because the environment is quiet and you have been sitting in the same chair for four hours?`
 
 export default function SituationalawarenessPage() {
   return (

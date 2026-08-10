@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to write strategic intelligence reports for senior policymakers, including NIE formats and long-range assessments.",
 }
 
-const topicContent = `"Learn how to write strategic intelligence reports for senior policymakers, including NIE formats and long-range assessments.",
-
-Strategic intelligence reports address the big questions: Where is this conflict
+const topicContent = `Strategic intelligence reports address the big questions: Where is this conflict
 headed? What are this nation's long-term intentions? How will emerging technologies
 reshape the threat landscape over the next decade? Writing for a strategic audience
 requires you to think in longer time horizons, synthesize across disciplines, and
@@ -182,10 +180,7 @@ Review the IC's past long-range assessments (many are now declassified). Study w
 they got right, what they got wrong, and why. The 1997 assessment "Global Trends
 2010" is a fascinating case study in both the power and the limits of strategic
 forecasting. Learning from past forecasting failures is the best way to make your
-own forecasts less wrong.
-
-)
-`
+own forecasts less wrong.`
 
 export default function StrategicreportsPage() {
   return (

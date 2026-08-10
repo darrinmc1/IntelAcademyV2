@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Understand the systems, institutions, and processes that ensure accountability in intelligence activities, from legislative and executive oversight to international models.",
 }
 
-const topicContent = `"Understand the systems, institutions, and processes that ensure accountability in intelligence activities, from legislative and executive oversight to international models.",
-
-Intelligence agencies are given extraordinary powers - the ability to surveil,
+const topicContent = `Intelligence agencies are given extraordinary powers - the ability to surveil,
 infiltrate, collect, and in some cases, use force. In democratic societies, these
 powers come with a corresponding requirement: robust oversight. Oversight is not
 optional. It is not a suggestion. It is a structural necessity for ensuring that
@@ -23,7 +21,6 @@ about executive oversight mechanisms, congressional oversight, inspectors genera
 and comparative international models. Because in intelligence, the question is not
 whether oversight is necessary - it is whether it is effective.
 
-{/* ---- Section 1: Why Oversight Exists ---- */}
 
 Intelligence oversight exists for two fundamental reasons: to prevent abuse of power
 and to maintain public trust. These two goals are deeply connected. Agencies that
@@ -86,7 +83,6 @@ questions: (1) Does the oversight body have access to the information it needs?
 (2) Does it have the authority to act on what it finds? (3) Does it have the
 political will and resources to do both? A "yes" to all three is rare but essential.
 
-{/* ---- Section 2: Executive Oversight Mechanisms ---- */}
 
 Executive branch oversight operates from within the executive branch itself. While
 critics argue this is the fox watching the henhouse, executive oversight plays a
@@ -151,7 +147,6 @@ Letters, and other surveillance activities. These numbers tell a story about the
 scale and scope of intelligence collection that you cannot get from any other
 public source. Read every edition.
 
-{/* ---- Section 3: Congressional Oversight ---- */}
 
 Congressional oversight of intelligence is arguably the most important check on
 executive power. Congress controls the intelligence budget, confirms senior
@@ -219,7 +214,6 @@ depends on the political will of committee members. When oversight is working
 well, the budget process is a powerful tool for shaping intelligence priorities.
 When it is not, the budget becomes a rubber stamp.
 
-{/* ---- Section 4: International and Comparative Oversight ---- */}
 
 The United States is not the only democracy struggling with intelligence oversight.
 Other countries have developed their own models, each with different strengths and
@@ -338,10 +332,7 @@ Your task:
 
 Hint: The best oversight systems are designed for the worst-case scenario - a
 competent, determined, and well-resourced executive that wants to bypass oversight.
-If your system can survive that, it can survive normal political conditions.
-
-)
-`
+If your system can survive that, it can survive normal political conditions.`
 
 export default function IntelligenceoversightPage() {
   return (

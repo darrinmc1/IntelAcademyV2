@@ -22,7 +22,10 @@ export function EnhancedLessonContent({ content, topic }: EnhancedLessonContentP
   useEffect(() => {
     if (!content) return
 
-    const sections = content.split(/(?=^#{2,3} )/gm)
+    // Defensive: strip leaked JSX comments ({/* ... */}) that may appear in content strings
+    const cleanContent = content.replace(/\{\/\*[\s\S]*?\*\/\}/g, "")
+
+    const sections = cleanContent.split(/(?=^#{2,3} )/gm)
     const processedSections = sections.map((section, sectionIndex) => {
       // Process headings
       const headingMatch = section.match(/^#{2,3} (.*)$/m)

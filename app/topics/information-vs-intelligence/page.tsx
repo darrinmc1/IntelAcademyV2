@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn the critical differences between raw information and processed intelligence, and why this distinction matters for effective analysis.",
 }
 
-const topicContent = `"Learn the critical differences between raw information and processed intelligence, and why this distinction matters for effective analysis.",
-
-In this lesson, you'll learn:
+const topicContent = `In this lesson, you'll learn:
 
 - The fundamental distinction between raw information and processed intelligence
 - How the intelligence cycle transforms data into actionable insights
@@ -305,9 +303,7 @@ analysis.
 The transformation of information into intelligence is what gives analysis its value. While information
 provides the necessary raw material, it is the analytical process that creates the insights needed for
 effective decision-making. Understanding this distinction is fundamental to producing and consuming
-intelligence effectively.
-
-`
+intelligence effectively.`
 
 export default function InformationvsintelligencePage() {
   return (

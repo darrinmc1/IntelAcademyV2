@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "This lesson provides a foundational understanding of link analysis, a crucial intelligence technique for uncovering hidden relationships and patterns within data.",
 }
 
-const topicContent = `"This lesson provides a foundational understanding of link analysis, a crucial intelligence technique for uncovering hidden relationships and patterns within data.",
-
-## Introduction to Link Analysis
+const topicContent = `## Introduction to Link Analysis
 
 In the realm of intelligence gathering and analysis, understanding the connections between entities is paramount. Link analysis is a powerful technique that allows analysts to visualize and explore these relationships, revealing hidden patterns, identifying key players, and understanding complex networks. This lesson will introduce the fundamental concepts of link analysis, its importance, and common methods used.
 
@@ -63,8 +61,7 @@ While specific methodologies vary, a typical link analysis process involves:
 
 ### Conclusion
 
-Link analysis is an indispensable skill for any intelligence professional. By transforming disparate data points into a cohesive network map, analysts can unlock deeper understanding, identify critical threats, and make more informed decisions. Mastering the principles and tools of link analysis is a crucial step in developing robust intelligence capabilities.
-`
+Link analysis is an indispensable skill for any intelligence professional. By transforming disparate data points into a cohesive network map, analysts can unlock deeper understanding, identify critical threats, and make more informed decisions. Mastering the principles and tools of link analysis is a crucial step in developing robust intelligence capabilities.`
 
 export default function IntroductionToLinkAnalysisPage() {
   return (

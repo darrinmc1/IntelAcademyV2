@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Explore structured methods designed to enhance critical thinking and improve the quality of intelligence analysis.",
 }
 
-const topicContent = `"Explore structured methods designed to enhance critical thinking and improve the quality of intelligence analysis.",
-
-## Analytical Techniques for Intelligence Analysts
+const topicContent = `## Analytical Techniques for Intelligence Analysts
 
 In the dynamic world of intelligence, the ability to process vast amounts of information, identify patterns, and generate accurate assessments is paramount. Mere data collection and summarization are insufficient; intelligence analysts must employ structured methodologies to ensure their thinking is rigorous, objective, and less prone to cognitive biases. This lesson delves into several key analytical techniques that can significantly improve the quality and depth of intelligence analysis.
 
@@ -59,8 +57,7 @@ Scenario planning involves developing multiple plausible future states or enviro
 
 ### Implementing SATs in Practice
 
-Integrating these techniques into the daily workflow of an intelligence analyst requires practice and discipline. It's not always about following a rigid, step-by-step process for every piece of analysis. Often, analysts can adapt and combine elements of different techniques. The key is to cultivate a mindset that actively seeks out challenges, questions assumptions, and considers alternative perspectives. Training, peer review, and post-analysis critiques are essential for honing these skills. By consistently applying structured analytical techniques, intelligence analysts can significantly enhance the accuracy, clarity, and utility of their assessments, ultimately providing better support to decision-makers.
-`
+Integrating these techniques into the daily workflow of an intelligence analyst requires practice and discipline. It's not always about following a rigid, step-by-step process for every piece of analysis. Often, analysts can adapt and combine elements of different techniques. The key is to cultivate a mindset that actively seeks out challenges, questions assumptions, and considers alternative perspectives. Training, peer review, and post-analysis critiques are essential for honing these skills. By consistently applying structured analytical techniques, intelligence analysts can significantly enhance the accuracy, clarity, and utility of their assessments, ultimately providing better support to decision-makers.`
 
 export default function AnalyticalTechniquesForIntelAnalystsPage() {
   return (

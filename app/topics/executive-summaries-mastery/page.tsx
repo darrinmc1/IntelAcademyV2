@@ -8,15 +8,12 @@ export const metadata: Metadata = {
   description: "Master the art of writing executive summaries using BLUF technique, the elevator pitch test, and before-and-after examples.",
 }
 
-const topicContent = `"Master the art of writing executive summaries using BLUF technique, the elevator pitch test, and before-and-after examples.",
-
-The executive summary is where your analysis lives or dies. For senior leaders
+const topicContent = `The executive summary is where your analysis lives or dies. For senior leaders
 juggling dozens of reports, briefings, and crises, your executive summary may be the
 only thing they read. This lesson covers the BLUF technique in depth, the elevator
 pitch test, what to include and what to ruthlessly exclude, and the common disasters
 that turn executive summaries into executive paperweights.
 
-{/* ---- Section 1: BLUF Technique ---- */}
 
 BLUF is the single most important writing technique in intelligence communication.
 Borrowed from military communication, it means placing your most critical conclusion
@@ -59,7 +56,6 @@ Bottom line, timeframe, confidence, and stakes -- all in two sentences.
 Writing without BLUF is like telling a joke and saving the punchline for the appendix.
 Your audience has already left the room.
 
-{/* ---- Section 2: The Elevator Pitch Test ---- */}
 
 Imagine you step into an elevator with the person who commissioned your report. You
 have 30 seconds before the doors open on their floor. Can you deliver the core message
@@ -82,7 +78,6 @@ Practice the elevator pitch out loud before you write. If you can say it clearly
 in conversation, you can write it clearly on the page. If you stumble, your thinking
 is not yet sharp enough.
 
-{/* ---- Section 3: What to Include vs Exclude ---- */}
 
 The executive summary is an exercise in ruthless prioritization. For every sentence
 you include, you must justify its presence. If it does not directly serve the
@@ -123,7 +118,6 @@ you have already lost.
 Think of the executive summary as a movie trailer. It shows the explosions and the
 plot twist. It does not show the craft services table or the gaffer's lighting setup.
 
-{/* ---- Section 4: Common Executive Summary Disasters ---- */}
 
 After years of reviewing intelligence products, certain failure patterns appear again
 and again. Here are the most common ways analysts sabotage their own executive
@@ -181,10 +175,7 @@ Key judgment, confidence, timeframe, implication, and second-order effect.
 
 Write the executive summary last, after the entire report is complete. You cannot
 distill what you have not yet fully understood. Then, read it the next morning with
-fresh eyes. If the first sentence does not deliver the bottom line, rewrite it.
-
-)
-`
+fresh eyes. If the first sentence does not deliver the bottom line, rewrite it.`
 
 export default function ExecutivesummariesmasteryPage() {
   return (

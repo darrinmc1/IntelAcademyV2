@@ -143,9 +143,6 @@ Distinguishing between genuine content and misinformation, fake accounts, or man
 Develop a systematic approach to SOCMINT collection by creating standardized templates and checklists. This
 ensures consistency and completeness in your investigations while reducing the risk of missing important
 information.
-
-)
-
 ## What Is SOCMINT?
 
 Social Media Intelligence (SOCMINT) is the collection and analysis of information from social media platforms for intelligence purposes. As social media has become a primary channel for human communication, SOCMINT has evolved from a niche OSINT subset to a core intelligence discipline in its own right - often generating insights unavailable through any other collection method.
@@ -180,9 +177,7 @@ SOCMINT operates in a complex ethical and legal environment that analysts must n
 - **Public vs. Private Information:** SOCMINT collects publicly available information - content shared without privacy restrictions. However, the distinction between public and private is increasingly blurry on social media. Information that is technically public (a Facebook post shared with "Friends") may be shared with an expectation of limited visibility.
 - **Platform Terms of Service:** Collecting social media data may violate platform terms of service, even when the information is publicly accessible. Analysts must understand the terms of service governing each platform and ensure their collection methods are authorised.
 - **Attribution Risks:** SOCMINT analysts may identify individuals who did not intend to be identified, creating risks of harassment, prosecution, or physical harm. Responsible SOCMINT practice includes minimising the collection and retention of personally identifiable information that is not directly relevant to the intelligence requirement.
-- **Operational Security:** SOCMINT collection activities may be detected by adversaries, particularly when monitoring accounts associated with threat actors. Analysts should use operational security measures appropriate to the threat environment, including anonymised collection platforms and careful management of their digital footprint.
-
-`
+- **Operational Security:** SOCMINT collection activities may be detected by adversaries, particularly when monitoring accounts associated with threat actors. Analysts should use operational security measures appropriate to the threat environment, including anonymised collection platforms and careful management of their digital footprint.`
 
 export default function SocminttechniquesPage() {
   return (

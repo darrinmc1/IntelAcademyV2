@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Explore sophisticated methodologies for analyzing crime series, moving beyond basic pattern recognition to understand complex temporal and spatial relationships.",
 }
 
-const topicContent = `"Explore sophisticated methodologies for analyzing crime series, moving beyond basic pattern recognition to understand complex temporal and spatial relationships.",
-
-## Advanced Crime Series Analysis Techniques
+const topicContent = `## Advanced Crime Series Analysis Techniques
 
 Crime series analysis is a critical component of intelligence work, aiming to identify patterns, predict future events, and inform resource allocation. While introductory methods focus on identifying clusters and simple temporal trends, advanced techniques delve deeper into the intricate relationships that define and drive criminal activity over time and space. This module explores these sophisticated methodologies, equipping analysts with the tools to uncover nuanced insights.
 
@@ -44,8 +42,7 @@ The ultimate goal of advanced analysis is often prediction.
 *   **Interpretability:** Complex machine learning models can sometimes be 'black boxes,' making it challenging to explain their predictions. Analysts must strive for interpretability to build trust and facilitate action.
 *   **Ethical Implications:** Predictive policing and advanced crime analysis raise ethical concerns regarding bias, privacy, and potential for over-surveillance. Responsible application is paramount.
 
-By mastering these advanced techniques, intelligence analysts can move beyond descriptive analysis to develop a deeper, predictive understanding of crime series, ultimately enhancing public safety and security.
-`
+By mastering these advanced techniques, intelligence analysts can move beyond descriptive analysis to develop a deeper, predictive understanding of crime series, ultimately enhancing public safety and security.`
 
 export default function AdvancedCrimeSeriesAnalysisTechniquesPage() {
   return (

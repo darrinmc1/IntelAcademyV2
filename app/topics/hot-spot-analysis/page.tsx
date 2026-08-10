@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to identify, classify, and analyze crime hot spots using spatial statistics, temporal patterns, and repeat victimization theory.",
 }
 
-const topicContent = `"Learn how to identify, classify, and analyze crime hot spots using spatial statistics, temporal patterns, and repeat victimization theory.",
-
-Crime is not random. It clusters in space and time, and understanding where and when
+const topicContent = `Crime is not random. It clusters in space and time, and understanding where and when
 these clusters form is one of the most powerful tools in a crime analyst's arsenal.
 Hot spot analysis moves beyond simple pin-mapping into statistical methods that
 separate signal from noise. In this lesson, you will learn to identify the three
@@ -19,7 +17,6 @@ analytical problems, factor temporal patterns into your spatial analysis, and re
 when the same victims keep appearing - because that is where the next crime is most
 likely to occur.
 
-{/* ---- Section 1: Hot Spot Types ---- */}
 
 Before you run a single statistical test, you need to understand what you are looking
 for. Crime hot spots fall into three broad categories, each requiring a different
@@ -72,7 +69,6 @@ diffuse hot spot produces dozens of "non-significant" local results and zero
 actionable intelligence. Applying KDE to a tight cluster produces a blob that is
 too broad to patrol. Match the method to the pattern.
 
-{/* ---- Section 2: KDE vs. Gi* ---- */}
 
 Two statistical methods dominate modern hot spot analysis: Kernel Density Estimation
 (KDE) and the Getis-Ord Gi* statistic (pronounced "G-I-star"). They answer different
@@ -123,7 +119,6 @@ Presenting a KDE map without a Gi* confirmation is an analytical flex that will 
 survive a peer review. Presenting Gi* results without a KDE map is a presentation
 that will put an entire command staff to sleep. Always bring both.
 
-{/* ---- Section 3: Temporal Blindness ---- */}
 
 One of the most common mistakes in hot spot analysis is spatial narcissism: treating
 crime patterns as if time does not matter. A hot spot that blazes at 2 a.m. on a
@@ -172,7 +167,6 @@ simple bar chart of incident counts by hour of day and day of week tells you whe
 to set your temporal slices. If the bar chart is flat across all hours, skip
 temporal segmentation - but that almost never happens.
 
-{/* ---- Section 4: Repeat Victimization Trap ---- */}
 
 One of the most robust findings in criminology is the near-repeat victimization
 pattern: once a location or person has been victimized, the risk of future
@@ -246,10 +240,7 @@ it."
 **Identify at least four analytical errors in this summary.** For each
 error, explain what should have been done differently. Consider: spatial method
 selection, temporal segmentation, aggregation, repeat victimization, and the
-relationship between exploratory and confirmatory analysis.
-
-)
-`
+relationship between exploratory and confirmatory analysis.`
 
 export default function HotspotanalysisPage() {
   return (

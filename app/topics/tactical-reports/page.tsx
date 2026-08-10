@@ -8,37 +8,8 @@ export const metadata: Metadata = {
   description: "Learn how to write tactical intelligence reports to support immediate operations.",
 }
 
-const topicContent = `Breadcrumb,
-BreadcrumbItem,
-BreadcrumbLink,
-BreadcrumbList,
-BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Card, CardContent } from "@/components/ui/card"
-import { StaticImage } from "@/components/static-image"
-import { WhatsNext } from "@/components/whats-next"
+const topicContent = `Learn how to write tactical intelligence reports to support immediate operations and decision-making.
 
-export const metadata: Metadata = {
-title: "Tactical Reports | The Intel Analyst Academy",
-description: "Learn how to write tactical intelligence reports to support immediate operations.",
-
-Home
-
-Topics
-
-Report Writing
-
-Tactical Reports
-
-Back to Report Writing
-
-# Tactical Reports
-
-Learn how to write tactical intelligence reports to support immediate operations and decision-making.
-
-45 minutes
-
-Intermediate
 
 ## What You'll Learn
 
@@ -108,9 +79,7 @@ Tactical intelligence is only useful if it reaches the right consumer at the rig
 
 - **Digital Dissemination:** Modern tactical reporting systems deliver intelligence directly to handheld devices and vehicle-mounted terminals in near real-time.
 - **Verbal Briefings:** For time-critical tactical intelligence, a verbal briefing delivered face-to-face or over encrypted voice channels may precede the written report.
-- **Classification and Caveats:** Tactical reports often contain sensitive sources or methods. Proper classification, handling instructions, and dissemination restrictions protect both the intelligence and the sources who provided it.
-
-`
+- **Classification and Caveats:** Tactical reports often contain sensitive sources or methods. Proper classification, handling instructions, and dissemination restrictions protect both the intelligence and the sources who provided it.`
 
 export default function TacticalreportsPage() {
   return (
