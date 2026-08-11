@@ -1,6 +1,6 @@
 // Topics catalog — single source of truth for the /topics grid and homepage "Latest Intel".
-// The IntelAcademy Lesson Publisher prepends new topics after "const topics = ["
-// (see n8n workflow EBwuLh3qffH3v0JC). Each entry carries dateAdded (creation
+// The IntelAcademy Lesson Publisher (n8n workflow EBwuLh3qffH3v0JC) prepends new
+// topics right after the array opening below. Each entry carries dateAdded (creation
 // date of the topic page) so the homepage can show genuinely recent content.
 export const topics = [
   {
