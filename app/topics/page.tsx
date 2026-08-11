@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Intelligence Processing Fundamentals",
+    description: "An introduction to the core concepts and stages of intelligence processing, essential for any aspiring intelligence analyst.",
+    image: "/intelligence-processing-fundamentals.png",
+    href: "/topics/intelligence-processing-fundamentals",
+    category: "Intelligence Analysis",
+    estimatedTime: "10 min",
+    completed: false,
+    learningObjectives: [
+      "Define the core stages of the intelligence cycle.",
+      "Identify key activities involved in processing raw information.",
+      "Recognize common challenges in intelligence processing.",
+    ],
+  },
+  {
     title: "Strategic Intelligence: A Refined Concept",
     description: "This lesson revisits the core concept of strategic intelligence, breaking down complex ideas into digestible sections for enhanced understanding and application.",
     image: "/strategic-intelligence-concept-revisited.png",
