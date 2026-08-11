@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Intelligence Processing: Transforming Raw Data into Actionable Insights",
+    description: "Explore the critical steps involved in intelligence processing, from data collection and evaluation to analysis and dissemination, to transform raw information into actionable insights.",
+    image: "/intelligence-processing-transforming-raw-data-into-actionable-insights.png",
+    href: "/topics/intelligence-processing-transforming-raw-data-into-actionable-insights",
+    category: "Intelligence Analysis",
+    estimatedTime: "15 min",
+    completed: false,
+    learningObjectives: [
+      "Identify the key stages of the intelligence processing.",
+      "Recognize the challenges inherent in transforming raw data into usable information.",
+      "Understand the role of technology in modern intelligence processing.",
+    ],
+  },
+  {
     title: "The Intelligence Cycle: From Raw Data to Actionable Insights",
     description: "An in-depth exploration of the intelligence cycle, detailing its stages from raw data collection to the delivery of actionable insights for decision-making.",
     image: "/the-intelligence-cycle-from-raw-data-to-actionable-insights.png",
