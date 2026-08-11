@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Intelligence Analysis Fundamentals",
+    description: "An introductory guide to the core principles and methodologies of intelligence analysis, covering the intelligence cycle, analytical frameworks, and critical thinking.",
+    image: "/intelligence-analysis-fundamentals.png",
+    href: "/topics/intelligence-analysis-fundamentals",
+    category: "Intelligence Studies",
+    estimatedTime: "10 min",
+    completed: false,
+    learningObjectives: [
+      "Understand the stages of the intelligence cycle.",
+      "Identify key analytical frameworks and techniques.",
+      "Recognize the importance of critical thinking in analysis.",
+    ],
+  },
+  {
     title: "Intelligence Processing Fundamentals",
     description: "An introduction to the core concepts and stages of intelligence processing, essential for any aspiring intelligence analyst.",
     image: "/intelligence-processing-fundamentals.png",
