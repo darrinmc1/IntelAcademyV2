@@ -4,6 +4,21 @@
 // date of the topic page) so the homepage can show genuinely recent content.
 export const topics = [
   {
+    title: "Handling Parse Errors in Data Analysis",
+    description: "Learn essential techniques for identifying, diagnosing, and resolving parse errors encountered during data analysis, ensuring data integrity and accurate insights.",
+    image: "/parse-error-handling-in-data-analysis.png",
+    href: "/topics/parse-error-handling-in-data-analysis",
+    category: "Data Analysis",
+    estimatedTime: "15 min",
+    completed: false,
+    dateAdded: "2026-08-11",
+    learningObjectives: [
+      "Identify common sources of data parsing errors.",
+      "Implement strategies for detecting parse errors in datasets.",
+      "Apply techniques to clean and resolve data parsing issues.",
+    ],
+  },
+  {
     title: "Navigating Learning Paths on Intel Academy",
     dateAdded: "2026-08-11",
     description: "Discover how to effectively utilize Intel Academy's curated learning paths to structure your cybersecurity education and achieve your professional goals.",
