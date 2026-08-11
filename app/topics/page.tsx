@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "The Intelligence Cycle: From Raw Data to Actionable Insights",
+    description: "An in-depth exploration of the intelligence cycle, detailing its stages from raw data collection to the delivery of actionable insights for decision-making.",
+    image: "/the-intelligence-cycle-from-raw-data-to-actionable-insights.png",
+    href: "/topics/the-intelligence-cycle-from-raw-data-to-actionable-insights",
+    category: "Intelligence Analysis",
+    estimatedTime: "15 min",
+    completed: false,
+    learningObjectives: [
+      "Describe the five stages of the intelligence cycle.",
+      "Explain the purpose and key activities of each stage.",
+      "Recognize the iterative and continuous nature of the intelligence cycle.",
+    ],
+  },
+  {
     title: "Intelligence Analysis Fundamentals",
     description: "An introductory guide to the core principles and methodologies of intelligence analysis, covering the intelligence cycle, analytical frameworks, and critical thinking.",
     image: "/intelligence-analysis-fundamentals.png",
