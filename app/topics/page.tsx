@@ -7,6 +7,20 @@ import { Grid3X3, List } from "lucide-react"
 
 const topics = [
   {
+    title: "Navigating Learning Paths on Intel Academy",
+    description: "Discover how to effectively utilize Intel Academy's curated learning paths to structure your cybersecurity education and achieve your professional goals.",
+    image: "/learning-paths.png",
+    href: "/topics/learning-paths",
+    category: "Cybersecurity Education",
+    estimatedTime: "10 min",
+    completed: false,
+    learningObjectives: [
+      "Understand the purpose and benefits of learning paths.",
+      "Locate and navigate learning paths on the Intel Academy platform.",
+      "Develop a strategy for following a learning path effectively.",
+    ],
+  },
+  {
     title: "Intelligence Processing: Transforming Raw Data into Actionable Insights",
     description: "Explore the critical steps involved in intelligence processing, from data collection and evaluation to analysis and dissemination, to transform raw information into actionable insights.",
     image: "/intelligence-processing-transforming-raw-data-into-actionable-insights.png",
