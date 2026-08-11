@@ -4,21 +4,6 @@
 // date of the topic page) so the homepage can show genuinely recent content.
 export const topics = [
   {
-    title: "The Coffee-Powered Analyst: A Caffeinated Approach to Intelligence",
-    description: "Why intelligence analysts run on coffee and what the rest of the office pretends not to notice. A lighthearted look at the most important classified substance in the IC: caffeine.",
-    image: "/hermes-image-test.png",
-    href: "/topics/hermes-image-test",
-    category: "Analysis",
-    estimatedTime: "5 min",
-    completed: false,
-    dateAdded: "2026-08-11",
-    learningObjectives: [
-      "Appreciate the role of caffeine in intelligence work",
-      "Identify the three stages of the caffeine intelligence cycle",
-      "Practice mug-based situational awareness",
-    ],
-  },
-  {
     title: "Navigating Learning Paths on Intel Academy",
     dateAdded: "2026-08-11",
     description: "Discover how to effectively utilize Intel Academy's curated learning paths to structure your cybersecurity education and achieve your professional goals.",
