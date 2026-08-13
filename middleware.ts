@@ -21,6 +21,9 @@ const BLOCKED_BOTS = [
 // Paths that are safe from rate limiting (static assets)
 const SAFE_PATHS = ["/_next/", "/favicon", "/og-image", "/opengraph", "/icon"]
 
+// Answer-engine surfaces: allow crawlers to read pricing, FAQs, and the brief tool.
+const AEO_PATHS = ["/llm.txt", "/llms.txt", "/pricing", "/pricing.json", "/faq", "/tools/academy-brief"]
+
 // Simple in-memory rate limiter
 const rateLimit = new Map<string, { count: number; resetAt: number }>()
 const RATE_LIMIT_WINDOW = 60_000 // 1 minute
@@ -77,18 +80,22 @@ export async function middleware(request: NextRequest) {
   }
 
   const response = NextResponse.next()
+  const isAeoPath = AEO_PATHS.some((path) => url === path || url.startsWith(`${path}/`))
 
   // === 1. Security Headers ===
-  response.headers.set("X-Robots-Tag", "noai, noimageai")
   response.headers.set("X-Content-Type-Options", "nosniff")
   response.headers.set("X-Frame-Options", "DENY")
   response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin")
   response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()")
+  if (!isAeoPath) {
+    response.headers.set("X-Robots-Tag", "noai, noimageai")
+  }
 
-  // === 2. Block known AI crawlers / scrapers ===
+  // === 2. Block known AI crawlers / scrapers (AEO paths stay readable) ===
   const uaLower = userAgent.toLowerCase()
   for (const bot of BLOCKED_BOTS) {
     if (uaLower.includes(bot.toLowerCase())) {
+      if (isAeoPath) break
       if (url.startsWith("/api/") || url.startsWith("/admin/")) {
         return new NextResponse("Forbidden", { status: 403 })
       }

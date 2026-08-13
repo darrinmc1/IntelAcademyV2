@@ -29,6 +29,10 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-white tracking-wide border-b border-white/10 pb-2 inline-block">Resources</h3>
             <ul className="space-y-3">
+              <li><Link href="/tools/academy-brief" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">Academy Brief</Link></li>
+              <li><Link href="/tools" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">Analyst Tools</Link></li>
+              <li><Link href="/pricing" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">Pricing</Link></li>
+              <li><Link href="/faq" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">FAQs</Link></li>
               <li><Link href="/downloads" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">Downloads</Link></li>
               <li><Link href="/forum" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">Community Forum</Link></li>
               <li><Link href="/about" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">About Us</Link></li>

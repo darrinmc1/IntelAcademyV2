@@ -16,6 +16,12 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/coming-soon`,    priority: 0.3, changeFrequency: "monthly" },
   { url: `${BASE_URL}/request-topic`,  priority: 0.5, changeFrequency: "monthly" },
   { url: `${BASE_URL}/search`,         priority: 0.4, changeFrequency: "monthly" },
+  { url: `${BASE_URL}/tools`,          priority: 0.8, changeFrequency: "weekly"  },
+  { url: `${BASE_URL}/tools/academy-brief`, priority: 0.9, changeFrequency: "weekly" },
+  { url: `${BASE_URL}/pricing`,        priority: 0.8, changeFrequency: "weekly"  },
+  { url: `${BASE_URL}/faq`,            priority: 0.7, changeFrequency: "weekly"  },
+  { url: `${BASE_URL}/llm.txt`,        priority: 0.8, changeFrequency: "weekly"  },
+  { url: `${BASE_URL}/pricing.json`,   priority: 0.7, changeFrequency: "weekly"  },
 ]
 
 const TOPIC_SLUGS = [

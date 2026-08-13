@@ -33,6 +33,11 @@
     "cert_master": {
       "price": 199.00,
       "stripePriceId": "price_UPDATE_AFTER_STRIPE_SETUP"
+    },
+    "academy_brief_monthly": {
+      "price": 29.00,
+      "includedIn": ["pro_monthly", "pro_yearly"],
+      "stripePriceId": "price_UPDATE_AFTER_STRIPE_SETUP"
     }
   },
   "points": {

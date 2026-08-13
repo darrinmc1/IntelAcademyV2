@@ -589,3 +589,5 @@ export const topics = [
     ],
   },
 ];
+
+export type CatalogTopic = (typeof topics)[number]
