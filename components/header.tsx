@@ -88,7 +88,7 @@ export function Header() {
     {
       id: "resources",
       label: "Resources",
-      active: pathname === "/downloads" || pathname === "/forum" || pathname.startsWith("/forum/"),
+      active: pathname === "/downloads" || pathname === "/forum" || pathname.startsWith("/forum/") || pathname.startsWith("/tools") || pathname === "/pricing",
       hasDropdown: true,
     },
     {
@@ -134,6 +134,8 @@ export function Header() {
               <nav className="flex flex-col gap-2">
                 <Link href="/" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Home</Link>
                 <Link href="/learning-paths" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Learning Paths</Link>
+                <Link href="/tools/academy-brief" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Academy Brief</Link>
+                <Link href="/tools" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Analyst Tools</Link>
                 <Link href="/downloads" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Downloads</Link>
                 <Link href="/about" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">About</Link>
                 <Link href="/categories" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Categories</Link>
@@ -188,11 +190,20 @@ export function Header() {
                       )}
                       {item.id === "resources" && (
                         <>
+                          <Link href="/tools/academy-brief" className="block px-4 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-cyan-400 transition-colors" onClick={closeDropdowns}>
+                            Academy Brief
+                          </Link>
+                          <Link href="/tools" className="block px-4 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-cyan-400 transition-colors" onClick={closeDropdowns}>
+                            Analyst Tools
+                          </Link>
                           <Link href="/downloads" className="block px-4 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-cyan-400 transition-colors" onClick={closeDropdowns}>
                             Downloads
                           </Link>
                           <Link href="/forum" className="block px-4 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-cyan-400 transition-colors" onClick={closeDropdowns}>
                             Forum
+                          </Link>
+                          <Link href="/pricing" className="block px-4 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-cyan-400 transition-colors" onClick={closeDropdowns}>
+                            Pricing
                           </Link>
                         </>
                       )}
