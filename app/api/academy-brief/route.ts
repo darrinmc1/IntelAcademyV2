@@ -88,7 +88,7 @@ export async function POST(req: NextRequest) {
 
   const body = await req.json().catch(() => ({}))
   const checked = validateDump(body?.dump)
-  if (!checked.ok) {
+  if (checked.ok === false) {
     return NextResponse.json({ error: checked.error }, { status: 400 })
   }
 
