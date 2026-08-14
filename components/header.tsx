@@ -134,6 +134,7 @@ export function Header() {
               <nav className="flex flex-col gap-2">
                 <Link href="/" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Home</Link>
                 <Link href="/learning-paths" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Learning Paths</Link>
+                <Link href="/pricing" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Pricing</Link>
                 <Link href="/tools/academy-brief" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Academy Brief</Link>
                 <Link href="/tools" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Analyst Tools</Link>
                 <Link href="/downloads" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Downloads</Link>
