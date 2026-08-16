@@ -4,6 +4,21 @@
 // date of the topic page) so the homepage can show genuinely recent content.
 export const topics = [
   {
+    title: "Deep Web Research for Intelligence Analysts",
+    description: "A comprehensive guide for intelligence analysts on how to safely and effectively research the deep web, covering tools, techniques, and ethical considerations.",
+    image: "/deep-web-research-for-intel-analysts.png",
+    href: "/topics/deep-web-research-for-intel-analysts",
+    category: "Intelligence Analysis",
+    estimatedTime: "15 min",
+    completed: false,
+    dateAdded: "2026-08-16",
+    learningObjectives: [
+      "Differentiate between the deep web and the dark web.",
+      "Identify key tools and techniques for deep web research.",
+      "Understand the ethical and security considerations for intelligence analysts.",
+    ],
+  },
+  {
     title: "Navigating Learning Paths on Intel Academy",
     dateAdded: "2026-08-11",
     description: "Discover how to effectively utilize Intel Academy's curated learning paths to structure your cybersecurity education and achieve your professional goals.",
