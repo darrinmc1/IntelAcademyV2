@@ -4,6 +4,21 @@
 // date of the topic page) so the homepage can show genuinely recent content.
 export const topics = [
   {
+    title: "Fixing Repeated Content Headers in Intelligence Decision Making Pages",
+    description: "A guide for Intel Analyst Academy website administrators on how to resolve issues with repeated content headers on specific topic pages, using the 'Intelligence Decision Making' page as a case study.",
+    image: "/intelligence-decision-making-header-fix.png",
+    href: "/topics/intelligence-decision-making-header-fix",
+    category: "Web Development",
+    estimatedTime: "15 min",
+    completed: false,
+    dateAdded: "2026-08-16",
+    learningObjectives: [
+      "Identify common causes of repeated content headers on websites.",
+      "Apply a systematic troubleshooting process to resolve header duplication issues.",
+      "Understand basic steps for inspecting theme and template configurations.",
+    ],
+  },
+  {
     title: "Deep Web Research for Intelligence Analysts",
     description: "A comprehensive guide for intelligence analysts on how to safely and effectively research the deep web, covering tools, techniques, and ethical considerations.",
     image: "/deep-web-research-for-intel-analysts.png",
