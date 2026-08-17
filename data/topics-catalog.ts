@@ -4,6 +4,21 @@
 // date of the topic page) so the homepage can show genuinely recent content.
 export const topics = [
   {
+    title: "Strategic Intelligence: Expanding PESTLE Analysis for a Dynamic World",
+    description: "Explore the limitations of traditional PESTLE analysis and learn how to expand it with crucial technological, legal, and environmental considerations for a more comprehensive strategic intelligence framework.",
+    image: "/strategic-intelligence-expanding-pestle-analysis-dynamic-world.png",
+    href: "/topics/strategic-intelligence-expanding-pestle-analysis-dynamic-world",
+    category: "Strategic Intelligence",
+    estimatedTime: "15 min",
+    completed: false,
+    dateAdded: "2026-08-17",
+    learningObjectives: [
+      "Identify limitations of traditional PESTLE analysis.",
+      "Analyze the impact of specific technological trends on business strategy.",
+      "Evaluate evolving legal and environmental factors for comprehensive risk assessment.",
+    ],
+  },
+  {
     title: "PESTLE Analysis: Incorporating the Technological Element",
     description: "Learn how to effectively integrate the Technological element into your PESTLE analysis, focusing on R&D spending and its impact.",
     image: "/pestle-analysis-technological-element.png",
