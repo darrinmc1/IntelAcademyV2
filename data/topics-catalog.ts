@@ -4,6 +4,21 @@
 // date of the topic page) so the homepage can show genuinely recent content.
 export const topics = [
   {
+    title: "PESTLE Analysis: Incorporating the Technological Element",
+    description: "Learn how to effectively integrate the Technological element into your PESTLE analysis, focusing on R&D spending and its impact.",
+    image: "/pestle-analysis-technological-element.png",
+    href: "/topics/pestle-analysis-technological-element",
+    category: "Business Strategy",
+    estimatedTime: "10 min",
+    completed: false,
+    dateAdded: "2026-08-17",
+    learningObjectives: [
+      "Identify key aspects of the Technological element in PESTLE analysis.",
+      "Understand the significance of R&D spending in technological forecasting.",
+      "Apply technological insights to strategic decision-making.",
+    ],
+  },
+  {
     title: "Fixing Repeated Content Headers in Intelligence Decision Making Pages",
     description: "A guide for Intel Analyst Academy website administrators on how to resolve issues with repeated content headers on specific topic pages, using the 'Intelligence Decision Making' page as a case study.",
     image: "/intelligence-decision-making-header-fix.png",
