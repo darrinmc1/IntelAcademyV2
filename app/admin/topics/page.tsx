@@ -142,7 +142,7 @@ const mockTopics: MainTopic[] = [
       {
         id: 301,
         title: "Tactical Intelligence Concept",
-        slug: "tactical-intelligence-concept",
+        slug: "what-is-tactical-intelligence",
         description: "Core concepts of tactical intelligence",
         status: "published",
         lastUpdated: "2023-05-14",

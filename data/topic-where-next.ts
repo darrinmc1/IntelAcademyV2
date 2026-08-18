@@ -18,6 +18,14 @@ export interface TopicWhereNext {
 }
 
 const whereNextMap: Record<string, TopicWhereNext> = {
+  "what-is-tactical-intelligence": {
+    similar: { title: "Strategic vs. Tactical: What Analysts Must Understand", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/strategic-vs-tactical-analysts" },
+    more: { title: "Tactical Intelligence", description: "Continue with the Tactical Intelligence learning path for more lessons on this subject.", path: "/learning-paths/tactical-intelligence" },
+  },
+  "strategic-vs-tactical-analysts": {
+    similar: { title: "What Is Tactical Intelligence?", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/what-is-tactical-intelligence" },
+    more: { title: "Tactical Intelligence", description: "Continue with the Tactical Intelligence learning path for more lessons on this subject.", path: "/learning-paths/tactical-intelligence" },
+  },
   "advanced-crime-series-analysis-predictive-modeling-resource-allocation": {
     similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
     more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },

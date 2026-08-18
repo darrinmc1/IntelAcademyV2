@@ -60,7 +60,7 @@ export default function TacticalIntelligencePage() {
             duration="15 min"
             image="/tactical-intelligence-concept.png"
             path="/topics/what-is-tactical-intelligence"
-            topic="tactical-intelligence-concept"
+            topic="what-is-tactical-intelligence"
           />
           <TopicCard
             title="Real-Time OSINT for Tactical Response"

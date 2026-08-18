@@ -39,6 +39,7 @@ const nextConfig = {
       "executive-summaries": "executive-summaries-mastery",
       "writing-executive-summaries": "executive-summaries-mastery",
       "crime-series-analysis": "what-is-crime-series-analysis",
+      "tactical-intelligence-concept": "what-is-tactical-intelligence",
     };
     return Object.entries(map).map(([from, to]) => ({
       source: `/topics/${from}`,

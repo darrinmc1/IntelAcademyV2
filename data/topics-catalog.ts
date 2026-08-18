@@ -1,4 +1,34 @@
 export const topics = [
+  {
+    title: "What Is Tactical Intelligence?",
+    description: "Understand the fundamentals of tactical intelligence: its timeframes, products, and how analysts deliver answers when the timeline is measured in minutes, not months.",
+    image: "/tactical-intelligence-concept.png",
+    href: "/topics/what-is-tactical-intelligence",
+    category: "Tactical",
+    estimatedTime: "15 min",
+    completed: false,
+    dateAdded: "2026-08-18",
+    learningObjectives: [
+      "Define tactical intelligence and distinguish it from strategic and operational intelligence.",
+      "Identify common tactical intelligence products and their consumers.",
+      "Explain how the intelligence cycle compresses under tactical time pressure.",
+    ],
+  },
+  {
+    title: "Strategic vs. Tactical: What Analysts Must Understand",
+    description: "Learn how strategic, operational, and tactical intelligence differ — and why analysts who only master one level leave the other half of the job on the table.",
+    image: "/strategic-vs-tactical.png",
+    href: "/topics/strategic-vs-tactical-analysts",
+    category: "Foundations",
+    estimatedTime: "20 min",
+    completed: false,
+    dateAdded: "2026-08-18",
+    learningObjectives: [
+      "Compare strategic, operational, and tactical intelligence across timeframe, scope, and consumers.",
+      "Explain how tactical intelligence feeds strategic assessments and vice versa.",
+      "Apply the right confidence language and product format for each level.",
+    ],
+  },
 {
     title: "Strategic Intelligence: Expanding PESTLE Analysis for a Dynamic World",
     description: "Explore the limitations of traditional PESTLE analysis and learn how to expand it with crucial technological, legal, and environmental considerations for a more comprehensive strategic intelligence framework.",
