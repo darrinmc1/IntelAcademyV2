@@ -4,6 +4,21 @@
 // date of the topic page) so the homepage can show genuinely recent content.
 export const topics = [
   {
+    title: "Understanding and Participating in Online Forums",
+    description: "A comprehensive guide to the purpose, etiquette, and effective participation in online forums, covering everything from basic navigation to advanced engagement strategies.",
+    image: "/forum.png",
+    href: "/topics/forum",
+    category: "online communities",
+    estimatedTime: "15 min",
+    completed: false,
+    dateAdded: "2026-08-18",
+    learningObjectives: [
+      "Understand the structure and purpose of online forums.",
+      "Learn and apply essential forum etiquette (netiquette).",
+      "Develop strategies for effective and meaningful participation.",
+    ],
+  },
+  {
     title: "Strategic Intelligence: Expanding PESTLE Analysis for a Dynamic World",
     description: "Explore the limitations of traditional PESTLE analysis and learn how to expand it with crucial technological, legal, and environmental considerations for a more comprehensive strategic intelligence framework.",
     image: "/strategic-intelligence-expanding-pestle-analysis-dynamic-world.png",
