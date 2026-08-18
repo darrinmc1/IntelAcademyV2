@@ -131,7 +131,7 @@ export const whatsNextMap: Record<LearningPathSlug, WhatsNextRecommendations> = 
     moreLearning: {
       title: "Executive Summaries",
       description: "Develop skills in writing concise and impactful executive summaries",
-      path: "/topics/executive-summaries",
+      path: "/topics/executive-summaries-mastery",
     },
     advancedLearning: {
       title: "Intelligence Storytelling",

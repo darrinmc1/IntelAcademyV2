@@ -1,24 +1,5 @@
-// Topics catalog — single source of truth for the /topics grid and homepage "Latest Intel".
-// The IntelAcademy Lesson Publisher (n8n workflow EBwuLh3qffH3v0JC) prepends new
-// topics right after the array opening below. Each entry carries dateAdded (creation
-// date of the topic page) so the homepage can show genuinely recent content.
 export const topics = [
-  {
-    title: "Understanding and Participating in Online Forums",
-    description: "A comprehensive guide to the purpose, etiquette, and effective participation in online forums, covering everything from basic navigation to advanced engagement strategies.",
-    image: "/forum.png",
-    href: "/topics/forum",
-    category: "online communities",
-    estimatedTime: "15 min",
-    completed: false,
-    dateAdded: "2026-08-18",
-    learningObjectives: [
-      "Understand the structure and purpose of online forums.",
-      "Learn and apply essential forum etiquette (netiquette).",
-      "Develop strategies for effective and meaningful participation.",
-    ],
-  },
-  {
+{
     title: "Strategic Intelligence: Expanding PESTLE Analysis for a Dynamic World",
     description: "Explore the limitations of traditional PESTLE analysis and learn how to expand it with crucial technological, legal, and environmental considerations for a more comprehensive strategic intelligence framework.",
     image: "/strategic-intelligence-expanding-pestle-analysis-dynamic-world.png",
@@ -33,37 +14,7 @@ export const topics = [
       "Evaluate evolving legal and environmental factors for comprehensive risk assessment.",
     ],
   },
-  {
-    title: "PESTLE Analysis: Incorporating the Technological Element",
-    description: "Learn how to effectively integrate the Technological element into your PESTLE analysis, focusing on R&D spending and its impact.",
-    image: "/pestle-analysis-technological-element.png",
-    href: "/topics/pestle-analysis-technological-element",
-    category: "Business Strategy",
-    estimatedTime: "10 min",
-    completed: false,
-    dateAdded: "2026-08-17",
-    learningObjectives: [
-      "Identify key aspects of the Technological element in PESTLE analysis.",
-      "Understand the significance of R&D spending in technological forecasting.",
-      "Apply technological insights to strategic decision-making.",
-    ],
-  },
-  {
-    title: "Fixing Repeated Content Headers in Intelligence Decision Making Pages",
-    description: "A guide for Intel Analyst Academy website administrators on how to resolve issues with repeated content headers on specific topic pages, using the 'Intelligence Decision Making' page as a case study.",
-    image: "/intelligence-decision-making-header-fix.png",
-    href: "/topics/intelligence-decision-making-header-fix",
-    category: "Web Development",
-    estimatedTime: "15 min",
-    completed: false,
-    dateAdded: "2026-08-16",
-    learningObjectives: [
-      "Identify common causes of repeated content headers on websites.",
-      "Apply a systematic troubleshooting process to resolve header duplication issues.",
-      "Understand basic steps for inspecting theme and template configurations.",
-    ],
-  },
-  {
+{
     title: "Deep Web Research for Intelligence Analysts",
     description: "A comprehensive guide for intelligence analysts on how to safely and effectively research the deep web, covering tools, techniques, and ethical considerations.",
     image: "/deep-web-research-for-intel-analysts.png",
@@ -78,22 +29,7 @@ export const topics = [
       "Understand the ethical and security considerations for intelligence analysts.",
     ],
   },
-  {
-    title: "Navigating Learning Paths on Intel Academy",
-    dateAdded: "2026-08-11",
-    description: "Discover how to effectively utilize Intel Academy's curated learning paths to structure your cybersecurity education and achieve your professional goals.",
-    image: "/career-development-path.png",
-    href: "/topics/learning-paths",
-    category: "Cybersecurity Education",
-    estimatedTime: "10 min",
-    completed: false,
-    learningObjectives: [
-      "Understand the purpose and benefits of learning paths.",
-      "Locate and navigate learning paths on the Intel Academy platform.",
-      "Develop a strategy for following a learning path effectively.",
-    ],
-  },
-  {
+{
     title: "Intelligence Processing: Transforming Raw Data into Actionable Insights",
     dateAdded: "2026-08-11",
     description: "Explore the critical steps involved in intelligence processing, from data collection and evaluation to analysis and dissemination, to transform raw information into actionable insights.",
@@ -108,97 +44,7 @@ export const topics = [
       "Understand the role of technology in modern intelligence processing.",
     ],
   },
-  {
-    title: "The Intelligence Cycle: From Raw Data to Actionable Insights",
-    dateAdded: "2026-08-11",
-    description: "An in-depth exploration of the intelligence cycle, detailing its stages from raw data collection to the delivery of actionable insights for decision-making.",
-    image: "/intelligence-cycle.png",
-    href: "/topics/the-intelligence-cycle-from-raw-data-to-actionable-insights",
-    category: "Intelligence Analysis",
-    estimatedTime: "15 min",
-    completed: false,
-    learningObjectives: [
-      "Describe the five stages of the intelligence cycle.",
-      "Explain the purpose and key activities of each stage.",
-      "Recognize the iterative and continuous nature of the intelligence cycle.",
-    ],
-  },
-  {
-    title: "Intelligence Analysis Fundamentals",
-    dateAdded: "2026-08-11",
-    description: "An introductory guide to the core principles and methodologies of intelligence analysis, covering the intelligence cycle, analytical frameworks, and critical thinking.",
-    image: "/core-intelligence.png",
-    href: "/topics/intelligence-analysis-fundamentals",
-    category: "Intelligence Studies",
-    estimatedTime: "10 min",
-    completed: false,
-    learningObjectives: [
-      "Understand the stages of the intelligence cycle.",
-      "Identify key analytical frameworks and techniques.",
-      "Recognize the importance of critical thinking in analysis.",
-    ],
-  },
-  {
-    title: "Intelligence Processing Fundamentals",
-    dateAdded: "2026-08-11",
-    description: "An introduction to the core concepts and stages of intelligence processing, essential for any aspiring intelligence analyst.",
-    image: "/core-intelligence.png",
-    href: "/topics/intelligence-processing-fundamentals",
-    category: "Intelligence Analysis",
-    estimatedTime: "10 min",
-    completed: false,
-    learningObjectives: [
-      "Define the core stages of the intelligence cycle.",
-      "Identify key activities involved in processing raw information.",
-      "Recognize common challenges in intelligence processing.",
-    ],
-  },
-  {
-    title: "Strategic Intelligence: A Refined Concept",
-    dateAdded: "2026-08-11",
-    description: "This lesson revisits the core concept of strategic intelligence, breaking down complex ideas into digestible sections for enhanced understanding and application.",
-    image: "/core-intelligence.png",
-    href: "/topics/strategic-intelligence-concept-revisited",
-    category: "Intelligence Studies",
-    estimatedTime: "15 min",
-    completed: false,
-    learningObjectives: [
-      "Define strategic intelligence and differentiate it from tactical and operational intelligence.",
-      "Identify the key pillars that constitute strategic intelligence.",
-      "Recognize the inherent challenges in producing and utilizing strategic intelligence.",
-    ],
-  },
-  {
-    title: "Risk Factor Indicators for Intelligence Analysts",
-    dateAdded: "2026-08-11",
-    description: "Learn to identify and analyze key indicators of risk in intelligence analysis, enhancing your ability to anticipate threats and inform decision-making.",
-    image: "/crime-trend-analysis.png",
-    href: "/topics/risk-factor-indicators-for-analysts",
-    category: "Intelligence Analysis",
-    estimatedTime: "15 min",
-    completed: false,
-    learningObjectives: [
-      "Define and categorize different types of risk factor indicators.",
-      "Apply methods for identifying potential risk indicators in intelligence data.",
-      "Analyze the significance and implications of identified risk indicators.",
-    ],
-  },
-  {
-    title: "Risk Factor Indicators for Intel Analysts",
-    dateAdded: "2026-08-11",
-    description: "This lesson explores key indicators that intelligence analysts use to identify and assess potential risks in various scenarios.",
-    image: "/crime-trend-analysis.png",
-    href: "/topics/risk-factor-indicators-for-intel-analysts",
-    category: "Intelligence Analysis",
-    estimatedTime: "15 min",
-    completed: false,
-    learningObjectives: [
-      "Identify various types of risk factor indicators.",
-      "Understand the analytical process for evaluating risk indicators.",
-      "Recognize challenges in the detection and interpretation of risk indicators.",
-    ],
-  },
-  {
+{
     title: "Strategic Intelligence Products: Bridging the Gap Between Information and Action",
     dateAdded: "2026-08-11",
     description: "Explore the critical role of strategic intelligence products in transforming raw information into actionable insights for decision-makers.",
@@ -213,22 +59,7 @@ export const topics = [
       "Identify key characteristics of effective strategic intelligence products.",
     ],
   },
-  {
-    title: "Identifying and Analyzing Risk Factors and Indicators",
-    dateAdded: "2026-08-11",
-    description: "Learn to identify potential risks and analyze their indicators for better threat assessment and mitigation.",
-    image: "/crime-trend-analysis.png",
-    href: "/topics/identifying-and-analyzing-risk-factors-and-indicators",
-    category: "Risk Management",
-    estimatedTime: "15 min",
-    completed: false,
-    learningObjectives: [
-      "Distinguish between risk factors and risk indicators.",
-      "Identify common categories of risk factors.",
-      "Develop specific indicators for potential risks.",
-    ],
-  },
-  {
+{
     title: "Risk Factor Indicators for Intelligence Analysis",
     dateAdded: "2026-08-11",
     description: "This lesson explores how to identify and analyze risk factor indicators within intelligence data to anticipate potential threats and opportunities.",
@@ -243,22 +74,7 @@ export const topics = [
       "Recognize the challenges associated with indicator analysis in intelligence.",
     ],
   },
-  {
-    title: "Advanced Crime Series Analysis Techniques",
-    dateAdded: "2026-08-10",
-    description: "Explore sophisticated methodologies for analyzing crime series, moving beyond basic pattern recognition to understand complex temporal and spatial relationships.",
-    image: "/crime-series-analysis.png",
-    href: "/topics/advanced-crime-series-analysis-techniques",
-    category: "Intelligence Analysis",
-    estimatedTime: "12 min",
-    completed: false,
-    learningObjectives: [
-      "Apply advanced temporal analysis techniques to crime series.",
-      "Integrate spatial and temporal data for dynamic crime pattern understanding.",
-      "Utilize predictive modeling for crime series forecasting and risk assessment.",
-    ],
-  },
-  {
+{
     title: "AI Prompt Injection Defense",
     dateAdded: "2026-08-10",
     description: "Learn to identify and defend against prompt injection attacks targeting AI models, protecting your systems and data.",
@@ -273,7 +89,7 @@ export const topics = [
       "Implement strategies to defend AI models against prompt injection.",
     ],
   },
-  {
+{
     title: "Threat Assessment: Methodologies for Evaluating and Prioritizing Threats",
     dateAdded: "2026-08-09",
     description: "Explore various methodologies used by intelligence analysts to effectively evaluate and prioritize potential threats, ensuring resources are allocated efficiently.",
@@ -288,7 +104,7 @@ export const topics = [
       "Select appropriate methodologies based on intelligence requirements and available resources.",
     ],
   },
-  {
+{
     title: "Analytical Techniques for Intelligence Analysts",
     dateAdded: "2026-08-09",
     description: "Explore structured methods designed to enhance critical thinking and improve the quality of intelligence analysis.",
@@ -303,7 +119,7 @@ export const topics = [
       "Explain the importance of challenging assumptions and considering alternative hypotheses.",
     ],
   },
-  {
+{
     title: "Target Profiling: Developing Profiles of High-Value Targets",
     dateAdded: "2026-08-09",
     description: "Learn the essential techniques for developing comprehensive profiles of high-value targets, a critical skill for intelligence analysis.",
@@ -318,7 +134,7 @@ export const topics = [
       "Describe the iterative process and challenges involved in target profiling.",
     ],
   },
-  {
+{
     title: "Predictive Patterning: Using Historical Series Data to Predict Future Criminal Activity",
     dateAdded: "2026-08-09",
     description: "Explore the foundational concepts of predictive patterning in intelligence analysis, focusing on how historical series data can be leveraged to forecast potential criminal activities.",
@@ -333,7 +149,7 @@ export const topics = [
       "Recognize the tools and challenges associated with predictive patterning.",
     ],
   },
-  {
+{
     title: "Series Pattern Detection: Statistical and Analytical Methods for Identifying Crime Series",
     dateAdded: "2026-08-09",
     description: "Explore statistical and analytical techniques used by intelligence analysts to detect patterns in crime series, enabling proactive intervention and resource allocation.",
@@ -348,7 +164,7 @@ export const topics = [
       "Apply analytical techniques to interpret crime series data.",
     ],
   },
-  {
+{
     title: "Repeat Offender Profiling: Identifying and Analyzing Patterns of Repeat Offenders",
     dateAdded: "2026-08-09",
     description: "This lesson delves into the critical intelligence discipline of repeat offender profiling, equipping analysts with the methods to identify and analyze the behavioral patterns of individuals who repeatedly engage in criminal activity.",
@@ -363,7 +179,7 @@ export const topics = [
       "Recognize the applications of repeat offender profiling in various intelligence disciplines.",
     ],
   },
-  {
+{
     title: "Crime Linkage Techniques: Connecting Crimes Through Evidence",
     dateAdded: "2026-08-09",
     description: "Explore the fundamental methods used by intelligence analysts to link seemingly unrelated crimes by examining behavioral patterns and physical evidence, enhancing investigative efficiency.",
@@ -378,7 +194,7 @@ export const topics = [
       "Understand the role of physical evidence in crime linkage.",
     ],
   },
-  {
+{
     title: "Modus Operandi Analysis: Techniques for Identifying and Analyzing Criminal Methods and Behaviors",
     dateAdded: "2026-08-09",
     description: "Explore the core principles and practical techniques of Modus Operandi (MO) analysis, a critical skill for intelligence analysts in understanding and predicting criminal actions.",
@@ -393,7 +209,7 @@ export const topics = [
       "Explain the practical applications of MO analysis in intelligence.",
     ],
   },
-  {
+{
     title: "What is Crime Series Analysis?",
     dateAdded: "2026-08-09",
     description: "An introduction to the fundamentals of crime series analysis and its importance in law enforcement.",
@@ -408,22 +224,7 @@ export const topics = [
       "Identify the key steps and challenges involved in CSA.",
     ],
   },
-  {
-    title: "Risk Factor Indicators for Intelligence Analysis",
-    dateAdded: "2026-08-09",
-    description: "This lesson explores key indicators that analysts use to identify and assess potential risks in intelligence operations and geopolitical landscapes.",
-    image: "/crime-trend-analysis.png",
-    href: "/topics/risk-factor-indicators-for-intel-analysis",
-    category: "Intelligence Analysis",
-    estimatedTime: "15 min",
-    completed: false,
-    learningObjectives: [
-      "Identify different categories of risk factor indicators.",
-      "Understand the role of an intelligence analyst in indicator analysis.",
-      "Recognize challenges inherent in analyzing risk indicators.",
-    ],
-  },
-  {
+{
     title: "Advanced Crime Series Analysis: Predictive Modeling and Resource Allocation",
     dateAdded: "2026-08-09",
     description: "Explore advanced techniques in crime series analysis, focusing on predictive modeling for crime forecasting and optimizing resource allocation for law enforcement.",
@@ -438,22 +239,7 @@ export const topics = [
       "Develop strategies for optimizing law enforcement resource allocation based on predictive analytics.",
     ],
   },
-  {
-    title: "Link Analysis: Uncovering Hidden Connections",
-    dateAdded: "2026-08-09",
-    description: "Learn the fundamental techniques of link analysis to identify relationships and patterns within data, crucial for intelligence gathering and investigative work.",
-    image: "/advanced-analysis.png",
-    href: "/topics/link-analysis-uncovering-hidden-connections",
-    category: "Intelligence Analysis",
-    estimatedTime: "15 min",
-    completed: false,
-    learningObjectives: [
-      "Identify key entities and relationships in data.",
-      "Understand common link analysis techniques and metrics.",
-      "Apply link analysis to uncover hidden connections in intelligence scenarios.",
-    ],
-  },
-  {
+{
     title: "Introduction to Link Analysis",
     dateAdded: "2026-08-09",
     description: "This lesson provides a foundational understanding of link analysis, a crucial intelligence technique for uncovering hidden relationships and patterns within data.",
@@ -468,52 +254,7 @@ export const topics = [
       "Recognize common methods and concepts used in link analysis.",
     ],
   },
-  {
-    title: "Advanced Techniques in Crime Series Analysis",
-    dateAdded: "2026-08-09",
-    description: "Explore sophisticated methodologies for analyzing patterns and trends within crime series, moving beyond basic statistical approaches to uncover deeper insights.",
-    image: "/crime-series-analysis.png",
-    href: "/topics/advanced-techniques-in-crime-series-analysis",
-    category: "Criminology",
-    estimatedTime: "15 min",
-    completed: false,
-    learningObjectives: [
-      "Apply advanced spatial-temporal analysis techniques to crime series.",
-      "Utilize network analysis to understand criminal group structures.",
-      "Implement machine learning for crime series prediction and classification.",
-    ],
-  },
-  {
-    title: "Strategic Intelligence Products Overview",
-    dateAdded: "2026-08-09",
-    description: "An introduction to the various types of strategic intelligence products used in analysis and decision-making.",
-    image: "/core-intelligence.png",
-    href: "/topics/strategic-intelligence-products-overview",
-    category: "Intelligence Analysis",
-    estimatedTime: "10 min",
-    completed: false,
-    learningObjectives: [
-      "Identify the purpose and characteristics of strategic intelligence products.",
-      "Describe common types of strategic intelligence products.",
-      "Explain the importance of strategic intelligence for decision-making.",
-    ],
-  },
-  {
-    title: "Strategic Intelligence Products",
-    dateAdded: "2026-08-08",
-    description: "An overview of the various types of strategic intelligence products used in analysis and decision-making.",
-    image: "/core-intelligence.png",
-    href: "/topics/strategic-intelligence-products",
-    category: "Intelligence Analysis",
-    estimatedTime: "10 min",
-    completed: false,
-    learningObjectives: [
-      "Differentiate between tactical, operational, and strategic intelligence.",
-      "Identify and describe common types of strategic intelligence products.",
-      "Understand the key characteristics of effective strategic intelligence products.",
-    ],
-  },
-  {
+{
     title: "Collection Planning Process for Intel Analysts",
     dateAdded: "2026-08-07",
     description: "Master the systematic approach to gathering intelligence, from defining requirements to evaluating collection efforts.",
@@ -528,7 +269,7 @@ export const topics = [
       "Recognize the importance of source assessment and collection strategy development.",
     ],
   },
-  {
+{
     title: "What is Intelligence?",
     dateAdded: "2026-04-22",
     description: "Understand the fundamental concepts and definitions of intelligence analysis.",
@@ -543,7 +284,7 @@ export const topics = [
       "Identify the key characteristics of actionable intelligence",
     ],
   },
-  {
+{
     title: "Intelligence Cycle",
     dateAdded: "2026-04-22",
     description: "Learn the five steps of the intelligence cycle and how they interconnect.",
@@ -558,7 +299,7 @@ export const topics = [
       "Identify common challenges in the cycle",
     ],
   },
-  {
+{
     title: "Intelligence Types",
     dateAdded: "2026-04-22",
     description: "Explore different types of intelligence including HUMINT, OSINT, SIGINT, and more.",
@@ -573,7 +314,7 @@ export const topics = [
       "Understand how different types complement each other",
     ],
   },
-  {
+{
     title: "Strategic Intelligence Concept",
     dateAdded: "2026-04-22",
     description: "Understand the principles and applications of strategic intelligence.",
@@ -588,22 +329,7 @@ export const topics = [
       "Understand timeframes and planning horizons",
     ],
   },
-  {
-    title: "Tactical Intelligence Concept",
-    dateAdded: "2026-04-01",
-    description: "Learn about tactical intelligence and its role in operational success.",
-    image: "/tactical-intelligence-concept.png",
-    href: "/topics/tactical-intelligence-concept",
-    category: "Tactical",
-    estimatedTime: "25 min",
-    completed: false,
-    learningObjectives: [
-      "Define tactical intelligence and its applications",
-      "Understand the time-sensitive nature of tactical intelligence",
-      "Identify key tactical intelligence products",
-    ],
-  },
-  {
+{
     title: "OSINT Techniques",
     dateAdded: "2026-04-22",
     description: "Master techniques for effective open source intelligence collection and analysis.",
@@ -618,7 +344,7 @@ export const topics = [
       "Use tools for OSINT collection and organization",
     ],
   },
-  {
+{
     title: "Intelligence Report Fundamentals",
     dateAdded: "2026-04-22",
     description: "Learn the essential components of effective intelligence reports.",
@@ -633,7 +359,7 @@ export const topics = [
       "Incorporate appropriate evidence and sourcing",
     ],
   },
-  {
+{
     title: "Cognitive Biases in Intelligence",
     dateAdded: "2026-04-22",
     description: "Recognize and mitigate cognitive biases that affect intelligence analysis.",
@@ -648,7 +374,7 @@ export const topics = [
       "Develop strategies for more objective analysis",
     ],
   },
-  {
+{
     title: "Analysis of Competing Hypotheses",
     dateAdded: "2026-04-22",
     description: "Learn the structured technique for evaluating multiple competing hypotheses.",
@@ -662,7 +388,7 @@ export const topics = [
       "Create and evaluate hypothesis matrices",
       "Use ACH to reduce analytical errors",
     ],
-  },
+  }
 ];
 
 export type CatalogTopic = (typeof topics)[number]

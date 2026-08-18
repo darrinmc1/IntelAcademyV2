@@ -22,10 +22,6 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
     more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
   },
-  "advanced-techniques-in-crime-series-analysis": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
-  },
   "all-topics": {
     similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
     more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
@@ -61,10 +57,6 @@ const whereNextMap: Record<string, TopicWhereNext> = {
   "crime-linkage-techniques": {
     similar: { title: "Repeat Offender Profiling: Identifying and Analyzing Patterns of Repeat Offenders", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/repeat-offender-profiling-identifying-and-analyzing-patterns-of-repeat-offenders" },
     more: { title: "Crime Series Analysis", description: "Continue with the Crime Series Analysis learning path for more lessons on this subject.", path: "/learning-paths/crime-series-analysis" },
-  },
-  "crime-series-analysis": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
   },
   "crime-trend-analysis": {
     similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
@@ -106,10 +98,6 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
     more: { title: "Excel for Analysts", description: "Continue with the Excel for Analysts learning path for more lessons on this subject.", path: "/learning-paths/excel-for-analysts" },
   },
-  "executive-summaries": {
-    similar: { title: "Verbal Briefing Techniques", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/verbal-briefing-techniques" },
-    more: { title: "Intelligence Report Writing", description: "Continue with the Intelligence Report Writing learning path for more lessons on this subject.", path: "/learning-paths/report-writing" },
-  },
   "executive-summaries-mastery": {
     similar: { title: "Main Body Organization", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/main-body-organization" },
     more: { title: "Intelligence Report Writing", description: "Continue with the Intelligence Report Writing learning path for more lessons on this subject.", path: "/learning-paths/report-writing" },
@@ -137,10 +125,6 @@ const whereNextMap: Record<string, TopicWhereNext> = {
   "humint-fundamentals": {
     similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
     more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
-  },
-  "information-vs-intelligence": {
-    similar: { title: "The Intelligence Cycle", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/intelligence-cycle" },
-    more: { title: "Intelligence Foundations", description: "Continue with the Intelligence Foundations learning path for more lessons on this subject.", path: "/learning-paths/foundations" },
   },
   "intelligence-briefings": {
     similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
@@ -179,7 +163,7 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
   },
   "intelligence-report-fundamentals": {
-    similar: { title: "Executive Summaries", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/executive-summaries" },
+    similar: { title: "Executive Summaries", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/executive-summaries-mastery" },
     more: { title: "Intelligence Report Writing", description: "Continue with the Intelligence Report Writing learning path for more lessons on this subject.", path: "/learning-paths/report-writing" },
   },
   "intelligence-report-types": {
@@ -203,10 +187,6 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
   },
   "legal-frameworks": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
-  },
-  "link-analysis-uncovering-hidden-connections": {
     similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
     more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
   },
@@ -286,10 +266,6 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
     more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
   },
-  "risk-factor-indicators-for-intel-analysis": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
-  },
   "sample-topic": {
     similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
     more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
@@ -315,18 +291,10 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Intelligence Report Writing", description: "Continue with the Intelligence Report Writing learning path for more lessons on this subject.", path: "/learning-paths/report-writing" },
   },
   "strategic-forecasting": {
-    similar: { title: "Strategic Intelligence Products", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/strategic-intelligence-products" },
+    similar: { title: "Strategic Intelligence Products", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/strategic-intelligence-products-bridging-the-gap-between-information-and-action" },
     more: { title: "Strategic Intelligence", description: "Continue with the Strategic Intelligence learning path for more lessons on this subject.", path: "/learning-paths/strategic-intelligence" },
   },
   "strategic-intelligence-concept": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
-  },
-  "strategic-intelligence-products": {
-    similar: { title: "Strategic Reports", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/strategic-reports" },
-    more: { title: "Strategic Intelligence", description: "Continue with the Strategic Intelligence learning path for more lessons on this subject.", path: "/learning-paths/strategic-intelligence" },
-  },
-  "strategic-intelligence-products-overview": {
     similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
     more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
   },
@@ -362,10 +330,6 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     similar: { title: "Social Network Analysis", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/notebook-social-network-analysis" },
     more: { title: "Analyst Notebook", description: "Continue with the Analyst Notebook learning path for more lessons on this subject.", path: "/learning-paths/analyst-notebook" },
   },
-  "user-content-request-feedback-loop": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
-  },
   "verbal-briefing-techniques": {
     similar: { title: "Good Intelligence Report", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/good-intelligence-report" },
     more: { title: "Intelligence Report Writing", description: "Continue with the Intelligence Report Writing learning path for more lessons on this subject.", path: "/learning-paths/report-writing" },
@@ -386,19 +350,12 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     similar: { title: "Google Dorking", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/google-dorking" },
     more: { title: "Open Source Intelligence", description: "Continue with the Open Source Intelligence learning path for more lessons on this subject.", path: "/learning-paths/osint" },
   },
-  "what-is-strategic-intelligence": {
-    similar: { title: "Strategic Forecasting", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/strategic-forecasting" },
-    more: { title: "Strategic Intelligence", description: "Continue with the Strategic Intelligence learning path for more lessons on this subject.", path: "/learning-paths/strategic-intelligence" },
-  },
   "what-is-threat-assessment": {
     similar: { title: "Threat Assessment Models", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/threat-assessment-models" },
     more: { title: "Threat Assessment", description: "Continue with the Threat Assessment learning path for more lessons on this subject.", path: "/learning-paths/threat-assessment" },
   },
-  "writing-executive-summaries": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
-  },
 };
+
 
 const fallback: TopicWhereNext = {
   similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },

@@ -16,6 +16,37 @@ const nextConfig = {
 
   trailingSlash: false,
 
+  // Permanent redirects for deduplicated topics (see docs/topic-inventory.md).
+  // Keeps previously indexed URLs alive by pointing them at the canonical lesson.
+  async redirects() {
+    const map = {
+      "pestle-analysis-technological-element": "strategic-intelligence-expanding-pestle-analysis-dynamic-world",
+      "risk-factor-indicators-for-analysts": "risk-factor-indicators-for-intelligence-analysis",
+      "risk-factor-indicators-for-intel-analysts": "risk-factor-indicators-for-intelligence-analysis",
+      "risk-factor-indicators-for-intel-analysis": "risk-factor-indicators-for-intelligence-analysis",
+      "identifying-and-analyzing-risk-factors-and-indicators": "risk-factor-indicators-for-intelligence-analysis",
+      "the-intelligence-cycle-from-raw-data-to-actionable-insights": "intelligence-cycle",
+      "intelligence-processing-fundamentals": "intelligence-processing-transforming-raw-data-into-actionable-insights",
+      "intelligence-analysis-fundamentals": "intelligence-cycle",
+      "strategic-intelligence-concept-revisited": "strategic-intelligence-concept",
+      "what-is-strategic-intelligence": "strategic-intelligence-concept",
+      "strategic-intelligence-products": "strategic-intelligence-products-bridging-the-gap-between-information-and-action",
+      "strategic-intelligence-products-overview": "strategic-intelligence-products-bridging-the-gap-between-information-and-action",
+      "advanced-crime-series-analysis-techniques": "advanced-crime-series-analysis-predictive-modeling-resource-allocation",
+      "advanced-techniques-in-crime-series-analysis": "advanced-crime-series-analysis-predictive-modeling-resource-allocation",
+      "link-analysis-uncovering-hidden-connections": "introduction-to-link-analysis",
+      "information-vs-intelligence": "intelligence-vs-information",
+      "executive-summaries": "executive-summaries-mastery",
+      "writing-executive-summaries": "executive-summaries-mastery",
+      "crime-series-analysis": "what-is-crime-series-analysis",
+    };
+    return Object.entries(map).map(([from, to]) => ({
+      source: `/topics/${from}`,
+      destination: `/topics/${to}`,
+      permanent: true,
+    }));
+  },
+
   images: {
     unoptimized: false,
   },
