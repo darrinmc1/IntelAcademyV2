@@ -14,25 +14,21 @@ const featuredCategories = [
   {
     title: "Strategic Intelligence",
     description: "Long-term analysis focused on broad trends and patterns to inform policy and strategy.",
-    topicCount: 24,
     slug: "strategic-intelligence",
   },
   {
     title: "Tactical Intelligence",
     description: "Short-term intelligence supporting immediate operations and decision-making.",
-    topicCount: 18,
     slug: "tactical-intelligence",
   },
   {
     title: "OSINT",
     description: "Intelligence collected from publicly available sources like media and internet.",
-    topicCount: 32,
     slug: "osint",
   },
   {
     title: "Analysis Methods",
     description: "Structured analytical techniques and methodologies for intelligence analysis.",
-    topicCount: 28,
     slug: "analysis-methods",
   },
 ]
@@ -90,7 +86,6 @@ export default function CommunityForumPage() {
                   <div className="p-4">
                     <h3 className="text-xl font-semibold mb-2">{category.title}</h3>
                     <p className="text-gray-600 mb-4">{category.description}</p>
-                    <p className="text-sm text-gray-500 mb-4">{category.topicCount} Topics</p>
                     <Link href={`/coming-soon/community-forum/categories/${category.slug}`} className="w-full">
                       <Button variant="outline" className="w-full">
                         Explore Category

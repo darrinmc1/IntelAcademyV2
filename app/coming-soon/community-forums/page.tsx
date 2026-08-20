@@ -109,7 +109,6 @@ export default function CommunityForumsPage() {
                 key={category.slug}
                 title={category.title}
                 description={category.description}
-                topicCount={category.topicCount}
                 slug={category.slug}
                 imagePath={category.imagePath}
                 index={index}

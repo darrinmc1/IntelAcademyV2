@@ -25,25 +25,6 @@ const sampleLearningPaths = [
       "Apply basic analytical techniques",
       "Recognize cognitive biases in analysis",
     ],
-    enrolledUsers: 15420,
-    lastUpdated: "2 weeks ago",
-    instructor: "Dr. Sarah Chen",
-    progress: {
-      completedTopics: 8,
-      timeSpent: 6.5,
-      lastAccessed: "2 days ago",
-      overallScore: 87,
-      topicProgress: [
-        { id: "1", title: "What is Intelligence?", completed: true, score: 92 },
-        { id: "2", title: "Intelligence Cycle", completed: true, score: 88 },
-        { id: "3", title: "Types of Intelligence", completed: true, score: 85 },
-        { id: "4", title: "Collection Methods", completed: true, score: 90 },
-        { id: "5", title: "Analysis Techniques", completed: false },
-        { id: "6", title: "Cognitive Biases", completed: false },
-      ],
-      achievements: ["First Course Started", "Week Streak", "High Scorer"],
-      nextMilestone: "Complete Analysis Techniques module",
-    },
   },
   {
     id: "strategic-intelligence",
@@ -63,9 +44,6 @@ const sampleLearningPaths = [
       "Create intelligence estimates",
       "Brief senior decision makers",
     ],
-    enrolledUsers: 8750,
-    lastUpdated: "1 week ago",
-    instructor: "Col. Michael Rodriguez",
   },
   {
     id: "osint",
@@ -85,23 +63,6 @@ const sampleLearningPaths = [
       "Conduct social media analysis",
       "Perform geolocation analysis",
     ],
-    enrolledUsers: 12300,
-    lastUpdated: "3 days ago",
-    instructor: "Alex Thompson",
-    progress: {
-      completedTopics: 3,
-      timeSpent: 2.5,
-      lastAccessed: "Yesterday",
-      overallScore: 94,
-      topicProgress: [
-        { id: "1", title: "What is OSINT?", completed: true, score: 96 },
-        { id: "2", title: "Search Techniques", completed: true, score: 92 },
-        { id: "3", title: "Source Verification", completed: true, score: 94 },
-        { id: "4", title: "Social Media Analysis", completed: false },
-      ],
-      achievements: ["OSINT Beginner"],
-      nextMilestone: "Complete Social Media Analysis",
-    },
   },
   {
     id: "tactical-intelligence",
@@ -121,9 +82,6 @@ const sampleLearningPaths = [
       "Create tactical briefings",
       "Support field operations",
     ],
-    enrolledUsers: 9650,
-    lastUpdated: "5 days ago",
-    instructor: "Agent Lisa Park",
   },
   {
     id: "crime-analysis",
@@ -143,9 +101,6 @@ const sampleLearningPaths = [
       "Profile repeat offenders",
       "Predict criminal behavior",
     ],
-    enrolledUsers: 5420,
-    lastUpdated: "1 week ago",
-    instructor: "Detective Mark Johnson",
   },
   {
     id: "network-analysis",
@@ -164,9 +119,6 @@ const sampleLearningPaths = [
       "Analyze communication patterns",
       "Disrupt criminal organizations",
     ],
-    enrolledUsers: 4200,
-    lastUpdated: "4 days ago",
-    instructor: "Dr. Jennifer Wu",
   },
 ]
 
@@ -174,7 +126,7 @@ export default function LearningPathsEnhancedPage() {
   const [viewMode, setViewMode] = useState<"all" | "enrolled">("all")
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>("all")
 
-  const enrolledPaths = sampleLearningPaths.filter((path) => path.progress)
+  const enrolledPaths: typeof sampleLearningPaths = []
   const allPaths = sampleLearningPaths
 
   const filteredPaths = (paths: typeof sampleLearningPaths) => {

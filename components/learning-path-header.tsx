@@ -2,7 +2,7 @@
 
 import { ParallaxHeader } from "@/components/parallax-header"
 import { Button } from "@/components/ui/button"
-import { Clock, Users, Award, BookOpen } from "lucide-react"
+import { Clock, Award, BookOpen } from "lucide-react"
 import Link from "next/link"
 
 interface LearningPathHeaderProps {
@@ -12,7 +12,6 @@ interface LearningPathHeaderProps {
   overlayImage?: string
   estimatedTime?: string
   difficulty?: "Beginner" | "Intermediate" | "Advanced"
-  enrolledCount?: number
   className?: string
 }
 
@@ -23,7 +22,6 @@ export function LearningPathHeader({
   overlayImage,
   estimatedTime,
   difficulty,
-  enrolledCount,
   className,
 }: LearningPathHeaderProps) {
   const getDifficultyColor = (level?: string) => {
@@ -60,13 +58,6 @@ export function LearningPathHeader({
           <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
             <div className={`w-3 h-3 rounded-full ${getDifficultyColor(difficulty)}`} />
             <span className="text-sm">{difficulty}</span>
-          </div>
-        )}
-
-        {enrolledCount && (
-          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-            <Users className="w-4 h-4" />
-            <span className="text-sm">{enrolledCount.toLocaleString()} enrolled</span>
           </div>
         )}
 
