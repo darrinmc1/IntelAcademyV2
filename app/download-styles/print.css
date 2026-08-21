@@ -1,8 +1,10 @@
-/* Hide all site chrome on printable lesson download pages.
-   The root layout always renders Header/Footer — this route hides them
-   so the page is ONLY the lesson content (plus its own clean wrapper). */
-.hide-site-chrome header,
-.hide-site-chrome footer,
+/* Hide ONLY the site chrome on printable lesson download pages —
+   the root layout always renders the site Header/Footer, but this route
+   keeps just the lesson content inside its own branded frame.
+   Targeted selectors: the site header (data-testid) and the site footer
+   (dark slate) are hidden; the page's own branded bands (emerald) stay. */
+.hide-site-chrome [data-testid="site-header"],
+.hide-site-chrome footer.bg-slate-950,
 .hide-site-chrome .fixed,
 .hide-site-chrome .sticky,
 .hide-site-chrome [class*="feedback"],
@@ -14,13 +16,82 @@
   background: white;
 }
 
+/* Professional lesson-body typography for the printable pages */
+.lesson-print-body {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #1e293b;
+}
+
+.lesson-print-body h2 {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #064e3b;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #d1fae5;
+  padding-bottom: 0.35rem;
+}
+
+.lesson-print-body h3 {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #065f46;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.lesson-print-body p {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.lesson-print-body ul,
+.lesson-print-body ol {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+}
+
+.lesson-print-body ul {
+  list-style: disc;
+}
+
+.lesson-print-body ol {
+  list-style: decimal;
+}
+
+.lesson-print-body li {
+  margin-top: 0.3rem;
+}
+
+.lesson-print-body strong {
+  color: #065f46;
+}
+
 @media print {
-  .hide-site-chrome header,
-  .hide-site-chrome footer,
+  .hide-site-chrome [data-testid="site-header"],
+  .hide-site-chrome footer.bg-slate-950,
   .hide-site-chrome .fixed,
   .hide-site-chrome .sticky,
   .hide-site-chrome [class*="feedback"],
   .hide-site-chrome [class*="waitlist"] {
     display: none !important;
+  }
+
+  /* Print-only refinements */
+  .lesson-print-body {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .lesson-print-body h2 {
+    page-break-after: avoid;
+  }
+
+  .lesson-print-body li {
+    page-break-inside: avoid;
   }
 }

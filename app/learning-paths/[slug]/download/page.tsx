@@ -67,75 +67,123 @@ export default async function LearningPathDownloadPage({ params }: LearningPathD
   const topics = extractTopics(source)
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="mx-auto max-w-3xl px-6 py-10 print:py-4">
-        <div className="mb-8 border-b border-slate-200 pb-4 print:hidden">
-          <Link
-            href={`/learning-paths/${slug}`}
-            className="text-sm font-medium text-blue-700 hover:text-blue-900"
-          >
-            ← Back to learning path
-          </Link>
+    <div className="min-h-screen bg-slate-100 print:bg-white">
+      {/* Branded frame — runs around the whole document, print and screen */}
+      <div className="mx-auto max-w-3xl my-6 print:my-0">
+        <div className="border-[3px] border-emerald-700 print:border-emerald-800 rounded-sm">
+          <div className="border border-emerald-900/30 m-1.5 print:m-1">
+            {/* Academy header band */}
+            <header className="bg-emerald-800 print:bg-emerald-800 px-6 py-4 sm:px-8 print:px-6">
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <p className="font-serif text-lg sm:text-xl font-bold tracking-tight text-white">
+                    THE INTEL ANALYST ACADEMY
+                  </p>
+                  <p className="mt-0.5 text-[11px] sm:text-xs uppercase tracking-[0.18em] text-emerald-200">
+                    Professional Intelligence Training
+                  </p>
+                </div>
+                <div className="hidden sm:block text-right">
+                  <p className="text-[11px] uppercase tracking-widest text-emerald-200">Learning Path</p>
+                  <p className="text-xs font-semibold text-white">{title}</p>
+                </div>
+              </div>
+            </header>
+
+            {/* Body */}
+            <div className="bg-white px-6 py-8 sm:px-10 sm:py-10 print:px-8 print:py-6">
+              <div className="mb-6 border-b-2 border-emerald-700 pb-4 print:hidden">
+                <Link
+                  href={`/learning-paths/${slug}`}
+                  className="text-sm font-medium text-emerald-800 hover:text-emerald-600"
+                >
+                  ← Back to learning path
+                </Link>
+              </div>
+
+              <h1 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 print:text-2xl">{title}</h1>
+              <p className="mt-2 text-sm text-slate-500">
+                The Intel Analyst Academy · Learning Path
+              </p>
+
+              {description && (
+                <p className="mt-4 text-slate-700 leading-relaxed">{description}</p>
+              )}
+
+              {(level || duration) && (
+                <div className="mt-4 flex flex-wrap gap-3 text-sm">
+                  {level && (
+                    <span className="rounded-full bg-emerald-50 px-3 py-1 text-emerald-900 ring-1 ring-emerald-200">
+                      Level: {level}
+                    </span>
+                  )}
+                  {duration && (
+                    <span className="rounded-full bg-emerald-50 px-3 py-1 text-emerald-900 ring-1 ring-emerald-200">
+                      Duration: {duration}
+                    </span>
+                  )}
+                </div>
+              )}
+
+              {topics.length > 0 ? (
+                <div className="mt-8">
+                  <h2 className="text-xl font-bold text-slate-900">Topics in this path</h2>
+                  <ol className="mt-4 space-y-4">
+                    {topics.map((topic, i) => (
+                      <li key={i} className="border-b border-slate-100 pb-3">
+                        <div className="flex items-start justify-between gap-4">
+                          <div>
+                            <p className="font-semibold text-slate-900">
+                              {i + 1}. {topic.title}
+                            </p>
+                            {topic.description && (
+                              <p className="mt-1 text-sm text-slate-600">{topic.description}</p>
+                            )}
+                          </div>
+                          {topic.readTime && (
+                            <span className="shrink-0 text-sm text-slate-400">
+                              {topic.readTime} min
+                            </span>
+                          )}
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              ) : (
+                <p className="mt-8 text-slate-600">No topics listed for this learning path yet.</p>
+              )}
+
+              {/* CTA band */}
+              <div className="mt-10 rounded-sm border-l-4 border-emerald-700 bg-emerald-50 p-5">
+                <p className="text-sm font-bold uppercase tracking-wider text-emerald-900">
+                  Continue your training
+                </p>
+                <p className="mt-2 text-sm text-emerald-900/80">
+                  This learning path is part of The Intel Analyst Academy — professional intelligence
+                  analysis training built for analysts. Explore the full course library, structured
+                  learning paths, and practical tools at{" "}
+                  <span className="font-semibold">theintelanalystacademy.com</span>.
+                </p>
+              </div>
+            </div>
+
+            {/* Academy footer band */}
+            <footer className="bg-emerald-900 print:bg-emerald-900 px-6 py-4 sm:px-8">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-emerald-100">
+                <p className="text-xs">
+                  © {new Date().getFullYear()} The Intel Analyst Academy
+                </p>
+                <p className="text-xs">
+                  theintelanalystacademy.com · Master intelligence analysis
+                </p>
+              </div>
+            </footer>
+          </div>
         </div>
 
-        <h1 className="text-3xl font-bold text-slate-900 print:text-2xl">{title}</h1>
-        <p className="mt-1 text-sm text-slate-500">
-          The Intel Analyst Academy · Printable learning path
-        </p>
-
-        {description && (
-          <p className="mt-4 text-slate-700 leading-relaxed">{description}</p>
-        )}
-
-        {(level || duration) && (
-          <div className="mt-4 flex flex-wrap gap-3 text-sm">
-            {level && (
-              <span className="rounded-full bg-slate-100 px-3 py-1 text-slate-700">
-                Level: {level}
-              </span>
-            )}
-            {duration && (
-              <span className="rounded-full bg-slate-100 px-3 py-1 text-slate-700">
-                Duration: {duration}
-              </span>
-            )}
-          </div>
-        )}
-
-        {topics.length > 0 ? (
-          <div className="mt-8">
-            <h2 className="text-xl font-bold text-slate-900">Topics in this path</h2>
-            <ol className="mt-4 space-y-4">
-              {topics.map((topic, i) => (
-                <li key={i} className="border-b border-slate-100 pb-3">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <p className="font-semibold text-slate-900">
-                        {i + 1}. {topic.title}
-                      </p>
-                      {topic.description && (
-                        <p className="mt-1 text-sm text-slate-600">{topic.description}</p>
-                      )}
-                    </div>
-                    {topic.readTime && (
-                      <span className="shrink-0 text-sm text-slate-400">
-                        {topic.readTime} min
-                      </span>
-                    )}
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
-        ) : (
-          <p className="mt-8 text-slate-600">No topics listed for this learning path yet.</p>
-        )}
-
-        <div className="mt-10 border-t border-slate-200 pt-4 text-xs text-slate-400">
-          Source: The Intel Analyst Academy — theintelanalystacademy.com
-        </div>
-
-        <div className="mt-6 print:hidden">
+        {/* Print / screen action */}
+        <div className="mt-6 flex justify-center print:hidden">
           <PrintButton />
         </div>
       </div>

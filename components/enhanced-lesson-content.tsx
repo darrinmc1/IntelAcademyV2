@@ -124,7 +124,7 @@ export function EnhancedLessonContent({ content, topic }: EnhancedLessonContentP
         <p className="text-xl leading-relaxed">
           Welcome to this lesson on {topic.replace(/-/g, " ")}. This guide will walk you through the key
           concepts, methodologies, and practical applications. The content is structured to build your understanding
-          progressively, with visual aids to reinforce learning.
+          progressively.
         </p>
       </div>
 
