@@ -27,10 +27,10 @@
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #064e3b;
+  color: #0e7490;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
-  border-bottom: 1px solid #d1fae5;
+  border-bottom: 1px solid #cffafe;
   padding-bottom: 0.35rem;
 }
 
@@ -38,7 +38,7 @@
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #065f46;
+  color: #155e75;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -68,7 +68,7 @@
 }
 
 .lesson-print-body strong {
-  color: #065f46;
+  color: #155e75;
 }
 
 @media print {

@@ -156,21 +156,21 @@ export default async function TopicDownloadPage({ params }: DownloadPageProps) {
     <div className="min-h-screen bg-slate-100 print:bg-white">
       {/* Branded frame — runs around the whole document, print and screen */}
       <div className="mx-auto max-w-3xl my-6 print:my-0">
-        <div className="border-[3px] border-emerald-700 print:border-emerald-800 rounded-sm">
-          <div className="border border-emerald-900/30 m-1.5 print:m-1">
+        <div className="border-[3px] border-cyan-600 print:border-cyan-700 rounded-sm">
+          <div className="border border-cyan-900/30 m-1.5 print:m-1">
             {/* Academy header band */}
-            <header className="bg-emerald-800 print:bg-emerald-800 px-6 py-4 sm:px-8 print:px-6">
+            <header className="bg-cyan-700 print:bg-cyan-700 px-6 py-4 sm:px-8 print:px-6">
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="font-serif text-lg sm:text-xl font-bold tracking-tight text-white">
                     THE INTEL ANALYST ACADEMY
                   </p>
-                  <p className="mt-0.5 text-[11px] sm:text-xs uppercase tracking-[0.18em] text-emerald-200">
+                  <p className="mt-0.5 text-[11px] sm:text-xs uppercase tracking-[0.18em] text-cyan-100">
                     Professional Intelligence Training
                   </p>
                 </div>
                 <div className="hidden sm:block text-right">
-                  <p className="text-[11px] uppercase tracking-widest text-emerald-200">Printable Lesson</p>
+                  <p className="text-[11px] uppercase tracking-widest text-cyan-100">Printable Lesson</p>
                   <p className="text-xs font-semibold text-white">{title}</p>
                 </div>
               </div>
@@ -178,10 +178,10 @@ export default async function TopicDownloadPage({ params }: DownloadPageProps) {
 
             {/* Lesson body */}
             <div className="bg-white px-6 py-8 sm:px-10 sm:py-10 print:px-8 print:py-6">
-              <div className="mb-6 border-b-2 border-emerald-700 pb-4 print:hidden">
+              <div className="mb-6 border-b-2 border-cyan-600 pb-4 print:hidden">
                 <Link
                   href={`/topics/${slug}`}
-                  className="text-sm font-medium text-emerald-800 hover:text-emerald-600"
+                  className="text-sm font-medium text-cyan-700 hover:text-cyan-500"
                 >
                   ← Back to lesson
                 </Link>
@@ -199,11 +199,11 @@ export default async function TopicDownloadPage({ params }: DownloadPageProps) {
               <div className="mt-6 print:mt-4 lesson-print-body">{content}</div>
 
               {/* Key takeaways band */}
-              <div className="mt-10 rounded-sm border-l-4 border-emerald-700 bg-emerald-50 p-5">
-                <p className="text-sm font-bold uppercase tracking-wider text-emerald-900">
+              <div className="mt-10 rounded-sm border-l-4 border-cyan-600 bg-cyan-50 p-5">
+                <p className="text-sm font-bold uppercase tracking-wider text-cyan-900">
                   Continue your training
                 </p>
-                <p className="mt-2 text-sm text-emerald-900/80">
+                <p className="mt-2 text-sm text-cyan-900/80">
                   This lesson is part of The Intel Analyst Academy — professional intelligence analysis
                   training built for analysts. Explore the full course library, structured learning paths,
                   and practical tools at{" "}
@@ -213,8 +213,8 @@ export default async function TopicDownloadPage({ params }: DownloadPageProps) {
             </div>
 
             {/* Academy footer band */}
-            <footer className="bg-emerald-900 print:bg-emerald-900 px-6 py-4 sm:px-8">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-emerald-100">
+            <footer className="bg-cyan-900 print:bg-cyan-900 px-6 py-4 sm:px-8">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-cyan-100">
                 <p className="text-xs">
                   © {new Date().getFullYear()} The Intel Analyst Academy
                 </p>
