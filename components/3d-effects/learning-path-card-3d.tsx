@@ -8,7 +8,6 @@ import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Star } from "lucide-react"
 
 interface LearningPathCard3DProps {
   title: string
@@ -20,8 +19,6 @@ interface LearningPathCard3DProps {
   topics: number | string[]
   estimatedTime: string
   progress?: number
-  rating?: number
-  enrolledUsers?: number
   category?: string
   intensity?: "subtle" | "medium" | "strong"
   index?: number

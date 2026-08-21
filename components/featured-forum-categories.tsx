@@ -8,7 +8,6 @@ interface FeaturedForumCategory {
   description: string
   slug: string
   imagePath: string
-  topicCount: number
 }
 
 interface FeaturedForumCategoriesProps {
@@ -36,7 +35,6 @@ export function FeaturedForumCategories({ categories }: FeaturedForumCategoriesP
           </CardHeader>
           <CardContent className="flex-grow">
             <p className="text-muted-foreground">{category.description}</p>
-            <p className="mt-2 text-sm">{category.topicCount} topics</p>
           </CardContent>
           <CardFooter>
             <Button asChild variant="outline" className="w-full">

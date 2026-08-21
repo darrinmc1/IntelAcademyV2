@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
-import { Clock, Users, BookOpen, Target, ChevronRight, Play, Bookmark } from "lucide-react"
+import { Clock, BookOpen, Target, ChevronRight, Play, Bookmark } from "lucide-react"
 
 interface LearningPathCardProps {
   title: string
@@ -20,9 +20,6 @@ interface LearningPathCardProps {
   progress?: number
   prerequisites?: string[]
   learningOutcomes?: string[]
-  enrolledUsers?: number
-  lastUpdated?: string
-  instructor?: string
   category?: string
 }
 
@@ -37,9 +34,6 @@ export function EnhancedLearningPathCard({
   progress = 0,
   prerequisites = [],
   learningOutcomes = [],
-  enrolledUsers = 0,
-  lastUpdated = "Recently",
-  instructor = "Intel Academy",
   category = "Intelligence Analysis",
 }: LearningPathCardProps) {
   const [isHovered, setIsHovered] = useState(false)
@@ -126,14 +120,10 @@ export function EnhancedLearningPathCard({
           </div>
 
           {/* Stats Row */}
-          <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+          <div className="flex items-center text-sm text-gray-500 mb-4">
             <div className="flex items-center gap-1">
               <BookOpen className="h-4 w-4" />
               <span>{topics} topics</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Users className="h-4 w-4" />
-              <span>{enrolledUsers.toLocaleString()} enrolled</span>
             </div>
           </div>
 
@@ -178,20 +168,6 @@ export function EnhancedLearningPathCard({
                 </ul>
               </div>
             )}
-
-            {/* Course Details */}
-            <div className="mb-4 p-3 bg-gray-50 rounded-lg border border-gray-100">
-              <div className="grid grid-cols-2 gap-3 text-sm">
-                <div>
-                  <span className="font-medium text-gray-700">Instructor:</span>
-                  <p className="text-gray-600">{instructor}</p>
-                </div>
-                <div>
-                  <span className="font-medium text-gray-700">Updated:</span>
-                  <p className="text-gray-600">{lastUpdated}</p>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Action Button */}

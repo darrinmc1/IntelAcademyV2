@@ -6,7 +6,6 @@ import { Image } from "@/components/image"
 interface ForumCategoryCardProps {
   title: string
   description: string
-  topicCount: number
   slug: string
   imagePath?: string
   index?: number
@@ -15,7 +14,6 @@ interface ForumCategoryCardProps {
 export function ForumCategoryCard({
   title,
   description,
-  topicCount,
   slug,
   imagePath,
   index = 0,
@@ -45,7 +43,6 @@ export function ForumCategoryCard({
         </CardHeader>
         <CardContent className="flex-grow">
           <p className="text-gray-600">{description}</p>
-          <p className="mt-4 text-sm text-gray-500">{topicCount} Topics</p>
         </CardContent>
         <CardFooter className="mt-auto">
           <Link href={`/coming-soon/community-forum/categories/${slug}`} className="w-full">

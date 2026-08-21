@@ -15,9 +15,6 @@ interface LearningPath {
   category: string
   prerequisites?: string[]
   learningOutcomes?: string[]
-  enrolledUsers?: number
-  lastUpdated?: string
-  instructor?: string
   // Progress data (if user is enrolled)
   progress?: {
     completedTopics: number
@@ -79,9 +76,6 @@ export function LearningPathGridEnhanced({ learningPaths, showProgress = false }
             estimatedTime={path.estimatedTime}
             prerequisites={path.prerequisites}
             learningOutcomes={path.learningOutcomes}
-            enrolledUsers={path.enrolledUsers}
-            lastUpdated={path.lastUpdated}
-            instructor={path.instructor}
             category={path.category}
             progress={
               path.progress?.completedTopics ? Math.round((path.progress.completedTopics / path.topics) * 100) : 0
