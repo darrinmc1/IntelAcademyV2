@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import "./print.css"
+import "../../../download-styles/print.css"
 
 // Route layout for the printable download pages.
 // Applies .hide-site-chrome so the root layout's header/footer/background

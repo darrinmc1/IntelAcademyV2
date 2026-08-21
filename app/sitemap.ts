@@ -59,6 +59,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }))
 
+  const learningPathDownloads: MetadataRoute.Sitemap = learningPaths.map((lp) => ({
+    url: `${BASE_URL}${lp.path}/download`,
+    priority: 0.5,
+    changeFrequency: "monthly" as const,
+  }))
+
   const topicPages: MetadataRoute.Sitemap = TOPIC_SLUGS.map((slug) => ({
     url: `${BASE_URL}/topics/${slug}`,
     priority: 0.7,
@@ -71,5 +77,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }))
 
-  return [...STATIC_PAGES, ...learningPathPages, ...topicPages, ...downloadPages]
+  return [...STATIC_PAGES, ...learningPathPages, ...learningPathDownloads, ...topicPages, ...downloadPages]
 }
