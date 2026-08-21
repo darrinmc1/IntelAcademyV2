@@ -1,0 +1,26 @@
+/* Hide all site chrome on printable lesson download pages.
+   The root layout always renders Header/Footer — this route hides them
+   so the page is ONLY the lesson content (plus its own clean wrapper). */
+.hide-site-chrome header,
+.hide-site-chrome footer,
+.hide-site-chrome .fixed,
+.hide-site-chrome .sticky,
+.hide-site-chrome [class*="feedback"],
+.hide-site-chrome [class*="waitlist"] {
+  display: none !important;
+}
+
+.hide-site-chrome .flex-grow {
+  background: white;
+}
+
+@media print {
+  .hide-site-chrome header,
+  .hide-site-chrome footer,
+  .hide-site-chrome .fixed,
+  .hide-site-chrome .sticky,
+  .hide-site-chrome [class*="feedback"],
+  .hide-site-chrome [class*="waitlist"] {
+    display: none !important;
+  }
+}
