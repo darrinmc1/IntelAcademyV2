@@ -10,6 +10,69 @@ import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 
 export default function About() {
+  const tiers = [
+    {
+      name: "Starter",
+      price: "Free",
+      description: "Perfect for beginners exploring intelligence analysis fundamentals.",
+      features: [
+        "Access to 10 foundational courses",
+        "Community discussion forums",
+        "Basic learning path guidance",
+        "No certification included",
+        "Self-paced study",
+      ],
+      cta: "Get Started Free",
+      href: "/register",
+      highlighted: false,
+    },
+    {
+      name: "Professional",
+      price: "$49",
+      period: "/month",
+      description: "For analysts who need structured training and recognized credentials.",
+      features: [
+        "Access to 50+ courses",
+        "3 professional certifications",
+        "Structured learning paths",
+        "Priority email support",
+        "Downloadable course materials",
+        "Progress tracking dashboard",
+      ],
+      cta: "Start Professional",
+      href: "/register?plan=professional",
+      highlighted: true,
+    },
+    {
+      name: "Advanced",
+      price: "$99",
+      period: "/month",
+      description: "For teams and serious professionals requiring full platform access.",
+      features: [
+        "Unlimited course access",
+        "All certifications included",
+        "Advanced learning paths",
+        "Dedicated account manager",
+        "Team management tools",
+        "Custom reporting & analytics",
+        "API access",
+      ],
+      cta: "Go Advanced",
+      href: "/register?plan=advanced",
+      highlighted: false,
+    },
+  ]
+
+  const comparisonRows = [
+    { feature: "Course Access", starter: "10 courses", professional: "50+ courses", advanced: "Unlimited" },
+    { feature: "Certifications", starter: "None", professional: "3 certs", advanced: "All certs" },
+    { feature: "Learning Paths", starter: "Basic", professional: "Structured", advanced: "Advanced + Custom" },
+    { feature: "Support", starter: "Community", professional: "Email priority", advanced: "Dedicated manager" },
+    { feature: "Team Tools", starter: "—", professional: "—", advanced: "Included" },
+    { feature: "Downloadable Materials", starter: "—", professional: "Included", advanced: "Included" },
+    { feature: "Progress Tracking", starter: "Basic", professional: "Full dashboard", advanced: "Full + reporting" },
+  ]
+
   return (
     <div className="container mx-auto px-4 py-8">
       <Breadcrumb className="mb-6">
@@ -56,31 +119,28 @@ export default function About() {
                 <h3 className="text-xl font-semibold mb-2">Self-Paced Learning</h3>
                 <p>
                   We understand that professionals have varying schedules and learning preferences. Our platform is
-                  designed to allow you to learn at your own pace, with content organized into digestible mini-topics
-                  that can be completed in 5-15 minutes.
+                  designed to allow you to learn at your own pace, on your own schedule.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Practical Focus</h3>
+                <h3 className="text-xl font-semibold mb-2">Expert-Led Content</h3>
                 <p>
-                  Our content emphasizes practical, applicable skills that you can immediately implement in your work.
-                  From OSINT techniques to analytical methodologies, everything we teach is designed to make you more
-                  effective in real-world scenarios.
+                  All courses are developed by experienced intelligence professionals with real-world operational
+                  backgrounds, ensuring practical, applicable knowledge.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Community-Driven</h3>
+                <h3 className="text-xl font-semibold mb-2">Recognized Certifications</h3>
                 <p>
-                  We believe in the power of peer learning and support. Our community forum provides a space for
-                  intelligence professionals to connect, share insights, and help each other grow in their careers.
+                  Our certifications are designed to demonstrate verifiable competency and are recognized by
+                  organizations across law enforcement, government, and the private sector.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Continuously Evolving</h3>
+                <h3 className="text-xl font-semibold mb-2">Continuous Updates</h3>
                 <p>
-                  The field of intelligence analysis is constantly changing, and our platform evolves with it. We
-                  regularly update our content and add new topics based on community feedback and emerging trends in the
-                  field.
+                  The intelligence landscape evolves rapidly. We continuously update our curriculum to reflect
+                  the latest methodologies, tools, and best practices.
                 </p>
               </div>
             </div>
@@ -88,21 +148,134 @@ export default function About() {
 
           <Separator />
 
+          {/* Pricing Section */}
+          <section id="pricing">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold mb-3">Simple, Transparent Pricing</h2>
+              <p className="text-muted-foreground text-lg">
+                Choose the plan that fits your learning goals. Upgrade or cancel anytime.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-10">
+              {tiers.map((tier) => (
+                <div
+                  key={tier.name}
+                  className={`rounded-xl border p-6 flex flex-col gap-4 ${
+                    tier.highlighted
+                      ? "border-primary bg-primary/5 shadow-lg ring-2 ring-primary"
+                      : "border-border bg-card"
+                  }`}
+                >
+                  {tier.highlighted && (
+                    <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 rounded-full px-3 py-1 w-fit">
+                      Most Popular
+                    </span>
+                  )}
+                  <div>
+                    <h3 className="text-xl font-bold">{tier.name}</h3>
+                    <p className="text-muted-foreground text-sm mt-1">{tier.description}</p>
+                  </div>
+                  <div className="flex items-end gap-1">
+                    <span className="text-4xl font-extrabold">{tier.price}</span>
+                    {tier.period && (
+                      <span className="text-muted-foreground mb-1">{tier.period}</span>
+                    )}
+                  </div>
+                  <ul className="flex flex-col gap-2 flex-1">
+                    {tier.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-2 text-sm">
+                        <span className="mt-0.5 text-primary font-bold">✓</span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button
+                    asChild
+                    variant={tier.highlighted ? "default" : "outline"}
+                    className="w-full mt-2"
+                  >
+                    <Link href={tier.href}>{tier.cta}</Link>
+                  </Button>
+                </div>
+              ))}
+            </div>
+
+            {/* Comparison Table */}
+            <div className="mb-10">
+              <h3 className="text-xl font-bold mb-4 text-center">Plan Comparison</h3>
+              <div className="overflow-x-auto rounded-lg border border-border">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-muted">
+                      <th className="text-left px-4 py-3 font-semibold">Feature</th>
+                      <th className="text-center px-4 py-3 font-semibold">Starter</th>
+                      <th className="text-center px-4 py-3 font-semibold text-primary">Professional</th>
+                      <th className="text-center px-4 py-3 font-semibold">Advanced</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {comparisonRows.map((row, i) => (
+                      <tr key={row.feature} className={i % 2 === 0 ? "bg-background" : "bg-muted/40"}>
+                        <td className="px-4 py-3 font-medium">{row.feature}</td>
+                        <td className="px-4 py-3 text-center text-muted-foreground">{row.starter}</td>
+                        <td className="px-4 py-3 text-center font-medium text-primary">{row.professional}</td>
+                        <td className="px-4 py-3 text-center text-muted-foreground">{row.advanced}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Money-back guarantee */}
+            <div className="rounded-xl border border-border bg-muted/40 p-6 text-center">
+              <h3 className="text-lg font-bold mb-2">30-Day Money-Back Guarantee</h3>
+              <p className="text-muted-foreground text-sm max-w-xl mx-auto">
+                Not satisfied? We offer a full refund within 30 days of your first paid subscription — no questions
+                asked. We're confident in the quality of our training, and we want you to be too.
+              </p>
+            </div>
+          </section>
+
+          <Separator />
+
           <section>
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-            <p className="mb-6">Have questions, feedback, or suggestions? We&apos;d love to hear from you.</p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-2">General Inquiries</h3>
-                <p className="mb-2">Email: info@TheIntelAnalystAcademy.com</p>
+            <h2 className="text-2xl font-bold mb-4">Who We Serve</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="rounded-lg border p-4">
+                <h3 className="font-semibold mb-2">Law Enforcement</h3>
+                <p className="text-sm text-muted-foreground">
+                  Officers and detectives seeking to build or refresh analytical skills for criminal intelligence work.
+                </p>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Content Requests</h3>
-                <p className="mb-4">Have a specific topic you'd like us to cover?</p>
-                <Button asChild>
-                  <Link href="/request-topic">Request a Topic</Link>
-                </Button>
+              <div className="rounded-lg border p-4">
+                <h3 className="font-semibold mb-2">Government Analysts</h3>
+                <p className="text-sm text-muted-foreground">
+                  Public sector professionals requiring structured training aligned with national intelligence standards.
+                </p>
               </div>
+              <div className="rounded-lg border p-4">
+                <h3 className="font-semibold mb-2">Private Sector</h3>
+                <p className="text-sm text-muted-foreground">
+                  Corporate security, risk, and competitive intelligence teams building analytical capability.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="text-center">
+            <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
+            <p className="text-muted-foreground mb-6">
+              Join thousands of intelligence professionals already learning on our platform.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg">
+                <Link href="/register">Create Free Account</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href="/learning-paths">Browse Courses</Link>
+              </Button>
             </div>
           </section>
         </div>
