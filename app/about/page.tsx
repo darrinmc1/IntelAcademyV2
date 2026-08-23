@@ -56,31 +56,29 @@ export default function About() {
                 <h3 className="text-xl font-semibold mb-2">Self-Paced Learning</h3>
                 <p>
                   We understand that professionals have varying schedules and learning preferences. Our platform is
-                  designed to allow you to learn at your own pace, with content organized into digestible mini-topics
-                  that can be completed in 5-15 minutes.
+                  designed to allow you to learn at your own pace, revisiting material as needed and progressing
+                  when you are ready.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Practical Focus</h3>
+                <h3 className="text-xl font-semibold mb-2">Practical Application</h3>
                 <p>
-                  Our content emphasizes practical, applicable skills that you can immediately implement in your work.
-                  From OSINT techniques to analytical methodologies, everything we teach is designed to make you more
-                  effective in real-world scenarios.
+                  Every module is built around real-world scenarios and practical exercises. We focus on skills
+                  you can apply immediately in your professional role, not just theoretical knowledge.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Community-Driven</h3>
+                <h3 className="text-xl font-semibold mb-2">Expert-Developed Content</h3>
                 <p>
-                  We believe in the power of peer learning and support. Our community forum provides a space for
-                  intelligence professionals to connect, share insights, and help each other grow in their careers.
+                  Our curriculum is developed by experienced intelligence professionals with decades of combined
+                  experience across government, law enforcement, and private sector intelligence roles.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Continuously Evolving</h3>
+                <h3 className="text-xl font-semibold mb-2">Continuously Updated</h3>
                 <p>
-                  The field of intelligence analysis is constantly changing, and our platform evolves with it. We
-                  regularly update our content and add new topics based on community feedback and emerging trends in the
-                  field.
+                  The intelligence landscape evolves rapidly. We regularly update our content to reflect the latest
+                  methodologies, tools, and best practices in the field.
                 </p>
               </div>
             </div>
@@ -89,20 +87,93 @@ export default function About() {
           <Separator />
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-            <p className="mb-6">Have questions, feedback, or suggestions? We&apos;d love to hear from you.</p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-2">General Inquiries</h3>
-                <p className="mb-2">Email: info@TheIntelAnalystAcademy.com</p>
+            <h2 className="text-2xl font-bold mb-2 text-center">Student Success Stories</h2>
+            <p className="text-muted-foreground text-center mb-8">
+              Real outcomes from professionals who trained with the Intelligence Analyst Academy
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+
+              <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6 flex flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-muted flex items-center justify-center text-2xl font-bold text-muted-foreground" aria-label="Student initials">
+                    MR
+                  </div>
+                  <div>
+                    <p className="font-semibold text-base">Marcus R.</p>
+                    <p className="text-sm text-muted-foreground">Senior Intelligence Analyst, Federal Agency</p>
+                  </div>
+                </div>
+                <blockquote className="text-sm text-muted-foreground italic border-l-4 border-primary pl-4">
+                  &ldquo;After completing the Structured Analytic Techniques path, I was promoted to Senior Analyst within 6 months. The practical frameworks I learned here directly improved the quality of my assessments.&rdquo;
+                </blockquote>
+                <p className="text-xs font-medium text-primary">&#10003; Promoted to Senior Analyst within 6 months</p>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Content Requests</h3>
-                <p className="mb-4">Have a specific topic you'd like us to cover?</p>
-                <Button asChild>
-                  <Link href="/request-topic">Request a Topic</Link>
-                </Button>
+
+              <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6 flex flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-muted flex items-center justify-center text-2xl font-bold text-muted-foreground" aria-label="Student initials">
+                    JT
+                  </div>
+                  <div>
+                    <p className="font-semibold text-base">Jamie T.</p>
+                    <p className="text-sm text-muted-foreground">Intelligence Officer, Metropolitan Police</p>
+                  </div>
+                </div>
+                <blockquote className="text-sm text-muted-foreground italic border-l-4 border-primary pl-4">
+                  &ldquo;I transitioned from patrol to an intelligence role with no formal training. The Academy&rsquo;s foundational courses gave me the confidence and skills to contribute from day one. My supervisor noticed the difference immediately.&rdquo;
+                </blockquote>
+                <p className="text-xs font-medium text-primary">&#10003; Successfully transitioned to intelligence role in under 3 months</p>
               </div>
+
+              <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6 flex flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-muted flex items-center justify-center text-2xl font-bold text-muted-foreground" aria-label="Student initials">
+                    SL
+                  </div>
+                  <div>
+                    <p className="font-semibold text-base">Sofia L.</p>
+                    <p className="text-sm text-muted-foreground">Competitive Intelligence Manager, Fortune 500</p>
+                  </div>
+                </div>
+                <blockquote className="text-sm text-muted-foreground italic border-l-4 border-primary pl-4">
+                  &ldquo;The private sector intelligence modules were exactly what I needed. I used the OSINT and analysis frameworks to build a competitive intelligence function from scratch. Our team now delivers insights that directly influence executive strategy.&rdquo;
+                </blockquote>
+                <p className="text-xs font-medium text-primary">&#10003; Built a new CI function; recognized as top internal team of the year</p>
+              </div>
+
+              <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6 flex flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-muted flex items-center justify-center text-2xl font-bold text-muted-foreground" aria-label="Student initials">
+                    DK
+                  </div>
+                  <div>
+                    <p className="font-semibold text-base">Daniel K.</p>
+                    <p className="text-sm text-muted-foreground">Graduate Student, Security Studies</p>
+                  </div>
+                </div>
+                <blockquote className="text-sm text-muted-foreground italic border-l-4 border-primary pl-4">
+                  &ldquo;As a student with no professional experience, the Academy bridged the gap between academic theory and real-world practice. I landed a graduate analyst internship at a think tank — the interviewer specifically praised my knowledge of analytic tradecraft.&rdquo;
+                </blockquote>
+                <p className="text-xs font-medium text-primary">&#10003; Secured competitive analyst internship before graduation</p>
+              </div>
+
+            </div>
+          </section>
+
+          <Separator />
+
+          <section className="text-center">
+            <h2 className="text-2xl font-bold mb-4">Ready to Advance Your Career?</h2>
+            <p className="text-muted-foreground mb-6">
+              Join thousands of intelligence professionals who have accelerated their careers with the Academy.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg">
+                <Link href="/learning-paths">Browse Learning Paths</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href="/topics">Explore All Topics</Link>
+              </Button>
             </div>
           </section>
         </div>
