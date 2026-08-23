@@ -1,326 +1,401 @@
-import { Metadata } from "next";
-import Link from "next/link";
-import { Check, X, Zap, Shield, Crown, BookOpen } from "lucide-react";
-
-export const metadata: Metadata = {
-  title: "Pricing | Intel Academy",
-  description:
-    "Choose the plan that fits your intelligence analysis journey. From free fundamentals to full professional access.",
-};
+import Link from 'next/link'
+import { Check, X, Zap, BookOpen, Crown } from 'lucide-react'
 
 const tiers = [
   {
-    id: "free",
-    name: "Explorer",
+    name: 'Starter',
     icon: BookOpen,
-    monthlyPrice: 0,
-    annualPrice: 0,
-    description: "Start building your analytical foundation at no cost.",
-    cta: "Get Started Free",
-    ctaHref: "/signup",
-    highlight: false,
-    badge: null,
+    price: { monthly: 0, annual: 0 },
+    description: 'Perfect for exploring and getting started with the basics.',
+    cta: 'Get Started Free',
+    ctaHref: '/register',
+    highlighted: false,
+    color: 'from-slate-500 to-slate-600',
     features: [
-      { label: "Access to 10 foundational topics", included: true },
-      { label: "Core analytical frameworks", included: true },
-      { label: "Community discussion access", included: true },
-      { label: "Progress tracking", included: true },
-      { label: "Structured learning paths", included: false },
-      { label: "Advanced tradecraft modules", included: false },
-      { label: "Downloadable reference guides", included: false },
-      { label: "Certificate of completion", included: false },
-      { label: "Priority support", included: false },
+      { text: 'Access to 5 free courses', included: true },
+      { text: 'Community forum access', included: true },
+      { text: 'Basic progress tracking', included: true },
+      { text: 'Mobile-friendly learning', included: true },
+      { text: 'Certificate of completion', included: false },
+      { text: 'Downloadable resources', included: false },
+      { text: 'Live Q&A sessions', included: false },
+      { text: 'Mentor support', included: false },
+      { text: 'Offline access', included: false },
+      { text: 'Team management', included: false },
     ],
   },
   {
-    id: "analyst",
-    name: "Analyst",
+    name: 'Pro',
     icon: Zap,
-    monthlyPrice: 29,
-    annualPrice: 23,
-    description: "Everything you need to develop professional-grade analytical skills.",
-    cta: "Start Analyst Plan",
-    ctaHref: "/signup?plan=analyst",
-    highlight: false,
-    badge: null,
+    price: { monthly: 29, annual: 19 },
+    description: 'For serious learners who want full access and career support.',
+    cta: 'Start Pro Plan',
+    ctaHref: '/register?plan=pro',
+    highlighted: true,
+    color: 'from-violet-600 to-indigo-600',
     features: [
-      { label: "Access to 10 foundational topics", included: true },
-      { label: "Core analytical frameworks", included: true },
-      { label: "Community discussion access", included: true },
-      { label: "Progress tracking", included: true },
-      { label: "Structured learning paths", included: true },
-      { label: "Advanced tradecraft modules", included: true },
-      { label: "Downloadable reference guides", included: true },
-      { label: "Certificate of completion", included: false },
-      { label: "Priority support", included: false },
+      { text: 'Access to all 200+ courses', included: true },
+      { text: 'Community forum access', included: true },
+      { text: 'Advanced progress tracking', included: true },
+      { text: 'Mobile-friendly learning', included: true },
+      { text: 'Certificate of completion', included: true },
+      { text: 'Downloadable resources', included: true },
+      { text: 'Live Q&A sessions', included: true },
+      { text: 'Mentor support', included: false },
+      { text: 'Offline access', included: false },
+      { text: 'Team management', included: false },
     ],
   },
   {
-    id: "professional",
-    name: "Professional",
-    icon: Shield,
-    monthlyPrice: 59,
-    annualPrice: 47,
-    description: "Full platform access with credentials to validate your expertise.",
-    cta: "Go Professional",
-    ctaHref: "/signup?plan=professional",
-    highlight: true,
-    badge: "Most Popular",
-    features: [
-      { label: "Access to 10 foundational topics", included: true },
-      { label: "Core analytical frameworks", included: true },
-      { label: "Community discussion access", included: true },
-      { label: "Progress tracking", included: true },
-      { label: "Structured learning paths", included: true },
-      { label: "Advanced tradecraft modules", included: true },
-      { label: "Downloadable reference guides", included: true },
-      { label: "Certificate of completion", included: true },
-      { label: "Priority support", included: false },
-    ],
-  },
-  {
-    id: "enterprise",
-    name: "Enterprise",
+    name: 'Enterprise',
     icon: Crown,
-    monthlyPrice: null,
-    annualPrice: null,
-    description: "Custom training programs for teams, agencies, and institutions.",
-    cta: "Contact Us",
-    ctaHref: "/contact",
-    highlight: false,
-    badge: null,
+    price: { monthly: 99, annual: 79 },
+    description: 'For teams and organizations scaling their learning programs.',
+    cta: 'Contact Sales',
+    ctaHref: '/contact?plan=enterprise',
+    highlighted: false,
+    color: 'from-amber-500 to-orange-500',
     features: [
-      { label: "Access to 10 foundational topics", included: true },
-      { label: "Core analytical frameworks", included: true },
-      { label: "Community discussion access", included: true },
-      { label: "Progress tracking", included: true },
-      { label: "Structured learning paths", included: true },
-      { label: "Advanced tradecraft modules", included: true },
-      { label: "Downloadable reference guides", included: true },
-      { label: "Certificate of completion", included: true },
-      { label: "Priority support", included: true },
+      { text: 'Access to all 200+ courses', included: true },
+      { text: 'Community forum access', included: true },
+      { text: 'Advanced progress tracking', included: true },
+      { text: 'Mobile-friendly learning', included: true },
+      { text: 'Certificate of completion', included: true },
+      { text: 'Downloadable resources', included: true },
+      { text: 'Live Q&A sessions', included: true },
+      { text: 'Mentor support', included: true },
+      { text: 'Offline access', included: true },
+      { text: 'Team management', included: true },
     ],
   },
-];
+]
 
-const comparisonRows = [
-  { label: "Foundational topics", explorer: "10", analyst: "All", professional: "All", enterprise: "All" },
-  { label: "Learning paths", explorer: "—", analyst: "✓", professional: "✓", enterprise: "✓" },
-  { label: "Advanced tradecraft", explorer: "—", analyst: "✓", professional: "✓", enterprise: "✓" },
-  { label: "Reference guides (PDF)", explorer: "—", analyst: "✓", professional: "✓", enterprise: "✓" },
-  { label: "Completion certificates", explorer: "—", analyst: "—", professional: "✓", enterprise: "✓" },
-  { label: "Priority support", explorer: "—", analyst: "—", professional: "—", enterprise: "✓" },
-  { label: "Team management dashboard", explorer: "—", analyst: "—", professional: "—", enterprise: "✓" },
-  { label: "Custom curriculum", explorer: "—", analyst: "—", professional: "—", enterprise: "✓" },
-  { label: "SSO / LMS integration", explorer: "—", analyst: "—", professional: "—", enterprise: "✓" },
-];
+const faqs = [
+  {
+    question: 'Can I switch plans at any time?',
+    answer:
+      'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and billing is prorated.',
+  },
+  {
+    question: 'Is there a free trial for paid plans?',
+    answer:
+      'Absolutely. Every paid plan comes with a 14-day free trial — no credit card required. Cancel anytime before the trial ends.',
+  },
+  {
+    question: 'What payment methods do you accept?',
+    answer:
+      'We accept all major credit cards (Visa, Mastercard, Amex), PayPal, and bank transfers for Enterprise plans.',
+  },
+  {
+    question: 'Do certificates expire?',
+    answer:
+      'No. Certificates of completion are yours to keep forever and can be shared directly to LinkedIn or downloaded as PDF.',
+  },
+  {
+    question: 'What is your refund policy?',
+    answer:
+      'We offer a 30-day money-back guarantee on all paid plans. If you are not satisfied, contact support for a full refund.',
+  },
+  {
+    question: 'How does team billing work for Enterprise?',
+    answer:
+      'Enterprise plans are billed per seat. You can add or remove team members at any time and billing adjusts automatically.',
+  },
+]
 
 export default function PricingPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
       {/* Hero */}
-      <section className="py-20 px-4 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-            Invest in Your Analytical Edge
+      <section className="relative overflow-hidden pt-24 pb-16 px-4">
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-violet-600/20 rounded-full blur-3xl" />
+        </div>
+        <div className="max-w-4xl mx-auto text-center">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 text-sm font-medium mb-6">
+            Simple, transparent pricing
+          </span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
+            Invest in your{' '}
+            <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
+              future
+            </span>
           </h1>
-          <p className="text-lg text-muted-foreground mb-8">
-            From foundational concepts to advanced tradecraft — choose the plan that matches your ambition.
+          <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
+            Choose the plan that fits your goals. Upgrade, downgrade, or cancel anytime — no hidden fees, ever.
           </p>
 
-          {/* Billing toggle label */}
-          <div className="inline-flex items-center gap-3 bg-muted rounded-full px-4 py-2 text-sm font-medium">
-            <span className="text-muted-foreground">Monthly</span>
-            <span className="text-foreground font-semibold">Annual</span>
-            <span className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs font-semibold px-2 py-0.5 rounded-full">
-              Save up to 20%
-            </span>
-          </div>
+          {/* Billing toggle */}
+          <BillingToggle />
         </div>
       </section>
 
-      {/* Pricing Cards */}
-      <section className="px-4 pb-20">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {tiers.map((tier) => {
-            const Icon = tier.icon;
-            return (
-              <div
-                key={tier.id}
-                className={`relative flex flex-col rounded-2xl border p-6 ${
-                  tier.highlight
-                    ? "border-primary bg-primary/5 shadow-lg shadow-primary/10"
-                    : "border-border bg-card"
-                }`}
-              >
-                {tier.badge && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">
-                      {tier.badge}
-                    </span>
-                  </div>
-                )}
+      {/* Pricing cards */}
+      <section className="px-4 pb-24">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          {tiers.map((tier) => (
+            <TierCard key={tier.name} tier={tier} />
+          ))}
+        </div>
 
-                <div className="mb-4">
-                  <div
-                    className={`inline-flex items-center justify-center w-10 h-10 rounded-lg mb-3 ${
-                      tier.highlight ? "bg-primary text-primary-foreground" : "bg-muted text-foreground"
-                    }`}
-                  >
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <h2 className="text-xl font-bold">{tier.name}</h2>
-                  <p className="text-sm text-muted-foreground mt-1">{tier.description}</p>
-                </div>
-
-                <div className="mb-6">
-                  {tier.annualPrice !== null ? (
-                    <>
-                      <span className="text-4xl font-extrabold">
-                        ${tier.annualPrice}
-                      </span>
-                      <span className="text-muted-foreground text-sm ml-1">/mo</span>
-                      {tier.monthlyPrice !== tier.annualPrice && tier.monthlyPrice !== 0 && (
-                        <p className="text-xs text-muted-foreground mt-1">
-                          Billed annually · ${tier.monthlyPrice}/mo month-to-month
-                        </p>
-                      )}
-                      {tier.monthlyPrice === 0 && (
-                        <p className="text-xs text-muted-foreground mt-1">Free forever</p>
-                      )}
-                    </>
-                  ) : (
-                    <>
-                      <span className="text-3xl font-extrabold">Custom</span>
-                      <p className="text-xs text-muted-foreground mt-1">Tailored to your team</p>
-                    </>
-                  )}
-                </div>
-
-                <Link
-                  href={tier.ctaHref}
-                  className={`block text-center rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors mb-6 ${
-                    tier.highlight
-                      ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                      : "bg-muted text-foreground hover:bg-muted/80"
-                  }`}
-                >
-                  {tier.cta}
-                </Link>
-
-                <ul className="space-y-2.5 flex-1">
-                  {tier.features.map((feature) => (
-                    <li key={feature.label} className="flex items-start gap-2 text-sm">
-                      {feature.included ? (
-                        <Check className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
-                      ) : (
-                        <X className="w-4 h-4 text-muted-foreground/40 mt-0.5 shrink-0" />
-                      )}
-                      <span
-                        className={feature.included ? "text-foreground" : "text-muted-foreground/60"}
-                      >
-                        {feature.label}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
+        {/* Value callout */}
+        <div className="max-w-3xl mx-auto mt-16 rounded-2xl bg-gradient-to-r from-violet-600/20 to-indigo-600/20 border border-violet-500/20 p-8 text-center">
+          <p className="text-slate-300 text-lg">
+            🎓 <strong className="text-white">Over 50,000 learners</strong> have advanced their careers with our courses.
+            Join them today with a{' '}
+            <strong className="text-violet-400">14-day free trial</strong> — no credit card required.
+          </p>
         </div>
       </section>
 
-      {/* Feature Comparison Table */}
+      {/* Feature comparison table */}
       <section className="px-4 pb-24">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-10">Full Feature Comparison</h2>
-          <div className="overflow-x-auto rounded-xl border border-border">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-border bg-muted/50">
-                  <th className="text-left px-6 py-4 font-semibold text-foreground w-1/3">Feature</th>
-                  <th className="text-center px-4 py-4 font-semibold text-foreground">Explorer</th>
-                  <th className="text-center px-4 py-4 font-semibold text-foreground">Analyst</th>
-                  <th className="text-center px-4 py-4 font-semibold text-primary">Professional</th>
-                  <th className="text-center px-4 py-4 font-semibold text-foreground">Enterprise</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonRows.map((row, i) => (
-                  <tr
-                    key={row.label}
-                    className={`border-b border-border last:border-0 ${
-                      i % 2 === 0 ? "bg-background" : "bg-muted/20"
-                    }`}
-                  >
-                    <td className="px-6 py-3.5 text-foreground font-medium">{row.label}</td>
-                    <td className="px-4 py-3.5 text-center text-muted-foreground">{row.explorer}</td>
-                    <td className="px-4 py-3.5 text-center text-muted-foreground">{row.analyst}</td>
-                    <td className="px-4 py-3.5 text-center font-semibold text-foreground">{row.professional}</td>
-                    <td className="px-4 py-3.5 text-center text-muted-foreground">{row.enterprise}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Full feature{' '}
+            <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
+              comparison
+            </span>
+          </h2>
+          <ComparisonTable />
         </div>
       </section>
 
-      {/* FAQ / Trust */}
-      <section className="px-4 pb-24 bg-muted/30">
-        <div className="max-w-3xl mx-auto py-16">
-          <h2 className="text-2xl font-bold text-center mb-10">Common Questions</h2>
-          <div className="space-y-6">
-            {[
-              {
-                q: "Can I switch plans later?",
-                a: "Yes. You can upgrade or downgrade at any time. Upgrades take effect immediately; downgrades apply at the next billing cycle.",
-              },
-              {
-                q: "Is there a free trial for paid plans?",
-                a: "The Explorer plan is free forever and gives you a genuine taste of the platform. Paid plans include a 7-day money-back guarantee.",
-              },
-              {
-                q: "How does annual billing work?",
-                a: "Annual plans are billed once per year at the discounted rate shown. You save up to 20% compared to paying month-to-month.",
-              },
-              {
-                q: "What counts as an \"Enterprise\" team?",
-                a: "Enterprise is designed for groups of 5 or more learners — government agencies, consulting firms, academic institutions, and corporate intelligence teams.",
-              },
-            ].map(({ q, a }) => (
-              <div key={q} className="rounded-xl border border-border bg-card p-6">
-                <h3 className="font-semibold text-foreground mb-2">{q}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{a}</p>
-              </div>
+      {/* FAQ */}
+      <section className="px-4 pb-24">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Frequently asked questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq) => (
+              <details
+                key={faq.question}
+                className="group rounded-xl bg-slate-800/50 border border-slate-700/50 px-6 py-4 cursor-pointer"
+              >
+                <summary className="flex items-center justify-between font-semibold text-slate-200 list-none">
+                  {faq.question}
+                  <span className="ml-4 text-violet-400 group-open:rotate-45 transition-transform duration-200 text-xl leading-none">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-3 text-slate-400 leading-relaxed">{faq.answer}</p>
+              </details>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Banner */}
+      {/* CTA */}
       <section className="px-4 pb-24">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to sharpen your analytical thinking?</h2>
-          <p className="text-muted-foreground mb-8">
-            Join analysts, researchers, and intelligence professionals who are building real tradecraft skills.
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to start learning?</h2>
+          <p className="text-slate-400 mb-8">
+            Join thousands of learners already building skills that matter.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/signup"
-              className="inline-flex items-center justify-center rounded-lg bg-primary text-primary-foreground px-6 py-3 font-semibold hover:bg-primary/90 transition-colors"
+              href="/register"
+              className="px-8 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 font-semibold transition-all duration-200 shadow-lg shadow-violet-500/25"
             >
-              Start for Free
+              Get started for free
             </Link>
             <Link
-              href="/signup?plan=professional"
-              className="inline-flex items-center justify-center rounded-lg border border-border bg-background px-6 py-3 font-semibold hover:bg-muted transition-colors"
+              href="/courses"
+              className="px-8 py-3 rounded-xl border border-slate-600 hover:border-slate-400 text-slate-300 hover:text-white font-semibold transition-all duration-200"
             >
-              View Professional Plan
+              Browse courses
             </Link>
           </div>
         </div>
       </section>
     </main>
-  );
+  )
+}
+
+// ─── Sub-components ───────────────────────────────────────────────────────────
+
+function BillingToggle() {
+  // Static render — interactivity can be added with a client component later
+  return (
+    <div className="mt-10 inline-flex items-center gap-3 bg-slate-800/60 border border-slate-700/50 rounded-full px-2 py-2">
+      <button className="px-5 py-2 rounded-full bg-violet-600 text-white text-sm font-semibold">
+        Monthly
+      </button>
+      <button className="px-5 py-2 rounded-full text-slate-400 text-sm font-semibold hover:text-white transition-colors">
+        Annual
+        <span className="ml-2 text-xs bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-full px-2 py-0.5">
+          Save 35%
+        </span>
+      </button>
+    </div>
+  )
+}
+
+function TierCard({ tier }: { tier: (typeof tiers)[number] }) {
+  const Icon = tier.icon
+  return (
+    <div
+      className={`relative flex flex-col rounded-2xl border ${
+        tier.highlighted
+          ? 'border-violet-500/50 bg-gradient-to-b from-violet-950/60 to-slate-900/80 shadow-2xl shadow-violet-500/20'
+          : 'border-slate-700/50 bg-slate-800/40'
+      } p-8`}
+    >
+      {tier.highlighted && (
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+          <span className="px-4 py-1.5 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white text-xs font-bold uppercase tracking-wider shadow-lg">
+            Most Popular
+          </span>
+        </div>
+      )}
+
+      {/* Header */}
+      <div className="mb-6">
+        <div
+          className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${tier.color} mb-4`}
+        >
+          <Icon className="w-6 h-6 text-white" />
+        </div>
+        <h3 className="text-xl font-bold text-white">{tier.name}</h3>
+        <p className="text-slate-400 text-sm mt-1">{tier.description}</p>
+      </div>
+
+      {/* Price */}
+      <div className="mb-8">
+        {tier.price.monthly === 0 ? (
+          <div className="flex items-end gap-1">
+            <span className="text-5xl font-extrabold text-white">Free</span>
+          </div>
+        ) : (
+          <div className="flex items-end gap-1">
+            <span className="text-5xl font-extrabold text-white">${tier.price.monthly}</span>
+            <span className="text-slate-400 mb-2">/mo</span>
+          </div>
+        )}
+        {tier.price.annual > 0 && (
+          <p className="text-sm text-emerald-400 mt-1">
+            ${tier.price.annual}/mo billed annually
+          </p>
+        )}
+      </div>
+
+      {/* CTA */}
+      <Link
+        href={tier.ctaHref}
+        className={`block text-center py-3 px-6 rounded-xl font-semibold transition-all duration-200 mb-8 ${
+          tier.highlighted
+            ? 'bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white shadow-lg shadow-violet-500/25'
+            : 'bg-slate-700/60 hover:bg-slate-700 text-slate-200 border border-slate-600/50'
+        }`}
+      >
+        {tier.cta}
+      </Link>
+
+      {/* Features */}
+      <ul className="space-y-3 flex-1">
+        {tier.features.map((feature) => (
+          <li key={feature.text} className="flex items-start gap-3">
+            {feature.included ? (
+              <Check className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+            ) : (
+              <X className="w-5 h-5 text-slate-600 shrink-0 mt-0.5" />
+            )}
+            <span
+              className={`text-sm ${
+                feature.included ? 'text-slate-300' : 'text-slate-600'
+              }`}
+            >
+              {feature.text}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+const comparisonRows = [
+  { category: 'Content', feature: 'Free courses', starter: '5 courses', pro: 'All 200+', enterprise: 'All 200+' },
+  { category: 'Content', feature: 'New course releases', starter: 'Limited', pro: 'Immediate', enterprise: 'Immediate' },
+  { category: 'Content', feature: 'Downloadable resources', starter: false, pro: true, enterprise: true },
+  { category: 'Content', feature: 'Offline access', starter: false, pro: false, enterprise: true },
+  { category: 'Learning', feature: 'Progress tracking', starter: 'Basic', pro: 'Advanced', enterprise: 'Advanced' },
+  { category: 'Learning', feature: 'Quizzes & assessments', starter: true, pro: true, enterprise: true },
+  { category: 'Learning', feature: 'Certificate of completion', starter: false, pro: true, enterprise: true },
+  { category: 'Support', feature: 'Community forum', starter: true, pro: true, enterprise: true },
+  { category: 'Support', feature: 'Live Q&A sessions', starter: false, pro: true, enterprise: true },
+  { category: 'Support', feature: 'Dedicated mentor', starter: false, pro: false, enterprise: true },
+  { category: 'Support', feature: 'Priority support', starter: false, pro: false, enterprise: true },
+  { category: 'Team', feature: 'Team management dashboard', starter: false, pro: false, enterprise: true },
+  { category: 'Team', feature: 'Analytics & reporting', starter: false, pro: false, enterprise: true },
+  { category: 'Team', feature: 'SSO / SAML', starter: false, pro: false, enterprise: true },
+]
+
+function CellValue({ value }: { value: boolean | string }) {
+  if (typeof value === 'boolean') {
+    return value ? (
+      <Check className="w-5 h-5 text-emerald-400 mx-auto" />
+    ) : (
+      <X className="w-5 h-5 text-slate-600 mx-auto" />
+    )
+  }
+  return <span className="text-sm text-slate-300">{value}</span>
+}
+
+function ComparisonTable() {
+  const categories = [...new Set(comparisonRows.map((r) => r.category))]
+  return (
+    <div className="overflow-x-auto rounded-2xl border border-slate-700/50">
+      <table className="w-full text-sm">
+        <thead>
+          <tr className="border-b border-slate-700/50">
+            <th className="text-left px-6 py-4 text-slate-400 font-medium w-1/3">Feature</th>
+            {tiers.map((tier) => (
+              <th key={tier.name} className="px-6 py-4 text-center">
+                <span
+                  className={`font-bold ${
+                    tier.highlighted ? 'text-violet-400' : 'text-slate-200'
+                  }`}
+                >
+                  {tier.name}
+                </span>
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {categories.map((category) => (
+            <>
+              <tr key={`cat-${category}`} className="bg-slate-800/60">
+                <td
+                  colSpan={4}
+                  className="px-6 py-2 text-xs font-semibold uppercase tracking-wider text-slate-500"
+                >
+                  {category}
+                </td>
+              </tr>
+              {comparisonRows
+                .filter((r) => r.category === category)
+                .map((row) => (
+                  <tr
+                    key={row.feature}
+                    className="border-t border-slate-800/60 hover:bg-slate-800/30 transition-colors"
+                  >
+                    <td className="px-6 py-3 text-slate-300">{row.feature}</td>
+                    <td className="px-6 py-3 text-center">
+                      <CellValue value={row.starter} />
+                    </td>
+                    <td className="px-6 py-3 text-center bg-violet-950/20">
+                      <CellValue value={row.pro} />
+                    </td>
+                    <td className="px-6 py-3 text-center">
+                      <CellValue value={row.enterprise} />
+                    </td>
+                  </tr>
+                ))}
+            </>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
 }
