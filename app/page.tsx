@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 import { HeroSection } from "@/components/hero-section"
 import { HomepageQuickNav } from "@/components/homepage-quick-nav"
+import { HomepagePricingSummary } from "@/components/homepage-pricing-summary"
 import { IntelligenceTypesShowcase } from "@/components/intelligence-types-showcase"
 import { LearningPathsSection } from "@/components/learning-paths-section"
 import { HotTopicsSection } from "@/components/hot-topics-section"
@@ -23,6 +24,8 @@ export default function HomePage() {
       {/* Quick navigation pills */}
       <HomepageQuickNav />
 
+      <HomepagePricingSummary />
+
       {/* Hot Topics & Latest Topics - side by side on desktop */}
       <section className="py-8">
         <div className="container mx-auto px-4">
@@ -42,13 +45,9 @@ export default function HomePage() {
         </LazySection>
       </div>
 
-      {/* Learning paths - lazy load */}
+      {/* Learning paths — render immediately so the catalog is visible, not only a newsletter */}
       <div id="learning-paths" className="scroll-mt-24">
-        <LazySection>
-          <Suspense fallback={<div className="h-96 animate-pulse bg-white/5 rounded-xl" />}>
-            <LearningPathsSection />
-          </Suspense>
-        </LazySection>
+        <LearningPathsSection />
       </div>
 
       <div className="flex justify-center mt-8 mb-12">

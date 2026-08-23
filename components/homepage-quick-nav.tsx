@@ -1,12 +1,13 @@
 "use client"
 
-import { Shield, Route, ClipboardList } from "lucide-react"
+import { Shield, Route, ClipboardList, Tag } from "lucide-react"
 import Link from "next/link"
 
 const navItems = [
   { label: "Intelligence Types", icon: Shield, href: "#intelligence-types" },
   { label: "Learning Pathways", icon: Route, href: "#learning-paths" },
   { label: "Academy Brief", icon: ClipboardList, href: "/tools/academy-brief" },
+  { label: "Pricing", icon: Tag, href: "/pricing" },
 ]
 
 export function HomepageQuickNav() {
