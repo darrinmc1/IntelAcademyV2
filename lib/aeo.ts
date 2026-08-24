@@ -1,4 +1,4 @@
-import { DISCLAIMER, SITE_URL, briefStandalone, getParseablePricing, plans } from "@/lib/pricing"
+import { CHECKOUT_STATUS, DISCLAIMER, SITE_URL, briefStandalone, getParseablePricing, plans } from "@/lib/pricing"
 
 export const academyBriefFaqs = [
   {
@@ -69,6 +69,7 @@ Parseable: ${SITE_URL}/pricing.json
 Human: ${SITE_URL}/pricing
 Currency: ${pricing.currency}
 Payments live: ${pricing.paymentsLive}
+Checkout: ${CHECKOUT_STATUS}
 x402: false
 
 ${planBlock}
