@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
-import { plans, briefStandalone } from "@/lib/pricing"
+import { plans, briefStandalone, CHECKOUT_STATUS } from "@/lib/pricing"
 
 function periodLabel(period: "month" | "forever") {
   return period === "month" ? "/mo" : " forever"
@@ -12,7 +12,7 @@ export function HomepagePricingSummary() {
       name: plan.name,
       priceLabel: plan.priceLabel,
       period: periodLabel(plan.period),
-      note: plan.id === "early_adopter" ? "Lock in forever" : plan.id === "pro" ? "When it launches" : "No card needed",
+      note: plan.id === "early_adopter" ? "Lock in when live" : plan.id === "pro" ? "When it launches" : "No card needed",
       highlighted: plan.highlighted,
     })),
     {
@@ -35,9 +35,9 @@ export function HomepagePricingSummary() {
                 Free, Early Adopter $5/mo, Pro $10/mo
               </h2>
               <p className="mt-2 text-slate-300">
-                Academy Brief is included on paid plans, or $29/mo standalone. Checkout coming — join the
-                waitlist. No card required today.
+                Academy Brief is included on paid plans, or $29/mo standalone when billing is live.
               </p>
+              <p className="mt-3 text-sm font-medium text-amber-200">{CHECKOUT_STATUS}</p>
             </div>
             <Link
               href="/pricing"

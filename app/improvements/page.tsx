@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Construction, ArrowLeft } from "lucide-react"
+import { CHECKOUT_STATUS } from "@/lib/pricing"
 
 export default function ImprovementsPage() {
   return (
@@ -12,10 +13,17 @@ export default function ImprovementsPage() {
             </div>
           </div>
           <h1 className="text-3xl font-bold tracking-tight mb-3">We&apos;re Building Something Better</h1>
-          <p className="text-slate-600 max-w-lg mx-auto mb-8 text-lg">
-            The payment system isn&apos;t live yet — we&apos;re putting the finishing touches on 
-            our subscription platform. When it launches, early adopters lock in the 
-            <strong className="text-blue-700"> $5/month rate forever</strong>.
+          <p className="text-slate-600 max-w-lg mx-auto mb-4 text-lg">
+            {CHECKOUT_STATUS} When billing is live, early adopters lock in the{" "}
+            <strong className="text-blue-700">$5/month</strong> rate forever. Planned map: Free, Early
+            Adopter $5/mo, Pro $10/mo, Academy Brief $29/mo standalone.
+          </p>
+          <p className="text-slate-500 max-w-lg mx-auto mb-8 text-sm">
+            Same planned prices as{" "}
+            <Link href="/pricing" className="text-blue-700 underline underline-offset-2">
+              /pricing
+            </Link>
+            .
           </p>
           <div className="flex items-center justify-center gap-4">
             <Link href="/" className="inline-flex items-center gap-2 rounded-lg border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50">

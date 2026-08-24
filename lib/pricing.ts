@@ -10,6 +10,10 @@ export const SITE_URL = "https://theintelanalystacademy.com"
 export const DISCLAIMER =
   "Academy Brief is a training and education tool. It is not an operational intelligence product, does not constitute finished intelligence, and must not be used as a substitute for authorized analysis."
 
+/** Shared human copy until Stripe checkout exists. */
+export const CHECKOUT_STATUS =
+  "Checkout isn't live yet. These are planned prices — join the waitlist. No card required today."
+
 export type PlanId = "free" | "early_adopter" | "pro"
 
 export type Plan = {
@@ -57,7 +61,7 @@ export const plans: Plan[] = [
     currency: "USD",
     period: "month",
     priceLabel: "$5",
-    description: "Lock in early adopter pricing forever — never pay more. Includes Academy Brief.",
+    description: "Lock in early adopter pricing when billing is live — never pay more. Includes Academy Brief.",
     includesAcademyBrief: true,
     briefAllowance: "Unlimited Academy Briefs (when billing is live)",
     features: [
@@ -65,10 +69,9 @@ export const plans: Plan[] = [
       "Academy Brief included",
       "All Pro template packs",
       "All interactive tools",
-      "30-day refund guarantee",
-      "Price locked forever",
+      "Price locked forever when billing is live",
     ],
-    cta: "Lock in $5/mo",
+    cta: "Join the waitlist",
     href: "/improvements",
     highlighted: true,
     available: false,
@@ -90,7 +93,7 @@ export const plans: Plan[] = [
       "New content priority",
       "Priority support",
     ],
-    cta: "Coming Soon",
+    cta: "Join the waitlist",
     href: "/improvements",
     highlighted: false,
     available: false,
@@ -117,7 +120,8 @@ export function getParseablePricing() {
     currency: "USD",
     billing: "subscription",
     paymentsLive: false,
-    checkout: "existing-site-plans",
+    checkout: "waitlist",
+    checkoutStatus: CHECKOUT_STATUS,
     x402: false,
     disclaimer: DISCLAIMER,
     product: {
