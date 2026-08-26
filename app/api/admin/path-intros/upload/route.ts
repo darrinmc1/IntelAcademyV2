@@ -13,12 +13,22 @@ export const dynamic = "force-dynamic"
  * webhook (no session cookie) can still confirm the write.
  */
 export async function POST(request: Request): Promise<NextResponse> {
+  const body = (await request.json()) as HandleUploadBody
+  const isTokenRequest = body?.type === "blob.generate-client-token"
+
+  // Token generation is the admin desk. Completion callbacks come from Vercel.
+  if (isTokenRequest) {
+    const user = await getCurrentUser()
+    const authz = authorizePathIntroUpload(user)
+    if (!authz.ok) {
+      return NextResponse.json({ error: authz.error }, { status: authz.status })
+    }
+  }
+
   const token = getBlobReadWriteToken()
   if (!token) {
     return NextResponse.json({ error: BLOB_TOKEN_MISSING_MESSAGE }, { status: 503 })
   }
-
-  const body = (await request.json()) as HandleUploadBody
 
   try {
     const jsonResponse = await handleUpload({

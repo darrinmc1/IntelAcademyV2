@@ -23,9 +23,9 @@ export function canUploadPathIntro(user: PathIntroViewer): boolean {
 }
 
 export type PlaybackDecision =
-  | { status: 404; error: string; url?: undefined }
-  | { status: 401; error: string; url?: undefined }
-  | { status: 403; error: string; url?: undefined }
+  | { status: 404; error: string }
+  | { status: 401; error: string }
+  | { status: 403; error: string }
   | { status: 200 }
 
 export function decidePathIntroPlayback(input: {

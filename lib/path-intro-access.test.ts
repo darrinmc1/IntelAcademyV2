@@ -70,7 +70,6 @@ describe("path intro playback access", () => {
       user: { role: "user", plan: "free" },
     })
     expect(decision.status).toBe(403)
-    expect(decision.url).toBeUndefined()
     expect("url" in decision).toBe(false)
   })
 
@@ -81,7 +80,7 @@ describe("path intro playback access", () => {
       user: null,
     })
     expect(decision.status).toBe(401)
-    expect(decision.url).toBeUndefined()
+    expect("url" in decision).toBe(false)
   })
 
   it("allows early, pro, and admin to receive a signed URL", () => {
@@ -119,7 +118,7 @@ describe("path intro playback access", () => {
       user: { role: "pro", plan: "pro" },
     })
     expect(decision.status).toBe(404)
-    expect(decision.url).toBeUndefined()
+    expect("url" in decision).toBe(false)
   })
 })
 
