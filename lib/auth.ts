@@ -1,5 +1,6 @@
 import { SignJWT, jwtVerify } from 'jose'
 import { cookies } from 'next/headers'
+import { normalizeUserPlan, type UserPlan } from '@/lib/user-plan'
 
 // Require a real secret in production — never silently fall back to a known
 // default, which would let anyone forge a session cookie.
@@ -27,6 +28,8 @@ export interface AuthUser {
   codename: string
   role: UserRole
   createdAt: string
+  /** Billing plan. Stripe later writes this same field. Default free. */
+  plan?: UserPlan
 }
 
 /**
@@ -38,6 +41,7 @@ export async function createToken(user: AuthUser): Promise<string> {
     email: user.email,
     codename: user.codename,
     role: user.role || 'user',
+    plan: normalizeUserPlan(user.plan),
   })
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
@@ -51,7 +55,9 @@ export async function createToken(user: AuthUser): Promise<string> {
 export async function verifyToken(token: string): Promise<AuthUser | null> {
   try {
     const { payload } = await jwtVerify(token, JWT_SECRET)
-    return payload as unknown as AuthUser
+    const user = payload as unknown as AuthUser
+    user.plan = normalizeUserPlan(user.plan)
+    return user
   } catch {
     return null
   }

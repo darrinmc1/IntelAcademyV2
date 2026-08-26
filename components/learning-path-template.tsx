@@ -1,6 +1,7 @@
 import type { ReactNode } from "react"
 import { TopicWhereNext } from "@/components/topic-where-next"
 import { DownloadPathButton } from "@/components/download-path-button"
+import { PathIntroPlayer } from "@/components/path-intro-player"
 
 interface LearningPathTemplateProps {
   children: ReactNode
@@ -20,6 +21,9 @@ export function LearningPathTemplate({ children, pathSlug }: LearningPathTemplat
       {/* Main content */}
       <div className="flex justify-end mb-4">
         <DownloadPathButton />
+      </div>
+      <div className="container mx-auto px-4">
+        <PathIntroPlayer slug={pathSlug} />
       </div>
       {children}
 

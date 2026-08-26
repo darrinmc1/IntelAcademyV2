@@ -5,6 +5,9 @@ import type { ImageMetadata } from "@/utils/blob-storage"
 import { safeRevalidatePath } from "@/utils/revalidation"
 import { requireAdmin } from "@/lib/auth"
 
+// Image-path stub. Private path-intro video uploads use
+// app/api/admin/path-intros/upload and lib/path-intro-blob.ts.
+
 // Function to handle image uploads without using Blob
 export async function uploadImageFromUrlToBlob(
   imageUrl: string,

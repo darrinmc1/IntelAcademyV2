@@ -69,6 +69,7 @@ export async function POST(request: Request) {
       codename: user.codename,
       role: user.role || 'user',
       createdAt: user.created_at,
+      plan: user.plan || 'free',
     })
     await setAuthCookie(token)
 

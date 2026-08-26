@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/breadcrumb"
 import { StaticImage } from "@/components/static-image"
 import { TopicWhereNext } from "@/components/topic-where-next"
+import { LearningFormats } from "@/components/learning-formats"
 
 export default function ReportWritingPath() {
   return (
@@ -46,6 +47,8 @@ export default function ReportWritingPath() {
           </div>
         </div>
       </div>
+
+      <LearningFormats pathSlug="report-writing" />
 
       {/* Content sections */}
       <section className="mb-12">

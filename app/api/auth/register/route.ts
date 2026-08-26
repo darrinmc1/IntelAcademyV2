@@ -61,12 +61,13 @@ export async function POST(request: Request) {
       codename: agentCodename,
       role: 'user',
       createdAt: new Date().toISOString(),
+      plan: 'free',
     })
     await setAuthCookie(token)
 
     return NextResponse.json({
       success: true,
-      user: { id: userId, email: email.toLowerCase(), codename: agentCodename },
+      user: { id: userId, email: email.toLowerCase(), codename: agentCodename, plan: 'free' },
     })
   } catch (error) {
     console.error('Registration error:', error)
