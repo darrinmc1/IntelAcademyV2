@@ -1,4 +1,7 @@
-// This file stores video IDs and metadata for each lesson
+// Public YouTube IDs for optional lesson clips (OSINT etc.).
+// These are NOT the paid product. Path intros are private Blob files
+// catalogued in data/path-intro-videos.ts — do not add those IDs here.
+
 // Format: [category]/[lesson-slug]: { videoId, duration, description }
 
 export interface LessonVideoData {

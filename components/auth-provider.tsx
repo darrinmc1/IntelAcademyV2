@@ -15,6 +15,7 @@ interface AuthUser {
   bestStreak?: number
   accessTier?: string
   createdAt?: string
+  plan?: "free" | "early" | "pro"
 }
 
 interface AuthContextType {

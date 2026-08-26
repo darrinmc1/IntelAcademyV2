@@ -8,7 +8,7 @@ export interface ImageMetadata {
 }
 
 export async function uploadToBlob(file: File, category: string): Promise<ImageMetadata> {
-  // Placeholder for actual blob storage upload
+  // Image stub only. Private path-intro video storage lives in lib/path-intro-blob.ts.
   const filename = file.name
   const url = `/images/${category}/${filename}`
 

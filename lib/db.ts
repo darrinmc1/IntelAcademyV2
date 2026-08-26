@@ -1,4 +1,5 @@
 import { sql } from '@vercel/postgres'
+import { normalizeUserPlan, type UserPlan } from '@/lib/user-plan'
 
 /**
  * Initialize the database tables (run once)
@@ -25,6 +26,8 @@ export async function initDatabase() {
   `
   // Idempotent migration: add role to pre-existing users tables
   await sql`ALTER TABLE users ADD COLUMN IF NOT EXISTS role TEXT DEFAULT 'user'`
+  // Access plan for gated path intros. Stripe later writes this same field.
+  await sql`ALTER TABLE users ADD COLUMN IF NOT EXISTS plan TEXT DEFAULT 'free'`
 
   // PIN auth, lockout, and PIN-reset migrations.
   // password_hash now stores the bcrypt hash of the 4-digit PIN.
@@ -134,6 +137,19 @@ export type UserRole = 'admin' | 'moderator' | 'editor' | 'viewer' | 'user'
  */
 export async function setUserRole(email: string, role: UserRole) {
   await sql`UPDATE users SET role = ${role}, updated_at = NOW() WHERE email = ${email.toLowerCase()}`
+}
+
+/**
+ * Set a user's access plan by email. Admin-only at the call site.
+ * Stripe later writes this same column.
+ */
+export async function setUserPlan(email: string, plan: UserPlan) {
+  await sql`UPDATE users SET plan = ${plan}, updated_at = NOW() WHERE email = ${email.toLowerCase()}`
+}
+
+export async function getUserPlan(id: string): Promise<UserPlan> {
+  const result = await sql`SELECT plan FROM users WHERE id = ${id}`
+  return normalizeUserPlan(result.rows[0]?.plan)
 }
 
 /**
@@ -328,6 +344,7 @@ export async function getUserProfile(id: string) {
     lastVisitDate: user.last_visit_date,
     accessTier: user.access_tier,
     role: user.role || 'user',
+    plan: normalizeUserPlan(user.plan),
     createdAt: user.created_at,
   }
 }

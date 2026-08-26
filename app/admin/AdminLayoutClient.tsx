@@ -75,6 +75,11 @@ const navItems: NavItem[] = [
         icon: <FileVideo className="h-5 w-5" />,
       },
       {
+        title: "Path intros",
+        href: "/admin/path-intros",
+        icon: <FileVideo className="h-5 w-5" />,
+      },
+      {
         title: "Blob Upload",
         href: "/admin/blob-upload",
         icon: <Upload className="h-5 w-5" />,
