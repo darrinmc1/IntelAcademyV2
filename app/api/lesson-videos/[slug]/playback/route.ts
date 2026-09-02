@@ -15,7 +15,7 @@ export const dynamic = "force-dynamic"
 
 /**
  * Issues a short-lived signed GET URL after an access check.
- * Free / signed-out / $5 / $10 callers get 401/403 with no blob URL in the body.
+ * Free / signed-out / early / written callers get 401/403 with no blob URL in the body.
  */
 export async function GET(
   request: Request,

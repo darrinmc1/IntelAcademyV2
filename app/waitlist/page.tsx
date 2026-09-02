@@ -7,7 +7,7 @@ import { WaitlistSignup } from "@/components/waitlist-signup"
 export const metadata: Metadata = {
   title: "Waitlist",
   description:
-    `Join the Intel Analyst Academy waitlist. Planned prices: ${PRICE_MAP_LABEL}. Checkout isn't live.`,
+    `Join the Intel Analyst Academy waitlist. ${PRICE_MAP_LABEL} Checkout isn't live.`,
 }
 
 export default function WaitlistPage() {
@@ -18,7 +18,7 @@ export default function WaitlistPage() {
         <h1 className="text-4xl font-bold text-white mb-4">Payments are not live</h1>
         <p className="text-lg text-slate-300 mb-4">{CHECKOUT_STATUS}</p>
         <p className="text-slate-400 mb-4">
-          Planned map: {PRICE_MAP_LABEL}. {PRICE_MAP_DETAIL} Academy Brief is a tool, not a standalone SKU.
+          {PRICE_MAP_LABEL} {PRICE_MAP_DETAIL} Academy Brief is a tool, not a standalone SKU.
           No Stripe checkout on this page.
         </p>
         <SignupOrWaitlistPlanLabels className="mb-8 text-left text-sm text-slate-300 space-y-1 max-w-md mx-auto" />

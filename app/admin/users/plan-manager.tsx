@@ -48,7 +48,7 @@ export function PlanManager() {
           <BadgeCheck className="h-5 w-5" /> Set User Plan
         </CardTitle>
         <CardDescription>
-          Hand-set free / early / pro / video until Stripe writes this same field. Only the $19
+          Hand-set free / early / pro / video until billing writes this same field. Only the
           video plan or an admin account can play path intros. No checkout on the site yet.
         </CardDescription>
       </CardHeader>

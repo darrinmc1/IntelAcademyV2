@@ -21,7 +21,7 @@ export default function JoinPage() {
           <Link href="/register" className="text-cyan-400 underline underline-offset-2">
             /register
           </Link>
-          . {PRICE_MAP_DETAIL} Paid $5 / $10 / $19 is waitlist only — this page is not a checkout.
+          . {PRICE_MAP_DETAIL} Paid plans are waitlist only — this page is not a checkout.
         </p>
         <SignupOrWaitlistPlanLabels className="mb-6 text-sm text-slate-300 space-y-1" />
         <WaitlistSignup source="join" />

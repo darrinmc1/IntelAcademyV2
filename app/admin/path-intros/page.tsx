@@ -29,7 +29,7 @@ export default async function AdminPathIntrosPage({
         Two desks, one private Blob store. <strong>Path intros</strong> are 75s path reels.{" "}
         <strong>Lessons</strong> are per-topic mp4s at{" "}
         <code className="text-xs">videos/lessons/{"{slug}"}-lesson-16x9.mp4</code>. Playback is a
-        short-lived signed URL after an access check — $19 video plan and admins. Free / $5 / $10
+        short-lived signed URL after an access check — video plan and admins. Free / early / written
         stay locked. Public YouTube clips are a different desk:{" "}
         <Link href="/admin/videos" className="underline">
           /admin/videos

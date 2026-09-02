@@ -7,7 +7,7 @@ const navItems = [
   { label: "Intelligence Types", icon: Shield, href: "#intelligence-types" },
   { label: "Learning Pathways", icon: Route, href: "#learning-paths" },
   { label: "Academy Brief", icon: ClipboardList, href: "/tools/academy-brief" },
-  { label: "Pricing", icon: Tag, href: "/pricing" },
+  { label: "Coming soon", icon: Tag, href: "/pricing" },
 ]
 
 export function HomepageQuickNav() {

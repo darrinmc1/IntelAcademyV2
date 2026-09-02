@@ -350,7 +350,7 @@ function SubscribeWall() {
       </div>
       <h2 className="mt-6 text-2xl font-bold text-slate-50">Academy Brief is on paid plans</h2>
       <p className="mx-auto mt-3 max-w-md text-slate-400">
-        Free tier: one structured brief. Planned map {PRICE_MAP_LABEL}. Academy Brief is a tool, not a
+        Free tier: one structured brief. {PRICE_MAP_LABEL} Academy Brief is a tool, not a
         standalone SKU. Checkout isn&apos;t live — join the waitlist.
       </p>
       <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">

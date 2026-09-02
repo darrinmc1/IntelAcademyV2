@@ -9,40 +9,72 @@ import {
   plans,
 } from "@/lib/pricing"
 import { academyBriefFaqs, buildLlmTxt, pricingJsonLd, softwareJsonLd } from "@/lib/aeo"
+import { USER_PLAN_LABELS } from "@/lib/user-plan"
 import { learningPaths } from "@/data/learning-paths"
+import siteConfig from "@/config/site-config.json"
 
-describe("four-price Intel map", () => {
-  it("exposes Free / $5 / $10 / $19 with exact entitlements", () => {
-    expect(PRICE_MAP_LABEL).toBe("Free / $5 / $10 / $19")
-    expect(plans.map((p) => [p.id, p.userPlan, p.price, p.includesVideo])).toEqual([
-      ["free", "free", 0, false],
-      ["early", "early", 5, false],
-      ["normal", "pro", 10, false],
-      ["video", "video", 19, true],
+const LIVE_PRICE_LEAK =
+  /\$\s*(0|5|9|10|19|23|29|47)|\$0\/mo|Explorer \$|Enterprise \$|Analyst \$|Professional \$|pro_monthly|9\.99/i
+
+function publicSurfaces(): string[] {
+  const pricing = getParseablePricing()
+  return [
+    PRICE_MAP_LABEL,
+    PRICE_MAP_DETAIL,
+    CHECKOUT_STATUS,
+    REFUND_POLICY,
+    JSON.stringify(pricing),
+    JSON.stringify(plans),
+    JSON.stringify(USER_PLAN_LABELS),
+    buildLlmTxt(),
+    JSON.stringify(pricingJsonLd()),
+    JSON.stringify(softwareJsonLd()),
+    academyBriefFaqs.map((f) => `${f.question} ${f.answer}`).join(" "),
+    JSON.stringify(siteConfig),
+  ]
+}
+
+describe("public access copy (no live prices)", () => {
+  it("keeps plan ids and video entitlement without printing dollar amounts", () => {
+    expect(PRICE_MAP_LABEL.toLowerCase()).toContain("free")
+    expect(PRICE_MAP_LABEL.toLowerCase()).toMatch(/coming soon|waitlist/)
+    expect(plans.map((p) => [p.id, p.userPlan, p.includesVideo])).toEqual([
+      ["free", "free", false],
+      ["early", "early", false],
+      ["normal", "pro", false],
+      ["video", "video", true],
     ])
     expect(plans.find((p) => p.id === "early")?.description.toLowerCase()).toContain("no video")
     expect(plans.find((p) => p.id === "normal")?.description.toLowerCase()).toContain("no video")
     expect(plans.find((p) => p.id === "normal")?.description.toLowerCase()).toContain("written")
     expect(plans.find((p) => p.id === "video")?.description.toLowerCase()).toMatch(/written/)
     expect(plans.find((p) => p.id === "video")?.description.toLowerCase()).toMatch(/video/)
-    expect(PRICE_MAP_DETAIL.toLowerCase()).toContain("written only, no video")
-    expect(PRICE_MAP_DETAIL).toContain("$10 = normal price — written only, no video")
-    expect(PRICE_MAP_DETAIL).toContain("$19 = written + video")
+    expect(PRICE_MAP_DETAIL.toLowerCase()).toContain("written")
+    expect(PRICE_MAP_DETAIL.toLowerCase()).toContain("video")
+    for (const plan of plans) {
+      expect(plan).not.toHaveProperty("price")
+      expect(plan).not.toHaveProperty("priceLabel")
+    }
   })
 
-  it("does not publish a standalone Brief SKU or leftover maps", () => {
+  it("does not publish a standalone Brief SKU, leftover SaaS map, or live prices", () => {
     const pricing = getParseablePricing()
     const blob = JSON.stringify(pricing)
     expect(pricing).not.toHaveProperty("standalone")
-    expect(blob).not.toMatch(/29/)
-    expect(blob).not.toMatch(/Explorer|Enterprise|Analyst \$|Professional/)
+    expect(blob).not.toMatch(LIVE_PRICE_LEAK)
     expect(plans).toHaveLength(4)
     expect(pricing.map).toBe(PRICE_MAP_LABEL)
-    expect(pricing.labels["10"]).toMatch(/written only, no video/)
-    expect(pricing.labels["19"]).toBe("written + video")
+    expect(pricing.labels.written).toMatch(/written only, no video/)
+    expect(pricing.labels.video).toMatch(/written \+ video/)
     expect(pricing.userPlans).toEqual(["free", "early", "pro", "video"])
-    expect(pricing.userPlanLabels.video).toContain("$19")
+    expect(pricing.userPlanLabels.video.toLowerCase()).toContain("video")
+    expect(pricing.userPlanLabels.video).not.toMatch(/\$/)
     expect(pricing.plans.map((p) => p.userPlan)).toEqual(["free", "early", "pro", "video"])
+    expect(pricing.plans.every((p) => !("price" in p))).toBe(true)
+    expect(pricing).not.toHaveProperty("labels.5")
+    expect(pricing.labels).not.toHaveProperty("5")
+    expect(pricing.labels).not.toHaveProperty("10")
+    expect(pricing.labels).not.toHaveProperty("19")
   })
 
   it("keeps paid CTAs on the waitlist and states checkout is not live", () => {
@@ -53,28 +85,32 @@ describe("four-price Intel map", () => {
     expect(CHECKOUT_STATUS.toLowerCase()).toContain("checkout isn't live")
   })
 
-  it("uses one 7-day refund sentence and one support email", () => {
-    expect(REFUND_POLICY).toBe("7-day money-back on paid $5, $10, and $19.")
+  it("uses one refund sentence and one support email, with no dollar amounts", () => {
+    expect(REFUND_POLICY.toLowerCase()).toContain("7-day")
+    expect(REFUND_POLICY).not.toMatch(/\$/)
     expect(getParseablePricing().refundPolicy).toBe(REFUND_POLICY)
     expect(SUPPORT_EMAIL).toBe("info@theintelanalystacademy.com")
   })
 
-  it("keeps FAQ, llm.txt, and JSON-LD on the same map", () => {
+  it("keeps FAQ, llm.txt, JSON-LD, and site-config off live prices", () => {
     const llm = buildLlmTxt()
     const jsonLd = JSON.stringify(pricingJsonLd())
     const software = JSON.stringify(softwareJsonLd())
     const faq = academyBriefFaqs.map((f) => f.answer).join(" ")
-    for (const text of [llm, jsonLd, software, faq]) {
-      expect(text).not.toMatch(/\$29/)
-      expect(text).not.toMatch(/standalone \$/)
-      expect(text.toLowerCase()).not.toMatch(/explorer \$|saas pro|business \$/)
+    for (const text of publicSurfaces()) {
+      expect(text).not.toMatch(LIVE_PRICE_LEAK)
+      expect(text).not.toMatch(/\$\d/)
       expect(text.toLowerCase()).not.toMatch(/first intelligence product/)
     }
     expect(llm).toContain(PRICE_MAP_LABEL)
     expect(llm).toContain(REFUND_POLICY)
     expect(jsonLd).toContain(PRICE_MAP_LABEL)
+    expect(jsonLd).not.toMatch(/"price"\s*:/)
+    expect(software).not.toMatch(/"price"\s*:/)
     expect(faq).toContain(REFUND_POLICY)
-    expect(faq).toContain("written only, no video")
+    expect(faq.toLowerCase()).toMatch(/waitlist/)
+    expect(JSON.stringify(siteConfig.pricing)).not.toMatch(/9\.99|99\.00|49\.00|199\.00|29\.00/)
+    expect(JSON.stringify(siteConfig)).not.toMatch(/stripePriceId/)
   })
 })
 

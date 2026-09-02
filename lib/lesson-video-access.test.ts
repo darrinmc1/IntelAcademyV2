@@ -55,8 +55,9 @@ describe("lesson video catalog", () => {
 })
 
 describe("lesson video playback access", () => {
-  it("uses the same $19 video lock copy as path intros", () => {
-    expect(LESSON_VIDEO_LOCK_COPY).toBe("Included on $19 video")
+  it("uses the same video-plan lock copy as path intros, with no dollar amount", () => {
+    expect(LESSON_VIDEO_LOCK_COPY).toBe("Included on the video plan")
+    expect(LESSON_VIDEO_LOCK_COPY).not.toMatch(/\$/)
   })
 
   it("matches canPlayPathIntro: admin or stored video plan only", () => {
@@ -96,7 +97,7 @@ describe("lesson video playback access", () => {
     expect("url" in decision).toBe(false)
   })
 
-  it("allows only the $19 video plan and admin to receive a signed URL", () => {
+  it("allows only the video plan and admin to receive a signed URL", () => {
     const early = decideLessonVideoPlayback({
       slugKnown: true,
       uploaded: true,

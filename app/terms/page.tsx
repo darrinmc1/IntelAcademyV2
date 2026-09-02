@@ -85,7 +85,7 @@ export default function TermsOfService() {
           <p>{REFUND_POLICY}</p>
           <p className="mt-4">
             {CHECKOUT_STATUS} There is no Stripe session, Payment Link, or card charge on this site today.
-            Planned map: {PRICE_MAP_LABEL}. {PRICE_MAP_DETAIL} Academy Brief is a tool, not a standalone SKU.
+            {PRICE_MAP_LABEL} {PRICE_MAP_DETAIL} Academy Brief is a tool, not a standalone SKU.
             The same refund sentence appears on /pricing, /pricing.json, and /refunds.
           </p>
 

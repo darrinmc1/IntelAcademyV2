@@ -35,7 +35,7 @@ export default function AdminVideosPage() {
       <h1 className="text-3xl font-bold mb-6">Public lesson YouTube IDs</h1>
       <p className="mb-4 text-muted-foreground">
         This desk is for public OSINT YouTube clips in <code>data/lesson-videos.ts</code>. Those IDs are
-        not the paid product. Private $19 lesson videos and path intros are Blob files — upload them at{" "}
+        not the paid product. Private lesson videos and path intros are Blob files — upload them at{" "}
         <a href="/admin/path-intros" className="underline">
           /admin/path-intros
         </a>

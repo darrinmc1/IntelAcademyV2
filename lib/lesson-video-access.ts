@@ -10,9 +10,9 @@ export type LessonVideoViewer = {
 } | null
 
 /**
- * Lesson videos are $19 video only — same rule as canPlayPathIntro.
- * Admin or stored plan === `video`. Free / early ($5) / pro ($10) stay written.
- * Editor/moderator do not unlock.
+ * Lesson videos are video-plan only — same rule as canPlayPathIntro.
+ * Admin or stored plan === `video`. Free / early / pro stay written.
+ * Editor/moderator do not unlock. Checkout isn't live — no dollar amounts in copy.
  */
 export function canPlayLessonVideo(user: LessonVideoViewer): boolean {
   if (!user) return false
