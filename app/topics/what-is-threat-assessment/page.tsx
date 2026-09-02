@@ -216,7 +216,7 @@ export default function WhatisthreatassessmentPage() {
         subtitle="Learn the fundamentals of threat assessment including the differences between threats, risks, and vulnerabilities, the f"
         humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
         readTime={15}
-        difficulty="Intermediate"
+        difficulty="Beginner"
         category="Intelligence Analysis"
         mascot="foundations"
         mascotMessage="Another day, another intelligence problem to solve. Let's get to work."

@@ -268,7 +268,7 @@ export default function IntelligencedecisionmakingPage() {
         subtitle="Learn how intelligence supports effective decision-making processes across various domains and the critical role it play"
         humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
         readTime={15}
-        difficulty="Intermediate"
+        difficulty="Beginner"
         category="Intelligence Analysis"
         mascot="foundations"
         mascotMessage="Another day, another intelligence problem to solve. Let's get to work."

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const topicContent = `Master the art of seeing the world from above and understanding what it all means.
 
 18 min total
-Intermediate level
+Beginner level
 
 
 ## What is Geospatial Intelligence (GEOINT)?
@@ -206,7 +206,7 @@ export default function GeointfundamentalsPage() {
         subtitle="Learn the basics of Geospatial Intelligence and satellite imagery analysis"
         humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
         readTime={15}
-        difficulty="Intermediate"
+        difficulty="Beginner"
         category="Intelligence Analysis"
         mascot="foundations"
         mascotMessage="Another day, another intelligence problem to solve. Let's get to work."
