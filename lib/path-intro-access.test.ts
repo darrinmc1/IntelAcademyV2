@@ -121,6 +121,8 @@ describe("path intro playback access", () => {
     expect(canPlayPathIntro({ role: "user", plan: "early" })).toBe(false)
     expect(canPlayPathIntro({ role: "user", plan: "pro" })).toBe(false)
     expect(canPlayPathIntro({ role: "user", plan: "free" })).toBe(false)
+    expect(canPlayPathIntro({ role: "editor", plan: "pro" })).toBe(false)
+    expect(canPlayPathIntro({ role: "moderator", plan: "early" })).toBe(false)
   })
 
   it("returns 404 for an unknown slug and does not include a url", () => {

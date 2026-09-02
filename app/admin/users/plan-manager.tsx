@@ -49,7 +49,7 @@ export function PlanManager() {
         </CardTitle>
         <CardDescription>
           Hand-set free / early / pro / video until Stripe writes this same field. Only the $19
-          video plan (and admin) can play path intros. No checkout on the site yet.
+          video plan or an admin account can play path intros. No checkout on the site yet.
         </CardDescription>
       </CardHeader>
       <CardContent>

@@ -1,4 +1,4 @@
-import { isAdminRole, type UserRole } from "@/lib/auth"
+import type { UserRole } from "@/lib/auth"
 import { PATH_INTRO_LOCK_COPY } from "@/lib/path-intro-copy"
 import { planIncludesVideo } from "@/lib/user-plan"
 
@@ -11,11 +11,11 @@ export type PathIntroViewer = {
 
 /**
  * Path intros are video. Only admin or the stored $19 `video` plan can play.
- * Free / early ($5) / pro ($10) are written only.
+ * Free / early ($5) / pro ($10) are written only. Editor/moderator do not unlock.
  */
 export function canPlayPathIntro(user: PathIntroViewer): boolean {
   if (!user) return false
-  if (isAdminRole(user.role as UserRole)) return true
+  if (user.role === "admin") return true
   return planIncludesVideo(user.plan)
 }
 
