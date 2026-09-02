@@ -5,6 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Film, Lock, UploadCloud } from "lucide-react"
 import { resolvePathIntroSlug } from "@/data/path-intro-videos"
+import { PATH_INTRO_LOCK_COPY } from "@/lib/path-intro-copy"
 import { Button } from "@/components/ui/button"
 
 type IntroStatus = {
@@ -121,9 +122,9 @@ export function PathIntroPlayer({ slug }: { slug?: string }) {
         {state.kind === "locked" && (
           <FrameCopy
             icon={<Lock className="h-8 w-8 text-amber-400" />}
-            eyebrow="Above Free"
-            title="This reel is on the paid desk"
-            body="Path intros are video. Video is on $19 (written + video). Free, $5, and $10 are written only — no video. Checkout isn't live. Join the waitlist — no card required today."
+            eyebrow="Locked reel"
+            title={PATH_INTRO_LOCK_COPY}
+            body="Only the $19 video plan unlocks path intros. Free, $5, and $10 stay written-only. Checkout isn't live. Join the waitlist — no card required today."
           >
             <Button asChild className="mt-4 bg-black text-white hover:bg-yellow-500 hover:text-black">
               <Link href="/waitlist">Join the waitlist</Link>

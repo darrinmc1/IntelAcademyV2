@@ -9,12 +9,12 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useToast } from "@/hooks/use-toast"
 import { setUserPlanAction } from "@/app/actions/admin-users"
+import { USER_PLAN_LABELS, USER_PLANS } from "@/lib/user-plan"
 
-const PLANS = [
-  { value: "free", label: "free — locked intros" },
-  { value: "early", label: "early — $5 written (no video)" },
-  { value: "pro", label: "pro — $10 written (no video)" },
-]
+const PLANS = USER_PLANS.map((value) => ({
+  value,
+  label: `${value} — ${USER_PLAN_LABELS[value]}`,
+}))
 
 export function PlanManager() {
   const [email, setEmail] = useState("")
@@ -48,8 +48,8 @@ export function PlanManager() {
           <BadgeCheck className="h-5 w-5" /> Set User Plan
         </CardTitle>
         <CardDescription>
-          Hand-set free / early / pro until Stripe writes this same field. Early and Pro can play
-          path intros. No checkout on the site yet.
+          Hand-set free / early / pro / video until Stripe writes this same field. Only the $19
+          video plan (and admin) can play path intros. No checkout on the site yet.
         </CardDescription>
       </CardHeader>
       <CardContent>

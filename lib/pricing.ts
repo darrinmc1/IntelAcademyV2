@@ -1,14 +1,16 @@
+import { USER_PLAN_LABELS, USER_PLANS, type UserPlan } from "@/lib/user-plan"
+
 /**
  * Parseable pricing source of truth.
  * Used by /pricing, /pricing.json, /llm.txt, FAQ, JSON-LD, and refunds.
  * Payments are not live yet — paid CTAs go to /waitlist or /contact.
  * No Stripe, Payment Links, x402, or crypto checkout.
  *
- * Exact entitlements:
- *   Free = written lessons
- *   $5   = waitlist / early discount for people who already signed up — written only, NO video
- *   $10  = normal price — written only, NO video (do not call $10 video)
- *   $19  = written + video (course video, not a PDF/book)
+ * Exact entitlements (catalog id → stored USER_PLANS id):
+ *   free   → free  = written lessons, NO video
+ *   early  → early = $5 waitlist/early, written, NO video
+ *   normal → pro   = $10 normal, written, NO video
+ *   video  → video = $19 written + video
  *
  * Academy Brief is a tool / preview — not a standalone SKU.
  */
@@ -35,6 +37,8 @@ export type PlanId = "free" | "early" | "normal" | "video"
 
 export type Plan = {
   id: PlanId
+  /** Stored users.plan value. $10 catalog id is `normal`; stored plan is `pro`. */
+  userPlan: UserPlan
   name: string
   price: number
   currency: "USD"
@@ -54,6 +58,7 @@ export type Plan = {
 export const plans: Plan[] = [
   {
     id: "free",
+    userPlan: "free",
     name: "Free",
     price: 0,
     currency: "USD",
@@ -71,6 +76,7 @@ export const plans: Plan[] = [
   },
   {
     id: "early",
+    userPlan: "early",
     name: "$5",
     price: 5,
     currency: "USD",
@@ -93,6 +99,7 @@ export const plans: Plan[] = [
   },
   {
     id: "normal",
+    userPlan: "pro",
     name: "$10",
     price: 10,
     currency: "USD",
@@ -110,6 +117,7 @@ export const plans: Plan[] = [
   },
   {
     id: "video",
+    userPlan: "video",
     name: "$19",
     price: 19,
     currency: "USD",
@@ -139,6 +147,8 @@ export function getParseablePricing() {
       "10": "normal price — written only, no video",
       "19": "written + video",
     },
+    userPlans: [...USER_PLANS],
+    userPlanLabels: USER_PLAN_LABELS,
     billing: "planned",
     paymentsLive: false,
     checkout: "waitlist",
@@ -159,6 +169,7 @@ export function getParseablePricing() {
     },
     plans: plans.map((p) => ({
       id: p.id,
+      userPlan: p.userPlan,
       name: p.name,
       price: p.price,
       currency: p.currency,

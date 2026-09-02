@@ -1,21 +1,22 @@
 import { isAdminRole, type UserRole } from "@/lib/auth"
-import { normalizeUserPlan, type UserPlan } from "@/lib/user-plan"
+import { PATH_INTRO_LOCK_COPY } from "@/lib/path-intro-copy"
+import { planIncludesVideo } from "@/lib/user-plan"
+
+export { PATH_INTRO_LOCK_COPY } from "@/lib/path-intro-copy"
 
 export type PathIntroViewer = {
   role?: UserRole | string | null
-  plan?: UserPlan | string | null
+  plan?: string | null
 } | null
 
 /**
- * Path intros are video. Public map: video is $19 (written + video).
- * Free / $5 / $10 are written only. Admin-capable staff can still play.
- * Existing stored plans early/pro still unlock playback until a $19 field exists.
+ * Path intros are video. Only admin or the stored $19 `video` plan can play.
+ * Free / early ($5) / pro ($10) are written only.
  */
 export function canPlayPathIntro(user: PathIntroViewer): boolean {
   if (!user) return false
   if (isAdminRole(user.role as UserRole)) return true
-  const plan = normalizeUserPlan(user.plan)
-  return plan === "early" || plan === "pro"
+  return planIncludesVideo(user.plan)
 }
 
 export function canUploadPathIntro(user: PathIntroViewer): boolean {
@@ -46,7 +47,7 @@ export function decidePathIntroPlayback(input: {
   if (!canPlayPathIntro(input.user)) {
     return {
       status: 403,
-      error: "Path intros are video. Video is on $19 (written + video). Checkout isn't live — join the waitlist.",
+      error: `${PATH_INTRO_LOCK_COPY}. Checkout isn't live — join the waitlist.`,
     }
   }
   return { status: 200 }

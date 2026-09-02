@@ -18,7 +18,8 @@ export default async function AdminPathIntrosPage() {
       <p className="mb-6 mt-2 max-w-3xl text-muted-foreground">
         24 × ~75s 16:9 mp4s, stored private on Vercel Blob. Filename must be{" "}
         <code className="text-xs">videos/paths/{"{slug}"}-path-intro-75s-16x9.mp4</code>. Playback is
-        a short-lived signed URL after an access check — Early, Pro, and admins. Free stays locked.
+        a short-lived signed URL after an access check — $19 video plan and admins. Free / $5 / $10
+        stay locked.
         Public YouTube lesson clips are a different desk:{" "}
         <Link href="/admin/videos" className="underline">
           /admin/videos

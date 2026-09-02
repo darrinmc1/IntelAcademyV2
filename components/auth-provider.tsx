@@ -1,6 +1,7 @@
 "use client"
 
 import React, { createContext, useContext, useState, useEffect } from "react"
+import type { UserPlan } from "@/lib/user-plan"
 
 interface AuthUser {
   id: string
@@ -15,7 +16,7 @@ interface AuthUser {
   bestStreak?: number
   accessTier?: string
   createdAt?: string
-  plan?: "free" | "early" | "pro"
+  plan?: UserPlan
 }
 
 interface AuthContextType {

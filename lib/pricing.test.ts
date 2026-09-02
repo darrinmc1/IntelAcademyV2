@@ -14,11 +14,11 @@ import { learningPaths } from "@/data/learning-paths"
 describe("four-price Intel map", () => {
   it("exposes Free / $5 / $10 / $19 with exact entitlements", () => {
     expect(PRICE_MAP_LABEL).toBe("Free / $5 / $10 / $19")
-    expect(plans.map((p) => [p.id, p.price, p.includesVideo])).toEqual([
-      ["free", 0, false],
-      ["early", 5, false],
-      ["normal", 10, false],
-      ["video", 19, true],
+    expect(plans.map((p) => [p.id, p.userPlan, p.price, p.includesVideo])).toEqual([
+      ["free", "free", 0, false],
+      ["early", "early", 5, false],
+      ["normal", "pro", 10, false],
+      ["video", "video", 19, true],
     ])
     expect(plans.find((p) => p.id === "early")?.description.toLowerCase()).toContain("no video")
     expect(plans.find((p) => p.id === "normal")?.description.toLowerCase()).toContain("no video")
@@ -40,6 +40,9 @@ describe("four-price Intel map", () => {
     expect(pricing.map).toBe(PRICE_MAP_LABEL)
     expect(pricing.labels["10"]).toMatch(/written only, no video/)
     expect(pricing.labels["19"]).toBe("written + video")
+    expect(pricing.userPlans).toEqual(["free", "early", "pro", "video"])
+    expect(pricing.userPlanLabels.video).toContain("$19")
+    expect(pricing.plans.map((p) => p.userPlan)).toEqual(["free", "early", "pro", "video"])
   })
 
   it("keeps paid CTAs on the waitlist and states checkout is not live", () => {

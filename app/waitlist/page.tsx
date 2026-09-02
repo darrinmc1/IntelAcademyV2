@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
+import { SignupOrWaitlistPlanLabels } from "@/components/signup-or-waitlist-plan-labels"
 import { WaitlistSignup } from "@/components/waitlist-signup"
 
 export const metadata: Metadata = {
@@ -16,10 +17,11 @@ export default function WaitlistPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300 mb-3">Waitlist</p>
         <h1 className="text-4xl font-bold text-white mb-4">Payments are not live</h1>
         <p className="text-lg text-slate-300 mb-4">{CHECKOUT_STATUS}</p>
-        <p className="text-slate-400 mb-8">
+        <p className="text-slate-400 mb-4">
           Planned map: {PRICE_MAP_LABEL}. {PRICE_MAP_DETAIL} Academy Brief is a tool, not a standalone SKU.
           No Stripe checkout on this page.
         </p>
+        <SignupOrWaitlistPlanLabels className="mb-8 text-left text-sm text-slate-300 space-y-1 max-w-md mx-auto" />
         <WaitlistSignup source="waitlist" />
         <p className="mt-6 text-sm text-slate-400">{REFUND_POLICY}</p>
         <p className="mt-4 text-sm text-slate-500">
