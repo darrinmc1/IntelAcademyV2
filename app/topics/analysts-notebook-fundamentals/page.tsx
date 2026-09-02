@@ -141,7 +141,7 @@ export default function AnalystsnotebookfundamentalsPage() {
         subtitle="Learn the core interface, features, and capabilities of IBM i2 Analyst&amp;apos;s Notebook."
         humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
         readTime={15}
-        difficulty="Intermediate"
+        difficulty="Beginner"
         category="Intelligence Analysis"
         mascot="foundations"
         mascotMessage="Another day, another intelligence problem to solve. Let's get to work."

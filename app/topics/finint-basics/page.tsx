@@ -217,7 +217,7 @@ export default function FinintbasicsPage() {
         subtitle="Master the art of delivering intelligence briefings that keep decision-makers awake and informed."
         humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
         readTime={15}
-        difficulty="Intermediate"
+        difficulty="Beginner"
         category="Intelligence Analysis"
         mascot="foundations"
         mascotMessage="Another day, another intelligence problem to solve. Let's get to work."

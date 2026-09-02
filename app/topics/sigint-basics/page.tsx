@@ -277,7 +277,7 @@ export default function SigintbasicsPage() {
         subtitle="Master the fundamentals of SIGINT - COMINT, ELINT, FISINT, collection methods, cryptanalysis, and the historical triumph"
         humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
         readTime={15}
-        difficulty="Intermediate"
+        difficulty="Beginner"
         category="Intelligence Analysis"
         mascot="foundations"
         mascotMessage="Another day, another intelligence problem to solve. Let's get to work."
