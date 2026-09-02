@@ -1,13 +1,13 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, CheckCircle } from "lucide-react"
-import { CHECKOUT_STATUS, DISCLAIMER, briefStandalone, plans } from "@/lib/pricing"
+import { CHECKOUT_STATUS, DISCLAIMER, REFUND_POLICY, plans } from "@/lib/pricing"
 import { academyBriefFaqs, faqJsonLd, pricingJsonLd } from "@/lib/aeo"
 
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Intel Analyst Academy pricing: Free, Early Adopter $5/mo, Pro $10/mo. Academy Brief included on paid plans; standalone $29/mo when billing is live. Checkout isn't live — join the waitlist.",
+    "Intel Analyst Academy pricing: Free, Early Adopter $5/mo, Pro $10/mo. Academy Brief included on paid plans. Checkout isn't live — join the waitlist.",
 }
 
 function periodCopy(period: "month" | "forever") {
@@ -27,11 +27,12 @@ export default function PricingPage() {
             Free, Early Adopter $5/mo, Pro $10/mo
           </h1>
           <p className="text-lg text-slate-300">
-            Academy Brief is included on paid plans, or $29/mo standalone when billing is live.
+            One map. Academy Brief is included on paid plans — not a separate SKU.
           </p>
           <p className="mt-4 inline-block rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-medium text-amber-200">
             {CHECKOUT_STATUS}
           </p>
+          <p className="mt-4 text-sm text-slate-400">{REFUND_POLICY}</p>
           <p className="mt-4 text-sm text-slate-500">
             Machine-readable:{" "}
             <Link href="/pricing.json" className="text-cyan-400 underline underline-offset-2">
@@ -40,6 +41,10 @@ export default function PricingPage() {
             ·{" "}
             <Link href="/llm.txt" className="text-cyan-400 underline underline-offset-2">
               /llm.txt
+            </Link>{" "}
+            ·{" "}
+            <Link href="/refunds" className="text-cyan-400 underline underline-offset-2">
+              /refunds
             </Link>
           </p>
         </div>
@@ -94,29 +99,6 @@ export default function PricingPage() {
               )}
             </div>
           ))}
-        </div>
-
-        <div className="mx-auto max-w-6xl mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">One-job tool</p>
-          <h2 className="mt-2 text-2xl font-bold text-white">
-            Academy Brief — {briefStandalone.priceLabel}/mo standalone
-          </h2>
-          <p className="mt-3 max-w-3xl text-slate-300">{briefStandalone.description}</p>
-          <p className="mt-3 text-sm text-amber-200/90">{CHECKOUT_STATUS}</p>
-          <div className="mt-6 flex flex-col sm:flex-row gap-3">
-            <Link
-              href={briefStandalone.href}
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-cyan-600 px-4 py-3 text-sm font-semibold text-white hover:bg-cyan-500"
-            >
-              Try the free preview <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="/improvements"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold text-slate-100 hover:bg-white/10"
-            >
-              Join the waitlist
-            </Link>
-          </div>
         </div>
 
         <p className="mx-auto max-w-6xl mt-8 text-sm text-slate-500">{DISCLAIMER}</p>

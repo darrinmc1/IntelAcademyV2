@@ -126,7 +126,7 @@ export function PathIntroPlayer({ slug }: { slug?: string }) {
             body="Path intros ship with Early Adopter ($5/mo) and Pro ($10/mo). Checkout isn't live. Join the waitlist — no card required today."
           >
             <Button asChild className="mt-4 bg-black text-white hover:bg-yellow-500 hover:text-black">
-              <Link href="/improvements">Join the waitlist</Link>
+              <Link href="/waitlist">Join the waitlist</Link>
             </Button>
           </FrameCopy>
         )}

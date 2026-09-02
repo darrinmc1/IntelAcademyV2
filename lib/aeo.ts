@@ -1,4 +1,4 @@
-import { CHECKOUT_STATUS, DISCLAIMER, SITE_URL, briefStandalone, getParseablePricing, plans } from "@/lib/pricing"
+import { CHECKOUT_STATUS, DISCLAIMER, REFUND_POLICY, SITE_URL, getParseablePricing, plans } from "@/lib/pricing"
 
 export const academyBriefFaqs = [
   {
@@ -18,7 +18,16 @@ export const academyBriefFaqs = [
   {
     question: "How much does Academy Brief cost?",
     answer:
-      "One free structured-brief preview. Academy Brief is included in Early Adopter ($5/month) and Pro ($10/month). Standalone Brief access is $29/month when billing is live. Payments are not live yet; lock-in follows the existing improvements waitlist. No x402 or crypto checkout.",
+      "One free structured-brief preview. Academy Brief is included in Early Adopter ($5/month) and Pro ($10/month). There is no standalone Brief SKU. Payments are not live yet; lock-in follows the waitlist. No Stripe, Payment Links, or x402 checkout.",
+  },
+  {
+    question: "What are the plans?",
+    answer:
+      "One map only: Free, Early Adopter $5/mo, and Pro $10/mo. Checkout isn't live — join the waitlist or contact us. No Explorer, Analyst, Professional, Enterprise, or standalone Brief SKU.",
+  },
+  {
+    question: "What is the refund policy?",
+    answer: REFUND_POLICY,
   },
   {
     question: "What does the structured brief contain?",
@@ -47,7 +56,7 @@ export function buildLlmTxt(): string {
 > Professional education for intelligence analysts. Catalog of lessons on collection, analysis, reporting, and briefings.
 
 Site: ${SITE_URL}
-Product layer: Academy Brief (not a separate brand)
+Product layer: Academy Brief (training tool on paid plans — not a separate brand or standalone SKU)
 Job: Paste a raw intel dump or notes → structured brief using the academy method, citing real topics/lessons
 Not: chat-with-site; not an operational intelligence product
 
@@ -60,8 +69,8 @@ ${DISCLAIMER}
 - Output: BLUF, key judgments with confidence, situation, analysis, source assessment, alternatives/gaps, recommendations, lesson citations
 - Citations: only real catalog hrefs such as /topics/intelligence-report-components, /topics/intelligence-briefings, /topics/estimative-language
 - Free: 1 preview
-- Paid: included in Early Adopter and Pro; standalone $${briefStandalone.price}/mo when billing is live
-- Checkout: existing site plans (no x402)
+- Paid: included in Early Adopter ($5/mo) and Pro ($10/mo). No standalone Brief SKU.
+- Checkout: waitlist only (no Stripe, Payment Links, or x402)
 
 ## Pricing
 
@@ -70,11 +79,13 @@ Human: ${SITE_URL}/pricing
 Currency: ${pricing.currency}
 Payments live: ${pricing.paymentsLive}
 Checkout: ${CHECKOUT_STATUS}
+Refunds: ${REFUND_POLICY}
 x402: false
+stripe: false
+
+One map: Free / Early Adopter $5/mo / Pro $10/mo. No Explorer, Analyst, Professional, Enterprise, or standalone Brief SKU.
 
 ${planBlock}
-
-Standalone Academy Brief: ${pricing.standalone.currency} ${pricing.standalone.price}/mo — ${pricing.standalone.url}
 
 ## FAQs
 
@@ -102,46 +113,36 @@ export function pricingJsonLd() {
     "@type": "ItemList",
     name: "The Intel Analyst Academy pricing",
     url: `${SITE_URL}/pricing`,
-    itemListElement: [
-      ...plans.map((plan, i) => ({
-        "@type": "Offer",
-        position: i + 1,
-        name: plan.name,
-        url: `${SITE_URL}${plan.href}`,
-        price: plan.price,
-        priceCurrency: plan.currency,
-        availability: plan.available
-          ? "https://schema.org/InStock"
-          : "https://schema.org/PreOrder",
-        description: plan.description,
-        category: "Subscription",
-        additionalProperty: [
-          {
-            "@type": "PropertyValue",
-            name: "includesAcademyBrief",
-            value: String(plan.includesAcademyBrief),
-          },
-          {
-            "@type": "PropertyValue",
-            name: "briefAllowance",
-            value: plan.briefAllowance,
-          },
-        ],
-      })),
-      {
-        "@type": "Offer",
-        position: plans.length + 1,
-        name: briefStandalone.name,
-        url: `${SITE_URL}${briefStandalone.href}`,
-        price: briefStandalone.price,
-        priceCurrency: briefStandalone.currency,
-        availability: "https://schema.org/PreOrder",
-        description: briefStandalone.description,
-      },
-    ],
+    itemListElement: plans.map((plan, i) => ({
+      "@type": "Offer",
+      position: i + 1,
+      name: plan.name,
+      url: `${SITE_URL}${plan.href}`,
+      price: plan.price,
+      priceCurrency: plan.currency,
+      availability: plan.available
+        ? "https://schema.org/InStock"
+        : "https://schema.org/PreOrder",
+      description: plan.description,
+      category: "Subscription",
+      additionalProperty: [
+        {
+          "@type": "PropertyValue",
+          name: "includesAcademyBrief",
+          value: String(plan.includesAcademyBrief),
+        },
+        {
+          "@type": "PropertyValue",
+          name: "briefAllowance",
+          value: plan.briefAllowance,
+        },
+      ],
+    })),
     additionalProperty: [
       { "@type": "PropertyValue", name: "x402", value: "false" },
+      { "@type": "PropertyValue", name: "stripe", value: "false" },
       { "@type": "PropertyValue", name: "paymentsLive", value: String(pricing.paymentsLive) },
+      { "@type": "PropertyValue", name: "refundPolicy", value: REFUND_POLICY },
     ],
   }
 }
@@ -173,7 +174,7 @@ export function softwareJsonLd() {
       "@type": "Offer",
       price: "0",
       priceCurrency: "USD",
-      description: "1 free preview; included in paid plans; standalone $29/mo when billing is live",
+      description: "1 free preview; included in Early Adopter ($5/mo) and Pro ($10/mo). No standalone SKU. Checkout is not live.",
     },
     description:
       "Paste a raw intel dump or notes and receive a structured brief using The Intel Analyst Academy method, citing real catalog lessons. Training and education only.",

@@ -1,8 +1,11 @@
-import TargetProfilingPage from "@/app/learning-paths/target-profiling/page"
 import { LearningPathCard } from "@/components/learning-path-card"
+import { learningPaths } from "@/data/learning-paths"
+
+function countedTopics(path: string) {
+  return learningPaths.find((p) => p.path === path)?.topicCount ?? 0
+}
 
 export function LearningPathsSection() {
-  // Define the 6 featured learning paths exactly as shown in the screenshot
   const featuredPaths = [
     {
       title: "Foundations of Intelligence",
@@ -11,7 +14,7 @@ export function LearningPathsSection() {
       imagePath: "/foundations-thumb.png",
       path: "/learning-paths/foundations",
       difficulty: "Beginner" as const,
-      topicCount: 12,
+      topicCount: countedTopics("/learning-paths/foundations"),
       estimatedTime: "3-4 hours",
     },
     {
@@ -21,7 +24,7 @@ export function LearningPathsSection() {
       imagePath: "/strategic-intelligence-thumb.png",
       path: "/learning-paths/strategic-intelligence",
       difficulty: "Advanced" as const,
-      topicCount: 15,
+      topicCount: countedTopics("/learning-paths/strategic-intelligence"),
       estimatedTime: "4-5 hours",
     },
     {
@@ -31,7 +34,7 @@ export function LearningPathsSection() {
       imagePath: "/osint-thumb.png",
       path: "/learning-paths/osint",
       difficulty: "Beginner" as const,
-      topicCount: 18,
+      topicCount: countedTopics("/learning-paths/osint"),
       estimatedTime: "5-6 hours",
     },
     {
@@ -41,7 +44,7 @@ export function LearningPathsSection() {
       imagePath: "/report-writing-thumb.png",
       path: "/learning-paths/report-writing",
       difficulty: "Intermediate" as const,
-      topicCount: 8,
+      topicCount: countedTopics("/learning-paths/report-writing"),
       estimatedTime: "2-3 hours",
     },
     {
@@ -51,7 +54,7 @@ export function LearningPathsSection() {
       imagePath: "/threat-assessment-thumb.png",
       path: "/learning-paths/threat-assessment",
       difficulty: "Advanced" as const,
-      topicCount: 12,
+      topicCount: countedTopics("/learning-paths/threat-assessment"),
       estimatedTime: "4-6 hours",
     },
     {
@@ -61,7 +64,7 @@ export function LearningPathsSection() {
       imagePath: "/analyst-notebook.png",
       path: "/learning-paths/analyst-notebook",
       difficulty: "Intermediate" as const,
-      topicCount: 8,
+      topicCount: countedTopics("/learning-paths/analyst-notebook"),
       estimatedTime: "3-4 hours",
     },
   ]

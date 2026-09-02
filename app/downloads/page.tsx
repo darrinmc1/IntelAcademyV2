@@ -242,7 +242,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
         {isAvailable && (
           <p className="text-xs text-slate-500 mt-3 italic">
             Need Word or Excel?{" "}
-            <a href="mailto:info@theintelanalystacademy.com.au" className="text-cyan-500 hover:underline">
+            <a href="mailto:info@theintelanalystacademy.com" className="text-cyan-500 hover:underline">
               Email us
             </a>
           </p>
@@ -301,7 +301,7 @@ export default function Downloads() {
           <p className="text-sm text-slate-300">
             <span className="text-cyan-400 font-semibold">{availableCount} resources</span> available now - more added regularly.
             Need a specific format?{" "}
-            <a href="mailto:info@theintelanalystacademy.com.au" className="text-cyan-400 hover:underline">
+            <a href="mailto:info@theintelanalystacademy.com" className="text-cyan-400 hover:underline">
               Email us
             </a>
           </p>

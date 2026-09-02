@@ -61,7 +61,7 @@ export function ComingSoonOverlay({
               {backLabel}
             </Link>
             <a
-              href="mailto:info@TheIntelAnalystAcademy.com"
+              href="mailto:info@theintelanalystacademy.com"
               className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-full 
                          bg-cyan-600 hover:bg-cyan-500 border border-cyan-400/50
                          transition-all duration-300 text-white text-sm font-medium
