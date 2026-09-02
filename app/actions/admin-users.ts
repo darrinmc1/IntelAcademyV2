@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache"
 import { getCurrentUser, type UserRole } from "@/lib/auth"
 import { isAdmin } from "@/lib/rbac"
 import { getUserByEmail, initDatabase, setUserPlan, setUserRole } from "@/lib/db"
-import { isUserPlan, type UserPlan } from "@/lib/user-plan"
+import { USER_PLANS, isUserPlan, type UserPlan } from "@/lib/user-plan"
 
 const VALID_ROLES: UserRole[] = ["admin", "moderator", "editor", "viewer", "user"]
 
@@ -70,7 +70,7 @@ export async function setUserPlanAction(
     return { ok: false, message: "Email is required" }
   }
   if (!isUserPlan(plan)) {
-    return { ok: false, message: "Invalid plan. Use one of: free, early, pro" }
+    return { ok: false, message: `Invalid plan. Use one of: ${USER_PLANS.join(", ")}` }
   }
 
   const target = await getUserByEmail(normalizedEmail)

@@ -8,6 +8,7 @@ import {
   resolvePathIntroSlug,
 } from "@/data/path-intro-videos"
 import {
+  PATH_INTRO_LOCK_COPY,
   authorizePathIntroUpload,
   canPlayPathIntro,
   decidePathIntroPlayback,
@@ -63,6 +64,10 @@ describe("path intro catalog", () => {
 })
 
 describe("path intro playback access", () => {
+  it("uses the $19 video lock copy", () => {
+    expect(PATH_INTRO_LOCK_COPY).toBe("Included on $19 video")
+  })
+
   it("does not issue a signed URL to a free user", () => {
     const decision = decidePathIntroPlayback({
       slugKnown: true,
@@ -83,19 +88,25 @@ describe("path intro playback access", () => {
     expect("url" in decision).toBe(false)
   })
 
-  it("allows early, pro, and admin to receive a signed URL", () => {
+  it("allows only the $19 video plan and admin to receive a signed URL", () => {
+    const early = decidePathIntroPlayback({
+      slugKnown: true,
+      uploaded: true,
+      user: { role: "user", plan: "early" },
+    })
+    const pro = decidePathIntroPlayback({
+      slugKnown: true,
+      uploaded: true,
+      user: { role: "user", plan: "pro" },
+    })
+    expect(early.status).toBe(403)
+    expect(pro.status).toBe(403)
+    if (early.status === 403) expect(early.error).toContain(PATH_INTRO_LOCK_COPY)
     expect(
       decidePathIntroPlayback({
         slugKnown: true,
         uploaded: true,
-        user: { role: "user", plan: "early" },
-      }).status
-    ).toBe(200)
-    expect(
-      decidePathIntroPlayback({
-        slugKnown: true,
-        uploaded: true,
-        user: { role: "user", plan: "pro" },
+        user: { role: "user", plan: "video" },
       }).status
     ).toBe(200)
     expect(
@@ -106,9 +117,12 @@ describe("path intro playback access", () => {
       }).status
     ).toBe(200)
     expect(canPlayPathIntro({ role: "admin", plan: "free" })).toBe(true)
-    expect(canPlayPathIntro({ role: "user", plan: "early" })).toBe(true)
-    expect(canPlayPathIntro({ role: "user", plan: "pro" })).toBe(true)
+    expect(canPlayPathIntro({ role: "user", plan: "video" })).toBe(true)
+    expect(canPlayPathIntro({ role: "user", plan: "early" })).toBe(false)
+    expect(canPlayPathIntro({ role: "user", plan: "pro" })).toBe(false)
     expect(canPlayPathIntro({ role: "user", plan: "free" })).toBe(false)
+    expect(canPlayPathIntro({ role: "editor", plan: "pro" })).toBe(false)
+    expect(canPlayPathIntro({ role: "moderator", plan: "early" })).toBe(false)
   })
 
   it("returns 404 for an unknown slug and does not include a url", () => {

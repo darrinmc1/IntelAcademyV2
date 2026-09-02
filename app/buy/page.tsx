@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
+import { SignupOrWaitlistPlanLabels } from "@/components/signup-or-waitlist-plan-labels"
 import { WaitlistSignup } from "@/components/waitlist-signup"
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function BuyPage() {
           This is not a Stripe session, Payment Link, or Buy button. Planned map: {PRICE_MAP_LABEL}. {PRICE_MAP_DETAIL}{" "}
           Join the waitlist or contact us.
         </p>
+        <SignupOrWaitlistPlanLabels className="mb-6 text-sm text-slate-300 space-y-1" />
         <WaitlistSignup source="buy" />
         <p className="mt-6 text-sm text-slate-400">{REFUND_POLICY}</p>
         <div className="mt-6 flex flex-wrap gap-4 text-sm">
