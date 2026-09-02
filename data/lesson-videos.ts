@@ -1,6 +1,8 @@
 // Public YouTube IDs for optional lesson clips (OSINT etc.).
-// These are NOT the paid product. Path intros are private Blob files
-// catalogued in data/path-intro-videos.ts — do not add those IDs here.
+// These are NOT the paid product. Paid lesson videos are private Blob files
+// catalogued in data/lesson-blob-videos.ts
+// (videos/lessons/{slug}-lesson-16x9.mp4). Path intros stay in
+// data/path-intro-videos.ts — do not add those IDs or Blob keys here.
 
 // Format: [category]/[lesson-slug]: { videoId, duration, description }
 

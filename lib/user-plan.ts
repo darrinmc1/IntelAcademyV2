@@ -2,7 +2,7 @@ export const USER_PLANS = ["free", "early", "pro", "video"] as const
 
 export type UserPlan = (typeof USER_PLANS)[number]
 
-/** Stored entitlement that unlocks path-intro (and other course) video. */
+/** Stored entitlement that unlocks path-intro and lesson-video playback. */
 export const VIDEO_PLAN: UserPlan = "video"
 
 /**
