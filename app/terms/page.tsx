@@ -5,7 +5,7 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import { CHECKOUT_STATUS, REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
+import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
 
 export const metadata = {
   title: "Terms of Service | The Intel Analyst Academy",
@@ -85,8 +85,8 @@ export default function TermsOfService() {
           <p>{REFUND_POLICY}</p>
           <p className="mt-4">
             {CHECKOUT_STATUS} There is no Stripe session, Payment Link, or card charge on this site today.
-            Planned prices are Free, Early Adopter $5/mo, and Pro $10/mo. Academy Brief is included on paid plans
-            and is not sold as a standalone SKU. The same refund sentence appears on /pricing, /pricing.json, and /refunds.
+            Planned map: {PRICE_MAP_LABEL}. {PRICE_MAP_DETAIL} Academy Brief is a tool, not a standalone SKU.
+            The same refund sentence appears on /pricing, /pricing.json, and /refunds.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">7. Limitation of Liability</h2>

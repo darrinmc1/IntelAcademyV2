@@ -123,7 +123,7 @@ export function PathIntroPlayer({ slug }: { slug?: string }) {
             icon={<Lock className="h-8 w-8 text-amber-400" />}
             eyebrow="Above Free"
             title="This reel is on the paid desk"
-            body="Path intros ship with Early Adopter ($5/mo) and Pro ($10/mo). Checkout isn't live. Join the waitlist — no card required today."
+            body="Path intros are video. Video is on $19 (written + video). Free, $5, and $10 are written only — no video. Checkout isn't live. Join the waitlist — no card required today."
           >
             <Button asChild className="mt-4 bg-black text-white hover:bg-yellow-500 hover:text-black">
               <Link href="/waitlist">Join the waitlist</Link>

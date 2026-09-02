@@ -1,10 +1,6 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
-import { CHECKOUT_STATUS, REFUND_POLICY, plans } from "@/lib/pricing"
-
-function periodLabel(period: "month" | "forever") {
-  return period === "month" ? "/mo" : " forever"
-}
+import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY, plans } from "@/lib/pricing"
 
 export function HomepagePricingSummary() {
   return (
@@ -15,11 +11,9 @@ export function HomepagePricingSummary() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300 mb-2">Plans</p>
               <h2 id="homepage-pricing-heading" className="text-2xl md:text-3xl font-bold text-white">
-                Free, Early Adopter $5/mo, Pro $10/mo
+                {PRICE_MAP_LABEL}
               </h2>
-              <p className="mt-2 text-slate-300">
-                One map. Academy Brief is included on paid plans — not a standalone SKU.
-              </p>
+              <p className="mt-2 text-slate-300">{PRICE_MAP_DETAIL}</p>
               <p className="mt-3 text-sm font-medium text-amber-200">{CHECKOUT_STATUS}</p>
               <p className="mt-2 text-sm text-slate-400">{REFUND_POLICY}</p>
             </div>
@@ -32,7 +26,7 @@ export function HomepagePricingSummary() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
             {plans.map((plan) => (
               <Link
                 key={plan.id}
@@ -44,17 +38,8 @@ export function HomepagePricingSummary() {
                 }`}
               >
                 <p className="text-sm font-medium text-slate-300">{plan.name}</p>
-                <p className="mt-1 text-2xl font-bold text-white">
-                  {plan.priceLabel}
-                  <span className="text-sm font-medium text-slate-400">{periodLabel(plan.period)}</span>
-                </p>
-                <p className="mt-1 text-xs text-slate-400">
-                  {plan.id === "early_adopter"
-                    ? "Lock in when live"
-                    : plan.id === "pro"
-                      ? "When it launches"
-                      : "No card needed"}
-                </p>
+                <p className="mt-1 text-2xl font-bold text-white">{plan.priceLabel}</p>
+                <p className="mt-1 text-xs text-slate-400">{plan.blurb}</p>
               </Link>
             ))}
           </div>

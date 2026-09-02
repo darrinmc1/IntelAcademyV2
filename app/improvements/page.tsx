@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Construction, ArrowLeft } from "lucide-react"
-import { CHECKOUT_STATUS, REFUND_POLICY } from "@/lib/pricing"
+import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY } from "@/lib/pricing"
 import { WaitlistSignup } from "@/components/waitlist-signup"
 
 export default function ImprovementsPage() {
@@ -15,9 +15,8 @@ export default function ImprovementsPage() {
           </div>
           <h1 className="text-3xl font-bold tracking-tight mb-3">We&apos;re Building Something Better</h1>
           <p className="text-slate-600 max-w-lg mx-auto mb-4 text-lg">
-            {CHECKOUT_STATUS} When billing is live, early adopters lock in the{" "}
-            <strong className="text-blue-700">$5/month</strong> rate forever. Planned map: Free, Early
-            Adopter $5/mo, Pro $10/mo. Academy Brief is included on paid plans — not a standalone SKU.
+            {CHECKOUT_STATUS} Planned map: <strong className="text-blue-700">{PRICE_MAP_LABEL}</strong>.{" "}
+            {PRICE_MAP_DETAIL} Academy Brief is a tool, not a standalone SKU.
           </p>
           <p className="text-slate-500 max-w-lg mx-auto mb-6 text-sm">{REFUND_POLICY}</p>
           <div className="mx-auto max-w-md mb-8 text-left">

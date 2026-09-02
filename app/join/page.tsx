@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { CHECKOUT_STATUS, SUPPORT_EMAIL } from "@/lib/pricing"
+import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, SUPPORT_EMAIL } from "@/lib/pricing"
 import { WaitlistSignup } from "@/components/waitlist-signup"
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function JoinPage() {
           <Link href="/register" className="text-cyan-400 underline underline-offset-2">
             /register
           </Link>
-          . Paid Early Adopter ($5/mo) and Pro ($10/mo) are waitlist only — this page is not a checkout.
+          . {PRICE_MAP_DETAIL} Paid $5 / $10 / $19 is waitlist only — this page is not a checkout.
         </p>
         <WaitlistSignup source="join" />
         <div className="mt-8 flex flex-wrap gap-4 text-sm">

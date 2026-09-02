@@ -1,12 +1,12 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { CHECKOUT_STATUS, REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
+import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
 import { WaitlistSignup } from "@/components/waitlist-signup"
 
 export const metadata: Metadata = {
   title: "Waitlist",
   description:
-    "Join the Intel Analyst Academy waitlist. Planned prices: Free, Early Adopter $5/mo, Pro $10/mo. Checkout isn't live.",
+    `Join the Intel Analyst Academy waitlist. Planned prices: ${PRICE_MAP_LABEL}. Checkout isn't live.`,
 }
 
 export default function WaitlistPage() {
@@ -17,8 +17,8 @@ export default function WaitlistPage() {
         <h1 className="text-4xl font-bold text-white mb-4">Payments are not live</h1>
         <p className="text-lg text-slate-300 mb-4">{CHECKOUT_STATUS}</p>
         <p className="text-slate-400 mb-8">
-          Planned map: Free, Early Adopter $5/mo, Pro $10/mo. Academy Brief is included on paid plans — there is no
-          standalone Brief SKU and no Stripe checkout on this page.
+          Planned map: {PRICE_MAP_LABEL}. {PRICE_MAP_DETAIL} Academy Brief is a tool, not a standalone SKU.
+          No Stripe checkout on this page.
         </p>
         <WaitlistSignup source="waitlist" />
         <p className="mt-6 text-sm text-slate-400">{REFUND_POLICY}</p>

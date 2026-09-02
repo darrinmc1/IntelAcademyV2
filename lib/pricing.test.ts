@@ -1,29 +1,49 @@
 import { describe, expect, it } from "vitest"
-import { CHECKOUT_STATUS, REFUND_POLICY, SUPPORT_EMAIL, getParseablePricing, plans } from "@/lib/pricing"
+import {
+  CHECKOUT_STATUS,
+  PRICE_MAP_DETAIL,
+  PRICE_MAP_LABEL,
+  REFUND_POLICY,
+  SUPPORT_EMAIL,
+  getParseablePricing,
+  plans,
+} from "@/lib/pricing"
 import { academyBriefFaqs, buildLlmTxt, pricingJsonLd, softwareJsonLd } from "@/lib/aeo"
 import { learningPaths } from "@/data/learning-paths"
 
-describe("one waitlist price map", () => {
-  it("exposes only Free, Early Adopter $5, and Pro $10", () => {
-    expect(plans.map((p) => [p.id, p.price])).toEqual([
-      ["free", 0],
-      ["early_adopter", 5],
-      ["pro", 10],
+describe("four-price Intel map", () => {
+  it("exposes Free / $5 / $10 / $19 with exact entitlements", () => {
+    expect(PRICE_MAP_LABEL).toBe("Free / $5 / $10 / $19")
+    expect(plans.map((p) => [p.id, p.price, p.includesVideo])).toEqual([
+      ["free", 0, false],
+      ["early", 5, false],
+      ["normal", 10, false],
+      ["video", 19, true],
     ])
+    expect(plans.find((p) => p.id === "early")?.description.toLowerCase()).toContain("no video")
+    expect(plans.find((p) => p.id === "normal")?.description.toLowerCase()).toContain("no video")
+    expect(plans.find((p) => p.id === "normal")?.description.toLowerCase()).toContain("written")
+    expect(plans.find((p) => p.id === "video")?.description.toLowerCase()).toMatch(/written/)
+    expect(plans.find((p) => p.id === "video")?.description.toLowerCase()).toMatch(/video/)
+    expect(PRICE_MAP_DETAIL.toLowerCase()).toContain("written only, no video")
+    expect(PRICE_MAP_DETAIL).toContain("$10 = normal price — written only, no video")
+    expect(PRICE_MAP_DETAIL).toContain("$19 = written + video")
   })
 
-  it("does not publish a standalone Academy Brief SKU or leftover maps", () => {
+  it("does not publish a standalone Brief SKU or leftover maps", () => {
     const pricing = getParseablePricing()
     const blob = JSON.stringify(pricing)
     expect(pricing).not.toHaveProperty("standalone")
     expect(blob).not.toMatch(/29/)
     expect(blob).not.toMatch(/Explorer|Enterprise|Analyst \$|Professional/)
-    expect(plans).toHaveLength(3)
+    expect(plans).toHaveLength(4)
+    expect(pricing.map).toBe(PRICE_MAP_LABEL)
+    expect(pricing.labels["10"]).toMatch(/written only, no video/)
+    expect(pricing.labels["19"]).toBe("written + video")
   })
 
   it("keeps paid CTAs on the waitlist and states checkout is not live", () => {
-    expect(plans.find((p) => p.id === "early_adopter")?.href).toBe("/waitlist")
-    expect(plans.find((p) => p.id === "pro")?.href).toBe("/waitlist")
+    expect(plans.filter((p) => !p.available).every((p) => p.href === "/waitlist")).toBe(true)
     expect(getParseablePricing().paymentsLive).toBe(false)
     expect(getParseablePricing().checkout).toBe("waitlist")
     expect(getParseablePricing().stripe).toBe(false)
@@ -31,10 +51,7 @@ describe("one waitlist price map", () => {
   })
 
   it("uses one 7-day refund sentence and one support email", () => {
-    expect(REFUND_POLICY).toBe(
-      "7-day money-back on monthly Early Adopter ($5) and Pro ($10) — a 30-day window is the whole first month.",
-    )
-    expect(REFUND_POLICY.toLowerCase()).not.toMatch(/30-day money-back/)
+    expect(REFUND_POLICY).toBe("7-day money-back on paid $5, $10, and $19.")
     expect(getParseablePricing().refundPolicy).toBe(REFUND_POLICY)
     expect(SUPPORT_EMAIL).toBe("info@theintelanalystacademy.com")
   })
@@ -48,10 +65,13 @@ describe("one waitlist price map", () => {
       expect(text).not.toMatch(/\$29/)
       expect(text).not.toMatch(/standalone \$/)
       expect(text.toLowerCase()).not.toMatch(/explorer \$|saas pro|business \$/)
+      expect(text.toLowerCase()).not.toMatch(/first intelligence product/)
     }
+    expect(llm).toContain(PRICE_MAP_LABEL)
     expect(llm).toContain(REFUND_POLICY)
-    expect(jsonLd).toContain("Early Adopter")
+    expect(jsonLd).toContain(PRICE_MAP_LABEL)
     expect(faq).toContain(REFUND_POLICY)
+    expect(faq).toContain("written only, no video")
   })
 })
 

@@ -12,8 +12,8 @@ import { setUserPlanAction } from "@/app/actions/admin-users"
 
 const PLANS = [
   { value: "free", label: "free — locked intros" },
-  { value: "early", label: "early — Early Adopter $5" },
-  { value: "pro", label: "pro — Pro $10" },
+  { value: "early", label: "early — $5 written (no video)" },
+  { value: "pro", label: "pro — $10 written (no video)" },
 ]
 
 export function PlanManager() {

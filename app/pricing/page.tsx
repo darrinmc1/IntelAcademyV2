@@ -1,17 +1,12 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, CheckCircle } from "lucide-react"
-import { CHECKOUT_STATUS, DISCLAIMER, REFUND_POLICY, plans } from "@/lib/pricing"
+import { CHECKOUT_STATUS, DISCLAIMER, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY, plans } from "@/lib/pricing"
 import { academyBriefFaqs, faqJsonLd, pricingJsonLd } from "@/lib/aeo"
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description:
-    "Intel Analyst Academy pricing: Free, Early Adopter $5/mo, Pro $10/mo. Academy Brief included on paid plans. Checkout isn't live — join the waitlist.",
-}
-
-function periodCopy(period: "month" | "forever") {
-  return period === "month" ? "/mo" : " forever"
+  description: `Intel Analyst Academy pricing: ${PRICE_MAP_LABEL}. ${PRICE_MAP_DETAIL} Checkout isn't live — join the waitlist.`,
 }
 
 export default function PricingPage() {
@@ -24,11 +19,9 @@ export default function PricingPage() {
         <div className="mx-auto max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300 mb-3">Plans</p>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
-            Free, Early Adopter $5/mo, Pro $10/mo
+            {PRICE_MAP_LABEL}
           </h1>
-          <p className="text-lg text-slate-300">
-            One map. Academy Brief is included on paid plans — not a separate SKU.
-          </p>
+          <p className="text-lg text-slate-300">{PRICE_MAP_DETAIL}</p>
           <p className="mt-4 inline-block rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-medium text-amber-200">
             {CHECKOUT_STATUS}
           </p>
@@ -51,25 +44,22 @@ export default function PricingPage() {
       </section>
 
       <section className="px-4 pb-16">
-        <div className="mx-auto max-w-6xl grid gap-6 md:grid-cols-3 items-start">
+        <div className="mx-auto max-w-6xl grid gap-6 sm:grid-cols-2 lg:grid-cols-4 items-start">
           {plans.map((plan) => (
             <div
               key={plan.id}
-              className={`relative flex flex-col rounded-2xl border p-6 md:p-8 ${
+              className={`relative flex flex-col rounded-2xl border p-6 ${
                 plan.highlighted
                   ? "border-cyan-500/40 bg-cyan-500/10"
                   : "border-white/10 bg-slate-950/40"
               }`}
             >
-              {plan.highlighted && (
-                <p className="text-xs font-semibold uppercase tracking-wider text-cyan-300 mb-3">
-                  Early adopter — lock in when billing is live
-                </p>
-              )}
+              <p className="text-xs font-semibold uppercase tracking-wider text-cyan-300 mb-3">
+                {plan.blurb}
+              </p>
               <h2 className="text-xl font-bold text-white">{plan.name}</h2>
               <div className="mt-3 mb-4">
                 <span className="text-4xl font-extrabold text-white">{plan.priceLabel}</span>
-                <span className="text-sm font-medium text-slate-400">{periodCopy(plan.period)}</span>
               </div>
               <p className="text-sm text-slate-300 mb-6">{plan.description}</p>
               <Link

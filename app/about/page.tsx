@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { CHECKOUT_STATUS, REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
+import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -92,8 +92,8 @@ export default function About() {
           <section>
             <h2 className="text-2xl font-bold mb-4">Plans (not a price table)</h2>
             <p className="mb-3">
-              One map everywhere: Free, Early Adopter $5/mo, Pro $10/mo. Academy Brief is included on paid plans.
-              There is no Explorer / Analyst / Professional / Enterprise table here, and no standalone Brief SKU.
+              One map everywhere: {PRICE_MAP_LABEL}. {PRICE_MAP_DETAIL} Academy Brief is a tool, not a
+              standalone SKU. There is no Explorer / Analyst / Professional / Enterprise table here.
             </p>
             <p className="mb-3">{CHECKOUT_STATUS}</p>
             <p className="mb-3">{REFUND_POLICY}</p>
