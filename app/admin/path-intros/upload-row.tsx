@@ -5,9 +5,22 @@ import { upload } from "@vercel/blob/client"
 import { Loader2, Upload } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import type { PathIntroCatalogStatus } from "@/data/path-intro-videos"
 
-export function PathIntroUploadRow({ item }: { item: PathIntroCatalogStatus }) {
+type VaultUploadItem = {
+  slug: string
+  title: string
+  filename: string
+  pathname: string
+  uploaded: boolean
+}
+
+export function PathIntroUploadRow({
+  item,
+  handleUploadUrl = "/api/admin/path-intros/upload",
+}: {
+  item: VaultUploadItem
+  handleUploadUrl?: string
+}) {
   const inputRef = useRef<HTMLInputElement>(null)
   const [busy, setBusy] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
@@ -24,7 +37,7 @@ export function PathIntroUploadRow({ item }: { item: PathIntroCatalogStatus }) {
     try {
       await upload(item.pathname, file, {
         access: "private",
-        handleUploadUrl: "/api/admin/path-intros/upload",
+        handleUploadUrl,
       })
       setUploaded(true)
       setMessage("In the vault. Playback stays gated — no public URL on this page.")

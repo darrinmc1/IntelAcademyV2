@@ -75,7 +75,7 @@ const navItems: NavItem[] = [
         icon: <FileVideo className="h-5 w-5" />,
       },
       {
-        title: "Path intros",
+        title: "Path intros & lessons",
         href: "/admin/path-intros",
         icon: <FileVideo className="h-5 w-5" />,
       },

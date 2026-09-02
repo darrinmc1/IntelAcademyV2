@@ -2,6 +2,7 @@ import type { ReactNode } from "react"
 import { AutoLessonComplete } from "@/components/auto-lesson-complete"
 import { TopicWhereNext } from "@/components/topic-where-next"
 import { DownloadLessonButton } from "@/components/download-lesson-button"
+import { LessonVideoPlayer } from "@/components/lesson-video-player"
 
 interface LessonContainerProps {
   children: ReactNode
@@ -14,6 +15,7 @@ export function LessonContainer({ children, className = "" }: LessonContainerPro
       <div className="flex justify-end mb-4">
         <DownloadLessonButton />
       </div>
+      <LessonVideoPlayer />
       {children}
       <div className="mt-10 pt-8 border-t border-white/10">
         <AutoLessonComplete />
