@@ -5,6 +5,7 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
 
 export const metadata = {
   title: "Terms of Service | The Intel Analyst Academy",
@@ -80,36 +81,44 @@ export default function TermsOfService() {
             for students of the academy method.
           </p>
           
-          <h2 className="text-2xl font-semibold mt-8 mb-4">6. Limitation of Liability</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">6. Refunds and billing</h2>
+          <p>{REFUND_POLICY}</p>
+          <p className="mt-4">
+            {CHECKOUT_STATUS} There is no Stripe session, Payment Link, or card charge on this site today.
+            Planned map: {PRICE_MAP_LABEL}. {PRICE_MAP_DETAIL} Academy Brief is a tool, not a standalone SKU.
+            The same refund sentence appears on /pricing, /pricing.json, and /refunds.
+          </p>
+
+          <h2 className="text-2xl font-semibold mt-8 mb-4">7. Limitation of Liability</h2>
           <p>
             In no event shall The Intel Analyst Academy, nor any of its officers, directors and employees, be liable to you for anything arising out of or in any
             way connected with your use of this website, whether such liability is under contract, tort or otherwise.
           </p>
           
-          <h2 className="text-2xl font-semibold mt-8 mb-4">7. Indemnification</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">8. Indemnification</h2>
           <p>
             You hereby indemnify to the fullest extent The Intel Analyst Academy from and against any and all liabilities, costs, demands, causes of action,
             damages and expenses (including reasonable attorney's fees) arising out of or in any way related to your breach of any of the provisions of these Terms.
           </p>
           
-          <h2 className="text-2xl font-semibold mt-8 mb-4">8. Governing Law & Jurisdiction</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">9. Governing Law & Jurisdiction</h2>
           <p>
             These Terms will be governed by and construed in accordance with the laws of Australia, and you submit to the non-exclusive jurisdiction of the
             state and federal courts located in Australia for the resolution of any disputes.
           </p>
           
-          <h2 className="text-2xl font-semibold mt-8 mb-4">9. Changes to Terms</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">10. Changes to Terms</h2>
           <p>
             The Intel Analyst Academy reserves the right to modify these terms at any time. We do so by posting and drawing attention to the updated terms on our website.
             Your continued use of the website after any such changes constitutes your acceptance of the new terms.
           </p>
           
-          <h2 className="text-2xl font-semibold mt-8 mb-4">10. Contact Us</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">11. Contact Us</h2>
           <p>
             If you have any questions about these Terms, please contact us at:
           </p>
           <p className="mt-2">
-            <strong>Email:</strong> info@TheIntelAnalystAcademy.com
+            <strong>Email:</strong> {SUPPORT_EMAIL}
           </p>
         </div>
       </div>

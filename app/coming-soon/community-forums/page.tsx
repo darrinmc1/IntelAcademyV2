@@ -26,7 +26,7 @@ export default function CommunityForumsPage() {
             Connect with fellow intelligence professionals, share insights, and collaborate on analytical challenges.
           </p>
           <div className="mt-6 inline-block bg-yellow-100 text-yellow-800 px-4 py-2 rounded-md">
-            Coming Soon - <a href="mailto:info@TheIntelAnalystAcademy.com" className="underline font-medium hover:text-yellow-900">Email us to be notified</a> when we launch!
+            Coming Soon - <a href="mailto:info@theintelanalystacademy.com" className="underline font-medium hover:text-yellow-900">Email us to be notified</a> when we launch!
           </div>
         </div>
 
@@ -129,7 +129,7 @@ export default function CommunityForumsPage() {
           </p>
           <div className="max-w-md mx-auto">
             <Button asChild size="lg">
-              <a href="mailto:info@TheIntelAnalystAcademy.com">Email Us to be Notified</a>
+              <a href="mailto:info@theintelanalystacademy.com">Email Us to be Notified</a>
             </Button>
           </div>
         </div>

@@ -14,7 +14,7 @@ const navigationItems = [
   { href: "/learning-paths", label: "Learning Paths", icon: BookOpen },
   { href: "/topics", label: "Topics", icon: Brain },
   { href: "/search", label: "Search", icon: Search },
-  { href: "/community", label: "Community", icon: Users },
+  { href: "/forum", label: "Community", icon: Users },
 ]
 
 const intelligenceTypes = [

@@ -46,8 +46,8 @@ export default function CommunityForumPage() {
             Connect with fellow analysts, share insights, and advance your intelligence analysis skills through
             collaborative discussions.
           </p>
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-            Join the Waitlist
+          <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+            <Link href="/waitlist">Join the Waitlist</Link>
           </Button>
         </div>
       </div>
@@ -142,8 +142,8 @@ export default function CommunityForumPage() {
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Join our waitlist to receive early access to the community forum and be notified when we launch.
           </p>
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-            Join the Waitlist
+          <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+            <Link href="/waitlist">Join the Waitlist</Link>
           </Button>
         </div>
       </section>

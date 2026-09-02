@@ -7,8 +7,9 @@ export type PathIntroViewer = {
 } | null
 
 /**
- * Path intros play for Early Adopter, Pro, and admin-capable staff.
- * Free and signed-out viewers stay locked. Text lessons are not gated here.
+ * Path intros are video. Public map: video is $19 (written + video).
+ * Free / $5 / $10 are written only. Admin-capable staff can still play.
+ * Existing stored plans early/pro still unlock playback until a $19 field exists.
  */
 export function canPlayPathIntro(user: PathIntroViewer): boolean {
   if (!user) return false
@@ -45,7 +46,7 @@ export function decidePathIntroPlayback(input: {
   if (!canPlayPathIntro(input.user)) {
     return {
       status: 403,
-      error: "Path intros are included on Early Adopter and Pro. Checkout isn't live — join the waitlist.",
+      error: "Path intros are video. Video is on $19 (written + video). Checkout isn't live — join the waitlist.",
     }
   }
   return { status: 200 }

@@ -41,11 +41,18 @@ const nextConfig = {
       "crime-series-analysis": "what-is-crime-series-analysis",
       "tactical-intelligence-concept": "what-is-tactical-intelligence",
     };
-    return Object.entries(map).map(([from, to]) => ({
+    const topicRedirects = Object.entries(map).map(([from, to]) => ({
       source: `/topics/${from}`,
       destination: `/topics/${to}`,
       permanent: true,
     }));
+    return [
+      ...topicRedirects,
+      { source: "/signup", destination: "/register", permanent: false },
+      { source: "/refund", destination: "/refunds", permanent: true },
+      { source: "/community", destination: "/forum", permanent: true },
+      { source: "/community/:path*", destination: "/forum", permanent: true },
+    ];
   },
 
   images: {

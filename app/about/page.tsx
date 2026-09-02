@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -89,12 +90,40 @@ export default function About() {
           <Separator />
 
           <section>
+            <h2 className="text-2xl font-bold mb-4">Plans (not a price table)</h2>
+            <p className="mb-3">
+              One map everywhere: {PRICE_MAP_LABEL}. {PRICE_MAP_DETAIL} Academy Brief is a tool, not a
+              standalone SKU. There is no Explorer / Analyst / Professional / Enterprise table here.
+            </p>
+            <p className="mb-3">{CHECKOUT_STATUS}</p>
+            <p className="mb-3">{REFUND_POLICY}</p>
+            <p>
+              Details live on{" "}
+              <Link href="/pricing" className="text-cyan-400 underline underline-offset-2">
+                /pricing
+              </Link>
+              . Paid interest goes to the{" "}
+              <Link href="/waitlist" className="text-cyan-400 underline underline-offset-2">
+                waitlist
+              </Link>
+              .
+            </p>
+          </section>
+
+          <Separator />
+
+          <section>
             <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
             <p className="mb-6">Have questions, feedback, or suggestions? We&apos;d love to hear from you.</p>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-semibold mb-2">General Inquiries</h3>
-                <p className="mb-2">Email: info@TheIntelAnalystAcademy.com</p>
+                <p className="mb-2">
+                  Email:{" "}
+                  <a href={`mailto:${SUPPORT_EMAIL}`} className="text-cyan-400 underline underline-offset-2">
+                    {SUPPORT_EMAIL}
+                  </a>
+                </p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Content Requests</h3>

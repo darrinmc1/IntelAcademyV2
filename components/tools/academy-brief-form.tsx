@@ -17,7 +17,7 @@ import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import { Card } from "@/components/ui/card"
 import type { AcademyBrief, BriefMode, BriefResponse } from "@/lib/academy-brief"
-import { DISCLAIMER } from "@/lib/pricing"
+import { DISCLAIMER, PRICE_MAP_LABEL } from "@/lib/pricing"
 
 type Phase = "input" | "generating" | "result"
 
@@ -195,12 +195,12 @@ export function AcademyBriefForm() {
         <div className="rounded-xl border border-amber-500/20 bg-amber-500/5 p-4 text-center">
           <p className="text-sm font-semibold text-amber-300">That was your free Academy Brief preview.</p>
           <p className="mt-1 text-xs text-amber-400/80">
-            Paid plans include unlimited briefs when billing is live. Standalone Brief is $29/mo.
+            Paid plans include unlimited briefs when billing is live. Checkout isn&apos;t live — join the waitlist.
           </p>
           <Button asChild className="mt-3" size="sm">
-            <Link href="/pricing">
+            <Link href="/waitlist">
               <Crown className="mr-1 h-4 w-4" />
-              See pricing
+              Join the waitlist
             </Link>
           </Button>
         </div>
@@ -225,7 +225,7 @@ export function AcademyBriefForm() {
       />
       {error ? <p className="mt-3 text-sm text-red-400">{error}</p> : null}
       <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
-        <p className="text-xs text-slate-500">Free preview: one brief. Then Early Adopter / Pro include the tool.</p>
+        <p className="text-xs text-slate-500">Free preview: one brief. Paid access includes the tool — not a standalone SKU.</p>
         <Button onClick={generate} disabled={dump.trim().length < 40}>
           <Sparkles className="mr-1 h-4 w-4" />
           Build structured brief
@@ -350,14 +350,14 @@ function SubscribeWall() {
       </div>
       <h2 className="mt-6 text-2xl font-bold text-slate-50">Academy Brief is on paid plans</h2>
       <p className="mx-auto mt-3 max-w-md text-slate-400">
-        Free tier: one structured brief. Early Adopter ($5/mo) and Pro ($10/mo) include the tool.
-        Standalone Brief is $29/mo when billing is live — existing checkout patterns, no x402.
+        Free tier: one structured brief. Planned map {PRICE_MAP_LABEL}. Academy Brief is a tool, not a
+        standalone SKU. Checkout isn&apos;t live — join the waitlist.
       </p>
       <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
         <Button asChild size="lg">
-          <Link href="/pricing">
+          <Link href="/waitlist">
             <Crown className="mr-2 h-5 w-5" />
-            View pricing
+            Join the waitlist
           </Link>
         </Button>
         <Button asChild variant="ghost" size="lg">

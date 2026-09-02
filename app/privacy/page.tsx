@@ -93,7 +93,7 @@ export default function PrivacyPolicy() {
             If you have any questions about this privacy policy or our privacy practices, please contact us at:
           </p>
           <p className="mt-2">
-            <strong>Email:</strong> info@TheIntelAnalystAcademy.com
+            <strong>Email:</strong> info@theintelanalystacademy.com
           </p>
         </div>
       </div>

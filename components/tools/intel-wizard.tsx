@@ -180,12 +180,12 @@ export function IntelWizard({ tool }: { tool: IntelTool }) {
             ✨ That was your free generation!
           </p>
           <p className="mt-1 text-xs text-amber-400/80">
-            Subscribe to Pro for unlimited AI intelligence analysis, full course access, and more.
+            Paid access includes unlimited generations when billing is live. Checkout isn&apos;t live.
           </p>
           <Button asChild className="mt-3" size="sm">
-            <Link href="/pricing">
+            <Link href="/waitlist">
               <Crown className="mr-1 h-4 w-4" />
-              Go Pro
+              Join the waitlist
             </Link>
           </Button>
         </div>
@@ -298,14 +298,14 @@ function SubscribeWall() {
       </div>
       <h2 className="mt-6 text-2xl font-bold text-foreground tabular-nums">enable unlimited AI intelligence reports</h2>
       <p className="mx-auto mt-3 max-w-md text-muted-foreground">
-        Free tier: one report with Gemini Flash. Pro subscription unlocks advanced AI models,
-        and other advanced models for deeper analysis.
+        Free tier: one report. Paid access unlocks more when billing is live.
+        Checkout isn&apos;t live — this is not a purchase.
       </p>
       <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
         <Button asChild size="lg">
-          <Link href="/pricing">
+          <Link href="/waitlist">
             <Crown className="mr-2 h-5 w-5" />
-            Go Pro
+            Join the waitlist
           </Link>
         </Button>
         <Button asChild variant="ghost" size="lg">

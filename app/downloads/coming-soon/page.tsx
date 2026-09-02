@@ -52,7 +52,7 @@ function ComingSoonContent() {
               </div>
             ))}
           </div>
-          <a href={`mailto:info@theintelanalystacademy.com.au?subject=${encodeURIComponent(
+          <a href={`mailto:info@theintelanalystacademy.com?subject=${encodeURIComponent(
             `Notification Request: ${resourceName}`
           )}&body=${encodeURIComponent(
             `Hi,\n\nI'd like to be notified when the following resource becomes available:\n\n${resourceName}\n\nAdditional notes:\n`
