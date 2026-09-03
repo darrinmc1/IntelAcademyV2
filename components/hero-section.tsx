@@ -1,88 +1,69 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
-import { Fraunces, IBM_Plex_Mono, Source_Serif_4 } from "next/font/google"
+import { Button } from "@/components/ui/button"
 import { topics } from "@/data/topics-catalog"
 import "./hero-bluf-sheet.css"
-
-const display = Fraunces({
-  subsets: ["latin"],
-  weight: ["600", "700"],
-  display: "swap",
-  variable: "--font-hero-display",
-})
-
-const report = Source_Serif_4({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  display: "swap",
-  variable: "--font-hero-report",
-})
-
-const stamp = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  display: "swap",
-  variable: "--font-hero-stamp",
-})
 
 const TOPIC_COUNT = topics.length
 
 export function HeroSection() {
   return (
-    <section className={`hero-bluf ${display.variable} ${report.variable} ${stamp.variable}`}>
-      <div className="hero-bluf-inner container mx-auto px-4 py-10 lg:py-16">
-        <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-14">
-          <div className="max-w-xl text-left">
-            <p
-              className={`${stamp.className} mb-5 text-[11px] font-medium uppercase tracking-[0.22em] text-[#c4b89a]`}
-            >
-              The job — not the slogan
-            </p>
+    <section className="hero-bluf relative overflow-hidden min-h-[calc(100svh-4.5rem)] flex items-center py-8 lg:py-16">
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          <div className="text-left glass-panel-heavy p-8 md:p-12 rounded-2xl">
+            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-1.5 mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300">
+              Intelligence Analysis Training
+            </div>
 
-            <h1
-              className={`${display.className} text-[2.15rem] font-semibold leading-[1.12] tracking-tight text-[#f3ead6] sm:text-5xl lg:text-[3.35rem]`}
-            >
-              Write a BLUF the boss can act on before the meeting starts.
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-md">
+              Write a BLUF the boss can act on{" "}
+              <span className="text-gradient-primary">before the meeting starts.</span>
             </h1>
 
-            <p className={`${report.className} mt-6 text-lg leading-relaxed text-[#e8dcc4] sm:text-xl`}>
+            <p className="text-xl md:text-2xl mb-4 text-slate-300 leading-relaxed font-light">
               Bottom line up front. Judgment, stake, confidence — in that order. {TOPIC_COUNT} unique
               written topics. Start free. Video is waitlist, not a buy button.
             </p>
 
-            <p className={`${report.className} mt-4 text-base leading-relaxed text-[#c4b89a] italic`}>
+            <p className="text-lg mb-8 text-indigo-300/80 italic font-light border-l-2 border-indigo-500/50 pl-4">
               If paragraph one is still clearing its throat, the meeting already happened without you.
               The appendix can wait. The first sentence cannot.
             </p>
 
-            <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-              <Link
-                href="/topics/executive-summaries-mastery"
-                className={`${stamp.className} inline-flex items-center justify-center bg-[#9a3412] px-5 py-3 text-sm font-medium tracking-wide text-[#f8efe2] transition-colors hover:bg-[#7c2d12] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#efe6d2]`}
+            <div className="flex flex-col sm:flex-row gap-4 justify-start">
+              <Button
+                asChild
+                size="lg"
+                className="bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-6 text-lg rounded-full glow-primary-hover border border-cyan-400/50 shadow-[0_0_15px_rgba(8,145,178,0.5)]"
               >
-                Start the free BLUF lesson
-              </Link>
-              <Link
-                href="/topics"
-                className={`${stamp.className} inline-flex items-center justify-center border border-[#c4b89a]/50 bg-transparent px-5 py-3 text-sm font-medium tracking-wide text-[#f3ead6] transition-colors hover:border-[#f3ead6] hover:bg-[#f3ead6]/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#efe6d2]`}
+                <Link href="/topics/executive-summaries-mastery">Start the free BLUF lesson</Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-white/20 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md px-8 py-6 text-lg rounded-full transition-all duration-300"
               >
-                Browse {TOPIC_COUNT} topics
-              </Link>
-              <Link
-                href="/waitlist"
-                className={`${stamp.className} text-sm tracking-wide text-[#c4b89a] underline decoration-[#9a3412]/70 underline-offset-4 hover:text-[#f3ead6]`}
-              >
-                Video waitlist
-              </Link>
+                <Link href="/topics">Browse {TOPIC_COUNT} topics</Link>
+              </Button>
             </div>
+            <Link
+              href="/waitlist"
+              className="mt-4 inline-block text-sm font-medium text-cyan-300 hover:text-cyan-200"
+            >
+              Video is coming soon — waitlist
+            </Link>
           </div>
 
           <figure className="m-0">
             <Link
               href="/topics/intelligence-report-examples"
-              className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#efe6d2]"
+              className="block rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
             >
-              <div className="hero-bluf-still-frame aspect-[5/6] max-h-[min(72vh,38rem)]">
+              <div className="hero-bluf-still-frame aspect-[5/6] max-h-[min(72vh,38rem)] rounded-2xl">
                 <div className="hero-bluf-still-motion">
                   <Image
                     src="/hero-bluf-lesson-still.png"
@@ -91,14 +72,12 @@ export function HeroSection() {
                     height={2360}
                     className="h-auto w-full"
                     priority
-                    sizes="(max-width: 1024px) 100vw, 42vw"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
               </div>
             </Link>
-            <figcaption
-              className={`${stamp.className} mt-3 text-[11px] uppercase tracking-[0.16em] text-[#c4b89a]`}
-            >
+            <figcaption className="mt-3 text-xs font-medium uppercase tracking-[0.2em] text-slate-500">
               Still from Intelligence Report Examples — written lesson in this repo. Not a stock shot.
             </figcaption>
           </figure>

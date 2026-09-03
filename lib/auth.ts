@@ -2,15 +2,18 @@ import { SignJWT, jwtVerify } from 'jose'
 import { cookies } from 'next/headers'
 import { normalizeUserPlan, type UserPlan } from '@/lib/user-plan'
 
-// Require a real secret in production — never silently fall back to a known
-// default, which would let anyone forge a session cookie.
-const rawSecret = process.env.JWT_SECRET
-if (!rawSecret && process.env.NODE_ENV === 'production') {
-  throw new Error('JWT_SECRET environment variable is required in production')
+// Require a real secret when signing/verifying in production — never silently
+// fall back to a known default, which would let anyone forge a session cookie.
+// Do not throw at import time: `next build` collects page data for admin
+// routes that import this module, and Preview may not inject JWT_SECRET
+// until runtime.
+function getJwtSecret() {
+  const rawSecret = process.env.JWT_SECRET
+  if (!rawSecret && process.env.NODE_ENV === 'production') {
+    throw new Error('JWT_SECRET environment variable is required in production')
+  }
+  return new TextEncoder().encode(rawSecret || 'intel-academy-dev-only-secret')
 }
-const JWT_SECRET = new TextEncoder().encode(
-  rawSecret || 'intel-academy-dev-only-secret'
-)
 const COOKIE_NAME = 'intel-session'
 
 export type UserRole = 'admin' | 'moderator' | 'editor' | 'viewer' | 'user'
@@ -46,7 +49,7 @@ export async function createToken(user: AuthUser): Promise<string> {
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
     .setExpirationTime('30d')
-    .sign(JWT_SECRET)
+    .sign(getJwtSecret())
 }
 
 /**
@@ -54,7 +57,7 @@ export async function createToken(user: AuthUser): Promise<string> {
  */
 export async function verifyToken(token: string): Promise<AuthUser | null> {
   try {
-    const { payload } = await jwtVerify(token, JWT_SECRET)
+    const { payload } = await jwtVerify(token, getJwtSecret())
     const user = payload as unknown as AuthUser
     user.plan = normalizeUserPlan(user.plan)
     return user
