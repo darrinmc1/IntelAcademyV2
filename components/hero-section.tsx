@@ -56,7 +56,7 @@ export function HeroSection() {
                 size="lg"
                 className="border-white/20 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md px-8 py-6 text-lg rounded-full transition-all duration-300"
               >
-                <Link href="/pricing">See plans Free / $5 / $10 / $19</Link>
+                <Link href="/waitlist">Video is coming soon — waitlist</Link>
               </Button>
             </div>
           </div>

@@ -216,7 +216,7 @@ export default function RegisterPage() {
             </Link>
           </div>
           <p className="mt-4 text-center text-xs text-slate-500">
-            Free signup is written lessons only. Path intros are included on $19 video —{" "}
+            Free signup is written lessons only. Path intros are included on the video plan —{" "}
             <Link href="/waitlist" className="text-cyan-400 hover:text-cyan-300">
               join the waitlist
             </Link>

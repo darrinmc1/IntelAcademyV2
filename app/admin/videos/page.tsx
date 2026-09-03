@@ -35,11 +35,13 @@ export default function AdminVideosPage() {
       <h1 className="text-3xl font-bold mb-6">Public lesson YouTube IDs</h1>
       <p className="mb-4 text-muted-foreground">
         This desk is for public OSINT YouTube clips in <code>data/lesson-videos.ts</code>. Those IDs are
-        not the paid product. Path intros are private Blob files — upload them at{" "}
+        not the paid product. Private lesson videos and path intros are Blob files — upload them at{" "}
         <a href="/admin/path-intros" className="underline">
           /admin/path-intros
         </a>
-        . Do not paste path-intro files or public YouTube IDs as if they were the same thing.
+        {" "}
+        (Lessons tab for <code>videos/lessons/{"{slug}"}-lesson-16x9.mp4</code>). Do not paste
+        path-intro files, lesson mp4s, or public YouTube IDs as if they were the same thing.
       </p>
       <p className="mb-8 text-muted-foreground">
         Use this interface to manage YouTube video IDs for each lesson. After updating, copy the generated code to

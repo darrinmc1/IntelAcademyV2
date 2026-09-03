@@ -17,7 +17,7 @@ export default function BuyPage() {
         <h1 className="text-4xl font-bold text-white mb-4">You can&apos;t buy here yet</h1>
         <p className="text-lg text-slate-300 mb-4">{CHECKOUT_STATUS}</p>
         <p className="text-slate-400 mb-6">
-          This is not a Stripe session, Payment Link, or Buy button. Planned map: {PRICE_MAP_LABEL}. {PRICE_MAP_DETAIL}{" "}
+          This is not a Stripe session, Payment Link, or Buy button. {PRICE_MAP_LABEL} {PRICE_MAP_DETAIL}{" "}
           Join the waitlist or contact us.
         </p>
         <SignupOrWaitlistPlanLabels className="mb-6 text-sm text-slate-300 space-y-1" />
@@ -31,7 +31,7 @@ export default function BuyPage() {
             Contact
           </Link>
           <Link href="/pricing" className="text-cyan-400 underline underline-offset-2">
-            Pricing
+            Coming soon
           </Link>
           <a href={`mailto:${SUPPORT_EMAIL}`} className="text-cyan-400 underline underline-offset-2">
             {SUPPORT_EMAIL}

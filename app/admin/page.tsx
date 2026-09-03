@@ -154,8 +154,8 @@ export default async function AdminDashboard() {
 
             <Card>
               <CardHeader>
-                <CardTitle>Path intros</CardTitle>
-                <CardDescription>Private 75s path reels — not YouTube IDs</CardDescription>
+                <CardTitle>Path intros & lessons</CardTitle>
+                <CardDescription>Private Blob reels — path intros and lesson videos</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center justify-center h-20">
@@ -164,7 +164,7 @@ export default async function AdminDashboard() {
               </CardContent>
               <CardFooter>
                 <Button asChild className="w-full">
-                  <Link href="/admin/path-intros">Upload path intros</Link>
+                  <Link href="/admin/path-intros">Upload path intros & lessons</Link>
                 </Button>
               </CardFooter>
             </Card>

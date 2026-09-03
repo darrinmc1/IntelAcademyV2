@@ -2,8 +2,9 @@
  * Official catalog of the 24 learning-path intro videos.
  *
  * These are PRIVATE Vercel Blob objects — not public YouTube embeds.
- * Public OSINT clips stay in `data/lesson-videos.ts` and must not be
- * treated as the paid product.
+ * Public OSINT clips stay in `data/lesson-videos.ts`. Paid per-lesson
+ * mp4s stay in `data/lesson-blob-videos.ts` under videos/lessons/.
+ * Do not upload lesson files into this path-intro catalog.
  *
  * Filename convention (do not vary):
  *   videos/paths/{slug}-path-intro-75s-16x9.mp4

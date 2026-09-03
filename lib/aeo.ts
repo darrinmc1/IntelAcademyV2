@@ -31,7 +31,7 @@ export const academyBriefFaqs = [
   },
   {
     question: "What are the plans?",
-    answer: `${PRICE_MAP_LABEL}. ${PRICE_MAP_DETAIL} Checkout isn't live — join the waitlist or contact us. No Explorer, Analyst, Professional, Enterprise, or standalone Brief SKU.`,
+    answer: `${PRICE_MAP_LABEL} ${PRICE_MAP_DETAIL} Checkout isn't live — join the waitlist or contact us. No Explorer, Analyst, Professional, Enterprise, or standalone Brief SKU.`,
   },
   {
     question: "What is the refund policy?",
@@ -55,7 +55,7 @@ export function buildLlmTxt(): string {
   const planBlock = pricing.plans
     .map(
       (p) =>
-        `- ${p.name}: ${p.currency} ${p.price} — ${p.label} — video: ${p.includesVideo} — ${p.url}`,
+        `- ${p.name}: ${p.label} — video: ${p.includesVideo} — ${p.url}`,
     )
     .join("\n")
 
@@ -80,13 +80,12 @@ ${DISCLAIMER}
 - Not a standalone Brief SKU
 - Checkout: waitlist only (no Stripe, Payment Links, or x402)
 
-## Pricing
+## Access (no live prices)
 
 Parseable: ${SITE_URL}/pricing.json
 Human: ${SITE_URL}/pricing
 Map: ${PRICE_MAP_LABEL}
 ${PRICE_MAP_DETAIL}
-Currency: ${pricing.currency}
 Payments live: ${pricing.paymentsLive}
 Checkout: ${CHECKOUT_STATUS}
 Refunds: ${REFUND_POLICY}
@@ -119,24 +118,19 @@ export function pricingJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: `The Intel Analyst Academy pricing — ${PRICE_MAP_LABEL}`,
+    name: `The Intel Analyst Academy access — ${PRICE_MAP_LABEL}`,
     url: `${SITE_URL}/pricing`,
     description: PRICE_MAP_DETAIL,
     itemListElement: plans.map((plan, i) => ({
-      "@type": "Offer",
+      "@type": "ListItem",
       position: i + 1,
       name: plan.name,
       url: `${SITE_URL}${plan.href}`,
-      price: plan.price,
-      priceCurrency: plan.currency,
-      availability: plan.available
-        ? "https://schema.org/InStock"
-        : "https://schema.org/PreOrder",
       description: plan.description,
-      category: "Access",
       additionalProperty: [
         { "@type": "PropertyValue", name: "label", value: plan.blurb },
         { "@type": "PropertyValue", name: "includesVideo", value: String(plan.includesVideo) },
+        { "@type": "PropertyValue", name: "available", value: String(plan.available) },
       ],
     })),
     additionalProperty: [
@@ -174,9 +168,9 @@ export function softwareJsonLd() {
     url: `${SITE_URL}/tools/academy-brief`,
     offers: {
       "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      description: "1 free preview. Academy Brief is a tool, not a standalone SKU. Checkout is not live.",
+      availability: "https://schema.org/PreOrder",
+      description:
+        "1 free preview. Academy Brief is a tool, not a standalone SKU. Checkout is not live — join the waitlist.",
     },
     description:
       "Paste a raw intel dump or notes and receive a structured brief using The Intel Analyst Academy method, citing real catalog lessons. Training and education only.",

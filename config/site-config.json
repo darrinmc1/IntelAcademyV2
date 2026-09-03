@@ -14,31 +14,9 @@
     { "name": "Chief Intelligence Officer", "icon": "🔴", "minPoints": 3000 }
   ],
   "pricing": {
-    "pro_monthly": {
-      "price": 9.99,
-      "stripePriceId": "price_UPDATE_AFTER_STRIPE_SETUP"
-    },
-    "pro_yearly": {
-      "price": 99.00,
-      "stripePriceId": "price_UPDATE_AFTER_STRIPE_SETUP"
-    },
-    "cert_associate": {
-      "price": 49.00,
-      "stripePriceId": "price_UPDATE_AFTER_STRIPE_SETUP"
-    },
-    "cert_professional": {
-      "price": 99.00,
-      "stripePriceId": "price_UPDATE_AFTER_STRIPE_SETUP"
-    },
-    "cert_master": {
-      "price": 199.00,
-      "stripePriceId": "price_UPDATE_AFTER_STRIPE_SETUP"
-    },
-    "academy_brief_monthly": {
-      "price": 29.00,
-      "includedIn": ["pro_monthly", "pro_yearly"],
-      "stripePriceId": "price_UPDATE_AFTER_STRIPE_SETUP"
-    }
+    "checkout": "waitlist",
+    "paymentsLive": false,
+    "note": "No live prices. Written lessons are free. Video is coming soon."
   },
   "points": {
     "lessonComplete": 50,

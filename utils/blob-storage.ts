@@ -8,7 +8,8 @@ export interface ImageMetadata {
 }
 
 export async function uploadToBlob(file: File, category: string): Promise<ImageMetadata> {
-  // Image stub only. Private path-intro video storage lives in lib/path-intro-blob.ts.
+  // Image stub only. Private path-intro / lesson video storage lives in
+  // lib/path-intro-blob.ts and lib/lesson-video-blob.ts.
   const filename = file.name
   const url = `/images/${category}/${filename}`
 

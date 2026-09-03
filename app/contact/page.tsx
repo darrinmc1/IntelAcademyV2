@@ -27,7 +27,7 @@ export default function ContactPage() {
             Waitlist
           </Link>
           <Link href="/pricing" className="text-cyan-400 underline underline-offset-2">
-            Pricing
+            Coming soon
           </Link>
           <Link href="/refunds" className="text-cyan-400 underline underline-offset-2">
             Refunds

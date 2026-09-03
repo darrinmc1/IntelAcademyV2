@@ -64,8 +64,9 @@ describe("path intro catalog", () => {
 })
 
 describe("path intro playback access", () => {
-  it("uses the $19 video lock copy", () => {
-    expect(PATH_INTRO_LOCK_COPY).toBe("Included on $19 video")
+  it("uses the video-plan lock copy with no dollar amount", () => {
+    expect(PATH_INTRO_LOCK_COPY).toBe("Included on the video plan")
+    expect(PATH_INTRO_LOCK_COPY).not.toMatch(/\$/)
   })
 
   it("does not issue a signed URL to a free user", () => {
@@ -88,7 +89,7 @@ describe("path intro playback access", () => {
     expect("url" in decision).toBe(false)
   })
 
-  it("allows only the $19 video plan and admin to receive a signed URL", () => {
+  it("allows only the video plan and admin to receive a signed URL", () => {
     const early = decidePathIntroPlayback({
       slugKnown: true,
       uploaded: true,

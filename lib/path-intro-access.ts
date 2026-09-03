@@ -10,8 +10,9 @@ export type PathIntroViewer = {
 } | null
 
 /**
- * Path intros are video. Only admin or the stored $19 `video` plan can play.
- * Free / early ($5) / pro ($10) are written only. Editor/moderator do not unlock.
+ * Path intros are video. Only admin or the stored `video` plan can play.
+ * Free / early / pro stay written only. Editor/moderator do not unlock.
+ * Checkout isn't live — lock copy must not print a dollar amount.
  */
 export function canPlayPathIntro(user: PathIntroViewer): boolean {
   if (!user) return false

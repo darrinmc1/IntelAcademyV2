@@ -15,7 +15,7 @@ export default function ImprovementsPage() {
           </div>
           <h1 className="text-3xl font-bold tracking-tight mb-3">We&apos;re Building Something Better</h1>
           <p className="text-slate-600 max-w-lg mx-auto mb-4 text-lg">
-            {CHECKOUT_STATUS} Planned map: <strong className="text-blue-700">{PRICE_MAP_LABEL}</strong>.{" "}
+            {CHECKOUT_STATUS} <strong className="text-blue-700">{PRICE_MAP_LABEL}</strong>{" "}
             {PRICE_MAP_DETAIL} Academy Brief is a tool, not a standalone SKU.
           </p>
           <p className="text-slate-500 max-w-lg mx-auto mb-6 text-sm">{REFUND_POLICY}</p>
@@ -23,7 +23,7 @@ export default function ImprovementsPage() {
             <WaitlistSignup source="improvements" />
           </div>
           <p className="text-slate-500 max-w-lg mx-auto mb-8 text-sm">
-            Same planned prices as{" "}
+            Same coming-soon note as{" "}
             <Link href="/pricing" className="text-blue-700 underline underline-offset-2">
               /pricing
             </Link>
