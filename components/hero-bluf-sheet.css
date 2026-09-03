@@ -1,0 +1,71 @@
+/* Hero-only. Olive desk + bond-paper product. Not Inter, not cyan glass. */
+
+.hero-bluf {
+  --hero-ink: #1a1714;
+  --hero-paper: #efe6d2;
+  --hero-paper-edge: #d9ccb0;
+  --hero-desk: #1c1914;
+  --hero-desk-2: #2a2218;
+  --hero-cream: #f3ead6;
+  --hero-rust: #9a3412;
+  --hero-rust-ink: #f8efe2;
+  --hero-forest: #3f4a2a;
+  --hero-mute: #c4b89a;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: calc(100svh - 4.5rem);
+  background:
+    radial-gradient(1200px 600px at 12% 0%, rgba(154, 52, 18, 0.14), transparent 55%),
+    radial-gradient(900px 500px at 88% 100%, rgba(63, 74, 42, 0.22), transparent 50%),
+    linear-gradient(165deg, var(--hero-desk-2) 0%, var(--hero-desk) 58%, #14110e 100%);
+  color: var(--hero-cream);
+}
+
+.hero-bluf::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.28;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
+
+.hero-bluf-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-bluf-still-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(239, 230, 210, 0.12);
+  background: #14110e;
+  box-shadow:
+    0 28px 60px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+.hero-bluf-still-motion {
+  transform-origin: 28% 22%;
+  will-change: transform;
+  animation: hero-bluf-kenburns 32s ease-in-out alternate infinite;
+}
+
+@keyframes hero-bluf-kenburns {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+  to {
+    transform: scale(1.07) translate(-2.2%, -1.6%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bluf-still-motion {
+    animation: none;
+    transform: none;
+  }
+}

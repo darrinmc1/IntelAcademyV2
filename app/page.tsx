@@ -21,6 +21,11 @@ export default function HomePage() {
       {/* Hero section - load immediately */}
       <HeroSection />
 
+      <p className="container mx-auto px-4 py-8 text-center text-sm italic text-slate-500">
+        Intelligence is like underwear — it&apos;s important to have it, but you shouldn&apos;t show it
+        off too much.
+      </p>
+
       {/* Quick navigation pills */}
       <HomepageQuickNav />
 
