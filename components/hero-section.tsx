@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Fraunces, IBM_Plex_Mono, Source_Serif_4 } from "next/font/google"
 import { topics } from "@/data/topics-catalog"
@@ -25,13 +26,6 @@ const stamp = IBM_Plex_Mono({
 })
 
 const TOPIC_COUNT = topics.length
-
-/**
- * Real excerpt from app/topics/executive-summaries-mastery/page.tsx
- * ("With BLUF" + the three decision-maker questions). Not invented copy.
- */
-const BLUF_EXCERPT =
-  "The security situation in the northern provinces will likely deteriorate significantly over the next 90 days, driven by accelerating militant recruitment and collapsing local governance. Without additional security force deployment, we assess with high confidence that at least two provincial capitals are at risk."
 
 export function HeroSection() {
   return (
@@ -84,86 +78,32 @@ export function HeroSection() {
           </div>
 
           <figure className="m-0">
-            <div className="hero-bluf-still-frame">
-              <div className="hero-bluf-still-motion p-3 sm:p-4">
-                <BlufProductSheet />
+            <Link
+              href="/topics/intelligence-report-examples"
+              className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#efe6d2]"
+            >
+              <div className="hero-bluf-still-frame aspect-[5/6] max-h-[min(72vh,38rem)]">
+                <div className="hero-bluf-still-motion">
+                  <Image
+                    src="/hero-bluf-lesson-still.png"
+                    alt="Still from the Intelligence Report Examples lesson: a BLUF strategic assessment with key judgments first"
+                    width={1960}
+                    height={2360}
+                    className="h-auto w-full"
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 42vw"
+                  />
+                </div>
               </div>
-            </div>
+            </Link>
             <figcaption
               className={`${stamp.className} mt-3 text-[11px] uppercase tracking-[0.16em] text-[#c4b89a]`}
             >
-              Still — written lesson excerpt, not a clip
+              Still from Intelligence Report Examples — written lesson in this repo. Not a stock shot.
             </figcaption>
           </figure>
         </div>
       </div>
     </section>
-  )
-}
-
-function BlufProductSheet() {
-  return (
-    <article
-      className={`${report.className} bg-[#efe6d2] text-[#1a1714] shadow-[0_18px_40px_rgba(0,0,0,0.35)]`}
-      aria-label="BLUF product excerpt from Executive Summaries Mastery"
-    >
-      <header className="flex items-start justify-between gap-4 border-b-4 border-[#9a3412] px-5 py-3 sm:px-6">
-        <div>
-          <p className={`${stamp.className} text-[10px] font-semibold uppercase tracking-[0.2em] text-[#9a3412]`}>
-            Training product · IAA-ES-01
-          </p>
-          <p className={`${stamp.className} mt-1 text-[10px] uppercase tracking-[0.14em] text-[#3f4a2a]`}>
-            Executive summary — BLUF sheet
-          </p>
-        </div>
-        <p className={`${stamp.className} text-right text-[10px] uppercase tracking-[0.14em] text-[#5c5346]`}>
-          Unclassified
-          <br />
-          training example
-        </p>
-      </header>
-
-      <div className="px-5 py-5 sm:px-6 sm:py-6">
-        <p className={`${stamp.className} text-[10px] font-medium uppercase tracking-[0.22em] text-[#3f4a2a]`}>
-          Excerpt · Executive Summaries Mastery
-        </p>
-        <p className={`${stamp.className} mt-3 inline-block bg-[#9a3412] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#f8efe2]`}>
-          BLUF
-        </p>
-        <p className="mt-3 text-[1.02rem] font-semibold leading-snug sm:text-[1.08rem]">
-          {BLUF_EXCERPT}
-        </p>
-
-        <dl className="mt-6 grid gap-3 border-t border-[#d9ccb0] pt-4 text-sm leading-relaxed">
-          <div>
-            <dt className={`${stamp.className} text-[10px] uppercase tracking-[0.16em] text-[#9a3412]`}>
-              What is the situation?
-            </dt>
-            <dd className="mt-1">The key judgment or finding.</dd>
-          </div>
-          <div>
-            <dt className={`${stamp.className} text-[10px] uppercase tracking-[0.16em] text-[#9a3412]`}>
-              Why does it matter?
-            </dt>
-            <dd className="mt-1">The implications for their decision.</dd>
-          </div>
-          <div>
-            <dt className={`${stamp.className} text-[10px] uppercase tracking-[0.16em] text-[#9a3412]`}>
-              How confident are you?
-            </dt>
-            <dd className="mt-1">The strength of the underlying evidence.</dd>
-          </div>
-        </dl>
-
-        <p className="mt-5 text-sm leading-relaxed text-[#3f382e]">
-          If these three elements are not in the first two sentences, your reader may never reach
-          them.
-        </p>
-      </div>
-
-      <footer className={`${stamp.className} border-t border-[#d9ccb0] px-5 py-3 text-[10px] uppercase tracking-[0.14em] text-[#5c5346] sm:px-6`}>
-        Written lesson · free · no video required · from the repo, not a mock
-      </footer>
-    </article>
   )
 }
