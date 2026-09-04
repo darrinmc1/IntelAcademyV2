@@ -94,19 +94,19 @@ export default function DataCollectionPlanningPage() {
             title="Collection Plan Templates"
             description="Downloadable templates for creating data collection plans."
             type="Template"
-            href="/resources/collection-plan-templates"
+            href="/downloads/collection-plan-template.pdf"
           />
           <FeaturedResource
             title="Intelligence Requirements Handbook"
-            description="Guide to developing clear, actionable intelligence requirements."
+            description="Guide to developing clear, actionable intelligence requirements. Not a live file yet."
             type="Guide"
-            href="/resources/intelligence-requirements-handbook"
+            href="/downloads/coming-soon?resource=Intelligence%20Requirements%20Handbook"
           />
           <FeaturedResource
             title="Case Study: Collection Planning Success"
-            description="Real-world example of how effective collection planning led to intelligence breakthroughs."
+            description="Real-world example of how effective collection planning led to intelligence breakthroughs. Not a live file yet."
             type="Case Study"
-            href="/resources/collection-planning-case-study"
+            href="/downloads/coming-soon?resource=Collection%20Planning%20Case%20Study"
           />
         </div>
       </div>

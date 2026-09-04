@@ -5,100 +5,81 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Notebook Example Materials - The Intel Analyst Academy",
-  description: "Explore the example charts and import specifications provided with i2 Analyst&amp;apos;s Notebook for practice and learning.",
+  description:
+    "Learn how to use i2 Analyst's Notebook sample charts and import specs as training wheels — and how not to treat vendor fiction as a case.",
 }
 
-const topicContent = `← Back to Analyst's Notebook Learning Path
+const topicContent = `Vendor example charts exist so you can break something that is not a live investigation. They are sandboxes. They are not tradecraft, not evidence, and not a license to copy a pretty layout onto a real target set and call it analysis.
 
+This lesson is how to use the example materials that ship with Analyst's Notebook, what to steal (the mechanics), and what to leave (the story).
 
-Explore the example charts and import specifications provided with i2 Analyst's Notebook
+## What You Are Looking At
 
-## Exploring Example Materials
+Typical example packs include sample .anb charts, import specifications, and toy data. Menu paths move between versions. If Help > Example Materials is gone, look in the install directory or the vendor's current training pack. The job does not change.
 
-i2 Analyst's Notebook comes with a variety of example materials that can help you learn the software and
-understand its capabilities. These materials include sample charts, import specifications, and data files
-that demonstrate different analytical techniques and chart types.
+- **Sample charts.** Pre-built networks and timelines that show entity types, link types, and a layout that already "worked" for a fictional problem.
+- **Import specifications.** Maps from columns in a CSV or spreadsheet to entities and links. This is the part that saves you days when it is right and ruins you when it is wrong.
+- **Toy data.** Clean, complete, and unlike your Tuesday file. If your real import looks this tidy, someone already analyzed it.
 
-### Accessing Example Materials
-To access the example materials in Analyst's Notebook:
+> An example chart that looks like a finished case is a brochure. Your case will be uglier. That is not a software problem.
 
-- Launch i2 Analyst's Notebook
-- Select "Help" > "Example Materials" from the menu
-- Browse through the available folders to explore different types of examples
-- Open example charts by double-clicking on .anb files
+## How to Learn From a Sample Chart
 
-### Types of Example Materials
-The example materials typically include:
+Open one. Do not admire it. Interrogate it.
 
-- **Sample Charts**: Pre-built charts demonstrating various analytical techniques and
-visualization approaches
+- **Read the entity and link types as a vocabulary.** What did they decide "Person" versus "Identity" meant? Write your shop's rule before you copy theirs.
+- **Find the date fields.** If the timeline view is empty, the example cheated with labels. Real work needs actual dates.
+- **Find the source fields.** Examples often skip reliability. You will not. Add the attribute you will need in court or in a review.
+- **Break the layout on purpose.** Apply a different layout. If the finding disappears, the finding was the layout. That is a useful scare.
+- **Ask what question the chart answers.** If you cannot name it, the example is a demo, not a method.
 
-- **Import Specifications**: Templates for importing data from external sources like Excel or
-CSV files
+Worked habit: pick one sample, write a three-line assessment as if it were tasked, then list three things the chart cannot support (intent, completeness, currentness). If you cannot list three, you trusted the brochure.
 
-- **Data Files**: Sample data sets that can be used with the import specifications
+## Import Specs Are Where Shops Get Hurt
 
-- **Analytical Templates**: Specialized charts for specific types of analysis, such as
-timeline analysis or social network analysis
+The example import that creates a Person from column A and a Phone from column B is a gift until column A is a nickname and column B is a shared desk phone.
 
-### Learning from Example Charts
-Example charts are valuable learning resources. When exploring them, pay attention to these aspects:
+- **Map fields as judgments.** "Name" to Person is a judgment that this string is an identity. Record the rule.
+- **Watch merge keys.** Examples merge cleanly because the vendor made unique IDs. Your file has three spellings and a blank.
+- **Type the relationship in the spec.** An untyped "associated" import is how you birth a hairball before lunch.
+- **Keep a rejected-row log.** Example specs assume every row is good. Yours will not be. The rejects are often the finding.
 
-- The overall structure and organization of the chart
-- How entities and links are labeled and formatted
-- The use of different entity and link types to represent different objects and relationships
-- How complex information is visualized clearly
-- The use of attributes and properties to store additional information
-- Any analytical techniques demonstrated, such as social network analysis or timeline analysis
+Practice on the toy file first. Then run the spec on a copy of real data. Then look at a sample of created nodes and ask whether you believe each one. If you skip that, you automated a rumor.
 
-### Using Example Import Specifications
+## Selection and Annotation When You Build Your Own "Examples"
 
-Import specifications in the example materials show you how to bring external data into Analyst's
-Notebook:
+Sometimes you put exemplars into a chart for a consumer: a typical call, a contradictory payment, a first-seen date. That is a product choice.
 
-- Open an example import specification to see how it's configured
-- Examine how data fields are mapped to entity and link properties
-- Look at how the specification handles the creation of different entity types based on the data
-- Note how relationships are established between entities during import
-- Use these specifications as templates for your own data imports
+- **Representative plus anomalous.** If every example supports the lead, you are briefing a campaign.
+- **Source on the object.** Identifier, date collected, reliability. A pretty icon is not a citation.
+- **Why this one.** One sentence. If you cannot say why it is on the glass, it is clutter.
+- **Time spread.** Recent-only samples hide the start. Old-only samples hide the now.
 
-## Selecting Examples for Analysis
+Templates (entity, link, chart) are how you stop reinventing "Person" every Monday. They are not how you stop thinking. A fraud template used on a missing-person problem will smuggle the wrong questions.
 
-The examples and materials you include in an Analyst's Notebook chart are not neutral - they shape how others interpret the data. Careful selection and annotation of example materials ensures that the analysis is transparent, reproducible, and defensible.
+## What This Academy Will Not Ship
 
-- **Representative Examples:** Choose examples that fairly represent the broader dataset. Cherry-picking examples that support a preferred conclusion undermines analytical integrity.
-- **Anomalous Examples:** Include examples that contradict the prevailing pattern. These are often where the most valuable intelligence insights emerge - the data point that doesn't fit reveals the limits of your understanding.
-- **Temporal Spread:** Ensure examples span the full timeframe of the investigation. Including only recent examples may miss early indicators; including only old examples may miss current developments.
+We are not bundling vendor files. We do not have a license to redistribute Analyst's Notebook examples. Coming Soon: academy-authored toy CSVs for import practice. Until then, use the vendor pack you already have, or a spreadsheet you invented with fake names.
 
-## Annotating Example Materials
+Do not upload live case data into a training chart you will screenshot for class. That is a dissemination decision, not a learning hack.
 
-Raw data is rarely meaningful without context. Effective annotation of example materials adds analytical value:
+## Practice
 
-- **Source Attribution:** Every example must be traceable to its source. Include the source identifier, collection method, date of collection, and assessed reliability.
-- **Relevance Statement:** Briefly explain why this particular example was included. What analytical question does it illuminate? What hypothesis does it support or challenge?
-- **Confidence Indicators:** Where the example involves interpretation or inference (rather than direct observation), indicate the analyst's confidence level. This allows consumers to weigh the evidence appropriately.
-- **Cross-References:** Link example materials to related entities, events, or reports in the chart. A well-annotated chart allows consumers to follow the analytical trail from raw data to finished assessment.
-
-## Using Templates Effectively
-
-Analyst's Notebook templates standardise the presentation of common entity and link types, saving time and ensuring consistency:
-
-- **Entity Templates:** Pre-configure standard entity types (Person, Organisation, Location, Event) with the attributes most relevant to your investigation. For example, a Person template might include fields for Name, Alias, DOB, Phone, Email, and Status.
-- **Link Templates:** Standardise how different relationship types are displayed. A phone call link might show duration and frequency; a financial link might show amount and currency.
-- **Chart Templates:** For recurring investigation types (fraud networks, terrorist cells, organised crime groups), create chart templates that pre-populate the analytical framework, saving setup time on each new case.`
+Open any sample chart (or sketch one from memory if you do not have the software in front of you). Write: the question it could support, one import rule you would change, and one attribute you would add before a real job. If your answer is "it looks professional," you have not started.
+`
 
 export default function NotebookexamplematerialsPage() {
   return (
     <LessonContainer>
       <MicroLesson
-        title="Example Materials in Analyst&#x27;s Notebook"
-        subtitle="Explore the example charts and import specifications provided with i2 Analyst&amp;apos;s Notebook for practice and learning."
-        humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
-        readTime={15}
-        difficulty="Intermediate"
-        category="Intelligence Analysis"
+        title="Example Materials in Analyst's Notebook"
+        subtitle="Use vendor samples as sandboxes — not as a finished case you can photocopy."
+        humorSubtitle="If the toy data imports cleanly, it is not your data. Enjoy it while it lasts."
+        readTime={20}
+        difficulty="Beginner"
+        category="Analyst Notebook"
         mascot="foundations"
-        mascotMessage="Another day, another intelligence problem to solve. Let's get to work."
+        mascotMessage="Steal the mechanics. Leave the story. The story is fiction with a help menu."
       >
         <EnhancedLessonContentLoader content={topicContent} topic="notebook-example-materials" />
       </MicroLesson>

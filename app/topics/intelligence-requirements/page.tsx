@@ -5,82 +5,64 @@ import EnhancedLessonContentLoader from "@/components/enhanced-lesson-content-lo
 
 export const metadata: Metadata = {
   title: "Intelligence Requirements Development | The Intel Analyst Academy",
-  description: "Learn how to identify and prioritize intelligence needs to guide collection efforts.",
+  description:
+    "Learn to write intelligence requirements that are specific, answerable, and prioritized — and to refuse the ones that are really anxiety in a tasking form.",
 }
 
-const topicContent = `## What Are Intelligence Requirements? (Besides a Way to Make Collectors Roll Their Eyes)
+const topicContent = `A requirement is a question a decision needs answered, written so a collector and an analyst can do something besides guess what you meant. It is not a vibe. It is not "need everything on X." It is not a way to outsource your unread inbox.
 
-Intelligence requirements are the questions that need answering, the gaps that need filling, and the
-uncertainties that keep decision-makers awake at 3 AM wondering if they should have gone into accounting
-instead.
+If the requirement cannot lose — if no conceivable reporting would satisfy it — you did not write a requirement. You wrote a career.
 
-In simpler terms, they&apos;re the &quot;need to know&quot; items that drive intelligence collection, analysis, and
-production. Think of them as the intelligence community&apos;s version of a shopping list - except instead of
-&quot;milk, eggs, and bread,&quot; it&apos;s &quot;who, what, where, when, how, and why is this threat actor planning to ruin
-our day?&quot;
+## What You Are Actually Asking For
 
-> "I need to know everything about everything immediately" is not a requirement. It&apos;s a cry for help.
+Most shops use a hierarchy. The names vary. The jobs do not.
 
-## The Intelligence Requirements Hierarchy (A Pyramid Scheme That Actually Works)
+- **Priority Intelligence Requirements (PIRs).** The few questions that change a major decision. If the boss asks "do we know yet," they mean these. If you have twelve PIRs, you have none.
+- **Essential Elements of Information (EEIs).** The sub-questions that would let you answer a PIR. They are the actual work.
+- **Specific Information Requirements (SIRs).** The collector-facing details: what, where, by when, in what form. If a collector has to call you to interpret the PIR, the SIR was missing.
 
-- **Priority Intelligence Requirements (PIRs)** - The VIPs of the requirements world. These
-  are the critical questions that directly support major decisions. When the boss asks, "Do we have an
-  answer yet?" they're usually referring to these.
-- **Essential Elements of Information (EEIs)** - The building blocks needed to answer PIRs.
-  Think of them as the &quot;sub-questions&quot; that, when answered collectively, help solve the bigger puzzle. Or
-  as analysts call them, &quot;the actual work.&quot;
-- **Specific Information Requirements (SIRs)** - The nitty-gritty details that collectors
-  need to hunt down. These are so specific that they make even the most detail-oriented person say, "Wow,
-  that's specific."
+> "I need to know everything about everything immediately" is not a requirement. It is a status. Requirements are how you stop being a status.
 
-## Characteristics of Good Requirements (Rare as Unicorns, But Possible)
+Worked rewrite. Bad: "Tell me about the threat to the port." Better PIR: "Will a named group attempt to disrupt Berth 12 night operations in the next 14 days?" EEIs: intent indicators, capability (boats, insiders), timing cues, and what would look like a feint. SIRs: which portals, which patrol reports, which public notices, by which daily cut-off.
 
-- **Specific** - &quot;Tell me about the threat&quot; is not specific. &quot;Identify the capabilities and
-  intentions of Group X to conduct cyber operations against Industry Y in the next 90 days&quot; is specific.
-  One will get you useful intelligence; the other will get you a look of despair from your analyst.
-- **Answerable** - If your requirement can only be answered by placing a source inside the
-  mind of a foreign leader, you might want to reconsider. Unless you have Professor X on your team, which
-  most agencies don&apos;t (budget constraints).
-- **Relevant** - If the answer won't affect a decision or action, why are you asking?
-  Intelligence resources are finite, unlike the questions managers can come up with.
-- **Timely** - A perfect answer that arrives after the decision has been made is about as
-  useful as sunscreen during a rainstorm.
-- **Prioritized** - When everything is "URGENT-IMMEDIATE-TOP PRIORITY," nothing is. Choose
-  your battles, or watch your requirements sink to the bottom of everyone's to-do list.
+## Characteristics of a Requirement That Can Be Collected
 
-> The more precise your requirements, the more useful the intelligence you&apos;ll receive. But also, the more
-likely you are to discover that what you&apos;re asking for is impossible to collect. It&apos;s Schrödinger&apos;s
-intelligence requirement.
+- **Specific.** Named actor or hazard, named asset, named window. Adjectives are not specifics.
+- **Answerable.** If the only way to know is a mind-read, you need a different question: indicators of intent, not the intent itself.
+- **Relevant.** If the answer cannot change a decision, it is trivia. Trivia is expensive.
+- **Timed.** "By 1600 Wednesday" is a requirement. "ASAP" is a shrug that will be interpreted as "whenever."
+- **Prioritized.** Rank them. If everything is FLASH, the collectors will rank them for you, badly.
 
-## The Requirements Development Process (Or: How to Turn Vague Concerns into Actionable Questions)
+Write the decision next to the PIR. "This answers whether we keep the extra tug on night shift." If you cannot name the decision, you are collecting for the museum.
 
-- **Identify decisions that need support** - Figure out what keeps decision-makers up at
-  night, besides caffeine and existential dread.
-- **Determine information gaps** - What do we know, what do we think we know (but are
-  probably wrong about), and what do we have no clue about?
-- **Formulate clear questions** - Transform "I'm worried about Country X" into specific,
-  answerable questions that don't make analysts want to change careers.
-- **Prioritize ruthlessly** - Unless you have unlimited resources and immortal analysts, you
-  can't answer everything. Choose wisely.
-- **Validate with stakeholders** - Make sure you're answering the questions they actually
-  need answered, not the ones you think they should care about.
-- **Communicate to collectors** - Translate your requirements into collector-speak, which is
-  a different dialect than decision-maker-speak or analyst-speak.
-- **Review and refine** - As new information comes in or the situation changes, update your
-  requirements. Yesterday's critical question might be today's "who cares?"
+## A Development Process You Can Repeat
 
-## Common Requirements Pitfalls (That You'll Fall Into Anyway)
+- **Start from the decision, not from the topic.** What will someone do differently if they knew?
+- **Inventory what you already know and what you only believe.** The second list is where bad PIRs are born.
+- **Draft the question in one sentence, then add the window and the format.** Format matters: a warning, a count, a yes/no with confidence.
+- **Kill or merge.** Two PIRs that are the same question in different moods should become one.
+- **Validate with the consumer in their nouns.** You are not paid to improve their vocabulary while they wait.
+- **Translate for collectors.** Decision-speak and collector-speak are dialects. Be bilingual.
+- **Review when the world moves.** Yesterday's PIR can become today's "who cares." Retire it in writing so it stops burning hours.
 
-- **The &quot;Boil the Ocean&quot; Requirement** - Asking for so much information that fulfilling it
-  would require more personnel than currently employed in the entire intelligence community
-- **The &quot;Mind Reader&quot; Requirement** - Asking for information that would require telepathic
-  abilities to collect
-- **The &quot;Time Machine&quot; Requirement** - Needing information yesterday about something that
-  happened today
-- **The &quot;Moving Target&quot; Requirement** - Constantly changing what you&apos;re asking for, ensuring
-  that no one can ever actually answer it
-- **The &quot;Jargon Jungle&quot; Requirement** - Using so many acronyms and technical terms that even
-  subject matter experts need a translator
+## Pitfalls You Will Hit Anyway
+
+- **Boil the ocean.** A requirement that implies a census of the planet.
+- **Mind reader.** Asking for inner state with no indicator path.
+- **Time machine.** Needing yesterday's answer about today's event, without saying you want a reconstruction.
+- **Moving target.** Changing the question every stand-up so nothing can ever close.
+- **Jargon jungle.** A PIR that requires a decoder. If the collector is a linguist, they still need to know what "posture" means here.
+- **Hidden collection method.** A requirement that can only be met by unlawful access is not clever. It is a refusal. Rewrite toward lawful indicators.
+
+## Practice
+
+Consumer: "I'm worried about Company X." Decision: whether to brief the board on a possible market entry in 90 days. Write one PIR, three EEIs, and two SIRs. Then write the PIR you refuse (the ocean-boiler) and one sentence on why.
+
+If your PIR contains "any and all information," start over. If your SIRs name a system you are not allowed to use, start over. Collection planning is the next lesson; this one is the questions that plan is allowed to exist for.
+
+## Honest Resource Note
+
+A dedicated "intelligence requirements handbook" PDF is **Coming Soon**. The Downloads page already has a collection-plan template and an intelligence-requirements database sheet. Use those. Do not follow a /resources/ link into a 404 and call it a handbook.
 `
 
 export default function IntelligenceRequirementsPage() {
@@ -88,13 +70,13 @@ export default function IntelligenceRequirementsPage() {
     <LessonContainer>
       <MicroLesson
         title="Intelligence Requirements Development"
-        subtitle="Learn how to identify and prioritize intelligence needs to guide collection efforts."
-        humorSubtitle="The art of asking the right questions before collectors ask why you're impossible to please"
-        readTime={30}
+        subtitle="Turn anxiety into a question a collector can close — or refuse."
+        humorSubtitle="If everything is a PIR, nothing is. That is not a metaphor. It is your queue."
+        readTime={25}
         difficulty="Beginner"
         category="Collection Management"
         mascot="foundations"
-        mascotMessage="Welcome, recruit. Let's learn how to ask for what we actually need - and convince collectors it's not impossible."
+        mascotMessage="Write the decision next to the question. If you cannot, you are collecting for sport."
       >
         <EnhancedLessonContentLoader content={topicContent} topic="intelligence-requirements" />
       </MicroLesson>

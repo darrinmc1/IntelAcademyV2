@@ -130,21 +130,21 @@ export default function AnalyticTechniquesPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <FeaturedResource
             title="Structured Analytic Techniques Handbook"
-            description="Guide to applying structured techniques in intelligence analysis."
+            description="Guide to applying structured techniques in intelligence analysis. Not a live file yet."
             type="Guide"
-            href="/resources/sat-handbook"
+            href="/downloads/coming-soon?resource=Structured%20Analytic%20Techniques%20Handbook"
           />
           <FeaturedResource
             title="ACH Worksheet Templates"
             description="Ready-to-use templates for conducting Analysis of Competing Hypotheses."
             type="Template"
-            href="/resources/ach-templates"
+            href="/downloads/ach-matrix-templates.pdf"
           />
           <FeaturedResource
             title="Case Study: Intelligence Failure Analysis"
-            description="Examination of how structured techniques could have prevented historical intelligence failures."
+            description="Examination of how structured techniques could have prevented historical intelligence failures. Not a live file yet."
             type="Case Study"
-            href="/resources/intelligence-failure-case-study"
+            href="/downloads/coming-soon?resource=Intelligence%20Failure%20Analysis%20Case%20Study"
           />
         </div>
       </div>

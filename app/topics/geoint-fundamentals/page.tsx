@@ -5,211 +5,79 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "GEOINT Fundamentals - The Intel Analyst Academy",
-  description: "Learn the basics of Geospatial Intelligence and satellite imagery analysis",
+  description:
+    "Learn what geospatial intelligence actually is: imagery plus place plus judgment — and the limits physics, weather, and bad legends will not negotiate.",
 }
 
-const topicContent = `Master the art of seeing the world from above and understanding what it all means.
+const topicContent = `Geospatial intelligence is the analysis of what is happening where, using imagery, maps, and spatially referenced data to support a decision. It is not "we have a satellite." It is not Google Earth with a dramatic pause. It is a claim about activity, change, or terrain that a consumer can plot.
 
-18 min total
-Beginner level
+If the finding still works after you delete the coordinates, it was not GEOINT. It was a paragraph that wanted a picture.
 
+## What GEOINT Is Made Of
 
-## What is Geospatial Intelligence (GEOINT)?
+The discipline is a stack. People name the layers differently. The jobs stay.
 
-"It's like being a detective, but your crime scene is the entire planet and your magnifying glass is a
-satellite."
+- **Imagery.** Still or motion pictures from space, air, or ground. The picture is evidence of a time and a geometry, not a narrator.
+- **Geospatial data.** Elevation, features, addresses, boundaries, networks. A pin without a coordinate system is a mood.
+- **Analysis.** Comparison to a baseline, measurement, change detection, and a judgment. "I see trucks" is observation. "Truck count exceeds the 90-day night baseline; consistent with load-out" is GEOINT.
+- **Product.** A map, a graphic, an annotated still, or a sentence that can be plotted. The product has a time of image, a source, a classification, and a so-what.
 
+IMINT (imagery intelligence) is the picture-heavy cousin. GIS is the workshop. GEOINT is what leaves the workshop with a point.
 
-###
+> Clouds are not a plot against you. They are weather. Physics does not care about your deadline. Neither does a 30-degree look angle.
 
-GEOINT Data Sources
+## What It Is For
 
-#### Satellite Imagery
-High-resolution photos from space
+Use GEOINT when place is doing work.
 
-#### Aerial Photography
-Aircraft-based imaging
+- **Activity at a site.** Night lighting, vehicle counts, earthworks, ship drafts at a berth. The question is change against a baseline you bothered to build.
+- **Movement and routes.** What can move where, what is blocked, what is the cover. A pretty hillshade that does not change a route is art.
+- **Pattern in space.** Thefts, protests, launches, construction — plotted, not listed. Watch the denominator: reporting density is not the same as event density.
+- **Context for other INTs.** A SIGINT hit without a place is a rumor with a frequency. A place without a time is a postcard.
 
-#### Geographic Data
-Maps, terrain, coordinates
+Worked judgment: "Between Monday and Thursday, spoil piles grew on the north pad and two heavy haulers appeared after 1800; I assess site preparation, not abandonment; moderate confidence; optical only, two looks, both afternoon." That sentence is why you tasked the imagery. A montage of four pretty frames is not.
 
-Geospatial Intelligence (GEOINT) is the analysis and visual representation of security issues through
-imagery and mapping technologies. It's essentially the intelligence discipline that answers the question
-"What's happening where?"
+## Limits You Will Brief Out Loud
 
-### Core Components of GEOINT
+- **Weather and light.** Optical fails through cloud and often at night. Radar and infrared exist because of that sentence. They have their own lies.
+- **Resolution and angle.** You can often count vehicles. You cannot read a bumper sticker, whatever the film suggested. Off-nadir makes objects lean and hide.
+- **Revisit.** The sensor is not hovering for you unless someone paid for that. A gap in looks is a gap in knowledge. Draw it.
+- **Deception and normal life.** Camouflage, decoys, and the eternal playground-that-looks-like-equipment problem. Context and multi-INT save you. "Enhance" does not.
+- **Volume.** You will not look at everything. Task against the requirement or drown with dignity.
 
-"Think of it as Google Earth, but with superpowers and a security clearance."
+Civilian uses — disaster, planning, agriculture — follow the same honesty rules. Commercial imagery is still a source. It is not automatically unclassified in your product if your annotation gives away a method you do not own.
 
-- **Imagery Intelligence (IMINT):** Analysis of visual imagery from satellites and aircraft
+## How to Work a Problem
 
-- **Geographic Information Systems (GIS):** Digital mapping and spatial analysis tools
+- **Start with the question and the decision.** "Is the yard loading at night?" is taskable. "See what's going on" is a budget burn.
+- **Establish a baseline.** One image is an anecdote. A week of looks is a start. Seasonal normals matter more than your memory of last Tuesday.
+- **Measure, then judge.** Counts, lengths, shadows, and timestamps. If you cannot say what you measured, you are interpreting a vibe.
+- **Annotate for a hostile reader.** North arrow, scale, image time, source, and the claim in a caption. A graphic that requires you to hover is unfinished.
+- **Say what would change the call.** Another look after 0200. A second phenomenology. A ground report.
 
-- **Geospatial Analysis:** Understanding relationships between locations and events
+## Practice
 
-- **Cartographic Products:** Maps, charts, and visual representations
+You get two optical frames of a coastal lot, 10 days apart: empty, then stacked containers and a crane. Write a four-line GEOINT call: what changed, what you assess, confidence, and the next collection that would help. Then write the sentence you will not write ("they are definitely smuggling").
 
-Fun Fact:
+If your call has no time of image, start over. If it has no alternative (legitimate cargo surge), start over.
 
-Modern satellite imagery can be so detailed that analysts can identify individual vehicles, but contrary
-to what movies show, you still can't read license plates from space. Yet.
+## Honest Tooling Note
 
-
-## GEOINT Applications
-
-"From tracking bad guys to predicting natural disasters - if it happens on Earth, we're probably watching
-it from space."
-
-
-###
-
-National Security
-
-- • Military facility monitoring
-- • Border security surveillance
-- • Weapons proliferation tracking
-- • Terrorist activity detection
-
-###
-
-Environmental Monitoring
-
-- • Climate change tracking
-- • Deforestation monitoring
-- • Natural disaster assessment
-- • Agricultural analysis
-
-###
-
-Law Enforcement
-
-- • Crime scene analysis
-- • Drug cultivation detection
-- • Human trafficking routes
-- • Evidence correlation
-
-###
-
-Commercial Applications
-
-- • Urban planning
-- • Infrastructure monitoring
-- • Market analysis
-- • Risk assessment
-
-### Military and Defense Applications
-
-"When you absolutely, positively need to know what's in that building overnight - satellite imagery is
-there for you."
-
-GEOINT plays a important role in military operations by providing situational awareness, target
-identification, and battle damage assessment. It helps commanders understand the terrain, enemy positions,
-and potential threats.
-
-### Civilian and Commercial Uses
-
-"Not just for spies anymore - now your pizza delivery app uses the same technology that tracks missile
-sites."
-
-Beyond military applications, GEOINT supports disaster response, urban planning, environmental monitoring,
-and commercial intelligence. Companies use geospatial analysis for market research, site selection, and
-supply chain optimization.
-
-
-## GEOINT Challenges and Limitations
-
-"Cloud cover is the natural enemy of satellite analysts everywhere. Mother Nature: 1, Intelligence
-Community: 0."
-
-
-### Technical Challenges
-
-"Sometimes the most sophisticated satellite in the world is defeated by a simple cloud. It's humbling,
-really."
-
-- **Weather Dependencies:** Clouds, storms, and atmospheric conditions can obscure imagery
-
-- **Resolution Limitations:** Even the best satellites have physical limits on detail
-
-- **Temporal Constraints:** Satellites can't be everywhere at once
-
-- **Data Volume:** Managing and analyzing massive amounts of imagery data
-
-### Analytical Challenges
-
-"Is that a missile launcher or a really unfortunate-looking playground equipment? Context is everything."
-
-- **Image Interpretation:** Distinguishing between similar-looking objects
-
-- **Change Detection:** Identifying what's different between images taken at different times
-
-- **Cultural Context:** Understanding local customs and normal activities
-
-- **Deception and Camouflage:** Adversaries actively try to hide or mislead
-
-Reality Check:
-
-Despite what you see in movies, you can't just "enhance" a blurry satellite image to read someone's text
-messages. Physics still applies, even in intelligence work.
-
-### The Future of GEOINT
-
-"AI is getting really good at spotting things in satellite imagery. Soon, the computers might be better
-analysts than we are. Job security? What's that?"
-
-Emerging technologies like artificial intelligence, machine learning, and hyperspectral imaging are
-revolutionizing GEOINT capabilities. Automated change detection, pattern recognition, and real-time
-analysis are becoming standard tools.
-
-
-## Knowledge Check
-
-"Time to see if you can tell a missile site from a water park. Hint: one has more slides."
-
-Test your understanding of GEOINT fundamentals:
-
-1. What is the primary purpose of GEOINT?
-
-To take pretty pictures of Earth from space
-
-To analyze and understand security issues through imagery and mapping
-
-To replace Google Maps with classified versions
-
-2. What is the biggest natural enemy of satellite imagery analysts?
-
-Cloud cover
-
-Satellite malfunctions
-
-Budget cuts
-
-
-## Next Steps
-
-"Ready to explore more intelligence disciplines? The world of intelligence is vast, and we've got satellites
-watching all of it."
-
-Continue your intelligence education with related topics:
-
-Imagery Analysis Techniques
-
-GIS for Intelligence Analysis
-
-Return to Learning Paths`
+You do not need a secret globe to learn this. Public imagery and a notebook will teach baseline and change. Shop tools vary. Coming Soon: any academy-hosted imagery workbench. Until then, practice the sentences. The sentences are the discipline.
+`
 
 export default function GeointfundamentalsPage() {
   return (
     <LessonContainer>
       <MicroLesson
         title="GEOINT Fundamentals"
-        subtitle="Learn the basics of Geospatial Intelligence and satellite imagery analysis"
-        humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
-        readTime={15}
+        subtitle="Place, time, and a measured change — not a prettier map of the same uncertainty."
+        humorSubtitle="Cloud cover has ended more briefings than any adversary. Brief the gap."
+        readTime={22}
         difficulty="Beginner"
-        category="Intelligence Analysis"
+        category="Collection"
         mascot="foundations"
-        mascotMessage="Another day, another intelligence problem to solve. Let's get to work."
+        mascotMessage="If you cannot plot the finding, it is not geospatial. It is a caption looking for a photo."
       >
         <EnhancedLessonContentLoader content={topicContent} topic="geoint-fundamentals" />
       </MicroLesson>

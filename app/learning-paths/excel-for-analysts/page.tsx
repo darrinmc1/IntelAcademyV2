@@ -88,21 +88,21 @@ export default function ExcelForAnalystsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <FeaturedResource
             title="Excel Templates for Intelligence Analysis"
-            description="Download ready-to-use Excel templates designed specifically for intelligence workflows."
+            description="Ready-to-use Excel templates for intelligence workflows. Not a live file yet."
             type="Template"
-            href="/resources/excel-templates-for-intelligence"
+            href="/downloads/coming-soon?resource=Excel%20Templates%20for%20Intelligence%20Analysis"
           />
           <FeaturedResource
             title="Advanced Excel Functions for Analysts"
-            description="Guide to Excel functions most valuable for intelligence analysis."
+            description="Guide to Excel functions most valuable for intelligence analysis. Not a live file yet."
             type="Guide"
-            href="/resources/advanced-excel-functions"
+            href="/downloads/coming-soon?resource=Advanced%20Excel%20Functions%20for%20Analysts"
           />
           <FeaturedResource
             title="Case Study: Excel in Major Investigations"
-            description="Real-world examples of how Excel has been used in complex intelligence cases."
+            description="Real-world examples of how Excel has been used in complex intelligence cases. Not a live file yet."
             type="Case Study"
-            href="/resources/excel-investigation-case-study"
+            href="/downloads/coming-soon?resource=Excel%20Investigation%20Case%20Study"
           />
         </div>
       </div>
