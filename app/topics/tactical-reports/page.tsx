@@ -5,94 +5,78 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Tactical Reports - The Intel Analyst Academy",
-  description: "Learn how to write tactical intelligence reports to support immediate operations.",
+  description:
+    "Learn to write tactical intelligence reports that arrive in time, name the action they support, and tell the truth about sources and confidence.",
 }
 
-const topicContent = `Learn how to write tactical intelligence reports to support immediate operations and decision-making.
+const topicContent = `A tactical report is a written product for a decision that will not wait for your second coffee. It is not a short strategic estimate. It is not a diary of everything the watch heard. It is the minimum text that lets an operator change a plan without calling you to translate.
 
+If the reader needs you in the room for the report to work, you wrote a script. Write a product.
 
-## What You'll Learn
+## Purpose Before Template
 
-Structure and format of tactical reports
+Tactical reporting exists to move a specific next action: a route, a shift, a raid timing, a protective posture, a go/no-go. Everything in the page either serves that action or it is cut.
 
-Time-sensitive reporting techniques
+- **Timeliness is a requirement, not a vibe.** A precise report after the convoy moved is an after-action note. Label it that way if you must file it.
+- **Specificity is the virtue.** Names, grids or addresses you are allowed to print, clocks, counts. "Activity in the area" is how people drive into the wrong area.
+- **The consumer is the operator.** Write their nouns. If they say "south fence," do not rename it "southern perimeter in the industrial sector" to sound like a college.
 
-Operational intelligence requirements
+> An 80 percent report on time, with the missing 20 percent named, is professional. A 100 percent report that arrives as history is a different genre.
 
-Clear and actionable language
+## A Structure That Fits on One Screen
 
-## Overview
+Shops rename the blocks. Keep these jobs in this order.
 
-Tactical reports are time-sensitive intelligence products designed to support immediate
-operational decisions. Unlike strategic reports, tactical reports focus on near-term
-threats, opportunities, and operational requirements.
+- **Header.** Classification, title, date-time group, and a warn line that is the judgment in one sentence. If they only read this, they should still know the so-what.
+- **Source and reliability.** Who or what told you, and how much that is worth. A-F / 1-6 or your shop's words. Single-source must be said as single-source, not implied as weather.
+- **Situation in four lines.** Only the context that changes the action. History goes in a later product.
+- **The picture.** Location, activity, numbers, equipment, direction of movement, time. Separate observation from inference with words, not with formatting tricks.
+- **Assessment.** What you think it means, the window, the confidence, and the one indicator that would flip you.
+- **Implication or recommendation** if your role allows it. "Keep the extra patrol through 0400" is a recommendation. "Consider all options" is a shrug.
+- **Admin.** Handling, next update time, who to call. People forget this and then wonder why nobody called.
 
-## Key Components
-### 1. Executive Summary
+Worked product (unclassified training voice): "As of 0110, cutting marks on the south fence plus a circling van; I assess a probe of the yard, not casual trespass; moderate confidence, two observations, no identified actor; recommend the extra patrol through 0400; update at 0515 or on any new cut." That is a tactical report. A three-page recap of county theft is not.
 
-Begin with a concise summary of the most critical information that decision-makers
-need to know immediately.
+## Speed Versus Accuracy, Without the Myth
 
-### 2. Situation Assessment
+The 80 percent rule is not permission to invent.
 
-Provide context about the current operational environment and relevant background
-information.
+- **Say the confidence in the warn line.** Do not hide it under a map.
+- **Prefer an update to a masterpiece.** Fragmentary first, refinement second. Your reputation is the correction speed, not the first adjective.
+- **Do not launder one source into "reporting indicates."** That phrase is how single-source becomes folklore.
+- **Corrections are products.** "Update: the van was a contractor, badge logged at 0048" is how adults work. Silence is how the next shift inherits your error.
 
-### 3. Threat Analysis
+If you cannot get to 80 percent, send a status: what you know, what you do not, when the next look happens. A vacuum will fill with someone else's guess.
 
-Identify and assess immediate threats, including capability, intent, and timeline.
+## Dissemination Is Part of the Writing
 
-### 4. Recommendations
+- **Use the channel they already watch.** A perfect paragraph in a folder they open on Mondays is a missed warning.
+- **Verbal first is allowed.** Then file the written line so the night is not a rumor.
+- **Classification is not decoration.** Overclassifying to look serious hides the warning. Underclassifying to be fast burns a source. Both are report-writing failures.
 
-Offer specific, actionable recommendations based on the intelligence findings.
+## Practice
 
-## The Purpose of Tactical Reports
+Rewrite this sludge into a tactical report of eight lines or fewer: "There have been some issues at the yard lately and folks are worried and we should maybe keep an eye on things because last month there were thefts and also a van might have been there but we are not sure and leadership wants awareness."
 
-Tactical intelligence reports serve a fundamentally different purpose from strategic assessments. While strategic intelligence informs long-term policy and planning, tactical reports support immediate operational decisions - often at the unit level, with timelines measured in hours or days rather than months or years.
+Your rewrite must include a time, a place, a judgment, a confidence, and a next look. If it still contains "awareness," you have not finished.
 
-- **Actionable Timeliness:** A tactical report that arrives after the operation has commenced has lost most of its value. Speed of production is the defining characteristic of effective tactical reporting.
-- **Specificity:** Tactical reports focus on specific targets, locations, and timeframes. Where a strategic assessment might analyse "trends in terrorist financing," a tactical report identifies "the location of a known financier's safe house as of 0600 hours."
-- **Direct Consumer:** The primary audience is the operator or tactical commander who will act on the intelligence. This shapes the format, language, and level of detail.
+## Neighboring Lessons
 
-## Structure of a Tactical Report
-
-While formats vary between agencies and mission types, effective tactical reports share common structural elements:
-
-1. **Heading:** Classification level, report series identifier, date-time group, and warn order (a summary of the most critical information).
-2. **Source Reliability:** A clear statement of the source and its assessed reliability, using standard evaluation scales (e.g., A-F for source reliability, 1-6 for information credibility).
-3. **Situation Overview:** A concise description of the current situation relevant to the operational question. This section should be no more than a few sentences.
-4. **Target Information:** Specific details about the target - location (with grid coordinates if applicable), activity, numbers, equipment, movements, and predicted intent.
-5. **Assessment:** The analyst's judgement about likely developments, recommended courses of action, and confidence level in the assessment.
-6. **Administrative Details:** Dissemination restrictions, handling instructions, and point of contact for follow-up questions.
-
-## Speed vs. Accuracy
-
-Tactical intelligence exists in permanent tension between speed and accuracy:
-
-- **The 80% Rule:** Many tactical intelligence units operate on the principle that an 80% accurate report delivered in time to act is more valuable than a 100% accurate report delivered after the operation. This is a calculated risk - the analyst must clearly communicate their confidence level so the operator can factor it into their risk assessment.
-- **Source Limitations:** Tactical reports often rely on a single source or a limited number of sources. Analysts must resist the temptation to present single-source reporting as confirmed fact.
-- **Update Culture:** Tactical reporting should be dynamic. The first report may be fragmentary; subsequent reports should refine, correct, and expand the initial picture. Analysts must be comfortable issuing corrections and updates without ego.
-
-## Dissemination and Handling
-
-Tactical intelligence is only useful if it reaches the right consumer at the right time through the right channel:
-
-- **Digital Dissemination:** Modern tactical reporting systems deliver intelligence directly to handheld devices and vehicle-mounted terminals in near real-time.
-- **Verbal Briefings:** For time-critical tactical intelligence, a verbal briefing delivered face-to-face or over encrypted voice channels may precede the written report.
-- **Classification and Caveats:** Tactical reports often contain sensitive sources or methods. Proper classification, handling instructions, and dissemination restrictions protect both the intelligence and the sources who provided it.`
+What is tactical intelligence is the clock. Verbal briefing techniques is the spoken form. Intelligence report fundamentals is the larger anatomy. This page is the written form when the clock is the enemy and still not an excuse.
+`
 
 export default function TacticalreportsPage() {
   return (
     <LessonContainer>
       <MicroLesson
         title="Tactical Reports"
-        subtitle="Learn how to write tactical intelligence reports to support immediate operations."
-        humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
-        readTime={15}
-        difficulty="Intermediate"
-        category="Intelligence Analysis"
+        subtitle="Write the minimum that changes the next action — on time, sourced, and updateable."
+        humorSubtitle="If it needs a table of contents, it is not tactical. It is homesick for a binder."
+        readTime={20}
+        difficulty="Beginner"
+        category="Reporting"
         mascot="foundations"
-        mascotMessage="Another day, another intelligence problem to solve. Let's get to work."
+        mascotMessage="Lead with the warn line. Everything else is how you defend it."
       >
         <EnhancedLessonContentLoader content={topicContent} topic="tactical-reports" />
       </MicroLesson>

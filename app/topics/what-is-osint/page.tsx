@@ -5,115 +5,82 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "What Is OSINT - The Intel Analyst Academy",
-  description: "Learn about what is osint in intelligence analysis.",
+  description:
+    "Define open-source intelligence as public information collected, evaluated, and turned into a judgment — not a pile of tabs or a personality.",
 }
 
-const topicContent = `_"Professional internet stalking with a badge and a really good understanding of privacy settings."_
+const topicContent = `OSINT is intelligence from information that is lawfully and publicly available: news, official publications, academic work, commercial data you may buy, and the parts of the social web that do not require breaking a door. The "open" refers to the source's accessibility, not to your standards. A tweet can be a source. It cannot be a finished product.
 
-OSINT, or Open Source Intelligence, is the practice of collecting and analyzing information that is publicly
-available. This information can come from a variety of sources, including:
+This lesson is the definition and the evaluation habit. Techniques and workflows live in other pages. If you came here for a list of "tools that find anyone," you came to the wrong academy.
 
-- Websites
-- Social media
-- News articles
-- Government reports
-- Academic publications
+## A Definition That Survives a Review
 
-OSINT is used by a wide range of organizations, including law enforcement, intelligence agencies, and
-businesses. It can be used for a variety of purposes, such as:
+Open-source intelligence is publicly available information collected against a requirement, evaluated, and disseminated as intelligence. Three words do the work: publicly, requirement, evaluated.
 
-- Investigating crimes
-- Gathering intelligence
-- Conducting market research
-- Assessing risks
+- **Publicly available** means you did not need unauthorized access, impersonation, or a bypass. Paid databases can still be OSINT if the vendor sells them in the open market and you are licensed to use them.
+- **Against a requirement** means you are not browsing. A bookmark folder is a hobby. A tasked question is a job.
+- **Evaluated** means you graded the source and the claim. "I found it" is a method note, not a judgment.
 
-## Key Components of OSINT
+> Open source is not the same as reliable. It is the same as obtainable without a warrant. Those are different compliments.
 
-_"Google-fu, social media archaeology, and the ability to find anyone's high school yearbook photo."_
+OSINT is used by governments, journalists, companies, and police because the world publishes more than any classified collector can vacuum. It fails when people treat volume as corroboration.
 
-- **Identification of Sources:** Knowing where to look for information.
+## What Counts as a Source Family
 
-- **Data Collection:** Gathering the information from identified sources.
+You do not need to memorize vendor logos. You need categories, because each one lies in a different dialect.
 
-- **Data Analysis:** Processing and understanding the collected information.
+- **Published and official.** Gazettes, court dockets, company filings, parliamentary records, statistical offices. Slow, citeable, often late.
+- **News and broadcast.** Useful for first notice and for what a society is being told. Editorial incentives are not a footnote. They are the source.
+- **Academic and grey literature.** Methods sections are a gift. Preprints are a draft. Conference slides are a rumor with a university logo.
+- **Commercial data.** Imagery, AIS, flight, trade, and registry products. You are buying a model of the world, not the world. Read the coverage notes.
+- **Social and user media.** Fast, biased, geolocatable only when you do the work, and full of people performing. Treat as leads until a second family agrees.
 
-- **Dissemination:** Sharing the analyzed intelligence with stakeholders.
+Do not call a private group chat "OSINT" because someone forwarded a screenshot. If access depended on a lie, you left open source.
 
-## OSINT in Practice
+## Evaluation Does Not Relax Because It Was Free
 
-_"Where 'I found it on the internet' becomes a legitimate intelligence source citation."_
+Use the same questions you would use on a human source.
 
-OSINT techniques are applied in various real-world scenarios. Examples include:
+- **Proximity.** Were they there, or are they quoting someone who wants to be there in the replies?
+- **Motivation.** Traffic, politics, stock price, ideology, boredom. "No motive" is not a finding. It is a failure to look.
+- **Corroboration.** Independent is the word. Three blogs quoting the same telegram channel are one source in a trench coat.
+- **Timeliness.** Social posts age like milk. Official PDFs age like wine or like lies, depending on the ministry.
+- **Integrity of the object.** Reverse-image the photo. Check whether the video is last year's. Read the URL as if it were trying to fool you, because someone is.
 
-- **Cybersecurity:** Identifying potential threats and vulnerabilities.
+Worked example. A video claims to show a blast at a depot today. OSINT work: find the original upload, test landmarks against known imagery you are allowed to use, compare the blast signature to weather and traffic cams if public, and say what remains unproven (yield, actor, intent). OSINT malpractice: embed the first clip and write "confirmed."
 
-- **Journalism:** Investigating stories and verifying facts.
+## Collection Hygiene
 
-- **Business Intelligence:** Understanding competitors and market trends.
+- **Stay inside the law and the charter.** Public does not mean "collect everything about a private person because you can." Need-to-know applies to open sources.
+- **Do not confuse search grammar with access.** Operators help you find published pages. They do not authorize you to enter a system.
+- **Preserve what you cite.** Pages move. Your source note needs a date and a copy your shop accepts.
+- **Watch your own signature.** How you search can become a story. Use approved accounts and networks for official work.
 
-## Career in OSINT
+We will not teach you to harvest hidden services, to impersonate, or to bypass access controls. Those are not OSINT. They are a different, usually illegal, activity.
 
-_"Professional digital detective with 47 browser tabs open and somehow knowing what each one is for."_
+## Practice
 
-A career in OSINT can be rewarding for those who enjoy research and analysis. Potential roles include:
+Requirement: "What has the port authority officially said about night-work at Berth 12 this quarter?" List three source families you would check, one query or portal action for each, and the sentence you will not write until two families agree.
 
-- Intelligence Analyst
-- Security Analyst
-- Investigative Journalist
+If your first instinct is a social rumor mill, keep it as a lead queue, not as the product. Official plus commercial plus local news is a triangulation. Three rumor mills is a chorus.
 
-## Advanced OSINT Concepts
+## Where This Sits
 
-_
-"When basic Google searches aren't enough, and you need to dive into the digital rabbit hole with specialized
-tools."
-_
-
-Beyond basic search techniques, advanced OSINT involves:
-
-- Using specialized search engines and databases.
-- Analyzing metadata and network traffic.
-- Employing scripting and automation for data collection.
-
-## OSINT Collection Methods
-
-Open source intelligence draws from an enormous range of publicly available information. Understanding the categories of OSINT sources helps analysts know where to look and how to evaluate what they find.
-
-- **Published Media:** Newspapers, journals, magazines, books, and government reports. These often provide verified, authoritative information but may lag behind current events.
-- **Broadcast Media:** Television, radio, and podcasts. News broadcasts can provide real-time information from conflict zones or disaster areas, though the analyst must account for editorial bias.
-- **Online Sources:** Websites, forums, blogs, social media platforms, and video-sharing sites. The internet has democratised access to information but also introduced unprecedented volumes of noise and disinformation.
-- **Commercial Data:** Satellite imagery, financial data, shipping records, and business registries. Commercial providers now offer capabilities once reserved for national intelligence agencies.
-- **Grey Literature:** Conference proceedings, academic preprints, technical reports, and working papers. These sit between published and unpublished - often rich in detail but inconsistent in quality control.
-
-## Evaluating OSINT Sources
-
-Not all open sources are equally reliable. Analysts must apply the same source evaluation criteria used in classified intelligence collection:
-
-- **Proximity:** How close is the source to the event or information? A first-hand account carries more weight than a third-hand retelling.
-- **Motivation:** Why is the source sharing this information? Propaganda, disinformation, and commercial interests can all colour what appears to be objective reporting.
-- **Corroboration:** Can the information be confirmed through independent sources? Single-source OSINT should always be treated as provisional.
-- **Timeliness:** When was the information collected or published? OSINT decays rapidly - a social media post from six months ago may no longer reflect the current situation.
-
-## OSINT Tools and Techniques
-
-Professional OSINT practitioners use a range of specialised tools to collect, filter, and analyse open source data efficiently:
-
-- **Search Operators:** Advanced Google operators (site:, filetype:, intitle:, inurl:) allow precise targeting of information within specific domains or file formats.
-- **Social Media Analysis Tools:** Tools like Maltego, SpiderFoot, and theHarvester automate the collection of publicly available information about individuals, domains, and organisations.
-- **Image Analysis:** Reverse image search (Google Images, TinEye) and metadata extraction (EXIF data) can reveal the origin, location, and history of photographs.
-- **Archived Content:** Services like the Wayback Machine allow analysts to view historical versions of websites, uncovering content that has since been removed or altered.`
+OSINT techniques and OSINT workflow are the how. This page is the what and the why. Google dorking is search literacy for authorized collection. Deep-web research is the unindexed-but-ordinary part of the same job. None of them replace analysis. They only change where the first sentence comes from.
+`
 
 export default function WhatisosintPage() {
   return (
     <LessonContainer>
       <MicroLesson
         title="What is OSINT?"
-        subtitle="Learn about what is osint in intelligence analysis."
-        humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
-        readTime={15}
+        subtitle="Public sources, professional standards — accessibility is not a substitute for evaluation."
+        humorSubtitle="If your citation is 'I found it on the internet,' you found a hobby, not a product."
+        readTime={22}
         difficulty="Beginner"
-        category="Intelligence Analysis"
+        category="OSINT"
         mascot="foundations"
-        mascotMessage="Another day, another intelligence problem to solve. Let's get to work."
+        mascotMessage="Open means obtainable. It does not mean done."
       >
         <EnhancedLessonContentLoader content={topicContent} topic="what-is-osint" />
       </MicroLesson>

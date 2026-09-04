@@ -11,9 +11,11 @@ interface FeaturedResourceProps {
   imagePath?: string
 }
 
-export function FeaturedResource({ title, description, path, imagePath }: FeaturedResourceProps) {
+export function FeaturedResource({ title, description, path, href, imagePath }: FeaturedResourceProps) {
   // Use the provided image path or generate a placeholder
   const imageUrl = imagePath || `/placeholder.svg)}`
+  const dest = path || href
+  const isComingSoon = !dest || dest.includes("coming-soon") || dest.startsWith("/resources/")
 
   return (
     <Card className="overflow-hidden group hover:shadow-md transition-all duration-300">
@@ -28,8 +30,18 @@ export function FeaturedResource({ title, description, path, imagePath }: Featur
         <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors duration-300">{title}</h3>
         <p className="text-muted-foreground mb-4">{description}</p>
         
-        {path ? (
-          <Link href={path} className="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+        {isComingSoon ? (
+          dest && dest.includes("coming-soon") ? (
+            <Link href={dest} className="inline-flex items-center text-amber-600 hover:text-amber-500 font-medium">
+              Coming Soon <ArrowRight className="ml-1 h-4 w-4" />
+            </Link>
+          ) : (
+            <span className="inline-flex items-center text-gray-400 font-medium">
+              Coming Soon <ArrowRight className="ml-1 h-4 w-4" />
+            </span>
+          )
+        ) : dest ? (
+          <Link href={dest} className="inline-flex items-center text-primary hover:text-primary/80 font-medium">
             Learn More <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         ) : (

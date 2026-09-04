@@ -5,165 +5,94 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Google Dorking - The Intel Analyst Academy",
-  description: "Master advanced Google search operators for effective OSINT investigations.",
+  description:
+    "Use advanced search operators as authorized OSINT syntax — to find published material faster, document what you did, and stay inside the law.",
 }
 
-const topicContent = `By the end of this lesson, you'll be able to:
+const topicContent = `Google already indexed the public web. "Dorking" is just using that index with a grammar instead of a shrug. It is search literacy, not a break-in. If your query only works by probing a system you are not allowed to use, you have left this lesson and entered a career conversation with counsel.
 
-- Understand the fundamentals of Google dorking and its intelligence applications
-- Master essential and advanced Google search operators
-- Apply dorking techniques to real-world OSINT investigations
-- Develop a personal library of effective dork queries
-- Maintain ethical standards in your search activities
+This academy teaches operators for finding published documents, official pages, news, and academic material you are authorized to collect. It does not teach hunting login panels, password files, backups, or "vulnerable systems." Those examples show up in too many internet cheat sheets. They are not tradecraft here.
 
-"Making Google do things it didn't know it could do, legally and ethically"
+## What the Technique Actually Is
 
-Google Dorking, also known as Google Hacking, involves using advanced search operators to find specific
-information that might not be easily discoverable through normal search queries. These techniques are
-essential for OSINT practitioners who need to efficiently locate relevant information from the vast amount of
-data available on the internet.
+Google Dorking (also called Google hacking in older literature) means combining search operators so the engine returns a narrower slice of what it has already crawled. You are querying an index of pages that were reachable without authentication when the crawler saw them.
 
-"Your new superpowers for finding needles in the internet haystack"
+- **It is not exploitation.** You are not bypassing a login, sending crafted packets, or testing credentials. If a page required a password, it should not be in the results. If it is, treat that as a handling problem, not a trophy.
+- **It is not completeness.** The index is late, incomplete, and biased toward what webmasters allowed robots to see. A negative result is not proof of absence.
+- **It is perishable.** Pages vanish. Caches update. Your notes need the query, the date, and a preservation step if the finding matters.
 
-Basic Operators
+> Public is a legal status, not a quality rating. The first result is a lead. It is not a source until you evaluate it.
 
-site:
-Search within a specific website
-Example: site:linkedin.com "John Smith"
+## Operators Worth Learning
 
-filetype:
-Find specific file types
-Example: filetype:pdf "annual report"
+Memorize a short set. Most "advanced" strings are just these, stacked.
 
-intitle:
-Search in page titles
-Example: intitle:"employee directory"
+- **Quotation marks.** \`"intelligence cycle"\` finds the phrase, not the words in any order. Use this before you add cleverness.
+- **OR and minus.** \`briefing OR estimate -job -salary\` keeps the language of the discipline and drops the recruiting noise.
+- **site:** Limits results to a domain or public suffix. \`site:state.gov "situation report"\` is how you stop drowning in blogs that quote the report.
+- **filetype:** Restricts to a published format. \`filetype:pdf "annual threat assessment"\` is a document hunt, not a vault crack.
+- **intitle: and inurl:** Words in the title or URL. Use them to find catalogs, reading rooms, and named publications — not "admin" pages.
+- **before: / after:** Date bounds when the engine supports them. Time is a collection requirement. A 2014 PDF is not "current" because it ranked well.
 
-Advanced Operators
+Combining operators is the whole trick. \`site:europa.eu filetype:pdf "sanctions" after:2024-01-01\` is a lawful, boring, professional query. Boring is what you want. Excitement in search syntax usually means you are about to collect the wrong thing.
 
-inurl:
-Search in URLs
-Example: inurl:admin login
+Do not use operators as a substitute for a requirement. "See what is out there" is how you spend a day and produce a bookmark folder.
 
-cache:
-View cached version of pages
-Example: cache:example.com
+## Authorized Uses in Analysis
 
-related:
-Find similar websites
-Example: related:cnn.com
+These are the jobs the technique is for.
 
-"Where search operators meet real-world intelligence gathering"
+- **Finding the official text.** Governments, courts, companies, and NGOs publish PDFs and HTML that never appear in a normal keyword search because the title is bureaucratic and the page is three clicks down.
+- **Reconstructing a public trail.** Press releases, dockets, transcripts, and hearing notices often live on a single domain. site: plus a date bound is usually enough.
+- **Academic and grey literature.** Scholarly PDFs, preprints, and conference slides are open-source collection, provided you stay inside license and access rules your organization already has.
+- **Your own exposure check, when tasked.** Some security teams use search to find documents their organization accidentally left on a public server. That is a defensive, authorized task. It is not a license to go looking at someone else's servers for sport.
 
-Finding Employee Information
-Locate organizational charts and employee directories
+Worked example. Requirement: "What has Country X's foreign ministry said, in official English, about the port dispute since June?" Query family: \`site:the-ministry-domain filetype:pdf OR filetype:html "port" after:2024-06-01\`. Then you read, source, and compare. You do not add \`inurl:login\` to "see what else is there." That is curiosity wearing a collection hat.
 
-site:company.com filetype:pdf "organizational chart"
+## Ethics, Law, and the Line You Do Not Cross
 
-Searches for PDF organizational charts on the company's website
+Search operators do not create new rights. They only change recall.
 
-Document Discovery
-Find sensitive documents that may have been inadvertently exposed
+- **Authorization first.** Collect what your tasking and local law allow. "It was on Google" is not a defense if you used results to target systems, harass people, or bypass access controls.
+- **No credential or vulnerability hunting.** Queries designed to surface password files, configuration backups, or administrative interfaces are offensive reconnaissance. They are out of scope for this lesson and for this academy.
+- **Do not exploit a misconfiguration.** If you stumble on something that looks like it should not be public, stop, document within your rules, and escalate to the person who owns that decision. Do not download "everything in the directory" to be thorough.
+- **Terms of service and rate.** Automated scraping, identity spoofing, and hammering an index are not clever. They are how accounts and cases die.
+- **People are not puzzles.** Dorking for home addresses, children's schools, or medical data because you can type the syntax is not OSINT. It is a policy violation waiting for a date stamp.
 
-filetype:xls "confidential" OR "internal use only"
+If you need a rule you can remember under fatigue: if the query would embarrass you when pasted into the product's source note, do not run it.
 
-Searches for Excel files containing confidential information
+## Document the Search or It Did Not Happen
 
-Social Media Intelligence
-Gather information from social media platforms
+Analysts lose arguments because they cannot reproduce a search from Tuesday.
 
-site:twitter.com "target company" "layoffs"
-Searches for tweets about layoffs at a specific company
+- **Log the exact string, engine, date, and result count.** Future you will not remember which synonym worked.
+- **Preserve what you cite.** Screenshot or archive a published page you rely on, using tools your organization approves. Engines and sites both move.
+- **Record what you did not find.** A structured negative — "no official statement on the ministry site as of Wednesday" — is often the finding.
+- **Cite the document, not the query.** The operator string is your method. The PDF is the source.
 
-Just like a good spy never blows their cover, a good analyst never violates the terms of service. Be the professional your target's security team didn't know they needed to worry about.
+## Practice
 
-"When basic dorking isn't enough and you need to go deeper"
+Write three queries for this requirement: "Find official, published material on how City Y describes its port-security program, last 24 months." One should use site:, one filetype:, one a date bound. Then write a fourth query you will not run, and one sentence on why.
 
-### Combining Operators
-Multiple operators can be combined for more precise searches:
+If your rejected query hunts for admin panels, backups, or "index of" dumps on systems you do not own, you understood the lesson. If it looks like your first three, start over.
 
-site:linkedin.com intitle:"Chief Executive Officer" "New York"
-Finds LinkedIn profiles of CEOs in New York
+## What This Lesson Is Not
 
-### Wildcard Searches
-Use asterisks (*) as wildcards for unknown terms:
-
-"John Smith" * "software engineer"
-
-Finds pages mentioning John Smith with any word between his name and "software engineer"
-
-### Date Range Searches
-Use Google's tools to filter by date ranges for time-sensitive intelligence.
-
-"Professional tips from analysts who've been there, dorked that"
-
-- Start with broad searches and gradually narrow down with specific operators
-- Keep detailed records of your search queries and results
-- Use VPNs and consider operational security when conducting sensitive searches
-- Verify information found through dorking with additional sources
-- Stay updated on new search operators and techniques
-- Practice regularly to maintain and improve your dorking skills
-
-Create a personal collection of effective dork queries for different types of investigations. This "dork
-library" will save time and improve consistency in your OSINT research.
-## What is Google Dorking?
-
-Google Dorking - also known as Google hacking - is the practice of using advanced search operators to find information that website owners did not intend to make publicly accessible, or that is difficult to locate through standard searches. For intelligence analysts, Google Dorking is a core OSINT technique for discovering exposed data, identifying vulnerabilities, and mapping digital infrastructure.
-
-- **Beyond the Search Bar:** Most users type a few keywords and click the first result. Google Dorking uses the full power of Google's search syntax to target specific file types, domains, date ranges, and page structures that standard searches miss.
-- **Legal and Ethical Boundaries:** Google Dorking accesses information that Google has already indexed from publicly accessible pages. It does not involve hacking, bypassing authentication, or exploiting vulnerabilities. However, the information discovered may reveal security weaknesses or expose data that the owner considers sensitive. Analysts should document their searches and ensure their activities remain within authorised collection parameters.
-
-## Essential Google Dork Operators
-
-Mastering these operators is the foundation of effective Google Dorking:
-
-- **site: - Target a specific domain or subdomain.** \`site:gov classified\` returns all pages on .gov domains containing the word "classified." \`site:example.com filetype:pdf\` returns all PDF files hosted on example.com.
-- **filetype: - Restrict results to a specific file format.** Critical for finding documents, spreadsheets, and presentations that may contain sensitive information. \`filetype:xls salary\` finds salary spreadsheets. \`filetype:pdf confidential\` finds PDFs labelled as confidential.
-- **intitle: - Find pages with specific words in the title.** \`intitle:"index of"\` is one of the most famous dorks - it finds directory listings that reveal the file structure of web servers. \`intitle:"classified" filetype:pdf\` finds PDFs with "classified" in their title.
-- **inurl: - Search for specific text in the URL.** \`inurl:admin\` finds login pages and admin panels. \`inurl:passwd\` finds pages that may expose password files. \`inurl:wp-admin\` targets WordPress admin interfaces.
-- **intext: - Search for text in the body of the page.** More specific than a standard keyword search. \`intext:"confidential" intext:"not for distribution" site:example.com\` finds pages on a specific domain that contain both phrases.
-- **cache: - View Google's cached version of a page.** Essential for preserving content that may have been removed or changed since Google last indexed it. \`cache:example.com/sensitive-document.pdf\` retrieves the indexed version even if the original has been taken down.
-
-## Combining Operators for Intelligence Collection
-
-The true power of Google Dorking comes from combining operators in targeted search strings:
-
-- **Finding Exposed Documents:** \`site:example.com filetype:pdf intitle:confidential\` - finds PDFs labelled as confidential on the target domain.
-- **Identifying Vulnerable Systems:** \`inurl:"/cgi-bin/" site:target.gov filetype:cgi\` - identifies CGI scripts that may have known vulnerabilities.
-- **Mapping Network Infrastructure:** \`site:*.target.org intitle:"index of"\` - finds exposed directory listings across all subdomains.
-- **Discovering Login Portals:** \`inurl:login inurl:admin site:target.com\` - finds administrative login pages that may be targets for credential testing.
-- **Locating Backup Files:** \`filetype:bak site:example.com\` - finds backup files (\`.bak\`) that often contain older versions of sensitive documents that were insufficiently secured.
-
-## Documenting and Preserving Findings
-
-Google Dorking discoveries are often ephemeral. Pages may be removed, access may be restricted, or Google's cache may be updated. Proper documentation is essential:
-
-- **Capture Timestamps:** Record the date and time of each dork query. If a page is later removed, the timestamped discovery establishes that the information was publicly accessible at the time of collection.
-- **Preserve Evidence:** Use tools like the Wayback Machine to archive discovered pages, and take screenshots or PDF captures with visible timestamps. Google's cached view also serves as a preservation record.
-- **Log Query Parameters:** Document the exact search string used. Different operators and combinations produce different results, and the ability to reproduce a search is important for both analytical rigour and potential evidentiary requirements.
-- **Chain of Discovery:** In operational settings, document the process that led from a broad search to a specific discovery. The analytical path is often as important as the finding itself.
-
-## Intelligence Applications
-
-Google Dorking has proven valuable in numerous intelligence and investigative contexts:
-
-- **Corporate Intelligence:** Discovering competitor pricing lists, unreleased product documentation, or internal strategy documents exposed through misconfigured servers.
-- **Investigative Journalism:** Journalists have used Google Dorking to uncover police manuals, government contracts, and internal corporate communications that were inadvertently made public.
-- **Cybersecurity Assessment:** Red teams and penetration testers use Google Dorking as a reconnaissance tool to identify exposed assets, vulnerable systems, and potential entry points before conducting more intrusive testing.
-- **Counter-Intelligence:** Monitoring for exposed sensitive data within one's own organisation - discovering that a sensitive document has been inadvertently indexed before adversaries find it.`
+It is not a library of exploit strings. It is not a promise of a personal "dork database" product. It is not permission to confuse Google's cache with a warrant. Learn the grammar, stay inside authorized collection, and spend the time you save on evaluation. Evaluation is the part search cannot do for you.
+`
 
 export default function GoogledorkingPage() {
   return (
     <LessonContainer>
       <MicroLesson
         title="Google Dorking"
-        subtitle="Master advanced Google search operators for effective OSINT investigations."
-        humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
-        readTime={15}
-        difficulty="Intermediate"
-        category="Intelligence Analysis"
+        subtitle="Advanced search operators for authorized OSINT — syntax, not a skeleton key."
+        humorSubtitle="If the query would look like a break-in in a footnote, it is a break-in."
+        readTime={25}
+        difficulty="Beginner"
+        category="OSINT"
         mascot="foundations"
-        mascotMessage="Another day, another intelligence problem to solve. Let's get to work."
+        mascotMessage="Search is a grammar. Judgment is still the job."
       >
         <EnhancedLessonContentLoader content={topicContent} topic="google-dorking" />
       </MicroLesson>
