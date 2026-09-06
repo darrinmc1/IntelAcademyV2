@@ -44,16 +44,16 @@ export function ScrollcraftWhatYouGet() {
         <div className="lg:sticky lg:top-28 lg:col-span-5 lg:self-start lg:pb-24">
           <RevealOnScroll>
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
-              What you get
+              What this site is
             </p>
             <h2
               id="what-you-get-heading"
               className="text-3xl font-bold leading-tight text-white md:text-5xl"
             >
-              A training product, not a methodology deck.
+              Written intelligence analysis training — BLUF, not a methodology deck.
             </h2>
             <p className="mt-5 max-w-md text-lg font-light leading-relaxed text-slate-300">
-              The meeting already started. These are the pages that teach the product the boss
+              The meeting already started. These are written lessons that teach the brief the boss
               actually reads.
             </p>
           </RevealOnScroll>

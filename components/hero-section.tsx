@@ -40,7 +40,7 @@ export function HeroSection() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <motion.div style={{ y: copyY }} className="text-left glass-panel-heavy rounded-2xl p-8 md:p-12">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300">
-              Intelligence Analysis Training
+              Intelligence analysis · written BLUF lessons
             </div>
 
             <h1 className="mb-6 text-4xl font-bold leading-tight text-white drop-shadow-md md:text-6xl">
@@ -49,8 +49,8 @@ export function HeroSection() {
             </h1>
 
             <p className="mb-4 text-xl font-light leading-relaxed text-slate-300 md:text-2xl">
-              Bottom line up front. Judgment, stake, confidence — in that order. {TOPIC_COUNT} unique
-              written topics. Start free. Video is waitlist, not a buy button.
+              Written intelligence-analysis lessons: BLUF first, then the judgments. {TOPIC_COUNT}{" "}
+              lessons. The first sentence is the job.
             </p>
 
             <p className="mb-8 border-l-2 border-indigo-500/50 pl-4 text-lg font-light italic text-indigo-300/80">
@@ -72,7 +72,7 @@ export function HeroSection() {
                 size="lg"
                 className="rounded-full border-white/20 bg-white/5 px-8 py-6 text-lg text-white backdrop-blur-md transition-all duration-300 hover:bg-white/10"
               >
-                <Link href="/topics">Browse {TOPIC_COUNT} topics</Link>
+                <Link href="/topics">See the written lessons</Link>
               </Button>
             </div>
             <Link
@@ -104,7 +104,7 @@ export function HeroSection() {
                 </div>
               </Link>
               <figcaption className="mt-3 text-xs font-medium uppercase tracking-[0.2em] text-slate-500">
-                Still from Intelligence Report Examples — written lesson in this repo. Not a stock shot.
+                Still from Intelligence Report Examples — a written BLUF lesson.
               </figcaption>
             </motion.figure>
 
