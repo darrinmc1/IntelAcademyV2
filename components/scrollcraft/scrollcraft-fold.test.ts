@@ -21,4 +21,25 @@ describe("ScrollCraft fold copy", () => {
     expect(hero).toContain("Write a BLUF the boss can act on")
     expect(hero).toContain("/hero-bluf-lesson-still.png")
   })
+
+  it("keeps humor and the waitlist on the fold", () => {
+    const hero = readFileSync("components/hero-section.tsx", "utf8")
+    expect(hero).toContain("If paragraph one is still clearing its throat")
+    expect(hero).toContain('href="/waitlist"')
+    expect(hero).toContain("Video is coming soon — waitlist")
+  })
+
+  it("does not leave Detect+Edit slop on the fold", () => {
+    const hero = readFileSync("components/hero-section.tsx", "utf8")
+    expect(hero).toContain("The job — not the slogan")
+    expect(hero).toContain("Judgment, stake, confidence")
+    expect(hero).toContain("See the written lessons")
+    expect(hero).not.toContain("Intelligence Analysis Training")
+    expect(hero).not.toContain("unique written")
+    expect(hero).not.toContain("Start free")
+    expect(hero).not.toContain("not a buy button")
+    expect(hero).not.toContain("in this repo")
+    expect(hero).not.toContain("Not a stock shot")
+    expect(hero).not.toContain("Browse ")
+  })
 })
