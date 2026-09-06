@@ -90,21 +90,26 @@ export function HeroSection() {
                 className="block rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
               >
                 <div className="hero-bluf-still-frame sc-still-frame aspect-[5/6] max-h-[min(72vh,38rem)] rounded-2xl">
-                  <div className="hero-bluf-still-motion">
-                    <Image
-                      src="/hero-bluf-lesson-still.png"
-                      alt="Still from the Intelligence Report Examples lesson: a BLUF strategic assessment with key judgments first"
-                      width={1960}
-                      height={2360}
-                      className="h-auto w-full"
-                      priority
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
+                  <div className="hero-bluf-still-viewport">
+                    <div className="hero-bluf-still-motion">
+                      <Image
+                        src="/hero-bluf-lesson-still.png"
+                        alt="Still from the Intelligence Report Examples lesson: Strategic Assessment and Operational Update, BLUF first"
+                        fill
+                        className="hero-bluf-still-img"
+                        priority
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                    </div>
+                    <div className="hero-bluf-stamp" aria-hidden="true">
+                      <span className="hero-bluf-stamp-mark">BLUF</span>
+                      <span className="hero-bluf-stamp-sub">Bottom line up front</span>
+                    </div>
                   </div>
                 </div>
               </Link>
               <figcaption className="mt-3 text-xs font-medium uppercase tracking-[0.2em] text-slate-500">
-                Still from Intelligence Report Examples — written lesson in this repo. Not a stock shot.
+                Intelligence Report Examples — dual-report slide, BLUF stamp. Not a stock shot.
               </figcaption>
             </motion.figure>
 

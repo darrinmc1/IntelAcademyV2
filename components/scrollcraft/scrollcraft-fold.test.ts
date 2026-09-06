@@ -21,4 +21,16 @@ describe("ScrollCraft fold copy", () => {
     expect(hero).toContain("Write a BLUF the boss can act on")
     expect(hero).toContain("/hero-bluf-lesson-still.png")
   })
+
+  it("uses Intel-only dual-report slide and BLUF stamp, not kenburns", () => {
+    const css = readFileSync("components/hero-bluf-sheet.css", "utf8")
+    const hero = readFileSync("components/hero-section.tsx", "utf8")
+    expect(css).toContain("hero-bluf-dual-slide 7s")
+    expect(css).toContain("hero-bluf-stamp-fade 7s")
+    expect(css).toContain("@media (prefers-reduced-motion: reduce)")
+    expect(css).not.toContain("kenburns")
+    expect(css).not.toMatch(/#f[4-7][ef].{3}|cream|papyrus|legal-pad/i)
+    expect(hero).toContain("hero-bluf-stamp")
+    expect(hero).toContain("Bottom line up front")
+  })
 })
