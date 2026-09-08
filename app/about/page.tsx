@@ -56,32 +56,30 @@ export default function About() {
               <div>
                 <h3 className="text-xl font-semibold mb-2">Self-Paced Learning</h3>
                 <p>
-                  We understand that professionals have varying schedules and learning preferences. Our platform is
-                  designed to allow you to learn at your own pace, with content organized into digestible mini-topics
-                  that can be completed in 5-15 minutes.
+                  We understand that professionals have varying schedules and learning styles. Our courses are
+                  designed to be completed at your own pace, allowing you to balance training with your existing
+                  responsibilities.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Practical Focus</h3>
+                <h3 className="text-xl font-semibold mb-2">Practical Application</h3>
                 <p>
-                  Our content emphasizes practical, applicable skills that you can immediately implement in your work.
-                  From OSINT techniques to analytical methodologies, everything we teach is designed to make you more
-                  effective in real-world scenarios.
+                  Every module is built around real-world scenarios and practical exercises. We focus on skills
+                  you can apply immediately in your work, not just theoretical knowledge.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Community-Driven</h3>
+                <h3 className="text-xl font-semibold mb-2">Expert-Developed Content</h3>
                 <p>
-                  We believe in the power of peer learning and support. Our community forum provides a space for
-                  intelligence professionals to connect, share insights, and help each other grow in their careers.
+                  Our curriculum is developed by experienced intelligence professionals with backgrounds in
+                  government, law enforcement, and the private sector.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Continuously Evolving</h3>
+                <h3 className="text-xl font-semibold mb-2">Continuously Updated</h3>
                 <p>
-                  The field of intelligence analysis is constantly changing, and our platform evolves with it. We
-                  regularly update our content and add new topics based on community feedback and emerging trends in the
-                  field.
+                  The intelligence landscape evolves rapidly. We regularly update our content to reflect the
+                  latest tools, techniques, and best practices in the field.
                 </p>
               </div>
             </div>
@@ -90,48 +88,152 @@ export default function About() {
           <Separator />
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Access (not a price table)</h2>
-            <p className="mb-3">
-              {PRICE_MAP_LABEL} {PRICE_MAP_DETAIL} Academy Brief is a tool, not a
-              standalone SKU. There is no Explorer / Analyst / Professional / Enterprise table here.
+            <h2 className="text-2xl font-bold mb-6">Core Intelligence Modules</h2>
+            <p className="text-muted-foreground mb-8">
+              Our curriculum is organized into four specialized intelligence disciplines. Each module delivers
+              structured learning objectives, hands-on exercises, and a clear progression from foundational
+              concepts to advanced tradecraft.
             </p>
-            <p className="mb-3">{CHECKOUT_STATUS}</p>
-            <p className="mb-3">{REFUND_POLICY}</p>
-            <p>
-              Details live on{" "}
-              <Link href="/pricing" className="text-cyan-400 underline underline-offset-2">
-                /pricing
-              </Link>
-              . Paid interest goes to the{" "}
-              <Link href="/waitlist" className="text-cyan-400 underline underline-offset-2">
-                waitlist
-              </Link>
-              .
-            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="border rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-2">OSINT — Open Source Intelligence</h3>
+                <p className="text-muted-foreground mb-3">
+                  Master the systematic collection and analysis of publicly available information. This module
+                  covers search engine operators, social media investigation, dark web awareness, digital
+                  footprint analysis, and source verification techniques used by professional analysts.
+                </p>
+                <ul className="text-sm space-y-1 mb-4 list-disc list-inside text-muted-foreground">
+                  <li>Advanced search operators and Boolean logic</li>
+                  <li>Social media OSINT and account attribution</li>
+                  <li>Image and geolocation verification</li>
+                  <li>Source credibility assessment frameworks</li>
+                  <li>Operational security during collection</li>
+                </ul>
+                <Button asChild variant="outline" size="sm">
+                  <Link href="/learning-paths">Explore OSINT Curriculum</Link>
+                </Button>
+              </div>
+
+              <div className="border rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-2">Threat Assessment</h3>
+                <p className="text-muted-foreground mb-3">
+                  Develop structured methodologies for identifying, evaluating, and communicating threats.
+                  This module covers threat actor profiling, risk matrices, behavioral indicators, and
+                  the production of actionable threat intelligence reports.
+                </p>
+                <ul className="text-sm space-y-1 mb-4 list-disc list-inside text-muted-foreground">
+                  <li>Threat actor taxonomy and profiling</li>
+                  <li>Structured analytic techniques (SATs)</li>
+                  <li>Risk and vulnerability assessment models</li>
+                  <li>Indicators of compromise and warning signs</li>
+                  <li>Threat report writing and dissemination</li>
+                </ul>
+                <Button asChild variant="outline" size="sm">
+                  <Link href="/learning-paths">Explore Threat Assessment Curriculum</Link>
+                </Button>
+              </div>
+
+              <div className="border rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-2">Geospatial Intelligence (GEOINT)</h3>
+                <p className="text-muted-foreground mb-3">
+                  Learn to extract intelligence from geographic data, satellite imagery, and mapping tools.
+                  This module covers coordinate systems, imagery analysis, terrain assessment, and the
+                  integration of geospatial data into all-source intelligence products.
+                </p>
+                <ul className="text-sm space-y-1 mb-4 list-disc list-inside text-muted-foreground">
+                  <li>Satellite and aerial imagery interpretation</li>
+                  <li>Coordinate systems and grid references</li>
+                  <li>Open-source mapping tools and GIS basics</li>
+                  <li>Pattern-of-life analysis using location data</li>
+                  <li>Terrain and infrastructure assessment</li>
+                </ul>
+                <Button asChild variant="outline" size="sm">
+                  <Link href="/learning-paths">Explore GEOINT Curriculum</Link>
+                </Button>
+              </div>
+
+              <div className="border rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-2">Financial Intelligence (FININT)</h3>
+                <p className="text-muted-foreground mb-3">
+                  Understand how money moves and how to follow it. This module covers financial network
+                  analysis, money laundering typologies, sanctions screening, cryptocurrency tracing,
+                  and the production of financial intelligence assessments.
+                </p>
+                <ul className="text-sm space-y-1 mb-4 list-disc list-inside text-muted-foreground">
+                  <li>Financial network mapping and link analysis</li>
+                  <li>Money laundering stages and red flags</li>
+                  <li>Sanctions lists and screening procedures</li>
+                  <li>Cryptocurrency and blockchain tracing basics</li>
+                  <li>Corporate structure and beneficial ownership research</li>
+                </ul>
+                <Button asChild variant="outline" size="sm">
+                  <Link href="/learning-paths">Explore FININT Curriculum</Link>
+                </Button>
+              </div>
+            </div>
           </section>
 
           <Separator />
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-            <p className="mb-6">Have questions, feedback, or suggestions? We&apos;d love to hear from you.</p>
-            <div className="grid md:grid-cols-2 gap-8">
+            <h2 className="text-2xl font-bold mb-4">Who We Serve</h2>
+            <div className="grid md:grid-cols-3 gap-6">
               <div>
-                <h3 className="text-xl font-semibold mb-2">General Inquiries</h3>
-                <p className="mb-2">
-                  Email:{" "}
-                  <a href={`mailto:${SUPPORT_EMAIL}`} className="text-cyan-400 underline underline-offset-2">
-                    {SUPPORT_EMAIL}
-                  </a>
+                <h3 className="text-lg font-semibold mb-2">Law Enforcement</h3>
+                <p className="text-muted-foreground">
+                  Officers and investigators seeking structured intelligence training to support criminal
+                  investigations, threat assessment, and public safety operations.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Content Requests</h3>
-                <p className="mb-4">Have a specific topic you&apos;d like us to cover?</p>
-                <Button asChild>
-                  <Link href="/request-topic">Request a Topic</Link>
-                </Button>
+                <h3 className="text-lg font-semibold mb-2">Private Sector Analysts</h3>
+                <p className="text-muted-foreground">
+                  Corporate security teams, risk consultants, and due diligence professionals who need
+                  rigorous, repeatable analytical frameworks.
+                </p>
               </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2">Students & Researchers</h3>
+                <p className="text-muted-foreground">
+                  Academic researchers, journalism students, and self-directed learners building a
+                  foundation in intelligence analysis and open-source research.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <Separator />
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Pricing & Access</h2>
+            <p className="mb-4">
+              We offer flexible access options to suit individuals and organizations. Many foundational
+              topics are available at no cost, with premium modules available through our subscription plans.
+            </p>
+            <p className="mb-4">
+              {REFUND_POLICY}
+            </p>
+            <p className="text-muted-foreground">
+              For organizational licensing, bulk access, or questions about our curriculum, contact us at{" "}
+              <a href={`mailto:${SUPPORT_EMAIL}`} className="underline hover:text-foreground">
+                {SUPPORT_EMAIL}
+              </a>
+              .
+            </p>
+          </section>
+
+          <section className="bg-muted rounded-lg p-8 text-center">
+            <h2 className="text-2xl font-bold mb-3">Ready to Start Learning?</h2>
+            <p className="text-muted-foreground mb-6">
+              Browse our full curriculum and begin building your intelligence analysis skills today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg">
+                <Link href="/learning-paths">View All Learning Paths</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href="/topics">Browse All Topics</Link>
+              </Button>
             </div>
           </section>
         </div>
