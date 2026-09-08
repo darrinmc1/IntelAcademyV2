@@ -37,3 +37,4 @@ next-env.d.ts
 # lesson-video pipeline intermediates and generated MP4s (too large for git)
 /videos/work/
 /videos/out/
+scripts/__pycache__/
