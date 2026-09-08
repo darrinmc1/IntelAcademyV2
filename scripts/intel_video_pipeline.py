@@ -114,9 +114,29 @@ KEYWORD_ALIASES = {
     "finint": ("financial", "finance", "money", "transaction"),
     "techint": ("technical", "equipment", "reverse"),
     "socmint": ("social", "media"),
-    "cycle": ("phase", "direction", "collection", "processing", "analysis", "dissemination"),
-    "decision": ("decision", "policymaker", "commander"),
-    "information": ("data", "raw", "facts"),
+    "cycle": ("pir", "dissemination"),
+    "decision": ("policymaker", "commander"),
+}
+
+# Heading tokens too common to get the ×3 bonus (still count ×1).
+GENERIC_HEADING_WORDS = {
+    "intelligence",
+    "information",
+    "collection",
+    "analysis",
+    "methods",
+    "method",
+    "key",
+    "characteristics",
+    "applications",
+    "process",
+    "types",
+    "type",
+    "basics",
+    "overview",
+    "introduction",
+    "phase",
+    "using",
 }
 
 BANNED_TTS_RE = re.compile(
@@ -137,7 +157,6 @@ BANNED_TTS_RE = re.compile(
 )
 
 HEADING_RE = re.compile(r"^(#{2,3})\s+(.+?)\s*$")
-JS_INTERP_RE = re.compile(r"\$\{([\s\S]*?)\}")
 LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
 BOLD_RE = re.compile(r"\*\*(.+?)\*\*")
 ITALIC_RE = re.compile(r"(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)")
@@ -233,8 +252,49 @@ def expand_keyword_aliases(words: Iterable[str]) -> set[str]:
 # Extract + clean lesson markdown
 # ---------------------------------------------------------------------------
 
+def _read_js_interpolation(source: str, start: int) -> tuple[str, int]:
+    """Read `${...}` from `start` (at `$`), respecting nested braces and strings."""
+    if source[start : start + 2] != "${":
+        raise ValueError("expected ${")
+    i = start + 2
+    depth = 1
+    buf = ["$", "{"]
+    in_str: str | None = None
+    while i < len(source) and depth:
+        ch = source[i]
+        if in_str:
+            buf.append(ch)
+            if ch == "\\" and i + 1 < len(source):
+                buf.append(source[i + 1])
+                i += 2
+                continue
+            if ch == in_str:
+                in_str = None
+            i += 1
+            continue
+        if ch in ("'", '"', "`"):
+            in_str = ch
+            buf.append(ch)
+            i += 1
+            continue
+        if ch == "{":
+            depth += 1
+        elif ch == "}":
+            depth -= 1
+        buf.append(ch)
+        i += 1
+    if depth != 0:
+        raise ValueError("Unterminated ${} interpolation")
+    return "".join(buf), i
+
+
 def extract_topic_content(source: str) -> str:
-    """Pull the topicContent template literal (or quoted string) from page source."""
+    """Pull the topicContent template literal (or quoted string) from page source.
+
+    Template literals may contain `${...}` interpolations that themselves use
+    backticks (for example a .map() callback template). Those inner backticks
+    must not terminate the outer string.
+    """
     start_m = re.search(r"const\s+topicContent\s*=\s*", source)
     if not start_m:
         raise ValueError("No `const topicContent =` assignment found")
@@ -256,6 +316,10 @@ def extract_topic_content(source: str) -> str:
         if ch == "\\" and i + 1 < len(source):
             out.append(source[i : i + 2])
             i += 2
+            continue
+        if quote == "`" and ch == "$" and i + 1 < len(source) and source[i + 1] == "{":
+            interp, i = _read_js_interpolation(source, i)
+            out.append(interp)
             continue
         if ch == quote:
             raw = "".join(out)
@@ -284,15 +348,24 @@ def _expand_phase_map(js: str) -> str | None:
 def expand_js_interpolations(markdown: str) -> tuple[str, int]:
     """Evaluate a few safe ${...} patterns; strip the rest so TTS never says them."""
     count = 0
-
-    def repl(match: re.Match[str]) -> str:
-        nonlocal count
-        count += 1
-        js = match.group(1)
-        expanded = _expand_phase_map(js)
-        return expanded if expanded is not None else ""
-
-    return JS_INTERP_RE.sub(repl, markdown), count
+    out: list[str] = []
+    i = 0
+    while i < len(markdown):
+        if markdown[i] == "$" and i + 1 < len(markdown) and markdown[i + 1] == "{":
+            try:
+                interp, i = _read_js_interpolation(markdown, i)
+            except ValueError:
+                out.append(markdown[i])
+                i += 1
+                continue
+            count += 1
+            js = interp[2:-1] if interp.startswith("${") and interp.endswith("}") else interp
+            expanded = _expand_phase_map(js)
+            out.append(expanded if expanded is not None else "")
+            continue
+        out.append(markdown[i])
+        i += 1
+    return "".join(out), count
 
 
 def extract_lesson_title(source: str, slug: str) -> str:
@@ -308,10 +381,16 @@ def extract_lesson_title(source: str, slug: str) -> str:
 
 
 def split_on_headings(markdown: str) -> list[Section]:
-    """Split on real ## / ### headings only — not unmarked title-case lines."""
+    """Split on real ## / ### headings only — not unmarked title-case lines.
+
+    ### captions keep the parent ## heading so 'Collection Methods' under
+    HUMINT scores against HUMINT stills, not a generic collection image.
+    """
     lines = markdown.replace("\r\n", "\n").split("\n")
     sections: list[Section] = []
+    parent = ""
     current_heading = "Introduction"
+    current_caption = "Introduction"
     buf: list[str] = []
 
     def flush() -> None:
@@ -319,14 +398,24 @@ def split_on_headings(markdown: str) -> list[Section]:
         heading = current_heading.strip() or "Introduction"
         if not body and heading == "Introduction":
             return
-        sections.append(Section(heading=heading, body=body, caption=heading))
+        sections.append(
+            Section(heading=heading, body=body, caption=current_caption or heading)
+        )
 
     for line in lines:
         m = HEADING_RE.match(line)
         if m:
             flush()
             buf = []
-            current_heading = m.group(2).strip()
+            level = len(m.group(1))
+            title = m.group(2).strip()
+            if level == 2:
+                parent = title
+                current_heading = title
+                current_caption = title
+            else:
+                current_heading = f"{parent} — {title}" if parent else title
+                current_caption = current_heading
             continue
         buf.append(line)
     flush()
@@ -427,7 +516,7 @@ def merge_short_sections(sections: list[Section], min_words: int = 45) -> list[S
     carry: Section | None = None
 
     def word_count(section: Section) -> int:
-        return len(tokenize(section.tts_source))
+        return len(section.tts_source.split())
 
     for section in sections:
         if carry is None:
@@ -578,12 +667,12 @@ class ImageLibrary:
         score = 0
         for word in heading_words:
             if word in candidate.tokens:
-                score += 3
+                score += 1 if word in GENERIC_HEADING_WORDS else 3
         for word in body_words:
             if word in candidate.tokens:
                 score += 1
         for word in slug_words:
-            if word in candidate.tokens:
+            if word in candidate.tokens and word not in GENERIC_HEADING_WORDS:
                 score += 2
         # Exact slug / heading stem bonus.
         heading_slug = re.sub(r"[^a-z0-9]+", "-", heading.lower()).strip("-")
@@ -591,6 +680,20 @@ class ImageLibrary:
             score += 8
         if heading_slug and heading_slug in candidate.stem:
             score += 6
+        # Discipline acronym in the heading must beat generic keyword bleed
+        # (e.g. "satellite" in a SIGINT body matching a GEOINT still).
+        for acronym in (
+            "humint",
+            "osint",
+            "sigint",
+            "geoint",
+            "masint",
+            "finint",
+            "techint",
+            "socmint",
+        ):
+            if acronym in heading.lower() and acronym in candidate.stem:
+                score += 12
         return score
 
     def pick(
@@ -604,14 +707,35 @@ class ImageLibrary:
         for candidate in self.candidates:
             if candidate.fingerprint in used_fingerprints:
                 continue
-            # Near-duplicate of something already used.
-            if any(hamming_hex(candidate.fingerprint, fp) <= 8 for fp in used_fingerprints):
-                continue
             ranked.append((self.score(candidate, heading, body, slug), candidate))
         ranked.sort(key=lambda item: (-item[0], item[1].path.name))
         if not ranked:
             return None, 0, "no unused images left"
         score, winner = ranked[0]
+        heading_acronyms = [
+            acronym
+            for acronym in (
+                "humint",
+                "osint",
+                "sigint",
+                "geoint",
+                "masint",
+                "finint",
+                "techint",
+                "socmint",
+            )
+            if acronym in heading.lower()
+        ]
+        if (
+            heading_acronyms
+            and score < 8
+            and not any(acronym in winner.stem for acronym in heading_acronyms)
+        ):
+            return (
+                None,
+                score,
+                f"rejected off-discipline still {winner.path.name} (score {score})",
+            )
         if score <= 0:
             return winner, score, "low relevance (no keyword overlap; fallback still)"
         return winner, score, "scored match"
