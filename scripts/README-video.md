@@ -52,3 +52,6 @@ Both `videos/out/` and `videos/work/` are gitignored — do not commit MP4s.
 
 Narration never invents slapstick VO and strips commercial language
 (prices, Stripe, Buy, waitlist, fake student counts, agency clients, pass guarantees).
+
+Batch A Foundations render notes (paths, sizes, image gaps):
+`scripts/BATCH_A_FOUNDATIONS.md`.
