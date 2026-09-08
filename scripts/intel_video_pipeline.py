@@ -778,7 +778,8 @@ def render_slide(
     lesson_title: str,
     caption: str,
     dest: Path,
-) -> None:
+) -> tuple[Path, Path]:
+    """Write a dimmed still plus a locked text overlay (Ken Burns applies to the still only)."""
     if image_path and image_path.exists():
         with Image.open(image_path) as raw:
             base = cover_resize(raw.convert("RGB"), WIDTH, HEIGHT)
@@ -787,6 +788,9 @@ def render_slide(
 
     dimmed = ImageEnhance.Brightness(base).enhance(0.58)
     dimmed = ImageEnhance.Contrast(dimmed).enhance(1.05)
+    bg_path = dest.with_name(dest.stem + "-bg.png")
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dimmed.save(bg_path, "PNG", optimize=True)
 
     overlay = Image.new("RGBA", (WIDTH, HEIGHT), (0, 0, 0, 0))
     draw = ImageDraw.Draw(overlay)
@@ -812,10 +816,12 @@ def render_slide(
         draw.text((72, y), line, font=caption_font, fill=(255, 255, 255, 245))
         y += 58
 
-    composed = dimmed.convert("RGBA")
-    composed = Image.alpha_composite(composed, overlay)
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    composed.convert("RGB").save(dest, "PNG", optimize=True)
+    overlay_path = dest.with_name(dest.stem + "-ov.png")
+    overlay.save(overlay_path, "PNG")
+    preview = dimmed.convert("RGBA")
+    preview = Image.alpha_composite(preview, overlay)
+    preview.convert("RGB").save(dest, "PNG", optimize=True)
+    return bg_path, overlay_path
 
 
 def run_ffmpeg(args: list[str]) -> None:
@@ -842,17 +848,24 @@ def ffprobe_duration(path: Path) -> float:
     return float(out)
 
 
-def encode_segment(slide_png: Path, audio_mp3: Path, dest: Path, duration: float) -> None:
-    """Dimmed 1080p still + slow Ken Burns + AAC narration."""
+def encode_segment(
+    bg_png: Path,
+    overlay_png: Path,
+    audio_mp3: Path,
+    dest: Path,
+    duration: float,
+) -> None:
+    """Slow Ken Burns on the still only; title/caption overlay stays locked."""
     # Extra canvas so the crop can travel while zooming ~8%.
     zoom_w, zoom_h = 2074, 1166
-    # Ken Burns: slow diagonal drift + implied zoom via oversized scale.
+    dur = max(duration, 0.1)
     vf = (
-        f"scale={zoom_w}:{zoom_h}:flags=lanczos,"
+        f"[0:v]scale={zoom_w}:{zoom_h}:flags=lanczos,"
         f"crop={WIDTH}:{HEIGHT}:"
-        f"'(in_w-{WIDTH})*t/{max(duration, 0.1)}':"
-        f"'(in_h-{HEIGHT})*t/{max(duration, 0.1)}',"
-        f"fps={FPS},format=yuv420p"
+        f"'(in_w-{WIDTH})*t/{dur}':"
+        f"'(in_h-{HEIGHT})*t/{dur}',"
+        f"fps={FPS}[bg];"
+        f"[bg][1:v]overlay=0:0:format=auto,format=yuv420p[v]"
     )
     run_ffmpeg(
         [
@@ -861,13 +874,21 @@ def encode_segment(slide_png: Path, audio_mp3: Path, dest: Path, duration: float
             "-loop",
             "1",
             "-i",
-            str(slide_png),
+            str(bg_png),
+            "-loop",
+            "1",
+            "-i",
+            str(overlay_png),
             "-i",
             str(audio_mp3),
             "-t",
             f"{duration:.3f}",
-            "-vf",
+            "-filter_complex",
             vf,
+            "-map",
+            "[v]",
+            "-map",
+            "2:a",
             "-c:v",
             "libx264",
             "-preset",
@@ -897,7 +918,7 @@ def concat_segments(segment_paths: list[Path], dest: Path) -> None:
     if len(segment_paths) == 1:
         shutil.copy2(segment_paths[0], dest)
         return
-    list_path = dest.with_suffix(".concat.txt")
+    list_path = segment_paths[0].parent / f"{dest.stem}.concat.txt"
     list_path.write_text(
         "".join(f"file '{p.resolve().as_posix()}'\n" for p in segment_paths),
         encoding="utf-8",
@@ -1116,19 +1137,22 @@ def render_lesson(
 
     for plan in plans:
         tag = f"{plan.index:02d}"
-        log(f"  TTS  {tag} {plan.heading} ({len(plan.tts_text.split())} words)")
         mp3 = work / f"seg-{tag}.mp3"
-        synthesize_section(plan.tts_text, mp3, voice, report.tts_quirks)
+        if mp3.exists() and mp3.stat().st_size > 1000:
+            log(f"  TTS  {tag} reuse {mp3.name} ({len(plan.tts_text.split())} words)")
+        else:
+            log(f"  TTS  {tag} {plan.heading} ({len(plan.tts_text.split())} words)")
+            synthesize_section(plan.tts_text, mp3, voice, report.tts_quirks)
         duration = max(ffprobe_duration(mp3), 1.2)
         slide = work / f"seg-{tag}.png"
         log(
             f"  SLIDE {tag} {plan.image.name if plan.image else 'fallback'} "
             f"(score {plan.image_score})"
         )
-        render_slide(plan.image, title, plan.caption, slide)
+        bg_png, ov_png = render_slide(plan.image, title, plan.caption, slide)
         clip = work / f"seg-{tag}.mp4"
         log(f"  ENC  {tag} {duration:.1f}s")
-        encode_segment(slide, mp3, clip, duration)
+        encode_segment(bg_png, ov_png, mp3, clip, duration)
         segment_mp4s.append(clip)
 
     if not segment_mp4s:
