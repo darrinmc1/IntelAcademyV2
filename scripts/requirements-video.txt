@@ -1,0 +1,9 @@
+# Intel Academy lesson-video pipeline
+# Install:  python3 -m pip install -r scripts/requirements-video.txt
+# System:   ffmpeg (libx264 + AAC) must be on PATH
+#
+# edge-tts talks to Microsoft Edge's free neural TTS endpoint.
+# No Azure key is required. Network access is required at render time.
+
+edge-tts==7.2.3
+Pillow==11.3.0
