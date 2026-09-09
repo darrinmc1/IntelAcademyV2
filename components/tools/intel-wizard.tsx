@@ -180,7 +180,7 @@ export function IntelWizard({ tool }: { tool: IntelTool }) {
             ✨ That was your free generation!
           </p>
           <p className="mt-1 text-xs text-amber-400/80">
-            Paid access includes unlimited generations when billing is live. Checkout isn&apos;t live.
+            Extra generations are waitlist-only. There is no payment method yet.
           </p>
           <Button asChild className="mt-3" size="sm">
             <Link href="/waitlist">
@@ -298,8 +298,8 @@ function SubscribeWall() {
       </div>
       <h2 className="mt-6 text-2xl font-bold text-foreground tabular-nums">enable unlimited AI intelligence reports</h2>
       <p className="mx-auto mt-3 max-w-md text-muted-foreground">
-        Free tier: one report. Paid access unlocks more when billing is live.
-        Checkout isn&apos;t live — this is not a purchase.
+        Free tier: one report. Extra generations are waitlist-only — there is no
+        payment method yet. This is not a purchase.
       </p>
       <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
         <Button asChild size="lg">

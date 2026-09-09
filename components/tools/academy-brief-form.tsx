@@ -195,7 +195,7 @@ export function AcademyBriefForm() {
         <div className="rounded-xl border border-amber-500/20 bg-amber-500/5 p-4 text-center">
           <p className="text-sm font-semibold text-amber-300">That was your free Academy Brief preview.</p>
           <p className="mt-1 text-xs text-amber-400/80">
-            Paid plans include unlimited briefs when billing is live. Checkout isn&apos;t live — join the waitlist.
+            Written lessons stay free. Video and extra briefs are waitlist-only — there is no payment method yet.
           </p>
           <Button asChild className="mt-3" size="sm">
             <Link href="/waitlist">
@@ -351,7 +351,7 @@ function SubscribeWall() {
       <h2 className="mt-6 text-2xl font-bold text-slate-50">Academy Brief is on paid plans</h2>
       <p className="mx-auto mt-3 max-w-md text-slate-400">
         Free tier: one structured brief. {PRICE_MAP_LABEL} Academy Brief is a tool, not a
-        standalone SKU. Checkout isn&apos;t live — join the waitlist.
+        standalone SKU. There is no payment method yet — join the waitlist.
       </p>
       <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
         <Button asChild size="lg">

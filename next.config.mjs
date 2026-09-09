@@ -49,6 +49,7 @@ const nextConfig = {
     return [
       ...topicRedirects,
       { source: "/signup", destination: "/register", permanent: false },
+      { source: "/buy", destination: "/waitlist", permanent: false },
       { source: "/refund", destination: "/refunds", permanent: true },
       { source: "/community", destination: "/forum", permanent: true },
       { source: "/community/:path*", destination: "/forum", permanent: true },
