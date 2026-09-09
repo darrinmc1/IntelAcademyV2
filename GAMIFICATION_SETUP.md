@@ -11,10 +11,12 @@
 - `app/api/leaderboard/route.ts` - Leaderboard API endpoint
 - `app/leaderboard/page.tsx` - Leaderboard page
 
-### Stripe Files (For Later - Not Created Yet)
+### Stripe Files (Parked / gated — waitlist NOW, flip-ready later)
+- `lib/payments-gate.ts`
 - `lib/stripe-config.ts`
 - `components/stripe/pricing-table.tsx`
 - `app/api/stripe/checkout/route.ts`
+- `app/api/stripe/webhook/route.ts`
 
 ## 🎯 NEXT STEPS
 

@@ -4,7 +4,7 @@ import { USER_PLAN_LABELS, USER_PLANS, type UserPlan } from "@/lib/user-plan"
  * Public access copy — no live dollar amounts until lesson videos ship.
  * Used by /pricing, /pricing.json, /llm.txt, FAQ, JSON-LD, and refunds.
  * Payments are not live — paid CTAs go to /waitlist or /contact.
- * No Stripe, Payment Links, x402, or crypto checkout.
+ * Stripe checkout is parked/gated (lib/payments-gate.ts). No Payment Links, x402, or crypto.
  *
  * Entitlements (catalog id → stored USER_PLANS id). Plan ids stay; prices do not.
  *   free   → free  = written lessons, NO video

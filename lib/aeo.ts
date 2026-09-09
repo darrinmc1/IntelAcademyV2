@@ -78,7 +78,7 @@ ${DISCLAIMER}
 - Citations: only real catalog hrefs such as /topics/intelligence-report-components, /topics/intelligence-briefings, /topics/estimative-language
 - Free: 1 preview
 - Not a standalone Brief SKU
-- Checkout: waitlist only (no Stripe, Payment Links, or x402)
+- Checkout: waitlist only (Stripe parked/gated, no Payment Links or x402)
 
 ## Access (no live prices)
 
