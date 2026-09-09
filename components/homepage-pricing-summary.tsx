@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
-import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY } from "@/lib/pricing"
+import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL } from "@/lib/pricing"
 
 export function HomepagePricingSummary() {
   return (
@@ -15,7 +15,6 @@ export function HomepagePricingSummary() {
               </h2>
               <p className="mt-2 text-slate-300">{PRICE_MAP_DETAIL}</p>
               <p className="mt-3 text-sm font-medium text-amber-200">{CHECKOUT_STATUS}</p>
-              <p className="mt-2 text-sm text-slate-400">{REFUND_POLICY}</p>
             </div>
             <Link
               href="/waitlist"
