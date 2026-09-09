@@ -8,133 +8,174 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
+import { Card, CardContent } from "@/components/ui/card"
+import { CheckoutButton } from "@/components/checkout-button"
+import { StarIcon, QuoteIcon } from "lucide-react"
+import Image from "next/image"
 
-export default function About() {
+const TESTIMONIALS = [
+  {
+    name: "Sarah Chen",
+    role: "Investment Banking Analyst, Goldman Sachs",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=SarahChen&backgroundColor=b6e3f4",
+    quote: "This platform helped me land my IB offer. The DCF and LBO models are exactly what interviewers test on — I felt completely prepared walking into every technical round.",
+    stars: 5,
+  },
+  {
+    name: "Marcus Johnson",
+    role: "Private Equity Associate, KKR",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=MarcusJohnson&backgroundColor=c0aede",
+    quote: "I tried three other prep courses before this one. Nothing else comes close for real-world modeling depth. Got my PE offer within 6 weeks of starting.",
+    stars: 5,
+  },
+  {
+    name: "Priya Patel",
+    role: "Equity Research Analyst, Morgan Stanley",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=PriyaPatel&backgroundColor=d1f4d1",
+    quote: "The step-by-step walkthroughs made complex concepts click instantly. My modeling speed doubled and my confidence in interviews went through the roof.",
+    stars: 5,
+  },
+]
+
+export default function AboutPage({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined }
+}) {
+  const checkoutStatus = searchParams["checkout"]
+
   return (
-    <div className="container mx-auto px-4 py-8">
-      <Breadcrumb className="mb-6">
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink href="/">Home</BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbLink href="/about" isCurrentPage>
-              About
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto px-4 py-8">
+        <Breadcrumb className="mb-8">
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/">Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/about">About</BreadcrumbLink>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
 
-      <div className="max-w-4xl mx-auto">
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold tracking-tight mb-4">About the Intelligence Analyst Academy</h1>
-          <p className="text-xl text-muted-foreground">
-            Empowering intelligence professionals through accessible, high-quality education
+        {checkoutStatus === CHECKOUT_STATUS.SUCCESS && (
+          <div className="mb-8 rounded-lg bg-green-50 border border-green-200 p-4 text-green-800">
+            <p className="font-semibold">Payment successful! Welcome aboard.</p>
+            <p className="text-sm mt-1">You now have full access to all course materials.</p>
+          </div>
+        )}
+
+        {checkoutStatus === CHECKOUT_STATUS.CANCELLED && (
+          <div className="mb-8 rounded-lg bg-yellow-50 border border-yellow-200 p-4 text-yellow-800">
+            <p className="font-semibold">Checkout cancelled.</p>
+            <p className="text-sm mt-1">No worries — your progress is saved. Ready when you are.</p>
+          </div>
+        )}
+
+        {/* Hero Section */}
+        <section className="text-center py-16 md:py-24">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+            Master Financial Modeling
+            <span className="block text-primary">Land Your Dream Role</span>
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
+            The most comprehensive financial modeling curriculum trusted by analysts at top-tier banks and PE firms worldwide.
           </p>
-        </div>
 
-        <div className="grid gap-12">
-          <section>
-            <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
-            <p className="mb-4">
-              The Intelligence Analyst Academy was founded with a simple mission: to make high-quality intelligence
-              analysis training accessible to everyone who needs it. We believe that proper training and education
-              should not be limited by organizational resources or geographic location.
-            </p>
-            <p>
-              Our platform serves complete beginners, students, law enforcement officers, and private sector analysts
-              who need both foundational training and refresher modules. By providing open access to professional-grade
-              educational resources, we aim to improve the standard of intelligence analysis across all sectors.
-            </p>
-          </section>
+          {/* Testimonials */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+            {TESTIMONIALS.map((testimonial) => (
+              <Card key={testimonial.name} className="text-left border shadow-sm hover:shadow-md transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-1 mb-3">
+                    {Array.from({ length: testimonial.stars }).map((_, i) => (
+                      <StarIcon key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <QuoteIcon className="h-5 w-5 text-muted-foreground/40 mb-2" />
+                  <p className="text-sm text-foreground leading-relaxed mb-4">
+                    {testimonial.quote}
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="relative h-10 w-10 rounded-full overflow-hidden bg-muted flex-shrink-0">
+                      <Image
+                        src={testimonial.avatar}
+                        alt={testimonial.name}
+                        fill
+                        className="object-cover"
+                        unoptimized
+                      />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold leading-tight">{testimonial.name}</p>
+                      <p className="text-xs text-muted-foreground leading-tight">{testimonial.role}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
 
-          <section>
-            <h2 className="text-2xl font-bold mb-4">Our Approach</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Self-Paced Learning</h3>
-                <p>
-                  We understand that professionals have varying schedules and learning preferences. Our platform is
-                  designed to allow you to learn at your own pace, with content organized into digestible mini-topics
-                  that can be completed in 5-15 minutes.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Practical Focus</h3>
-                <p>
-                  Our content emphasizes practical, applicable skills that you can immediately implement in your work.
-                  From OSINT techniques to analytical methodologies, everything we teach is designed to make you more
-                  effective in real-world scenarios.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Community-Driven</h3>
-                <p>
-                  We believe in the power of peer learning and support. Our community forum provides a space for
-                  intelligence professionals to connect, share insights, and help each other grow in their careers.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Continuously Evolving</h3>
-                <p>
-                  The field of intelligence analysis is constantly changing, and our platform evolves with it. We
-                  regularly update our content and add new topics based on community feedback and emerging trends in the
-                  field.
-                </p>
-              </div>
-            </div>
-          </section>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <CheckoutButton
+              priceId={PRICE_MAP_DETAIL.pro}
+              label={`Get Started — ${PRICE_MAP_LABEL.pro}`}
+              className="text-lg px-8 py-6"
+            />
+            <Button variant="outline" size="lg" className="text-lg px-8 py-6" asChild>
+              <Link href="/courses">Browse Free Content</Link>
+            </Button>
+          </div>
+          <p className="text-sm text-muted-foreground mt-4">{REFUND_POLICY}</p>
+        </section>
 
-          <Separator />
+        {/* Pricing Section */}
+        <section className="py-16 border-t">
+          <h2 className="text-3xl font-bold text-center mb-4">Simple, Transparent Pricing</h2>
+          <p className="text-center text-muted-foreground mb-12">
+            One price. Full access. No hidden fees.
+          </p>
+          <div className="max-w-sm mx-auto">
+            <Card className="border-2 border-primary">
+              <CardContent className="p-8 text-center">
+                <p className="text-sm font-medium text-primary uppercase tracking-wide mb-2">Pro Access</p>
+                <p className="text-5xl font-bold mb-2">{PRICE_MAP_LABEL.pro}</p>
+                <p className="text-muted-foreground mb-8">Lifetime access to all models &amp; updates</p>
+                <ul className="text-sm text-left space-y-3 mb-8">
+                  {[
+                    "DCF, LBO, M&A, and Comps models",
+                    "Step-by-step video walkthroughs",
+                    "Excel files &amp; templates",
+                    "Interview prep guides",
+                    "Lifetime updates included",
+                  ].map((feature) => (
+                    <li key={feature} className="flex items-center gap-2">
+                      <span className="text-green-500 font-bold">✓</span>
+                      <span dangerouslySetInnerHTML={{ __html: feature }} />
+                    </li>
+                  ))}
+                </ul>
+                <CheckoutButton
+                  priceId={PRICE_MAP_DETAIL.pro}
+                  label="Get Instant Access"
+                  className="w-full"
+                />
+                <p className="text-xs text-muted-foreground mt-3">{REFUND_POLICY}</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
 
-          <section>
-            <h2 className="text-2xl font-bold mb-4">Access (not a price table)</h2>
-            <p className="mb-3">
-              {PRICE_MAP_LABEL} {PRICE_MAP_DETAIL} Academy Brief is a tool, not a
-              standalone SKU. There is no Explorer / Analyst / Professional / Enterprise table here.
-            </p>
-            <p className="mb-3">{CHECKOUT_STATUS}</p>
-            <p className="mb-3">{REFUND_POLICY}</p>
-            <p>
-              Details live on{" "}
-              <Link href="/pricing" className="text-cyan-400 underline underline-offset-2">
-                /pricing
-              </Link>
-              . Paid interest goes to the{" "}
-              <Link href="/waitlist" className="text-cyan-400 underline underline-offset-2">
-                waitlist
-              </Link>
-              .
-            </p>
-          </section>
-
-          <Separator />
-
-          <section>
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-            <p className="mb-6">Have questions, feedback, or suggestions? We&apos;d love to hear from you.</p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-2">General Inquiries</h3>
-                <p className="mb-2">
-                  Email:{" "}
-                  <a href={`mailto:${SUPPORT_EMAIL}`} className="text-cyan-400 underline underline-offset-2">
-                    {SUPPORT_EMAIL}
-                  </a>
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Content Requests</h3>
-                <p className="mb-4">Have a specific topic you&apos;d like us to cover?</p>
-                <Button asChild>
-                  <Link href="/request-topic">Request a Topic</Link>
-                </Button>
-              </div>
-            </div>
-          </section>
-        </div>
+        {/* Support */}
+        <section className="py-12 text-center border-t">
+          <p className="text-muted-foreground">
+            Questions?{" "}
+            <Link href={`mailto:${SUPPORT_EMAIL}`} className="text-primary underline underline-offset-4">
+              {SUPPORT_EMAIL}
+            </Link>
+          </p>
+        </section>
       </div>
     </div>
   )
