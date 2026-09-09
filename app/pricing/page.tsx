@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
-import { CHECKOUT_STATUS, DISCLAIMER, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY } from "@/lib/pricing"
+import { CHECKOUT_STATUS, DISCLAIMER, PRICE_MAP_DETAIL, PRICE_MAP_LABEL } from "@/lib/pricing"
 import { academyBriefFaqs, faqJsonLd, pricingJsonLd } from "@/lib/aeo"
 
 export const metadata: Metadata = {
@@ -25,7 +25,6 @@ export default function PricingPage() {
           <p className="mt-4 inline-block rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-medium text-amber-200">
             {CHECKOUT_STATUS}
           </p>
-          <p className="mt-4 text-sm text-slate-400">{REFUND_POLICY}</p>
           <p className="mt-4 text-sm text-slate-500">
             Machine-readable:{" "}
             <Link href="/pricing.json" className="text-cyan-400 underline underline-offset-2">

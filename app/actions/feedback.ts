@@ -1,23 +1,11 @@
 'use server'
 
-import { createClient } from '@supabase/supabase-js'
+import { supabaseAdmin } from '@/lib/supabase'
 
 export type FeedbackResult = { ok: boolean; message: string; id?: string }
 
 const VALID_CATEGORIES = ['Bug', 'Suggestion', 'Content Request', 'Other']
 const VALID_FEEDBACK_TYPES = ['bug', 'suggestion', 'feature_request', 'content_request', 'general']
-
-// Create Supabase client with service role (server-side only)
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL || '',
-  process.env.SUPABASE_SERVICE_ROLE_KEY || '',
-  {
-    auth: {
-      persistSession: false,
-      autoRefreshToken: false,
-    },
-  }
-)
 
 /**
  * Submit feedback to Supabase with page-specific context.
@@ -50,9 +38,13 @@ export async function submitFeedbackAction(args: {
     return { ok: false, message: 'Rating must be between 1 and 5' }
   }
 
+  if (!supabaseAdmin) {
+    return { ok: false, message: 'Failed to submit feedback. Please try again.' }
+  }
+
   try {
     // Insert into Supabase
-    const { data, error } = await supabase
+    const { data, error } = await supabaseAdmin
       .from('feedback')
       .insert([
         {

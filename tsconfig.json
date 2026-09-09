@@ -40,6 +40,8 @@
   ],
   "exclude": [
     "node_modules",
-    "_archive"
+    "_archive",
+    "utils/generate-category-thumbnails.ts",
+    "generate-hero-images.mjs"
   ]
 }

@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import "./globals.css"
 import "./button-animations.css"
-import { WaitlistPopup } from "@/components/waitlist-popup"
 
 import { Inter } from "next/font/google"
 import { ScrollToTop } from "@/components/scroll-to-top"
@@ -91,7 +90,6 @@ export default function RootLayout({
             </HumorProvider>
           </AuthProvider>
         </UserProvider>
-        <WaitlistPopup />
       </body>
     </html>
   )

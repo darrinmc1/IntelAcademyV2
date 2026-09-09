@@ -25,7 +25,6 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/waitlist`,       priority: 0.6, changeFrequency: "weekly"  },
   { url: `${BASE_URL}/contact`,        priority: 0.5, changeFrequency: "monthly" },
   { url: `${BASE_URL}/refunds`,        priority: 0.5, changeFrequency: "monthly" },
-  { url: `${BASE_URL}/buy`,            priority: 0.4, changeFrequency: "monthly" },
   { url: `${BASE_URL}/join`,           priority: 0.4, changeFrequency: "monthly" },
   { url: `${BASE_URL}/privacy`,        priority: 0.3, changeFrequency: "yearly"  },
   { url: `${BASE_URL}/terms`,          priority: 0.3, changeFrequency: "yearly"  },
