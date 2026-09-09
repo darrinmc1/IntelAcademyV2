@@ -56,32 +56,33 @@ export default function About() {
               <div>
                 <h3 className="text-xl font-semibold mb-2">Self-Paced Learning</h3>
                 <p>
-                  We understand that professionals have varying schedules and learning preferences. Our platform is
-                  designed to allow you to learn at your own pace, with content organized into digestible mini-topics
-                  that can be completed in 5-15 minutes.
+                  We understand that professionals have varying schedules and commitments. Every course and learning
+                  path on our platform is designed to be completed at your own pace, with no deadlines or time
+                  pressure. Pick up where you left off whenever it suits you.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Practical Focus</h3>
+                <h3 className="text-xl font-semibold mb-2">Practical Application</h3>
                 <p>
-                  Our content emphasizes practical, applicable skills that you can immediately implement in your work.
-                  From OSINT techniques to analytical methodologies, everything we teach is designed to make you more
-                  effective in real-world scenarios.
+                  Theory without practice is incomplete. Our curriculum emphasizes real-world scenarios, case studies,
+                  and hands-on exercises drawn from actual intelligence analysis workflows so you can apply skills
+                  immediately on the job.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Community-Driven</h3>
+                <h3 className="text-xl font-semibold mb-2">Structured Curriculum</h3>
                 <p>
-                  We believe in the power of peer learning and support. Our community forum provides a space for
-                  intelligence professionals to connect, share insights, and help each other grow in their careers.
+                  Each learning path is carefully sequenced so foundational concepts are mastered before advanced
+                  topics are introduced. Clear module breakdowns and time estimates help you plan your study sessions
+                  and track progress with confidence.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Continuously Evolving</h3>
+                <h3 className="text-xl font-semibold mb-2">Expert-Authored Content</h3>
                 <p>
-                  The field of intelligence analysis is constantly changing, and our platform evolves with it. We
-                  regularly update our content and add new topics based on community feedback and emerging trends in the
-                  field.
+                  All course material is written and reviewed by experienced intelligence professionals with backgrounds
+                  spanning government, law enforcement, and private sector analysis. You learn from practitioners, not
+                  just theorists.
                 </p>
               </div>
             </div>
@@ -90,22 +91,165 @@ export default function About() {
           <Separator />
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Access (not a price table)</h2>
-            <p className="mb-3">
-              {PRICE_MAP_LABEL} {PRICE_MAP_DETAIL} Academy Brief is a tool, not a
-              standalone SKU. There is no Explorer / Analyst / Professional / Enterprise table here.
+            <h2 className="text-2xl font-bold mb-6">What You Will Learn</h2>
+            <p className="mb-6 text-muted-foreground">
+              Our curriculum is organized into focused learning paths, each targeting a distinct skill set. Below is a
+              representative overview of the core modules and outcomes you can expect across our most popular paths.
             </p>
-            <p className="mb-3">{CHECKOUT_STATUS}</p>
-            <p className="mb-3">{REFUND_POLICY}</p>
+
+            <div className="grid gap-8">
+              <div className="border rounded-lg p-6">
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+                  <h3 className="text-xl font-semibold">Foundations of Intelligence Analysis</h3>
+                  <span className="text-sm text-muted-foreground bg-muted px-3 py-1 rounded-full w-fit">⏱ Approx. 4–6 hours</span>
+                </div>
+                <p className="mb-4 text-muted-foreground">
+                  The essential starting point for anyone entering the intelligence analysis field. No prior experience required.
+                </p>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold mb-2">Module Breakdown</h4>
+                    <ul className="space-y-1 text-sm">
+                      <li className="flex items-start gap-2"><span className="text-primary mt-0.5">▸</span> Module 1 — The Intelligence Cycle (45 min)</li>
+                      <li className="flex items-start gap-2"><span className="text-primary mt-0.5">▸</span> Module 2 — Collection Disciplines: HUMINT, SIGINT, OSINT (60 min)</li>
+                      <li className="flex items-start gap-2"><span className="text-primary mt-0.5">▸</span> Module 3 — Analytical Thinking &amp; Cognitive Biases (50 min)</li>
+                      <li className="flex items-start gap-2"><span className="text-primary mt-0.5">▸</span> Module 4 — Structured Analytic Techniques (SATs) (75 min)</li>
+                      <li className="flex items-start gap-2"><span className="text-primary mt-0.5">▸</span> Module 5 — Writing Intelligence Assessments (60 min)</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Learning Outcomes</h4>
+                    <ul className="space-y-1 text-sm">
+                      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span> Explain each phase of the intelligence cycle</li>
+                      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span> Distinguish between primary collection disciplines</li>
+                      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span> Identify and mitigate common cognitive biases</li>
+                      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span> Apply at least three structured analytic techniques</li>
+                      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span> Produce a clear, concise intelligence assessment</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-6">
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+                  <h3 className="text-xl font-semibold">Open Source Intelligence (OSINT)</h3>
+                  <span className="text-sm text-muted-foreground bg-muted px-3 py-1 rounded-full w-fit">⏱ Approx. 5–7 hours</span>
+                </div>
+                <p className="mb-4 text-muted-foreground">
+                  A practical deep-dive into collecting, verifying, and analysing publicly available information using professional-grade tools and tradecraft.
+                </p>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold mb-2">Module Breakdown</h4>
+                    <ul className="space-y-1 text-sm">
+                      <li className="flex items-start gap-2"><span className="text-primary mt-0.5">▸</span> Module 1 — OSINT Fundamentals &amp; Legal Boundaries (40 min)</li>
+                      <li className="flex items-start gap-2"><span className="text-primary mt-0.5">▸</span> Module 2 — Search Engine Operators &amp; Advanced Queries (55 min)</li>
+                      <li className="flex items-start gap-2"><span className="text-primary mt-0.5">▸</span> Module 3 — Social Media Intelligence (SOCMINT) (70 min)</li>
+                      <li className="flex items-start gap-2"><span className="text-primary mt-0.5">▸</span> Module 4 — Geospatial &amp; Imagery Analysis (65 min)</li>
+                      <li className="flex items-start gap-2"><span className="text-primary mt-0.5">▸</span> Module 5 — Source Verification &amp; Credibility Assessment (60 min)</li>
+                      <li className="flex items-start gap-2"><span className="text-primary mt-0.5">▸</span> Module 6 — Building an OSINT Workflow (50 min)</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Learning Outcomes</h4>
+                    <ul className="space-y-1 text-sm">
+                      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span> Conduct advanced open-source research within legal guidelines</li>
+                      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span> Exploit social media platforms for intelligence collection</li>
+                      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span> Geolocate images and verify visual content</li>
+                      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span> Assess source credibility and detect disinformation</li>
+                      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span> Build a repeatable, documented OSINT collection workflow</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-6">
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+                  <h3 className="text-xl font-semibold">Threat Assessment &amp; Risk Analysis</h3>
+                  <span className="text-sm text-muted-foreground bg-muted px-3 py-1 rounded-full w-fit">⏱ Approx. 6–8 hours</span>
+                </div>
+                <p className="mb-4 text-muted-foreground">
+                  An intermediate-to-advanced path covering systematic threat evaluation methodologies used across government and private sector environments.
+                </p>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold mb-2">Module Breakdown</h4>
+                    <ul className="space-y-1 text-sm">
+                      <li className="flex items-start gap-2"><span className="text-primary mt-0.5">▸</span> Module 1 — Threat vs. Risk: Key Distinctions (35 min)</li>
+                      <li className="flex items-start gap-2"><span className="text-primary mt-0.5">▸</span> Module 2 — Threat Actor Profiling &amp; Motivation Analysis (70 min)</li>
+                      <li className="flex items-start gap-2"><span className="text-primary mt-0.5">▸</span> Module 3 — Vulnerability &amp; Consequence Assessment (65 min)</li>
+                      <li className="flex items-start gap-2"><span className="text-primary mt-0.5">▸</span> Module 4 — Risk Matrices &amp; Prioritisation Frameworks (60 min)</li>
+                      <li className="flex items-start gap-2"><span className="text-primary mt-0.5">▸</span> Module 5 — Communicating Risk to Decision-Makers (55 min)</li>
+                      <li className="flex items-start gap-2"><span className="text-primary mt-0.5">▸</span> Module 6 — Case Studies: Real-World Threat Assessments (80 min)</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Learning Outcomes</h4>
+                    <ul className="space-y-1 text-sm">
+                      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span> Differentiate threat, vulnerability, and risk concepts</li>
+                      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span> Profile threat actors using structured frameworks</li>
+                      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span> Construct and interpret risk matrices</li>
+                      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span> Prioritise threats based on likelihood and impact</li>
+                      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span> Deliver concise risk briefings to non-technical stakeholders</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 text-center">
+              <Button asChild size="lg">
+                <Link href="/learning-paths">Browse All Learning Paths</Link>
+              </Button>
+            </div>
+          </section>
+
+          <Separator />
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Who Our Courses Are For</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="border rounded-lg p-5">
+                <h3 className="text-lg font-semibold mb-2">New Analysts</h3>
+                <p className="text-sm text-muted-foreground">
+                  No prior experience required. Our foundational paths build core competencies from the ground up,
+                  covering the intelligence cycle, analytic writing, and structured thinking in under six hours.
+                </p>
+              </div>
+              <div className="border rounded-lg p-5">
+                <h3 className="text-lg font-semibold mb-2">Law Enforcement &amp; Security</h3>
+                <p className="text-sm text-muted-foreground">
+                  Practical modules tailored to operational environments — threat assessment, OSINT tradecraft, and
+                  report writing designed for professionals who need actionable skills, not academic theory.
+                </p>
+              </div>
+              <div className="border rounded-lg p-5">
+                <h3 className="text-lg font-semibold mb-2">Experienced Practitioners</h3>
+                <p className="text-sm text-muted-foreground">
+                  Targeted refresher modules and advanced topics let seasoned analysts sharpen specific skills,
+                  stay current with evolving methodologies, and fill gaps without repeating content they already know.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <Separator />
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Pricing &amp; Access</h2>
+            <p className="mb-4">
+              We offer flexible access options to suit individuals and organisations of all sizes. Many foundational
+              topics are available free of charge so you can evaluate the quality of our content before committing.
+            </p>
+            <p className="mb-4">
+              Premium learning paths unlock the full module library, downloadable resources, and priority support.
+              All purchases are covered by our {REFUND_POLICY} refund policy — no questions asked.
+            </p>
             <p>
-              Details live on{" "}
-              <Link href="/pricing" className="text-cyan-400 underline underline-offset-2">
-                /pricing
-              </Link>
-              . Paid interest goes to the{" "}
-              <Link href="/waitlist" className="text-cyan-400 underline underline-offset-2">
-                waitlist
-              </Link>
+              For team or organisational licensing enquiries, please contact us at{" "}
+              <a href={`mailto:${SUPPORT_EMAIL}`} className="underline text-primary">
+                {SUPPORT_EMAIL}
+              </a>
               .
             </p>
           </section>
@@ -113,27 +257,55 @@ export default function About() {
           <Separator />
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-            <p className="mb-6">Have questions, feedback, or suggestions? We&apos;d love to hear from you.</p>
-            <div className="grid md:grid-cols-2 gap-8">
+            <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+            <div className="grid gap-6">
               <div>
-                <h3 className="text-xl font-semibold mb-2">General Inquiries</h3>
-                <p className="mb-2">
-                  Email:{" "}
-                  <a href={`mailto:${SUPPORT_EMAIL}`} className="text-cyan-400 underline underline-offset-2">
-                    {SUPPORT_EMAIL}
-                  </a>
+                <h3 className="text-lg font-semibold mb-1">How long does it take to complete a learning path?</h3>
+                <p className="text-muted-foreground">
+                  Each learning path displays an estimated completion time on its overview page. Most paths range from
+                  4 to 8 hours of study, broken into short modules you can complete in 30–60 minute sessions.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Content Requests</h3>
-                <p className="mb-4">Have a specific topic you&apos;d like us to cover?</p>
-                <Button asChild>
-                  <Link href="/request-topic">Request a Topic</Link>
-                </Button>
+                <h3 className="text-lg font-semibold mb-1">Do I need any prior knowledge to get started?</h3>
+                <p className="text-muted-foreground">
+                  Our foundational paths require no prior intelligence background. Intermediate and advanced paths
+                  list recommended prerequisites on their course pages so you can choose the right starting point.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-1">Will I receive a certificate upon completion?</h3>
+                <p className="text-muted-foreground">
+                  Completion certificates are available for all premium learning paths. Certificates detail the
+                  modules covered, total study hours, and the date of completion — suitable for CPD portfolios and
+                  professional development records.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-1">Can I access courses on mobile devices?</h3>
+                <p className="text-muted-foreground">
+                  Yes. The platform is fully responsive and optimised for smartphones and tablets, so you can study
+                  during commutes or whenever a desktop is not available.
+                </p>
               </div>
             </div>
           </section>
+
+          <div className="text-center py-8">
+            <h2 className="text-2xl font-bold mb-4">Ready to Start Learning?</h2>
+            <p className="text-muted-foreground mb-6">
+              Explore our full library of intelligence analysis courses and find the learning path that matches your
+              goals and experience level.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg">
+                <Link href="/learning-paths">Explore Learning Paths</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href="/topics">Browse All Topics</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
