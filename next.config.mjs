@@ -49,7 +49,11 @@ const nextConfig = {
     return [
       ...topicRedirects,
       { source: "/signup", destination: "/register", permanent: false },
-      { source: "/buy", destination: "/waitlist", permanent: false },
+      // PARK/GATE: /buy stays routed to waitlist until PAYMENTS_LIVE=true.
+      // Flip later with Stripe keys; do not enable Production until asked.
+      ...(process.env.PAYMENTS_LIVE === "true"
+        ? []
+        : [{ source: "/buy", destination: "/waitlist", permanent: false }]),
       { source: "/refund", destination: "/refunds", permanent: true },
       { source: "/community", destination: "/forum", permanent: true },
       { source: "/community/:path*", destination: "/forum", permanent: true },
