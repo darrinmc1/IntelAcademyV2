@@ -30,9 +30,18 @@ export default function About() {
       <div className="max-w-4xl mx-auto">
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold tracking-tight mb-4">About the Intelligence Analyst Academy</h1>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-muted-foreground mb-8">
             Empowering intelligence professionals through accessible, high-quality education
           </p>
+          {/* Primary CTA — hero-level conversion */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button asChild size="lg" className="px-8">
+              <Link href="/enroll">Enroll for Free</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="px-8">
+              <Link href="/learning-paths">Explore Learning Paths</Link>
+            </Button>
+          </div>
         </div>
 
         <div className="grid gap-12">
@@ -56,32 +65,29 @@ export default function About() {
               <div>
                 <h3 className="text-xl font-semibold mb-2">Self-Paced Learning</h3>
                 <p>
-                  We understand that professionals have varying schedules and learning preferences. Our platform is
-                  designed to allow you to learn at your own pace, with content organized into digestible mini-topics
-                  that can be completed in 5-15 minutes.
+                  We understand that professionals have varying schedules and learning styles. Our platform is designed
+                  to let you learn at your own pace, revisiting material as needed and progressing when you are ready.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Practical Focus</h3>
+                <h3 className="text-xl font-semibold mb-2">Practical Application</h3>
                 <p>
-                  Our content emphasizes practical, applicable skills that you can immediately implement in your work.
-                  From OSINT techniques to analytical methodologies, everything we teach is designed to make you more
-                  effective in real-world scenarios.
+                  Every module is built around real-world scenarios and techniques used by working analysts. Theory is
+                  always paired with practical exercises so skills transfer directly to your role.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Community-Driven</h3>
+                <h3 className="text-xl font-semibold mb-2">Expert-Authored Content</h3>
                 <p>
-                  We believe in the power of peer learning and support. Our community forum provides a space for
-                  intelligence professionals to connect, share insights, and help each other grow in their careers.
+                  Our curriculum is developed by experienced intelligence professionals with backgrounds spanning
+                  government, law enforcement, and the private sector.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Continuously Evolving</h3>
+                <h3 className="text-xl font-semibold mb-2">Continuously Updated</h3>
                 <p>
-                  The field of intelligence analysis is constantly changing, and our platform evolves with it. We
-                  regularly update our content and add new topics based on community feedback and emerging trends in the
-                  field.
+                  The intelligence landscape evolves rapidly. We regularly update existing modules and add new content
+                  to keep pace with emerging methodologies and threats.
                 </p>
               </div>
             </div>
@@ -89,50 +95,41 @@ export default function About() {
 
           <Separator />
 
-          <section>
-            <h2 className="text-2xl font-bold mb-4">Access (not a price table)</h2>
-            <p className="mb-3">
-              {PRICE_MAP_LABEL} {PRICE_MAP_DETAIL} Academy Brief is a tool, not a
-              standalone SKU. There is no Explorer / Analyst / Professional / Enterprise table here.
+          {/* Mid-page secondary CTA — users who have read enough to consider enrolling */}
+          <section className="text-center py-4">
+            <h2 className="text-2xl font-bold mb-3">Ready to advance your skills?</h2>
+            <p className="text-muted-foreground mb-6">
+              Join thousands of analysts who have already started their learning journey.
             </p>
-            <p className="mb-3">{CHECKOUT_STATUS}</p>
-            <p className="mb-3">{REFUND_POLICY}</p>
-            <p>
-              Details live on{" "}
-              <Link href="/pricing" className="text-cyan-400 underline underline-offset-2">
-                /pricing
-              </Link>
-              . Paid interest goes to the{" "}
-              <Link href="/waitlist" className="text-cyan-400 underline underline-offset-2">
-                waitlist
-              </Link>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button asChild size="lg" className="px-8">
+                <Link href="/enroll">Start Learning Free</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="px-8">
+                <Link href="/contact">Schedule a Demo</Link>
+              </Button>
+            </div>
+          </section>
+
+          <Separator />
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Pricing &amp; Access</h2>
+            <p className="mb-4">
+              We offer flexible access options to suit individuals and organizations of all sizes. Many foundational
+              modules are available at no cost, with premium content available through our subscription plans.
+            </p>
+            <p className="mb-6">
+              {REFUND_POLICY} For questions about pricing or enterprise licensing, contact us at{" "}
+              <a href={`mailto:${SUPPORT_EMAIL}`} className="underline text-primary">
+                {SUPPORT_EMAIL}
+              </a>
               .
             </p>
-          </section>
-
-          <Separator />
-
-          <section>
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-            <p className="mb-6">Have questions, feedback, or suggestions? We&apos;d love to hear from you.</p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-2">General Inquiries</h3>
-                <p className="mb-2">
-                  Email:{" "}
-                  <a href={`mailto:${SUPPORT_EMAIL}`} className="text-cyan-400 underline underline-offset-2">
-                    {SUPPORT_EMAIL}
-                  </a>
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Content Requests</h3>
-                <p className="mb-4">Have a specific topic you&apos;d like us to cover?</p>
-                <Button asChild>
-                  <Link href="/request-topic">Request a Topic</Link>
-                </Button>
-              </div>
-            </div>
+            {/* Tertiary CTA — pricing-aware users ready to commit */}
+            <Button asChild variant="outline">
+              <Link href="/pricing">View Pricing Plans</Link>
+            </Button>
           </section>
         </div>
       </div>
