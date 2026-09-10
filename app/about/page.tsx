@@ -50,38 +50,108 @@ export default function About() {
             </p>
           </section>
 
+          <Separator />
+
           <section>
-            <h2 className="text-2xl font-bold mb-4">Our Approach</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Self-Paced Learning</h3>
-                <p>
-                  We understand that professionals have varying schedules and learning preferences. Our platform is
-                  designed to allow you to learn at your own pace, with content organized into digestible mini-topics
-                  that can be completed in 5-15 minutes.
+            <h2 className="text-2xl font-bold mb-6">Core Intelligence Disciplines</h2>
+            <p className="text-muted-foreground mb-8">
+              Our curriculum is structured around four foundational intelligence disciplines, each designed to build
+              practical, job-ready skills for modern analysts.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="border rounded-lg p-6 bg-card">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-2xl" aria-hidden="true">🔍</span>
+                  <h3 className="text-lg font-semibold">OSINT &amp; Open-Source Intelligence</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  Master the collection and analysis of publicly available information. Learn advanced search
+                  techniques, social media intelligence, and digital footprint analysis used by professional analysts.
+                </p>
+                <ul className="mt-3 space-y-1 text-sm text-muted-foreground list-disc list-inside">
+                  <li>Advanced web and database search operators</li>
+                  <li>Social media monitoring and analysis</li>
+                  <li>Source verification and credibility assessment</li>
+                </ul>
+              </div>
+
+              <div className="border rounded-lg p-6 bg-card">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-2xl" aria-hidden="true">⚠️</span>
+                  <h3 className="text-lg font-semibold">Threat Assessment</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  Develop structured frameworks for identifying, evaluating, and communicating threats. Apply
+                  proven methodologies used across government, law enforcement, and corporate security.
+                </p>
+                <ul className="mt-3 space-y-1 text-sm text-muted-foreground list-disc list-inside">
+                  <li>Structured analytic techniques (SATs)</li>
+                  <li>Risk matrix construction and scoring</li>
+                  <li>Threat actor profiling and intent analysis</li>
+                </ul>
+              </div>
+
+              <div className="border rounded-lg p-6 bg-card">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-2xl" aria-hidden="true">🗺️</span>
+                  <h3 className="text-lg font-semibold">Geospatial Intelligence (GEOINT)</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  Interpret and exploit geographic and imagery data to support intelligence analysis. Understand
+                  mapping tools, satellite imagery, and location-based pattern-of-life analysis.
+                </p>
+                <ul className="mt-3 space-y-1 text-sm text-muted-foreground list-disc list-inside">
+                  <li>Satellite and aerial imagery interpretation</li>
+                  <li>GIS tools and geospatial data layers</li>
+                  <li>Movement analysis and route mapping</li>
+                </ul>
+              </div>
+
+              <div className="border rounded-lg p-6 bg-card">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-2xl" aria-hidden="true">💰</span>
+                  <h3 className="text-lg font-semibold">Financial Intelligence (FININT)</h3>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  Trace financial flows, identify illicit networks, and support investigations through money
+                  trail analysis. Essential skills for fraud, sanctions, and counter-terrorism finance work.
+                </p>
+                <ul className="mt-3 space-y-1 text-sm text-muted-foreground list-disc list-inside">
+                  <li>Follow-the-money investigative techniques</li>
+                  <li>Beneficial ownership and corporate structure analysis</li>
+                  <li>Cryptocurrency tracing fundamentals</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <Separator />
+
+          <section>
+            <h2 className="text-2xl font-bold mb-6">What You Will Learn</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center p-4">
+                <div className="text-3xl mb-3" aria-hidden="true">🎯</div>
+                <h3 className="font-semibold mb-2">Practical Skills</h3>
+                <p className="text-sm text-muted-foreground">
+                  Every module is built around real-world scenarios and hands-on exercises drawn from actual
+                  intelligence workflows.
                 </p>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Practical Focus</h3>
-                <p>
-                  Our content emphasizes practical, applicable skills that you can immediately implement in your work.
-                  From OSINT techniques to analytical methodologies, everything we teach is designed to make you more
-                  effective in real-world scenarios.
+              <div className="text-center p-4">
+                <div className="text-3xl mb-3" aria-hidden="true">📋</div>
+                <h3 className="font-semibold mb-2">Structured Frameworks</h3>
+                <p className="text-sm text-muted-foreground">
+                  Learn the analytic frameworks and tradecraft standards used by professional intelligence
+                  agencies and private sector firms.
                 </p>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Community-Driven</h3>
-                <p>
-                  We believe in the power of peer learning and support. Our community forum provides a space for
-                  intelligence professionals to connect, share insights, and help each other grow in their careers.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Continuously Evolving</h3>
-                <p>
-                  The field of intelligence analysis is constantly changing, and our platform evolves with it. We
-                  regularly update our content and add new topics based on community feedback and emerging trends in the
-                  field.
+              <div className="text-center p-4">
+                <div className="text-3xl mb-3" aria-hidden="true">📝</div>
+                <h3 className="font-semibold mb-2">Clear Communication</h3>
+                <p className="text-sm text-muted-foreground">
+                  Master intelligence writing, briefing techniques, and how to present findings to
+                  decision-makers with clarity and confidence.
                 </p>
               </div>
             </div>
@@ -90,48 +160,104 @@ export default function About() {
           <Separator />
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Access (not a price table)</h2>
-            <p className="mb-3">
-              {PRICE_MAP_LABEL} {PRICE_MAP_DETAIL} Academy Brief is a tool, not a
-              standalone SKU. There is no Explorer / Analyst / Professional / Enterprise table here.
+            <h2 className="text-2xl font-bold mb-4">Our Approach</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Self-Paced Learning</h3>
+                <p>
+                  We understand that professionals have varying schedules and commitments. All courses are
+                  designed for self-paced completion, so you can learn when it suits you — whether that is
+                  early mornings, lunch breaks, or evenings.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Practitioner-Led Content</h3>
+                <p>
+                  Our curriculum is developed by experienced intelligence practitioners with backgrounds in
+                  government, law enforcement, and the private sector. You learn from people who have done
+                  the work, not just studied it.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Accessible to All Levels</h3>
+                <p>
+                  Whether you are brand new to intelligence analysis or a seasoned professional looking to
+                  sharpen a specific skill, our learning paths are structured to meet you where you are.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Continuously Updated</h3>
+                <p>
+                  The intelligence landscape evolves rapidly. We regularly update our content to reflect
+                  new tools, techniques, threats, and best practices so your training stays relevant.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <Separator />
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Who We Serve</h2>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="border rounded-lg p-4 bg-card">
+                <h3 className="font-semibold mb-2">🏛️ Government &amp; Law Enforcement</h3>
+                <p className="text-sm text-muted-foreground">
+                  Officers and analysts seeking structured training to complement on-the-job experience
+                  or prepare for new roles.
+                </p>
+              </div>
+              <div className="border rounded-lg p-4 bg-card">
+                <h3 className="font-semibold mb-2">🏢 Private Sector Analysts</h3>
+                <p className="text-sm text-muted-foreground">
+                  Corporate security, risk, and compliance professionals who need intelligence tradecraft
+                  skills for business environments.
+                </p>
+              </div>
+              <div className="border rounded-lg p-4 bg-card">
+                <h3 className="font-semibold mb-2">🎓 Students &amp; Career Changers</h3>
+                <p className="text-sm text-muted-foreground">
+                  Individuals building foundational knowledge to enter the intelligence, security,
+                  or investigative professions.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <Separator />
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Pricing &amp; Access</h2>
+            <p className="mb-4">
+              We offer flexible access options to suit individuals and teams. Our goal is to keep
+              professional-grade training affordable and accessible.
             </p>
-            <p className="mb-3">{CHECKOUT_STATUS}</p>
-            <p className="mb-3">{REFUND_POLICY}</p>
+            <p className="mb-4">
+              {REFUND_POLICY}
+            </p>
             <p>
-              Details live on{" "}
-              <Link href="/pricing" className="text-cyan-400 underline underline-offset-2">
-                /pricing
-              </Link>
-              . Paid interest goes to the{" "}
-              <Link href="/waitlist" className="text-cyan-400 underline underline-offset-2">
-                waitlist
-              </Link>
+              For questions about pricing, team licenses, or institutional access, contact us at{" "}
+              <a href={`mailto:${SUPPORT_EMAIL}`} className="underline text-primary">
+                {SUPPORT_EMAIL}
+              </a>
               .
             </p>
           </section>
 
           <Separator />
 
-          <section>
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-            <p className="mb-6">Have questions, feedback, or suggestions? We&apos;d love to hear from you.</p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-2">General Inquiries</h3>
-                <p className="mb-2">
-                  Email:{" "}
-                  <a href={`mailto:${SUPPORT_EMAIL}`} className="text-cyan-400 underline underline-offset-2">
-                    {SUPPORT_EMAIL}
-                  </a>
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Content Requests</h3>
-                <p className="mb-4">Have a specific topic you&apos;d like us to cover?</p>
-                <Button asChild>
-                  <Link href="/request-topic">Request a Topic</Link>
-                </Button>
-              </div>
+          <section className="text-center">
+            <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
+            <p className="text-muted-foreground mb-6">
+              Explore our learning paths and begin building your intelligence analysis skills today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg">
+                <Link href="/learning-paths">Browse Learning Paths</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href="/topics">Explore All Topics</Link>
+              </Button>
             </div>
           </section>
         </div>
