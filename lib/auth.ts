@@ -2,16 +2,26 @@ import { SignJWT, jwtVerify } from 'jose'
 import { cookies } from 'next/headers'
 import { normalizeUserPlan, type UserPlan } from '@/lib/user-plan'
 
-// Require a real secret in production — never silently fall back to a known
-// default, which would let anyone forge a session cookie.
-const rawSecret = process.env.JWT_SECRET
-if (!rawSecret && process.env.NODE_ENV === 'production') {
-  throw new Error('JWT_SECRET environment variable is required in production')
-}
-const JWT_SECRET = new TextEncoder().encode(
-  rawSecret || 'intel-academy-dev-only-secret'
-)
 const COOKIE_NAME = 'intel-session'
+const DEV_ONLY_SECRET = 'intel-academy-dev-only-secret'
+
+/**
+ * Resolve the signing key when a token is created or verified — not at import.
+ * `next build` sets NODE_ENV=production while collecting page data for every
+ * route that imports this module. Throwing here at module load kills Vercel
+ * Preview (and local `next build`) when JWT_SECRET is unset.
+ * Runtime Production still refuses the known default so cookies cannot be forged.
+ */
+function getJwtSecret(): Uint8Array {
+  const rawSecret = process.env.JWT_SECRET
+  if (rawSecret) {
+    return new TextEncoder().encode(rawSecret)
+  }
+  if (process.env.NODE_ENV === 'production') {
+    throw new Error('JWT_SECRET environment variable is required in production')
+  }
+  return new TextEncoder().encode(DEV_ONLY_SECRET)
+}
 
 export type UserRole = 'admin' | 'moderator' | 'editor' | 'viewer' | 'user'
 
@@ -46,7 +56,7 @@ export async function createToken(user: AuthUser): Promise<string> {
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
     .setExpirationTime('30d')
-    .sign(JWT_SECRET)
+    .sign(getJwtSecret())
 }
 
 /**
@@ -54,7 +64,7 @@ export async function createToken(user: AuthUser): Promise<string> {
  */
 export async function verifyToken(token: string): Promise<AuthUser | null> {
   try {
-    const { payload } = await jwtVerify(token, JWT_SECRET)
+    const { payload } = await jwtVerify(token, getJwtSecret())
     const user = payload as unknown as AuthUser
     user.plan = normalizeUserPlan(user.plan)
     return user
