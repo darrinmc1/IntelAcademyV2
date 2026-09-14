@@ -1,5 +1,0 @@
-allowBuilds:
-  bufferutil: true
-  canvas: true
-  sharp: true
-  unrs-resolver: true

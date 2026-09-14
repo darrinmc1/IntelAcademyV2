@@ -2,6 +2,7 @@
   "name": "intel-analyst-academy",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "npm@10.9.7",
   "scripts": {
     "build": "next build",
     "dev": "cross-env NODE_ENV=development next dev",
@@ -47,7 +48,6 @@
     "ai": "latest",
     "autoprefixer": "^10.4.20",
     "bcryptjs": "^3.0.3",
-    "canvas": "^3.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",
@@ -81,6 +81,9 @@
     "react-day-picker": {
       "date-fns": "$date-fns"
     }
+  },
+  "optionalDependencies": {
+    "canvas": "^3.2.3"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
