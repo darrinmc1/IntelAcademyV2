@@ -76,13 +76,13 @@ export default async function LessonInDevelopment({
             </div>
 
             <div className="border-t pt-6">
-              <h3 className="text-lg font-medium">Interested in another topic?</h3>
+              <h3 className="text-lg font-medium">Want a different lesson subject?</h3>
               <p className="text-muted-foreground mt-1 mb-4">
-                Have another idea for a lesson? We&apos;d love to hear it.
+                If it is not on the academy yet, request a new lesson topic. To report a problem on this page, send feedback instead.
               </p>
               <Button asChild variant="outline">
                 <Link href="/request-topic">
-                  Suggest a Topic
+                  Request a new topic
                 </Link>
               </Button>
             </div>

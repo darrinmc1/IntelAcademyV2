@@ -109,6 +109,9 @@ export async function initDatabase() {
   `
   await sql`CREATE INDEX IF NOT EXISTS idx_topic_requests_status ON topic_requests(status)`
   await sql`CREATE INDEX IF NOT EXISTS idx_topic_requests_created_at ON topic_requests(created_at DESC)`
+  // Explicit intent so n8n / publishers can filter without inferring from category.
+  await sql`ALTER TABLE feedback ADD COLUMN IF NOT EXISTS intent TEXT DEFAULT 'feedback'`
+  await sql`ALTER TABLE topic_requests ADD COLUMN IF NOT EXISTS intent TEXT DEFAULT 'topic_request'`
 
   // Published content (migration 004)
   await sql`
@@ -511,8 +514,9 @@ export async function submitFeedback(args: {
   page_title?: string
   feedback_type?: 'bug' | 'suggestion' | 'feature_request' | 'content_request' | 'general'
 }): Promise<string> {
+  await sql`ALTER TABLE feedback ADD COLUMN IF NOT EXISTS intent TEXT DEFAULT 'feedback'`
   const r = await sql`
-    INSERT INTO feedback (category, rating, message, page, email, ip_address, page_url, page_title, feedback_type)
+    INSERT INTO feedback (category, rating, message, page, email, ip_address, page_url, page_title, feedback_type, intent)
     VALUES (
       ${args.category}, 
       ${args.rating ?? null}, 
@@ -522,7 +526,8 @@ export async function submitFeedback(args: {
       ${args.ip ?? null},
       ${args.page_url ?? null},
       ${args.page_title ?? null},
-      ${args.feedback_type ?? 'general'}
+      ${args.feedback_type ?? 'general'},
+      'feedback'
     )
     RETURNING id
   `
@@ -536,10 +541,11 @@ export async function submitTopicRequest(args: {
   experience_level?: string
   email?: string
 }): Promise<string> {
+  await sql`ALTER TABLE topic_requests ADD COLUMN IF NOT EXISTS intent TEXT DEFAULT 'topic_request'`
   const r = await sql`
-    INSERT INTO topic_requests (topic_title, category, description, experience_level, email)
+    INSERT INTO topic_requests (topic_title, category, description, experience_level, email, intent)
     VALUES (${args.topic_title}, ${args.category ?? null}, ${args.description},
-            ${args.experience_level ?? null}, ${args.email ?? null})
+            ${args.experience_level ?? null}, ${args.email ?? null}, 'topic_request')
     RETURNING id
   `
   return r.rows[0].id

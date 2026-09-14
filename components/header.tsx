@@ -282,7 +282,7 @@ export function Header() {
           </div>
 
           <Button asChild className="hidden sm:flex bg-cyan-600 hover:bg-cyan-500 text-white rounded-full px-4 py-1 text-sm glow-primary-hover border border-cyan-400/30">
-            <Link href="/request-topic">Request Topic</Link>
+            <Link href="/request-topic">Request a new topic</Link>
           </Button>
         </div>
       </div>

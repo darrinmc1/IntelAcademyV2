@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -11,34 +12,43 @@ import { useToast } from "@/components/ui/use-toast"
 export function RequestTopicForm() {
   const { toast } = useToast()
   const [email, setEmail] = useState("")
-  const [text, setText] = useState("")
+  const [title, setTitle] = useState("")
+  const [details, setDetails] = useState("")
   const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    const topicTitle = title.trim()
+    if (!topicTitle) {
+      toast({
+        title: "Topic title required",
+        description: "Name the new lesson subject you want us to add.",
+        variant: "destructive",
+      })
+      return
+    }
     setLoading(true)
     try {
-      const page = typeof window !== "undefined" ? window.location.href : ""
-      const message = text.trim() || "Topic request (no details provided)"
-      const response = await fetch("/api/feedback", {
+      const description = details.trim() || `Please add a new lesson topic: ${topicTitle}`
+      const response = await fetch("/api/request-topic", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          category: "Content Request",
-          message,
+          topic: topicTitle,
+          description,
           email: email.trim() || undefined,
-          page,
         }),
       })
       const data = await response.json()
 
       if (response.ok) {
         toast({
-          title: "Request Submitted!",
-          description: "Thanks for your feedback. We'll review your topic suggestion.",
+          title: "New topic request submitted",
+          description: "We'll review this lesson idea. This is not a bug report.",
         })
         setEmail("")
-        setText("")
+        setTitle("")
+        setDetails("")
       } else {
         toast({
           title: "Error",
@@ -46,7 +56,7 @@ export function RequestTopicForm() {
           variant: "destructive",
         })
       }
-    } catch (error) {
+    } catch {
       toast({
         title: "Error",
         description: "Something went wrong. Please try again later.",
@@ -60,20 +70,34 @@ export function RequestTopicForm() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Request a New Topic</CardTitle>
+        <CardTitle>Request a new lesson topic</CardTitle>
         <CardDescription>
-          Have an idea for a new lesson or learning path? Let us know — everything is optional.
+          Ask for a subject that is not on the academy yet. To report a problem on an existing page,{" "}
+          <Link href="/feedback" className="underline underline-offset-2">
+            send feedback
+          </Link>{" "}
+          instead.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="topic-details">What would you like to learn? (optional)</Label>
+            <Label htmlFor="topic-title">New lesson topic</Label>
+            <Input
+              id="topic-title"
+              placeholder="e.g., AI in Intelligence Analysis"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              required
+            />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="topic-details">What should it cover? (optional)</Label>
             <Textarea
               id="topic-details"
-              placeholder="e.g., AI in Intelligence Analysis"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
+              placeholder="Optional scope notes for the new subject"
+              value={details}
+              onChange={(e) => setDetails(e.target.value)}
               rows={3}
             />
           </div>
@@ -88,7 +112,7 @@ export function RequestTopicForm() {
             />
           </div>
           <Button type="submit" className="w-full" disabled={loading}>
-            {loading ? "Submitting…" : "Submit Request"}
+            {loading ? "Submitting…" : "Request this new topic"}
           </Button>
         </form>
       </CardContent>

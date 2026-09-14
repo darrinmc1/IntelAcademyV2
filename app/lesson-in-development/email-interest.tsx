@@ -32,7 +32,7 @@ export default function EmailInterest({ subject, body, lesson, children }: Email
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          category: "Content Request",
+          category: "Suggestion",
           message,
           email: email.trim() || undefined,
           page,
@@ -40,7 +40,10 @@ export default function EmailInterest({ subject, body, lesson, children }: Email
       })
       const data = await res.json()
       if (res.ok) {
-        toast({ title: "Thanks!", description: "We've noted your interest and will prioritize this topic." })
+        toast({
+          title: "Thanks!",
+          description: "We've noted your interest in this existing lesson. This does not create a new topic page.",
+        })
         setOpen(false)
         setText("")
         setEmail("")

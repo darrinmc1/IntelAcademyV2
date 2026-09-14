@@ -2,6 +2,7 @@
 
 import { submitTopicRequest, getPendingTopicRequestCount } from "@/lib/db"
 import { sendAdminNotification } from "@/lib/email"
+import { requireTopicRequestIntent } from "@/lib/submission-intent"
 
 export type TopicRequestResult = { ok: boolean; message: string; id?: string; emailWarning?: string }
 
@@ -16,8 +17,8 @@ const VALID_CATEGORIES = [
 ]
 
 /**
- * Submit a topic request (what content users want to learn).
- * Writes to topic_requests table + notifies admin.
+ * Submit a request for a NEW lesson topic that does not exist yet.
+ * Writes to topic_requests ONLY. Never writes feedback, never generates pages.
  */
 export async function submitTopicRequestAction(args: {
   topic_title: string
@@ -26,12 +27,12 @@ export async function submitTopicRequestAction(args: {
   experience_level?: string
   email?: string
 }): Promise<TopicRequestResult> {
-  // Validate
-  if (!args.topic_title?.trim()) {
-    return { ok: false, message: "Topic title is required" }
-  }
-  if (!args.description?.trim()) {
-    return { ok: false, message: "Description is required" }
+  const gated = requireTopicRequestIntent({
+    topicTitle: args.topic_title,
+    description: args.description,
+  })
+  if (!gated.ok) {
+    return { ok: false, message: gated.message }
   }
   if (args.category && !VALID_CATEGORIES.includes(args.category)) {
     return { ok: false, message: "Invalid category" }

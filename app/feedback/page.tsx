@@ -37,7 +37,13 @@ export default function FeedbackPage() {
       const res = await fetch("/api/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, type, message }),
+        body: JSON.stringify({
+          name,
+          email,
+          category: type || "Other",
+          message,
+          page: typeof window !== "undefined" ? window.location.href : undefined,
+        }),
       })
       if (!res.ok) {
         const data = await res.json().catch(() => ({}))
@@ -74,9 +80,17 @@ export default function FeedbackPage() {
               <MessageSquare className="h-8 w-8 text-blue-600" />
             </div>
           </div>
-          <h1 className="text-4xl font-bold tracking-tight mb-2">Send Feedback</h1>
+          <h1 className="text-4xl font-bold tracking-tight mb-2">Report a problem or page fix</h1>
           <p className="text-muted-foreground">
-            Found a bug? Have a suggestion? Want to tell us what&apos;s working well? We&apos;d love to hear from you.
+            Found a bug, a repeated header, or something wrong on an existing page? Tell us here.
+            This stays in the feedback queue — it will not create a new lesson topic.
+          </p>
+          <p className="text-sm text-muted-foreground mt-3">
+            Want a brand-new lesson that is not on the site yet?{" "}
+            <a href="/request-topic" className="text-cyan-700 underline underline-offset-2">
+              Request a new topic
+            </a>{" "}
+            instead.
           </p>
         </div>
 
@@ -106,9 +120,9 @@ export default function FeedbackPage() {
         ) : (
           <Card>
             <CardHeader>
-              <CardTitle>Feedback Form</CardTitle>
+              <CardTitle>Feedback form</CardTitle>
               <CardDescription>
-                All fields except your message are optional.
+                Report a problem, suggest a page fix, or comment on an existing lesson. All fields except your message are optional.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -136,18 +150,16 @@ export default function FeedbackPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="type">Feedback Type</Label>
+                  <Label htmlFor="type">What is this about?</Label>
                   <Select value={type} onValueChange={setType}>
                     <SelectTrigger>
                       <SelectValue placeholder="Select a type" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Bug Report">Bug Report</SelectItem>
-                      <SelectItem value="Content Issue">Content Issue</SelectItem>
-                      <SelectItem value="Feature Request">Feature Request</SelectItem>
-                      <SelectItem value="General Feedback">General Feedback</SelectItem>
-                      <SelectItem value="Compliment">Compliment</SelectItem>
-                      <SelectItem value="Other">Other</SelectItem>
+                      <SelectItem value="Bug">Bug — something is broken</SelectItem>
+                      <SelectItem value="Suggestion">Suggest a page fix</SelectItem>
+                      <SelectItem value="Content Request">Comment on an existing lesson</SelectItem>
+                      <SelectItem value="Other">Other feedback</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

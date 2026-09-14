@@ -126,10 +126,10 @@ export default function About() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Content Requests</h3>
-                <p className="mb-4">Have a specific topic you&apos;d like us to cover?</p>
+                <h3 className="text-xl font-semibold mb-2">New lesson topics</h3>
+                <p className="mb-4">Want a subject that is not on the academy yet? Request a new lesson topic — not a bug report.</p>
                 <Button asChild>
-                  <Link href="/request-topic">Request a Topic</Link>
+                  <Link href="/request-topic">Request a new topic</Link>
                 </Button>
               </div>
             </div>

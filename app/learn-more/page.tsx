@@ -354,12 +354,12 @@ export default function LearnMore() {
                 </Button>
               </div>
               <div className="text-center">
-                <h3 className="text-xl font-bold mb-2">Request a Topic</h3>
+                <h3 className="text-xl font-bold mb-2">Request a new topic</h3>
                 <p className="mb-4">
-                  Don&apos;t see what you&apos;re looking for? Let us know what topics you&apos;d like us to cover next.
+                  Don&apos;t see the lesson subject yet? Request a new topic — not a bug report on an existing page.
                 </p>
                 <Button asChild>
-                  <Link href="/request-topic">Submit a Request</Link>
+                  <Link href="/request-topic">Request a new topic</Link>
                 </Button>
               </div>
               <div className="text-center">
