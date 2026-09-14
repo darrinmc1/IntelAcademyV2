@@ -90,7 +90,7 @@ export default function About() {
           <Separator />
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Access (not a price table)</h2>
+            <h2 className="text-2xl font-bold mb-4">Access</h2>
             <p className="mb-3">
               {PRICE_MAP_LABEL} {PRICE_MAP_DETAIL} Academy Brief is a tool, not a
               standalone SKU. There is no Explorer / Analyst / Professional / Enterprise table here.

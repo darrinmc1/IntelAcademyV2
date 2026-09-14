@@ -55,7 +55,7 @@ export function buildLlmTxt(): string {
   const planBlock = pricing.plans
     .map(
       (p) =>
-        `- ${p.name}: ${p.label} — video: ${p.includesVideo} — ${p.url}`,
+        `- ${p.priceLabel} ${p.name}: ${p.label} — video: ${p.includesVideo} — ${p.url}`,
     )
     .join("\n")
 
@@ -80,7 +80,7 @@ ${DISCLAIMER}
 - Not a standalone Brief SKU
 - Checkout: waitlist only (no Stripe, Payment Links, or x402)
 
-## Access (no live prices)
+## Access (planned prices — waitlist)
 
 Parseable: ${SITE_URL}/pricing.json
 Human: ${SITE_URL}/pricing
@@ -129,8 +129,10 @@ export function pricingJsonLd() {
       description: plan.description,
       additionalProperty: [
         { "@type": "PropertyValue", name: "label", value: plan.blurb },
+        { "@type": "PropertyValue", name: "price", value: plan.priceLabel },
         { "@type": "PropertyValue", name: "includesVideo", value: String(plan.includesVideo) },
         { "@type": "PropertyValue", name: "available", value: String(plan.available) },
+        { "@type": "PropertyValue", name: "cta", value: plan.cta },
       ],
     })),
     additionalProperty: [

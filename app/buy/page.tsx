@@ -31,7 +31,7 @@ export default function BuyPage() {
             Contact
           </Link>
           <Link href="/pricing" className="text-cyan-400 underline underline-offset-2">
-            Coming soon
+            Pricing
           </Link>
           <a href={`mailto:${SUPPORT_EMAIL}`} className="text-cyan-400 underline underline-offset-2">
             {SUPPORT_EMAIL}

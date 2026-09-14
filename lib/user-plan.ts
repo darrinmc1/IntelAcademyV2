@@ -8,7 +8,7 @@ export const VIDEO_PLAN: UserPlan = "video"
 /**
  * Signup / waitlist labels for the stored USER_PLANS field.
  * Catalog ids in pricing.json use `normal` for the written plan; the stored plan is `pro`.
- * No live dollar amounts — checkout isn't live.
+ * Public dollar amounts live only in lib/pricing.ts.
  */
 export const USER_PLAN_LABELS: Record<UserPlan, string> = {
   free: "Free — written lessons, no video",
