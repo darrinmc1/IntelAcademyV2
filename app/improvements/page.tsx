@@ -23,7 +23,7 @@ export default function ImprovementsPage() {
             <WaitlistSignup source="improvements" />
           </div>
           <p className="text-slate-500 max-w-lg mx-auto mb-8 text-sm">
-            Same coming-soon note as{" "}
+            Same price map as{" "}
             <Link href="/pricing" className="text-blue-700 underline underline-offset-2">
               /pricing
             </Link>

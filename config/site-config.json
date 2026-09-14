@@ -16,7 +16,8 @@
   "pricing": {
     "checkout": "waitlist",
     "paymentsLive": false,
-    "note": "No live prices. Written lessons are free. Video is coming soon."
+    "source": "lib/pricing.ts",
+    "note": "Canonical map lives in lib/pricing.ts. Checkout is waitlist only."
   },
   "points": {
     "lessonComplete": 50,
