@@ -95,7 +95,7 @@ export async function submitFeedbackAction(args: {
 
   try {
     const inserted = await insertFeedbackRow(row)
-    if (!inserted.ok) {
+    if (inserted.ok === false) {
       return { ok: false, message: inserted.message }
     }
 
