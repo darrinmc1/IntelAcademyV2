@@ -90,7 +90,7 @@ export async function submitFeedbackAction(args: {
     page_title: args.page_title || null,
     feedback_type: args.feedback_type || feedbackTypeForCategory(category),
     status: 'new',
-    intent,
+    intent: 'feedback',
   }
 
   try {

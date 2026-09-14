@@ -118,7 +118,10 @@ export function classifySubmission(input: {
 /**
  * Feedback endpoints ignore client-supplied intent/channel and always store feedback.
  */
-export function forceFeedbackIntent(): { intent: SubmissionIntent; channel: string } {
+export function forceFeedbackIntent(): {
+  intent: typeof SUBMISSION_INTENTS.FEEDBACK
+  channel: typeof FEEDBACK_CHANNEL
+} {
   return { intent: SUBMISSION_INTENTS.FEEDBACK, channel: FEEDBACK_CHANNEL }
 }
 
