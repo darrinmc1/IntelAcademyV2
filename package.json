@@ -2,6 +2,7 @@
   "name": "intel-analyst-academy",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "npm@10.9.7",
   "scripts": {
     "build": "next build",
     "dev": "cross-env NODE_ENV=development next dev",
