@@ -42,7 +42,7 @@ export async function POST(request: Request) {
     const topicTitle = String(topic_title || topic || "").trim()
     const details = String(description || message || "").trim() || topicTitle
     const gated = requireTopicRequestIntent({ topicTitle, description: details })
-    if (!gated.ok) {
+    if (gated.ok === false) {
       return NextResponse.json({ error: gated.message }, { status: 400 })
     }
 

@@ -31,7 +31,7 @@ export async function submitTopicRequestAction(args: {
     topicTitle: args.topic_title,
     description: args.description,
   })
-  if (!gated.ok) {
+  if (gated.ok === false) {
     return { ok: false, message: gated.message }
   }
   if (args.category && !VALID_CATEGORIES.includes(args.category)) {

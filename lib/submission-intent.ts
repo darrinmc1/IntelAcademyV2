@@ -131,7 +131,9 @@ export function forceFeedbackIntent(): {
 export function requireTopicRequestIntent(input: {
   topicTitle?: string | null
   description?: string | null
-}): { ok: true; intent: SubmissionIntent } | { ok: false; message: string } {
+}):
+  | { ok: true; intent: typeof SUBMISSION_INTENTS.TOPIC_REQUEST }
+  | { ok: false; message: string } {
   if (!input.topicTitle?.trim()) {
     return { ok: false, message: "A new lesson topic title is required." }
   }
