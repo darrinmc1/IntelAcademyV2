@@ -91,6 +91,17 @@ export function feedbackTypeForCategory(category: FeedbackCategory): FeedbackTyp
   }
 }
 
+/** Never persist content_request — n8n used that family as new_page. */
+export function normalizeFeedbackType(
+  raw: FeedbackType | undefined,
+  category: FeedbackCategory
+): FeedbackType {
+  if (!raw || raw === "content_request") {
+    return feedbackTypeForCategory(category)
+  }
+  return raw
+}
+
 export function isRequestTopicChannel(channel?: string | null): boolean {
   if (!channel) return false
   return REQUEST_TOPIC_CHANNELS.has(channel.trim().toLowerCase())

@@ -6,6 +6,7 @@ import {
   feedbackTypeForCategory,
   forceFeedbackIntent,
   normalizeFeedbackCategory,
+  normalizeFeedbackType,
   requireTopicRequestIntent,
 } from "@/lib/submission-intent"
 
@@ -97,5 +98,7 @@ describe("forceFeedbackIntent / requireTopicRequestIntent", () => {
     expect(feedbackTypeForCategory("Page recommendation")).toBe("suggestion")
     expect(feedbackTypeForCategory("Suggestion")).toBe("suggestion")
     expect(normalizeFeedbackCategory("Content Request")).not.toBe("Content Request")
+    expect(normalizeFeedbackType("content_request", "Suggestion")).toBe("suggestion")
+    expect(normalizeFeedbackType("bug", "Bug")).toBe("bug")
   })
 })

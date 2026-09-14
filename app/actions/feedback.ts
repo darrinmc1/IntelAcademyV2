@@ -3,9 +3,9 @@
 import { createClient } from '@supabase/supabase-js'
 import {
   VALID_FEEDBACK_TYPES,
-  feedbackTypeForCategory,
   forceFeedbackIntent,
   normalizeFeedbackCategory,
+  normalizeFeedbackType,
   type FeedbackCategory,
   type FeedbackType,
 } from '@/lib/submission-intent'
@@ -88,7 +88,7 @@ export async function submitFeedbackAction(args: {
     ip_address: args.ip || null,
     page_url: args.page_url || null,
     page_title: args.page_title || null,
-    feedback_type: args.feedback_type || feedbackTypeForCategory(category),
+    feedback_type: normalizeFeedbackType(args.feedback_type, category),
     status: 'new',
     intent: 'feedback',
   }
