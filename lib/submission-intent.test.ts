@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest"
 import {
   SUBMISSION_INTENTS,
+  VALID_FEEDBACK_CATEGORIES,
   classifySubmission,
   feedbackTypeForCategory,
   forceFeedbackIntent,
@@ -9,19 +10,25 @@ import {
 } from "@/lib/submission-intent"
 
 describe("normalizeFeedbackCategory", () => {
+  it("does not store the n8n-triggering Content Request category", () => {
+    expect(VALID_FEEDBACK_CATEGORIES).not.toContain("Content Request")
+  })
+
   it("keeps canonical feedback categories", () => {
     expect(normalizeFeedbackCategory("Bug")).toBe("Bug")
+    expect(normalizeFeedbackCategory("Complaint")).toBe("Complaint")
+    expect(normalizeFeedbackCategory("Page recommendation")).toBe("Page recommendation")
     expect(normalizeFeedbackCategory("Suggestion")).toBe("Suggestion")
-    expect(normalizeFeedbackCategory("Content Request")).toBe("Content Request")
     expect(normalizeFeedbackCategory("Other")).toBe("Other")
   })
 
   it("maps feedback-page aliases without promoting to a topic", () => {
     expect(normalizeFeedbackCategory("Bug Report")).toBe("Bug")
-    expect(normalizeFeedbackCategory("Content Issue")).toBe("Suggestion")
+    expect(normalizeFeedbackCategory("Content Issue")).toBe("Page recommendation")
     expect(normalizeFeedbackCategory("Feature Request")).toBe("Suggestion")
     expect(normalizeFeedbackCategory("General Feedback")).toBe("Other")
-    expect(normalizeFeedbackCategory("page fix")).toBe("Suggestion")
+    expect(normalizeFeedbackCategory("page fix")).toBe("Page recommendation")
+    expect(normalizeFeedbackCategory("Content Request")).toBe("Page recommendation")
   })
 
   it("returns null for unknown values", () => {
@@ -87,7 +94,8 @@ describe("forceFeedbackIntent / requireTopicRequestIntent", () => {
   })
 
   it("maps Content Request to a feedback_type, not a topic action", () => {
-    expect(feedbackTypeForCategory("Content Request")).toBe("content_request")
+    expect(feedbackTypeForCategory("Page recommendation")).toBe("suggestion")
     expect(feedbackTypeForCategory("Suggestion")).toBe("suggestion")
+    expect(normalizeFeedbackCategory("Content Request")).not.toBe("Content Request")
   })
 })

@@ -126,8 +126,9 @@ export function FeedbackWidget() {
                 >
                   <option value="">Select a category...</option>
                   <option value="Bug">Bug — something is broken</option>
-                  <option value="Suggestion">Suggest a page fix</option>
-                  <option value="Content Request">Comment on an existing lesson</option>
+                  <option value="Complaint">Complaint</option>
+                  <option value="Page recommendation">Suggest a page fix</option>
+                  <option value="Suggestion">Suggestion about an existing lesson</option>
                   <option value="Other">Other feedback</option>
                 </select>
                 <p className="mt-1.5 text-[11px] leading-snug text-slate-400">

@@ -24,8 +24,9 @@ function statusColor(status: string) {
 
 function categoryIcon(category: string) {
   if (category.includes("Bug")) return "🐛"
+  if (category.includes("Complaint")) return "😠"
+  if (category.includes("Page")) return "🔧"
   if (category.includes("Suggestion")) return "💡"
-  if (category.includes("Content")) return "📚"
   return "❓"
 }
 

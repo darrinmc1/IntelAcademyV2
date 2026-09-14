@@ -157,8 +157,9 @@ export default function FeedbackPage() {
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="Bug">Bug — something is broken</SelectItem>
-                      <SelectItem value="Suggestion">Suggest a page fix</SelectItem>
-                      <SelectItem value="Content Request">Comment on an existing lesson</SelectItem>
+                      <SelectItem value="Complaint">Complaint</SelectItem>
+                      <SelectItem value="Page recommendation">Suggest a page fix</SelectItem>
+                      <SelectItem value="Suggestion">Suggestion about an existing lesson</SelectItem>
                       <SelectItem value="Other">Other feedback</SelectItem>
                     </SelectContent>
                   </Select>

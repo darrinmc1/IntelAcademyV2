@@ -21,7 +21,13 @@ export type SubmissionIntent = (typeof SUBMISSION_INTENTS)[keyof typeof SUBMISSI
 export const FEEDBACK_CHANNEL = "feedback"
 export const REQUEST_TOPIC_CHANNEL = "request-topic"
 
-export const VALID_FEEDBACK_CATEGORIES = ["Bug", "Suggestion", "Content Request", "Other"] as const
+export const VALID_FEEDBACK_CATEGORIES = [
+  "Bug",
+  "Complaint",
+  "Page recommendation",
+  "Suggestion",
+  "Other",
+] as const
 export type FeedbackCategory = (typeof VALID_FEEDBACK_CATEGORIES)[number]
 
 export const VALID_FEEDBACK_TYPES = [
@@ -36,13 +42,16 @@ export type FeedbackType = (typeof VALID_FEEDBACK_TYPES)[number]
 const FEEDBACK_CATEGORY_ALIASES: Record<string, FeedbackCategory> = {
   bug: "Bug",
   "bug report": "Bug",
+  complaint: "Complaint",
   suggestion: "Suggestion",
-  "page fix": "Suggestion",
-  "page-fix": "Suggestion",
-  "content issue": "Suggestion",
+  "page fix": "Page recommendation",
+  "page-fix": "Page recommendation",
+  "page recommendation": "Page recommendation",
+  "content issue": "Page recommendation",
   "feature request": "Suggestion",
-  "content request": "Content Request",
-  "existing content": "Content Request",
+  // Legacy widget/API value. Remap so n8n `Is Content Request?` never matches.
+  "content request": "Page recommendation",
+  "existing content": "Page recommendation",
   "general feedback": "Other",
   compliment: "Other",
   other: "Other",
@@ -73,10 +82,10 @@ export function feedbackTypeForCategory(category: FeedbackCategory): FeedbackTyp
     case "Bug":
       return "bug"
     case "Suggestion":
+    case "Page recommendation":
       return "suggestion"
-    case "Content Request":
-      // Stays a feedback type. Never a signal to create a topic/page.
-      return "content_request"
+    case "Complaint":
+      return "general"
     default:
       return "general"
   }
