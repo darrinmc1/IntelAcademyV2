@@ -65,7 +65,7 @@ export function FeedbackWidget() {
           <div className="bg-gradient-to-r from-teal-600 to-cyan-600 px-5 py-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="text-xl">🌐</span>
-              <h3 className="font-bold text-white text-sm">Send Feedback</h3>
+              <h3 className="font-bold text-white text-sm">Report a problem</h3>
             </div>
             <button
               onClick={() => setIsOpen(false)}
@@ -116,7 +116,7 @@ export function FeedbackWidget() {
               {/* Category */}
               <div>
                 <label className="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wide">
-                  Category
+                  What is this about?
                 </label>
                 <select
                   value={category}
@@ -125,11 +125,19 @@ export function FeedbackWidget() {
                   className="w-full px-3 py-2.5 rounded-xl border-2 border-slate-600 bg-slate-700/50 text-slate-50 text-sm focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/30 transition-all appearance-none"
                 >
                   <option value="">Select a category...</option>
-                  <option value="Bug">Bug Report</option>
-                  <option value="Suggestion">Suggestion</option>
-                  <option value="Content Request">Content Request</option>
-                  <option value="Other">Other</option>
+                  <option value="Bug">Bug — something is broken</option>
+                  <option value="Complaint">Complaint</option>
+                  <option value="Page recommendation">Suggest a page fix</option>
+                  <option value="Suggestion">Suggestion about an existing lesson</option>
+                  <option value="Other">Other feedback</option>
                 </select>
+                <p className="mt-1.5 text-[11px] leading-snug text-slate-400">
+                  This goes to the feedback queue only. To request a brand-new lesson topic, use{" "}
+                  <a href="/request-topic" className="text-teal-300 underline underline-offset-2 hover:text-teal-200">
+                    Request a new topic
+                  </a>
+                  .
+                </p>
               </div>
 
               {/* Message */}
@@ -140,7 +148,7 @@ export function FeedbackWidget() {
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Tell us what's on your mind..."
+                  placeholder="Describe the bug, page fix, or comment on this lesson..."
                   required
                   rows={3}
                   className="w-full px-3 py-2.5 rounded-xl border-2 border-slate-600 bg-slate-700/50 text-slate-50 placeholder:text-slate-400 text-sm focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/30 transition-all resize-none"
@@ -181,7 +189,7 @@ export function FeedbackWidget() {
                     Sending...
                   </span>
                 ) : (
-                  "Send Feedback"
+                  "Send report"
                 )}
               </button>
             </form>
@@ -197,7 +205,7 @@ export function FeedbackWidget() {
             ? "bg-teal-200 text-teal-900 border-2 border-teal-300"
             : "bg-teal-600 text-white hover:bg-teal-500"
         }`}
-        aria-label={isOpen ? "Close feedback" : "Send feedback"}
+        aria-label={isOpen ? "Close feedback" : "Report a problem"}
       >
         {isOpen ? (
           <>
@@ -211,7 +219,7 @@ export function FeedbackWidget() {
             <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
             </svg>
-            <span className="text-sm font-bold hidden sm:inline">Feedback</span>
+            <span className="text-sm font-bold hidden sm:inline">Report a problem</span>
           </>
         )}
       </button>

@@ -23,6 +23,7 @@ import {
   FileText,
   ClipboardCheck,
   MessageSquare,
+  Lightbulb,
   LogOut,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -149,6 +150,11 @@ const navItems: NavItem[] = [
     title: "Feedback",
     href: "/admin/feedback",
     icon: <MessageSquare className="h-5 w-5" />,
+  },
+  {
+    title: "Topic Requests",
+    href: "/admin/topic-requests",
+    icon: <Lightbulb className="h-5 w-5" />,
   },
   {
     title: "Users",
