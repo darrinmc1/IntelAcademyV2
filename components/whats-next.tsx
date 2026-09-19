@@ -168,7 +168,7 @@ export function WhatsNext({ anotherTopic, moreLearning, advancedLearning, title,
           <div className={cardClasses}>
             <h3 className="text-xl font-semibold mb-3 text-white">Questions or Suggestions?</h3>
             <p className="text-slate-400 mb-4 min-h-20">
-              Request a brand-new lesson topic, or report a problem on this existing page.
+              Request a brand-new lesson topic, or share feedback on this existing page.
             </p>
             <div className="flex flex-col space-y-2 mt-auto">
               <Link href="/request-topic">
@@ -179,7 +179,7 @@ export function WhatsNext({ anotherTopic, moreLearning, advancedLearning, title,
               </Link>
               <Link href="/feedback">
                 <Button className="w-full group" variant="outline">
-                  Report a problem / page fix
+                  Feedback
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>

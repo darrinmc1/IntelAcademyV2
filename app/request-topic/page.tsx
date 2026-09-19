@@ -169,7 +169,7 @@ export default function RequestTopicPage() {
           <p className="text-sm text-muted-foreground mt-3">
             Something broken on a page that already exists?{" "}
             <Link href="/feedback" className="text-cyan-700 underline underline-offset-2">
-              Report a problem or suggest a page fix
+              Send feedback
             </Link>
             .
           </p>

@@ -72,7 +72,7 @@ export function RequestTopicForm() {
       <CardHeader>
         <CardTitle>Request a new lesson topic</CardTitle>
         <CardDescription>
-          Ask for a subject that is not on the academy yet. To report a problem on an existing page,{" "}
+          Ask for a subject that is not on the academy yet. For an existing page,{" "}
           <Link href="/feedback" className="underline underline-offset-2">
             send feedback
           </Link>{" "}
