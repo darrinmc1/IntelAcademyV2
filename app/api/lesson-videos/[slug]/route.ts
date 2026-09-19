@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic"
 
 /**
  * Status only — never returns a blob or signed URL.
- * Used by LessonVideoPlayer to pick coming-soonish / locked / playable.
+ * Used by LessonVideoPlayer to pick hidden / locked / playable.
  */
 export async function GET(
   request: Request,

@@ -18,7 +18,6 @@ type LessonStatus = {
 type PlayerState =
   | { kind: "hidden" }
   | { kind: "loading" }
-  | { kind: "comingSoonish"; title: string }
   | { kind: "locked"; title: string }
   | { kind: "ready"; title: string; url: string }
   | { kind: "error"; title: string; message: string }
@@ -34,7 +33,7 @@ function slugFromPath(pathname: string | null): string | null {
 export function LessonVideoPlayer({ slug }: { slug?: string }) {
   const pathname = usePathname()
   const resolved = resolveLessonVideoSlug(slug ?? slugFromPath(pathname))
-  const [state, setState] = useState<PlayerState>(resolved ? { kind: "loading" } : { kind: "hidden" })
+  const [state, setState] = useState<PlayerState>({ kind: "hidden" })
 
   useEffect(() => {
     if (!resolved) {
@@ -45,19 +44,15 @@ export function LessonVideoPlayer({ slug }: { slug?: string }) {
     let cancelled = false
 
     async function load() {
-      setState({ kind: "loading" })
       try {
         const statusRes = await fetch(`/api/lesson-videos/${resolved}`)
-        if (statusRes.status === 404) {
+        if (!statusRes.ok) {
           if (!cancelled) setState({ kind: "hidden" })
           return
         }
-        if (!statusRes.ok) {
-          throw new Error("Status check failed")
-        }
         const status = (await statusRes.json()) as LessonStatus
         if (!status.uploaded) {
-          if (!cancelled) setState({ kind: "comingSoonish", title: status.title })
+          if (!cancelled) setState({ kind: "hidden" })
           return
         }
         if (!status.allowed) {
@@ -65,8 +60,13 @@ export function LessonVideoPlayer({ slug }: { slug?: string }) {
           return
         }
 
+        if (!cancelled) setState({ kind: "loading" })
         const playRes = await fetch(`/api/lesson-videos/${resolved}/playback`)
         const playBody = await playRes.json().catch(() => ({}))
+        if (playRes.status === 404) {
+          if (!cancelled) setState({ kind: "hidden" })
+          return
+        }
         if (!playRes.ok || typeof playBody.url !== "string") {
           if (!cancelled) {
             setState({
@@ -79,13 +79,7 @@ export function LessonVideoPlayer({ slug }: { slug?: string }) {
         }
         if (!cancelled) setState({ kind: "ready", title: status.title, url: playBody.url })
       } catch {
-        if (!cancelled) {
-          setState({
-            kind: "error",
-            title: "Lesson video",
-            message: "Could not reach the vault. The written lesson below is still open.",
-          })
-        }
+        if (!cancelled) setState({ kind: "hidden" })
       }
     }
 
@@ -105,59 +99,46 @@ export function LessonVideoPlayer({ slug }: { slug?: string }) {
           Included on the video plan. Written lesson stays free. Humor stays on.
         </p>
       </div>
-      {state.kind === "comingSoonish" && (
-        <div className="rounded-lg border border-dashed border-white/15 bg-white/[0.03] px-5 py-6">
-          <p className="text-xs uppercase tracking-[0.2em] text-amber-400/90">Video Lessons</p>
-          <h4 className="mt-2 text-xl font-semibold text-white">Coming Soonish</h4>
-          <p className="mt-2 max-w-xl text-sm text-slate-300">
-            No private reel for this slug yet. When Darrin drops{" "}
-            <code className="text-xs">{resolved}-lesson-16x9.mp4</code> into the vault, it plays
-            here. This is not a fake player and it is not a path intro.
-          </p>
-        </div>
-      )}
-      {state.kind !== "comingSoonish" && (
-        <div className="relative aspect-video overflow-hidden rounded-lg border border-white/10 bg-zinc-950">
-          {state.kind === "loading" && (
-            <FrameCopy
-              icon={<Film className="h-8 w-8 text-amber-400" />}
-              eyebrow="Vault check"
-              title="Checking the lesson reel"
-              body="Don't refresh like it's a stakeout. If the mp4 is in storage and your badge clears, it plays here — not on YouTube, and not in the path-intro slot."
-            />
-          )}
-          {state.kind === "locked" && (
-            <FrameCopy
-              icon={<Lock className="h-8 w-8 text-amber-400" />}
-              eyebrow="Locked reel"
-              title={LESSON_VIDEO_LOCK_COPY}
-              body="Only the video plan unlocks lesson videos. Written lessons stay free. Checkout isn't live. Join the waitlist — no card required today."
-            >
-              <Button asChild className="mt-4 bg-black text-white hover:bg-yellow-500 hover:text-black">
-                <Link href="/waitlist">Join the waitlist</Link>
-              </Button>
-            </FrameCopy>
-          )}
-          {state.kind === "error" && (
-            <FrameCopy
-              icon={<Lock className="h-8 w-8 text-slate-300" />}
-              eyebrow="Hold"
-              title={state.title}
-              body={state.message}
-            />
-          )}
-          {state.kind === "ready" && (
-            <video
-              className="h-full w-full bg-black"
-              controls
-              playsInline
-              preload="metadata"
-              src={state.url}
-              aria-label={`${state.title} lesson video`}
-            />
-          )}
-        </div>
-      )}
+      <div className="relative aspect-video overflow-hidden rounded-lg border border-white/10 bg-zinc-950">
+        {state.kind === "loading" && (
+          <FrameCopy
+            icon={<Film className="h-8 w-8 text-amber-400" />}
+            eyebrow="Vault check"
+            title="Checking the lesson reel"
+            body="Don't refresh like it's a stakeout. If the mp4 is in storage and your badge clears, it plays here — not on YouTube, and not in the path-intro slot."
+          />
+        )}
+        {state.kind === "locked" && (
+          <FrameCopy
+            icon={<Lock className="h-8 w-8 text-amber-400" />}
+            eyebrow="Locked reel"
+            title={LESSON_VIDEO_LOCK_COPY}
+            body="Only the video plan unlocks lesson videos. Written lessons stay free. Checkout isn't live. Join the waitlist — no card required today."
+          >
+            <Button asChild className="mt-4 bg-black text-white hover:bg-yellow-500 hover:text-black">
+              <Link href="/waitlist">Join the waitlist</Link>
+            </Button>
+          </FrameCopy>
+        )}
+        {state.kind === "error" && (
+          <FrameCopy
+            icon={<Lock className="h-8 w-8 text-slate-300" />}
+            eyebrow="Hold"
+            title={state.title}
+            body={state.message}
+          />
+        )}
+        {state.kind === "ready" && (
+          <video
+            className="h-full w-full bg-black"
+            controls
+            playsInline
+            preload="metadata"
+            src={state.url}
+            aria-label={`${state.title} lesson video`}
+          />
+        )}
+      </div>
     </section>
   )
 }
