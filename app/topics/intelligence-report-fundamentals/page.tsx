@@ -1047,7 +1047,7 @@ export default function IntelligencereportfundamentalsPage() {
         readTime={15}
         difficulty="Beginner"
         category="Intelligence Analysis"
-        mascot="foundations"
+        mascot="intelligence-report-fundamentals"
         mascotMessage="Another day, another intelligence problem to solve. Let's get to work."
       >
         <EnhancedLessonContentLoader content={topicContent} topic="intelligence-report-fundamentals" />
