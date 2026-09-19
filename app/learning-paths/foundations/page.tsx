@@ -88,15 +88,15 @@ export default function FoundationsPath() {
           />
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-md mb-8">
-          <h2 className="text-2xl font-bold mb-4">About this Learning Path</h2>
-          <p className="mb-4">
+        <div className="bg-white/5 border border-white/10 text-slate-200 p-6 rounded-lg shadow-md mb-8">
+          <h2 className="text-2xl font-bold mb-4 text-white">About this Learning Path</h2>
+          <p className="mb-4 text-slate-300">
             The Fundamentals of Intelligence Analysis learning path is designed to introduce you to the core concepts
             and principles of intelligence analysis with a refreshing dose of humor. This path is ideal for beginners
             who want to understand what intelligence analysis is and how it works in the real world.
           </p>
-          <p className="mb-2">By the end of this learning path, you will:</p>
-          <ul className="list-disc pl-6 mb-4">
+          <p className="mb-2 text-slate-300">By the end of this learning path, you will:</p>
+          <ul className="list-disc pl-6 mb-4 text-slate-300">
             <li>Understand what intelligence is and its role in decision-making</li>
             <li>Be familiar with the intelligence cycle and how it guides the analysis process</li>
             <li>Recognize different types of intelligence and their applications</li>
