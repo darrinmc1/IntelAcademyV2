@@ -1,6 +1,7 @@
 'use server'
 
 import { createClient } from '@supabase/supabase-js'
+import { notifyFeedbackWebhook } from '@/lib/feedback-webhook'
 import {
   VALID_FEEDBACK_TYPES,
   forceFeedbackIntent,
@@ -44,6 +45,7 @@ type FeedbackRow = {
  * HARD RULE: this action must never insert into `topic_requests`, never call
  * generate-coming-soon scripts, and never treat Suggestion / Content Request
  * as a new lesson topic. Client-supplied intent/channel is ignored.
+ * After a successful DB write, kicks Empire n8n (GET, fire-and-forget).
  */
 export async function submitFeedbackAction(args: {
   category: string
@@ -98,6 +100,9 @@ export async function submitFeedbackAction(args: {
     if (inserted.ok === false) {
       return { ok: false, message: inserted.message }
     }
+
+    // Empire Feedback→GitHub (n8n). Failures must not fail the user-facing submit.
+    notifyFeedbackWebhook()
 
     return {
       ok: true,
