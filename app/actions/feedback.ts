@@ -1,6 +1,7 @@
 'use server'
 
 import { createClient } from '@supabase/supabase-js'
+import { notifyFeedbackWebhook } from '@/lib/feedback-webhook'
 import {
   VALID_FEEDBACK_TYPES,
   forceFeedbackIntent,
@@ -36,31 +37,6 @@ type FeedbackRow = {
   feedback_type: FeedbackType
   status: 'new'
   intent: 'feedback'
-}
-
-const DEFAULT_FEEDBACK_WEBHOOK_URL =
-  'https://n8n.peelboss.com/webhook/feedback-creator-run'
-
-/**
- * Fire-and-forget kick for Empire — Feedback to GitHub Issue.
- * The webhook is GET today (same creator-run the daily cron sweeper hits).
- * Must never throw to the caller — failures are logged only.
- */
-function notifyFeedbackWebhook() {
-  try {
-    const webhookUrl =
-      process.env.FEEDBACK_WEBHOOK_URL?.trim() || DEFAULT_FEEDBACK_WEBHOOK_URL
-    if (!webhookUrl) return
-
-    void fetch(webhookUrl, {
-      method: 'GET',
-      headers: { Accept: 'application/json' },
-    }).catch((err) => {
-      console.error('feedback webhook notify failed (non-fatal):', err)
-    })
-  } catch (err) {
-    console.error('feedback webhook notify failed (non-fatal):', err)
-  }
 }
 
 /**

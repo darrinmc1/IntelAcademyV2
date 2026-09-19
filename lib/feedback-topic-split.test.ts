@@ -10,6 +10,7 @@ describe("feedback vs topic-request hard split", () => {
   it("feedback API and action never import topic or page-generation paths", () => {
     const feedbackApi = read("app/api/feedback/route.ts")
     const feedbackAction = read("app/actions/feedback.ts")
+    const feedbackWebhook = read("lib/feedback-webhook.ts")
     const forbiddenImports = [
       "topic-requests",
       "submitTopicRequest",
@@ -19,16 +20,24 @@ describe("feedback vs topic-request hard split", () => {
     for (const token of forbiddenImports) {
       expect(feedbackApi).not.toContain(token)
       expect(feedbackAction).not.toContain(token)
+      expect(feedbackWebhook).not.toContain(token)
     }
     expect(feedbackApi).toContain('forceFeedbackIntent')
     expect(feedbackAction).toContain("intent: 'feedback'")
-    expect(feedbackAction).toContain('FEEDBACK_WEBHOOK_URL')
-    expect(feedbackAction).toContain(
-      'https://n8n.peelboss.com/webhook/feedback-creator-run'
-    )
-    expect(feedbackAction).toContain("method: 'GET'")
+    expect(feedbackAction).toContain('notifyFeedbackWebhook')
     expect(feedbackAction).not.toContain('empire-topic-request')
     expect(feedbackAction).not.toContain('TOPIC_REQUEST_WEBHOOK_URL')
+  })
+
+  it("feedback webhook helper GETs creator-run and is not the lesson queue", () => {
+    const webhook = read("lib/feedback-webhook.ts")
+    expect(webhook).toContain('FEEDBACK_WEBHOOK_URL')
+    expect(webhook).toContain(
+      'https://n8n.peelboss.com/webhook/feedback-creator-run'
+    )
+    expect(webhook).toContain("method: 'GET'")
+    expect(webhook).not.toContain('empire-topic-request')
+    expect(webhook).not.toContain('new_page')
   })
 
   it("topic request action still kicks the Empire lesson-queue webhook", () => {
