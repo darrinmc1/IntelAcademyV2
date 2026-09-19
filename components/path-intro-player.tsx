@@ -3,7 +3,7 @@
 import { useEffect, useState, type ReactNode } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Film, Lock, UploadCloud } from "lucide-react"
+import { Film, Lock } from "lucide-react"
 import { resolvePathIntroSlug } from "@/data/path-intro-videos"
 import { PATH_INTRO_LOCK_COPY } from "@/lib/path-intro-copy"
 import { Button } from "@/components/ui/button"
@@ -19,7 +19,6 @@ type IntroStatus = {
 type PlayerState =
   | { kind: "hidden" }
   | { kind: "loading" }
-  | { kind: "missing"; title: string }
   | { kind: "locked"; title: string }
   | { kind: "ready"; title: string; url: string }
   | { kind: "error"; title: string; message: string }
@@ -33,7 +32,7 @@ function slugFromPath(pathname: string | null): string | null {
 export function PathIntroPlayer({ slug }: { slug?: string }) {
   const pathname = usePathname()
   const resolved = resolvePathIntroSlug(slug ?? slugFromPath(pathname))
-  const [state, setState] = useState<PlayerState>(resolved ? { kind: "loading" } : { kind: "hidden" })
+  const [state, setState] = useState<PlayerState>({ kind: "hidden" })
 
   useEffect(() => {
     if (!resolved) {
@@ -44,19 +43,15 @@ export function PathIntroPlayer({ slug }: { slug?: string }) {
     let cancelled = false
 
     async function load() {
-      setState({ kind: "loading" })
       try {
         const statusRes = await fetch(`/api/path-intros/${resolved}`)
-        if (statusRes.status === 404) {
+        if (!statusRes.ok) {
           if (!cancelled) setState({ kind: "hidden" })
           return
         }
-        if (!statusRes.ok) {
-          throw new Error("Status check failed")
-        }
         const status = (await statusRes.json()) as IntroStatus
         if (!status.uploaded) {
-          if (!cancelled) setState({ kind: "missing", title: status.title })
+          if (!cancelled) setState({ kind: "hidden" })
           return
         }
         if (!status.allowed) {
@@ -64,8 +59,13 @@ export function PathIntroPlayer({ slug }: { slug?: string }) {
           return
         }
 
+        if (!cancelled) setState({ kind: "loading" })
         const playRes = await fetch(`/api/path-intros/${resolved}/playback`)
         const playBody = await playRes.json().catch(() => ({}))
+        if (playRes.status === 404) {
+          if (!cancelled) setState({ kind: "hidden" })
+          return
+        }
         if (!playRes.ok || typeof playBody.url !== "string") {
           if (!cancelled) {
             setState({
@@ -78,13 +78,7 @@ export function PathIntroPlayer({ slug }: { slug?: string }) {
         }
         if (!cancelled) setState({ kind: "ready", title: status.title, url: playBody.url })
       } catch {
-        if (!cancelled) {
-          setState({
-            kind: "error",
-            title: "Path intro",
-            message: "Could not reach the vault. The text lessons below are still open.",
-          })
-        }
+        if (!cancelled) setState({ kind: "hidden" })
       }
     }
 
@@ -109,14 +103,6 @@ export function PathIntroPlayer({ slug }: { slug?: string }) {
             eyebrow="Vault check"
             title="Fetching the briefing"
             body="Don't refresh like it's a stakeout. If the reel is in storage and your badge clears, it plays here — not on YouTube."
-          />
-        )}
-        {state.kind === "missing" && (
-          <FrameCopy
-            icon={<UploadCloud className="h-8 w-8 text-slate-300" />}
-            eyebrow="Empty vault"
-            title="Intro video not uploaded yet"
-            body="No file in private storage for this path. The briefing reel lands when Darrin drops the mp4 — this is not a forever Coming Soon."
           />
         )}
         {state.kind === "locked" && (

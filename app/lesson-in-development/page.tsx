@@ -78,7 +78,11 @@ export default async function LessonInDevelopment({
             <div className="border-t pt-6">
               <h3 className="text-lg font-medium">Want a different lesson subject?</h3>
               <p className="text-muted-foreground mt-1 mb-4">
-                If it is not on the academy yet, request a new lesson topic. To report a problem on this page, send feedback instead.
+                If it is not on the academy yet, request a new lesson topic.{" "}
+                <Link href="/feedback" className="underline underline-offset-2">
+                  Share feedback
+                </Link>{" "}
+                on this page instead.
               </p>
               <Button asChild variant="outline">
                 <Link href="/request-topic">

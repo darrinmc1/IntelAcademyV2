@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic"
 
 /**
  * Status only — never returns a blob or signed URL.
- * Used by PathIntroPlayer to pick missing / locked / playable.
+ * Used by PathIntroPlayer to pick hidden / locked / playable.
  */
 export async function GET(
   request: Request,

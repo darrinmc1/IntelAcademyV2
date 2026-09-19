@@ -41,7 +41,7 @@ export function ContentComingSoon({ topicTitle, category, estimatedDate }: Conte
             <Button asChild variant="outline">
               <Link href="/feedback">
                 <Mail className="mr-2 h-4 w-4" />
-                Report a problem with this page
+                Share feedback on this page
               </Link>
             </Button>
             <Button asChild>

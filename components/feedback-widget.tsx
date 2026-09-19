@@ -65,7 +65,7 @@ export function FeedbackWidget() {
           <div className="bg-gradient-to-r from-teal-600 to-cyan-600 px-5 py-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="text-xl">🌐</span>
-              <h3 className="font-bold text-white text-sm">Report a problem</h3>
+              <h3 className="font-bold text-white text-sm">Feedback</h3>
             </div>
             <button
               onClick={() => setIsOpen(false)}
@@ -189,7 +189,7 @@ export function FeedbackWidget() {
                     Sending...
                   </span>
                 ) : (
-                  "Send report"
+                  "Send feedback"
                 )}
               </button>
             </form>
@@ -205,7 +205,7 @@ export function FeedbackWidget() {
             ? "bg-teal-200 text-teal-900 border-2 border-teal-300"
             : "bg-teal-600 text-white hover:bg-teal-500"
         }`}
-        aria-label={isOpen ? "Close feedback" : "Report a problem"}
+        aria-label={isOpen ? "Close feedback" : "Feedback"}
       >
         {isOpen ? (
           <>
@@ -219,7 +219,7 @@ export function FeedbackWidget() {
             <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
             </svg>
-            <span className="text-sm font-bold hidden sm:inline">Report a problem</span>
+            <span className="text-sm font-bold hidden sm:inline">Feedback</span>
           </>
         )}
       </button>

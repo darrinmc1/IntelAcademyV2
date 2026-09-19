@@ -80,10 +80,10 @@ export default function FeedbackPage() {
               <MessageSquare className="h-8 w-8 text-blue-600" />
             </div>
           </div>
-          <h1 className="text-4xl font-bold tracking-tight mb-2">Report a problem or page fix</h1>
+          <h1 className="text-4xl font-bold tracking-tight mb-2">Feedback</h1>
           <p className="text-muted-foreground">
-            Found a bug, a repeated header, or something wrong on an existing page? Tell us here.
-            This stays in the feedback queue — it will not create a new lesson topic.
+            Send feedback on a bug, a page fix, or an existing lesson. This stays in the
+            feedback queue — it will not create a new lesson topic.
           </p>
           <p className="text-sm text-muted-foreground mt-3">
             Want a brand-new lesson that is not on the site yet?{" "}
@@ -122,7 +122,7 @@ export default function FeedbackPage() {
             <CardHeader>
               <CardTitle>Feedback form</CardTitle>
               <CardDescription>
-                Report a problem, suggest a page fix, or comment on an existing lesson. All fields except your message are optional.
+                Share feedback on a bug, page fix, or existing lesson. All fields except your message are optional.
               </CardDescription>
             </CardHeader>
             <CardContent>
