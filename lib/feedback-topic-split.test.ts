@@ -22,6 +22,24 @@ describe("feedback vs topic-request hard split", () => {
     }
     expect(feedbackApi).toContain('forceFeedbackIntent')
     expect(feedbackAction).toContain("intent: 'feedback'")
+    expect(feedbackAction).toContain('FEEDBACK_WEBHOOK_URL')
+    expect(feedbackAction).toContain(
+      'https://n8n.peelboss.com/webhook/feedback-creator-run'
+    )
+    expect(feedbackAction).toContain("method: 'GET'")
+    expect(feedbackAction).not.toContain('empire-topic-request')
+    expect(feedbackAction).not.toContain('TOPIC_REQUEST_WEBHOOK_URL')
+  })
+
+  it("topic request action still kicks the Empire lesson-queue webhook", () => {
+    const topicAction = read("app/actions/topic-requests.ts")
+    expect(topicAction).toContain("TOPIC_REQUEST_WEBHOOK_URL")
+    expect(topicAction).toContain(
+      "https://n8n.peelboss.com/webhook/empire-topic-request"
+    )
+    expect(topicAction).toContain('method: "POST"')
+    expect(topicAction).toContain('intent: "topic_request"')
+    expect(topicAction).not.toContain("feedback-creator-run")
   })
 
   it("request-topic API persists via topic request action, not feedback", () => {

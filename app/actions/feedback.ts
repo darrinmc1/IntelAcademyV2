@@ -38,12 +38,38 @@ type FeedbackRow = {
   intent: 'feedback'
 }
 
+const DEFAULT_FEEDBACK_WEBHOOK_URL =
+  'https://n8n.peelboss.com/webhook/feedback-creator-run'
+
+/**
+ * Fire-and-forget kick for Empire — Feedback to GitHub Issue.
+ * The webhook is GET today (same creator-run the daily cron sweeper hits).
+ * Must never throw to the caller — failures are logged only.
+ */
+function notifyFeedbackWebhook() {
+  try {
+    const webhookUrl =
+      process.env.FEEDBACK_WEBHOOK_URL?.trim() || DEFAULT_FEEDBACK_WEBHOOK_URL
+    if (!webhookUrl) return
+
+    void fetch(webhookUrl, {
+      method: 'GET',
+      headers: { Accept: 'application/json' },
+    }).catch((err) => {
+      console.error('feedback webhook notify failed (non-fatal):', err)
+    })
+  } catch (err) {
+    console.error('feedback webhook notify failed (non-fatal):', err)
+  }
+}
+
 /**
  * Submit feedback to the feedback queue ONLY.
  *
  * HARD RULE: this action must never insert into `topic_requests`, never call
  * generate-coming-soon scripts, and never treat Suggestion / Content Request
  * as a new lesson topic. Client-supplied intent/channel is ignored.
+ * After a successful DB write, kicks Empire n8n (GET, fire-and-forget).
  */
 export async function submitFeedbackAction(args: {
   category: string
@@ -98,6 +124,9 @@ export async function submitFeedbackAction(args: {
     if (inserted.ok === false) {
       return { ok: false, message: inserted.message }
     }
+
+    // Empire Feedback→GitHub (n8n). Failures must not fail the user-facing submit.
+    notifyFeedbackWebhook()
 
     return {
       ok: true,

@@ -14,6 +14,10 @@ Feedback form categories are **Bug / Complaint / Page recommendation / Suggestio
 - `POST /api/feedback` and `submitFeedbackAction` write `feedback` only, with `intent = "feedback"`. Client-supplied `intent`, `channel`, `topic`, or `topic_title` is discarded.
 - `POST /api/request-topic` and `submitTopicRequestAction` write `topic_requests` only, with `intent = "topic_request"`.
 - Neither path calls `scripts/generate-coming-soon-page.ts` or `scripts/generate-all-coming-soon-pages.js`.
+- After a successful insert, submit **immediately kicks n8n** (fire-and-forget; webhook failures are logged and never fail the user):
+  - Feedback → **GET** `FEEDBACK_WEBHOOK_URL` or `https://n8n.peelboss.com/webhook/feedback-creator-run` (Empire — Feedback to GitHub Issue).
+  - Topic request → **POST** JSON to `TOPIC_REQUEST_WEBHOOK_URL` or `https://n8n.peelboss.com/webhook/empire-topic-request` (lesson queue).
+  - Daily cron remains a backup sweeper if the immediate kick is missed.
 
 ## n8n flip notes (Darrin — required)
 
