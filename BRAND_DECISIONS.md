@@ -8,7 +8,7 @@ Single source of truth for visual-identity decisions. Update as new decisions ar
 
 ## Master illustration style
 
-Clean, modern, professional editorial illustration. Flat or semi-flat vector-style with subtle gradients. Think "educational platform hero art" - not photorealistic, not cartoony, not clipart.
+Clean, modern, professional editorial illustration. Flat or semi-flat vector-style with subtle gradients. Think "educational platform hero art" - not cartoony, not clipart. **Photorealistic rendering is acceptable.**
 
 **Dry-humour illustration is permitted** where it aids recall (see `IMAGE_HUMOUR_BRIEF.md`). The rule is: the *premise* may be absurd, the *rendering* stays deadpan, serious and consistent with the house style below. Never winking, never slapstick. The straight treatment of an absurd premise is the joke.
 
@@ -61,9 +61,19 @@ Use these to colour-code illustrations by topic. All accents are used *against* 
 4. After each batch, run: `node 05-image-audit.mjs` to confirm missing count drops
 5. Commit after each batch so there's a rollback point
 
-## Other decisions (to be made)
+## Resolved decisions (2026-09-21)
 
-- Domain: `intelanalyst.academy` or stay on current? (open from Apr 16 notes)
-- Sister Networks footer section: keep "ManageLearn" link, remove section, or generic placeholder? (open)
-- Mascots use: already committed - 24 SVGs exist, refs updated from `.png` → `.svg`
-- Forum: coming-soon page - no forum-categories images required for launch
+- **Domain:** `theintelanalystacademy.com` — canonical. (Already set in `lib/pricing.ts` `SITE_URL`.) The old `intelanalyst.academy` option is dropped.
+- **Sister Networks footer:** uses **only real, verified-live URLs**. All generic placeholders and unowned domains removed. Current set (all HTTP 200 verified 2026-09-21):
+  - PeelBoss — `https://peelboss.com`
+  - FreelancePro — `https://freelancepro-teal.vercel.app`
+  - AI for SMB — `https://aiforsmb.vercel.app`
+  - ABC of Cyber — `https://abcofcyber.com`
+  - Money Mastery — `https://moneymastery.vercel.app` (SisterCards only)
+  - **Removed:** the fake `freelancepro.com`, `aiforsmb.com`, `abcsofcyber.com` (did not resolve), and the "Coming Soon" badges that implied unbuilt products.
+- **Mascots:** 24 SVGs committed; refs already updated `.png` → `.svg`. No action needed.
+- **Forum:** coming-soon page only. No forum-categories images required for launch.
+
+## Open items
+
+- Accent colours still **TBD** for: Threat assessment, OSINT, and the SIGINT / HUMINT / GEOINT / MASINT / TECHINT family. Until assigned, these default to amber — worth deciding before the next image batch.

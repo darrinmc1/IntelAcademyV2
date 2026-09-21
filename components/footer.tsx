@@ -53,10 +53,11 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-white tracking-wide border-b border-white/10 pb-2 inline-block">Sister Networks</h3>
             <ul className="space-y-3">
-              <li><a href="https://freelancepro.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">FreelancePro</a></li>
-              <li><a href="https://aiforsmb.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">AI for SMB</a></li>
-              <li><a href="https://abcsofcyber.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">ABC of Cyber</a></li>
-              <li><a href="https://moneymastery.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">Money Mastery</a></li>
+              <li><a href="https://peelboss.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">PeelBoss</a></li>
+              <li><a href="https://freelancepro-teal.vercel.app" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">FreelancePro</a></li>
+              <li><a href="https://aiforsmb.vercel.app" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">AI for SMB</a></li>
+              <li><a href="https://abcofcyber.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">ABC of Cyber</a></li>
+              <li><a href="https://moneymastery.vercel.app" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">Money Mastery</a></li>
             </ul>
           </div>
         </div>

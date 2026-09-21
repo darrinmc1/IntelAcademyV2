@@ -1,41 +1,33 @@
 import React from 'react';
 
+// Only real, verified-live URLs. Verified 2026-09-21 (all HTTP 200).
 const sisterSites = [
   {
     name: 'ABC of Cyber',
     url: 'https://abcofcyber.com',
     description: 'Cybersecurity fundamentals made simple.',
-    status: 'live',
-    label: 'Live'
+  },
+  {
+    name: 'PeelBoss',
+    url: 'https://peelboss.com',
+    description: 'Management platform — ops, teams and delivery.',
   },
   {
     name: 'FreelancePro',
-    url: 'https://freelancepro.vercel.app',
+    url: 'https://freelancepro-teal.vercel.app',
     description: 'Tools and resources for freelance professionals.',
-    status: 'preview',
-    label: 'Preview'
   },
   {
     name: 'AI for SMB',
-    url: 'https://aiformsmb.vercel.app',
+    url: 'https://aiforsmb.vercel.app',
     description: 'AI solutions tailored for small and medium businesses.',
-    status: 'preview',
-    label: 'Preview'
   },
   {
     name: 'Money Mastery',
     url: 'https://moneymastery.vercel.app',
     description: 'Personal finance education and tools.',
-    status: 'preview',
-    label: 'Preview'
-  }
+  },
 ];
-
-const statusStyles: Record<string, string> = {
-  live: 'bg-green-100 text-green-800',
-  preview: 'bg-yellow-100 text-yellow-800',
-  'coming-soon': 'bg-gray-100 text-gray-500'
-};
 
 export default function SisterCards() {
   return (
@@ -48,28 +40,17 @@ export default function SisterCards() {
             className="border rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow bg-white flex flex-col justify-between"
           >
             <div>
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-lg font-semibold">{site.name}</h3>
-                <span
-                  className={`text-xs font-medium px-2 py-1 rounded-full ${
-                    statusStyles[site.status] ?? statusStyles['coming-soon']
-                  }`}
-                >
-                  {site.label}
-                </span>
-              </div>
+              <h3 className="text-lg font-semibold mb-3">{site.name}</h3>
               <p className="text-sm text-gray-600">{site.description}</p>
             </div>
-            {site.status !== 'coming-soon' && (
-              <a
-                href={site.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline"
-              >
-                Visit site &rarr;
-              </a>
-            )}
+            <a
+              href={site.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline"
+            >
+              Visit site &rarr;
+            </a>
           </div>
         ))}
       </div>
