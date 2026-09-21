@@ -49,9 +49,25 @@ Use these to colour-code illustrations by topic. All accents are used *against* 
 | Target profiling | Rose | `#e11d48` | target packages, profiling |
 | Analytical techniques | Emerald | `#10b981` | statistical, structured analysis |
 | Intelligence tools | Violet | `#8b5cf6` | software, dashboards, notebooks |
-| Threat assessment | (TBD) | | threat |
-| OSINT | (TBD - green?) | | open-source intel |
-| SIGINT / HUMINT / GEOINT / MASINT / TECHINT | (TBD) | | INT family |
+| **Threat assessment** | **Crimson** | `#b91c1c` | threat, risk, warning — deeper/graver than tactical red |
+| **OSINT** | **Lime** | `#65a30d` | open-source intel — "green = publicly available" |
+| **SIGINT** | **Sky** | `#0284c7` | signals — airwaves |
+| **HUMINT** | **Fuchsia** | `#c026d3` | human sources — the human element |
+| **GEOINT** | **Teal-green** | `#059669` | geospatial — terrain/earth |
+| **MASINT** | **Orange** | `#ea580c` | measurement & signatures (shares operational orange; differentiated by subject) |
+| **TECHINT** | **Slate-blue** | `#475569` | technical equipment |
+
+### Colour rules
+
+- **One accent per illustration.** Never two accents competing in the same frame.
+- **Accent covers ≤15%** of the frame — it highlights, it does not flood.
+- **Base always navy/slate** (`#1e293b`, `#334155`) on off-white (`#f8fafc`).
+- **Related families stay in the same hue neighbourhood** so a learning path reads
+  as a set: Strategic→Operational→Tactical runs blue → burnt orange → red, i.e.
+  cool → warm, matching the shift from big-picture to real-time.
+- The **INT family is deliberately distinct** because those five are siblings, not
+  a hierarchy — each gets its own recognisable hue.
+- **Fallback:** amber (`#f59e0b`) when no family applies.
 
 ## Generation workflow
 
