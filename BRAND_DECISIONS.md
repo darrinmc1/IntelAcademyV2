@@ -2,13 +2,15 @@
 
 Single source of truth for visual-identity decisions. Update as new decisions are made.
 
-**Last updated:** 2026-04-21
+**Last updated:** 2026-09-21
 
 ---
 
 ## Master illustration style
 
 Clean, modern, professional editorial illustration. Flat or semi-flat vector-style with subtle gradients. Think "educational platform hero art" - not photorealistic, not cartoony, not clipart.
+
+**Dry-humour illustration is permitted** where it aids recall (see `IMAGE_HUMOUR_BRIEF.md`). The rule is: the *premise* may be absurd, the *rendering* stays deadpan, serious and consistent with the house style below. Never winking, never slapstick. The straight treatment of an absurd premise is the joke.
 
 - **Base palette:** navy/slate (`#1e293b`, `#334155`), neutral off-white background (`#f8fafc`)
 - **Master accent:** amber (`#f59e0b`) - used when no topic-specific accent applies
