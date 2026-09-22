@@ -1,5 +1,8 @@
-// Update the status for the topics that now have "Coming Soon" pages
-// Change hasContent from false to "coming-soon" for these topics
+// Topic content status.
+// Updated 2026-09-21: all 9 previously flagged "coming-soon" topics now have
+// complete content - 7 already had full pages (verified 8,000-13,500 chars each)
+// and 2 (executive-summaries, crime-series-analysis) were written on 2026-09-21.
+// The flag only affects the admin dashboard, not the public site.
 
 export interface TopicStatus {
   slug: string
@@ -73,13 +76,13 @@ export const topicStatuses: TopicStatus[] = [
     slug: "real-time-osint",
     title: "Real-Time OSINT",
     category: "Tactical Intelligence",
-    hasContent: "coming-soon",
+    hasContent: true,
   },
   {
     slug: "situational-awareness",
     title: "Situational Awareness",
     category: "Tactical Intelligence",
-    hasContent: "coming-soon",
+    hasContent: true,
   },
   {
     slug: "intelligence-report-fundamentals",
@@ -91,13 +94,13 @@ export const topicStatuses: TopicStatus[] = [
     slug: "executive-summaries",
     title: "Executive Summaries",
     category: "Report Writing",
-    hasContent: "coming-soon",
+    hasContent: true,
   },
   {
     slug: "verbal-briefing-techniques",
     title: "Verbal Briefing Techniques",
     category: "Report Writing",
-    hasContent: "coming-soon",
+    hasContent: true,
   },
   {
     slug: "what-is-osint",
@@ -127,31 +130,31 @@ export const topicStatuses: TopicStatus[] = [
     slug: "crime-series-analysis",
     title: "Crime Series Analysis",
     category: "Crime Series Analysis",
-    hasContent: "coming-soon",
+    hasContent: true,
   },
   {
     slug: "hot-spot-analysis",
     title: "Hot Spot Analysis",
     category: "Hot Spot Analysis",
-    hasContent: "coming-soon",
+    hasContent: true,
   },
   {
     slug: "network-analysis",
     title: "Network Analysis",
     category: "Network Analysis",
-    hasContent: "coming-soon",
+    hasContent: true,
   },
   {
     slug: "target-profiling",
     title: "Target Profiling",
     category: "Target Profiling",
-    hasContent: "coming-soon",
+    hasContent: true,
   },
   {
     slug: "crime-trend-analysis",
     title: "Crime Trend Analysis",
     category: "Crime Trend Analysis",
-    hasContent: "coming-soon",
+    hasContent: true,
   },
   {
     slug: "excel-fundamentals-for-analysts",
