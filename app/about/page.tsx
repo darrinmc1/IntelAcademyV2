@@ -56,32 +56,32 @@ export default function About() {
               <div>
                 <h3 className="text-xl font-semibold mb-2">Self-Paced Learning</h3>
                 <p>
-                  We understand that professionals have varying schedules and learning preferences. Our platform is
-                  designed to allow you to learn at your own pace, with content organized into digestible mini-topics
-                  that can be completed in 5-15 minutes.
+                  We understand that professionals have varying schedules and commitments. Every course on our platform
+                  is designed for self-paced completion, allowing you to learn when and where it suits you — with no
+                  deadlines or time pressure.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Practical Focus</h3>
+                <h3 className="text-xl font-semibold mb-2">Practitioner-Led Content</h3>
                 <p>
-                  Our content emphasizes practical, applicable skills that you can immediately implement in your work.
-                  From OSINT techniques to analytical methodologies, everything we teach is designed to make you more
-                  effective in real-world scenarios.
+                  Our curriculum is developed by experienced intelligence practitioners with real-world backgrounds in
+                  government, law enforcement, and private sector analysis. You learn techniques that are actually used
+                  in the field.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Community-Driven</h3>
+                <h3 className="text-xl font-semibold mb-2">Structured Skill Progression</h3>
                 <p>
-                  We believe in the power of peer learning and support. Our community forum provides a space for
-                  intelligence professionals to connect, share insights, and help each other grow in their careers.
+                  Courses are sequenced to build on each other logically — from foundational concepts through to
+                  advanced tradecraft. Clear prerequisites and learning outcomes ensure you always know what to study
+                  next and what you will be able to do upon completion.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Continuously Evolving</h3>
+                <h3 className="text-xl font-semibold mb-2">Practical Application</h3>
                 <p>
-                  The field of intelligence analysis is constantly changing, and our platform evolves with it. We
-                  regularly update our content and add new topics based on community feedback and emerging trends in the
-                  field.
+                  Theory is reinforced through case studies, worked examples, and scenario-based exercises drawn from
+                  real intelligence challenges. Each module includes actionable techniques you can apply immediately.
                 </p>
               </div>
             </div>
@@ -90,50 +90,235 @@ export default function About() {
           <Separator />
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Access (not a price table)</h2>
-            <p className="mb-3">
-              {PRICE_MAP_LABEL} {PRICE_MAP_DETAIL} Academy Brief is a tool, not a
-              standalone SKU. There is no Explorer / Analyst / Professional / Enterprise table here.
+            <h2 className="text-2xl font-bold mb-6">Course Catalogue Overview</h2>
+            <p className="text-muted-foreground mb-8">
+              We offer four core discipline tracks, each with a detailed syllabus, stated prerequisites, and a clear
+              time commitment so you can plan your learning journey with confidence.
             </p>
-            <p className="mb-3">{CHECKOUT_STATUS}</p>
-            <p className="mb-3">{REFUND_POLICY}</p>
-            <p>
-              Details live on{" "}
-              <Link href="/pricing" className="text-cyan-400 underline underline-offset-2">
-                /pricing
-              </Link>
-              . Paid interest goes to the{" "}
-              <Link href="/waitlist" className="text-cyan-400 underline underline-offset-2">
-                waitlist
-              </Link>
+
+            <div className="grid gap-8">
+
+              {/* OSINT */}
+              <div className="border rounded-lg p-6">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold mb-1">Open Source Intelligence (OSINT)</h3>
+                    <p className="text-muted-foreground text-sm">Beginner → Intermediate · 8–12 hours total</p>
+                  </div>
+                  <Button asChild variant="outline" size="sm" className="shrink-0">
+                    <Link href="/learning-paths">View Learning Path</Link>
+                  </Button>
+                </div>
+                <p className="mb-4">
+                  Master the systematic collection and analysis of publicly available information. This track covers
+                  the full OSINT lifecycle — from defining collection requirements through to finished intelligence
+                  products — using free and commercial tooling.
+                </p>
+                <div className="grid md:grid-cols-3 gap-4 text-sm">
+                  <div>
+                    <p className="font-semibold mb-2">Syllabus Highlights</p>
+                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                      <li>OSINT fundamentals and legal boundaries</li>
+                      <li>Search engine operators and dorking</li>
+                      <li>Social media intelligence (SOCMINT)</li>
+                      <li>Image and video verification (IMINT)</li>
+                      <li>Domain, WHOIS, and IP analysis</li>
+                      <li>Dark web monitoring basics</li>
+                      <li>Structuring an OSINT report</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-2">Prerequisites</p>
+                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                      <li>No prior intelligence experience required</li>
+                      <li>Basic computer literacy</li>
+                      <li>Familiarity with web browsers</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-2">Learning Outcomes</p>
+                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                      <li>Conduct structured OSINT investigations</li>
+                      <li>Verify digital media authenticity</li>
+                      <li>Build subject profiles from open sources</li>
+                      <li>Produce a professional OSINT report</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Threat Assessment */}
+              <div className="border rounded-lg p-6">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold mb-1">Threat Assessment & Analysis</h3>
+                    <p className="text-muted-foreground text-sm">Intermediate · 10–14 hours total</p>
+                  </div>
+                  <Button asChild variant="outline" size="sm" className="shrink-0">
+                    <Link href="/learning-paths">View Learning Path</Link>
+                  </Button>
+                </div>
+                <p className="mb-4">
+                  Develop the structured analytical techniques used to identify, evaluate, and communicate threats
+                  across physical, cyber, and hybrid environments. Grounded in proven methodologies used by government
+                  and corporate security teams.
+                </p>
+                <div className="grid md:grid-cols-3 gap-4 text-sm">
+                  <div>
+                    <p className="font-semibold mb-2">Syllabus Highlights</p>
+                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                      <li>Threat actor profiling and typologies</li>
+                      <li>Structured Analytic Techniques (SATs)</li>
+                      <li>Risk and vulnerability matrices</li>
+                      <li>Indicators and warning intelligence</li>
+                      <li>Cognitive bias mitigation</li>
+                      <li>Threat assessment report writing</li>
+                      <li>Briefing decision-makers</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-2">Prerequisites</p>
+                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                      <li>Intelligence fundamentals (or equivalent)</li>
+                      <li>Basic analytical writing skills</li>
+                      <li>Recommended: OSINT track completion</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-2">Learning Outcomes</p>
+                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                      <li>Apply SATs to real-world scenarios</li>
+                      <li>Produce calibrated threat assessments</li>
+                      <li>Identify and mitigate analytical bias</li>
+                      <li>Communicate risk to non-technical audiences</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Geospatial Intelligence */}
+              <div className="border rounded-lg p-6">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold mb-1">Geospatial Intelligence (GEOINT)</h3>
+                    <p className="text-muted-foreground text-sm">Beginner → Advanced · 12–16 hours total</p>
+                  </div>
+                  <Button asChild variant="outline" size="sm" className="shrink-0">
+                    <Link href="/learning-paths">View Learning Path</Link>
+                  </Button>
+                </div>
+                <p className="mb-4">
+                  Learn to exploit satellite imagery, mapping platforms, and location data to answer intelligence
+                  questions. This track progresses from reading basic maps through to advanced change-detection and
+                  geolocation verification used in conflict-zone reporting and corporate site analysis.
+                </p>
+                <div className="grid md:grid-cols-3 gap-4 text-sm">
+                  <div>
+                    <p className="font-semibold mb-2">Syllabus Highlights</p>
+                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                      <li>Fundamentals of geospatial analysis</li>
+                      <li>Satellite imagery interpretation</li>
+                      <li>Google Earth Pro and open mapping tools</li>
+                      <li>Geolocation and chronolocation techniques</li>
+                      <li>Change detection and pattern-of-life analysis</li>
+                      <li>AIS/flight tracking for maritime and air intel</li>
+                      <li>Annotating and presenting geospatial findings</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-2">Prerequisites</p>
+                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                      <li>No prior GIS experience required</li>
+                      <li>Basic map-reading ability helpful</li>
+                      <li>Access to a desktop or laptop computer</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-2">Learning Outcomes</p>
+                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                      <li>Geolocate images and video footage</li>
+                      <li>Detect infrastructure changes over time</li>
+                      <li>Track vessels and aircraft using open data</li>
+                      <li>Produce annotated geospatial intelligence products</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Financial Intelligence */}
+              <div className="border rounded-lg p-6">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold mb-1">Financial Intelligence (FININT)</h3>
+                    <p className="text-muted-foreground text-sm">Intermediate → Advanced · 10–15 hours total</p>
+                  </div>
+                  <Button asChild variant="outline" size="sm" className="shrink-0">
+                    <Link href="/learning-paths">View Learning Path</Link>
+                  </Button>
+                </div>
+                <p className="mb-4">
+                  Understand how money moves and how to follow it. This track covers the analytical frameworks and
+                  open-source tools used to investigate financial networks, beneficial ownership structures, sanctions
+                  evasion, and illicit finance — essential skills for compliance, law enforcement, and investigative
+                  analysts.
+                </p>
+                <div className="grid md:grid-cols-3 gap-4 text-sm">
+                  <div>
+                    <p className="font-semibold mb-2">Syllabus Highlights</p>
+                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                      <li>Introduction to financial intelligence</li>
+                      <li>Corporate registry and beneficial ownership research</li>
+                      <li>Sanctions lists and screening tools</li>
+                      <li>Cryptocurrency tracing fundamentals</li>
+                      <li>Money laundering typologies</li>
+                      <li>Open-source financial data sources</li>
+                      <li>Writing financial intelligence assessments</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-2">Prerequisites</p>
+                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                      <li>Basic understanding of business structures</li>
+                      <li>Analytical writing experience recommended</li>
+                      <li>Recommended: OSINT track completion</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-2">Learning Outcomes</p>
+                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                      <li>Map corporate ownership networks</li>
+                      <li>Identify sanctions exposure and evasion patterns</li>
+                      <li>Trace basic cryptocurrency transactions</li>
+                      <li>Produce financial intelligence assessments</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <Separator />
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Pricing & Access</h2>
+            <p className="mb-4">
+              Many foundational modules are available free of charge. Premium tracks and advanced modules are
+              available through a one-time course purchase or a platform subscription. All purchases are covered by
+              our {REFUND_POLICY} refund policy.
+            </p>
+            <p className="mb-6">
+              For questions about access, billing, or institutional licensing, contact us at{" "}
+              <a href={`mailto:${SUPPORT_EMAIL}`} className="underline text-primary">
+                {SUPPORT_EMAIL}
+              </a>
               .
             </p>
+            <Button asChild>
+              <Link href="/learning-paths">Browse All Learning Paths</Link>
+            </Button>
           </section>
 
-          <Separator />
-
-          <section>
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-            <p className="mb-6">Have questions, feedback, or suggestions? We&apos;d love to hear from you.</p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-2">General Inquiries</h3>
-                <p className="mb-2">
-                  Email:{" "}
-                  <a href={`mailto:${SUPPORT_EMAIL}`} className="text-cyan-400 underline underline-offset-2">
-                    {SUPPORT_EMAIL}
-                  </a>
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">New lesson topics</h3>
-                <p className="mb-4">Want a subject that is not on the academy yet? Request a new lesson topic — not a bug report.</p>
-                <Button asChild>
-                  <Link href="/request-topic">Request a new topic</Link>
-                </Button>
-              </div>
-            </div>
-          </section>
         </div>
       </div>
     </div>
