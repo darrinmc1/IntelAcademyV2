@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Shield } from "lucide-react"
+import { MerchantOfRecordDisclosure } from "@/components/merchant-of-record-disclosure"
 import { SisterSites } from "@/components/sister-sites"
 
 export function Footer() {
@@ -68,6 +69,7 @@ export function Footer() {
           <p>© {new Date().getFullYear()} The Intel Analyst Academy. All rights reserved.</p>
           <p className="text-sm">Part of a network of learning platforms</p>
         </div>
+        <MerchantOfRecordDisclosure className="mt-4 text-center max-w-2xl mx-auto" />
       </div>
     </footer>
   )
