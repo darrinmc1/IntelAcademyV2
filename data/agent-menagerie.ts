@@ -82,7 +82,7 @@ export const agentMenagerie: AgentAnimal[] = [
     imagePath: "/mascots/slick.svg",
     description: "Always three moves ahead. Plays chess while everyone else plays checkers.",
     personality: "The cunning strategist of the menagerie.",
-    tierThresholds: { recruit: 1, operative: 8, specialist: 15 },
+    tierThresholds: { recruit: 1, operative: 4, specialist: 8 },
     tierLabels: { recruit: "Kit", operative: "Tactician", specialist: "Grand Strategist" },
   },
   {
@@ -95,7 +95,7 @@ export const agentMenagerie: AgentAnimal[] = [
     imagePath: "/mascots/agent-nightshift.svg",
     description: "Digs through digital bins and finds gold. Comes with a natural disguise.",
     personality: "The resourceful scavenger who can find anything online.",
-    tierThresholds: { recruit: 1, operative: 9, specialist: 18 },
+    tierThresholds: { recruit: 1, operative: 4, specialist: 8 },
     tierLabels: { recruit: "Bin Diver", operative: "Data Raider", specialist: "Ghost Operative" },
   },
   {
@@ -121,7 +121,7 @@ export const agentMenagerie: AgentAnimal[] = [
     imagePath: "/mascots/bristles.svg",
     description: "Small, defensive, and extremely pointy when provoked. Don't underestimate.",
     personality: "The cautious defender who sees danger everywhere.",
-    tierThresholds: { recruit: 1, operative: 6, specialist: 12 },
+    tierThresholds: { recruit: 1, operative: 4, specialist: 8 },
     tierLabels: { recruit: "Prickle", operative: "Sentinel", specialist: "Threat Master" },
   },
   {
@@ -264,7 +264,7 @@ export const agentMenagerie: AgentAnimal[] = [
     imagePath: "/mascots/the-hoarder.svg",
     description: "Collects everything. Organises most of it. Forgets where the rest is.",
     personality: "Compulsive collector, surprisingly strategic about it.",
-    tierThresholds: { recruit: 1, operative: 4, specialist: 8 },
+    tierThresholds: { recruit: 1, operative: 4, specialist: 7 },
     tierLabels: { recruit: "Gatherer", operative: "Stockpiler", specialist: "Grand Archivist" },
   },
   {

@@ -19,7 +19,7 @@ export const learningPaths = [
     imagePath: "/strategic-intelligence.png",
     path: "/learning-paths/strategic-intelligence",
     difficulty: "Advanced",
-    topicCount: 11,
+    topicCount: 8,
     estimatedTime: "4-5 hours",
   },
   {
@@ -30,7 +30,7 @@ export const learningPaths = [
     imagePath: "/osint.png",
     path: "/learning-paths/osint",
     difficulty: "Beginner",
-    topicCount: 3,
+    topicCount: 8,
     estimatedTime: "5-6 hours",
   },
   {
@@ -52,7 +52,7 @@ export const learningPaths = [
     imagePath: "/threat-assessment.png",
     path: "/learning-paths/threat-assessment",
     difficulty: "Advanced",
-    topicCount: 14,
+    topicCount: 8,
     estimatedTime: "4-6 hours",
   },
   {
@@ -173,7 +173,7 @@ export const learningPaths = [
     imagePath: "/data-collection-planning.png",
     path: "/learning-paths/data-collection-planning",
     difficulty: "Intermediate",
-    topicCount: 2,
+    topicCount: 7,
     estimatedTime: "2-3 hours",
   },
   {

@@ -1,9 +1,6 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
 import { TopicCardWithImage } from "@/components/topic-card-with-image"
-import { FeaturedResource } from "@/components/featured-resource"
 import { LearningFormats } from "@/components/learning-formats"
 import { TopicWhereNext } from "@/components/topic-where-next"
 
@@ -15,7 +12,8 @@ export default function DataCollectionPlanningPage() {
           <Image
             src="/data-collection-planning-banner.png"
             alt="Data Collection and Planning"
-            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
             priority
           />
@@ -23,7 +21,7 @@ export default function DataCollectionPlanningPage() {
         <div className="p-8 text-white">
           <h1 className="text-3xl font-bold mb-3">Data Collection and Planning</h1>
           <p className="text-slate-300 max-w-md">
-            Strategies for effective intelligence gathering and systematic collection planning
+            Ask for the cup of water. The ocean was never going to fit in the tasking note.
           </p>
         </div>
       </div>
@@ -32,14 +30,15 @@ export default function DataCollectionPlanningPage() {
         <div>
           <h2 className="text-3xl font-bold mb-6">About This Learning Path</h2>
           <p className="text-lg mb-4 text-justify">
-            Effective intelligence analysis begins with proper data collection. This learning path teaches you how to
-            develop data collection plans that align with intelligence requirements, optimize resource
-            allocation, and ensure the right information is gathered at the right time.
+            Collection is where intelligence shops go to feel busy. This path is the antidote: the cycle that
+            collection sits inside, the requirements that justify a task, the gap you are actually trying to fill,
+            the discipline that could fill it, the task a collector can execute, and the review that says whether
+            any of it answered the decision.
           </p>
           <p className="text-lg mb-4 text-justify">
-            You&apos;ll learn how to identify intelligence gaps, select appropriate collection methods, and design
-            implementation strategies across various intelligence disciplines. The course emphasizes both planning
-            methodologies and practical implementation techniques.
+            Nothing here teaches clandestine access. If a plan only works by going somewhere you are not allowed
+            to go, it is not an advanced plan. It is the wrong plan. Rewrite it until a citation could survive
+            daylight.
           </p>
 
           <LearningFormats />
@@ -47,66 +46,56 @@ export default function DataCollectionPlanningPage() {
       </div>
 
       <div className="mb-12">
-        <h2 className="text-3xl font-bold mb-6">Topics Covered</h2>
+        <h2 className="text-3xl font-bold mb-6">Lessons</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <TopicCardWithImage
-            title="Intelligence Requirements Development"
-            description="Learn how to identify and prioritize intelligence needs to guide collection efforts effectively."
+            title="The Intelligence Cycle"
+            description="Direction, collection, processing, analysis, dissemination — and the feedback loop plans like to skip."
+            imageSrc="/intelligence-cycle.png"
+            href="/topics/intelligence-cycle"
+            duration="20 min"
+          />
+          <TopicCardWithImage
+            title="Intelligence Requirements"
+            description="PIRs, essential elements, and the art of asking a question a human being can answer before the decision expires."
             imageSrc="/intelligence-requirements.png"
             href="/topics/intelligence-requirements"
             duration="15 min"
           />
           <TopicCardWithImage
-            title="Collection Planning Process"
-            description="Understand the step-by-step process for developing systematic collection plans."
+            title="Intelligence Gap Analysis"
+            description="Name the hole that changes a decision. Close it, task it, or accept the uncertainty on paper."
+            imageSrc="/intelligence-collection-planning-thumb.png"
+            href="/topics/intelligence-gap-analysis"
+            duration="16 min"
+          />
+          <TopicCardWithImage
+            title="The Collection Planning Process"
+            description="From prioritized questions to tasked assets, and the evaluation step that keeps the plan from becoming folklore."
             imageSrc="/planning-process.png"
-            href={`/lesson-in-development?lesson=${encodeURIComponent("Collection Planning Process")}`}
+            href="/topics/collection-planning-process-for-intel-analysts"
             duration="20 min"
           />
           <TopicCardWithImage
-            title="Source Selection & Evaluation"
-            description="Learn criteria for selecting and evaluating appropriate intelligence sources for reliability."
+            title="Matching Sources to Requirements"
+            description="Let the question pick the discipline. Write the blind spot down before a single-source story becomes a briefing."
             imageSrc="/source-selection.png"
-            href={`/lesson-in-development?lesson=${encodeURIComponent("Source Selection & Evaluation")}`}
-            duration="18 min"
+            href="/topics/matching-sources-to-requirements"
+            duration="16 min"
           />
           <TopicCardWithImage
-            title="OSINT Collection Strategies"
-            description="Develop systematic plans for collecting and organizing open-source intelligence effectively."
-            imageSrc="/osint-strategies.png"
-            href={`/lesson-in-development?lesson=${encodeURIComponent("OSINT Collection Strategies")}`}
-            duration="25 min"
+            title="Writing Collection Tasks"
+            description="One question, a clock, a definition of done, and enough room for an answer you did not want."
+            imageSrc="/collection-management.png"
+            href="/topics/writing-collection-tasks"
+            duration="15 min"
           />
           <TopicCardWithImage
-            title="Collection Operations Security"
-            description="Learn how to incorporate security considerations and risk management into collection planning."
-            imageSrc="/operations-security.png"
-            href={`/lesson-in-development?lesson=${encodeURIComponent("Collection Operations Security")}`}
-            duration="22 min"
-          />
-        </div>
-      </div>
-
-      <div className="mb-12">
-        <h2 className="text-3xl font-bold mb-6">Featured Resources</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <FeaturedResource
-            title="Collection Plan Templates"
-            description="Downloadable templates for creating data collection plans."
-            type="Template"
-            href="/resources/collection-plan-templates"
-          />
-          <FeaturedResource
-            title="Intelligence Requirements Handbook"
-            description="Guide to developing clear, actionable intelligence requirements."
-            type="Guide"
-            href="/resources/intelligence-requirements-handbook"
-          />
-          <FeaturedResource
-            title="Case Study: Collection Planning Success"
-            description="Real-world example of how effective collection planning led to intelligence breakthroughs."
-            type="Case Study"
-            href="/resources/collection-planning-case-study"
+            title="Evaluating the Collection Plan"
+            description="Score the gap, not the bustle. Then retask, narrow, or stop — and tell the person who owns the decision."
+            imageSrc="/data-collection-roadmap.png"
+            href="/topics/evaluating-collection-plans"
+            duration="15 min"
           />
         </div>
       </div>
@@ -117,7 +106,7 @@ export default function DataCollectionPlanningPage() {
           <div className="border rounded-lg p-6 hover:shadow-md transition-shadow">
             <h3 className="text-xl font-bold mb-2">OSINT</h3>
             <p className="text-muted-foreground mb-4 text-justify">
-              Master techniques for collecting and analyzing open-source intelligence.
+              The collection discipline most analysts can actually practice before lunch, and the standards that keep it lawful.
             </p>
             <Link
               href="/learning-paths/osint"
@@ -129,7 +118,7 @@ export default function DataCollectionPlanningPage() {
           <div className="border rounded-lg p-6 hover:shadow-md transition-shadow">
             <h3 className="text-xl font-bold mb-2">Analytical Techniques</h3>
             <p className="text-muted-foreground mb-4 text-justify">
-              Explore structured analytic techniques for intelligence analysis.
+              What you do with the take once collection has done its job, or confessed that it has not.
             </p>
             <Link
               href="/learning-paths/analytical-techniques"
@@ -139,15 +128,15 @@ export default function DataCollectionPlanningPage() {
             </Link>
           </div>
           <div className="border rounded-lg p-6 hover:shadow-md transition-shadow">
-            <h3 className="text-xl font-bold mb-2">Intelligence Cycle</h3>
+            <h3 className="text-xl font-bold mb-2">Strategic Intelligence</h3>
             <p className="text-muted-foreground mb-4 text-justify">
-              Understand the complete intelligence cycle from requirements to dissemination.
+              Where a collection plan has to serve a question measured in years, not in this afternoon&apos;s inbox.
             </p>
             <Link
-              href="/topics/intelligence-cycle"
+              href="/learning-paths/strategic-intelligence"
               className="bg-black text-white px-4 py-2 rounded hover:bg-gray-700 hover:scale-105 hover:shadow-md transition-all duration-300"
             >
-              Explore Topic
+              Explore Path
             </Link>
           </div>
         </div>

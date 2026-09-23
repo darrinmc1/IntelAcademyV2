@@ -1,8 +1,6 @@
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -11,20 +9,43 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { LearningFormats } from "@/components/learning-formats"
+import type { Metadata } from "next"
 import { StaticImage } from "@/components/static-image"
-import { TopicCard } from "@/components/topic-card"
 import { TopicWhereNext } from "@/components/topic-where-next"
+import { TopicCardWithImage } from "@/components/topic-card-with-image"
+
+export const metadata: Metadata = {
+  title: "Threat Assessment Learning Path | The Intel Analyst Academy",
+  description:
+    "Identify, characterize, prioritize, and hand off threats — with the models, indicators, and mitigation options that keep the word 'critical' scarce.",
+}
 
 export default function ThreatAssessmentPath() {
   return (
     <div className="container mx-auto px-4 py-8">
-      
+      <Breadcrumb className="mb-6">
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">Home</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/learning-paths">Learning Paths</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/learning-paths/threat-assessment" isCurrentPage>
+              Threat Assessment
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
         <div>
           <h1 className="text-4xl font-bold tracking-tight">Threat Assessment</h1>
           <p className="text-muted-foreground mt-2">
-            Evaluating and prioritizing threats based on capability, intent, and opportunity
+            Capability, intent, and the unglamorous question of what you will do about either
           </p>
         </div>
       </div>
@@ -38,9 +59,10 @@ export default function ThreatAssessmentPath() {
           />
         </div>
         <div className="p-8 text-white">
-          <h2 className="text-3xl font-bold mb-3">Threat Assessment</h2>
+          <h2 className="text-3xl font-bold mb-3">Rank it, or you did not assess it</h2>
           <p className="text-slate-300 max-w-md">
-            Learn how to identify, analyze, and prioritize threats to individuals, organizations, and infrastructure
+            Eight lessons from the basic distinctions through models, indicators, behavior, priority, mitigation,
+            and the watch that continues after the slide is filed.
           </p>
         </div>
       </div>
@@ -48,346 +70,87 @@ export default function ThreatAssessmentPath() {
       <LearningFormats />
 
       <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-6">Featured Topics</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <TopicCard
-            title="What is a Threat Assessment?"
-            description="Understanding the principles and methodologies of threat assessment"
+        <h2 className="text-2xl font-bold mb-2">Lessons</h2>
+        <p className="text-muted-foreground mb-6 max-w-3xl">
+          The first three teach you to name the problem. The middle three teach you to see it coming and to say
+          how sure you are. The last two are what a decision-maker can actually do on a Tuesday.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <TopicCardWithImage
+            title="What Is Threat Assessment?"
+            description="Threat, vulnerability, and risk — plus the capability-and-intent test that stops a capable actor from being treated as a plot."
+            imageSrc="/what-is-threat-assessment.png"
+            href="/topics/what-is-threat-assessment"
             duration="15 min"
-            image="/what-is-threat-assessment.png"
-            path="/topics/what-is-threat-assessment"
-            topic="what-is-threat-assessment"
           />
-          <TopicCard
+          <TopicCardWithImage
+            title="Threat Assessment Methodologies"
+            description="Qualitative, quantitative, scenario, threat-based, and vulnerability-centric approaches — and when a hybrid is the honest choice."
+            imageSrc="/threat-assessment.png"
+            href="/topics/threat-assessment-methodologies"
+            duration="15 min"
+          />
+          <TopicCardWithImage
             title="Threat Assessment Models"
-            description="Frameworks and models for evaluating threats systematically"
+            description="NTAS, CARVER, OCTAVE, and the deter-detect-delay-defend idea, without pretending a framework replaces a judgment."
+            imageSrc="/threat-assessment-models.png"
+            href="/topics/threat-assessment-models"
             duration="20 min"
-            image="/threat-assessment-models.png"
-            path="/topics/threat-assessment-models"
-            topic="threat-assessment-models"
           />
-          <TopicCard
-            title="Risk Factors and Indicators"
-            description="Identifying and evaluating warning signs and risk factors"
-            duration="25 min"
-            image="/risk-factors-indicators.png"
-            path="/topics/risk-factors-indicators"
-            topic="risk-factors-indicators"
+          <TopicCardWithImage
+            title="Risk Factor Indicators"
+            description="Observable precursors — behavioral, situational, capability, intent, network — and how not to treat smoke as the fire."
+            imageSrc="/risk-factors-indicators.png"
+            href="/topics/risk-factor-indicators-for-intelligence-analysis"
+            duration="15 min"
+          />
+          <TopicCardWithImage
+            title="Behavioral Threat Assessment"
+            description="Document what was said and done, cap the judgment, and refer. Not a diagnosis, and not a description of how harm is done."
+            imageSrc="/behavioral-analysis-grid.png"
+            href="/topics/behavioral-assessment"
+            duration="17 min"
+          />
+          <TopicCardWithImage
+            title="Threat Prioritization"
+            description="Likelihood, impact, and time to intervene — so the list can change someone's Tuesday instead of agreeing with the room."
+            imageSrc="/emerging-threats-thumb.png"
+            href="/topics/threat-prioritization"
+            duration="16 min"
+          />
+          <TopicCardWithImage
+            title="Mitigation Options"
+            description="Accept, monitor, reduce, transfer, or avoid. Each option names an owner and the risk it leaves behind."
+            imageSrc="/resource-allocation.png"
+            href="/topics/mitigation-strategies"
+            duration="16 min"
+          />
+          <TopicCardWithImage
+            title="Ongoing Threat Monitoring"
+            description="Tripwires, thresholds, and the alert fatigue that arrives when everything is set to urgent."
+            imageSrc="/threat-monitoring.png"
+            href="/topics/threat-monitoring"
+            duration="15 min"
           />
         </div>
-
-        <h2 className="text-2xl font-bold mb-4">All Topics</h2>
-
-        {/* Threat Assessment Fundamentals */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="text-2xl">Threat Assessment Fundamentals</CardTitle>
-            <CardDescription>Core concepts and principles of threat assessment</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="grid gap-4">
-              <div className="flex items-center justify-between py-2">
-                <div className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-gray-200">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-xs">
-                      THREAT
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-medium">What is Threat Assessment?</h3>
-                    <p className="text-sm text-muted-foreground">15 min read</p>
-                  </div>
-                </div>
-                <Button asChild variant="ghost" size="sm">
-                  <Link href="/topics/what-is-threat-assessment" className="flex items-center">
-                    Start <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-              <Separator />
-              <div className="flex items-center justify-between py-2">
-                <div className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-gray-200">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-xs">
-                      MODEL
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Threat Assessment Models</h3>
-                    <p className="text-sm text-muted-foreground">20 min read</p>
-                  </div>
-                </div>
-                <Button asChild variant="ghost" size="sm">
-                  <Link href="/topics/threat-assessment-models" className="flex items-center">
-                    Start <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-              <Separator />
-              <div className="flex items-center justify-between py-2">
-                <div className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-gray-200">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-xs">
-                      RISK
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Risk Factors and Indicators</h3>
-                    <p className="text-sm text-muted-foreground">25 min read</p>
-                  </div>
-                </div>
-                <Button asChild variant="ghost" size="sm">
-                  <Link href="/topics/risk-factors-indicators" className="flex items-center">
-                    Start <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Threat Categories */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="text-2xl">Threat Categories</CardTitle>
-            <CardDescription>Different types of threats and their characteristics</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="grid gap-4">
-              <div className="flex items-center justify-between py-2">
-                <div className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-gray-200">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-xs">
-                      TERROR
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Terrorism Threats</h3>
-                    <p className="text-sm text-muted-foreground">20 min read</p>
-                  </div>
-                </div>
-                <Button asChild variant="ghost" size="sm">
-                  <Link href="/topics/terrorism-threats" className="flex items-center">
-                    Start <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-              <Separator />
-              <div className="flex items-center justify-between py-2">
-                <div className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-gray-200">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-xs">
-                      VIOL
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Targeted Violence</h3>
-                    <p className="text-sm text-muted-foreground">15 min read</p>
-                  </div>
-                </div>
-                <Button asChild variant="ghost" size="sm">
-                  <Link href="/topics/targeted-violence" className="flex items-center">
-                    Start <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-              <Separator />
-              <div className="flex items-center justify-between py-2">
-                <div className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-gray-200">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-xs">
-                      INFRA
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Critical Infrastructure Threats</h3>
-                    <p className="text-sm text-muted-foreground">20 min read</p>
-                  </div>
-                </div>
-                <Button asChild variant="ghost" size="sm">
-                  <Link href="/topics/infrastructure-threats" className="flex items-center">
-                    Start <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-              <Separator />
-              <div className="flex items-center justify-between py-2">
-                <div className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-gray-200">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-xs">
-                      CYBER
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Cyber Threats</h3>
-                    <p className="text-sm text-muted-foreground">25 min read</p>
-                  </div>
-                </div>
-                <Button asChild variant="ghost" size="sm">
-                  <Link href="/topics/cyber-threats" className="flex items-center">
-                    Start <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Assessment Methodologies */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="text-2xl">Assessment Methodologies</CardTitle>
-            <CardDescription>Techniques and approaches for conducting threat assessments</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="grid gap-4">
-              <div className="flex items-center justify-between py-2">
-                <div className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-gray-200">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-xs">
-                      BEHAV
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Behavioral Threat Assessment</h3>
-                    <p className="text-sm text-muted-foreground">20 min read</p>
-                  </div>
-                </div>
-                <Button asChild variant="ghost" size="sm">
-                  <Link href="/topics/behavioral-assessment" className="flex items-center">
-                    Start <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-              <Separator />
-              <div className="flex items-center justify-between py-2">
-                <div className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-gray-200">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-xs">
-                      MATRIX
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Threat Matrix Development</h3>
-                    <p className="text-sm text-muted-foreground">25 min read</p>
-                  </div>
-                </div>
-                <Button asChild variant="ghost" size="sm">
-                  <Link href="/topics/threat-matrix" className="flex items-center">
-                    Start <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-              <Separator />
-              <div className="flex items-center justify-between py-2">
-                <div className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-gray-200">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-xs">
-                      SCEN
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Scenario Planning and Analysis</h3>
-                    <p className="text-sm text-muted-foreground">20 min read</p>
-                  </div>
-                </div>
-                <Button asChild variant="ghost" size="sm">
-                  <Link href="/topics/scenario-planning" className="flex items-center">
-                    Start <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-              <Separator />
-              <div className="flex items-center justify-between py-2">
-                <div className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-gray-200">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-xs">
-                      PRIO
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Threat Prioritization Techniques</h3>
-                    <p className="text-sm text-muted-foreground">15 min read</p>
-                  </div>
-                </div>
-                <Button asChild variant="ghost" size="sm">
-                  <Link href="/topics/threat-prioritization" className="flex items-center">
-                    Start <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Threat Management */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="text-2xl">Threat Management</CardTitle>
-            <CardDescription>Strategies for managing and mitigating identified threats</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="grid gap-4">
-              <div className="flex items-center justify-between py-2">
-                <div className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-gray-200">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-xs">
-                      MIT
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Threat Mitigation Strategies</h3>
-                    <p className="text-sm text-muted-foreground">20 min read</p>
-                  </div>
-                </div>
-                <Button asChild variant="ghost" size="sm">
-                  <Link href="/topics/mitigation-strategies" className="flex items-center">
-                    Start <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-              <Separator />
-              <div className="flex items-center justify-between py-2">
-                <div className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-gray-200">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-xs">
-                      PROT
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Protective Measures Implementation</h3>
-                    <p className="text-sm text-muted-foreground">25 min read</p>
-                  </div>
-                </div>
-                <Button asChild variant="ghost" size="sm">
-                  <Link href="/topics/protective-measures" className="flex items-center">
-                    Start <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-              <Separator />
-              <div className="flex items-center justify-between py-2">
-                <div className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-gray-200">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-xs">
-                      MON
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Ongoing Threat Monitoring</h3>
-                    <p className="text-sm text-muted-foreground">15 min read</p>
-                  </div>
-                </div>
-                <Button asChild variant="ghost" size="sm">
-                  <Link href="/topics/threat-monitoring" className="flex items-center">
-                    Start <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
       </section>
+
+      <div className="mb-12">
+        <h2 className="text-2xl font-bold mb-4">Related paths</h2>
+        <div className="flex flex-wrap gap-3">
+          <Button asChild variant="outline">
+            <Link href="/learning-paths/strategic-intelligence" className="flex items-center">
+              Strategic Intelligence <ChevronRight className="ml-1 h-4 w-4" />
+            </Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/learning-paths/data-collection-planning" className="flex items-center">
+              Data Collection Planning <ChevronRight className="ml-1 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
+      </div>
+
       <TopicWhereNext />
     </div>
   )
