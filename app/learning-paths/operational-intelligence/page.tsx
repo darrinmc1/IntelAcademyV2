@@ -207,7 +207,7 @@ export default function OperationalIntelligencePage() {
                     </div>
                   </div>
                   <Button asChild variant="ghost" size="sm">
-                    <Link href="/learning-paths/operational-intelligence/temporal-analysis" className="flex items-center">
+                    <Link href="/topics/hot-spot-analysis" className="flex items-center">
                       Start <ChevronRight className="ml-1 h-4 w-4" />
                     </Link>
                   </Button>
@@ -290,7 +290,7 @@ export default function OperationalIntelligencePage() {
                     </div>
                   </div>
                   <Button asChild variant="ghost" size="sm">
-                    <Link href="/learning-paths/operational-intelligence/behavioral-analysis" className="flex items-center">
+                    <Link href="/topics/repeat-offender-profiling-identifying-and-analyzing-patterns-of-repeat-offenders" className="flex items-center">
                       Start <ChevronRight className="ml-1 h-4 w-4" />
                     </Link>
                   </Button>
@@ -313,7 +313,7 @@ export default function OperationalIntelligencePage() {
                     </div>
                   </div>
                   <Button asChild variant="ghost" size="sm">
-                    <Link href="/learning-paths/operational-intelligence/mo-evolution" className="flex items-center">
+                    <Link href="/topics/mo-evolution" className="flex items-center">
                       Start <ChevronRight className="ml-1 h-4 w-4" />
                     </Link>
                   </Button>
@@ -375,7 +375,7 @@ export default function OperationalIntelligencePage() {
                     </div>
                   </div>
                   <Button asChild variant="ghost" size="sm">
-                    <Link href="/learning-paths/operational-intelligence/linking-offenders" className="flex items-center">
+                    <Link href="/topics/crime-linkage-techniques" className="flex items-center">
                       Start <ChevronRight className="ml-1 h-4 w-4" />
                     </Link>
                   </Button>
@@ -398,7 +398,7 @@ export default function OperationalIntelligencePage() {
                     </div>
                   </div>
                   <Button asChild variant="ghost" size="sm">
-                    <Link href="/learning-paths/operational-intelligence/linkage-validation" className="flex items-center">
+                    <Link href="/topics/what-is-crime-series-analysis" className="flex items-center">
                       Start <ChevronRight className="ml-1 h-4 w-4" />
                     </Link>
                   </Button>
