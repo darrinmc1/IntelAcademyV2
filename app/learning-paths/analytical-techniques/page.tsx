@@ -4,7 +4,6 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { TopicCardWithImage } from "@/components/topic-card-with-image"
-import { FeaturedResource } from "@/components/featured-resource"
 import { LearningFormats } from "@/components/learning-formats"
 import { TopicWhereNext } from "@/components/topic-where-next"
 
@@ -51,22 +50,16 @@ export default function AnalyticalTechniquesPage() {
         <h2 className="text-3xl font-bold mb-6">Topics Covered</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <TopicCardWithImage
+            title="Analytical Techniques for Analysts"
+            description="Structured methods, including assumptions checks and brainstorming, in one working lesson."
+            imageSrc="/analytical-techniques-banner.png"
+            href="/topics/analytical-techniques-for-intel-analysts"
+          />
+          <TopicCardWithImage
             title="Analysis of Competing Hypotheses"
             description="Master the systematic evaluation of multiple hypotheses to avoid confirmation bias."
             imageSrc="/analytical-techniques/competing-hypotheses.png"
             href="/topics/analysis-competing-hypotheses"
-          />
-          <TopicCardWithImage
-            title="Structured Brainstorming"
-            description="Use systematic approaches to generate ideas and hypotheses for complex problems."
-            imageSrc="/structured-brainstorming.png"
-            href="/topics/structured-brainstorming"
-          />
-          <TopicCardWithImage
-            title="Key Assumptions Check"
-            description="Learn to identify and challenge the underlying assumptions in your analysis."
-            imageSrc="/assumptions-check.png"
-            href="/topics/key-assumptions-check"
           />
           <TopicCardWithImage
             title="Indicators and Warnings"
@@ -78,31 +71,7 @@ export default function AnalyticalTechniquesPage() {
             title="Cognitive Biases in Intelligence"
             description="Identify and mitigate common cognitive biases that affect analytical judgment."
             imageSrc="/cognitive-biases.png"
-            href="/topics/cognitive-biases-intelligence"
-          />
-        </div>
-      </div>
-
-      <div className="mb-12">
-        <h2 className="text-3xl font-bold mb-6">Featured Resources</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <FeaturedResource
-            title="Structured Analytic Techniques Handbook"
-            description="Guide to applying structured techniques in intelligence analysis."
-            type="Guide"
-            href="/resources/sat-handbook"
-          />
-          <FeaturedResource
-            title="ACH Worksheet Templates"
-            description="Ready-to-use templates for conducting Analysis of Competing Hypotheses."
-            type="Template"
-            href="/resources/ach-templates"
-          />
-          <FeaturedResource
-            title="Case Study: Intelligence Failure Analysis"
-            description="Examination of how structured techniques could have prevented historical intelligence failures."
-            type="Case Study"
-            href="/resources/intelligence-failure-case-study"
+            href="/topics/cognitive-biases"
           />
         </div>
       </div>

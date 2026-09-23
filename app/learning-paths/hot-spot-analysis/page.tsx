@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { LearningFormats } from "@/components/learning-formats"
+import { PathLessonList } from "@/components/learning-path-template"
 import { TopicWhereNext } from "@/components/topic-where-next"
 
 export const metadata = {
@@ -41,125 +42,17 @@ export default function HotSpotAnalysisPage() {
 
       <LearningFormats />
 
-      {/* Topic Cards - Simple HTML version */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-        {/* Card 1 */}
-        <div className="border rounded-lg overflow-hidden shadow-sm">
-          <div className="relative h-48">
-            <Image
-              src="/hot-spot-mapping-intro-thumb.png"
-              alt="What is Hot Spot Analysis"
-              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="p-4">
-            <h3 className="text-xl font-bold mb-2">What is Hot Spot Analysis</h3>
-            <p className="text-gray-600 mb-4">
-              An introduction to the fundamentals of hot spot analysis and its applications
-            </p>
-            <p className="text-blue-600 font-medium">15 min read</p>
-          </div>
-        </div>
-
-        {/* Card 2 */}
-        <div className="border rounded-lg overflow-hidden shadow-sm">
-          <div className="relative h-48">
-            <Image
-              src="/crime-mapping-techniques-thumb.png"
-              alt="Crime Mapping Techniques"
-              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="p-4">
-            <h3 className="text-xl font-bold mb-2">Crime Mapping Techniques</h3>
-            <p className="text-gray-600 mb-4">
-              Methods and tools for visualizing and analyzing crime patterns geographically
-            </p>
-            <p className="text-blue-600 font-medium">20 min read</p>
-          </div>
-        </div>
-
-        {/* Card 3 */}
-        <div className="border rounded-lg overflow-hidden shadow-sm">
-          <div className="relative h-48">
-            <Image src="/temporal-analysis-thumb.png" alt="Temporal Analysis" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
-          </div>
-          <div className="p-4">
-            <h3 className="text-xl font-bold mb-2">Temporal Analysis</h3>
-            <p className="text-gray-600 mb-4">Understanding time patterns in hot spot formation and evolution</p>
-            <p className="text-blue-600 font-medium">18 min read</p>
-          </div>
-        </div>
-
-        {/* Card 4 */}
-        <div className="border rounded-lg overflow-hidden shadow-sm">
-          <div className="relative h-48">
-            <Image src="/risk-terrain-modeling-thumb.png" alt="Risk Terrain Modeling" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
-          </div>
-          <div className="p-4">
-            <h3 className="text-xl font-bold mb-2">Risk Terrain Modeling</h3>
-            <p className="text-gray-600 mb-4">Advanced techniques for identifying environmental risk factors</p>
-            <p className="text-blue-600 font-medium">25 min read</p>
-          </div>
-        </div>
-
-        {/* Card 5 */}
-        <div className="border rounded-lg overflow-hidden shadow-sm">
-          <div className="relative h-48">
-            <Image src="/predictive-hot-spots-thumb.png" alt="Predictive Hot Spots" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
-          </div>
-          <div className="p-4">
-            <h3 className="text-xl font-bold mb-2">Predictive Hot Spots</h3>
-            <p className="text-gray-600 mb-4">Using historical data to forecast future hot spot locations</p>
-            <p className="text-blue-600 font-medium">22 min read</p>
-          </div>
-        </div>
-
-        {/* Card 6 */}
-        <div className="border rounded-lg overflow-hidden shadow-sm">
-          <div className="relative h-48">
-            <Image
-              src="/deployment-decisions-thumb.png"
-              alt="Resource Deployment Strategies"
-              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="p-4">
-            <h3 className="text-xl font-bold mb-2">Resource Deployment Strategies</h3>
-            <p className="text-gray-600 mb-4">Translating hot spot analysis into effective operational decisions</p>
-            <p className="text-blue-600 font-medium">20 min read</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Featured Resource */}
-      <div className="bg-gray-100 p-6 rounded-lg">
-        <h2 className="text-2xl font-bold mb-4">Featured Resource</h2>
-        <div className="flex flex-col md:flex-row gap-6 items-center">
-          <div className="relative w-full md:w-1/3 aspect-video">
-            <Image
-              src="/hot-spot-analysis-concept.png"
-              alt="Hot Spot Analysis Concept"
-              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-cover rounded-lg"
-            />
-          </div>
-          <div className="md:w-2/3">
-            <h3 className="text-xl font-bold mb-2">Hot Spot Analysis Toolkit</h3>
-            <p className="mb-4">
-              This toolkit provides analysts with step-by-step guidance for conducting effective hot spot
-              analysis, from data collection through visualization and interpretation.
-            </p>
-            <p>
-              The toolkit includes templates, case studies, and best practices for implementing hot spot analysis in
-              various operational contexts.
-            </p>
-          </div>
-        </div>
-      </div>
+      <PathLessonList
+        topics={[
+          {
+            title: "Hot Spot Analysis",
+            description:
+              "Diffuse, clustered, and hotspot types; KDE and Gi*; time of day; and the victims who keep showing up.",
+            slug: "hot-spot-analysis",
+            readTime: 20,
+          },
+        ]}
+      />
       <TopicWhereNext />
     </main>
   )

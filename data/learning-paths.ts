@@ -85,7 +85,7 @@ export const learningPaths = [
     imagePath: "/operational-intelligence.png",
     path: "/learning-paths/operational-intelligence",
     difficulty: "Intermediate",
-    topicCount: 13,
+    topicCount: 11,
     estimatedTime: "2-3 hours",
   },
   {
@@ -107,7 +107,7 @@ export const learningPaths = [
     imagePath: "/hot-spot-analysis.png",
     path: "/learning-paths/hot-spot-analysis",
     difficulty: "Intermediate",
-    topicCount: 0,
+    topicCount: 1,
     estimatedTime: "2-3 hours",
   },
   {
@@ -118,7 +118,7 @@ export const learningPaths = [
     imagePath: "/network-analysis.png",
     path: "/learning-paths/network-analysis",
     difficulty: "Intermediate",
-    topicCount: 0,
+    topicCount: 4,
     estimatedTime: "2-3 hours",
   },
   {
@@ -129,7 +129,7 @@ export const learningPaths = [
     imagePath: "/target-profiling.png",
     path: "/learning-paths/target-profiling",
     difficulty: "Intermediate",
-    topicCount: 0,
+    topicCount: 3,
     estimatedTime: "2-3 hours",
   },
   {
@@ -140,7 +140,7 @@ export const learningPaths = [
     imagePath: "/crime-trend-analysis.png",
     path: "/learning-paths/crime-trend-analysis",
     difficulty: "Intermediate",
-    topicCount: 0,
+    topicCount: 4,
     estimatedTime: "2-3 hours",
   },
   {
@@ -151,7 +151,7 @@ export const learningPaths = [
     imagePath: "/analytical-techniques.png",
     path: "/learning-paths/analytical-techniques",
     difficulty: "Intermediate",
-    topicCount: 5,
+    topicCount: 4,
     estimatedTime: "2-3 hours",
   },
   {
@@ -162,7 +162,7 @@ export const learningPaths = [
     imagePath: "/excel-for-analysts.png",
     path: "/learning-paths/excel-for-analysts",
     difficulty: "Intermediate",
-    topicCount: 5,
+    topicCount: 1,
     estimatedTime: "2-3 hours",
   },
   {
@@ -184,7 +184,7 @@ export const learningPaths = [
     imagePath: "/intelligence-tools.png",
     path: "/learning-paths/intelligence-tools",
     difficulty: "Intermediate",
-    topicCount: 0,
+    topicCount: 5,
     estimatedTime: "2-3 hours",
   },
   {
@@ -195,7 +195,7 @@ export const learningPaths = [
     imagePath: "/source-evaluation.png",
     path: "/learning-paths/source-evaluation",
     difficulty: "Intermediate",
-    topicCount: 0,
+    topicCount: 2,
     estimatedTime: "2-3 hours",
   },
   {
@@ -206,7 +206,7 @@ export const learningPaths = [
     imagePath: "/digital-intelligence.png",
     path: "/learning-paths/digital-intelligence",
     difficulty: "Intermediate",
-    topicCount: 0,
+    topicCount: 3,
     estimatedTime: "2-3 hours",
   },
   {
@@ -217,7 +217,7 @@ export const learningPaths = [
     imagePath: "/geospatial-intelligence.png",
     path: "/learning-paths/geospatial-intelligence",
     difficulty: "Intermediate",
-    topicCount: 0,
+    topicCount: 2,
     estimatedTime: "2-3 hours",
   },
   {
@@ -228,7 +228,7 @@ export const learningPaths = [
     imagePath: "/intelligence-ethics.png",
     path: "/learning-paths/intelligence-ethics",
     difficulty: "Intermediate",
-    topicCount: 0,
+    topicCount: 5,
     estimatedTime: "2-3 hours",
   },
   {
@@ -239,7 +239,7 @@ export const learningPaths = [
     imagePath: "/cognitive-bias.png",
     path: "/learning-paths/cognitive-bias",
     difficulty: "Intermediate",
-    topicCount: 0,
+    topicCount: 2,
     estimatedTime: "2-3 hours",
   },
   {
@@ -250,7 +250,7 @@ export const learningPaths = [
     imagePath: "/financial-intelligence.png",
     path: "/learning-paths/financial-intelligence",
     difficulty: "Intermediate",
-    topicCount: 9,
+    topicCount: 1,
     estimatedTime: "2-3 hours",
   },
   {
@@ -261,7 +261,7 @@ export const learningPaths = [
     imagePath: "/intelligence-communication.png",
     path: "/learning-paths/intelligence-communication",
     difficulty: "Intermediate",
-    topicCount: 0,
+    topicCount: 3,
     estimatedTime: "2-3 hours",
   },
 ]

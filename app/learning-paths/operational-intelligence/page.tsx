@@ -70,7 +70,7 @@ export default function OperationalIntelligencePage() {
             description="Identify patterns and trends in related criminal activities"
             duration="75 min"
             image="/crime-series-analysis.png"
-            path="/learning-paths/operational-intelligence/crime-series-analysis"
+            path="/topics/what-is-crime-series-analysis"
             topic="crime-series-analysis"
             icon={<TrendingUp className="h-5 w-5" />}
           />
@@ -79,7 +79,7 @@ export default function OperationalIntelligencePage() {
             description="Examine and interpret criminal methods of operation"
             duration="65 min"
             image="/modus-operandi-analysis.png"
-            path="/learning-paths/operational-intelligence/modus-operandi-analysis"
+            path="/topics/modus-operandi-analysis-techniques"
             topic="modus-operandi-analysis"
             icon={<Search className="h-5 w-5" />}
           />
@@ -88,7 +88,7 @@ export default function OperationalIntelligencePage() {
             description="Connect disparate criminal incidents through advanced analysis"
             duration="80 min"
             image="/crime-linkage-techniques.png"
-            path="/learning-paths/operational-intelligence/crime-linkage-techniques"
+            path="/topics/crime-linkage-techniques"
             topic="crime-linkage-techniques"
             icon={<LinkIcon className="h-5 w-5" />}
           />
@@ -231,6 +231,29 @@ export default function OperationalIntelligencePage() {
                   </div>
                   <Button asChild variant="ghost" size="sm">
                     <Link href="/topics/predictive-patterning-using-historical-series-data-to-predict-future-criminal-ac" className="flex items-center">
+                      Start <ChevronRight className="ml-1 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+                <Separator />
+                <div className="flex items-center justify-between py-2">
+                  <div className="flex items-center gap-4">
+                    <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-gray-200">
+                      <StaticImage
+                        src="/predictive-patterning-thumb.png"
+                        alt="Predictive modeling and resource allocation"
+                        width={48}
+                        height={48}
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="font-medium">Predictive Modeling and Resource Allocation</h3>
+                      <p className="text-sm text-muted-foreground">Forecast the series, then place the people</p>
+                    </div>
+                  </div>
+                  <Button asChild variant="ghost" size="sm">
+                    <Link href="/topics/advanced-crime-series-analysis-predictive-modeling-resource-allocation" className="flex items-center">
                       Start <ChevronRight className="ml-1 h-4 w-4" />
                     </Link>
                   </Button>

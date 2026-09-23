@@ -9,34 +9,22 @@ export const metadata: Metadata = {
 export default function IntelligenceCommunicationPage() {
   const topics = [
     {
-      title: "Audience Analysis",
-      description: "Techniques for understanding and adapting to different intelligence consumers",
-      slug: "audience-analysis",
+      title: "Intelligence Briefings",
+      description: "A briefing is not a report read aloud. This lesson is the difference, including the Q&A.",
+      slug: "intelligence-briefings",
       readTime: 20,
     },
     {
-      title: "Visual Communication",
-      description: "Methods for creating effective visual aids to communicate complex intelligence",
-      slug: "visual-aids",
-      readTime: 25,
-    },
-    {
-      title: "Briefing Techniques",
-      description: "Advanced strategies for delivering effective intelligence briefings",
+      title: "Verbal Briefing Techniques",
+      description: "Delivery, audience, and the first sixty seconds where you either keep the room or lose it.",
       slug: "verbal-briefing-techniques",
-      readTime: 30,
+      readTime: 18,
     },
     {
-      title: "Intelligence Storytelling",
-      description: "Narrative techniques for making intelligence findings compelling and memorable",
-      slug: "intelligence-storytelling",
-      readTime: 25,
-    },
-    {
-      title: "Crisis Communication",
-      description: "Specialized communication techniques for high-pressure situations",
-      slug: "crisis-communication",
-      readTime: 30,
+      title: "Visual Intelligence Reporting",
+      description: "Pictures that carry a judgment, with the caveat still visible.",
+      slug: "visual-intelligence-reporting",
+      readTime: 18,
     },
   ]
 
@@ -44,17 +32,12 @@ export default function IntelligenceCommunicationPage() {
     <LearningPathTemplate
       pathSlug="intelligence-communication"
       title="Intelligence Communication"
-      description="Develop advanced skills for effectively communicating intelligence findings to various audiences. This learning path covers briefing techniques, visual communication, and methods for making complex intelligence accessible and actionable."
+      description="If they cannot remember it, they cannot act on it. Briefings, delivery, and the visual that has to survive the meeting."
       topics={topics}
       level="Intermediate"
       duration="6 Hours"
       category="intelligence-communication"
       image="/intelligence-communication.png"
-    >
-      <div>
-        <h1>Intelligence Communication</h1>
-        <p>Develop advanced skills for effectively communicating intelligence findings to various audiences.</p>
-      </div>
-    </LearningPathTemplate>
+    />
   )
 }

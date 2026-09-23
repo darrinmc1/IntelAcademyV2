@@ -4,7 +4,6 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { TopicCardWithImage } from "@/components/topic-card-with-image"
-import { FeaturedResource } from "@/components/featured-resource"
 import { LearningFormats } from "@/components/learning-formats"
 import { TopicWhereNext } from "@/components/topic-where-next"
 
@@ -52,57 +51,9 @@ export default function ExcelForAnalystsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <TopicCardWithImage
             title="Excel Fundamentals for Analysts"
-            description="Master essential Excel functions and features specifically relevant to intelligence analysis workflows."
+            description="The Excel habits that hold an investigation together: filters, lookups, and a sheet someone else can audit."
             imageSrc="/excel-for-analysts/excel-fundamentals.png"
             href="/topics/excel-fundamentals-for-analysts"
-          />
-          <TopicCardWithImage
-            title="Data Organization & Management"
-            description="Learn how to structure, clean, and manage intelligence data effectively in Excel."
-            imageSrc="/data-organization.png"
-            href="/topics/excel-data-organization"
-          />
-          <TopicCardWithImage
-            title="Pivot Tables for Intelligence Analysis"
-            description="Use pivot tables to summarize, aggregate, and explore complex intelligence data."
-            imageSrc="/pivot-tables.png"
-            href="/topics/excel-pivot-tables"
-          />
-          <TopicCardWithImage
-            title="Data Visualization Techniques"
-            description="Create effective charts, graphs, and visual representations of intelligence information."
-            imageSrc="/data-visualization.png"
-            href="/topics/excel-data-visualization"
-          />
-          <TopicCardWithImage
-            title="Timeline Analysis Tools"
-            description="Build and analyze event timelines for investigations and intelligence products."
-            imageSrc="/timeline-analysis.png"
-            href="/topics/excel-timeline-analysis"
-          />
-        </div>
-      </div>
-
-      <div className="mb-12">
-        <h2 className="text-3xl font-bold mb-6">Featured Resources</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <FeaturedResource
-            title="Excel Templates for Intelligence Analysis"
-            description="Download ready-to-use Excel templates designed specifically for intelligence workflows."
-            type="Template"
-            href="/resources/excel-templates-for-intelligence"
-          />
-          <FeaturedResource
-            title="Advanced Excel Functions for Analysts"
-            description="Guide to Excel functions most valuable for intelligence analysis."
-            type="Guide"
-            href="/resources/advanced-excel-functions"
-          />
-          <FeaturedResource
-            title="Case Study: Excel in Major Investigations"
-            description="Real-world examples of how Excel has been used in complex intelligence cases."
-            type="Case Study"
-            href="/resources/excel-investigation-case-study"
           />
         </div>
       </div>

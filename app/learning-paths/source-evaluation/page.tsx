@@ -9,34 +9,18 @@ export const metadata: Metadata = {
 export default function SourceEvaluationPage() {
   const topics = [
     {
-      title: "Source Reliability Matrix",
-      description: "Frameworks for evaluating and rating the reliability of intelligence sources",
-      slug: "source-reliability-matrix",
+      title: "Evidence and Source Evaluation",
+      description:
+        "The Admiralty scale, the evidence chain, and why three unreliable sources agreeing is a rumor book club.",
+      slug: "evidence-based-conclusions",
       readTime: 20,
     },
     {
-      title: "Information Credibility Assessment",
-      description: "Methods for determining the credibility of information from various sources",
-      slug: "information-credibility-assessment",
-      readTime: 25,
-    },
-    {
-      title: "Cross-Verification Techniques",
-      description: "Strategies for verifying information through multiple independent sources",
-      slug: "cross-verification-techniques",
-      readTime: 30,
-    },
-    {
-      title: "Disinformation Recognition",
-      description: "Identifying and countering deliberately false or misleading information",
-      slug: "disinformation-recognition",
-      readTime: 35,
-    },
-    {
-      title: "Source Protection Methods",
-      description: "Techniques for protecting sensitive sources while utilizing their information",
-      slug: "source-protection-methods",
-      readTime: 25,
+      title: "Multi-Source Integration",
+      description:
+        "Fuse HUMINT, SIGINT, and OSINT, and tell corroboration apart from the same story heard twice.",
+      slug: "multi-source-integration",
+      readTime: 18,
     },
   ]
 
@@ -44,17 +28,12 @@ export default function SourceEvaluationPage() {
     <LearningPathTemplate
       pathSlug="source-evaluation"
       title="Source Evaluation & Validation"
-      description="Develop critical skills for assessing the reliability and credibility of intelligence sources. This learning path teaches methodologies for evaluating sources, verifying information, and recognizing disinformation."
+      description="Trust is a hypothesis. These lessons grade the source, grade the information, and show what fusion looks like when the tiles do not agree."
       topics={topics}
       level="Intermediate"
       duration="6 Hours"
       category="source-evaluation"
       image="/source-evaluation.png"
-    >
-      <div>
-        <h1>Source Evaluation & Validation</h1>
-        <p>Develop critical skills for assessing the reliability and credibility of intelligence sources.</p>
-      </div>
-    </LearningPathTemplate>
+    />
   )
 }

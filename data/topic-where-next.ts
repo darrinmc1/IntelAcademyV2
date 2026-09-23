@@ -27,8 +27,12 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Strategic Intelligence", description: "Continue with the Strategic Intelligence learning path for more lessons on this subject.", path: "/learning-paths/strategic-intelligence" },
   },
   "advanced-crime-series-analysis-predictive-modeling-resource-allocation": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Crime Trend Analysis", description: "The trend underneath the forecast.", path: "/topics/crime-trend-analysis" },
+    more: { title: "Crime Trend Analysis", description: "Continue with the Crime Trend Analysis learning path.", path: "/learning-paths/crime-trend-analysis" },
+  },
+  "ai-prompt-injection-defense": {
+    similar: { title: "Digital Evidence Documentation", description: "How to keep the digital record defensible.", path: "/topics/digital-evidence-documentation" },
+    more: { title: "Digital Intelligence & Forensics", description: "Continue with the Digital Intelligence learning path.", path: "/learning-paths/digital-intelligence" },
   },
   "all-topics": {
     similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
@@ -43,16 +47,16 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Analyst Notebook", description: "Continue with the Analyst Notebook learning path for more lessons on this subject.", path: "/learning-paths/analyst-notebook" },
   },
   "analytical-techniques-for-intel-analysts": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Analysis of Competing Hypotheses", description: "The structured test the overview keeps pointing at.", path: "/topics/analysis-competing-hypotheses" },
+    more: { title: "Analytical Techniques", description: "Continue with the Analytical Techniques learning path.", path: "/learning-paths/analytical-techniques" },
   },
   "clear-writing-principles": {
     similar: { title: "Data Presentation", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/data-presentation" },
     more: { title: "Intelligence Report Writing", description: "Continue with the Intelligence Report Writing learning path for more lessons on this subject.", path: "/learning-paths/report-writing" },
   },
   "cognitive-biases": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Intelligence Failures", description: "What those biases look like after the surprise.", path: "/topics/intelligence-failures" },
+    more: { title: "Cognitive Bias in Intelligence Analysis", description: "Continue with the Cognitive Bias learning path.", path: "/learning-paths/cognitive-bias" },
   },
   "collection-planning-process-for-intel-analysts": {
     similar: { title: "Intelligence Requirements", description: "The questions a collection plan is supposed to serve.", path: "/topics/intelligence-requirements" },
@@ -67,16 +71,16 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Crime Series Analysis", description: "Continue with the Crime Series Analysis learning path for more lessons on this subject.", path: "/learning-paths/crime-series-analysis" },
   },
   "crime-trend-analysis": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Series Pattern Detection", description: "The statistical cousin of a trend line.", path: "/topics/series-pattern-detection-statistical-analytical-methods-crime-series" },
+    more: { title: "Crime Trend Analysis", description: "Continue with the Crime Trend Analysis learning path.", path: "/learning-paths/crime-trend-analysis" },
   },
   "data-presentation": {
     similar: { title: "Estimative Language", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/estimative-language" },
     more: { title: "Intelligence Report Writing", description: "Continue with the Intelligence Report Writing learning path for more lessons on this subject.", path: "/learning-paths/report-writing" },
   },
   "data-visualization-intelligence": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Timeline Visualization", description: "The chart that has to keep the sequence honest.", path: "/topics/timeline-visualization" },
+    more: { title: "Intelligence Tools & Technology", description: "Continue with the Intelligence Tools learning path.", path: "/learning-paths/intelligence-tools" },
   },
   "digital-evidence-documentation": {
     similar: { title: "Intelligence Report Fundamentals", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/intelligence-report-fundamentals" },
@@ -95,8 +99,8 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Intelligence Report Writing", description: "Continue with the Intelligence Report Writing learning path for more lessons on this subject.", path: "/learning-paths/report-writing" },
   },
   "ethical-decision-making": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Legal Frameworks", description: "The rules the decision still has to fit inside.", path: "/topics/legal-frameworks" },
+    more: { title: "Intelligence Ethics & Legal Framework", description: "Continue with the Intelligence Ethics learning path.", path: "/learning-paths/intelligence-ethics" },
   },
   "evidence-based-conclusions": {
     similar: { title: "Executive Summaries Mastery", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/executive-summaries-mastery" },
@@ -111,12 +115,12 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Intelligence Report Writing", description: "Continue with the Intelligence Report Writing learning path for more lessons on this subject.", path: "/learning-paths/report-writing" },
   },
   "finint-basics": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Network Analysis", description: "The chart version of following the money.", path: "/topics/network-analysis" },
+    more: { title: "Financial Intelligence Analysis", description: "Continue with the Financial Intelligence learning path.", path: "/learning-paths/financial-intelligence" },
   },
   "geoint-fundamentals": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Hot Spot Analysis", description: "Where the incidents actually clump.", path: "/topics/hot-spot-analysis" },
+    more: { title: "Geospatial Intelligence", description: "Continue with the Geospatial Intelligence learning path.", path: "/learning-paths/geospatial-intelligence" },
   },
   "good-intelligence-report": {
     similar: { title: "Intelligence Report Components", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/intelligence-report-components" },
@@ -127,16 +131,16 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Open Source Intelligence", description: "Continue with the Open Source Intelligence learning path for more lessons on this subject.", path: "/learning-paths/osint" },
   },
   "hot-spot-analysis": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "GEOINT Fundamentals", description: "The imagery and mapping discipline underneath the hot spot.", path: "/topics/geoint-fundamentals" },
+    more: { title: "Hot Spot Analysis", description: "Continue with the Hot Spot Analysis learning path.", path: "/learning-paths/hot-spot-analysis" },
   },
   "humint-fundamentals": {
     similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
     more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
   },
   "intelligence-briefings": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Verbal Briefing Techniques", description: "Delivery, once you know a briefing is not a spoken report.", path: "/topics/verbal-briefing-techniques" },
+    more: { title: "Intelligence Communication & Briefing", description: "Continue with the Intelligence Communication learning path.", path: "/learning-paths/intelligence-communication" },
   },
   "intelligence-cycle": {
     similar: { title: "Types of Intelligence", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/intelligence-types" },
@@ -151,16 +155,16 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
   },
   "intelligence-ethics": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Legal Frameworks", description: "The authorities the ethic still has to cite.", path: "/topics/legal-frameworks" },
+    more: { title: "Intelligence Ethics & Legal Framework", description: "Continue with the Intelligence Ethics learning path.", path: "/learning-paths/intelligence-ethics" },
   },
   "intelligence-failures": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Cognitive Biases in Intelligence Analysis", description: "The mental habits most of those failures share.", path: "/topics/cognitive-biases" },
+    more: { title: "Cognitive Bias in Intelligence Analysis", description: "Continue with the Cognitive Bias learning path.", path: "/learning-paths/cognitive-bias" },
   },
   "intelligence-oversight": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Privacy and Civil Liberties", description: "The rights the oversight regime is supposed to protect.", path: "/topics/privacy-civil-liberties" },
+    more: { title: "Intelligence Ethics & Legal Framework", description: "Continue with the Intelligence Ethics learning path.", path: "/learning-paths/intelligence-ethics" },
   },
   "intelligence-report-components": {
     similar: { title: "Intelligence Report Types", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/intelligence-report-types" },
@@ -191,12 +195,12 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Intelligence Foundations", description: "Continue with the Intelligence Foundations learning path for more lessons on this subject.", path: "/learning-paths/foundations" },
   },
   "introduction-to-link-analysis": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Network Analysis", description: "The measures that tell you which node actually matters.", path: "/topics/network-analysis" },
+    more: { title: "Network Analysis", description: "Continue with the Network Analysis learning path.", path: "/learning-paths/network-analysis" },
   },
   "legal-frameworks": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Intelligence Oversight", description: "Who checks that the authority was used as written.", path: "/topics/intelligence-oversight" },
+    more: { title: "Intelligence Ethics & Legal Framework", description: "Continue with the Intelligence Ethics learning path.", path: "/learning-paths/intelligence-ethics" },
   },
   "main-body-organization": {
     similar: { title: "Conclusion Development", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/conclusion-development" },
@@ -215,8 +219,8 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Intelligence Report Writing", description: "Continue with the Intelligence Report Writing learning path for more lessons on this subject.", path: "/learning-paths/report-writing" },
   },
   "network-analysis": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Introduction to Link Analysis", description: "The chart, before the centrality math.", path: "/topics/introduction-to-link-analysis" },
+    more: { title: "Network Analysis", description: "Continue with the Network Analysis learning path.", path: "/learning-paths/network-analysis" },
   },
   "notebook-creating-chart": {
     similar: { title: "Example Materials in Analyst\'s Notebook", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/notebook-example-materials" },
@@ -255,8 +259,8 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Crime Series Analysis", description: "Continue with the Crime Series Analysis learning path for more lessons on this subject.", path: "/learning-paths/crime-series-analysis" },
   },
   "privacy-civil-liberties": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Ethical Decision-Making", description: "What to do when the lawful option is still uncomfortable.", path: "/topics/ethical-decision-making" },
+    more: { title: "Intelligence Ethics & Legal Framework", description: "Continue with the Intelligence Ethics learning path.", path: "/learning-paths/intelligence-ethics" },
   },
   "real-time-osint": {
     similar: { title: "The OSINT Workflow", description: "The sequence real-time work still has to obey.", path: "/topics/osint-workflow" },
@@ -315,12 +319,12 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Intelligence Report Writing", description: "Continue with the Intelligence Report Writing learning path for more lessons on this subject.", path: "/learning-paths/report-writing" },
   },
   "target-profiling": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Profiles of High-Value Targets", description: "The package version of the same profile.", path: "/topics/target-profiling-developing-profiles-of-high-value-targets" },
+    more: { title: "Target Profiling", description: "Continue with the Target Profiling learning path.", path: "/learning-paths/target-profiling" },
   },
   "target-profiling-developing-profiles-of-high-value-targets": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Target Profiling", description: "The five-factor method the package sits on.", path: "/topics/target-profiling" },
+    more: { title: "Target Profiling", description: "Continue with the Target Profiling learning path.", path: "/learning-paths/target-profiling" },
   },
   "threat-assessment-methodologies": {
     similar: { title: "Threat Assessment Models", description: "Named frameworks once you know which kind of method you are in.", path: "/topics/threat-assessment-models" },
