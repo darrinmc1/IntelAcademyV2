@@ -680,20 +680,11 @@ class ImageLibrary:
             score += 8
         if heading_slug and heading_slug in candidate.stem:
             score += 6
-        # Discipline acronym in the heading must beat generic keyword bleed
-        # (e.g. "satellite" in a SIGINT body matching a GEOINT still).
-        for acronym in (
-            "humint",
-            "osint",
-            "sigint",
-            "geoint",
-            "masint",
-            "finint",
-            "techint",
-            "socmint",
-        ):
-            if acronym in heading.lower() and acronym in candidate.stem:
-                score += 12
+        # Discipline acronym: used as a hard FILTER (see pick()), not a score
+        # bonus. Adding +12 here flattened every same-discipline image to an
+        # identical score, which left selection to the alphabetical tie-break -
+        # i.e. effectively random. Relevance now comes from the keyword terms
+        # above; discipline is enforced by exclusion in pick().
         return score
 
     def pick(
@@ -703,36 +694,42 @@ class ImageLibrary:
         slug: str,
         used_fingerprints: set[str],
     ) -> tuple[ImageCandidate | None, int, str]:
-        ranked: list[tuple[int, ImageCandidate]] = []
+        DISCIPLINES = (
+            "humint", "osint", "sigint", "geoint",
+            "masint", "finint", "techint", "socmint",
+        )
+        heading_l = heading.lower()
+        slug_l = slug.lower()
+        # disciplines implied by the segment / topic
+        wanted = {a for a in DISCIPLINES if a in heading_l or a in slug_l}
+
+        ranked: list[tuple[int, int, str, ImageCandidate]] = []
         for candidate in self.candidates:
             if candidate.fingerprint in used_fingerprints:
                 continue
-            ranked.append((self.score(candidate, heading, body, slug), candidate))
-        ranked.sort(key=lambda item: (-item[0], item[1].path.name))
+            cand_disciplines = {a for a in DISCIPLINES if a in candidate.stem}
+            # Hard filter: if the segment names a discipline, only same-discipline
+            # images (or discipline-neutral ones) are eligible. This replaces the
+            # old +12 bonus that flattened all same-discipline scores.
+            if wanted and cand_disciplines and not (wanted & cand_disciplines):
+                continue
+            score = self.score(candidate, heading, body, slug)
+            # Relevance tie-breakers, in priority order:
+            #   1. does the image name share tokens with the heading?
+            #   2. is it a non-suffixed "hero" image (those are the authored ones)?
+            #   3. stable hash instead of alphabetical, so ties don't walk A-Z.
+            heading_tokens = set(tokenize(heading))
+            cand_tokens = set(candidate.tokens)
+            overlap = len(heading_tokens & cand_tokens)
+            generic = 0 if re.search(r"-(banner|thumb)$", candidate.stem) else 1
+            ranked.append((score, overlap * 4 + generic, candidate.stem, candidate))
+        ranked.sort(key=lambda item: (-item[0], -item[1], item[2]))
         if not ranked:
             return None, 0, "no unused images left"
-        score, winner = ranked[0]
-        heading_acronyms = [
-            acronym
-            for acronym in (
-                "humint",
-                "osint",
-                "sigint",
-                "geoint",
-                "masint",
-                "finint",
-                "techint",
-                "socmint",
-            )
-            if acronym in heading.lower()
-        ]
-        if (
-            heading_acronyms
-            and score < 8
-            and not any(acronym in winner.stem for acronym in heading_acronyms)
-        ):
+        score, _, _, winner = ranked[0]
+        if wanted and not ({a for a in DISCIPLINES if a in winner.stem} & wanted):
             return (
-                None,
+                winner,
                 score,
                 f"rejected off-discipline still {winner.path.name} (score {score})",
             )
