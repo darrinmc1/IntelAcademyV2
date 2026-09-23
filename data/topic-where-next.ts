@@ -23,8 +23,8 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Tactical Intelligence", description: "Continue with the Tactical Intelligence learning path for more lessons on this subject.", path: "/learning-paths/tactical-intelligence" },
   },
   "strategic-vs-tactical-analysts": {
-    similar: { title: "What Is Tactical Intelligence?", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/what-is-tactical-intelligence" },
-    more: { title: "Tactical Intelligence", description: "Continue with the Tactical Intelligence learning path for more lessons on this subject.", path: "/learning-paths/tactical-intelligence" },
+    similar: { title: "Strategic Intelligence Concept", description: "What makes intelligence strategic: horizon, scope, and the audience that can bend the analysis.", path: "/topics/strategic-intelligence-concept" },
+    more: { title: "Strategic Intelligence", description: "Continue with the Strategic Intelligence learning path for more lessons on this subject.", path: "/learning-paths/strategic-intelligence" },
   },
   "advanced-crime-series-analysis-predictive-modeling-resource-allocation": {
     similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
@@ -55,8 +55,8 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
   },
   "collection-planning-process-for-intel-analysts": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Intelligence Requirements", description: "The questions a collection plan is supposed to serve.", path: "/topics/intelligence-requirements" },
+    more: { title: "Data Collection Planning", description: "Continue with the Data Collection Planning learning path.", path: "/learning-paths/data-collection-planning" },
   },
   "conclusion-development": {
     similar: { title: "Recommendation Framework", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/recommendation-framework" },
@@ -243,12 +243,12 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Intelligence Report Writing", description: "Continue with the Intelligence Report Writing learning path for more lessons on this subject.", path: "/learning-paths/report-writing" },
   },
   "osint-techniques": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Google Dorking", description: "Search operators, used as a craft rather than a party trick.", path: "/topics/google-dorking" },
+    more: { title: "Open Source Intelligence", description: "Continue with the OSINT learning path.", path: "/learning-paths/osint" },
   },
   "osint-workflow": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "OSINT Techniques", description: "The techniques the workflow is supposed to keep honest.", path: "/topics/osint-techniques" },
+    more: { title: "Open Source Intelligence", description: "Continue with the OSINT learning path.", path: "/learning-paths/osint" },
   },
   "predictive-patterning-using-historical-series-data-to-predict-future-criminal-ac": {
     similar: { title: "What is Crime Series Analysis?", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/what-is-crime-series-analysis" },
@@ -259,8 +259,8 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
   },
   "real-time-osint": {
-    similar: { title: "Situational Awareness", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/situational-awareness" },
-    more: { title: "Tactical Intelligence", description: "Continue with the Tactical Intelligence learning path for more lessons on this subject.", path: "/learning-paths/tactical-intelligence" },
+    similar: { title: "The OSINT Workflow", description: "The sequence real-time work still has to obey.", path: "/topics/osint-workflow" },
+    more: { title: "Open Source Intelligence", description: "Continue with the OSINT learning path.", path: "/learning-paths/osint" },
   },
   "recommendation-framework": {
     similar: { title: "Clear Writing Principles", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/clear-writing-principles" },
@@ -291,8 +291,8 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Tactical Intelligence", description: "Continue with the Tactical Intelligence learning path for more lessons on this subject.", path: "/learning-paths/tactical-intelligence" },
   },
   "socmint-techniques": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "What is OSINT?", description: "The definition SOCMINT still has to live inside.", path: "/topics/what-is-osint" },
+    more: { title: "Open Source Intelligence", description: "Continue with the OSINT learning path.", path: "/learning-paths/osint" },
   },
   "specialized-intelligence-products": {
     similar: { title: "Multi Source Integration", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/multi-source-integration" },
@@ -303,8 +303,8 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Strategic Intelligence", description: "Continue with the Strategic Intelligence learning path for more lessons on this subject.", path: "/learning-paths/strategic-intelligence" },
   },
   "strategic-intelligence-concept": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Strategic vs. Tactical Analysts", description: "The other end of the chain, and why both ends have to exist.", path: "/topics/strategic-vs-tactical-analysts" },
+    more: { title: "Strategic Intelligence", description: "Continue with the Strategic Intelligence learning path.", path: "/learning-paths/strategic-intelligence" },
   },
   "strategic-reports": {
     similar: { title: "Operational Reports", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/operational-reports" },
@@ -323,8 +323,8 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
   },
   "threat-assessment-methodologies": {
-    similar: { title: "Browse All Topics", description: "See the full catalog of intelligence analysis topics.", path: "/topics" },
-    more: { title: "Browse All Learning Paths", description: "Explore every learning path and find your next intelligence discipline.", path: "/learning-paths" },
+    similar: { title: "Threat Assessment Models", description: "Named frameworks once you know which kind of method you are in.", path: "/topics/threat-assessment-models" },
+    more: { title: "Threat Assessment", description: "Continue with the Threat Assessment learning path.", path: "/learning-paths/threat-assessment" },
   },
   "threat-assessment-models": {
     similar: { title: "Threat Monitoring", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/threat-monitoring" },
@@ -361,6 +361,46 @@ const whereNextMap: Record<string, TopicWhereNext> = {
   "what-is-threat-assessment": {
     similar: { title: "Threat Assessment Models", description: "A closely related topic worth adding to your mission dossier.", path: "/topics/threat-assessment-models" },
     more: { title: "Threat Assessment", description: "Continue with the Threat Assessment learning path for more lessons on this subject.", path: "/learning-paths/threat-assessment" },
+  },
+  "indicators-warnings": {
+    similar: { title: "Strategic Forecasting", description: "Scenarios are what the indicator list is watching for.", path: "/topics/strategic-forecasting" },
+    more: { title: "Strategic Intelligence", description: "Continue with the Strategic Intelligence learning path.", path: "/learning-paths/strategic-intelligence" },
+  },
+  "long-term-threats": {
+    similar: { title: "Indicators and Warnings", description: "The observables that tell you a long-range driver has started to move.", path: "/topics/indicators-warnings" },
+    more: { title: "Strategic Intelligence", description: "Continue with the Strategic Intelligence learning path.", path: "/learning-paths/strategic-intelligence" },
+  },
+  "intelligence-gap-analysis": {
+    similar: { title: "Intelligence Requirements", description: "Turn a named gap into a question a collector can accept.", path: "/topics/intelligence-requirements" },
+    more: { title: "Data Collection Planning", description: "Continue with the Data Collection Planning learning path.", path: "/learning-paths/data-collection-planning" },
+  },
+  "matching-sources-to-requirements": {
+    similar: { title: "Writing Collection Tasks", description: "The handoff once you know which discipline can touch the question.", path: "/topics/writing-collection-tasks" },
+    more: { title: "Data Collection Planning", description: "Continue with the Data Collection Planning learning path.", path: "/learning-paths/data-collection-planning" },
+  },
+  "writing-collection-tasks": {
+    similar: { title: "Evaluating Collection Plans", description: "How you know the task answered the gap, or did not.", path: "/topics/evaluating-collection-plans" },
+    more: { title: "Data Collection Planning", description: "Continue with the Data Collection Planning learning path.", path: "/learning-paths/data-collection-planning" },
+  },
+  "evaluating-collection-plans": {
+    similar: { title: "The Collection Planning Process", description: "The cycle the after-action is supposed to improve.", path: "/topics/collection-planning-process-for-intel-analysts" },
+    more: { title: "Data Collection Planning", description: "Continue with the Data Collection Planning learning path.", path: "/learning-paths/data-collection-planning" },
+  },
+  "threat-prioritization": {
+    similar: { title: "Mitigation Options", description: "What a decision-maker can actually do with the order you just wrote.", path: "/topics/mitigation-strategies" },
+    more: { title: "Threat Assessment", description: "Continue with the Threat Assessment learning path.", path: "/learning-paths/threat-assessment" },
+  },
+  "mitigation-strategies": {
+    similar: { title: "Ongoing Threat Monitoring", description: "The watch that remains after an option is accepted.", path: "/topics/threat-monitoring" },
+    more: { title: "Threat Assessment", description: "Continue with the Threat Assessment learning path.", path: "/learning-paths/threat-assessment" },
+  },
+  "behavioral-assessment": {
+    similar: { title: "What Is Threat Assessment?", description: "Capability, intent, and the limits of a single observation.", path: "/topics/what-is-threat-assessment" },
+    more: { title: "Threat Assessment", description: "Continue with the Threat Assessment learning path.", path: "/learning-paths/threat-assessment" },
+  },
+  "deep-web-research-for-intel-analysts": {
+    similar: { title: "OSINT Techniques", description: "The surface-web craft that still applies once the page is not in a search index.", path: "/topics/osint-techniques" },
+    more: { title: "Open Source Intelligence", description: "Continue with the OSINT learning path.", path: "/learning-paths/osint" },
   },
 };
 
