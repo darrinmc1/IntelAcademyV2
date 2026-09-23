@@ -33,3 +33,8 @@ next-env.d.ts
 # local data (email capture / feedback)
 /data/subscribers.json
 /data/feedback.json
+
+# lesson-video pipeline intermediates and generated MP4s (too large for git)
+/videos/work/
+/videos/out/
+scripts/__pycache__/
