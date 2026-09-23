@@ -175,7 +175,79 @@ Key judgment, confidence, timeframe, implication, and second-order effect.
 
 Write the executive summary last, after the entire report is complete. You cannot
 distill what you have not yet fully understood. Then, read it the next morning with
-fresh eyes. If the first sentence does not deliver the bottom line, rewrite it.`
+fresh eyes. If the first sentence does not deliver the bottom line, rewrite it.
+
+### Confidence Is Not Likelihood
+
+This is the most common and most damaging confusion in intelligence writing, and it
+survives even in summaries that otherwise follow BLUF perfectly.
+
+- **Confidence describes your evidence.** "We assess with high confidence" means your
+  sourcing is strong, corroborated, and reliable. It says nothing about whether the
+  event will occur.
+- **Likelihood describes the event.** "It is highly likely" is a probability statement
+  about the world. It says nothing about how good your evidence is.
+- **They routinely diverge, and the divergence is informative.** You can hold high
+  confidence in a judgement that an event is unlikely (excellent reporting that a
+  planned attack was abandoned). You can hold low confidence in a judgement that an
+  event is likely (thin, single-source reporting of a plausible development).
+
+When you say "high confidence" where you mean "high likelihood," you have told the
+reader that your *evidence* is strong when you meant that the *outcome* is probable.
+Those lead to different decisions. State both, separately.
+
+### Keep Your Vocabulary Constant Over Time
+
+A confidence term is a calibrated instrument only if its meaning does not drift.
+
+- **Fix the meaning of each term.** Whatever scale you adopt, hold it. If "likely"
+  means 70-85% in March and 55% in September, no reader can track your judgements
+  across the two reports - and trend analysis of your own assessments becomes
+  impossible.
+- **Publish your scale if your audience is regular.** A one-line note that "likely"
+  denotes roughly 70-85% removes ambiguity permanently and costs nothing. Readers who
+  know your scale can compare your current judgement with your last one.
+- **Watch for silent drift under pressure.** Analysts under scrutiny often soften
+  language without realising it, migrating from "likely" to "possible" while the
+  underlying assessment has not changed at all. That is not caution, it is an
+  unrecorded change of position.
+
+### The Falsifiability Test
+
+Before a judgement leaves your desk, apply this test: **can you describe the evidence
+that would prove you wrong?**
+
+- **If you can, you have made a judgement.** "Non-state actors are likely to attempt
+  an attack on the port facility within six months" can be falsified - six months
+  without an attempt is evidence against it. That is a real assessment.
+- **If you cannot, you have made an observation about your own uncertainty.**
+  "Attacks remain a possibility in an evolving environment" can never be wrong, which
+  means it can never inform a decision either.
+- **Vague judgements are not safer - they are just untestable.** Analysts often hedge
+  to avoid being wrong. The result is a statement that avoids being wrong by avoiding
+  saying anything. That is a cost, not a hedge.
+
+### Pre-Send Checklist
+
+Run this before the summary goes anywhere. It takes ninety seconds and catches the
+failures that survive everything else.
+
+- **Is the judgement in the first sentence?** If not, rewrite the opening - not the
+  ending.
+- **Is each judgement specific, actionable, and falsifiable?** Name the actor, the
+  action, and the timeframe.
+- **Have you stated confidence and likelihood separately?** Two different claims, two
+  different statements.
+- **Do your confidence terms mean what they meant last month?** Check against your
+  fixed scale before publishing.
+- **Can you delete a quarter of it without losing meaning?** If yes, delete it now,
+  not after someone complains.
+- **Would the reader know what to do differently?** If the summary does not change or
+  inform a decision, it is not an executive summary.
+
+The measure of a good executive summary is not whether it impresses another analyst.
+It is whether a busy decision-maker, reading it once and quickly, comes away with a
+correct understanding of what you assess and how much to trust it.`
 
 export default function ExecutivesummariesmasteryPage() {
   return (

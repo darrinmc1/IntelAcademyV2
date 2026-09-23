@@ -54,7 +54,47 @@ Despite its importance, CSA is not without its challenges:
 
 ### Conclusion
 
-Crime Series Analysis is a powerful tool in the arsenal of law enforcement. By systematically identifying and analyzing patterns of criminal behavior, analysts and investigators can bring perpetrators to justice, prevent future crimes, and enhance the overall safety and security of communities. It transforms individual incidents into a cohesive narrative, revealing the underlying criminal activity and guiding efforts to disrupt it.`
+Crime Series Analysis is a powerful tool in the arsenal of law enforcement. By systematically identifying and analyzing patterns of criminal behavior, analysts and investigators can bring perpetrators to justice, prevent future crimes, and enhance the overall safety and security of communities. It transforms individual incidents into a cohesive narrative, revealing the underlying criminal activity and guiding efforts to disrupt it.
+
+## Advanced Linkage Analysis: Beyond the Basics
+
+The fundamentals above establish what linkage analysis is. What follows is the analytical discipline that separates a defensible series conclusion from an over-asserted one.
+
+### Consistency Is Not Distinctiveness
+
+Behavioural linkage rests on two separate questions. Both must be answered in the affirmative before a linkage is credible, and conflating them is the most common source of error.
+
+*   **Behavioural consistency:** does the offender behave the same way across offences? Offenders are partly consistent because they have habits, skills and preferred approaches. Consistency is necessary but nowhere near sufficient - plenty of offenders commit crimes in similar ways to each other.
+*   **Behavioural distinctiveness:** is the behaviour distinctive enough to distinguish this offender from others committing the same offence type? This is the harder and more important question. If burglars commonly enter through rear windows, then "entered through a rear window" tells you almost nothing. If a single offender leaves a specific signature act, that is genuinely probative.
+
+A linkage built only on consistency will over-link. A linkage built on distinctiveness is defensible.
+
+### Base Rates Determine Evidential Weight
+
+This is the single most important analytical point in linkage analysis, and the one most often omitted.
+
+*   **The same behaviour carries different weight depending on how common it is.** A behaviour shared by 80% of offenders in a category has almost no linkage value. The identical behaviour in a category where it occurs in 2% of cases is strong evidence. The behaviour is the same; the inference is not.
+*   **Base rate data is therefore not optional.** Without a working sense of how common each behaviour is within the offence category, you cannot state how much a similarity actually tells you. Intuition is a poor substitute and tends to over-value vivid details.
+*   **Aggregation multiplies error.** Ten individually weak similarities do not sum to a strong case. If those similarities are correlated - all reflecting the same underlying fact - you may be counting one piece of evidence ten times.
+
+### Coincidence Is a Live Hypothesis
+
+Two offenders committing similar crimes in the same area is expected, not extraordinary.
+
+*   **Test the null hypothesis explicitly.** Before concluding a series, consider the chance that these are unconnected offences by different offenders. State why you reject that explanation - or do not reject it.
+*   **Geographic proximity is weak on its own.** Offences in the same suburb may share an offender, or may simply share a large number of offenders. Proximity narrows the candidate pool; it does not establish identity of offender.
+*   **Absence of behaviour is information.** A missing signature act is itself a data point, and it is routinely overlooked in comparative analysis.
+
+### Separating Analysis From Evidence
+
+How a linkage conclusion is presented determines how it will be used, and misuse is common.
+
+*   **Linkage analysis links offences, not people.** A series conclusion says these offences probably share an offender. It does not identify who that offender is. That distinction matters legally and analytically.
+*   **It supports prioritisation, not proof.** Linkage is an investigative tool for concentrating effort. Behavioural evidence alone does not establish guilt, and should never be presented as though it does.
+*   **Flag what would change the assessment.** A new offence with contradictory behaviour, or base rate data showing your distinctive behaviour is actually common, would undermine the conclusion. Stating this lets others test your reasoning rather than accept it on authority.
+*   **Document disagreement.** If two analysts score a case differently, record it. Linkage analysis is genuinely harder than it appears, and false certainty here damages live cases.
+
+A good series analysis is one a defence expert could read and respect - because you were explicit about consistency, distinctiveness, base rates, and the limits of what behavioural evidence can support.`
 
 export default function WhatIsCrimeSeriesAnalysisPage() {
   return (
