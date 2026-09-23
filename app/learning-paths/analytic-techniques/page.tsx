@@ -4,7 +4,6 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { TopicCardWithImage } from "@/components/topic-card-with-image"
-import { FeaturedResource } from "@/components/featured-resource"
 import { LearningFormats } from "@/components/learning-formats"
 import { TopicWhereNext } from "@/components/topic-where-next"
 
@@ -51,16 +50,10 @@ export default function AnalyticTechniquesPage() {
         <h2 className="text-3xl font-bold mb-6">Topics Covered</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <TopicCardWithImage
-            title="Introduction to Structured Analysis"
-            description="Understand the foundations and importance of structured analytic techniques in intelligence."
-            imageSrc="/intro-structured-analysis.png"
-            href="/topics/intro-structured-analysis"
-          />
-          <TopicCardWithImage
-            title="Cognitive Biases in Intelligence"
-            description="Identify and mitigate common cognitive biases that affect analytical judgment."
-            imageSrc="/cognitive-biases.png"
-            href="/topics/cognitive-biases-intelligence"
+            title="Analytical Techniques for Analysts"
+            description="Structured methods, including assumptions checks and brainstorming, in one working lesson."
+            imageSrc="/analytical-techniques-banner.png"
+            href="/topics/analytical-techniques-for-intel-analysts"
           />
           <TopicCardWithImage
             title="Analysis of Competing Hypotheses"
@@ -69,82 +62,16 @@ export default function AnalyticTechniquesPage() {
             href="/topics/analysis-competing-hypotheses"
           />
           <TopicCardWithImage
-            title="Key Assumptions Check"
-            description="Learn to identify and challenge the underlying assumptions in your analysis."
-            imageSrc="/assumptions-check.png"
-            href="/topics/key-assumptions-check"
-          />
-          <TopicCardWithImage
             title="Indicators and Warnings"
             description="Develop frameworks to identify and monitor indicators of emerging threats or opportunities."
             imageSrc="/indicators-warnings.png"
             href="/topics/indicators-warnings"
           />
           <TopicCardWithImage
-            title="Alternative Futures Analysis"
-            description="Create and evaluate multiple scenarios to prepare for different possible outcomes."
-            imageSrc="/alternative-futures.png"
-            href="/topics/alternative-futures-analysis"
-          />
-          <TopicCardWithImage
-            title="Red Team Analysis"
-            description="Apply adversarial thinking to challenge assumptions and identify vulnerabilities."
-            imageSrc="/red-team-analysis.png"
-            href="/topics/red-team-analysis"
-          />
-          <TopicCardWithImage
-            title="Structured Brainstorming"
-            description="Use systematic approaches to generate ideas and hypotheses for complex problems."
-            imageSrc="/structured-brainstorming.png"
-            href="/topics/structured-brainstorming"
-          />
-          <TopicCardWithImage
-            title="Deception Detection"
-            description="Learn techniques to identify potential deception in intelligence information."
-            imageSrc="/deception-detection.png"
-            href="/topics/deception-detection"
-          />
-          <TopicCardWithImage
-            title="Causal Flow Diagramming"
-            description="Visualize complex cause-and-effect relationships in intelligence problems."
-            imageSrc="/causal-flow.png"
-            href="/topics/causal-flow-diagramming"
-          />
-          <TopicCardWithImage
-            title="Delphi Method"
-            description="Apply structured expert elicitation techniques to gather and synthesize expert opinions."
-            imageSrc="/delphi-method.png"
-            href="/topics/delphi-method"
-          />
-          <TopicCardWithImage
-            title="Quality of Information Check"
-            description="Systematically evaluate the reliability and credibility of intelligence information."
-            imageSrc="/information-quality.png"
-            href="/topics/information-quality-check"
-          />
-        </div>
-      </div>
-
-      <div className="mb-12">
-        <h2 className="text-3xl font-bold mb-6">Featured Resources</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <FeaturedResource
-            title="Structured Analytic Techniques Handbook"
-            description="Guide to applying structured techniques in intelligence analysis."
-            type="Guide"
-            href="/resources/sat-handbook"
-          />
-          <FeaturedResource
-            title="ACH Worksheet Templates"
-            description="Ready-to-use templates for conducting Analysis of Competing Hypotheses."
-            type="Template"
-            href="/resources/ach-templates"
-          />
-          <FeaturedResource
-            title="Case Study: Intelligence Failure Analysis"
-            description="Examination of how structured techniques could have prevented historical intelligence failures."
-            type="Case Study"
-            href="/resources/intelligence-failure-case-study"
+            title="Cognitive Biases in Intelligence"
+            description="Identify and mitigate common cognitive biases that affect analytical judgment."
+            imageSrc="/cognitive-biases.png"
+            href="/topics/cognitive-biases"
           />
         </div>
       </div>

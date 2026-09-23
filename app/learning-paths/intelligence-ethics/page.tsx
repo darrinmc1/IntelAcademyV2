@@ -9,26 +9,32 @@ export const metadata: Metadata = {
 export default function IntelligenceEthicsPage() {
   const topics = [
     {
+      title: "Intelligence Ethics",
+      description: "The job still has rules when the target is interesting and the deadline is rude.",
+      slug: "intelligence-ethics",
+      readTime: 20,
+    },
+    {
       title: "Legal Frameworks for Intelligence",
-      description: "Overview of laws and regulations governing intelligence activities",
+      description: "The laws and authorities that decide which clever idea is also a lawful one.",
       slug: "legal-frameworks",
       readTime: 30,
     },
     {
       title: "Privacy and Civil Liberties",
-      description: "Balancing intelligence needs with privacy rights and civil liberties",
+      description: "How to collect what the mission needs without treating the public as a free database.",
       slug: "privacy-civil-liberties",
       readTime: 25,
     },
     {
       title: "Ethical Decision-Making",
-      description: "Frameworks for making ethical decisions in intelligence work",
+      description: "A way to choose when every option has a cost and 'we'll fix it later' is not one of them.",
       slug: "ethical-decision-making",
       readTime: 20,
     },
     {
       title: "Intelligence Oversight",
-      description: "Systems and processes for ensuring accountability in intelligence activities",
+      description: "Who watches the watchers, and why that is a feature of the work.",
       slug: "intelligence-oversight",
       readTime: 25,
     },
@@ -38,17 +44,12 @@ export default function IntelligenceEthicsPage() {
     <LearningPathTemplate
       pathSlug="intelligence-ethics"
       title="Intelligence Ethics & Legal Framework"
-      description="Understand the ethical considerations and legal boundaries in intelligence work. This learning path covers the legal frameworks, privacy concerns, and ethical decision-making processes essential for responsible intelligence practice."
+      description="The ethical and legal boundaries of intelligence work: authorities, privacy, oversight, and the decisions that still have to be defended after the operation."
       topics={topics}
       level="Beginner"
       duration="5 Hours"
       category="intelligence-ethics"
       image="/intelligence-ethics.png"
-    >
-      <div>
-        <h1>Intelligence Ethics & Legal Framework</h1>
-        <p>Understand the ethical considerations and legal boundaries in intelligence work.</p>
-      </div>
-    </LearningPathTemplate>
+    />
   )
 }

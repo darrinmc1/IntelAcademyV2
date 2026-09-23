@@ -10,51 +10,33 @@ export default function IntelligenceToolsPage() {
   const topics = [
     {
       title: "Excel for Intelligence Analysis",
-      description: "Leverage Excel's powerful features for data analysis, visualization, and reporting",
+      description: "The spreadsheet everyone complains about and then uses to hold the investigation together.",
       slug: "excel-fundamentals-for-analysts",
       readTime: 25,
     },
     {
       title: "Analyst's Notebook Fundamentals",
-      description: "Learn the core functionality of IBM i2 Analyst's Notebook for link analysis and visualization",
+      description: "Core i2 Analyst's Notebook habits for turning a pile of entities into a chart you can defend.",
+      slug: "analysts-notebook-fundamentals",
+      readTime: 25,
+    },
+    {
+      title: "Entity Relationship Charts",
+      description: "How to draw who-knows-whom so the picture answers a question, not just decorates a slide.",
       slug: "entity-relationship-charts",
-      readTime: 30,
+      readTime: 20,
     },
     {
-      title: "GIS for Intelligence Analysis",
-      description: "Geographic Information Systems for spatial intelligence analysis and mapping",
-      slug: "gis-for-intelligence",
-      readTime: 35,
+      title: "Timeline Visualization",
+      description: "Sequence, gap, and the moment a chart stops being a diary and starts being analysis.",
+      slug: "timeline-visualization",
+      readTime: 15,
     },
     {
-      title: "Data Visualization Tools",
-      description: "Tools and techniques for creating compelling visual representations of intelligence data",
-      slug: "data-visualization",
-      readTime: 25,
-    },
-    {
-      title: "Intelligence Database Systems",
-      description: "Overview of database systems used for storing and retrieving intelligence information",
-      slug: "intelligence-databases",
-      readTime: 30,
-    },
-    {
-      title: "Social Media Monitoring Tools",
-      description: "Specialized tools for monitoring and analyzing social media for intelligence purposes",
-      slug: "social-media-monitoring-tools",
-      readTime: 25,
-    },
-    {
-      title: "Digital Forensics Tools",
-      description: "Software tools used for extracting and analyzing digital evidence",
-      slug: "digital-forensics-tools",
-      readTime: 40,
-    },
-    {
-      title: "Intelligence Automation",
-      description: "Tools and techniques for automating routine intelligence tasks",
-      slug: "intelligence-automation",
-      readTime: 30,
+      title: "Data Visualization for Intelligence",
+      description: "Chart types that show a flow, a hierarchy, or a network without hiding the uncertainty.",
+      slug: "data-visualization-intelligence",
+      readTime: 15,
     },
   ]
 
@@ -62,17 +44,12 @@ export default function IntelligenceToolsPage() {
     <LearningPathTemplate
       pathSlug="intelligence-tools"
       title="Intelligence Tools & Technology"
-      description="Master the essential software and tools used by intelligence professionals. This learning path covers a range of tools from basic spreadsheets to specialized intelligence software that analysts use daily."
+      description="The tools analysts actually open: spreadsheets, link charts, timelines, and pictures that have to survive a question from the back of the room."
       topics={topics}
       level="Intermediate"
       duration="12 Hours"
       category="intelligence-tools"
       image="/intelligence-tools.png"
-    >
-      <div>
-        <h1>Intelligence Tools & Technology</h1>
-        <p>Master the essential software and tools used by intelligence professionals.</p>
-      </div>
-    </LearningPathTemplate>
+    />
   )
 }

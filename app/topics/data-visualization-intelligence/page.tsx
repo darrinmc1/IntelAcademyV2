@@ -8,10 +8,7 @@ export const metadata: Metadata = {
   description: "Learn about data visualization intelligence in intelligence analysis.",
 }
 
-const topicContent = `const DataVisualizationIntelligencePage: React.FC = () => {
-
-
-Master the art of visualizing complex intelligence data through interactive D3.js visualizations. Learn how
+const topicContent = `Master the art of visualizing complex intelligence data through interactive D3.js visualizations. Learn how
 different chart types can reveal patterns, relationships, and insights in intelligence workflows.
 
 

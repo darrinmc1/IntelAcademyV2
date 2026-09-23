@@ -9,46 +9,22 @@ export const metadata: Metadata = {
 export default function DigitalIntelligencePage() {
   const topics = [
     {
-      title: "Digital Footprint Analysis",
-      description: "Techniques for mapping and analyzing an individual's digital presence",
-      slug: "digital-footprint-analysis",
-      readTime: 30,
-    },
-    {
-      title: "Metadata Extraction & Analysis",
-      description: "Methods for extracting and interpreting metadata from digital files",
-      slug: "metadata-extraction-analysis",
+      title: "Digital Evidence Documentation",
+      description: "Collect, hash, and write it down before a screenshot becomes a story you cannot defend.",
+      slug: "digital-evidence-documentation",
       readTime: 25,
     },
     {
-      title: "Dark Web Intelligence",
-      description: "Specialized techniques for gathering intelligence from dark web sources",
-      slug: "dark-web-intelligence",
-      readTime: 40,
+      title: "Deep Web Research",
+      description: "Working the unindexed web with a method, a record, and a healthy respect for traps.",
+      slug: "deep-web-research-for-intel-analysts",
+      readTime: 18,
     },
     {
-      title: "Email Header Analysis",
-      description: "Techniques for analyzing email headers to determine origin and authenticity",
-      slug: "email-header-analysis",
-      readTime: 20,
-    },
-    {
-      title: "Digital Device Intelligence",
-      description: "Methods for extracting intelligence from computers, phones, and other devices",
-      slug: "digital-device-intelligence",
-      readTime: 35,
-    },
-    {
-      title: "Network Traffic Analysis",
-      description: "Analyzing network communications for intelligence purposes",
-      slug: "network-traffic-analysis",
-      readTime: 30,
-    },
-    {
-      title: "Digital Evidence Handling",
-      description: "Proper procedures for collecting, preserving, and documenting digital evidence",
-      slug: "digital-evidence-handling",
-      readTime: 25,
+      title: "AI Prompt Injection Defense",
+      description: "When a model follows the attacker's instructions and calls it helpful.",
+      slug: "ai-prompt-injection-defense",
+      readTime: 18,
     },
   ]
 
@@ -56,17 +32,12 @@ export default function DigitalIntelligencePage() {
     <LearningPathTemplate
       pathSlug="digital-intelligence"
       title="Digital Intelligence"
-      description="Master specialized techniques for gathering and analyzing digital evidence. This learning path covers methods for extracting intelligence from digital sources, devices, and networks."
+      description="Digital evidence, the unindexed web, and the new failure mode where the machine takes orders from the wrong person."
       topics={topics}
       level="Advanced"
       duration="10 Hours"
       category="digital-intelligence"
       image="/digital-intelligence.png"
-    >
-      <div>
-        <h1>Digital Intelligence</h1>
-        <p>Master specialized techniques for gathering and analyzing digital evidence.</p>
-      </div>
-    </LearningPathTemplate>
+    />
   )
 }
