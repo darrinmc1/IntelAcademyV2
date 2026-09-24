@@ -17,20 +17,16 @@ export function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
             <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-1.5 mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300">
-              Intelligence analysis training
+              Intelligence analysis training · 24 paths · 100+ topics
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-md">
-              Learn how analysts turn information
-              <span className="block text-gradient-primary mt-2">into an intelligence product.</span>
+              Train like a
+              <span className="block text-gradient-primary mt-2">working intelligence analyst.</span>
             </h1>
 
-            <p className="text-lg md:text-xl mb-5 text-slate-300 leading-relaxed">
-              Structured learning paths covering intelligence fundamentals, analytical techniques, reporting, OSINT, threat assessment and specialist disciplines — with practical exercises and examples rather than a wall of definitions.
-            </p>
-
-            <p className="text-sm mb-8 text-slate-400 leading-relaxed border-l-2 border-indigo-500/50 pl-4">
-              Start with the written training that is live now. Video lessons are being added separately rather than being used as a reason to hold the course back.
+            <p className="text-lg md:text-xl mb-8 text-slate-300 leading-relaxed">
+              Over 100 written topics across 24 learning paths — OSINT, threat assessment, report writing, crime series, strategic and operational intelligence, and specialist disciplines. Practical exercises and examples you can use on real work, not a wall of definitions.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
