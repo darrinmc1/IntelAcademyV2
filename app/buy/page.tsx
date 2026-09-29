@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
+import { MerchantOfRecordDisclosure } from "@/components/merchant-of-record-disclosure"
 import { SignupOrWaitlistPlanLabels } from "@/components/signup-or-waitlist-plan-labels"
 import { WaitlistSignup } from "@/components/waitlist-signup"
 
@@ -22,6 +23,7 @@ export default function BuyPage() {
         </p>
         <SignupOrWaitlistPlanLabels className="mb-6 text-sm text-slate-300 space-y-1" />
         <WaitlistSignup source="buy" />
+        <MerchantOfRecordDisclosure className="mt-4" />
         <p className="mt-6 text-sm text-slate-400">{REFUND_POLICY}</p>
         <div className="mt-6 flex flex-wrap gap-4 text-sm">
           <Link href="/waitlist" className="text-cyan-400 underline underline-offset-2">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
+import { MerchantOfRecordDisclosure } from "@/components/merchant-of-record-disclosure"
 import { SignupOrWaitlistPlanLabels } from "@/components/signup-or-waitlist-plan-labels"
 import { WaitlistSignup } from "@/components/waitlist-signup"
 
@@ -23,6 +24,7 @@ export default function WaitlistPage() {
         </p>
         <SignupOrWaitlistPlanLabels className="mb-8 text-left text-sm text-slate-300 space-y-1 max-w-md mx-auto" />
         <WaitlistSignup source="waitlist" />
+        <MerchantOfRecordDisclosure className="mt-4 max-w-md mx-auto" />
         <p className="mt-6 text-sm text-slate-400">{REFUND_POLICY}</p>
         <p className="mt-4 text-sm text-slate-500">
           Questions?{" "}

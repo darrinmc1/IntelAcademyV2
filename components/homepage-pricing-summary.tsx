@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import { MerchantOfRecordDisclosure } from "@/components/merchant-of-record-disclosure"
 import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY } from "@/lib/pricing"
 
 export function HomepagePricingSummary() {
@@ -44,6 +45,7 @@ export function HomepagePricingSummary() {
               <p className="mt-1 text-xs text-slate-400">Included on the video plan. Checkout isn&apos;t live.</p>
             </Link>
           </div>
+          <MerchantOfRecordDisclosure className="mt-4" />
         </div>
       </div>
     </section>

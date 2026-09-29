@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { CHECKOUT_STATUS, DISCLAIMER, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY } from "@/lib/pricing"
 import { academyBriefFaqs, faqJsonLd, pricingJsonLd } from "@/lib/aeo"
+import { MerchantOfRecordDisclosure } from "@/components/merchant-of-record-disclosure"
 
 export const metadata: Metadata = {
   title: "Coming soon",
@@ -74,6 +75,7 @@ export default function PricingPage() {
           </div>
         </div>
 
+        <MerchantOfRecordDisclosure className="mx-auto max-w-3xl mt-6" />
         <p className="mx-auto max-w-3xl mt-8 text-sm text-slate-500">{DISCLAIMER}</p>
       </section>
 
