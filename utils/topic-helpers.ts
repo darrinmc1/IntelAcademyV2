@@ -283,6 +283,13 @@ const learningPathTopics: Record<string, Topic[]> = {
   ],
   "financial-intelligence": [
     { title: "FININT Basics", slug: "finint-basics", readTime: 25, category: "financial-intelligence" },
+    { title: "Money Laundering Stages", slug: "money-laundering-stages", readTime: 18, category: "financial-intelligence" },
+    { title: "Suspicious Activity Reports", slug: "suspicious-activity-reports", readTime: 18, category: "financial-intelligence" },
+    { title: "Trade-Based Money Laundering", slug: "trade-based-money-laundering", readTime: 18, category: "financial-intelligence" },
+    { title: "Shell Companies and Beneficial Ownership", slug: "shell-companies-beneficial-ownership", readTime: 18, category: "financial-intelligence" },
+    { title: "Cryptocurrency Tracing for Analysts", slug: "cryptocurrency-tracing-for-analysts", readTime: 20, category: "financial-intelligence" },
+    { title: "Sanctions and Counter-Terrorist Financing", slug: "sanctions-counter-terrorist-financing", readTime: 18, category: "financial-intelligence" },
+    { title: "Financial Network Mapping", slug: "financial-network-mapping", readTime: 18, category: "financial-intelligence" },
   ],
 }
 

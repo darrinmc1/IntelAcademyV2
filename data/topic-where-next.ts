@@ -115,7 +115,35 @@ const whereNextMap: Record<string, TopicWhereNext> = {
     more: { title: "Intelligence Report Writing", description: "Continue with the Intelligence Report Writing learning path for more lessons on this subject.", path: "/learning-paths/report-writing" },
   },
   "finint-basics": {
-    similar: { title: "Network Analysis", description: "The chart version of following the money.", path: "/topics/network-analysis" },
+    similar: { title: "Money Laundering Stages", description: "The three-stage model, used on records that refuse to pick one chapter.", path: "/topics/money-laundering-stages" },
+    more: { title: "Financial Intelligence Analysis", description: "Continue with the Financial Intelligence learning path.", path: "/learning-paths/financial-intelligence" },
+  },
+  "financial-network-mapping": {
+    similar: { title: "Network Analysis", description: "The general charting lesson, once the financial edges have labels.", path: "/topics/network-analysis" },
+    more: { title: "Financial Intelligence Analysis", description: "Continue with the Financial Intelligence learning path.", path: "/learning-paths/financial-intelligence" },
+  },
+  "money-laundering-stages": {
+    similar: { title: "Suspicious Activity Reports", description: "What a filing can add once you can name the movement.", path: "/topics/suspicious-activity-reports" },
+    more: { title: "Financial Intelligence Analysis", description: "Continue with the Financial Intelligence learning path.", path: "/learning-paths/financial-intelligence" },
+  },
+  "sanctions-counter-terrorist-financing": {
+    similar: { title: "Financial Network Mapping", description: "Put the ownership facts on a chart that says what each line means.", path: "/topics/financial-network-mapping" },
+    more: { title: "Financial Intelligence Analysis", description: "Continue with the Financial Intelligence learning path.", path: "/learning-paths/financial-intelligence" },
+  },
+  "shell-companies-beneficial-ownership": {
+    similar: { title: "Cryptocurrency Tracing for Analysts", description: "The ledger version of an ownership question: cite the hop, task the name.", path: "/topics/cryptocurrency-tracing-for-analysts" },
+    more: { title: "Financial Intelligence Analysis", description: "Continue with the Financial Intelligence learning path.", path: "/learning-paths/financial-intelligence" },
+  },
+  "suspicious-activity-reports": {
+    similar: { title: "Trade-Based Money Laundering", description: "When the suspicious activity is an invoice that does not match the boat.", path: "/topics/trade-based-money-laundering" },
+    more: { title: "Financial Intelligence Analysis", description: "Continue with the Financial Intelligence learning path.", path: "/learning-paths/financial-intelligence" },
+  },
+  "trade-based-money-laundering": {
+    similar: { title: "Shell Companies and Beneficial Ownership", description: "The ownership question the invoice usually cannot answer.", path: "/topics/shell-companies-beneficial-ownership" },
+    more: { title: "Financial Intelligence Analysis", description: "Continue with the Financial Intelligence learning path.", path: "/learning-paths/financial-intelligence" },
+  },
+  "cryptocurrency-tracing-for-analysts": {
+    similar: { title: "Sanctions and Counter-Terrorist Financing", description: "Lists, ownership, and destination, once the trace has a name to check.", path: "/topics/sanctions-counter-terrorist-financing" },
     more: { title: "Financial Intelligence Analysis", description: "Continue with the Financial Intelligence learning path.", path: "/learning-paths/financial-intelligence" },
   },
   "geoint-fundamentals": {

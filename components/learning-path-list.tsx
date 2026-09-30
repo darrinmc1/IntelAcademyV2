@@ -185,9 +185,9 @@ const learningPaths = [
     title: "Financial Intelligence",
     description: "Techniques for tracking and analyzing financial data for intelligence purposes",
     category: "financial-intelligence",
-    duration: "9 Hours",
+    duration: "3-4 Hours",
     slug: "financial-intelligence",
-    topics: 7,
+    topics: 8,
   },
   {
     title: "Intelligence Communication",
