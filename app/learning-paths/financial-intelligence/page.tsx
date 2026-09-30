@@ -13,7 +13,8 @@ import { PathLessonList } from "@/components/learning-path-template"
 
 export const metadata: Metadata = {
   title: "Financial Intelligence Learning Path | The Intel Analyst Academy",
-  description: "Master techniques for tracking and analyzing financial data for intelligence purposes.",
+  description:
+    "Eight lessons on following illicit finance: the basics, laundering stages, suspicious activity reports, trade, beneficial ownership, crypto tracing, sanctions, and financial network maps.",
 }
 
 export default function FinancialIntelligencePage() {
@@ -57,7 +58,7 @@ export default function FinancialIntelligencePage() {
         <div className="p-8 text-white">
           <h2 className="text-3xl font-bold mb-3">Financial Intelligence Path</h2>
           <p className="text-slate-300 max-w-md">
-            One lesson is live: the fundamentals of FININT, from placement to the moment a car wash out-earns a hospital.
+            Eight lessons are live: the fundamentals, then the stages, the reports, the invoices, the shells, the ledger, the lists, and the chart that asks who actually controls the account.
           </p>
         </div>
       </div>
@@ -72,6 +73,55 @@ export default function FinancialIntelligencePage() {
               "What financial intelligence covers, how it sits with the other INTs, and the three stages of making dirty money look bored.",
             slug: "finint-basics",
             readTime: 25,
+          },
+          {
+            title: "Money Laundering Stages",
+            description:
+              "Placement, layering, and integration as a lens for records, including the files that refuse to pick one stage.",
+            slug: "money-laundering-stages",
+            readTime: 18,
+          },
+          {
+            title: "Suspicious Activity Reports",
+            description:
+              "How filings reach a financial intelligence unit, how to triage a narrative, and why a category code is not a verdict.",
+            slug: "suspicious-activity-reports",
+            readTime: 18,
+          },
+          {
+            title: "Trade-Based Money Laundering",
+            description:
+              "Compare the invoice, the shipment, the customs line, and the payment. The gap between them is the question.",
+            slug: "trade-based-money-laundering",
+            readTime: 18,
+          },
+          {
+            title: "Shell Companies and Beneficial Ownership",
+            description:
+              "Shells, shelves, and fronts; legal owners versus the human who controls the account; registries you can cite.",
+            slug: "shell-companies-beneficial-ownership",
+            readTime: 18,
+          },
+          {
+            title: "Cryptocurrency Tracing for Analysts",
+            description:
+              "What a public ledger can cite, what a cluster only suggests, and why the off-ramp is a request for a name.",
+            slug: "cryptocurrency-tracing-for-analysts",
+            readTime: 20,
+          },
+          {
+            title: "Sanctions and Counter-Terrorist Financing",
+            description:
+              "Lists, ownership, and destination. Three different questions, and the sentences that belong to counsel.",
+            slug: "sanctions-counter-terrorist-financing",
+            readTime: 18,
+          },
+          {
+            title: "Financial Network Mapping",
+            description:
+              "A transaction map and a control map, with edges that say what they mean and open sources that keep their grade.",
+            slug: "financial-network-mapping",
+            readTime: 18,
           },
         ]}
       />
