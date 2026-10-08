@@ -13,6 +13,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata = pageMetadata("/learn-more", "Learn more", "How the academy is organised, and who the lessons are written for.")
 export default function LearnMore() {
   return (
     <div className="container mx-auto px-4 py-8">

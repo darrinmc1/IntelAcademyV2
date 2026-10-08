@@ -238,7 +238,8 @@ export default async function TopicDownloadPage({ params }: DownloadPageProps) {
 export async function generateMetadata({ params }: DownloadPageProps): Promise<Metadata> {
   const { slug } = await params
   return {
-    title: `${titleFromSlug(slug)} — Printable Lesson | The Intel Analyst Academy`,
+    title: `${titleFromSlug(slug)} — Printable Lesson`,
     description: `Printable lesson: ${titleFromSlug(slug)} from The Intel Analyst Academy.`,
+    alternates: { canonical: `/topics/${slug}/download` },
   }
 }

@@ -1,5 +1,8 @@
 import { Leaderboard } from '@/components/gamification/leaderboard'
 
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata = pageMetadata("/leaderboard", "Analyst leaderboard", "Registered analysts ranked by XP from lessons, quizzes, and streaks.")
 export default function LeaderboardPage() {
   return (
     <div className="container max-w-4xl mx-auto py-8">

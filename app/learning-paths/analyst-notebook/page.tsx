@@ -143,7 +143,7 @@ export default function AnalystNotebookPage() {
                 title="Editing Chart Items"
                 description="Learn how to edit chart items, including updating identities, labels, and other properties."
                 imageSrc={topicImages.editing}
-                href="/topics/notebook-editing-items"
+                comingSoon
               />
             </div>
           </TabsContent>
@@ -154,19 +154,19 @@ export default function AnalystNotebookPage() {
                 title="Searching and Finding Items"
                 description="Master techniques for locating specific entities or links within your charts."
                 imageSrc={topicImages.searching}
-                href="/topics/notebook-searching-items"
+                comingSoon
               />
               <TopicCardWithImage
                 title="Using Histograms"
                 description="Learn to use the histogram tool for visualizing and analyzing data distributions."
                 imageSrc={topicImages.histograms}
-                href="/topics/notebook-using-histograms"
+                comingSoon
               />
               <TopicCardWithImage
                 title="Using Filters"
                 description="Apply filters to your chart to focus on specific data subsets or relationships."
                 imageSrc={topicImages.filters}
-                href="/topics/notebook-using-filters"
+                comingSoon
               />
               <TopicCardWithImage
                 title="Creating Entity Relationship Charts"
@@ -184,7 +184,7 @@ export default function AnalystNotebookPage() {
                 title="Printing and Exporting Charts"
                 description="Learn the process for printing and exporting your charts for sharing or reporting."
                 imageSrc={topicImages.printing}
-                href="/topics/notebook-printing-exporting"
+                comingSoon
               />
             </div>
           </TabsContent>
@@ -201,31 +201,31 @@ export default function AnalystNotebookPage() {
                 title="Customizing Chart Layout"
                 description="Master techniques for customizing the appearance and layout of your charts."
                 imageSrc={topicImages.layout}
-                href="/topics/notebook-chart-layout"
+                comingSoon
               />
               <TopicCardWithImage
                 title="Advanced Analysis Features"
                 description="Explore advanced analytical tools including Find Path, Find Matching Entities, and Visual Search."
                 imageSrc={topicImages.advanced}
-                href="/topics/notebook-advanced-analysis"
+                comingSoon
               />
               <TopicCardWithImage
                 title="Geospatial Mapping"
                 description="Integrate geographic information into your analysis using Analyst's Notebook mapping capabilities."
                 imageSrc={topicImages.geospatial}
-                href="/topics/notebook-geospatial-mapping"
+                comingSoon
               />
               <TopicCardWithImage
                 title="Chart Presentation Techniques"
                 description="Create professional, clear charts for briefings and intelligence products."
                 imageSrc={topicImages.presentation}
-                href="/topics/notebook-chart-presentation"
+                comingSoon
               />
               <TopicCardWithImage
                 title="Integration with Other Tools"
                 description="Connect Analyst's Notebook with other intelligence platforms and data sources."
                 imageSrc={topicImages.integration}
-                href="/topics/notebook-integration"
+                comingSoon
               />
             </div>
           </TabsContent>
@@ -288,9 +288,7 @@ export default function AnalystNotebookPage() {
                 <p className="text-sm text-muted-foreground mb-2">
                   Explains how to edit chart items, including updating identities, labels, and other properties.
                 </p>
-                <Link href="/topics/notebook-editing-items" className="text-primary text-sm hover:underline">
-                  Watch tutorial →
-                </Link>
+                <span className="text-sm text-slate-400">Coming soon</span>
               </div>
 
               <div className="border rounded-lg p-4 hover:bg-muted/50 transition-colors">
@@ -298,9 +296,7 @@ export default function AnalystNotebookPage() {
                 <p className="text-sm text-muted-foreground mb-2">
                   Covers the use of searching and finding tools to locate specific entities or links.
                 </p>
-                <Link href="/topics/notebook-searching-items" className="text-primary text-sm hover:underline">
-                  Watch tutorial →
-                </Link>
+                <span className="text-sm text-slate-400">Coming soon</span>
               </div>
 
               <div className="border rounded-lg p-4 hover:bg-muted/50 transition-colors">
@@ -308,9 +304,7 @@ export default function AnalystNotebookPage() {
                 <p className="text-sm text-muted-foreground mb-2">
                   Introduces the histogram tool for visualizing and analyzing data distributions.
                 </p>
-                <Link href="/topics/notebook-using-histograms" className="text-primary text-sm hover:underline">
-                  Watch tutorial →
-                </Link>
+                <span className="text-sm text-slate-400">Coming soon</span>
               </div>
 
               <div className="border rounded-lg p-4 hover:bg-muted/50 transition-colors">
@@ -318,9 +312,7 @@ export default function AnalystNotebookPage() {
                 <p className="text-sm text-muted-foreground mb-2">
                   Demonstrates how to apply filters to your chart to focus on specific data subsets.
                 </p>
-                <Link href="/topics/notebook-using-filters" className="text-primary text-sm hover:underline">
-                  Watch tutorial →
-                </Link>
+                <span className="text-sm text-slate-400">Coming soon</span>
               </div>
 
               <div className="border rounded-lg p-4 hover:bg-muted/50 transition-colors">
@@ -338,9 +330,7 @@ export default function AnalystNotebookPage() {
                 <p className="text-sm text-muted-foreground mb-2">
                   Explains the process for printing and exporting your charts for sharing or reporting.
                 </p>
-                <Link href="/topics/notebook-printing-exporting" className="text-primary text-sm hover:underline">
-                  Watch tutorial →
-                </Link>
+                <span className="text-sm text-slate-400">Coming soon</span>
               </div>
 
               <div className="border rounded-lg p-4 hover:bg-muted/50 transition-colors">
@@ -348,9 +338,7 @@ export default function AnalystNotebookPage() {
                 <p className="text-sm text-muted-foreground mb-2">
                   Covers techniques for customizing the appearance and layout of your chart.
                 </p>
-                <Link href="/topics/notebook-chart-layout" className="text-primary text-sm hover:underline">
-                  Watch tutorial →
-                </Link>
+                <span className="text-sm text-slate-400">Coming soon</span>
               </div>
             </div>
           </CardContent>
@@ -362,18 +350,15 @@ export default function AnalystNotebookPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <FeaturedResource
             title="Analyst's Notebook Templates"
-            description="Download ready-to-use templates for common intelligence analysis scenarios."
-            path="/resources/analysts-notebook-templates"
+            description="Templates for common charting jobs. Not published yet."
           />
           <FeaturedResource
             title="Chart Style Guide"
-            description="Best practices for creating clear, consistent, and effective link charts."
-            path="/resources/chart-style-guide"
+            description="A short style guide for link charts. Not published yet."
           />
           <FeaturedResource
             title="Case Study: Network Disruption Analysis"
-            description="Real-world example of using Analyst's Notebook to map and disrupt criminal networks."
-            path="/resources/network-disruption-case-study"
+            description="A chart walk-through for a disruption problem. Not published yet."
           />
         </div>
       </div>

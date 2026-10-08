@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "SIGINT Basics - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/sigint-basics" },
+  title: "SIGINT Basics",
   description: "Master the fundamentals of SIGINT - COMINT, ELINT, FISINT, collection methods, cryptanalysis, and the historical triumphs and fiascos that shaped the discipline.",
 }
 

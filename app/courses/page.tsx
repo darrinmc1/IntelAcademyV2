@@ -2,7 +2,8 @@ import type { Metadata } from "next"
 import { LearningPathsButtons } from "@/components/learning-paths-buttons"
 
 export const metadata: Metadata = {
-  title: "All Courses | The Intel Analyst Academy",
+  alternates: { canonical: "/courses" },
+  title: "All Courses",
   description: "Browse all intelligence analysis courses available at the The Intel Analyst Academy.",
 }
 

@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Executive Summaries Mastery - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/executive-summaries-mastery" },
+  title: "Executive Summaries Mastery",
   description: "Master the art of writing executive summaries using BLUF technique, the elevator pitch test, and before-and-after examples.",
 }
 

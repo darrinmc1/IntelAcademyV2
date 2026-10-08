@@ -4,7 +4,7 @@ import AdminLayoutClient from "./AdminLayoutClient"
 import { requireStaff } from "@/lib/rbac"
 
 export const metadata: Metadata = {
-  title: "Intel Analyst Academy - Admin",
+  title: "Admin",
   description: "Admin dashboard for Intel Analyst Academy",
 }
 

@@ -9,7 +9,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Downloads & Templates | The Intel Analyst Academy",
+  alternates: { canonical: "/downloads" },
+  title: "Downloads & Templates",
   description: "Free intelligence analysis templates, cheat sheets, and reference guides.",
 }
 

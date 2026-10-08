@@ -6,6 +6,7 @@ import { SignupOrWaitlistPlanLabels } from "@/components/signup-or-waitlist-plan
 import { WaitlistSignup } from "@/components/waitlist-signup"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/join" },
   title: "Join",
   description: "Join The Intel Analyst Academy — register free or join the waitlist. Checkout is not live.",
 }

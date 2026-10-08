@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "SOCMINT Techniques - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/socmint-techniques" },
+  title: "SOCMINT Techniques",
   description: "Master Social Media Intelligence gathering techniques for effective OSINT investigations.",
 }
 

@@ -15,7 +15,8 @@ import { TopicWhereNext } from "@/components/topic-where-next"
 import { TopicCardWithImage } from "@/components/topic-card-with-image"
 
 export const metadata: Metadata = {
-  title: "Strategic Intelligence Learning Path | The Intel Analyst Academy",
+  alternates: { canonical: "/learning-paths/strategic-intelligence" },
+  title: "Strategic Intelligence Learning Path",
   description:
     "Long-range analysis for people who have to make decisions before the decade arrives: concept, drivers, forecasts, warnings, and the products that carry them.",
 }

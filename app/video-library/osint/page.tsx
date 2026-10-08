@@ -7,7 +7,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { LessonVideo } from "@/components/lesson-video"
 
 export const metadata: Metadata = {
-  title: "OSINT Video Library | The Intel Analyst Academy",
+  alternates: { canonical: "/video-library/osint" },
+  title: "OSINT Video Library",
   description: "Browse our collection of OSINT training videos.",
 }
 

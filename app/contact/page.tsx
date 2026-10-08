@@ -3,6 +3,7 @@ import Link from "next/link"
 import { CHECKOUT_STATUS, SUPPORT_EMAIL } from "@/lib/pricing"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact",
   description: "Contact The Intel Analyst Academy. One support email. Checkout is not live.",
 }

@@ -8,7 +8,8 @@ import {
 import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
 
 export const metadata = {
-  title: "Terms of Service | The Intel Analyst Academy",
+  alternates: { canonical: "/terms" },
+  title: "Terms of Service",
   description: "Terms of service for The Intel Analyst Academy website",
 }
 

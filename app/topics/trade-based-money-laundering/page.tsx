@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Trade-Based Money Laundering - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/trade-based-money-laundering" },
+  title: "Trade-Based Money Laundering",
   description:
     "How analysts spot trade-based money laundering by comparing invoices, shipping documents, customs data, and payments, including over- and under-invoicing and phantom goods.",
 }

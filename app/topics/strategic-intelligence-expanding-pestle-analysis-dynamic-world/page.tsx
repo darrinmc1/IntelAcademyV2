@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Strategic Intelligence: Expanding PESTLE Analysis for a Dynamic World - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/strategic-intelligence-expanding-pestle-analysis-dynamic-world" },
+  title: "Strategic Intelligence: Expanding PESTLE Analysis for a Dynamic World",
   description: "Explore the limitations of traditional PESTLE analysis and learn how to expand it with crucial technological, legal, and environmental considerations for a more comprehensive strategic intelligence framework.",
 }
 

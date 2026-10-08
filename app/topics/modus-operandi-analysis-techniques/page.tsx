@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Modus Operandi Analysis: Techniques for Identifying and Analyzing Criminal Methods and Behaviors - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/modus-operandi-analysis-techniques" },
+  title: "Modus Operandi Analysis: Techniques for Identifying and Analyzing Criminal Methods and Behaviors",
   description: "Explore the core principles and practical techniques of Modus Operandi (MO) analysis, a critical skill for intelligence analysts in understanding and predicting criminal actions.",
 }
 

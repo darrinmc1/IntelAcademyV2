@@ -11,6 +11,13 @@ import { EmailCapture } from "@/components/email-capture"
 import { LazySection } from "@/components/optimized/lazy-section"
 import { PerformanceMonitor } from "@/components/optimized/performance-monitor"
 
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: { absolute: "The Intel Analyst Academy" },
+  description: "Train like a working intelligence analyst. Written lessons on OSINT, threat assessment, report writing, crime series, and the specialist disciplines.",
+  alternates: { canonical: "/" },
+}
 export default function HomePage() {
   return (
     <>

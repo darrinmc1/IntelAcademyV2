@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Main Body Organization - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/main-body-organization" },
+  title: "Main Body Organization",
   description: "Learn how to structure the main body of your intelligence reports using chronological, thematic, geographical, and other frameworks.",
 }
 

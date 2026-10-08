@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Shell Companies and Beneficial Ownership - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/shell-companies-beneficial-ownership" },
+  title: "Shell Companies and Beneficial Ownership",
   description:
     "How analysts read shell, shelf, and front companies, separate legal ownership from beneficial ownership, and use corporate registries without mistaking a filing for the truth.",
 }

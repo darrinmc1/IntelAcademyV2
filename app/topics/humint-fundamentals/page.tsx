@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "HUMINT Fundamentals - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/humint-fundamentals" },
+  title: "HUMINT Fundamentals",
   description: "Master human intelligence tradecraft - source typology, the MICE framework, the recruitment cycle, and the handler&#x27;s craft of communication, validation, and protection.",
 }
 

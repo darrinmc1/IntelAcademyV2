@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Advanced Crime Series Analysis: Predictive Modeling and Resource Allocation - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/advanced-crime-series-analysis-predictive-modeling-resource-allocation" },
+  title: "Advanced Crime Series Analysis: Predictive Modeling and Resource Allocation",
   description: "Explore advanced techniques in crime series analysis, focusing on predictive modeling for crime forecasting and optimizing resource allocation for law enforcement.",
 }
 

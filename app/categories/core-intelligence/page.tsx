@@ -1,7 +1,8 @@
 import { CategoryPageTemplate } from "@/components/category-page-template"
 
 export const metadata = {
-  title: "Core Intelligence Disciplines | The Intel Analyst Academy",
+  alternates: { canonical: "/categories/core-intelligence" },
+  title: "Core Intelligence Disciplines",
   description: "Explore the fundamental disciplines of intelligence analysis",
 }
 

@@ -4,6 +4,9 @@ import { TopicCardWithImage } from "@/components/topic-card-with-image"
 import { LearningFormats } from "@/components/learning-formats"
 import { TopicWhereNext } from "@/components/topic-where-next"
 
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata = pageMetadata("/learning-paths/data-collection-planning", "Data collection and planning", "Task the cup of water. Collection planning against a requirement, not a wish for everything.")
 export default function DataCollectionPlanningPage() {
   return (
     <div className="container mx-auto px-4 py-12">

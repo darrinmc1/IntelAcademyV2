@@ -3,6 +3,7 @@ import Link from "next/link"
 import { CHECKOUT_STATUS, REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/refunds" },
   title: "Refunds",
   description: REFUND_POLICY,
 }

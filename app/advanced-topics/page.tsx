@@ -4,7 +4,8 @@ import { ArrowRight } from "lucide-react"
 import { advancedTopicRequirements } from "@/data/advanced-topic-requirements"
 
 export const metadata: Metadata = {
-  title: "Advanced Topics | The Intel Analyst Academy",
+  alternates: { canonical: "/advanced-topics" },
+  title: "Advanced Topics",
   description:
     "Specialized content for experienced analysts seeking to deepen their expertise in intelligence analysis",
 }

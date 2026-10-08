@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Intelligence Decision Making - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/intelligence-decision-making" },
+  title: "Intelligence Decision Making",
   description: "Learn how intelligence supports effective decision-making processes across various domains and the critical role it plays in reducing uncertainty.",
 }
 

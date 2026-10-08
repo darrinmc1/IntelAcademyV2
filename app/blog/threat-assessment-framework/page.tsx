@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Threat Assessment Framework: A Structured Approach | Intel Analyst Academy",
+  alternates: { canonical: "/blog/threat-assessment-framework" },
+  title: "Threat Assessment Framework: A Structured Approach",
   description: "How to build and apply a threat assessment framework - capability, intent, opportunity, historical patterns, and structured analytical judgments.",
 }
 

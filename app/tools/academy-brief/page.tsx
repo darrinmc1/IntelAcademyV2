@@ -13,6 +13,7 @@ import { academyBriefFaqs, faqJsonLd, softwareJsonLd } from "@/lib/aeo"
 import { DISCLAIMER } from "@/lib/pricing"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/tools/academy-brief" },
   title: "Academy Brief",
   description:
     "Paste a raw intel dump or notes. Get a structured brief using the academy method, citing real Intel Analyst Academy topics and lessons. Training and education only.",

@@ -9,6 +9,7 @@ import {
 import { academyBriefFaqs, faqJsonLd } from "@/lib/aeo"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/faq" },
   title: "FAQs",
   description:
     "Answers about Academy Brief, pricing, and The Intel Analyst Academy method. Training and education only — not an operational intelligence product.",

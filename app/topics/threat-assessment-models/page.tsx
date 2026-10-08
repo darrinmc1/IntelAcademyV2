@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Threat Assessment Models - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/threat-assessment-models" },
+  title: "Threat Assessment Models",
   description: "Explore structured threat assessment models including DHS NTAS, CARVER, and OCTAVE, and learn how qualitative and quantitative approaches differ for security analysis.",
 }
 

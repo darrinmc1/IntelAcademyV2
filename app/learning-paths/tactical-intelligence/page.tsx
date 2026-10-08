@@ -16,6 +16,9 @@ import { StaticImage } from "@/components/static-image"
 import { TopicWhereNext } from "@/components/topic-where-next"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata = pageMetadata("/learning-paths/tactical-intelligence", "Tactical intelligence", "Intelligence for the decision that cannot wait for the quarterly estimate.")
 export default function TacticalIntelligencePage() {
   return (
     <div className="container mx-auto px-4 py-8">

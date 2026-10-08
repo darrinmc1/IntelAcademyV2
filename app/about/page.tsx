@@ -10,6 +10,9 @@ import {
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata = pageMetadata("/about", "About", "Who the academy is for, and what the lessons are trying to do.")
 export default function About() {
   return (
     <div className="container mx-auto px-4 py-8">

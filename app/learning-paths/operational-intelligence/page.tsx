@@ -16,6 +16,9 @@ import { StaticImage } from "@/components/static-image"
 import { TopicWhereNext } from "@/components/topic-where-next"
 import { OperationalIntelligenceObjectives } from "@/components/learning-objectives/operational-intelligence-objectives"
 
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata = pageMetadata("/learning-paths/operational-intelligence", "Operational intelligence", "The layer between the long-range estimate and the job that has to happen this week.")
 export default function OperationalIntelligencePage() {
   return (
     <div className="container mx-auto px-4 py-8">

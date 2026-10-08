@@ -6,7 +6,7 @@ import * as Icons from "lucide-react"
 export interface NextTopicOption {
   title: string
   description: string
-  path: string
+  path?: string
 }
 
 export interface WhatsNextItem {
@@ -25,6 +25,21 @@ interface WhatsNextProps {
 }
 
 const cardClasses = "bg-white/5 rounded-lg border border-white/10 p-6 hover:bg-white/[0.07] hover:border-cyan-500/30 transition-all duration-300 flex flex-col justify-between"
+
+function NextAction({ option, variant = "default" }: { option: NextTopicOption; variant?: "default" | "outline" }) {
+  if (!option.path) {
+    return <p className="mt-auto text-sm font-medium text-slate-500">Coming soon</p>
+  }
+
+  return (
+    <Link href={option.path} className="mt-auto">
+      <Button className="w-full group" variant={variant}>
+        {option.title}
+        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+      </Button>
+    </Link>
+  )
+}
 
 const getIconComponent = (iconName?: string) => {
   if (!iconName) return null
@@ -94,12 +109,7 @@ export function WhatsNext({ anotherTopic, moreLearning, advancedLearning, title,
             <div className={cardClasses}>
               <h3 className="text-xl font-semibold mb-3 text-white">Another Topic</h3>
               <p className="text-slate-400 mb-4 h-20">{anotherTopic.description}</p>
-              <Link href={anotherTopic.path} className="mt-auto">
-                <Button className="w-full group">
-                  {anotherTopic.title}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
+              <NextAction option={anotherTopic} />
             </div>
           ) : (
             <div className={cardClasses}>
@@ -119,12 +129,7 @@ export function WhatsNext({ anotherTopic, moreLearning, advancedLearning, title,
             <div className={cardClasses}>
               <h3 className="text-xl font-semibold mb-3 text-white">More Learning in This Area</h3>
               <p className="text-slate-400 mb-4 h-20">{moreLearning.description}</p>
-              <Link href={moreLearning.path} className="mt-auto">
-                <Button className="w-full group">
-                  {moreLearning.title}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
+              <NextAction option={moreLearning} />
             </div>
           ) : (
             <div className={cardClasses}>
@@ -144,12 +149,7 @@ export function WhatsNext({ anotherTopic, moreLearning, advancedLearning, title,
             <div className={cardClasses}>
               <h3 className="text-xl font-semibold mb-3 text-white">More Advanced Learning</h3>
               <p className="text-slate-400 mb-4 h-20">{advancedLearning.description}</p>
-              <Link href={advancedLearning.path} className="mt-auto">
-                <Button className="w-full group" variant="outline">
-                  {advancedLearning.title}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
+              <NextAction option={advancedLearning} variant="outline" />
             </div>
           ) : (
             <div className={cardClasses}>

@@ -6,7 +6,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { InfoIcon as InfoCircle, Download, Share2 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Intelligence Meme Generator | The Intel Analyst Academy",
+  alternates: { canonical: "/resources/meme-generator" },
+  title: "Intelligence Meme Generator",
   description: "Create your own intelligence analysis memes",
 }
 

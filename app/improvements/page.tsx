@@ -3,6 +3,9 @@ import { Construction, ArrowLeft } from "lucide-react"
 import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY } from "@/lib/pricing"
 import { WaitlistSignup } from "@/components/waitlist-signup"
 
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata = pageMetadata("/improvements", "In progress", "Work still on the bench. Checkout is not live.")
 export default function ImprovementsPage() {
   return (
     <div className="min-h-screen bg-white">

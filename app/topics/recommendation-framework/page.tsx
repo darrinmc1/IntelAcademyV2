@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Recommendation Framework - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/recommendation-framework" },
+  title: "Recommendation Framework",
   description: "Learn how to develop and present actionable recommendations in your intelligence reports using the SMART framework.",
 }
 
