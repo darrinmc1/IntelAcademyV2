@@ -1,5 +1,20 @@
 export const topics = [
   {
+    title: "Strategic Risk Assessment for Analysts",
+    description: "Turn a vague worry into ranked, testable risks with likelihood, impact, confidence and triggers that a decision-maker can act on.",
+    image: "/strategic-intelligence-expanding-pestle-analysis-dynamic-world.png",
+    href: "/topics/strategic-risk-assessment-for-analysts",
+    category: "Strategic Intelligence",
+    estimatedTime: "7 min",
+    completed: false,
+    dateAdded: "2026-10-09",
+    learningObjectives: [
+      "Frame a strategic risk assessment around a specific decision, objective and time horizon",
+      "Write risk statements that separate driver, exposure and impact, and rate them with defined scales and stated confidence",
+      "Produce key judgments with triggers and intelligence gaps that a decision-maker can act on",
+    ],
+  },
+  {
     title: "What Is Tactical Intelligence?",
     description: "Understand the fundamentals of tactical intelligence: its timeframes, products, and how analysts deliver answers when the timeline is measured in minutes, not months.",
     image: "/tactical-intelligence-concept.png",
