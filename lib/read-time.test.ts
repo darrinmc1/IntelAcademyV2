@@ -21,10 +21,17 @@ describe("read time", () => {
     expect(countWords(sample)).toBe(scriptCountWords(sample))
   })
 
-  it("keeps data/lesson-read-times.json in sync with the lesson pages", () => {
+  it("never ships a stale read time in data/lesson-read-times.json", () => {
+    // Every committed entry must match its page. A page missing from the file is
+    // fine: the weekly n8n lesson commit adds only the page, and "prebuild"
+    // regenerates the file on every Vercel build. Refresh locally with
+    // `node scripts/lesson-read-times.mjs`.
     const fresh = computeAll(path.join(process.cwd(), "app/topics"))
     const committed = JSON.parse(fs.readFileSync(path.join(process.cwd(), "data/lesson-read-times.json"), "utf8"))
-    expect(committed).toEqual(fresh)
+    for (const [slug, entry] of Object.entries(committed)) {
+      expect(fresh[slug], `${slug} in JSON but not a lesson page`).toBeDefined()
+      expect(entry, `stale read time for ${slug}`).toEqual(fresh[slug])
+    }
   })
 
   it("looks up lessons by /topics/<slug>", () => {
