@@ -1,3 +1,5 @@
+import { lessonReadMinutes, lessonSlugFromHref } from "@/lib/read-time"
+
 export const topics = [
   {
     title: "What Is Tactical Intelligence?",
@@ -557,3 +559,10 @@ export const topics = [
 ];
 
 export type CatalogTopic = (typeof topics)[number]
+
+// Card read times come from the lesson's real word count (scripts/lesson-read-times.mjs,
+// regenerated before every build), not from the hand-typed estimatedTime above.
+for (const t of topics as Array<{ href: string; estimatedTime?: string }>) {
+  const minutes = lessonReadMinutes(lessonSlugFromHref(t.href))
+  if (minutes) t.estimatedTime = `${minutes} min`
+}

@@ -9,9 +9,7 @@ export const metadata: Metadata = {
     "Understand the fundamentals of tactical intelligence: its timeframes, products, and how analysts deliver answers when the timeline is measured in minutes, not months.",
 }
 
-const topicContent = `"Understand the fundamentals of tactical intelligence: its timeframes, products, and how analysts deliver answers when the timeline is measured in minutes, not months.",
-
-## What Is Tactical Intelligence?
+const topicContent = `## What Is Tactical Intelligence?
 
 Tactical intelligence is intelligence produced **for immediate use** — typically within hours or days — to support a specific operation, mission, or decision at the point of action. Where strategic intelligence paints the long-range picture for national policy, tactical intelligence answers the question the operator in the field is asking right now.
 
@@ -55,10 +53,66 @@ The classic intelligence cycle (direction, collection, processing, analysis, dis
 
 ### Challenges of Working at Tactical Speed
 
-*   **Incomplete data:** You often act on 60% of the picture. The analyst's job is to be transparent about confidence while still delivering a decision-ready answer.
+*   **Incomplete data:** You often act on a fraction of the picture. The analyst's job is to be transparent about confidence while still delivering a decision-ready answer.
 *   **Perishability:** Intelligence that is not delivered in time is not intelligence — it is history.
 *   **Information overload:** In a fast-moving environment, distinguishing the signal from the noise is harder, not easier.
 *   **Accountability:** Wrong tactical calls can cost lives or operations, so judgments must be clearly caveated without being paralyzing.
+
+### Tactical intelligence outside the military
+
+The convoy example is military, but the same pattern turns up wherever someone has to act soon on incomplete information.
+
+*   **Policing:** Which addresses should the night shift check first after a run of car thefts? Where is a missing person most likely to be in the next six hours?
+*   **Emergency management:** Which roads will flood first if the river keeps rising at this rate, and which communities need an evacuation warning now?
+*   **Corporate security:** Is the protest planned outside head office tomorrow likely to block the entrance, and should staff work from home?
+*   **Event security:** Is the crowd building at the north gate a queue problem or something worse?
+
+In each case the reader needs an answer, a confidence level and a recommendation before the window closes. The terminology changes between organisations. The discipline does not.
+
+### Worked example: "Is the north route clear?"
+
+A team is due to move a supply convoy at 0500. At 0300 the convoy commander asks the duty analyst one question: is the north route clear, or should we take the longer southern route?
+
+The analyst has 90 minutes and the following:
+
+*   A patrol report from 2200 noting a vehicle parked without lights near a culvert on the north route.
+*   A drone pass at 0130 that shows the vehicle gone and no visible disturbance to the road.
+*   A message from a local contact, unverified, saying "people were digging near the bridge" earlier in the day.
+*   The southern route adds 50 minutes and passes through a market town that gets busy from 0600.
+
+A poor answer is "the situation is unclear." It is true and useless. A good answer looks like this:
+
+"North route: likely clear, low to moderate confidence. The vehicle seen at 2200 has gone and the 0130 drone pass showed no visible road disturbance at the culvert. The unverified report of digging near the bridge has not been checked, and the drone did not cover the bridge approach. Recommend the north route with a dismounted check of the bridge approach before crossing. If that check cannot be done, the southern route avoids the gap but arrives during market hours."
+
+The analyst did not resolve the uncertainty. They described it, made a call, and gave the commander a way to reduce the risk. That is the job.
+
+### What a good tactical answer contains
+
+1.  **The answer first.** Clear, likely clear, not clear. Commanders read the first line, and sometimes only the first line.
+2.  **Confidence, in words.** Low, moderate or high, with a one-line reason.
+3.  **The gap.** What you do not know and could not check. This is the part people leave out and later regret.
+4.  **A recommendation.** What to do with the answer, including how to manage the gap.
+5.  **A time stamp.** When the picture was last updated, so the reader knows how stale it is.
+
+### Checklist before you send
+
+*   Does the first sentence answer the question that was asked?
+*   Have I stated my confidence and why?
+*   Have I separated what was observed from what was reported and what I am inferring?
+*   Is the time of each observation clear?
+*   Have I said what would change the call?
+*   Is it short enough to be read aloud over a radio?
+
+### Common mistakes
+
+*   **Waiting for certainty.** By the time the picture is complete, the convoy has left or the moment has passed.
+*   **Dumping raw reporting.** Forwarding six fragments and letting the commander sort them out is not analysis.
+*   **Hiding the gap.** Leaving out the unchecked report because it complicates the answer is how surprises happen.
+*   **Never updating.** A tactical call is a snapshot. If new information arrives after you send, send again.
+
+### Exercise
+
+Write a tactical answer, in five sentences or fewer, to this question: "Is it safe to hold tomorrow's outdoor staff event in the city park?" Use only what you can find in the next 20 minutes from public sources: weather, local events, transport disruptions, recent incidents. State your call, your confidence, your gap and your recommendation.
 
 ### Conclusion
 
