@@ -48,7 +48,7 @@ export function decidePathIntroPlayback(input: {
   if (!canPlayPathIntro(input.user)) {
     return {
       status: 403,
-      error: `${PATH_INTRO_LOCK_COPY}. Checkout isn't live — join the waitlist.`,
+      error: PATH_INTRO_LOCK_COPY,
     }
   }
   return { status: 200 }

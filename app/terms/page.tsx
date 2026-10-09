@@ -5,7 +5,7 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
+import { REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
 
 export const metadata = {
   alternates: { canonical: "/terms" },
@@ -84,11 +84,6 @@ export default function TermsOfService() {
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">6. Refunds and billing</h2>
           <p>{REFUND_POLICY}</p>
-          <p className="mt-4">
-            {CHECKOUT_STATUS} There is no Stripe session, Payment Link, or card charge on this site today.
-            {PRICE_MAP_LABEL} {PRICE_MAP_DETAIL} Academy Brief is a tool, not a standalone SKU.
-            The same refund sentence appears on /pricing, /pricing.json, and /refunds.
-          </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">7. Limitation of Liability</h2>
           <p>

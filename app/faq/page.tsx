@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/faq" },
   title: "FAQs",
   description:
-    "Answers about Academy Brief, pricing, and The Intel Analyst Academy method. Training and education only — not an operational intelligence product.",
+    "Answers about Academy Brief and The Intel Analyst Academy method. Training and education only — not an operational intelligence product.",
 }
 
 export default function FaqPage() {
@@ -25,10 +25,6 @@ export default function FaqPage() {
         Parseable answers for people and answer engines. Machine-readable copy also lives at{" "}
         <Link href="/llm.txt" className="text-cyan-400 underline underline-offset-2">
           /llm.txt
-        </Link>{" "}
-        and{" "}
-        <Link href="/pricing.json" className="text-cyan-400 underline underline-offset-2">
-          /pricing.json
         </Link>
         .
       </p>

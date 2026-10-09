@@ -48,7 +48,7 @@ export function decideLessonVideoPlayback(input: {
   if (!canPlayLessonVideo(input.user)) {
     return {
       status: 403,
-      error: `${LESSON_VIDEO_LOCK_COPY}. Checkout isn't live — join the waitlist.`,
+      error: LESSON_VIDEO_LOCK_COPY,
     }
   }
   return { status: 200 }

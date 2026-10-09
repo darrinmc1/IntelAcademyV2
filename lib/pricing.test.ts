@@ -77,16 +77,18 @@ describe("public access copy (no live prices)", () => {
     expect(pricing.labels).not.toHaveProperty("19")
   })
 
-  it("keeps paid CTAs on the waitlist and states checkout is not live", () => {
+  it("keeps paid plan records off the public checkout and states payments are not live", () => {
     expect(plans.filter((p) => !p.available).every((p) => p.href === "/waitlist")).toBe(true)
     expect(getParseablePricing().paymentsLive).toBe(false)
     expect(getParseablePricing().checkout).toBe("waitlist")
     expect(getParseablePricing().stripe).toBe(false)
-    expect(CHECKOUT_STATUS.toLowerCase()).toContain("checkout isn't live")
+    expect(getParseablePricing()).not.toHaveProperty("currency")
+    expect(CHECKOUT_STATUS.toLowerCase()).toContain("coming soon")
+    expect(CHECKOUT_STATUS).not.toMatch(/\$/)
   })
 
   it("uses one refund sentence and one support email, with no dollar amounts", () => {
-    expect(REFUND_POLICY.toLowerCase()).toContain("7-day")
+    expect(REFUND_POLICY.toLowerCase()).toContain("not set up")
     expect(REFUND_POLICY).not.toMatch(/\$/)
     expect(getParseablePricing().refundPolicy).toBe(REFUND_POLICY)
     expect(SUPPORT_EMAIL).toBe("info@theintelanalystacademy.com")
@@ -103,12 +105,13 @@ describe("public access copy (no live prices)", () => {
       expect(text.toLowerCase()).not.toMatch(/first intelligence product/)
     }
     expect(llm).toContain(PRICE_MAP_LABEL)
-    expect(llm).toContain(REFUND_POLICY)
+    expect(llm).not.toMatch(/\$\d/)
     expect(jsonLd).toContain(PRICE_MAP_LABEL)
-    expect(jsonLd).not.toMatch(/"price"\s*:/)
-    expect(software).not.toMatch(/"price"\s*:/)
+    expect(jsonLd).not.toMatch(/"price"\s*:|"offers"\s*:|priceCurrency/)
+    expect(software).not.toMatch(/"price"\s*:|"offers"\s*:|priceCurrency/)
     expect(faq).toContain(REFUND_POLICY)
-    expect(faq.toLowerCase()).toMatch(/waitlist/)
+    expect(faq.toLowerCase()).toMatch(/free/)
+    expect(faq.toLowerCase()).toMatch(/coming soon/)
     expect(JSON.stringify(siteConfig.pricing)).not.toMatch(/9\.99|99\.00|49\.00|199\.00|29\.00/)
     expect(JSON.stringify(siteConfig)).not.toMatch(/stripePriceId/)
   })

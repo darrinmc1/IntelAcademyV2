@@ -1,11 +1,10 @@
 import Link from "next/link"
 import { Construction, ArrowLeft } from "lucide-react"
-import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY } from "@/lib/pricing"
-import { WaitlistSignup } from "@/components/waitlist-signup"
+import { ComingSoonJoin } from "@/components/coming-soon-join"
 
 import { pageMetadata } from "@/lib/seo"
 
-export const metadata = pageMetadata("/improvements", "In progress", "Work still on the bench. Checkout is not live.")
+export const metadata = pageMetadata("/improvements", "In progress", "Work still on the bench.")
 export default function ImprovementsPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -17,25 +16,12 @@ export default function ImprovementsPage() {
             </div>
           </div>
           <h1 className="text-3xl font-bold tracking-tight mb-3">We&apos;re Building Something Better</h1>
-          <p className="text-slate-600 max-w-lg mx-auto mb-4 text-lg">
-            {CHECKOUT_STATUS} <strong className="text-blue-700">{PRICE_MAP_LABEL}</strong>{" "}
-            {PRICE_MAP_DETAIL} Academy Brief is a tool, not a standalone SKU.
+          <p className="text-slate-600 max-w-lg mx-auto mb-6 text-lg">
+            Written lessons stay free.
           </p>
-          <p className="text-slate-500 max-w-lg mx-auto mb-6 text-sm">{REFUND_POLICY}</p>
           <div className="mx-auto max-w-md mb-8 text-left">
-            <WaitlistSignup source="improvements" />
+            <ComingSoonJoin source="pricing-coming-soon" variant="block" tone="light" />
           </div>
-          <p className="text-slate-500 max-w-lg mx-auto mb-8 text-sm">
-            Same coming-soon note as{" "}
-            <Link href="/pricing" className="text-blue-700 underline underline-offset-2">
-              /pricing
-            </Link>
-            . Canonical waitlist:{" "}
-            <Link href="/waitlist" className="text-blue-700 underline underline-offset-2">
-              /waitlist
-            </Link>
-            .
-          </p>
           <div className="flex items-center justify-center gap-4">
             <Link href="/" className="inline-flex items-center gap-2 rounded-lg border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50">
               <ArrowLeft className="h-4 w-4" /> Back to Home

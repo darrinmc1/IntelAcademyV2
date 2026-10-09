@@ -96,7 +96,7 @@ export function LessonVideoPlayer({ slug }: { slug?: string }) {
       <div className="mb-3 flex items-baseline justify-between gap-3">
         <h3 className="text-lg font-medium">Video Lessons</h3>
         <p className="text-xs text-muted-foreground">
-          Included on the video plan. Written lesson stays free. Humor stays on.
+          Video is coming soon. Written lessons stay free. Humor stays on.
         </p>
       </div>
       <div className="relative aspect-video overflow-hidden rounded-lg border border-white/10 bg-zinc-950">
@@ -113,10 +113,10 @@ export function LessonVideoPlayer({ slug }: { slug?: string }) {
             icon={<Lock className="h-8 w-8 text-amber-400" />}
             eyebrow="Locked reel"
             title={LESSON_VIDEO_LOCK_COPY}
-            body="Only the video plan unlocks lesson videos. Written lessons stay free. Checkout isn't live. Join the waitlist — no card required today."
+            body="Video is coming soon. Written lessons stay free."
           >
             <Button asChild className="mt-4 bg-black text-white hover:bg-yellow-500 hover:text-black">
-              <Link href="/waitlist">Join the waitlist</Link>
+              <Link href="/buy">Join the list</Link>
             </Button>
           </FrameCopy>
         )}

@@ -110,10 +110,10 @@ export function PathIntroPlayer({ slug }: { slug?: string }) {
             icon={<Lock className="h-8 w-8 text-amber-400" />}
             eyebrow="Locked reel"
             title={PATH_INTRO_LOCK_COPY}
-            body="Only the video plan unlocks path intros. Written lessons stay free. Checkout isn't live. Join the waitlist — no card required today."
+            body="Video is coming soon. Written lessons stay free."
           >
             <Button asChild className="mt-4 bg-black text-white hover:bg-yellow-500 hover:text-black">
-              <Link href="/waitlist">Join the waitlist</Link>
+              <Link href="/buy">Join the list</Link>
             </Button>
           </FrameCopy>
         )}
