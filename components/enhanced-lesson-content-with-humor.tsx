@@ -3,7 +3,7 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import { SimpleImage } from "@/components/simple-image"
-import { lessonHeroFallback } from "@/lib/lesson-hero"
+import { lessonHeroFallback, lessonHeroSrc } from "@/lib/lesson-hero"
 import { Card } from "@/components/ui/card"
 import { FunFactBox } from "@/components/humor/fun-fact-box"
 import { SpyMovieCritique } from "@/components/humor/spy-movie-critique"
@@ -118,7 +118,7 @@ export function EnhancedLessonContentWithHumor({ content, topic, title }: Enhanc
       {/* Hero image */}
       <div className="mb-10 relative">
         <SimpleImage
-          src={`/${topic}.png`}
+          src={lessonHeroSrc(topic)}
           fallbackSrc={lessonHeroFallback(topic)}
           alt={`${topic} concept illustration`}
           width={700}
