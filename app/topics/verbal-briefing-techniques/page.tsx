@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Verbal Briefing Techniques - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/verbal-briefing-techniques" },
+  title: "Verbal Briefing Techniques",
   description: "Learn how to effectively present intelligence findings verbally",
 }
 

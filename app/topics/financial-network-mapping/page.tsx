@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Financial Network Mapping - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/financial-network-mapping" },
+  title: "Financial Network Mapping",
   description:
     "How analysts map financial networks: transaction charts versus control charts, how to label edges, and how to fuse open sources without promoting a leak or a news clip into proof.",
 }

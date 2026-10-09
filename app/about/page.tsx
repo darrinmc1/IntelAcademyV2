@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { CHECKOUT_STATUS, PRICE_MAP_DETAIL, PRICE_MAP_LABEL, REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
+import { PRICE_MAP_DETAIL, PRICE_MAP_LABEL, SUPPORT_EMAIL } from "@/lib/pricing"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -10,6 +10,9 @@ import {
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata = pageMetadata("/about", "About", "Who the academy is for, and what the lessons are trying to do.")
 export default function About() {
   return (
     <div className="container mx-auto px-4 py-8">
@@ -90,21 +93,17 @@ export default function About() {
           <Separator />
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Access (not a price table)</h2>
+            <h2 className="text-2xl font-bold mb-4">Access</h2>
             <p className="mb-3">
-              {PRICE_MAP_LABEL} {PRICE_MAP_DETAIL} Academy Brief is a tool, not a
-              standalone SKU. There is no Explorer / Analyst / Professional / Enterprise table here.
+              {PRICE_MAP_LABEL} {PRICE_MAP_DETAIL}
             </p>
-            <p className="mb-3">{CHECKOUT_STATUS}</p>
-            <p className="mb-3">{REFUND_POLICY}</p>
             <p>
-              Details live on{" "}
               <Link href="/pricing" className="text-cyan-400 underline underline-offset-2">
-                /pricing
+                Coming soon — join the list
               </Link>
-              . Paid interest goes to the{" "}
-              <Link href="/waitlist" className="text-cyan-400 underline underline-offset-2">
-                waitlist
+              . Written lessons:{" "}
+              <Link href="/register" className="text-cyan-400 underline underline-offset-2">
+                register free
               </Link>
               .
             </p>

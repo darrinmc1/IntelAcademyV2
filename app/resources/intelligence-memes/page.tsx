@@ -7,7 +7,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { InfoIcon as InfoCircle, Download, Share2, BookOpen } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Intelligence Memes | The Intel Analyst Academy",
+  alternates: { canonical: "/resources/intelligence-memes" },
+  title: "Intelligence Memes",
   description: "Educational memes about intelligence concepts and analyst life",
 }
 
@@ -113,7 +114,7 @@ export default function IntelligenceMemesPage() {
                 imagePath="/information-overload-reading.png"
                 altText="Meme about information overload in intelligence analysis"
                 concept="Intelligence Processing"
-                conceptLink="/topics/intelligence-processing"
+                conceptLink="/topics/intelligence-processing-transforming-raw-data-into-actionable-insights"
               />
 
               {/* Tactical vs Strategic Meme */}
@@ -147,7 +148,7 @@ export default function IntelligenceMemesPage() {
                 imagePath="/humint-friends.png"
                 altText="Meme about HUMINT collectors making questionable friendships"
                 concept="HUMINT"
-                conceptLink="/topics/humint-basics"
+                conceptLink="/topics/humint-fundamentals"
               />
 
               {/* SIGINT Meme */}
@@ -157,7 +158,7 @@ export default function IntelligenceMemesPage() {
                 imagePath="/sigint-listening.png"
                 altText="Meme about SIGINT analysts always listening"
                 concept="SIGINT"
-                conceptLink="/topics/sigint-intro"
+                conceptLink="/topics/sigint-basics"
               />
 
               {/* GEOINT Meme */}
@@ -167,7 +168,7 @@ export default function IntelligenceMemesPage() {
                 imagePath="/geoint-satellite.png"
                 altText="Meme about GEOINT analysts seeing everything from satellites"
                 concept="GEOINT"
-                conceptLink="/topics/geoint-basics"
+                conceptLink="/topics/geoint-fundamentals"
               />
             </div>
           </TabsContent>

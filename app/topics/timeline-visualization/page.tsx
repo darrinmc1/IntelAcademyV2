@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Timeline Visualization - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/timeline-visualization" },
+  title: "Timeline Visualization",
   description: "Create temporal analysis charts to visualize events over time and identify patterns.",
 }
 

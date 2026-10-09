@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Ethical Decision Making - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/ethical-decision-making" },
+  title: "Ethical Decision Making",
   description: "Learn frameworks and models for making ethical decisions in intelligence work, from classic ethical theories to practical step-by-step decision-making processes.",
 }
 

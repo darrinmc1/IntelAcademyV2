@@ -6,7 +6,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export const metadata: Metadata = {
-  title: "Skill Requirements | Advanced Topics | The Intel Analyst Academy",
+  alternates: { canonical: "/advanced-topics/requirements" },
+  title: "Skill Requirements | Advanced Topics",
   description: "List of skills required for advanced intelligence analysis topics",
 }
 

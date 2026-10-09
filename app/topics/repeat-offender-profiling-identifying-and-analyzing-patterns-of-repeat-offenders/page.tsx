@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Repeat Offender Profiling: Identifying and Analyzing Patterns of Repeat Offenders - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/repeat-offender-profiling-identifying-and-analyzing-patterns-of-repeat-offenders" },
+  title: "Repeat Offender Profiling: Identifying and Analyzing Patterns of Repeat Offenders",
   description: "This lesson delves into the critical intelligence discipline of repeat offender profiling, equipping analysts with the methods to identify and analyze the behavioral patterns of individuals who repeatedly engage in criminal activity.",
 }
 

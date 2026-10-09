@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Intelligence Ethics - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/intelligence-ethics" },
+  title: "Intelligence Ethics",
   description: "Explore the ethical considerations and dilemmas in intelligence work and how to navigate them responsibly.",
 }
 

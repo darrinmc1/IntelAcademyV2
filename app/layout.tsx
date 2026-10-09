@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     template: "%s | The Intel Analyst Academy",
   },
   description:
-    "Master intelligence analysis techniques and methodologies - from OSINT and threat assessment to geospatial and financial intelligence.",
-  metadataBase: new URL("https://www.theintelanalystacademy.com"),
+    "Train like a working intelligence analyst. Written lessons on OSINT, threat assessment, report writing, crime series, and the specialist disciplines.",
+  metadataBase: new URL("https://theintelanalystacademy.com"),
   openGraph: {
     siteName: "The Intel Analyst Academy",
     type: "website",

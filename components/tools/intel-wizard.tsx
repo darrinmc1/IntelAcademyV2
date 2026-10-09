@@ -7,7 +7,6 @@ import {
   ArrowRight,
   Check,
   Copy,
-  Crown,
   Loader2,
   RefreshCw,
   Sparkles,
@@ -15,6 +14,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import { Card } from "@/components/ui/card"
+import { ComingSoonJoin } from "@/components/coming-soon-join"
 import { cn } from "@/lib/utils"
 
 type Phase = "questions" | "generating" | "result" | "error"
@@ -175,19 +175,11 @@ export function IntelWizard({ tool }: { tool: IntelTool }) {
           />
         </Card>
 
-        <div className="rounded-xl border border-amber-500/20 bg-amber-500/5 p-4 text-center">
-          <p className="text-sm font-semibold text-amber-300">
-            ✨ That was your free generation!
-          </p>
-          <p className="mt-1 text-xs text-amber-400/80">
-            Paid access includes unlimited generations when billing is live. Checkout isn&apos;t live.
-          </p>
-          <Button asChild className="mt-3" size="sm">
-            <Link href="/waitlist">
-              <Crown className="mr-1 h-4 w-4" />
-              Join the waitlist
-            </Link>
-          </Button>
+        <div className="rounded-xl border border-border bg-surface p-4">
+          <p className="text-sm font-semibold text-foreground">That was your free generation.</p>
+          <div className="mt-4">
+            <ComingSoonJoin source="pricing-coming-soon" variant="block" />
+          </div>
         </div>
       </div>
     )
@@ -289,32 +281,16 @@ export function IntelWizard({ tool }: { tool: IntelTool }) {
   )
 }
 
-/** Subscription wall shown after the free trial is exhausted */
 function SubscribeWall() {
   return (
-    <Card className="border-border bg-surface p-10 text-center">
-      <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-accent/10">
-        <Crown className="h-8 w-8 text-accent" />
-      </div>
-      <h2 className="mt-6 text-2xl font-bold text-foreground tabular-nums">enable unlimited AI intelligence reports</h2>
-      <p className="mx-auto mt-3 max-w-md text-muted-foreground">
-        Free tier: one report. Paid access unlocks more when billing is live.
-        Checkout isn&apos;t live — this is not a purchase.
-      </p>
-      <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-        <Button asChild size="lg">
-          <Link href="/waitlist">
-            <Crown className="mr-2 h-5 w-5" />
-            Join the waitlist
-          </Link>
-        </Button>
+    <Card className="border-border bg-surface p-10">
+      <p className="mb-4 text-sm text-muted-foreground">One free report.</p>
+      <ComingSoonJoin source="pricing-coming-soon" variant="block" />
+      <div className="mt-6 text-center">
         <Button asChild variant="ghost" size="lg">
-          <Link href="/courses">Browse free courses instead</Link>
+          <Link href="/learning-paths">Browse free lessons</Link>
         </Button>
       </div>
-      <p className="mt-4 text-xs text-muted-foreground">
-        Free tier includes one AI-generated report with Gemini Flash.
-      </p>
     </Card>
   )
 }

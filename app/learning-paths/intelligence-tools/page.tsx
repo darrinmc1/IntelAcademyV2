@@ -2,7 +2,8 @@ import type { Metadata } from "next"
 import { LearningPathTemplate } from "@/components/learning-path-template"
 
 export const metadata: Metadata = {
-  title: "Intelligence Tools & Technology | The Intel Analyst Academy",
+  alternates: { canonical: "/learning-paths/intelligence-tools" },
+  title: "Intelligence Tools & Technology",
   description: "Master the essential software and tools used by intelligence professionals",
 }
 

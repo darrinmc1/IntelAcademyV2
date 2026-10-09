@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Risk Factor Indicators for Intelligence Analysis - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/risk-factor-indicators-for-intelligence-analysis" },
+  title: "Risk Factor Indicators for Intelligence Analysis",
   description: "This lesson explores how to identify and analyze risk factor indicators within intelligence data to anticipate potential threats and opportunities.",
 }
 

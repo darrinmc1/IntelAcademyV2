@@ -2,7 +2,8 @@ import type { Metadata } from "next"
 import { LearningPathTemplate } from "@/components/learning-path-template"
 
 export const metadata: Metadata = {
-  title: "Source Evaluation & Validation | The Intel Analyst Academy",
+  alternates: { canonical: "/learning-paths/source-evaluation" },
+  title: "Source Evaluation & Validation",
   description: "Techniques for assessing the reliability and credibility of intelligence sources",
 }
 

@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Intelligence Report Types - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/intelligence-report-types" },
+  title: "Intelligence Report Types",
   description: "Understand the three levels of intelligence reporting -- strategic, operational, and tactical -- and learn when to use each.",
 }
 

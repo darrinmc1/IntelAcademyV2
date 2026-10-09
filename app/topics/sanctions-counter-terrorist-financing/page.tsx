@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Sanctions and Counter-Terrorist Financing - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/sanctions-counter-terrorist-financing" },
+  title: "Sanctions and Counter-Terrorist Financing",
   description:
     "Analyst basics for sanctions and counter-terrorist financing: lists versus ownership and control, how CTF differs from money laundering, and what an intelligence product may say.",
 }

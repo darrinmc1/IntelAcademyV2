@@ -4,7 +4,8 @@ import { PathLessonList } from "@/components/learning-path-template"
 import { TopicWhereNext } from "@/components/topic-where-next"
 
 export const metadata = {
-  title: "Target Profiling | The Intel Analyst Academy",
+  alternates: { canonical: "/learning-paths/target-profiling" },
+  title: "Target Profiling",
   description: "Learn techniques for developing profiles of high-value targets",
 }
 

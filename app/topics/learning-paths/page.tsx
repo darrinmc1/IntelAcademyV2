@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Navigating Learning Paths on Intel Academy - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/learning-paths" },
+  title: "Navigating Learning Paths on Intel Academy",
   description: "Discover how to effectively utilize Intel Academy's curated learning paths to structure your cybersecurity education and achieve your professional goals.",
 }
 

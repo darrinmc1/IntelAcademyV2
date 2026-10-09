@@ -3,6 +3,9 @@ import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { TopicListItem } from "@/components/topic-list-item"
 
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata = pageMetadata("/topics/all-topics", "All topics", "Written topics in the catalog, and the ones still on the bench.")
 export default function AllTopicsPage() {
   return (
     <div className="container py-8 max-w-3xl">
@@ -50,7 +53,7 @@ export default function AllTopicsPage() {
         <TopicListItem
           title="Overview of the Intelligence Cycle"
           readTime={20}
-          slug="intelligence-cycle-overview"
+          slug="intelligence-cycle"
           category="foundations"
           icon="/intelligence-cycle-overview-thumb.png"
         />
@@ -69,12 +72,13 @@ export default function AllTopicsPage() {
           slug="collection-methods"
           category="foundations"
           icon="/collection-methods-thumb.png"
+          comingSoon
         />
 
         <TopicListItem
           title="Processing: Organizing Raw Data"
           readTime={20}
-          slug="intelligence-processing"
+          slug="intelligence-processing-transforming-raw-data-into-actionable-insights"
           category="foundations"
           icon="/intelligence-processing-thumb.png"
         />
@@ -85,6 +89,7 @@ export default function AllTopicsPage() {
           slug="intelligence-analysis"
           category="foundations"
           icon="/intelligence-analysis-thumb.png"
+          comingSoon
         />
 
         <TopicListItem
@@ -93,6 +98,7 @@ export default function AllTopicsPage() {
           slug="intelligence-dissemination"
           category="foundations"
           icon="/intelligence-dissemination-thumb.png"
+          comingSoon
         />
       </div>
 
@@ -151,6 +157,7 @@ export default function AllTopicsPage() {
           title="OSINT Types and Categories"
           readTime={20}
           slug="osint-types-categories"
+          href="/learning-paths/osint/osint-types"
           category="osint"
           icon="/osint-types-categories-thumb.png"
         />
@@ -161,6 +168,7 @@ export default function AllTopicsPage() {
           slug="safe-browsing"
           category="osint"
           icon="/safe-browsing-thumb.png"
+          comingSoon
         />
 
         <TopicListItem

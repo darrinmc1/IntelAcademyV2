@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Target Profiling - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/target-profiling" },
+  title: "Target Profiling",
   description: "Master the art of target profiling - building comprehensive intelligence profiles of persons of interest through structured analysis and confidence-based gap assessment.",
 }
 

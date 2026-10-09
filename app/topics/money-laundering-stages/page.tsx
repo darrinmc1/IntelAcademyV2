@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Money Laundering Stages - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/money-laundering-stages" },
+  title: "Money Laundering Stages",
   description:
     "Go past the three-stage sketch: how placement, layering, and integration show up in records, when the stages overlap, and how to write a stage judgment you can defend.",
 }

@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Evidence Based Conclusions - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/evidence-based-conclusions" },
+  title: "Evidence Based Conclusions",
   description: "Learn why all intelligence conclusions must be supported by evidence, how to evaluate sources, and how to build a credible evidence trail.",
 }
 

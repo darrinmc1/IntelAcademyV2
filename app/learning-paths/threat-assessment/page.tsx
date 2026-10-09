@@ -15,7 +15,8 @@ import { TopicWhereNext } from "@/components/topic-where-next"
 import { TopicCardWithImage } from "@/components/topic-card-with-image"
 
 export const metadata: Metadata = {
-  title: "Threat Assessment Learning Path | The Intel Analyst Academy",
+  alternates: { canonical: "/learning-paths/threat-assessment" },
+  title: "Threat Assessment Learning Path",
   description:
     "Identify, characterize, prioritize, and hand off threats — with the models, indicators, and mitigation options that keep the word 'critical' scarce.",
 }

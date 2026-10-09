@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Behavioral Threat Assessment | The Intel Analyst Academy",
+  alternates: { canonical: "/topics/behavioral-assessment" },
+  title: "Behavioral Threat Assessment",
   description:
     "How protective-intelligence analysts document concern, separate a grievance from a plan, and escalate to the right authority without diagnosing strangers or writing a how-to.",
 }

@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Intelligence Analysis Methodology: A Complete Guide | Intel Analyst Academy",
+  alternates: { canonical: "/blog/analysis-methodology-guide" },
+  title: "Intelligence Analysis Methodology: A Complete Guide",
   description: "Structured analytical techniques for intelligence analysis - from hypothesis testing and scenario analysis to diagnostic methods and structured frameworks.",
 }
 

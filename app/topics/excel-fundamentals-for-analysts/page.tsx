@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Excel Fundamentals For Analysts - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/excel-fundamentals-for-analysts" },
+  title: "Excel Fundamentals For Analysts",
   description: "Master essential Excel functions and features specifically relevant to intelligence analysis workflows.",
 }
 

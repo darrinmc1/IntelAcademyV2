@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Visual Intelligence Reporting - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/visual-intelligence-reporting" },
+  title: "Visual Intelligence Reporting",
   description: "Learn how to use charts, maps, timelines, and graphics to create more effective intelligence reports.",
 }
 

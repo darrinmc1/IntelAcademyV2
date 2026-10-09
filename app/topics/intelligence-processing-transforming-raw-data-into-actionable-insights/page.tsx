@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Intelligence Processing: Transforming Raw Data into Actionable Insights - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/intelligence-processing-transforming-raw-data-into-actionable-insights" },
+  title: "Intelligence Processing: Transforming Raw Data into Actionable Insights",
   description: "Explore the critical steps involved in intelligence processing, from data collection and evaluation to analysis and dissemination, to transform raw information into actionable insights.",
 }
 

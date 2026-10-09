@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Digital Evidence Documentation - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/digital-evidence-documentation" },
+  title: "Digital Evidence Documentation",
   description: "Learn how to properly document, preserve, and report on digital evidence for intelligence and legal proceedings.",
 }
 

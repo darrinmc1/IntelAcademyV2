@@ -4,7 +4,8 @@ import { PathLessonList } from "@/components/learning-path-template"
 import { TopicWhereNext } from "@/components/topic-where-next"
 
 export const metadata = {
-  title: "Network Analysis | The Intel Analyst Academy",
+  alternates: { canonical: "/learning-paths/network-analysis" },
+  title: "Network Analysis",
   description: "Learn techniques for mapping and analyzing criminal and terrorist networks",
 }
 

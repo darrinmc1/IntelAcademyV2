@@ -1,7 +1,9 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Access Denied - Intel Analyst Academy',
+  alternates: { canonical: "/unauthorized" },
+  title: 'Access Denied',
+  description: 'This area is for authorized personnel only.',
 }
 
 export default function UnauthorizedPage() {

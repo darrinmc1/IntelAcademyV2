@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Google Dorking - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/google-dorking" },
+  title: "Google Dorking",
   description: "Master advanced Google search operators for effective OSINT investigations.",
 }
 

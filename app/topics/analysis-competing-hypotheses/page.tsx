@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Analysis Competing Hypotheses - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/analysis-competing-hypotheses" },
+  title: "Analysis Competing Hypotheses",
   description: "Master the systematic evaluation of multiple hypotheses to avoid confirmation bias in intelligence analysis.",
 }
 

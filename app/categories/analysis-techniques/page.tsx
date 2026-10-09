@@ -1,7 +1,8 @@
 import { CategoryPageTemplate } from "@/components/category-page-template"
 
 export const metadata = {
-  title: "Analysis Techniques | The Intel Analyst Academy",
+  alternates: { canonical: "/categories/analysis-techniques" },
+  title: "Analysis Techniques",
   description: "Master advanced analytical techniques used by intelligence professionals",
 }
 

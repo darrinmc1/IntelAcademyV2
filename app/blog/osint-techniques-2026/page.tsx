@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "OSINT Techniques in 2026: Tools, Methods, and Best Practices | Intel Analyst Academy",
+  alternates: { canonical: "/blog/osint-techniques-2026" },
+  title: "OSINT Techniques in 2026: Tools, Methods, and Best Practices",
   description: "A comprehensive overview of open-source intelligence techniques for 2026 - search operators, social media intelligence, image analysis, dark web monitoring, and ethical frameworks.",
 }
 

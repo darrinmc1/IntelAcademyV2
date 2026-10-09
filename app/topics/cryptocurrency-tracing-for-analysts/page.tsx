@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Cryptocurrency Tracing for Analysts - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/cryptocurrency-tracing-for-analysts" },
+  title: "Cryptocurrency Tracing for Analysts",
   description:
     "A practical analyst's view of blockchain tracing: what a public ledger shows, what clustering can suggest, where off-ramps matter, and what a trace does not prove.",
 }

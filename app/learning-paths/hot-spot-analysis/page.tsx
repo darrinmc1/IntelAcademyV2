@@ -4,7 +4,8 @@ import { PathLessonList } from "@/components/learning-path-template"
 import { TopicWhereNext } from "@/components/topic-where-next"
 
 export const metadata = {
-  title: "Hot Spot Analysis | The Intel Analyst Academy",
+  alternates: { canonical: "/learning-paths/hot-spot-analysis" },
+  title: "Hot Spot Analysis",
   description: "Learn techniques for identifying and analyzing geographic concentrations of criminal activity",
 }
 

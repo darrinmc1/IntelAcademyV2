@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Predictive Patterning: Using Historical Series Data to Predict Future Criminal Activity - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/predictive-patterning-using-historical-series-data-to-predict-future-criminal-ac" },
+  title: "Predictive Patterning: Using Historical Series Data to Predict Future Criminal Activity",
   description: "Explore the foundational concepts of predictive patterning in intelligence analysis, focusing on how historical series data can be leveraged to forecast potential criminal activities.",
 }
 

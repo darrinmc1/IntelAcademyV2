@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Defining Intelligence - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/defining-intelligence" },
+  title: "Defining Intelligence",
   description:
     "What intelligence actually is: the definition, the characteristics that separate it from raw information, and why the distinction matters for every decision it informs.",
 }

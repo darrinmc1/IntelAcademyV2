@@ -4,7 +4,8 @@ import { PathLessonList } from "@/components/learning-path-template"
 import { TopicWhereNext } from "@/components/topic-where-next"
 
 export const metadata = {
-  title: "Crime Trend Analysis | The Intel Analyst Academy",
+  alternates: { canonical: "/learning-paths/crime-trend-analysis" },
+  title: "Crime Trend Analysis",
   description: "Learn techniques for identifying and analyzing patterns and trends in criminal activity",
 }
 

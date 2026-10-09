@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Intelligence Oversight - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/intelligence-oversight" },
+  title: "Intelligence Oversight",
   description: "Understand the systems, institutions, and processes that ensure accountability in intelligence activities, from legislative and executive oversight to international models.",
 }
 

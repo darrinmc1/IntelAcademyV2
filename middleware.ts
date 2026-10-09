@@ -22,7 +22,7 @@ const BLOCKED_BOTS = [
 const SAFE_PATHS = ["/_next/", "/favicon", "/og-image", "/opengraph", "/icon"]
 
 // Answer-engine surfaces: allow crawlers to read pricing, FAQs, and the brief tool.
-const AEO_PATHS = ["/llm.txt", "/llms.txt", "/pricing", "/pricing.json", "/faq", "/tools/academy-brief"]
+const AEO_PATHS = ["/llm.txt", "/llms.txt", "/faq", "/tools/academy-brief"]
 
 // Simple in-memory rate limiter
 const rateLimit = new Map<string, { count: number; resetAt: number }>()
