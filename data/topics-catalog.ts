@@ -2,7 +2,7 @@ export const topics = [
   {
     title: "Strategic Risk Assessment for Analysts",
     description: "Build a strategic risk assessment a decision-maker can act on, with scoped scenarios, defined ratings, stated confidence and review triggers.",
-    image: "/strategic-intelligence-expanding-pestle-analysis-dynamic-world.png",
+    image: "/strategic-risk-assessment-for-analysts.png",
     href: "/topics/strategic-risk-assessment-for-analysts",
     category: "Strategic Intelligence",
     estimatedTime: "8 min",
