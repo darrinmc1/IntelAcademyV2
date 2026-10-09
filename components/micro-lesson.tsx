@@ -5,6 +5,8 @@ import { useHumor, ComedyOnly } from "@/components/humor-provider"
 import { HumorModeToggle } from "@/components/humor-mode-toggle"
 import { LessonMascot } from "@/components/lesson-mascot"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { lessonReadMinutes } from "@/lib/read-time"
 import {
   FileText, ChevronDown, ChevronRight, Lightbulb, Target,
   BookOpen, ArrowRight, Clock, BarChart3, Crosshair
@@ -195,6 +197,11 @@ export function MicroLesson({
   children,
 }: MicroLessonProps) {
   const { isComedy } = useHumor()
+  // Show the read time computed from the lesson's real word count (230 wpm).
+  // The readTime prop is only a fallback for pages outside /topics/<slug>.
+  const pathname = usePathname()
+  const slug = pathname?.match(/^\/topics\/([^/?#]+)/)?.[1]
+  const shownReadTime = lessonReadMinutes(slug) ?? readTime
 
   const difficultyColors = {
     Beginner: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
@@ -217,7 +224,7 @@ export function MicroLesson({
             <HumorModeToggle compact />
             <div className="flex items-center gap-1.5 text-slate-400 text-sm">
               <Clock className="w-3.5 h-3.5" />
-              {readTime} min
+              {shownReadTime} min read
             </div>
           </div>
         </div>

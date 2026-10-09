@@ -79,7 +79,53 @@ Tactical intelligence is only useful if it reaches the right consumer at the rig
 
 - **Digital Dissemination:** Modern tactical reporting systems deliver intelligence directly to handheld devices and vehicle-mounted terminals in near real-time.
 - **Verbal Briefings:** For time-critical tactical intelligence, a verbal briefing delivered face-to-face or over encrypted voice channels may precede the written report.
-- **Classification and Caveats:** Tactical reports often contain sensitive sources or methods. Proper classification, handling instructions, and dissemination restrictions protect both the intelligence and the sources who provided it.`
+- **Classification and Caveats:** Tactical reports often contain sensitive sources or methods. Proper classification, handling instructions, and dissemination restrictions protect both the intelligence and the sources who provided it.
+
+## Worked Example: Rewriting a Weak Report
+
+Here is a first draft from a junior analyst, written at 0415 after an overnight report from the security contractor at a mine site:
+
+"Overnight there were some reports of suspicious activity near the eastern fence. A vehicle may have been seen and some people were possibly observed. It is assessed that this could potentially indicate a threat to the site and further monitoring is recommended."
+
+Every sentence hedges, nothing is specific, and the reader cannot act on any of it. Here is the same report rewritten:
+
+**Summary:** Two people in a white utility vehicle were seen at the eastern perimeter fence at 0240 and left at 0255. Likely reconnaissance or an attempted theft. Recommend a fence inspection at first light and an extra patrol on the eastern perimeter tonight.
+
+**Source:** Site security contractor, direct observation via thermal camera. Usually reliable. Footage reviewed by the analyst.
+
+**Situation:** Two copper cable thefts were reported at neighbouring sites in the past month. The eastern fence borders an unsealed public road with no lighting.
+
+**Detail:** The vehicle stopped near fence post E14. Both people spent about ten minutes at the fence. No breach was seen on camera, but the camera does not cover the base of the fence at E14.
+
+**Assessment:** Likely reconnaissance ahead of a theft attempt, moderate confidence. The timing and location match the pattern at neighbouring sites. It may have been unrelated, such as people stopping on the road, but the time spent at the fence makes that less likely.
+
+**Gaps:** No registration captured. No confirmation of whether the fence was tampered with.
+
+**Recommendations:** Inspect the fence at E14 at first light. Add a patrol on the eastern perimeter between 0100 and 0400 for the next three nights. Adjust the camera to cover the base of the fence.
+
+The rewrite is longer, but it is faster to use. The site manager can read the summary in ten seconds and know what to do before breakfast.
+
+## Checklist Before Release
+
+- Can the reader act on the summary alone?
+- Is every time stated, with the time zone if there is any doubt?
+- Is the source and its reliability stated in plain terms?
+- Have I separated what was seen from what I think it means?
+- Have I listed the gaps?
+- Are the recommendations specific enough to assign to a named person?
+- Is the handling or dissemination restriction correct?
+
+## Common Mistakes
+
+- **Hedging every sentence.** One clear confidence statement in the assessment is enough. Stacking "possibly" on "may" on "could" tells the reader you are nervous, not how likely something is.
+- **Writing the story in order.** Chronology belongs in the detail section. The summary leads with what matters.
+- **Vague recommendations.** "Further monitoring" is not a task. Who monitors what, where, and until when?
+- **Forgetting the follow-up.** If the fence check finds a cut wire, the next report should say so and update the assessment.
+
+## Exercise
+
+Find a short news report about a local incident, such as a break-in, a road closure or a protest. Rewrite it as a tactical report using the structure above: a summary of no more than three sentences, a stated source, an assessment with a confidence level, the gaps, and two specific recommendations.
+`
 
 export default function TacticalreportsPage() {
   return (

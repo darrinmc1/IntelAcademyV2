@@ -102,7 +102,7 @@ export async function submitFeedbackAction(args: {
     }
 
     // Empire Feedback→GitHub (n8n). Failures must not fail the user-facing submit.
-    notifyFeedbackWebhook()
+    await notifyFeedbackWebhook()
 
     return {
       ok: true,

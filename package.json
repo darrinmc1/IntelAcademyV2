@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prebuild": "node scripts/lesson-read-times.mjs",
     "build": "next build",
     "dev": "cross-env NODE_ENV=development next dev",
     "lint": "next lint",
