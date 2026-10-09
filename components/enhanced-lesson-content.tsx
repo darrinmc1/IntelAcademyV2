@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useState, useEffect } from "react"
 import { SimpleImage } from "@/components/simple-image"
+import { lessonHeroFallback } from "@/lib/lesson-hero"
 import { Card } from "@/components/ui/card"
 
 interface EnhancedLessonContentProps {
@@ -111,7 +112,7 @@ export function EnhancedLessonContent({ content, topic }: EnhancedLessonContentP
       <div className="mb-10 relative">
         <SimpleImage
           src={`/${topic}.png`}
-          fallbackSrc="/abstract-colorful-swirls.png"
+          fallbackSrc={lessonHeroFallback(topic)}
           alt={`${topic} concept illustration`}
           width={700}
           height={300}
