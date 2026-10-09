@@ -211,6 +211,6 @@ ${dump}
 }
 
 export const TRAINING_PREVIEW_NOTICE =
-  "Training preview — live AI is not configured (missing GOOGLE_API_KEY). This draft organizes your paste and cites real academy lessons. It is not a model-authored assessment."
+  "Training preview — live AI is not configured yet. This draft organizes your paste and cites real academy lessons. It is not a model-authored assessment."
 
 export { DISCLAIMER }

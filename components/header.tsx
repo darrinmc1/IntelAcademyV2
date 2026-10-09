@@ -82,7 +82,7 @@ export function Header() {
     {
       id: "learning",
       label: "Learning",
-      active: pathname.startsWith("/learning-paths") || pathname.startsWith("/topics"),
+      active: pathname.startsWith("/learning-paths") || pathname.startsWith("/topics") || pathname.startsWith("/exercises") || pathname.startsWith("/instructor"),
       hasDropdown: true,
     },
     {
@@ -134,6 +134,8 @@ export function Header() {
               <nav className="flex flex-col gap-2">
                 <Link href="/" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Home</Link>
                 <Link href="/learning-paths" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Learning Paths</Link>
+                <Link href="/exercises" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Practical Exercises</Link>
+                <Link href="/instructor" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">AI Instructor</Link>
                 <Link href="/pricing" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Coming soon</Link>
                 <Link href="/tools/academy-brief" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Academy Brief</Link>
                 <Link href="/tools" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Analyst Tools</Link>
@@ -186,6 +188,12 @@ export function Header() {
                           </Link>
                           <Link href="/topics" className="block px-4 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-cyan-400 transition-colors" onClick={closeDropdowns}>
                             Topics
+                          </Link>
+                          <Link href="/exercises" className="block px-4 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-cyan-400 transition-colors" onClick={closeDropdowns}>
+                            Practical Exercises
+                          </Link>
+                          <Link href="/instructor" className="block px-4 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-cyan-400 transition-colors" onClick={closeDropdowns}>
+                            AI Instructor
                           </Link>
                         </>
                       )}
