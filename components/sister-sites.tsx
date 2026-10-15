@@ -1,4 +1,4 @@
-import { Building2, Brain, ShieldCheck } from "lucide-react"
+import { Building2, Brain, ShieldCheck, Wallet } from "lucide-react"
 
 interface SisterSite {
   name: string
@@ -33,6 +33,12 @@ const sites: SisterSite[] = [
     url: "https://abcofcyber.com",
     icon: <ShieldCheck className="w-6 h-6 text-cyan-400" />,
   },
+  {
+    name: "Money Mastery",
+    description: "Calculators and guides for budgeting, debt, saving and investing",
+    url: "https://moneymastery.vercel.app",
+    icon: <Wallet className="w-6 h-6 text-cyan-400" />,
+  },
 ]
 
 export function SisterSites() {
@@ -41,7 +47,7 @@ export function SisterSites() {
       <h4 className="text-xs uppercase tracking-widest font-semibold text-slate-500 mb-4">
         Sister Networks
       </h4>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
         {sites.map((site) => (
           <a
             key={site.name}
