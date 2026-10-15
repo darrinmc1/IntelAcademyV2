@@ -4,7 +4,8 @@ import { TopicCardWithImage } from "@/components/topic-card-with-image"
 import { TopicWhereNext } from "@/components/topic-where-next"
 
 export const metadata = {
-  title: "Crime Series Analysis | The Intel Analyst Academy",
+  alternates: { canonical: "/learning-paths/crime-series-analysis" },
+  title: "Crime Series Analysis",
   description: "Learn how to identify and analyze linked crimes committed by the same offender or group",
 }
 

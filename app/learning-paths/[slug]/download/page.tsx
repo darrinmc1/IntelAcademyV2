@@ -194,7 +194,8 @@ export default async function LearningPathDownloadPage({ params }: LearningPathD
 export async function generateMetadata({ params }: LearningPathDownloadProps): Promise<Metadata> {
   const { slug } = await params
   return {
-    title: `${titleFromSlug(slug)} — Printable Learning Path | The Intel Analyst Academy`,
+    title: `${titleFromSlug(slug)} — Printable Learning Path`,
     description: `Printable learning path: ${titleFromSlug(slug)} from The Intel Analyst Academy.`,
+    alternates: { canonical: `/learning-paths/${slug}/download` },
   }
 }

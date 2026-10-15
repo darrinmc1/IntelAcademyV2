@@ -1,2 +1,2 @@
-/** Path-page lock copy. Video is only on the stored `video` plan. Checkout isn't live. */
-export const PATH_INTRO_LOCK_COPY = "Included on the video plan"
+/** Visitor lock copy. No price. Video playback stays gated in code. */
+export const PATH_INTRO_LOCK_COPY = "Video is coming soon. Written lessons stay free."

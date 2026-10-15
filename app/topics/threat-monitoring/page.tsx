@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Threat Monitoring - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/threat-monitoring" },
+  title: "Threat Monitoring",
   description: "Master the discipline of continuous threat monitoring - building dashboards, setting tripwires, and avoiding alert fatigue in intelligence operations.",
 }
 

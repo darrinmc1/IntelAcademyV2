@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Intelligence Vs Information - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/intelligence-vs-information" },
+  title: "Intelligence Vs Information",
   description: "Understand the critical differences between raw information and processed intelligence, and how analysts transform data into actionable insights.",
 }
 

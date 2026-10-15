@@ -65,7 +65,7 @@ describe("path intro catalog", () => {
 
 describe("path intro playback access", () => {
   it("uses the video-plan lock copy with no dollar amount", () => {
-    expect(PATH_INTRO_LOCK_COPY).toBe("Included on the video plan")
+    expect(PATH_INTRO_LOCK_COPY).toBe("Video is coming soon. Written lessons stay free.")
     expect(PATH_INTRO_LOCK_COPY).not.toMatch(/\$/)
   })
 

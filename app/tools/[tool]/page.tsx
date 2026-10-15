@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
@@ -45,6 +46,17 @@ const TOOLS: IntelTool[] = [
 
 export function generateStaticParams() {
   return TOOLS.map((tool) => ({ tool: tool.id }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ tool: string }> }): Promise<Metadata> {
+  const { tool: toolId } = await params
+  const tool = TOOLS.find((t) => t.id === toolId)
+  if (!tool) return { title: "Tool not found" }
+  return {
+    title: tool.name,
+    description: tool.description,
+    alternates: { canonical: `/tools/${toolId}` },
+  }
 }
 
 export default async function ToolPage({ params }: { params: Promise<{ tool: string }> }) {

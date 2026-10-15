@@ -12,6 +12,9 @@ import { Image } from "@/components/image"
 import { RequestTopicForm } from "./request-topic-form"
 import { Toaster } from "@/components/ui/toaster"
 
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata = pageMetadata("/coming-soon", "Coming soon", "Lessons and features that are not published yet.")
 export default function ComingSoon() {
   return (
     <div className="container mx-auto px-4 py-8">

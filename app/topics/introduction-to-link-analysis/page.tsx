@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Introduction to Link Analysis - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/introduction-to-link-analysis" },
+  title: "Introduction to Link Analysis",
   description: "This lesson provides a foundational understanding of link analysis, a crucial intelligence technique for uncovering hidden relationships and patterns within data.",
 }
 

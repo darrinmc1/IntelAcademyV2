@@ -3,7 +3,8 @@ import type { Metadata } from "next"
 import { ArrowRight, BookOpen, Search, AlertTriangle, Coffee, Brain, Lightbulb } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Intelligence Glossary | The Intel Analyst Academy",
+  alternates: { canonical: "/glossary" },
+  title: "Intelligence Glossary",
   description: "A glossary of intelligence terms with humorous definitions",
 }
 

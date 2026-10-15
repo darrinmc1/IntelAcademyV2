@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Intelligence Gap Analysis | The Intel Analyst Academy",
+  alternates: { canonical: "/topics/intelligence-gap-analysis" },
+  title: "Intelligence Gap Analysis",
   description:
     "Diagnose what you actually do not know, write a gap statement a collector can use, and keep a gap register that dies when the question is answered.",
 }

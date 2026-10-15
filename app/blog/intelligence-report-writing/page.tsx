@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Intelligence Report Writing: Structure, Style, and Standards | Intel Analyst Academy",
+  alternates: { canonical: "/blog/intelligence-report-writing" },
+  title: "Intelligence Report Writing: Structure, Style, and Standards",
   description: "Master the art of intelligence report writing - from structure and style to sourcing standards and review processes. A complete guide for analysts.",
 }
 

@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import EmailInterest from "./email-interest"
 
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata = pageMetadata("/lesson-in-development", "Lesson in development", "This lesson is not written yet.")
 export default async function LessonInDevelopment({
   searchParams,
 }: {

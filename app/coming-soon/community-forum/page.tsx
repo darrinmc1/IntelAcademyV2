@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Community Forum | The Intel Analyst Academy",
+  alternates: { canonical: "/coming-soon/community-forum" },
+  title: "Community Forum",
   description:
     "Join our intelligence analysis community forum to connect with peers, share insights, and grow professionally.",
 }

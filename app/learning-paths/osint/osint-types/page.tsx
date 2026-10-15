@@ -15,7 +15,8 @@ import {
 } from "@/components/ui/breadcrumb"
 
 export const metadata: Metadata = {
-  title: "OSINT Types and Categories | The Intel Analyst Academy",
+  alternates: { canonical: "/learning-paths/osint/osint-types" },
+  title: "OSINT Types and Categories",
   description: "Learn about the different types and categories of Open Source Intelligence (OSINT).",
 }
 

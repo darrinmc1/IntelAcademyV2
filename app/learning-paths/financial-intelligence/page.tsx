@@ -12,7 +12,8 @@ import { TopicWhereNext } from "@/components/topic-where-next"
 import { PathLessonList } from "@/components/learning-path-template"
 
 export const metadata: Metadata = {
-  title: "Financial Intelligence Learning Path | The Intel Analyst Academy",
+  alternates: { canonical: "/learning-paths/financial-intelligence" },
+  title: "Financial Intelligence Learning Path",
   description:
     "Eight lessons on following illicit finance: the basics, laundering stages, suspicious activity reports, trade, beneficial ownership, crypto tracing, sanctions, and financial network maps.",
 }

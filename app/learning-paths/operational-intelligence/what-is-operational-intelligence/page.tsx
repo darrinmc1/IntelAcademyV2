@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowLeft, ArrowRight } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   Breadcrumb,
@@ -13,6 +13,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { TopicWhereNext } from "@/components/topic-where-next"
 
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata = pageMetadata("/learning-paths/operational-intelligence/what-is-operational-intelligence", "What is operational intelligence", "What operational intelligence is for, and what it is not.")
 export default function WhatIsOperationalIntelligence() {
   return (
     <div className="container mx-auto px-4 py-8">
@@ -225,11 +228,9 @@ export default function WhatIsOperationalIntelligence() {
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Learning Path
             </Link>
           </Button>
-          <Button asChild>
-            <Link href="/topics/domestic-terrorism-monitoring">
-              Next Topic: Domestic Terrorism Monitoring <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+          <p className="text-sm font-medium text-muted-foreground self-center">
+            Next topic, domestic terrorism monitoring: coming soon
+          </p>
         </div>
       </div>
       <TopicWhereNext />

@@ -16,6 +16,7 @@ import { StaticImage } from "@/components/static-image"
 import { TopicWhereNext } from "@/components/topic-where-next"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/learning-paths/foundations" },
   title: "Fundamentals of Intelligence Analysis | Learning Path",
   description: "Master the fundamental concepts and frameworks of intelligence analysis with a touch of humor",
 }

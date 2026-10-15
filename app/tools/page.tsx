@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Tools | OSINT Observer',
+  alternates: { canonical: "/tools" },
+  title: 'Tools',
   description: 'One-job layers and utilities for open-source intelligence work.',
 };
 

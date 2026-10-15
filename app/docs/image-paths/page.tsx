@@ -1,5 +1,13 @@
 import { ImagePathDocumentation } from "@/components/image-path-documentation"
 
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Image path documentation",
+  description: "Internal notes on where images live in the project.",
+  alternates: { canonical: "/docs/image-paths" },
+  robots: { index: false, follow: false },
+}
 export default function ImagePathsDocPage() {
   return (
     <div className="container mx-auto px-4 py-12">

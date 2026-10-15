@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "What Is Threat Assessment - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/what-is-threat-assessment" },
+  title: "What Is Threat Assessment",
   description: "Learn the fundamentals of threat assessment including the differences between threats, risks, and vulnerabilities, the four-step assessment process, threat actor profiles, and the capability-intent model.",
 }
 

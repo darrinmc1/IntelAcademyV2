@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: TopicEditorPageProps): Promis
 
   if (!content) {
     return {
-      title: "Topic Not Found - Intel Analyst Academy",
+      title: "Topic Not Found",
     }
   }
 
@@ -26,8 +26,9 @@ export async function generateMetadata({ params }: TopicEditorPageProps): Promis
   const title = titleMatch ? titleMatch[1] : id
 
   return {
-    title: `Edit: ${title} - Intel Analyst Academy`,
+    title: `Edit: ${title}`,
     description: `Edit content for the ${title} topic`,
+    alternates: { canonical: `/admin/content-manager/topics/${id}` },
   }
 }
 

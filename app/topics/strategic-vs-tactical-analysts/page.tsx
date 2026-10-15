@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Strategic vs. Tactical: What Analysts Must Understand - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/strategic-vs-tactical-analysts" },
+  title: "Strategic vs. Tactical: What Analysts Must Understand",
   description:
     "Learn how strategic, operational, and tactical intelligence differ — and why analysts who only master one level leave the other half of the job on the table.",
 }

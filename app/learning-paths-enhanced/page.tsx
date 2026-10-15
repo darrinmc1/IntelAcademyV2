@@ -2,7 +2,8 @@ import LearningPathsEnhancedClientPage from "./learning-paths-enhanced-dynamic-l
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Enhanced Learning Paths | The Intel Analyst Academy",
+  alternates: { canonical: "/learning-paths-enhanced" },
+  title: "Enhanced Learning Paths",
   description: "Discover detailed course information and track your progress with our enhanced hover effects.",
 }
 

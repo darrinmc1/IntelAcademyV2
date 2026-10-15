@@ -93,7 +93,6 @@ export const whatsNextMap: Record<LearningPathSlug, WhatsNextRecommendations> = 
     moreLearning: {
       title: "Intelligence Operational Planning",
       description: "Develop skills in planning intelligence operations",
-      path: "/topics/intelligence-operational-planning",
     },
     advancedLearning: {
       title: "Network Analysis",
@@ -112,12 +111,12 @@ export const whatsNextMap: Record<LearningPathSlug, WhatsNextRecommendations> = 
     moreLearning: {
       title: "OSINT Types & Categories",
       description: "Explore different types and categories of open-source intelligence",
-      path: "/topics/osint-types-categories",
+      path: "/learning-paths/osint/osint-types",
     },
     advancedLearning: {
       title: "Deep Web Research",
       description: "Master advanced techniques for deep web research and analysis",
-      path: "/topics/deep-web-research",
+      path: "/topics/deep-web-research-for-intel-analysts",
     },
   },
 
@@ -136,7 +135,7 @@ export const whatsNextMap: Record<LearningPathSlug, WhatsNextRecommendations> = 
     advancedLearning: {
       title: "Intelligence Storytelling",
       description: "Master the art of intelligence storytelling for maximum impact",
-      path: "/topics/intelligence-storytelling",
+      path: "/advanced-topics/intelligence-storytelling",
     },
   },
 
@@ -150,12 +149,11 @@ export const whatsNextMap: Record<LearningPathSlug, WhatsNextRecommendations> = 
     moreLearning: {
       title: "Domestic Terrorism Monitoring",
       description: "Develop skills in monitoring and assessing domestic terrorism threats",
-      path: "/topics/domestic-terrorism-monitoring",
     },
     advancedLearning: {
       title: "Strategic Risk Assessment",
       description: "Master advanced techniques for strategic risk assessment",
-      path: "/topics/strategic-risk-assessment",
+      path: "/topics/long-term-threats",
     },
   },
 
@@ -169,12 +167,12 @@ export const whatsNextMap: Record<LearningPathSlug, WhatsNextRecommendations> = 
     moreLearning: {
       title: "Modus Operandi Analysis",
       description: "Develop skills in analyzing criminal methods and patterns",
-      path: "/topics/modus-operandi",
+      path: "/topics/modus-operandi-analysis-techniques",
     },
     advancedLearning: {
       title: "Predictive Patterning",
       description: "Master advanced techniques for predicting criminal patterns",
-      path: "/topics/predictive-patterning",
+      path: "/topics/predictive-patterning-using-historical-series-data-to-predict-future-criminal-ac",
     },
   },
 
@@ -188,12 +186,11 @@ export const whatsNextMap: Record<LearningPathSlug, WhatsNextRecommendations> = 
     moreLearning: {
       title: "Temporal Analysis",
       description: "Develop skills in analyzing crime patterns over time",
-      path: "/topics/temporal-analysis",
     },
     advancedLearning: {
       title: "Risk Terrain Modeling",
       description: "Master advanced techniques for risk terrain modeling",
-      path: "/topics/risk-terrain-modeling",
+      path: "/advanced-topics/risk-terrain-modeling",
     },
   },
 
@@ -207,12 +204,12 @@ export const whatsNextMap: Record<LearningPathSlug, WhatsNextRecommendations> = 
     moreLearning: {
       title: "Social Network Analysis",
       description: "Develop skills in analyzing social networks and relationships",
-      path: "/topics/social-network-analysis",
+      path: "/topics/notebook-social-network-analysis",
     },
     advancedLearning: {
       title: "Network Disruption",
       description: "Master advanced techniques for disrupting criminal networks",
-      path: "/topics/network-disruption",
+      path: "/advanced-topics/network-disruption",
     },
   },
 
@@ -226,12 +223,11 @@ export const whatsNextMap: Record<LearningPathSlug, WhatsNextRecommendations> = 
     moreLearning: {
       title: "Behavioral Analysis",
       description: "Develop skills in analyzing target behaviors and patterns",
-      path: "/topics/behavioral-analysis",
     },
     advancedLearning: {
       title: "Target Package Development",
       description: "Master advanced techniques for developing target packages",
-      path: "/topics/target-package",
+      path: "/advanced-topics/target-package-development",
     },
   },
 
@@ -245,12 +241,11 @@ export const whatsNextMap: Record<LearningPathSlug, WhatsNextRecommendations> = 
     moreLearning: {
       title: "Seasonal & Temporal Trends",
       description: "Develop skills in analyzing seasonal and temporal crime trends",
-      path: "/topics/seasonal-temporal-trends",
     },
     advancedLearning: {
       title: "Statistical Techniques",
       description: "Master advanced statistical techniques for crime trend analysis",
-      path: "/topics/statistical-techniques",
+      path: "/advanced-topics/statistical-techniques",
     },
   },
 
@@ -269,7 +264,7 @@ export const whatsNextMap: Record<LearningPathSlug, WhatsNextRecommendations> = 
     advancedLearning: {
       title: "Social Network Analysis",
       description: "Master advanced techniques for social network analysis",
-      path: "/topics/social-network-analysis",
+      path: "/topics/notebook-social-network-analysis",
     },
   },
 
@@ -288,7 +283,7 @@ export const whatsNextMap: Record<LearningPathSlug, WhatsNextRecommendations> = 
     advancedLearning: {
       title: "Structured Analytical Techniques",
       description: "Master advanced structured analytical techniques",
-      path: "/topics/structured-analytical-techniques",
+      path: "/advanced-topics/structured-analytical-techniques",
     },
   },
 
@@ -307,7 +302,7 @@ export const whatsNextMap: Record<LearningPathSlug, WhatsNextRecommendations> = 
     advancedLearning: {
       title: "Operations Security",
       description: "Master advanced techniques for maintaining operations security",
-      path: "/topics/operations-security",
+      path: "/advanced-topics/operations-security",
     },
   },
 
@@ -321,12 +316,11 @@ export const whatsNextMap: Record<LearningPathSlug, WhatsNextRecommendations> = 
     moreLearning: {
       title: "Pivot Tables",
       description: "Develop skills in using pivot tables for data analysis",
-      path: "/topics/pivot-tables",
     },
     advancedLearning: {
       title: "Data Visualization",
       description: "Master advanced techniques for data visualization in Excel",
-      path: "/topics/data-visualization",
+      path: "/topics/data-visualization-intelligence",
     },
   },
 }

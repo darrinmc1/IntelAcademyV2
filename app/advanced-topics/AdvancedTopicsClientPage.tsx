@@ -41,7 +41,7 @@ export default function AdvancedTopicsClientPage() {
       duration: "60 min read",
       image: "/structured-analytical-techniques.png",
       fallbackImage: "/placeholder.svg",
-      path: "/topics/structured-analytical-techniques",
+      path: "/advanced-topics/structured-analytical-techniques",
     },
     {
       id: "network-disruption",
@@ -52,7 +52,7 @@ export default function AdvancedTopicsClientPage() {
       duration: "50 min read",
       image: "/network-disruption.png",
       fallbackImage: "/placeholder.svg",
-      path: "/topics/network-disruption",
+      path: "/advanced-topics/network-disruption",
     },
     {
       id: "deep-web-research",
@@ -63,7 +63,7 @@ export default function AdvancedTopicsClientPage() {
       duration: "55 min read",
       image: "/deep-web-research.png",
       fallbackImage: "/placeholder.svg",
-      path: "/topics/deep-web-research",
+      path: "/topics/deep-web-research-for-intel-analysts",
     },
     {
       id: "risk-terrain-modeling",
@@ -74,7 +74,7 @@ export default function AdvancedTopicsClientPage() {
       duration: "65 min read",
       image: "/risk-terrain-modeling.jpg",
       fallbackImage: "/placeholder.svg",
-      path: "/topics/risk-terrain-modeling",
+      path: "/advanced-topics/risk-terrain-modeling",
     },
     {
       id: "predictive-patterning",
@@ -85,7 +85,7 @@ export default function AdvancedTopicsClientPage() {
       duration: "60 min read",
       image: "/predictive-patterning-thumb.png",
       fallbackImage: "/placeholder.svg",
-      path: "/topics/predictive-patterning",
+      path: "/topics/predictive-patterning-using-historical-series-data-to-predict-future-criminal-ac",
     },
     {
       id: "intelligence-storytelling",
@@ -96,7 +96,7 @@ export default function AdvancedTopicsClientPage() {
       duration: "40 min read",
       image: "/intelligence-storytelling-thumb.png",
       fallbackImage: "/placeholder.svg",
-      path: "/topics/intelligence-storytelling",
+      path: "/advanced-topics/intelligence-storytelling",
     },
     {
       id: "strategic-risk-assessment",
@@ -107,7 +107,7 @@ export default function AdvancedTopicsClientPage() {
       duration: "55 min read",
       image: "/strategic-risk-assessment-thumb.png",
       fallbackImage: "/placeholder.svg",
-      path: "/topics/strategic-risk-assessment",
+      path: "/topics/long-term-threats",
     },
     {
       id: "target-package-development",
@@ -118,7 +118,7 @@ export default function AdvancedTopicsClientPage() {
       duration: "70 min read",
       image: "/target-package-thumb.png",
       fallbackImage: "/placeholder.svg",
-      path: "/topics/target-package",
+      path: "/advanced-topics/target-package-development",
     },
     {
       id: "statistical-techniques",
@@ -129,7 +129,7 @@ export default function AdvancedTopicsClientPage() {
       duration: "75 min read",
       image: "/statistical-techniques-thumb.png",
       fallbackImage: "/placeholder.svg",
-      path: "/topics/statistical-techniques",
+      path: "/advanced-topics/statistical-techniques",
     },
     {
       id: "social-network-analysis",
@@ -140,7 +140,7 @@ export default function AdvancedTopicsClientPage() {
       duration: "50 min read",
       image: "/social-network-analysis-thumb.png",
       fallbackImage: "/placeholder.svg",
-      path: "/topics/social-network-analysis",
+      path: "/advanced-topics/social-network-analysis",
     },
     {
       id: "operations-security",
@@ -151,7 +151,7 @@ export default function AdvancedTopicsClientPage() {
       duration: "45 min read",
       image: "/intelligence-analyst-workspace.png",
       fallbackImage: "/placeholder.svg",
-      path: "/topics/operations-security",
+      path: "/advanced-topics/operations-security",
     },
   ]
 

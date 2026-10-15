@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Indicators and Warnings in Strategic Analysis | The Intel Analyst Academy",
+  alternates: { canonical: "/topics/indicators-warnings" },
+  title: "Indicators and Warnings in Strategic Analysis",
   description:
     "Build indicator lists, set watch conditions, and write a warning a decision-maker can use before the event, not after the post-mortem.",
 }

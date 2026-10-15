@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Threat Assessment: Methodologies for Evaluating and Prioritizing Threats - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/threat-assessment-methodologies" },
+  title: "Threat Assessment: Methodologies for Evaluating and Prioritizing Threats",
   description: "Explore various methodologies used by intelligence analysts to effectively evaluate and prioritize potential threats, ensuring resources are allocated efficiently.",
 }
 

@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Crime Linkage Techniques: Connecting Crimes Through Evidence - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/crime-linkage-techniques" },
+  title: "Crime Linkage Techniques: Connecting Crimes Through Evidence",
   description: "Explore the fundamental methods used by intelligence analysts to link seemingly unrelated crimes by examining behavioral patterns and physical evidence, enhancing investigative efficiency.",
 }
 

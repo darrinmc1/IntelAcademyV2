@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "GEOINT Fundamentals - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/geoint-fundamentals" },
+  title: "GEOINT Fundamentals",
   description: "Learn the basics of Geospatial Intelligence and satellite imagery analysis",
 }
 

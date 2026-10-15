@@ -2,7 +2,8 @@ import type { Metadata } from "next"
 import { LearningPathTemplate } from "@/components/learning-path-template"
 
 export const metadata: Metadata = {
-  title: "Geospatial Intelligence | The Intel Analyst Academy",
+  alternates: { canonical: "/learning-paths/geospatial-intelligence" },
+  title: "Geospatial Intelligence",
   description: "Techniques for analyzing geographic and spatial data for intelligence purposes",
 }
 

@@ -2,6 +2,10 @@ import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 
 // Sample gallery images
+
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata = pageMetadata("/gallery", "Gallery", "Images used across the academy lessons and learning paths.")
 const galleryImages = [
   {
     src: "/intelligence-images/strategic-intelligence/strategic-intelligence-main.png",

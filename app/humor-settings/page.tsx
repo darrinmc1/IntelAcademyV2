@@ -3,7 +3,8 @@ import { HumorPreferences } from "@/components/humor/humor-preferences"
 import { Card } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Humor Settings | The Intel Analyst Academy",
+  alternates: { canonical: "/humor-settings" },
+  title: "Humor Settings",
   description: "Customize your learning experience with humor preferences",
 }
 

@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Estimative Language - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/estimative-language" },
+  title: "Estimative Language",
   description: "Master the use of estimative language to convey probability and confidence in intelligence assessments, including the Kent scale and common pitfalls.",
 }
 

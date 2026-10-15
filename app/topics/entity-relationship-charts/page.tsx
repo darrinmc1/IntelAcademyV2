@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Entity Relationship Charts - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/entity-relationship-charts" },
+  title: "Entity Relationship Charts",
   description: "Master techniques for building clear and effective link charts showing entities and connections.",
 }
 

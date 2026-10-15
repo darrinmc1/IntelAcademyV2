@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "MO Evolution and Adaptation - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/mo-evolution" },
+  title: "MO Evolution and Adaptation",
   description:
     "How and why offenders change their modus operandi over time, how to distinguish MO drift from a different offender, and what adaptation tells you about offender learning and escalation.",
 }

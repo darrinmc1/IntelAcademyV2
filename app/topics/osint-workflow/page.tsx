@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "OSINT Workflow - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/osint-workflow" },
+  title: "OSINT Workflow",
   description: "Learn systematic approaches to OSINT investigations and establish effective workflows.",
 }
 

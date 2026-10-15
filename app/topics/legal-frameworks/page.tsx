@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Legal Frameworks - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/legal-frameworks" },
+  title: "Legal Frameworks",
   description: "Explore the legal frameworks, statutes, and international laws that govern intelligence activities and define the boundaries of lawful intelligence work.",
 }
 

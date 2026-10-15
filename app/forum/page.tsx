@@ -1,6 +1,7 @@
 import { MessageSquare } from "lucide-react"
 
 export const metadata = {
+  alternates: { canonical: "/forum" },
   title: "Community Forum",
   description: "The Intel Analyst Academy community forum is under development.",
 }

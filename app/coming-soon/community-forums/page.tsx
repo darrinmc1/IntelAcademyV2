@@ -11,6 +11,9 @@ import { Image } from "@/components/image"
 import { forumCategories } from "@/data/forum-categories"
 import { ForumCategoryCard } from "@/components/forum-category-card"
 
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata = pageMetadata("/coming-soon/community-forums", "Community forums", "Community forums are not open yet.")
 export default function CommunityForumsPage() {
   // Select a subset of categories to feature
   const featuredCategories = forumCategories.slice(0, 6)

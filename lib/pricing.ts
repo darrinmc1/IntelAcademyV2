@@ -23,16 +23,13 @@ export const SUPPORT_EMAIL = "info@theintelanalystacademy.com"
 export const DISCLAIMER =
   "Academy Brief is a training and education tool. It is not an operational intelligence product, does not constitute finished intelligence, and must not be used as a substitute for authorized analysis."
 
-export const CHECKOUT_STATUS =
-  "Checkout isn't live yet. Join the waitlist — no card required today."
+export const CHECKOUT_STATUS = "Coming soon. Join the list."
 
-export const REFUND_POLICY =
-  "7-day money-back on paid plans when checkout is live. Nothing to refund today — the register is still in the evidence locker."
+export const REFUND_POLICY = "Payments are not set up. There is nothing to charge or refund."
 
 export const PRICE_MAP_LABEL = "Written lessons are free. Video is coming soon."
 
-export const PRICE_MAP_DETAIL =
-  "Written lessons stay free. Video is included on the video plan — checkout isn't live, so that's a waitlist, not a buy button. No leftover Explorer / Analyst / Professional / Enterprise SKUs."
+export const PRICE_MAP_DETAIL = "Written lessons stay free. Video is coming soon."
 
 export type PlanId = "free" | "early" | "normal" | "video"
 
@@ -74,8 +71,7 @@ export const plans: Plan[] = [
     userPlan: "early",
     name: "Early",
     blurb: "Waitlist / early — written only, no video",
-    description:
-      "Waitlist / early for people who already signed up. Written lessons only. No video. Checkout isn't live.",
+    description: "Waitlist / early for people who already signed up. Written lessons only. No video.",
     includesVideo: false,
     includesAcademyBrief: true,
     briefAllowance: "Academy Brief included as a tool (when billing is live)",
@@ -94,7 +90,7 @@ export const plans: Plan[] = [
     userPlan: "pro",
     name: "Written",
     blurb: "Written only, no video",
-    description: "Written lessons only. No video. Not a video plan. Checkout isn't live.",
+    description: "Written lessons only. No video. Not a video plan.",
     includesVideo: false,
     includesAcademyBrief: true,
     briefAllowance: "Academy Brief included as a tool (when billing is live)",
@@ -109,8 +105,7 @@ export const plans: Plan[] = [
     userPlan: "video",
     name: "Video",
     blurb: "Written + video — coming soon",
-    description:
-      "Written lessons plus course video. Not a PDF or book. Checkout isn't live — join the waitlist.",
+    description: "Written lessons plus course video. Coming soon.",
     includesVideo: true,
     includesAcademyBrief: true,
     briefAllowance: "Academy Brief included as a tool (when billing is live)",
@@ -124,7 +119,6 @@ export const plans: Plan[] = [
 
 export function getParseablePricing() {
   return {
-    currency: "USD",
     map: PRICE_MAP_LABEL,
     detail: PRICE_MAP_DETAIL,
     labels: {

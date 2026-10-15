@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Identifying Long-Term Threats and Opportunities | The Intel Analyst Academy",
+  alternates: { canonical: "/topics/long-term-threats" },
+  title: "Identifying Long-Term Threats and Opportunities",
   description:
     "Tell drivers from headlines, scan a horizon without pretending to own a crystal ball, and write a long-range threat and opportunity assessment a planner can use.",
 }
