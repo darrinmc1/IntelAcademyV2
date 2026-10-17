@@ -11,69 +11,25 @@ import {
   validateDump,
 } from "@/lib/academy-brief"
 import { citeableLessons, matchLessons } from "@/lib/citeable-lessons"
-
-const GEMINI_API_KEY = process.env.GOOGLE_API_KEY
-const N8N_WEBHOOK = process.env.N8N_AI_WEBHOOK_URL
-const GEMINI_URL =
-  "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
+import { aiConfigured, extractJson, generateText } from "@/lib/ai/llm"
 
 function json(data: BriefResponse, status = 200) {
   return NextResponse.json(data, { status })
-}
-
-function extractJson(text: string): unknown {
-  const trimmed = text.trim()
-  const fenced = trimmed.match(/```(?:json)?\s*([\s\S]*?)```/)
-  const raw = fenced ? fenced[1] : trimmed
-  const start = raw.indexOf("{")
-  const end = raw.lastIndexOf("}")
-  if (start === -1 || end === -1 || end <= start) return null
-  try {
-    return JSON.parse(raw.slice(start, end + 1))
-  } catch {
-    return null
-  }
 }
 
 async function generateLive(dump: string): Promise<string | null> {
   const lessons = matchLessons(dump, 12)
   const catalog = lessons.length ? lessons : citeableLessons.slice(0, 12)
   const prompt = buildPrompt(dump, catalog)
-
-  if (N8N_WEBHOOK) {
-    const res = await fetch(N8N_WEBHOOK, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        tool: "academy-brief",
-        model: "free",
-        docName: "Academy Brief",
-        prompt,
-      }),
-    })
-    if (!res.ok) return null
-    const data = await res.json()
-    return typeof data?.draft === "string" ? data.draft : null
-  }
-
-  const res = await fetch(`${GEMINI_URL}?key=${GEMINI_API_KEY}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: {
-        temperature: 0.3,
-        maxOutputTokens: 4096,
-        responseMimeType: "application/json",
-      },
-    }),
+  // Shared provider helper: OpenRouter, Gemini or the n8n gateway — whichever is configured.
+  return generateText({
+    tool: "academy-brief",
+    system: "You are a training coach at The Intel Analyst Academy. Follow the instructions in the user message exactly and return JSON only.",
+    messages: [{ role: "user", content: prompt }],
+    json: true,
+    temperature: 0.3,
+    maxTokens: 4096,
   })
-  if (!res.ok) {
-    console.error("Gemini API error:", res.status, await res.text())
-    return null
-  }
-  const data = await res.json()
-  return data?.candidates?.[0]?.content?.parts?.[0]?.text ?? null
 }
 
 export async function POST(req: NextRequest) {
@@ -96,7 +52,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Dump is too long." }, { status: 400 })
   }
 
-  if (!GEMINI_API_KEY && !N8N_WEBHOOK) {
+  if (!aiConfigured()) {
     return json({
       brief: buildTrainingPreview(checked.dump),
       mode: "training-preview",

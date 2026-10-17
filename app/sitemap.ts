@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next"
 import { learningPaths } from "@/data/learning-paths"
+import { exercises } from "@/data/exercises"
 
 const BASE_URL = "https://www.intelanalystacademy.com"
 
@@ -18,6 +19,8 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/search`,         priority: 0.4, changeFrequency: "monthly" },
   { url: `${BASE_URL}/tools`,          priority: 0.8, changeFrequency: "weekly"  },
   { url: `${BASE_URL}/tools/academy-brief`, priority: 0.9, changeFrequency: "weekly" },
+  { url: `${BASE_URL}/exercises`,      priority: 0.9, changeFrequency: "weekly"  },
+  { url: `${BASE_URL}/instructor`,     priority: 0.8, changeFrequency: "monthly" },
   { url: `${BASE_URL}/pricing`,        priority: 0.8, changeFrequency: "weekly"  },
   { url: `${BASE_URL}/faq`,            priority: 0.7, changeFrequency: "weekly"  },
   { url: `${BASE_URL}/llm.txt`,        priority: 0.8, changeFrequency: "weekly"  },
@@ -87,5 +90,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }))
 
-  return [...STATIC_PAGES, ...learningPathPages, ...learningPathDownloads, ...topicPages, ...downloadPages]
+  const exercisePages: MetadataRoute.Sitemap = exercises.map((e) => ({
+    url: `${BASE_URL}/exercises/${e.slug}`,
+    priority: 0.8,
+    changeFrequency: "monthly" as const,
+  }))
+
+  return [...STATIC_PAGES, ...exercisePages, ...learningPathPages, ...learningPathDownloads, ...topicPages, ...downloadPages]
 }
