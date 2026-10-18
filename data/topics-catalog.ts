@@ -2,6 +2,21 @@ import { lessonReadMinutes, lessonSlugFromHref } from "@/lib/read-time"
 
 export const topics = [
   {
+    title: "Denial and Deception: Spotting Indicators of Manipulation",
+    description: "Learn to separate denial from deception, spot signs that reporting has been shaped, and test a deception hypothesis without becoming paranoid.",
+    image: "/denial-and-deception-spotting-indicators-of-manipulation.webp",
+    href: "/topics/denial-and-deception-spotting-indicators-of-manipulation",
+    category: "Analytical Tradecraft",
+    estimatedTime: "7 min",
+    completed: false,
+    dateAdded: "2026-10-19",
+    learningObjectives: [
+      "Distinguish denial from deception and know what each leaves behind",
+      "Recognise indicators that reporting has been shaped for your benefit",
+      "Add a deception hypothesis to your analysis and test it with diagnostic evidence",
+    ],
+  },
+  {
     title: "Strategic Risk Assessment for Analysts",
     description: "Build a strategic risk assessment a decision-maker can act on, with scoped scenarios, defined ratings, stated confidence and review triggers.",
     image: "/strategic-risk-assessment-for-analysts.png",
