@@ -11,11 +11,9 @@ import {
   validateDump,
 } from "@/lib/academy-brief"
 import { citeableLessons, matchLessons } from "@/lib/citeable-lessons"
+import { callGemini, geminiApiKey } from "@/lib/gemini"
 
-const GEMINI_API_KEY = process.env.GOOGLE_API_KEY
 const N8N_WEBHOOK = process.env.N8N_AI_WEBHOOK_URL
-const GEMINI_URL =
-  "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
 
 function json(data: BriefResponse, status = 200) {
   return NextResponse.json(data, { status })
@@ -56,24 +54,20 @@ async function generateLive(dump: string): Promise<string | null> {
     return typeof data?.draft === "string" ? data.draft : null
   }
 
-  const res = await fetch(`${GEMINI_URL}?key=${GEMINI_API_KEY}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: {
-        temperature: 0.3,
-        maxOutputTokens: 4096,
-        responseMimeType: "application/json",
-      },
-    }),
+  const apiKey = geminiApiKey()
+  if (!apiKey) return null
+
+  const result = await callGemini(apiKey, {
+    prompt,
+    temperature: 0.3,
+    maxOutputTokens: 8192,
+    json: true,
   })
-  if (!res.ok) {
-    console.error("Gemini API error:", res.status, await res.text())
+  if (!result.ok) {
+    if (!result.empty) console.error("Gemini API error:", result.status, result.detail)
     return null
   }
-  const data = await res.json()
-  return data?.candidates?.[0]?.content?.parts?.[0]?.text ?? null
+  return result.text
 }
 
 export async function POST(req: NextRequest) {
@@ -96,7 +90,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Dump is too long." }, { status: 400 })
   }
 
-  if (!GEMINI_API_KEY && !N8N_WEBHOOK) {
+  if (!geminiApiKey() && !N8N_WEBHOOK) {
     return json({
       brief: buildTrainingPreview(checked.dump),
       mode: "training-preview",
