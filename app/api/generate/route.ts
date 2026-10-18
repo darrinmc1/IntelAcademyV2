@@ -97,9 +97,9 @@ Generate the ${toolName} in full. Use concrete detail where provided and profess
       thinkingBudget: 0,
     })
 
-    if (!result.ok) {
-      if (!result.empty) console.error("Gemini API error:", result.status, result.detail)
-      if (result.empty) {
+    if (result.ok === false) {
+      if (result.empty !== true) console.error("Gemini API error:", result.status, result.detail)
+      if (result.empty === true) {
         return NextResponse.json(
           { error: "AI returned an empty response. Try rephrasing your answers." },
           { status: 502 },

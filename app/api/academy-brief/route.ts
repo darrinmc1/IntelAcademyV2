@@ -63,8 +63,8 @@ async function generateLive(dump: string): Promise<string | null> {
     maxOutputTokens: 8192,
     json: true,
   })
-  if (!result.ok) {
-    if (!result.empty) console.error("Gemini API error:", result.status, result.detail)
+  if (result.ok === false) {
+    if (result.empty !== true) console.error("Gemini API error:", result.status, result.detail)
     return null
   }
   return result.text
