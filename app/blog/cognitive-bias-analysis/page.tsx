@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Cognitive Bias in Intelligence Analysis: Recognition and Mitigation | Intel Analyst Academy",
+  alternates: { canonical: "/blog/cognitive-bias-analysis" },
+  title: "Cognitive Bias in Intelligence Analysis: Recognition and Mitigation",
   description: "A practical guide to recognizing and mitigating cognitive biases in intelligence analysis - confirmation bias, anchoring, availability, groupthink, and more.",
 }
 

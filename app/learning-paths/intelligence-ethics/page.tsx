@@ -2,7 +2,8 @@ import type { Metadata } from "next"
 import { LearningPathTemplate } from "@/components/learning-path-template"
 
 export const metadata: Metadata = {
-  title: "Intelligence Ethics & Legal Framework | The Intel Analyst Academy",
+  alternates: { canonical: "/learning-paths/intelligence-ethics" },
+  title: "Intelligence Ethics & Legal Framework",
   description: "Ethical considerations and legal boundaries in intelligence work",
 }
 

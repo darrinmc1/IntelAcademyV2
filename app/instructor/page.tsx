@@ -5,6 +5,7 @@ import { InstructorChat } from "@/components/instructor/instructor-chat"
 import { PracticeGenerator } from "@/components/instructor/practice-generator"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/instructor" },
   title: "The Chief — AI Intelligence Instructor",
   description:
     "An AI instructor for intelligence analysis: explains techniques, questions your reasoning, evaluates your assessments, points you to the right lessons and writes fresh practice exercises.",

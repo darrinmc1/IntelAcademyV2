@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "HUMINT Interview Techniques: A Practical Guide | Intel Analyst Academy",
+  alternates: { canonical: "/blog/humint-interview-techniques" },
+  title: "HUMINT Interview Techniques: A Practical Guide",
   description: "Human intelligence interview techniques covering rapport building, question formulation, elicitation, source management, and analytical interviewing methods.",
 }
 

@@ -6,6 +6,7 @@ import { ExerciseStatus } from "@/components/exercises/exercise-status"
 import { exerciseCards } from "@/data/exercises"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/exercises" },
   title: "Practical Intelligence Exercises",
   description:
     "Work a fictional brief pack end to end: grade the sources, find the intelligence gaps, test competing hypotheses and write the assessment — then get marked against an expert answer key, with critique from The Chief.",

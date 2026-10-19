@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Matching Sources to Requirements | The Intel Analyst Academy",
+  alternates: { canonical: "/topics/matching-sources-to-requirements" },
+  title: "Matching Sources to Requirements",
   description:
     "Choose collection disciplines against the question you actually have, see single-source risk early, and stop tasking the wrong INT because it is the one you own.",
 }

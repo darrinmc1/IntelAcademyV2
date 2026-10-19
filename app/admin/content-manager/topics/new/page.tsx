@@ -4,7 +4,8 @@ import { ChevronLeft } from "lucide-react"
 import { TopicEditor } from "../topic-editor"
 
 export const metadata: Metadata = {
-  title: "Create New Topic - Intel Analyst Academy",
+  alternates: { canonical: "/admin/content-manager/topics/new" },
+  title: "Create New Topic",
   description: "Create a new topic for the Intel Analyst Academy",
 }
 

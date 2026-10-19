@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import EnhancedLessonContentLoader from "@/components/enhanced-lesson-content-loader"
 
 export const metadata: Metadata = {
-  title: "Intelligence Requirements Development | The Intel Analyst Academy",
+  alternates: { canonical: "/topics/intelligence-requirements" },
+  title: "Intelligence Requirements Development",
   description: "Learn how to identify and prioritize intelligence needs to guide collection efforts.",
 }
 

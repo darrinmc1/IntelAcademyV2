@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "What is Crime Series Analysis? - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/what-is-crime-series-analysis" },
+  title: "What is Crime Series Analysis?",
   description: "An introduction to the fundamentals of crime series analysis and its importance in law enforcement.",
 }
 

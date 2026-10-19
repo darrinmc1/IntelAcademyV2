@@ -1,7 +1,8 @@
 import { CategoryPageTemplate } from "@/components/category-page-template"
 
 export const metadata = {
-  title: "Intelligence Collection Methods | The Intel Analyst Academy",
+  alternates: { canonical: "/categories/collection-methods" },
+  title: "Intelligence Collection Methods",
   description: "Learn various methods for collecting intelligence from different sources",
 }
 

@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Privacy Civil Liberties - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/privacy-civil-liberties" },
+  title: "Privacy Civil Liberties",
   description: "Understanding the complex balance between intelligence collection needs and the protection of privacy rights and civil liberties in democratic societies.",
 }
 

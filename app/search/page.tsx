@@ -6,6 +6,9 @@ import { Skeleton } from "@/components/ui/skeleton"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
 
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata = pageMetadata("/search", "Search", "Search the lesson catalog and learning paths.")
 interface SearchPageProps {
   searchParams: Promise<{ q?: string }>
 }

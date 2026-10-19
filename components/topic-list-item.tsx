@@ -9,9 +9,12 @@ interface TopicListItemProps {
   icon?: string
   category: string
   description?: string
+  comingSoon?: boolean
+  href?: string
 }
 
-export function TopicListItem({ title, readTime, slug, icon, category, description }: TopicListItemProps) {
+export function TopicListItem({ title, readTime, slug, icon, category, description, comingSoon = false, href }: TopicListItemProps) {
+  const destination = href ?? `/topics/${slug}`
   return (
     <div className="group flex items-start gap-4 p-5 border-b hover:bg-muted/30 transition-colors rounded-lg hover:shadow-md">
       <div className="relative h-20 w-20 overflow-hidden rounded-md flex-shrink-0 bg-gradient-to-br from-slate-800 to-slate-950 group-hover:scale-105 transition-transform duration-300">
@@ -29,7 +32,11 @@ export function TopicListItem({ title, readTime, slug, icon, category, descripti
               {category}
             </div>
           </div>
-          <LetsGoButton href={`/topics/${slug}`} size="sm">Start</LetsGoButton>
+          {comingSoon ? (
+            <span className="text-sm font-medium text-slate-400">Coming soon</span>
+          ) : (
+            <LetsGoButton href={destination} size="sm">Start</LetsGoButton>
+          )}
         </div>
         {description && <p className="text-sm text-muted-foreground mb-2 line-clamp-2">{description}</p>}
         <div className="flex items-center gap-4 text-sm text-muted-foreground">

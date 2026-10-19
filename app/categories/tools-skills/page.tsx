@@ -1,7 +1,8 @@
 import { CategoryPageTemplate } from "@/components/category-page-template"
 
 export const metadata = {
-  title: "Tools & Skills | The Intel Analyst Academy",
+  alternates: { canonical: "/categories/tools-skills" },
+  title: "Tools & Skills",
   description: "Master essential tools and skills for intelligence analysis",
 }
 

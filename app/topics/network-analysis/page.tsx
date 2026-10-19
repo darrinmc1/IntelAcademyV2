@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Network Analysis - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/network-analysis" },
+  title: "Network Analysis",
   description: "Learn about network analysis in intelligence analysis.",
 }
 

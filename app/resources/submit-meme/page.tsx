@@ -5,7 +5,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { InfoIcon as InfoCircle, Upload, AlertTriangle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Submit Intelligence Meme | The Intel Analyst Academy",
+  alternates: { canonical: "/resources/submit-meme" },
+  title: "Submit Intelligence Meme",
   description: "Submit your intelligence analysis memes to our gallery",
 }
 

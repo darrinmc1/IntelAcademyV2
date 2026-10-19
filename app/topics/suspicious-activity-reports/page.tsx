@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Suspicious Activity Reports - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/suspicious-activity-reports" },
+  title: "Suspicious Activity Reports",
   description:
     "How analysts use suspicious activity reports and financial intelligence unit reporting: what a filing is, how red flags cluster, and what a SAR does not prove.",
 }

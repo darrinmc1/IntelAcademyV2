@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Intelligence Failures - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/intelligence-failures" },
+  title: "Intelligence Failures",
   description: "Examine historical intelligence failures, their causes, and lessons learned to improve future analysis.",
 }
 

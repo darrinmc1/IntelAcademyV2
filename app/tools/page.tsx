@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
+  alternates: { canonical: "/tools" },
   title: 'Analyst Tools',
   description: 'Practice tools for intelligence analysts: practical exercises, an AI instructor and the Academy Brief.',
 };

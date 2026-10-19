@@ -14,6 +14,9 @@ import { StaticImage } from "@/components/static-image"
 import { TopicWhereNext } from "@/components/topic-where-next"
 import { LearningFormats } from "@/components/learning-formats"
 
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata = pageMetadata("/learning-paths/report-writing", "Intelligence report writing", "How to write an intelligence report someone can act on.")
 export default function ReportWritingPath() {
   return (
     <div className="container mx-auto px-4 py-8">

@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "What Is Tactical Intelligence? - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/what-is-tactical-intelligence" },
+  title: "What Is Tactical Intelligence?",
   description:
     "Understand the fundamentals of tactical intelligence: its timeframes, products, and how analysts deliver answers when the timeline is measured in minutes, not months.",
 }

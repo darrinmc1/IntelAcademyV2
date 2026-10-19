@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Strategic Forecasting - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/strategic-forecasting" },
+  title: "Strategic Forecasting",
   description: "Learn methods and techniques for long-term intelligence forecasting to anticipate future threats and opportunities.",
 }
 

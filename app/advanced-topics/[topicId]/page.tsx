@@ -26,13 +26,14 @@ export async function generateMetadata({ params }: AdvancedTopicPageProps): Prom
 
   if (!topic) {
     return {
-      title: "Topic Not Found | The Intel Analyst Academy",
+      title: "Topic Not Found",
     }
   }
 
   return {
-    title: `${topic.title} | Advanced Topics | The Intel Analyst Academy`,
+    title: `${topic.title} | Advanced Topics`,
     description: topic.description,
+    alternates: { canonical: `/advanced-topics/${topicId}` },
   }
 }
 
@@ -347,7 +348,7 @@ function getTopicContent(topicId: string) {
         { title: "Social Network Analysis", path: "/advanced-topics/social-network-analysis" },
         { title: "Network Analysis", path: "/learning-paths/network-analysis" },
         { title: "Target Profiling", path: "/learning-paths/target-profiling" },
-        { title: "Link Analysis Charts", path: "/topics/tactical-link-charts" },
+        { title: "Link Analysis Charts", path: "/topics/entity-relationship-charts" },
       ],
     },
     "deep-web-research": {
@@ -518,7 +519,7 @@ function getTopicContent(topicId: string) {
       ],
       relatedTopics: [
         { title: "Network Analysis Basics", path: "/learning-paths/network-analysis" },
-        { title: "Link Analysis Charts", path: "/topics/tactical-link-charts" },
+        { title: "Link Analysis Charts", path: "/topics/entity-relationship-charts" },
         { title: "Network Disruption", path: "/advanced-topics/network-disruption" },
         { title: "Target Profiling", path: "/learning-paths/target-profiling" },
         { title: "Intelligence Tools", path: "/learning-paths/intelligence-tools" },

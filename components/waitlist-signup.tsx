@@ -3,7 +3,15 @@
 import { useState } from "react"
 import { HoneypotField } from "@/components/HoneypotField"
 
-export function WaitlistSignup({ source = "waitlist" }: { source?: string }) {
+export function WaitlistSignup({
+  source = "waitlist",
+  buttonLabel = "Join the waitlist",
+  successMessage = "You're on the list.",
+}: {
+  source?: string
+  buttonLabel?: string
+  successMessage?: string
+}) {
   const [email, setEmail] = useState("")
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState("")
@@ -40,7 +48,7 @@ export function WaitlistSignup({ source = "waitlist" }: { source?: string }) {
   if (submitted) {
     return (
       <p className="rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-4 py-3 text-sm text-cyan-100">
-        You&apos;re on the waitlist. No card charged — checkout still isn&apos;t live.
+        {successMessage}
       </p>
     )
   }
@@ -62,7 +70,7 @@ export function WaitlistSignup({ source = "waitlist" }: { source?: string }) {
         disabled={loading}
         className="rounded-lg bg-cyan-600 px-5 py-3 text-sm font-semibold text-white hover:bg-cyan-500 disabled:opacity-60"
       >
-        {loading ? "Joining…" : "Join the waitlist"}
+        {loading ? "Joining…" : buttonLabel}
       </button>
       {error ? <p className="text-sm text-amber-300 sm:col-span-2">{error}</p> : null}
     </form>

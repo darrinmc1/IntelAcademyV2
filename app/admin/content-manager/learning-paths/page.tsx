@@ -4,7 +4,8 @@ import { ChevronLeft, Edit, Eye, Plus } from "lucide-react"
 import { getAvailablePages } from "@/app/actions/content-manager-client"
 
 export const metadata: Metadata = {
-  title: "Learning Paths Content Manager - Intel Analyst Academy",
+  alternates: { canonical: "/admin/content-manager/learning-paths" },
+  title: "Learning Paths Content Manager",
   description: "Manage and edit learning path content for the Intel Analyst Academy",
 }
 

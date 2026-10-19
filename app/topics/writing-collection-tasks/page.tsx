@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Writing Collection Tasks | The Intel Analyst Academy",
+  alternates: { canonical: "/topics/writing-collection-tasks" },
+  title: "Writing Collection Tasks",
   description:
     "Turn a requirement into a task a collector can execute: question, scope, time window, return format, and the constraints that keep the work lawful.",
 }

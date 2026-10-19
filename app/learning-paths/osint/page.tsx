@@ -15,7 +15,8 @@ import { TopicWhereNext } from "@/components/topic-where-next"
 import { TopicCardWithImage } from "@/components/topic-card-with-image"
 
 export const metadata: Metadata = {
-  title: "OSINT Learning Path | The Intel Analyst Academy",
+  alternates: { canonical: "/learning-paths/osint" },
+  title: "OSINT Learning Path",
   description:
     "Open-source intelligence for analysts: what it is, how the work is sequenced, and the techniques that keep a search from becoming a rumour with bookmarks.",
 }

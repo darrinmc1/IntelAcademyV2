@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Strategic Intelligence Products: Bridging the Gap Between Information and Action - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/strategic-intelligence-products-bridging-the-gap-between-information-and-action" },
+  title: "Strategic Intelligence Products: Bridging the Gap Between Information and Action",
   description: "Explore the critical role of strategic intelligence products in transforming raw information into actionable insights for decision-makers.",
 }
 

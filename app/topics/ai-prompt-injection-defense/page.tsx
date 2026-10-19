@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "AI Prompt Injection Defense - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/ai-prompt-injection-defense" },
+  title: "AI Prompt Injection Defense",
   description: "Learn to identify and defend against prompt injection attacks targeting AI models, protecting your systems and data.",
 }
 

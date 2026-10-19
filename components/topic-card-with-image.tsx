@@ -15,6 +15,7 @@ interface TopicCardWithImageProps {
   path?: string
   href?: string
   alt?: string
+  comingSoon?: boolean
 }
 
 export function TopicCardWithImage({
@@ -25,6 +26,7 @@ export function TopicCardWithImage({
   imageSrc,
   path,
   href,
+  comingSoon = false,
 }: TopicCardWithImageProps) {
   // Check if image sources are empty strings and convert to null
   const imageSource = image && image !== "" ? image : imageSrc && imageSrc !== "" ? imageSrc : null
@@ -63,9 +65,13 @@ export function TopicCardWithImage({
         )}
       </CardContent>
       <CardFooter>
-        <Button asChild className="w-full bg-black hover:bg-yellow-500 text-white">
-          <Link href={linkDestination}>Start Learning</Link>
-        </Button>
+        {comingSoon ? (
+          <p className="w-full text-sm font-medium text-slate-400">Coming soon</p>
+        ) : (
+          <Button asChild className="w-full bg-black hover:bg-yellow-500 text-white">
+            <Link href={linkDestination}>Start Learning</Link>
+          </Button>
+        )}
       </CardFooter>
     </Card>
   )

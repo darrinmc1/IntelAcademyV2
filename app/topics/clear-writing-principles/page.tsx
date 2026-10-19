@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Clear Writing Principles - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/clear-writing-principles" },
+  title: "Clear Writing Principles",
   description: "Master the principles of clear, effective writing for intelligence reports including active voice, plain language, and sentence surgery techniques.",
 }
 

@@ -7,7 +7,8 @@ import {
 } from "@/components/ui/breadcrumb"
 
 export const metadata = {
-  title: "Privacy Policy | The Intel Analyst Academy",
+  alternates: { canonical: "/privacy" },
+  title: "Privacy Policy",
   description: "Privacy policy for The Intel Analyst Academy website",
 }
 

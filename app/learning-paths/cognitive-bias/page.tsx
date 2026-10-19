@@ -2,7 +2,8 @@ import type { Metadata } from "next"
 import { LearningPathTemplate } from "@/components/learning-path-template"
 
 export const metadata: Metadata = {
-  title: "Cognitive Bias in Intelligence | The Intel Analyst Academy",
+  alternates: { canonical: "/learning-paths/cognitive-bias" },
+  title: "Cognitive Bias in Intelligence",
   description: "Recognizing and mitigating cognitive biases in intelligence analysis",
 }
 

@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Hot Spot Analysis - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/hot-spot-analysis" },
+  title: "Hot Spot Analysis",
   description: "Learn how to identify, classify, and analyze crime hot spots using spatial statistics, temporal patterns, and repeat victimization theory.",
 }
 

@@ -56,7 +56,7 @@ describe("lesson video catalog", () => {
 
 describe("lesson video playback access", () => {
   it("uses the same video-plan lock copy as path intros, with no dollar amount", () => {
-    expect(LESSON_VIDEO_LOCK_COPY).toBe("Included on the video plan")
+    expect(LESSON_VIDEO_LOCK_COPY).toBe("Video is coming soon. Written lessons stay free.")
     expect(LESSON_VIDEO_LOCK_COPY).not.toMatch(/\$/)
   })
 

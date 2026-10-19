@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Deep Web Research for Intelligence Analysts - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/deep-web-research-for-intel-analysts" },
+  title: "Deep Web Research for Intelligence Analysts",
   description: "A comprehensive guide for intelligence analysts on how to safely and effectively research the deep web, covering tools, techniques, and ethical considerations.",
 }
 

@@ -17,6 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const exercise = getExercise(slug)
   if (!exercise) return { title: "Exercise not found" }
   return {
+    alternates: { canonical: `/exercises/${exercise.slug}` },
     title: `${exercise.title} — ${exercise.level} exercise`,
     description: exercise.summary,
   }

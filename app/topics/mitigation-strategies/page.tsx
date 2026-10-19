@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "From Threat Assessment to Mitigation Options | The Intel Analyst Academy",
+  alternates: { canonical: "/topics/mitigation-strategies" },
+  title: "From Threat Assessment to Mitigation Options",
   description:
     "Turn a finished threat assessment into options a decision-maker can accept, monitor, reduce, transfer, or avoid — without pretending the analyst owns the risk.",
 }

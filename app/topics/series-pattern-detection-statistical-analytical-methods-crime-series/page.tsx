@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Series Pattern Detection: Statistical and Analytical Methods for Identifying Crime Series - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/series-pattern-detection-statistical-analytical-methods-crime-series" },
+  title: "Series Pattern Detection: Statistical and Analytical Methods for Identifying Crime Series",
   description: "Explore statistical and analytical techniques used by intelligence analysts to detect patterns in crime series, enabling proactive intervention and resource allocation.",
 }
 

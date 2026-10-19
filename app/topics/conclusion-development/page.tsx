@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Conclusion Development - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/conclusion-development" },
+  title: "Conclusion Development",
   description: "Learn how to write strong, well-supported conclusions that synthesize your analysis and drive decision-making.",
 }
 

@@ -6,7 +6,6 @@ import {
   AlertTriangle,
   Check,
   Copy,
-  Crown,
   FileText,
   GraduationCap,
   Loader2,
@@ -17,7 +16,8 @@ import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import { Card } from "@/components/ui/card"
 import type { AcademyBrief, BriefMode, BriefResponse } from "@/lib/academy-brief"
-import { DISCLAIMER, PRICE_MAP_LABEL } from "@/lib/pricing"
+import { ComingSoonJoin } from "@/components/coming-soon-join"
+import { DISCLAIMER } from "@/lib/pricing"
 
 type Phase = "input" | "generating" | "result"
 
@@ -192,17 +192,11 @@ export function AcademyBriefForm() {
             New dump
           </Button>
         </div>
-        <div className="rounded-xl border border-amber-500/20 bg-amber-500/5 p-4 text-center">
-          <p className="text-sm font-semibold text-amber-300">That was your free Academy Brief preview.</p>
-          <p className="mt-1 text-xs text-amber-400/80">
-            Paid plans include unlimited briefs when billing is live. Checkout isn&apos;t live — join the waitlist.
-          </p>
-          <Button asChild className="mt-3" size="sm">
-            <Link href="/waitlist">
-              <Crown className="mr-1 h-4 w-4" />
-              Join the waitlist
-            </Link>
-          </Button>
+        <div className="rounded-xl border border-slate-700 bg-slate-900/40 p-4">
+          <p className="text-sm font-semibold text-slate-200">That was your free Academy Brief preview.</p>
+          <div className="mt-4">
+            <ComingSoonJoin source="pricing-coming-soon" variant="block" />
+          </div>
         </div>
       </div>
     )
@@ -225,7 +219,7 @@ export function AcademyBriefForm() {
       />
       {error ? <p className="mt-3 text-sm text-red-400">{error}</p> : null}
       <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
-        <p className="text-xs text-slate-500">Free preview: one brief. Paid access includes the tool — not a standalone SKU.</p>
+        <p className="text-xs text-slate-500">Free preview: one brief.</p>
         <Button onClick={generate} disabled={dump.trim().length < 40}>
           <Sparkles className="mr-1 h-4 w-4" />
           Build structured brief
@@ -344,22 +338,9 @@ function BriefView({
 
 function SubscribeWall() {
   return (
-    <Card className="border-slate-800 bg-slate-900/50 p-10 text-center">
-      <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-500/10">
-        <Crown className="h-8 w-8 text-amber-400" />
-      </div>
-      <h2 className="mt-6 text-2xl font-bold text-slate-50">Academy Brief is on paid plans</h2>
-      <p className="mx-auto mt-3 max-w-md text-slate-400">
-        Free tier: one structured brief. {PRICE_MAP_LABEL} Academy Brief is a tool, not a
-        standalone SKU. Checkout isn&apos;t live — join the waitlist.
-      </p>
-      <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-        <Button asChild size="lg">
-          <Link href="/waitlist">
-            <Crown className="mr-2 h-5 w-5" />
-            Join the waitlist
-          </Link>
-        </Button>
+    <Card className="border-slate-800 bg-slate-900/50 p-10">
+      <ComingSoonJoin source="pricing-coming-soon" variant="block" />
+      <div className="mt-6 text-center">
         <Button asChild variant="ghost" size="lg">
           <Link href="/topics/intelligence-report-components">
             <FileText className="mr-2 h-5 w-5" />

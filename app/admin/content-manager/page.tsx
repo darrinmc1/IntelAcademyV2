@@ -3,7 +3,8 @@ import Link from "next/link"
 import { getAvailablePages } from "@/app/actions/content-manager-client"
 
 export const metadata: Metadata = {
-  title: "Content Manager - Intel Analyst Academy",
+  alternates: { canonical: "/admin/content-manager" },
+  title: "Content Manager",
   description: "Manage and edit content for the Intel Analyst Academy",
 }
 

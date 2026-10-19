@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Evaluating Collection Plans | The Intel Analyst Academy",
+  alternates: { canonical: "/topics/evaluating-collection-plans" },
+  title: "Evaluating Collection Plans",
   description:
     "Judge a collection plan by whether it answered the decision, not by how busy the collectors looked, and retask or stop with a straight face.",
 }

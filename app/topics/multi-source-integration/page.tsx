@@ -4,7 +4,8 @@ import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Multi Source Integration - The Intel Analyst Academy",
+  alternates: { canonical: "/topics/multi-source-integration" },
+  title: "Multi Source Integration",
   description: "Learn how to fuse information from HUMINT, SIGINT, OSINT, and other disciplines into coherent, reliable intelligence assessments.",
 }
 
