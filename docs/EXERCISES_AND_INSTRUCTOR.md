@@ -5,7 +5,7 @@ Two features that move the academy from reading to doing:
 - **`/exercises`** — fictional brief packs. Students grade every report on the Admiralty scale, list intelligence gaps, build hypotheses with an ACH matrix, write a BLUF + key judgments, then get a debrief.
 - **`/instructor`** — The Chief, the academy's owl, as an AI instructor. Also available inside every exercise ("Ask The Chief"), where it can see the student's draft.
 
-Everything works with **no AI key**: marking is answer-key based and The Chief falls back to built-in notes. Adding one key switches on the written critique, live tutoring and practice-exercise generation (and Academy Brief's live mode).
+Everything works with **no AI key**: marking is answer-key based and The Chief falls back to built-in notes. Adding one key switches on the written critique, live tutoring and practice-exercise generation.
 
 ## Switching on live AI
 
@@ -19,7 +19,9 @@ Set **one** of these in Vercel → `intel-academy-v2` → Settings → Environme
 
 Optional: `AI_PROVIDER` (`openrouter` / `gemini` / `n8n`) to force one when several are set; `AI_MODEL` to override the model. Defaults: `google/gemini-3.5-flash-lite` (OpenRouter) and `gemini-3.5-flash-lite` (Gemini) — Google's recommendation for new projects after Gemini 2.0 Flash was retired on 1 June 2026.
 
-All provider code lives in `lib/ai/llm.ts`. Every caller treats a `null` result as "fall back", so a bad key or an outage degrades to the no-AI path rather than an error page.
+Provider code for the exercises and The Chief lives in `lib/ai/llm.ts`. Every caller treats a `null` result as "fall back", so a bad key or an outage degrades to the no-AI path rather than an error page.
+
+Academy Brief and `/api/generate` don't use `lib/ai/llm.ts`: they call Gemini through `lib/gemini.ts` (#210 — `GEMINI_MODEL`, default `gemini-2.5-flash`; key from `GOOGLE_API_KEY`, `GEMINI_API_KEY` or `GOOGLE_GEMINI_API_KEY`), or the n8n gateway when `N8N_AI_WEBHOOK_URL` is set.
 
 Rate limits (per IP, in-memory): feedback 10 / 10 min, The Chief 24 / 10 min, generated exercises 4 / 30 min. Feedback skips the model call for near-empty attempts.
 

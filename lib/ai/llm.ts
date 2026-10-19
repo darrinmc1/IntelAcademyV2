@@ -1,6 +1,7 @@
 /**
  * Provider-agnostic text generation for the academy's AI features
- * (Academy Brief, practical-exercise feedback, The Chief instructor).
+ * (practical-exercise feedback, The Chief instructor). Academy Brief and
+ * /api/generate call Gemini through lib/gemini.ts instead (#210).
  *
  * Configure ONE of these in Vercel → Settings → Environment Variables:
  *   OPENROUTER_API_KEY   — preferred (same provider as the Empire drafter)

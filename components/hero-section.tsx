@@ -17,12 +17,12 @@ export function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
             <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-1.5 mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300">
-              Intelligence analysis training · 24 paths · 100+ topics
+              24 learning paths · 100+ topics
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-md">
-              Train like a
-              <span className="block text-gradient-primary mt-2">working intelligence analyst.</span>
+              Intelligence analysis training,
+              <span className="block text-gradient-primary mt-2">from beginner to professional.</span>
             </h1>
 
             <p className="text-lg md:text-xl mb-8 text-slate-300 leading-relaxed">

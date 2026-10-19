@@ -1,9 +1,7 @@
 import { NextRequest, NextResponse } from "next/server"
+import { callGemini, geminiApiKey } from "@/lib/gemini"
 
-const GEMINI_API_KEY = process.env.GOOGLE_API_KEY
 const N8N_WEBHOOK = process.env.N8N_AI_WEBHOOK_URL
-const GEMINI_URL =
-  "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
 
 const SYSTEM_PROMPTS: Record<string, string> = {
   "intelligence-report":
@@ -15,7 +13,8 @@ const SYSTEM_PROMPTS: Record<string, string> = {
 }
 
 export async function POST(req: NextRequest) {
-  if (!GEMINI_API_KEY) {
+  const apiKey = geminiApiKey()
+  if (!apiKey) {
     return NextResponse.json(
       { error: "AI generation is not configured yet. Drop a Gemini API key in GOOGLE_API_KEY to enable it." },
       { status: 500 },
@@ -89,39 +88,30 @@ Generate the ${toolName} in full. Use concrete detail where provided and profess
       return NextResponse.json({ draft: text })
     }
 
-    // Fallback: call Gemini directly
-    const res = await fetch(`${GEMINI_URL}?key=${GEMINI_API_KEY}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: {
-          temperature: 0.7,
-          maxOutputTokens: 4096,
-        },
-      }),
+    // Fallback: call Gemini directly. Thinking is off so the draft is not
+    // eaten by the model's hidden reasoning budget.
+    const result = await callGemini(apiKey, {
+      prompt,
+      temperature: 0.7,
+      maxOutputTokens: 8192,
+      thinkingBudget: 0,
     })
 
-    if (!res.ok) {
-      const err = await res.text()
-      console.error("Gemini API error:", res.status, err)
+    if (result.ok === false) {
+      if (result.empty !== true) console.error("Gemini API error:", result.status, result.detail)
+      if (result.empty === true) {
+        return NextResponse.json(
+          { error: "AI returned an empty response. Try rephrasing your answers." },
+          { status: 502 },
+        )
+      }
       return NextResponse.json(
-        { error: `AI generation failed (${res.status}). Please try again.` },
+        { error: `AI generation failed (${result.status}). Please try again.` },
         { status: 502 },
       )
     }
 
-    const data = await res.json()
-    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text
-
-    if (!text) {
-      return NextResponse.json(
-        { error: "AI returned an empty response. Try rephrasing your answers." },
-        { status: 502 },
-      )
-    }
-
-    return NextResponse.json({ draft: text })
+    return NextResponse.json({ draft: result.text })
   } catch (err) {
     console.error("Gemini API call failed:", err)
     return NextResponse.json(

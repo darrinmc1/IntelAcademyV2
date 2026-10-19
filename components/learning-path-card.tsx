@@ -40,13 +40,13 @@ export function LearningPathCard({
   const getBadgeVariant = () => {
     switch (difficulty) {
       case "Beginner":
-        return "bg-emerald-500/10 text-emerald-400 border-emerald-500/20 hover:bg-emerald-500/20 shadow-[0_0_10px_rgba(16,185,129,0.1)]"
+        return "rounded-sm bg-emerald-500/10 text-emerald-300 border-emerald-500/30 shadow-none"
       case "Intermediate":
-        return "bg-blue-500/10 text-blue-400 border-blue-500/20 hover:bg-blue-500/20 shadow-[0_0_10px_rgba(59,130,246,0.1)]"
+        return "rounded-sm bg-blue-500/10 text-blue-300 border-blue-500/30 shadow-none"
       case "Advanced":
-        return "bg-purple-500/10 text-purple-400 border-purple-500/20 hover:bg-purple-500/20 shadow-[0_0_10px_rgba(168,85,247,0.1)]"
+        return "rounded-sm bg-purple-500/10 text-purple-300 border-purple-500/30 shadow-none"
       default:
-        return "bg-slate-500/10 text-slate-400 border-slate-500/20 hover:bg-slate-500/20"
+        return "rounded-sm bg-slate-500/10 text-slate-300 border-slate-500/30 shadow-none"
     }
   }
 
@@ -79,13 +79,13 @@ export function LearningPathCard({
           <div className="flex flex-wrap gap-2 mt-auto">
             <Badge
               variant="outline"
-              className={`${getBadgeVariant()} transition-colors duration-300 font-medium tracking-wide`}
+              className={`${getBadgeVariant()} pointer-events-none font-medium tracking-wide`}
             >
               {difficulty}
             </Badge>
             <Badge
               variant="outline"
-              className="bg-white/5 text-slate-300 border-white/10 hover:bg-white/10 hover:text-white transition-colors duration-300 font-medium tracking-wide"
+              className="pointer-events-none rounded-sm bg-white/5 text-slate-400 border-white/10 font-medium tracking-wide"
             >
               {estimatedTime}
             </Badge>

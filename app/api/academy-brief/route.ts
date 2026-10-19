@@ -11,7 +11,10 @@ import {
   validateDump,
 } from "@/lib/academy-brief"
 import { citeableLessons, matchLessons } from "@/lib/citeable-lessons"
-import { aiConfigured, extractJson, generateText } from "@/lib/ai/llm"
+import { extractJson } from "@/lib/ai/llm"
+import { callGemini, geminiApiKey } from "@/lib/gemini"
+
+const N8N_WEBHOOK = process.env.N8N_AI_WEBHOOK_URL
 
 function json(data: BriefResponse, status = 200) {
   return NextResponse.json(data, { status })
@@ -21,15 +24,37 @@ async function generateLive(dump: string): Promise<string | null> {
   const lessons = matchLessons(dump, 12)
   const catalog = lessons.length ? lessons : citeableLessons.slice(0, 12)
   const prompt = buildPrompt(dump, catalog)
-  // Shared provider helper: OpenRouter, Gemini or the n8n gateway — whichever is configured.
-  return generateText({
-    tool: "academy-brief",
-    system: "You are a training coach at The Intel Analyst Academy. Follow the instructions in the user message exactly and return JSON only.",
-    messages: [{ role: "user", content: prompt }],
-    json: true,
+
+  if (N8N_WEBHOOK) {
+    const res = await fetch(N8N_WEBHOOK, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        tool: "academy-brief",
+        model: "free",
+        docName: "Academy Brief",
+        prompt,
+      }),
+    })
+    if (!res.ok) return null
+    const data = await res.json()
+    return typeof data?.draft === "string" ? data.draft : null
+  }
+
+  const apiKey = geminiApiKey()
+  if (!apiKey) return null
+
+  const result = await callGemini(apiKey, {
+    prompt,
     temperature: 0.3,
-    maxTokens: 4096,
+    maxOutputTokens: 8192,
+    json: true,
   })
+  if (result.ok === false) {
+    if (result.empty !== true) console.error("Gemini API error:", result.status, result.detail)
+    return null
+  }
+  return result.text
 }
 
 export async function POST(req: NextRequest) {
@@ -52,7 +77,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Dump is too long." }, { status: 400 })
   }
 
-  if (!aiConfigured()) {
+  if (!geminiApiKey() && !N8N_WEBHOOK) {
     return json({
       brief: buildTrainingPreview(checked.dump),
       mode: "training-preview",
