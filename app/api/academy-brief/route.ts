@@ -11,26 +11,13 @@ import {
   validateDump,
 } from "@/lib/academy-brief"
 import { citeableLessons, matchLessons } from "@/lib/citeable-lessons"
+import { extractJson } from "@/lib/ai/llm"
 import { callGemini, geminiApiKey } from "@/lib/gemini"
 
 const N8N_WEBHOOK = process.env.N8N_AI_WEBHOOK_URL
 
 function json(data: BriefResponse, status = 200) {
   return NextResponse.json(data, { status })
-}
-
-function extractJson(text: string): unknown {
-  const trimmed = text.trim()
-  const fenced = trimmed.match(/```(?:json)?\s*([\s\S]*?)```/)
-  const raw = fenced ? fenced[1] : trimmed
-  const start = raw.indexOf("{")
-  const end = raw.lastIndexOf("}")
-  if (start === -1 || end === -1 || end <= start) return null
-  try {
-    return JSON.parse(raw.slice(start, end + 1))
-  } catch {
-    return null
-  }
 }
 
 async function generateLive(dump: string): Promise<string | null> {
