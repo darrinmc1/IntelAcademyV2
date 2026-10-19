@@ -1,0 +1,434 @@
+{
+  "advanced-crime-series-analysis-predictive-modeling-resource-allocation": {
+    "words": 864,
+    "minutes": 4
+  },
+  "ai-prompt-injection-defense": {
+    "words": 939,
+    "minutes": 5
+  },
+  "analysis-competing-hypotheses": {
+    "words": 1158,
+    "minutes": 6
+  },
+  "analysts-notebook-fundamentals": {
+    "words": 1024,
+    "minutes": 5
+  },
+  "analytical-techniques-for-intel-analysts": {
+    "words": 730,
+    "minutes": 4
+  },
+  "behavioral-assessment": {
+    "words": 1461,
+    "minutes": 7
+  },
+  "clear-writing-principles": {
+    "words": 1038,
+    "minutes": 5
+  },
+  "cognitive-biases": {
+    "words": 1441,
+    "minutes": 7
+  },
+  "collection-planning-process-for-intel-analysts": {
+    "words": 804,
+    "minutes": 4
+  },
+  "conclusion-development": {
+    "words": 1571,
+    "minutes": 7
+  },
+  "crime-linkage-techniques": {
+    "words": 847,
+    "minutes": 4
+  },
+  "crime-trend-analysis": {
+    "words": 1947,
+    "minutes": 9
+  },
+  "cryptocurrency-tracing-for-analysts": {
+    "words": 1613,
+    "minutes": 8
+  },
+  "data-presentation": {
+    "words": 1013,
+    "minutes": 5
+  },
+  "data-visualization-intelligence": {
+    "words": 1184,
+    "minutes": 6
+  },
+  "deep-web-research-for-intel-analysts": {
+    "words": 878,
+    "minutes": 4
+  },
+  "defining-intelligence": {
+    "words": 696,
+    "minutes": 4
+  },
+  "digital-evidence-documentation": {
+    "words": 1485,
+    "minutes": 7
+  },
+  "entity-relationship-charts": {
+    "words": 1260,
+    "minutes": 6
+  },
+  "estimative-language": {
+    "words": 1002,
+    "minutes": 5
+  },
+  "ethical-decision-making": {
+    "words": 2279,
+    "minutes": 10
+  },
+  "evaluating-collection-plans": {
+    "words": 1139,
+    "minutes": 5
+  },
+  "evidence-based-conclusions": {
+    "words": 943,
+    "minutes": 5
+  },
+  "excel-fundamentals-for-analysts": {
+    "words": 922,
+    "minutes": 5
+  },
+  "executive-summaries-mastery": {
+    "words": 1729,
+    "minutes": 8
+  },
+  "financial-network-mapping": {
+    "words": 1468,
+    "minutes": 7
+  },
+  "finint-basics": {
+    "words": 1889,
+    "minutes": 9
+  },
+  "geoint-fundamentals": {
+    "words": 679,
+    "minutes": 3
+  },
+  "good-intelligence-report": {
+    "words": 1931,
+    "minutes": 9
+  },
+  "google-dorking": {
+    "words": 1220,
+    "minutes": 6
+  },
+  "hot-spot-analysis": {
+    "words": 2102,
+    "minutes": 10
+  },
+  "humint-fundamentals": {
+    "words": 2507,
+    "minutes": 11
+  },
+  "indicators-warnings": {
+    "words": 1565,
+    "minutes": 7
+  },
+  "intelligence-briefings": {
+    "words": 2102,
+    "minutes": 10
+  },
+  "intelligence-cycle": {
+    "words": 1681,
+    "minutes": 8
+  },
+  "intelligence-decision-making": {
+    "words": 956,
+    "minutes": 5
+  },
+  "intelligence-direction": {
+    "words": 2061,
+    "minutes": 9
+  },
+  "intelligence-ethics": {
+    "words": 1789,
+    "minutes": 8
+  },
+  "intelligence-failures": {
+    "words": 1698,
+    "minutes": 8
+  },
+  "intelligence-gap-analysis": {
+    "words": 1314,
+    "minutes": 6
+  },
+  "intelligence-oversight": {
+    "words": 2515,
+    "minutes": 11
+  },
+  "intelligence-processing-transforming-raw-data-into-actionable-insights": {
+    "words": 846,
+    "minutes": 4
+  },
+  "intelligence-report-components": {
+    "words": 1795,
+    "minutes": 8
+  },
+  "intelligence-report-examples": {
+    "words": 1741,
+    "minutes": 8
+  },
+  "intelligence-report-fundamentals": {
+    "words": 3876,
+    "minutes": 17
+  },
+  "intelligence-report-types": {
+    "words": 1664,
+    "minutes": 8
+  },
+  "intelligence-requirements": {
+    "words": 732,
+    "minutes": 4
+  },
+  "intelligence-types": {
+    "words": 1202,
+    "minutes": 6
+  },
+  "intelligence-vs-information": {
+    "words": 1060,
+    "minutes": 5
+  },
+  "introduction-to-link-analysis": {
+    "words": 748,
+    "minutes": 4
+  },
+  "learning-paths": {
+    "words": 715,
+    "minutes": 4
+  },
+  "legal-frameworks": {
+    "words": 1981,
+    "minutes": 9
+  },
+  "long-term-threats": {
+    "words": 1490,
+    "minutes": 7
+  },
+  "main-body-organization": {
+    "words": 1766,
+    "minutes": 8
+  },
+  "masint-explained": {
+    "words": 763,
+    "minutes": 4
+  },
+  "matching-sources-to-requirements": {
+    "words": 1349,
+    "minutes": 6
+  },
+  "mitigation-strategies": {
+    "words": 1277,
+    "minutes": 6
+  },
+  "mo-evolution": {
+    "words": 865,
+    "minutes": 4
+  },
+  "modus-operandi-analysis-techniques": {
+    "words": 901,
+    "minutes": 4
+  },
+  "money-laundering-stages": {
+    "words": 1625,
+    "minutes": 8
+  },
+  "multi-source-integration": {
+    "words": 1887,
+    "minutes": 9
+  },
+  "network-analysis": {
+    "words": 1600,
+    "minutes": 7
+  },
+  "notebook-creating-chart": {
+    "words": 812,
+    "minutes": 4
+  },
+  "notebook-example-materials": {
+    "words": 669,
+    "minutes": 3
+  },
+  "notebook-identities-labels": {
+    "words": 829,
+    "minutes": 4
+  },
+  "notebook-importing-data": {
+    "words": 723,
+    "minutes": 4
+  },
+  "notebook-social-network-analysis": {
+    "words": 747,
+    "minutes": 4
+  },
+  "operational-reports": {
+    "words": 1878,
+    "minutes": 9
+  },
+  "osint-techniques": {
+    "words": 804,
+    "minutes": 4
+  },
+  "osint-workflow": {
+    "words": 1538,
+    "minutes": 7
+  },
+  "predictive-patterning-using-historical-series-data-to-predict-future-criminal-ac": {
+    "words": 748,
+    "minutes": 4
+  },
+  "privacy-civil-liberties": {
+    "words": 2344,
+    "minutes": 11
+  },
+  "real-time-osint": {
+    "words": 1327,
+    "minutes": 6
+  },
+  "recommendation-framework": {
+    "words": 1672,
+    "minutes": 8
+  },
+  "repeat-offender-profiling-identifying-and-analyzing-patterns-of-repeat-offenders": {
+    "words": 775,
+    "minutes": 4
+  },
+  "report-writing-pitfalls": {
+    "words": 1831,
+    "minutes": 8
+  },
+  "risk-factor-indicators-for-intelligence-analysis": {
+    "words": 882,
+    "minutes": 4
+  },
+  "sanctions-counter-terrorist-financing": {
+    "words": 1511,
+    "minutes": 7
+  },
+  "series-pattern-detection-statistical-analytical-methods-crime-series": {
+    "words": 976,
+    "minutes": 5
+  },
+  "shell-companies-beneficial-ownership": {
+    "words": 1487,
+    "minutes": 7
+  },
+  "sigint-basics": {
+    "words": 2256,
+    "minutes": 10
+  },
+  "situational-awareness": {
+    "words": 1560,
+    "minutes": 7
+  },
+  "socmint-techniques": {
+    "words": 1295,
+    "minutes": 6
+  },
+  "specialized-intelligence-products": {
+    "words": 1190,
+    "minutes": 6
+  },
+  "strategic-forecasting": {
+    "words": 3141,
+    "minutes": 14
+  },
+  "strategic-intelligence-concept": {
+    "words": 2381,
+    "minutes": 11
+  },
+  "strategic-intelligence-expanding-pestle-analysis-dynamic-world": {
+    "words": 859,
+    "minutes": 4
+  },
+  "strategic-intelligence-products-bridging-the-gap-between-information-and-action": {
+    "words": 836,
+    "minutes": 4
+  },
+  "strategic-reports": {
+    "words": 1271,
+    "minutes": 6
+  },
+  "strategic-vs-tactical-analysts": {
+    "words": 1198,
+    "minutes": 6
+  },
+  "suspicious-activity-reports": {
+    "words": 1462,
+    "minutes": 7
+  },
+  "tactical-reports": {
+    "words": 1172,
+    "minutes": 6
+  },
+  "target-profiling": {
+    "words": 1655,
+    "minutes": 8
+  },
+  "target-profiling-developing-profiles-of-high-value-targets": {
+    "words": 822,
+    "minutes": 4
+  },
+  "threat-assessment-methodologies": {
+    "words": 886,
+    "minutes": 4
+  },
+  "threat-assessment-models": {
+    "words": 1493,
+    "minutes": 7
+  },
+  "threat-monitoring": {
+    "words": 1840,
+    "minutes": 8
+  },
+  "threat-prioritization": {
+    "words": 1299,
+    "minutes": 6
+  },
+  "timeline-visualization": {
+    "words": 685,
+    "minutes": 3
+  },
+  "trade-based-money-laundering": {
+    "words": 1514,
+    "minutes": 7
+  },
+  "verbal-briefing-techniques": {
+    "words": 1065,
+    "minutes": 5
+  },
+  "visual-intelligence-reporting": {
+    "words": 1257,
+    "minutes": 6
+  },
+  "what-is-crime-series-analysis": {
+    "words": 1329,
+    "minutes": 6
+  },
+  "what-is-intelligence": {
+    "words": 659,
+    "minutes": 3
+  },
+  "what-is-osint": {
+    "words": 652,
+    "minutes": 3
+  },
+  "what-is-tactical-intelligence": {
+    "words": 1196,
+    "minutes": 6
+  },
+  "what-is-threat-assessment": {
+    "words": 1447,
+    "minutes": 7
+  },
+  "writing-collection-tasks": {
+    "words": 1116,
+    "minutes": 5
+  }
+}

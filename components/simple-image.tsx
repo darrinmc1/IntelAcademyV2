@@ -19,7 +19,7 @@ export function SimpleImage({
   height,
   className,
   priority = false,
-  fallbackSrc = "/abstract-colorful-swirls.png",
+  fallbackSrc = "/advanced-analysis.png",
 }: SimpleImageProps) {
   return (
     <Image

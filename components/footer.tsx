@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="py-12 mt-auto border-t border-white/10 bg-slate-950 relative overflow-hidden z-10">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-1 bg-cyan-500/50 shadow-[0_0_30px_rgba(8,145,178,0.8)]" />
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-8">
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-6">
               <Shield className="w-8 h-8 text-cyan-400" />
@@ -49,16 +49,6 @@ export function Footer() {
               <li className="pt-2"><Link href="/privacy" className="text-sm text-slate-500 hover:text-slate-300 transition-colors duration-300">Privacy Policy</Link></li>
               <li><Link href="/terms" className="text-sm text-slate-500 hover:text-slate-300 transition-colors duration-300">Terms of Service</Link></li>
               <li><Link href="/refunds" className="text-sm text-slate-500 hover:text-slate-300 transition-colors duration-300">Refunds</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-6 text-white tracking-wide border-b border-white/10 pb-2 inline-block">Sister Networks</h3>
-            <ul className="space-y-3">
-              <li><a href="https://peelboss.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">PeelBoss</a></li>
-              <li><a href="https://freelancepro-teal.vercel.app" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">FreelancePro</a></li>
-              <li><a href="https://aiforsmb.vercel.app" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">AI for SMB</a></li>
-              <li><a href="https://abcofcyber.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">ABC of Cyber</a></li>
-              <li><a href="https://moneymastery.vercel.app" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 hover:pl-2 transition-all duration-300 font-light">Money Mastery</a></li>
             </ul>
           </div>
         </div>

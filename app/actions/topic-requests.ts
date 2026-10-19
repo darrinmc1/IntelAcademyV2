@@ -20,10 +20,12 @@ const DEFAULT_TOPIC_REQUEST_WEBHOOK_URL =
   "https://n8n.peelboss.com/webhook/empire-topic-request"
 
 /**
- * Fire-and-forget notify Empire n8n to enqueue an approved new_page lesson task.
- * Must never throw to the caller — failures are logged only.
+ * Notify Empire n8n to enqueue an approved new_page lesson task. The weekly
+ * lesson workflow publishes the oldest queued request first and emails the
+ * requester. Awaited with a short timeout (an un-awaited fetch can be dropped
+ * when a Vercel function returns). Must never throw to the caller.
  */
-function notifyTopicRequestWebhook(payload: {
+async function notifyTopicRequestWebhook(payload: {
   id: string
   topic_title: string
   description: string
@@ -48,13 +50,16 @@ function notifyTopicRequestWebhook(payload: {
     source: "intel_topic_request",
   }
 
-  void fetch(webhookUrl, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Accept: "application/json" },
-    body: JSON.stringify(body),
-  }).catch((err) => {
+  try {
+    await fetch(webhookUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(body),
+      signal: AbortSignal.timeout(5000),
+    })
+  } catch (err) {
     console.error("topic request webhook notify failed (non-fatal):", err)
-  })
+  }
 }
 
 /**
@@ -94,7 +99,7 @@ export async function submitTopicRequestAction(args: {
     })
 
     // Empire lesson queue (n8n). Failures must not fail the user-facing submit.
-    notifyTopicRequestWebhook({
+    await notifyTopicRequestWebhook({
       id,
       topic_title: args.topic_title.trim(),
       description: args.description.trim(),

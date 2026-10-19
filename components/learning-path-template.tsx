@@ -4,6 +4,7 @@ import { ChevronRight, Clock } from "lucide-react"
 import { TopicWhereNext } from "@/components/topic-where-next"
 import { DownloadPathButton } from "@/components/download-path-button"
 import { PathIntroPlayer } from "@/components/path-intro-player"
+import { lessonReadMinutes } from "@/lib/read-time"
 
 export interface LearningPathTopic {
   title: string
@@ -24,7 +25,13 @@ interface LearningPathTemplateProps {
   image?: string
 }
 
-export function PathLessonList({ topics }: { topics: LearningPathTopic[] }) {
+/** Replace hand-typed read times with the lesson's computed read time (230 wpm). */
+export function withComputedReadTimes(topics: LearningPathTopic[]): LearningPathTopic[] {
+  return topics.map((t) => ({ ...t, readTime: lessonReadMinutes(t.slug) ?? t.readTime }))
+}
+
+export function PathLessonList({ topics: rawTopics }: { topics: LearningPathTopic[] }) {
+  const topics = withComputedReadTimes(rawTopics)
   if (!topics.length) return null
 
   return (
@@ -73,7 +80,14 @@ export function LearningPathTemplate({
   level,
   duration,
 }: LearningPathTemplateProps) {
-  const meta = [level, duration].filter(Boolean).join(" · ")
+  // When every lesson on the path has a computed read time, show the real total
+  // instead of a hand-typed "6 Hours".
+  const computed = topics.map((t) => lessonReadMinutes(t.slug))
+  const totalMinutes = computed.length && computed.every((m) => typeof m === "number")
+    ? computed.reduce<number>((sum, m) => sum + (m as number), 0)
+    : undefined
+  const shownDuration = totalMinutes ? `${totalMinutes} min of reading` : duration
+  const meta = [level, shownDuration].filter(Boolean).join(" · ")
 
   return (
     <>

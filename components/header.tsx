@@ -141,6 +141,17 @@ export function Header() {
                 <Link href="/about" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">About</Link>
                 <Link href="/categories" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Categories</Link>
                 {isStaff && <Link href="/admin" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Admin</Link>}
+                {isAuthenticated ? (
+                  <>
+                    <Link href="/profile" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Profile</Link>
+                    <button type="button" onClick={() => logout()} className="text-left text-sm p-2 rounded-md hover:bg-white/5 hover:text-red-400 text-slate-300">Logout</button>
+                  </>
+                ) : (
+                  <>
+                    <Link href="/login" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Sign In</Link>
+                    <Link href="/register" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Join Early Access</Link>
+                  </>
+                )}
               </nav>
             </SheetContent>
           </Sheet>
@@ -156,7 +167,7 @@ export function Header() {
               />
             </div>
             <div className="hidden sm:flex flex-col leading-tight">
-              <span className="font-bold text-sm text-white">The Intel</span>
+              <span className="font-bold text-sm text-white">The Intel </span>
               <span className="font-bold text-sm text-white">Analyst Academy</span>
             </div>
             <span className="font-bold text-lg sm:hidden text-white">IAA</span>
@@ -249,18 +260,9 @@ export function Header() {
 
           <div className="hidden md:flex items-center gap-2">
             <HumorModeToggle compact />
-            {!authLoading && !isAuthenticated ? (
+            {isAuthenticated ? (
               <>
-                <Link href="/login" className="text-xs text-slate-400 hover:text-cyan-400 transition-colors">
-                  Login
-                </Link>
-                <Link href="/register" className="text-xs px-2 py-1 rounded-full bg-cyan-600 hover:bg-cyan-500 text-white font-medium border border-cyan-400/30">
-                  Register
-                </Link>
-              </>
-            ) : (
-              <>
-                {user && (
+                {user?.role && (
                   <span className="text-xs px-2 py-1 rounded-full bg-cyan-900/30 border border-cyan-500/30 text-cyan-300">
                     {user.role}
                   </span>
@@ -277,6 +279,15 @@ export function Header() {
                   Logout
                 </button>
                 <ProfileBar />
+              </>
+            ) : (
+              <>
+                <Link href="/login" className="text-xs text-slate-400 hover:text-cyan-400 transition-colors">
+                  Sign In
+                </Link>
+                <Link href="/register" className="text-xs px-2 py-1 rounded-full bg-cyan-600 hover:bg-cyan-500 text-white font-medium border border-cyan-400/30">
+                  Join Early Access
+                </Link>
               </>
             )}
           </div>
