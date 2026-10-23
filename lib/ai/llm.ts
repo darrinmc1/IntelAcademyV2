@@ -1,16 +1,19 @@
 /**
  * Provider-agnostic text generation for the academy's AI features
  * (practical-exercise feedback, The Chief instructor). Academy Brief and
- * /api/generate call Gemini through lib/gemini.ts instead (#210).
+ * /api/generate call Gemini through lib/gemini.ts directly (#210); the Gemini
+ * path here reuses that file's key lookup, model setting and request rules,
+ * so one configuration drives every AI feature on the site.
  *
  * Configure ONE of these in Vercel → Settings → Environment Variables:
- *   OPENROUTER_API_KEY   — preferred (same provider as the Empire drafter)
- *   GOOGLE_API_KEY       — Gemini API direct
+ *   GOOGLE_API_KEY       — Gemini (also accepts GEMINI_API_KEY / GOOGLE_GEMINI_API_KEY)
+ *   OPENROUTER_API_KEY   — OpenRouter
  *   N8N_AI_WEBHOOK_URL   — the n8n AI gateway ({ prompt } → { draft })
  *
  * Optional:
- *   AI_PROVIDER = openrouter | gemini | n8n   (force one when several are set)
- *   AI_MODEL    = model id for the chosen provider
+ *   GEMINI_MODEL = Gemini model for the whole site (default in lib/gemini.ts)
+ *   AI_MODEL     = OpenRouter model id
+ *   AI_PROVIDER  = openrouter | gemini | n8n   (force one when several are set)
  *
  * With nothing configured every caller falls back to its deterministic,
  * no-AI path — features keep working, they just don't get model critique.
@@ -18,28 +21,35 @@
  * Server-only: reads secrets from process.env. Never import from a client component.
  */
 
+import {
+  extractGeminiText,
+  geminiApiKey,
+  geminiGenerateUrl,
+  geminiModel,
+  geminiRequestBody,
+} from "@/lib/gemini"
+
 export type AiProvider = "openrouter" | "gemini" | "n8n"
 
 export type ChatMessage = { role: "user" | "assistant"; content: string }
 
 export type AiStatus = { provider: AiProvider | null; model: string | null }
 
-// Gemini 2.0 Flash was retired on 1 June 2026. Google recommends the 3.5
-// Flash-Lite generation for new projects; override with AI_MODEL if needed.
-const DEFAULT_MODELS: Record<AiProvider, string> = {
-  openrouter: "google/gemini-3.5-flash-lite",
-  gemini: "gemini-3.5-flash-lite",
-  n8n: "free",
-}
+const DEFAULT_OPENROUTER_MODEL = "google/gemini-2.5-flash"
 
 const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
-const GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta/models"
 const SITE_URL = "https://theintelanalystacademy.com"
 
 function configured(provider: AiProvider): boolean {
   if (provider === "openrouter") return !!process.env.OPENROUTER_API_KEY
-  if (provider === "gemini") return !!process.env.GOOGLE_API_KEY
+  if (provider === "gemini") return !!geminiApiKey()
   return !!process.env.N8N_AI_WEBHOOK_URL
+}
+
+function modelFor(provider: AiProvider): string {
+  if (provider === "gemini") return geminiModel()
+  if (provider === "openrouter") return (process.env.AI_MODEL || "").trim() || DEFAULT_OPENROUTER_MODEL
+  return "free"
 }
 
 export function aiStatus(): AiStatus {
@@ -50,8 +60,7 @@ export function aiStatus(): AiStatus {
       ? forced
       : order.find((p) => configured(p)) ?? null
   if (!provider) return { provider: null, model: null }
-  const model = (process.env.AI_MODEL || "").trim() || DEFAULT_MODELS[provider]
-  return { provider, model }
+  return { provider, model: modelFor(provider) }
 }
 
 export function aiConfigured(): boolean {
@@ -120,34 +129,36 @@ async function callOpenRouter(model: string, opts: GenerateOptions, signal: Abor
 }
 
 async function callGemini(model: string, opts: GenerateOptions, signal: AbortSignal) {
-  const res = await fetch(`${GEMINI_BASE}/${encodeURIComponent(model)}:generateContent`, {
+  // Same generation rules as lib/gemini.ts (JSON mode turns thinking off so
+  // the reply isn't eaten by the hidden reasoning budget), plus a system
+  // instruction and real multi-turn history for The Chief.
+  const base = geminiRequestBody({
+    prompt: "",
+    temperature: opts.temperature ?? 0.4,
+    maxOutputTokens: opts.maxTokens ?? 2048,
+    json: opts.json,
+  })
+  const res = await fetch(geminiGenerateUrl(model), {
     method: "POST",
     signal,
     headers: {
       "Content-Type": "application/json",
-      "x-goog-api-key": process.env.GOOGLE_API_KEY as string,
+      "x-goog-api-key": geminiApiKey() as string,
     },
     body: JSON.stringify({
+      ...base,
       systemInstruction: { parts: [{ text: opts.system }] },
       contents: opts.messages.map((m) => ({
         role: m.role === "assistant" ? "model" : "user",
         parts: [{ text: m.content }],
       })),
-      generationConfig: {
-        temperature: opts.temperature ?? 0.4,
-        maxOutputTokens: opts.maxTokens ?? 2048,
-        ...(opts.json ? { responseMimeType: "application/json" } : {}),
-      },
     }),
   })
   if (!res.ok) {
     console.error(`[ai:${opts.tool}] Gemini ${res.status}:`, (await res.text()).slice(0, 500))
     return null
   }
-  const data = await res.json()
-  const parts: Array<{ text?: string }> = data?.candidates?.[0]?.content?.parts ?? []
-  const text = parts.map((p) => p.text ?? "").join("")
-  return text.trim() ? text : null
+  return extractGeminiText(await res.json())
 }
 
 async function callN8n(opts: GenerateOptions, signal: AbortSignal) {

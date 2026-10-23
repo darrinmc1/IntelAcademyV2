@@ -21,7 +21,7 @@ export function HeroSection() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-md">
-              Intelligence analysis training,
+              Intelligence analysis training,{" "}
               <span className="block text-gradient-primary mt-2">from beginner to professional.</span>
             </h1>
 

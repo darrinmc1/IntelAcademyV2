@@ -15,7 +15,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: { absolute: "The Intel Analyst Academy" },
-  description: "Train like a working intelligence analyst. Written lessons on OSINT, threat assessment, report writing, crime series, and the specialist disciplines.",
+  description: "Intelligence analysis training, from beginner to professional: lessons on OSINT, threat assessment and report writing, plus practical exercises with AI feedback.",
   alternates: { canonical: "/" },
 }
 export default function HomePage() {
