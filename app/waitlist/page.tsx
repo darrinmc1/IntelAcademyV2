@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { SUPPORT_EMAIL } from "@/lib/pricing"
 import { WaitlistSignup } from "@/components/waitlist-signup"
 
 export const metadata: Metadata = {
@@ -22,12 +21,8 @@ export default function WaitlistPage() {
         <p className="mt-6 text-sm text-slate-500">
           Questions?{" "}
           <Link href="/contact" className="text-cyan-400 underline underline-offset-2">
-            Contact
-          </Link>{" "}
-          or email{" "}
-          <a href={`mailto:${SUPPORT_EMAIL}`} className="text-cyan-400 underline underline-offset-2">
-            {SUPPORT_EMAIL}
-          </a>
+            Contact form
+          </Link>
           .
         </p>
         <p className="mt-2 text-sm text-slate-500">

@@ -32,7 +32,6 @@ export function LearningPathCard3D({
   href,
   difficulty,
   topics,
-  estimatedTime,
   intensity = "subtle",
   index = 0,
 }: LearningPathCard3DProps) {
@@ -148,7 +147,7 @@ export function LearningPathCard3D({
                 d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <span className="text-sm">{estimatedTime}</span>
+            <span className="text-sm">{topics} lessons</span>
           </div>
         </div>
 

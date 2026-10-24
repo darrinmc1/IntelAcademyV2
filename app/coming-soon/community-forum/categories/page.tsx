@@ -1,123 +1,23 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ChevronLeft } from "lucide-react"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/coming-soon/community-forum/categories" },
-  title: "Forum Categories",
-  description: "Explore the various categories in our intelligence analysis community forum.",
+  title: "Forum categories",
+  description: "Forum categories are not published. The forum is not open.",
 }
-
-// Forum category data
-const categories = [
-  {
-    title: "Strategic Intelligence",
-    description: "Long-term analysis focused on broad trends and patterns to inform policy and strategy.",
-    slug: "strategic-intelligence",
-  },
-  {
-    title: "Tactical Intelligence",
-    description: "Short-term intelligence supporting immediate operations and decision-making.",
-    slug: "tactical-intelligence",
-  },
-  {
-    title: "Operational Intelligence",
-    description: "Mid-level intelligence bridging strategic goals and tactical execution.",
-    slug: "operational-intelligence",
-  },
-  {
-    title: "OSINT",
-    description: "Intelligence collected from publicly available sources like media and internet.",
-    slug: "osint",
-  },
-  {
-    title: "Threat Assessment",
-    description: "Methodologies for identifying, analyzing, and evaluating potential threats.",
-    slug: "threat-assessment",
-  },
-  {
-    title: "Analysis Methods",
-    description: "Structured analytical techniques and methodologies for intelligence analysis.",
-    slug: "analysis-methods",
-  },
-  {
-    title: "Technology & Tools",
-    description: "Software, platforms, and digital tools for modern intelligence analysis.",
-    slug: "technology-tools",
-  },
-  {
-    title: "Career Development",
-    description: "Professional growth, certifications, and career paths in intelligence.",
-    slug: "career-development",
-  },
-  {
-    title: "Geospatial Intelligence",
-    description: "Analysis of imagery, geospatial data, and geographic information.",
-    slug: "geospatial-intelligence",
-  },
-  {
-    title: "Report Writing",
-    description: "Best practices for creating clear, concise, and effective intelligence reports.",
-    slug: "report-writing",
-  },
-  {
-    title: "Trend Analysis",
-    description: "Identifying and analyzing patterns and trends in intelligence data.",
-    slug: "trend-analysis",
-  },
-  {
-    title: "Private Sector",
-    description: "Intelligence applications in corporate and business environments.",
-    slug: "private-sector",
-  },
-  {
-    title: "Research Methodologies",
-    description: "Frameworks and approaches for conducting thorough intelligence research.",
-    slug: "research-methodologies",
-  },
-]
 
 export default function ForumCategoriesPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="mb-8">
-        <Link href="/coming-soon/community-forum" className="flex items-center text-blue-600 hover:text-blue-800">
-          <ChevronLeft className="w-4 h-4 mr-1" />
-          Back to Community Forum
-        </Link>
-        <h1 className="text-3xl font-bold mt-4 mb-2">Forum Categories</h1>
-        <p className="text-gray-600 mb-8">
-          Explore our diverse range of intelligence analysis discussion categories. Each category is moderated by
-          subject matter experts to ensure high-quality discussions.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {categories.map((category) => (
-          <div key={category.slug} className="h-full">
-            <Card className="flex flex-col h-full overflow-hidden transition-all duration-200 hover:shadow-md">
-              <div className="w-full h-48 bg-gray-200 flex items-center justify-center">
-                <div className="text-2xl font-bold text-gray-400">{category.title}</div>
-              </div>
-              <CardHeader>
-                <CardTitle className="text-xl">{category.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-gray-600">{category.description}</p>
-              </CardContent>
-              <CardFooter className="mt-auto">
-                <Link href={`/coming-soon/community-forum/categories/${category.slug}`} className="w-full">
-                  <Button variant="outline" className="w-full">
-                    Explore Category
-                  </Button>
-                </Link>
-              </CardFooter>
-            </Card>
-          </div>
-        ))}
-      </div>
+    <div className="container mx-auto px-4 py-16 max-w-2xl">
+      <h1 className="text-4xl font-bold mb-4">Forum categories</h1>
+      <p className="text-muted-foreground mb-6">
+        There are no category boards. The old links on this page pointed at addresses that were never built.
+      </p>
+      <Button asChild>
+        <Link href="/forum">Forum placeholder</Link>
+      </Button>
     </div>
   )
 }

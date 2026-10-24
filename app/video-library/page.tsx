@@ -1,6 +1,6 @@
 import { pageMetadata } from "@/lib/seo"
 
-export const metadata = pageMetadata("/video-library", "Video library", "Training videos that have been published. Most lessons are still written text.")
+export const metadata = pageMetadata("/video-library", "Video library", "Cards on this page open the written lesson. The page does not play video.")
 
 import PageClient from "./page-client"
 

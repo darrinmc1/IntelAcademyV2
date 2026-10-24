@@ -5,65 +5,40 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/topics/learning-paths" },
-  title: "Navigating Learning Paths on Intel Academy",
-  description: "Discover how to effectively utilize Intel Academy's curated learning paths to structure your cybersecurity education and achieve your professional goals.",
+  title: "How the learning paths are organised",
+  description:
+    "A learning path is a reading order of written lessons. There is no enrolment, no lab, and no certificate.",
 }
 
-const topicContent = `"Discover how to effectively utilize Intel Academy's curated learning paths to structure your cybersecurity education and achieve your professional goals.",
+const topicContent = `A learning path on this site is a reading order. Open it, start at the first lesson, and keep going. There is no enrolment button, no lab, and no certificate at the end. The forum is not open. If you were looking for an ethical-hacking syllabus, that was a different website that sat down in the wrong chair.
 
-## Understanding Intel Academy Learning Paths
+## What you actually get
 
-Welcome to Intel Academy! We're dedicated to providing you with a clear and structured approach to mastering cybersecurity. One of the most powerful tools we offer is our curated **Learning Paths**. These paths are designed to guide you through a logical sequence of courses, building your knowledge and skills progressively. Whether you're just starting out or looking to specialize, learning paths provide a roadmap for your educational journey.
+There are 24 paths. Foundations is the short one if the vocabulary is new. Strategic intelligence, OSINT, threat assessment, and report writing are the shelves most people come for. Crime series, hot spots, networks, and financial intelligence are the specialist ones. Each path page lists the lessons that exist. If a lesson is not linked, it is not written.
 
-### What are Learning Paths?
+Most lessons take a few minutes. Read the bottom line, then the method, then the example. The examples are fictional. A round number in a case study is a teaching prop, not a figure you can cite in a real product.
 
-Learning Paths are collections of courses, modules, and resources meticulously organized to help you achieve a specific learning objective or develop expertise in a particular area of cybersecurity. Instead of randomly selecting courses, a learning path ensures you cover the foundational concepts before moving on to more advanced topics. This systematic approach is crucial for deep understanding and retention.
+## What to do next
 
-### Why Use Learning Paths?
+When you want to try the method, use the practical exercises. When you want a structured brief from a pile of notes, use Academy Brief. Both are on the site now. Video lessons are not.
 
-1.  **Structured Progression:** Learning paths eliminate the guesswork. They present topics in an order that makes sense, ensuring you build upon a solid foundation. This is especially beneficial for beginners who may feel overwhelmed by the vastness of cybersecurity.
-2.  **Goal-Oriented Learning:** Each path is designed with a specific outcome in mind, such as becoming a certified ethical hacker, mastering network security, or understanding cloud security. This focus helps you stay motivated and track your progress towards tangible goals.
-3.  **Efficiency:** By following a pre-defined path, you avoid redundant learning and ensure you're covering the most relevant material efficiently. This saves you time and maximizes the value of your study.
-4.  **Comprehensive Coverage:** Paths are designed to be comprehensive, covering not just theoretical knowledge but also practical skills through hands-on labs and projects where applicable.
+If a path is missing a subject you need, request the topic. Do not file that as a bug on a page that already exists.
 
-### How to Find and Use Learning Paths
-
-Navigating learning paths on Intel Academy is straightforward:
-
-1.  **Explore the 'Learning Paths' Section:** On the Intel Academy homepage, look for the 'Learning Paths' or 'Roadmaps' section. This is usually prominently displayed or accessible via the main navigation menu.
-2.  **Browse Available Paths:** You'll find a list of available learning paths categorized by subject area (e.g., Network Security, Incident Response, Cloud Security, Penetration Testing) or by career role (e.g., Security Analyst, Penetration Tester).
-3.  **Review Path Details:** Click on a path that interests you. Each path page provides a detailed description of its objectives, target audience, and the specific courses included. You'll also see the prerequisites, estimated duration, and the learning outcomes you can expect upon completion.
-4.  **Enroll in the Path:** Once you've chosen a path, you can enroll. Enrolling typically adds the path to your dashboard, allowing you to track your progress easily.
-5.  **Follow the Sequence:** The courses within a learning path are usually presented in a recommended order. Start with the first course and work your way through. As you complete each course, your progress within the path will be updated.
-6.  **Utilize Supplemental Resources:** Many paths include links to supplementary materials, forums, or recommended tools. Make sure to explore these to deepen your understanding.
-
-### Example: The 'Ethical Hacking Fundamentals' Path
-
-Let's consider a hypothetical 'Ethical Hacking Fundamentals' path. It might begin with an introductory course on cybersecurity principles, followed by modules on networking basics (TCP/IP, subnetting), operating systems (Windows and Linux fundamentals), and then dive into specific ethical hacking tools and methodologies like reconnaissance, scanning, exploitation, and post-exploitation. The path would likely culminate in a capstone project or a practice lab designed to simulate a real-world penetration test.
-
-### Tips for Success with Learning Paths
-
-*   **Commitment:** Learning paths require dedication. Set aside regular study time.
-*   **Active Learning:** Don't just passively watch videos. Take notes, complete exercises, and engage with the material.
-*   **Practice:** Cybersecurity is a practical field. Utilize labs and hands-on exercises whenever possible.
-*   **Community:** Engage with other learners in forums. Asking questions and discussing concepts can significantly enhance your learning.
-*   **Review and Reinforce:** Periodically revisit completed modules or courses to reinforce your knowledge. The structure of learning paths makes it easy to identify areas for review.
-
-By leveraging Intel Academy's learning paths, you can transform your cybersecurity education from a series of disconnected courses into a cohesive and powerful journey towards expertise. Start exploring today and chart your course to success!
+The old version of this page talked about penetration-testing paths, dashboards, and a community you could enrol in. None of that was here. This page is the correction.
 `
 
 export default function LearningPathsPage() {
   return (
     <LessonContainer>
       <MicroLesson
-        title="Navigating Learning Paths on Intel Academy"
-        subtitle="Discover how to effectively utilize Intel Academy's curated learning paths to structure your cybersecurity education and"
-        humorSubtitle="Where the intelligence community's best-kept secrets come to light (allegedly)"
-        readTime={10}
+        title="How the learning paths are organised"
+        subtitle="A reading order of lessons that exist. No enrolment and no certificate."
+        humorSubtitle="The ethical-hacking path left. It was never on the roster."
+        readTime={2}
         difficulty="Beginner"
-        category="Cybersecurity Education"
+        category="Foundations"
         mascot="foundations"
-        mascotMessage="Another day, another intelligence problem to solve. Let's get to work."
+        mascotMessage="Start at the top of the path. The site will not salute you for finishing."
       >
         <EnhancedLessonContentLoader content={topicContent} topic="learning-paths" />
       </MicroLesson>

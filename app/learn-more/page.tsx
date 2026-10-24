@@ -25,7 +25,7 @@ export default function LearnMore() {
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold tracking-tight mb-4">Learn More About the Academy</h1>
           <p className="text-xl text-muted-foreground">
-            Discover how our platform empowers intelligence professionals through accessible, high-quality education
+            How the lessons are organised, and what the site does not do.
           </p>
         </div>
 
@@ -34,9 +34,8 @@ export default function LearnMore() {
             <div>
               <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
               <p className="mb-4">
-                The Intelligence Analyst Academy was founded with a clear purpose: to democratize access to high-quality
-                intelligence analysis training. We believe that proper education in this field should not be limited by
-                organizational resources, geographic location, or career stage.
+                The Intel Analyst Academy publishes written lessons on intelligence analysis. You can read them
+                without a paid plan. Video lessons are not available yet.
               </p>
               <p>
                 By providing open access to professional-grade educational resources, we aim to improve the standard of
@@ -65,8 +64,7 @@ export default function LearnMore() {
               </CardHeader>
               <CardContent>
                 <p>
-                  Our platform is designed to accommodate busy professionals. Learn at your own pace with content
-                  organized into digestible mini-topics that can be completed in 5-15 minutes.
+                  Most lessons take a few minutes. Read them in any order inside a path, or follow the path from the top.
                 </p>
               </CardContent>
             </Card>
@@ -85,12 +83,12 @@ export default function LearnMore() {
             <Card>
               <CardHeader>
                 <Users className="h-10 w-10 text-primary mb-2" />
-                <CardTitle>Community-Driven</CardTitle>
+                <CardTitle>No forum yet</CardTitle>
               </CardHeader>
               <CardContent>
                 <p>
-                  Our community forum provides a space for intelligence professionals to connect, share insights, and
-                  help each other grow. Learning is enhanced through peer support and collaboration.
+                  There is no discussion board. Feedback is for mistakes on a page. A topic request is for a lesson
+                  that does not exist yet.
                 </p>
               </CardContent>
             </Card>
@@ -112,11 +110,10 @@ export default function LearnMore() {
                 <div>
                   <h3 className="text-xl font-bold mb-2">Structured Learning Paths</h3>
                   <p className="mb-4">
-                    Our learning paths provide a structured journey through intelligence analysis topics, from
-                    foundational concepts to advanced techniques. Each path includes:
+                    A learning path is a reading order. Each path page lists the lessons that exist. A path includes:
                   </p>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Bite-sized mini-topics (5-15 minutes each)</li>
+                    <li>Short written lessons, most of them a few minutes</li>
                     <li>Clear learning objectives and outcomes</li>
                     <li>Practical examples and case studies</li>
                     <li>Recommended resources for further learning</li>
@@ -134,21 +131,13 @@ export default function LearnMore() {
               <div className="flex items-start gap-4">
                 <MessageSquare className="h-10 w-10 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Community Forum</h3>
+                  <h3 className="text-xl font-bold mb-2">Forum</h3>
                   <p className="mb-4">
-                    Our forum is a vibrant space for intelligence professionals to connect, share knowledge, and solve
-                    problems together. The forum features:
+                    The forum page is a placeholder. It does not have threads, members, or moderators.
                   </p>
-                  <ul className="list-disc pl-5 space-y-2">
-                    <li>Discussions organized by topic and specialty</li>
-                    <li>Case study analyses and collaborative problem-solving</li>
-                    <li>Tool recommendations and reviews</li>
-                    <li>Career advice and professional development</li>
-                    <li>Moderated discussions to maintain quality and professionalism</li>
-                  </ul>
                   <div className="mt-4">
                     <Button asChild>
-                      <Link href="/forum">Join the Discussion</Link>
+                      <Link href="/forum">See the placeholder</Link>
                     </Button>
                   </div>
                 </div>
@@ -160,14 +149,12 @@ export default function LearnMore() {
                 <div>
                   <h3 className="text-xl font-bold mb-2">Downloads & Templates</h3>
                   <p className="mb-4">
-                    We provide a variety of free resources to enhance your intelligence analysis workflow:
+                    The downloads page has PDF templates and checklists that are actually on the server:
                   </p>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Analysis templates and worksheets</li>
-                    <li>Reference guides and cheat sheets</li>
-                    <li>Tool configuration guides</li>
-                    <li>Report templates and examples</li>
-                    <li>Training materials for team leaders</li>
+                    <li>Report, collection, and timeline templates</li>
+                    <li>Checklists for bias, assumptions, OSINT, and writing</li>
+                    <li>A short primer handbook</li>
                   </ul>
                   <div className="mt-4">
                     <Button asChild>
@@ -182,17 +169,17 @@ export default function LearnMore() {
                 <FileText className="h-10 w-10 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">Coming Soon</h3>
-                  <p className="mb-4">We're constantly working to improve the Academy with new features:</p>
+                  <p className="mb-4">Two things are not on the site yet:</p>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Interactive sandbox environment for practicing analysis techniques</li>
-                    <li>Digital badges and certifications to recognize your achievements</li>
-                    <li>Gamification elements to make learning more engaging</li>
-                    <li>Expert webinars and Q&A sessions</li>
-                    <li>Advanced simulation exercises</li>
+                    <li>Video lessons</li>
+                    <li>A forum</li>
                   </ul>
+                  <p className="mb-4">
+                    Practical exercises and Academy Brief are already live. There is no sandbox, badge scheme, or webinar series.
+                  </p>
                   <div className="mt-4">
                     <Button asChild>
-                      <Link href="/coming-soon">Learn About Future Plans</Link>
+                      <Link href="/waitlist">Join the list</Link>
                     </Button>
                   </div>
                 </div>
@@ -219,7 +206,7 @@ export default function LearnMore() {
                   <li>Learn essential analytical techniques</li>
                   <li>Develop critical thinking skills</li>
                   <li>Build a professional foundation</li>
-                  <li>Connect with mentors and peers</li>
+                  <li>Request a topic that is not written yet</li>
                 </ul>
               </CardContent>
             </Card>
@@ -236,7 +223,7 @@ export default function LearnMore() {
                 <ul className="list-disc pl-5 space-y-1">
                   <li>Deepen expertise in specialized areas</li>
                   <li>Learn modern analytical techniques</li>
-                  <li>Share knowledge with the community</li>
+                  <li>Send a correction when a lesson is wrong</li>
                   <li>Stay current with emerging trends</li>
                   <li>Develop leadership and mentoring skills</li>
                 </ul>
@@ -290,10 +277,8 @@ export default function LearnMore() {
               <AccordionTrigger>Is the content really free?</AccordionTrigger>
               <AccordionContent>
                 <p>
-                  Yes, all of our educational content is completely free and accessible without registration. We believe
-                  in removing barriers to quality intelligence education. In the future, we may introduce premium
-                  features like certification or advanced simulations, but our core educational content will always
-                  remain free.
+                  Written lessons are free to read. You can register if you want an account. Video is not available yet,
+                  and the site does not take a card.
                 </p>
               </AccordionContent>
             </AccordionItem>
@@ -301,9 +286,8 @@ export default function LearnMore() {
               <AccordionTrigger>Who creates the content?</AccordionTrigger>
               <AccordionContent>
                 <p>
-                  Our content is developed by a team of experienced intelligence professionals with backgrounds in law
-                  enforcement, national security, military intelligence, and private sector analysis. All content
-                  undergoes peer review to ensure accuracy, relevance, and practical value.
+                  Lessons are written for this academy. They are not a named agency&apos;s product, and they are not peer
+                  reviewed by an outside board. If a page is wrong, send a correction.
                 </p>
               </AccordionContent>
             </AccordionItem>
@@ -311,9 +295,8 @@ export default function LearnMore() {
               <AccordionTrigger>How often is new content added?</AccordionTrigger>
               <AccordionContent>
                 <p>
-                  We add new topics and resources every month. Our content development is guided by community requests
-                  and emerging trends in the intelligence field. You can request specific topics through our "Request a
-                  Topic" feature, and we prioritize content based on community interest.
+                  New lessons are published when they are finished. You can request a subject that is not on the site.
+                  That request is not a promise of a date.
                 </p>
               </AccordionContent>
             </AccordionItem>
@@ -321,9 +304,8 @@ export default function LearnMore() {
               <AccordionTrigger>Can I use the content for training my team?</AccordionTrigger>
               <AccordionContent>
                 <p>
-                  Our content is designed to be used for both individual learning and team training. Many of our
-                  resources include discussion questions and exercises that can be used in group settings. We encourage
-                  organizations to incorporate our materials into their training programs.
+                  You can use the written lessons in your own training. The practical exercises are the group task.
+                  There is no separate team-leader pack.
                 </p>
               </AccordionContent>
             </AccordionItem>
@@ -331,9 +313,8 @@ export default function LearnMore() {
               <AccordionTrigger>How can I contribute to the Academy?</AccordionTrigger>
               <AccordionContent>
                 <p>
-                  We welcome contributions from experienced professionals! You can contribute by participating in forum
-                  discussions, suggesting topics, providing feedback on existing content, or applying to join our
-                  content development team. Contact us through the form below if you&apos;re interested in contributing.
+                  Request a missing topic, or send feedback on a page that is already up. There is no contributor
+                  programme and no forum to post in. Use the contact form if you need a person.
                 </p>
               </AccordionContent>
             </AccordionItem>
@@ -344,16 +325,16 @@ export default function LearnMore() {
           <div className="bg-muted rounded-lg p-8">
             <h2 className="text-3xl font-bold mb-4 text-center">Get Involved</h2>
             <p className="text-center mb-8">
-              There are many ways to participate in and contribute to the Intelligence Analyst Academy community
+              Three things you can actually do from this page.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
-                <h3 className="text-xl font-bold mb-2">Join the Community</h3>
+                <h3 className="text-xl font-bold mb-2">Read a path</h3>
                 <p className="mb-4">
-                  Participate in discussions, share insights, and connect with fellow intelligence professionals.
+                  Start with Foundations if the vocabulary is new. Otherwise pick the discipline you already work in.
                 </p>
                 <Button asChild>
-                  <Link href="/forum">Visit the Forum</Link>
+                  <Link href="/learning-paths">Learning paths</Link>
                 </Button>
               </div>
               <div className="text-center">
@@ -371,7 +352,7 @@ export default function LearnMore() {
                   Have questions, feedback, or want to discuss collaboration opportunities? Reach out to our team.
                 </p>
                 <Button asChild>
-                  <Link href="/about#contact">Contact Us</Link>
+                  <Link href="/contact">Contact form</Link>
                 </Button>
               </div>
             </div>
@@ -382,7 +363,7 @@ export default function LearnMore() {
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Start Learning?</h2>
             <p className="mb-6 text-xl">
-              Explore our learning paths and begin your journey to becoming a more effective intelligence analyst.
+              Pick a path and read the first lesson. The exercises are there when you want to try the method.
             </p>
             <Button asChild size="lg">
               <Link href="/learning-paths">Browse Learning Paths</Link>

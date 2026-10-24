@@ -15,7 +15,7 @@ export function Footer() {
               <h3 className="text-xl font-bold text-white tracking-wide">The Intel Analyst Academy</h3>
             </div>
             <p className="text-slate-400 font-light leading-relaxed">
-              Professional education for intelligence analysts at all levels. Mastering the art of collection, analysis, and dissemination.
+              Written lessons in intelligence analysis: collection, methods, and reporting.
             </p>
           </div>
           <div>

@@ -5,7 +5,7 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import { REFUND_POLICY, SUPPORT_EMAIL } from "@/lib/pricing"
+import Link from "next/link"
 
 export const metadata = {
   alternates: { canonical: "/terms" },
@@ -59,9 +59,9 @@ export default function TermsOfService() {
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">3. User Content</h2>
           <p>
-            In these terms and conditions, "User Content" shall mean any audio, video, text, images or other material you choose to display on this website.
-            By displaying your User Content, you grant The Intel Analyst Academy a non-exclusive, worldwide, irrevocable, royalty-free, sublicensable license
-            to use, reproduce, adapt, publish, translate and distribute it in any and all media.
+            In these terms, "User Content" means text you send through the contact form, the feedback form, or a topic request.
+            The site does not host a public forum. By sending User Content, you grant The Intel Analyst Academy a non-exclusive licence
+            to use it to run the site and to answer you.
           </p>
           <p className="mt-4">
             Your User Content must be your own and must not be infringing on any third party's rights. The Intel Analyst Academy reserves the right to remove
@@ -82,8 +82,8 @@ export default function TermsOfService() {
             for students of the academy method.
           </p>
           
-          <h2 className="text-2xl font-semibold mt-8 mb-4">6. Refunds and billing</h2>
-          <p>{REFUND_POLICY}</p>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">6. No charges</h2>
+          <p>The site does not take a card, so there is nothing to refund.</p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">7. Limitation of Liability</h2>
           <p>
@@ -99,8 +99,7 @@ export default function TermsOfService() {
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">9. Governing Law & Jurisdiction</h2>
           <p>
-            These Terms will be governed by and construed in accordance with the laws of Australia, and you submit to the non-exclusive jurisdiction of the
-            state and federal courts located in Australia for the resolution of any disputes.
+            These terms are governed by the laws of Queensland, Australia. You submit to the non-exclusive jurisdiction of the courts of Queensland, Australia.
           </p>
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">10. Changes to Terms</h2>
@@ -114,7 +113,9 @@ export default function TermsOfService() {
             If you have any questions about these Terms, please contact us at:
           </p>
           <p className="mt-2">
-            <strong>Email:</strong> {SUPPORT_EMAIL}
+            <Link href="/contact" className="text-cyan-400 underline underline-offset-2">
+              Contact form
+            </Link>
           </p>
         </div>
       </div>

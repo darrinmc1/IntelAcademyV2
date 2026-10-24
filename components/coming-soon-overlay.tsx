@@ -1,6 +1,6 @@
 "use client"
 
-import { Construction, Mail, ArrowLeft } from "lucide-react"
+import { Construction, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 
 interface ComingSoonOverlayProps {
@@ -13,7 +13,7 @@ interface ComingSoonOverlayProps {
 
 export function ComingSoonOverlay({
   title,
-  description = "We're building something great. Check back soon.",
+  description = "This part of the site is not open yet.",
   estimatedDate,
   backHref = "/",
   backLabel = "Back to Home",
@@ -60,16 +60,15 @@ export function ComingSoonOverlay({
               <ArrowLeft className="w-4 h-4" />
               {backLabel}
             </Link>
-            <a
-              href="mailto:info@theintelanalystacademy.com"
+            <Link
+              href="/contact"
               className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-full 
                          bg-cyan-600 hover:bg-cyan-500 border border-cyan-400/50
                          transition-all duration-300 text-white text-sm font-medium
                          shadow-[0_0_15px_rgba(8,145,178,0.3)]"
             >
-              <Mail className="w-4 h-4" />
-              Request Access
-            </a>
+              Contact form
+            </Link>
           </div>
         </div>
       </div>

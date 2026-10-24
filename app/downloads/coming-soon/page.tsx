@@ -32,7 +32,7 @@ function ComingSoonContent() {
           <span className="text-cyan-400 font-medium">{resourceName}</span>
         </p>
         <p className="text-slate-500 text-center text-sm mb-8">
-          We&apos;re working on this resource. Email us to be notified when it&apos;s ready or to request it urgently.
+          This file is not on the server yet. Use the contact form and name the resource if you need it.
         </p>
 
         <div className="bg-slate-900/60 border border-white/10 rounded-xl p-5 mb-6">
@@ -52,16 +52,12 @@ function ComingSoonContent() {
               </div>
             ))}
           </div>
-          <a href={`mailto:info@theintelanalystacademy.com?subject=${encodeURIComponent(
-            `Notification Request: ${resourceName}`
-          )}&body=${encodeURIComponent(
-            `Hi,\n\nI'd like to be notified when the following resource becomes available:\n\n${resourceName}\n\nAdditional notes:\n`
-          )}`}>
+          <Link href="/contact">
             <Button className="w-full bg-cyan-600 hover:bg-cyan-500 text-white border-0">
               <Mail className="mr-2 h-4 w-4" />
-              Email to Request Notification
+              Contact form
             </Button>
-          </a>
+          </Link>
         </div>
 
         <div className="bg-slate-900/40 border border-white/5 rounded-xl p-5 mb-6">

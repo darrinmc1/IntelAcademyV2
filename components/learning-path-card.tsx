@@ -27,7 +27,6 @@ export function LearningPathCard({
   href,
   difficulty,
   topics,
-  estimatedTime,
   enable3D,
   intensity,
 }: LearningPathCardProps) {
@@ -87,7 +86,7 @@ export function LearningPathCard({
               variant="outline"
               className="pointer-events-none rounded-sm bg-white/5 text-slate-400 border-white/10 font-medium tracking-wide"
             >
-              {estimatedTime}
+              {topics} lessons
             </Badge>
           </div>
         </CardContent>

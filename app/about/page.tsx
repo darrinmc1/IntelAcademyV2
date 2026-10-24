@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { PRICE_MAP_DETAIL, PRICE_MAP_LABEL, SUPPORT_EMAIL } from "@/lib/pricing"
+import { PRICE_MAP_DETAIL, PRICE_MAP_LABEL } from "@/lib/pricing"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -32,9 +32,9 @@ export default function About() {
 
       <div className="max-w-4xl mx-auto">
         <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold tracking-tight mb-4">About the Intelligence Analyst Academy</h1>
+          <h1 className="text-4xl font-bold tracking-tight mb-4">About The Intel Analyst Academy</h1>
           <p className="text-xl text-muted-foreground">
-            Empowering intelligence professionals through accessible, high-quality education
+            Written lessons on intelligence analysis, from first definitions to specialist methods.
           </p>
         </div>
 
@@ -42,9 +42,8 @@ export default function About() {
           <section>
             <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
             <p className="mb-4">
-              The Intelligence Analyst Academy was founded with a simple mission: to make high-quality intelligence
-              analysis training accessible to everyone who needs it. We believe that proper training and education
-              should not be limited by organizational resources or geographic location.
+              The academy publishes written intelligence analysis lessons. Beginners, students, and working analysts
+              can read them. Written lessons stay free. Video is not available yet.
             </p>
             <p>
               Our platform serves complete beginners, students, law enforcement officers, and private sector analysts
@@ -59,9 +58,8 @@ export default function About() {
               <div>
                 <h3 className="text-xl font-semibold mb-2">Self-Paced Learning</h3>
                 <p>
-                  We understand that professionals have varying schedules and learning preferences. Our platform is
-                  designed to allow you to learn at your own pace, with content organized into digestible mini-topics
-                  that can be completed in 5-15 minutes.
+                  Most lessons take a few minutes. One runs a little longer. You can stop in the middle and the page
+                  will still be there.
                 </p>
               </div>
               <div>
@@ -73,18 +71,16 @@ export default function About() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Community-Driven</h3>
+                <h3 className="text-xl font-semibold mb-2">No forum yet</h3>
                 <p>
-                  We believe in the power of peer learning and support. Our community forum provides a space for
-                  intelligence professionals to connect, share insights, and help each other grow in their careers.
+                  There is no discussion board. If a lesson is wrong, use Feedback. If a subject is missing, request a
+                  topic. Those two forms are the whole community for now.
                 </p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Continuously Evolving</h3>
                 <p>
-                  The field of intelligence analysis is constantly changing, and our platform evolves with it. We
-                  regularly update our content and add new topics based on community feedback and emerging trends in the
-                  field.
+                  New lessons are added when they are written, including from topic requests. There is no monthly quota.
                 </p>
               </div>
             </div>
@@ -116,12 +112,11 @@ export default function About() {
             <p className="mb-6">Have questions, feedback, or suggestions? We&apos;d love to hear from you.</p>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold mb-2">General Inquiries</h3>
+                <h3 className="text-xl font-semibold mb-2">General inquiries</h3>
                 <p className="mb-2">
-                  Email:{" "}
-                  <a href={`mailto:${SUPPORT_EMAIL}`} className="text-cyan-400 underline underline-offset-2">
-                    {SUPPORT_EMAIL}
-                  </a>
+                  <Link href="/contact" className="text-cyan-400 underline underline-offset-2">
+                    Contact form
+                  </Link>
                 </p>
               </div>
               <div>
