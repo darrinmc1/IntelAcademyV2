@@ -190,20 +190,20 @@ const resources: Resource[] = [
   },
   // ── COMING SOON ────────────────────────────────────────────────────────
   {
-    title: "Geolocation Toolkit",
-    type: "PDF & Digital Tools",
-    description: "Location identification methods - coordinate systems, map reading, landmark identification, and GPS analysis.",
+    title: "Geolocation Notes",
+    type: "PDF Guide",
+    description: "A worksheet for recording a coordinate, the format, the source, and what would show the location claim is wrong.",
     icon: MapPin, iconColor: "text-red-400",
-    action: "Download Toolkit", tab: "guides",
-    status: "coming-soon",
+    action: "Download Guide", tab: "guides",
+    status: "available", file: "geolocation-notes.pdf",
   },
   {
-    title: "Link Analysis Network Mapping",
+    title: "Link Analysis Worksheets",
     type: "PDF Templates",
-    description: "Visual tools for mapping relationships between suspects, organisations, locations, and assets.",
+    description: "Blank entity register, relationship log, and association matrix. A line needs a source before it goes on the chart.",
     icon: Network, iconColor: "text-purple-400",
-    action: "Download Templates", tab: "templates",
-    status: "coming-soon",
+    action: "Download Worksheets", tab: "templates",
+    status: "available", file: "link-analysis-worksheets.pdf",
   },
 ]
 
@@ -243,9 +243,9 @@ function ResourceCard({ resource }: { resource: Resource }) {
         {isAvailable && (
           <p className="text-xs text-slate-500 mt-3 italic">
             Need Word or Excel?{" "}
-            <a href="mailto:info@theintelanalystacademy.com" className="text-cyan-500 hover:underline">
-              Email us
-            </a>
+            <Link href="/contact" className="text-cyan-500 hover:underline">
+              Use the contact form
+            </Link>
           </p>
         )}
       </div>
@@ -291,7 +291,7 @@ export default function Downloads() {
             Downloads &amp; <span className="text-cyan-400">Templates</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl">
-            Free tools and reference materials to enhance your intelligence analysis workflow.
+            PDF templates and checklists. The files on this page are the ones that download.
           </p>
         </div>
       </div>
@@ -300,11 +300,11 @@ export default function Downloads() {
         <div className="flex items-center gap-3 mb-8 bg-cyan-500/10 border border-cyan-500/20 rounded-xl px-5 py-3">
           <Download className="h-5 w-5 text-cyan-400 shrink-0" />
           <p className="text-sm text-slate-300">
-            <span className="text-cyan-400 font-semibold">{availableCount} resources</span> available now - more added regularly.
+            <span className="text-cyan-400 font-semibold">{availableCount} PDFs</span> on this page. Each button downloads that file.
             Need a specific format?{" "}
-            <a href="mailto:info@theintelanalystacademy.com" className="text-cyan-400 hover:underline">
-              Email us
-            </a>
+            <Link href="/contact" className="text-cyan-400 hover:underline">
+              Use the contact form
+            </Link>
           </p>
         </div>
 

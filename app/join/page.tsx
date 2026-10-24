@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { SUPPORT_EMAIL } from "@/lib/pricing"
 import { ComingSoonJoin } from "@/components/coming-soon-join"
 
 export const metadata: Metadata = {
@@ -18,11 +17,8 @@ export default function JoinPage() {
           Register free
         </Link>
         <Link href="/contact" className="text-cyan-400 underline underline-offset-2">
-          Contact
+          Contact form
         </Link>
-        <a href={`mailto:${SUPPORT_EMAIL}`} className="text-cyan-400 underline underline-offset-2">
-          {SUPPORT_EMAIL}
-        </a>
       </div>
     </div>
   )

@@ -88,8 +88,7 @@ export default function LearningPathsPage() {
                     <span className="inline-block px-2 py-1 bg-slate-700 rounded">
                       {path.difficulty}
                     </span>
-                    <span>{path.topicCount} topics</span>
-                    <span>{path.estimatedTime}</span>
+                    <span>{path.topicCount} lessons</span>
                   </div>
                 </div>
                 <div className="text-right">

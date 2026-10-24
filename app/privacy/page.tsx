@@ -48,7 +48,7 @@ export default function PrivacyPolicy() {
           </p>
           <ul className="list-disc pl-6 my-4 space-y-2">
             <li><strong>Identity Data</strong> includes first name, last name, username or similar identifier.</li>
-            <li><strong>Contact Data</strong> includes email address and telephone numbers.</li>
+            <li><strong>Contact Data</strong> includes the name and email address you type into a form.</li>
             <li><strong>Technical Data</strong> includes internet protocol (IP) address, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform, and other technology on the devices you use to access this website.</li>
             <li><strong>Usage Data</strong> includes information about how you use our website, products and services.</li>
           </ul>
@@ -58,11 +58,10 @@ export default function PrivacyPolicy() {
             We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:
           </p>
           <ul className="list-disc pl-6 my-4 space-y-2">
-            <li>To register you as a new customer.</li>
-            <li>To process and deliver your order.</li>
-            <li>To manage our relationship with you.</li>
-            <li>To improve our website, products/services, marketing or customer relationships.</li>
-            <li>To recommend products or services that may be of interest to you.</li>
+            <li>To create an account if you register.</li>
+            <li>To show the lessons and exercises you open.</li>
+            <li>To read a message you send through the contact form, feedback form, or a topic request.</li>
+            <li>To keep the site working.</li>
           </ul>
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">4. Data Security</h2>
@@ -94,7 +93,7 @@ export default function PrivacyPolicy() {
             If you have any questions about this privacy policy or our privacy practices, please contact us at:
           </p>
           <p className="mt-2">
-            <strong>Email:</strong> info@theintelanalystacademy.com
+            Use the <a href="/contact" className="underline">contact form</a>.
           </p>
         </div>
       </div>

@@ -20,7 +20,7 @@ export function LearningPathsSection() {
     {
       title: "Strategic Intelligence",
       humorousQuote: "Think big picture, or get lost in the pixels",
-      description: "Master long-term analysis and strategic forecasting techniques",
+      description: "Long-range analysis written for a decision, not a mood",
       imagePath: "/strategic-intelligence-thumb.png",
       path: "/learning-paths/strategic-intelligence",
       difficulty: "Advanced" as const,
@@ -29,8 +29,8 @@ export function LearningPathsSection() {
     },
     {
       title: "OSINT Fundamentals",
-      humorousQuote: "Professional stalking with a badge and better coffee",
-      description: "Master open source intelligence collection and analysis techniques",
+      humorousQuote: "Public sources. The hard part is noticing what is missing.",
+      description: "Collect and test open-source information without treating the internet as a sensor",
       imagePath: "/osint-thumb.png",
       path: "/learning-paths/osint",
       difficulty: "Beginner" as const,

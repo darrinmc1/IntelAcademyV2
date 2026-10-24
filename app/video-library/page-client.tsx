@@ -17,7 +17,7 @@ export default function VideoLibraryPage() {
         <div>
           <h1 className="text-4xl font-bold mb-2">Video Library</h1>
           <p className="text-lg text-muted-foreground">
-            Browse our collection of intelligence analysis training videos
+            Cards open the written lesson. This page does not play video.
           </p>
         </div>
 

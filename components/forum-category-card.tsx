@@ -14,7 +14,6 @@ interface ForumCategoryCardProps {
 export function ForumCategoryCard({
   title,
   description,
-  slug,
   imagePath,
   index = 0,
 }: ForumCategoryCardProps) {
@@ -45,7 +44,7 @@ export function ForumCategoryCard({
           <p className="text-gray-600">{description}</p>
         </CardContent>
         <CardFooter className="mt-auto">
-          <Link href={`/coming-soon/community-forum/categories/${slug}`} className="w-full">
+          <Link href="/forum" className="w-full">
             <Button variant="outline" className="w-full">
               Explore Category
             </Button>
