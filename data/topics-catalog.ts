@@ -2,6 +2,21 @@ import { lessonReadMinutes, lessonSlugFromHref } from "@/lib/read-time"
 
 export const topics = [
   {
+    title: "Key Assumptions Check: Testing What Your Judgment Rests On",
+    description: "Learn to list, test and rate the assumptions behind an assessment so your key judgments and confidence levels hold up when someone pushes on them.",
+    image: "/key-assumptions-check-testing-what-your-judgment-rests-on.webp",
+    href: "/topics/key-assumptions-check-testing-what-your-judgment-rests-on",
+    category: "Analytical Tradecraft",
+    estimatedTime: "7 min",
+    completed: false,
+    dateAdded: "2026-10-26",
+    learningObjectives: [
+      "List the assumptions behind a draft key judgment and identify which ones are critical",
+      "Rate each key assumption as supported, caveated or unsupported and act on the rating",
+      "Record the results in a product so confidence levels and collection tasks reflect them",
+    ],
+  },
+  {
     title: "Denial and Deception: Spotting Indicators of Manipulation",
     description: "Learn to separate denial from deception, spot signs that reporting has been shaped, and test a deception hypothesis without becoming paranoid.",
     image: "/denial-and-deception-spotting-indicators-of-manipulation.webp",
