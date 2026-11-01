@@ -2,6 +2,21 @@ import { lessonReadMinutes, lessonSlugFromHref } from "@/lib/read-time"
 
 export const topics = [
   {
+    title: "Red Teaming and Devil's Advocacy for Analysts",
+    description: "Run a structured challenge against your own judgment: build the best case against it, then view the problem from the adversary's side.",
+    image: "/red-teaming-and-devils-advocacy-for-analysts.webp",
+    href: "/topics/red-teaming-and-devils-advocacy-for-analysts",
+    category: "Analysis",
+    estimatedTime: "8 min",
+    completed: false,
+    dateAdded: "2026-11-02",
+    learningObjectives: [
+      "Choose between devil's advocacy and red teaming for a given judgment",
+      "Run a time-boxed challenge and record whether it changed the judgment or confidence",
+      "Build an adversary-perspective view without mirror imaging or caricature",
+    ],
+  },
+  {
     title: "Key Assumptions Check: Testing What Your Judgment Rests On",
     description: "Learn to list, test and rate the assumptions behind an assessment so your key judgments and confidence levels hold up when someone pushes on them.",
     image: "/key-assumptions-check-testing-what-your-judgment-rests-on.webp",
