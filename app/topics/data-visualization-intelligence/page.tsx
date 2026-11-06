@@ -100,6 +100,27 @@ The data did not change. The question did, and the chart followed it.
 
 You do not need expensive software to make good charts. A spreadsheet handles bar charts and simple timelines. Gephi is a free option for network analysis, and QGIS is a free option for maps. Code libraries such as D3.js allow custom interactive visuals if you have the skills and the time. Pick the simplest tool that answers the question.
 
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+  <div className="bg-white p-6 rounded-lg shadow-md text-slate-900">
+    <h3 className="text-xl font-semibold mb-2">Gephi</h3>
+    <img src="/gephi.png" alt="Gephi logo" className="w-24 h-24 mb-4" />
+    <p className="mb-4">Gephi is an open-source network visualization and analysis software. It's excellent for exploring complex relationships in data, identifying key nodes, and understanding network structures. It supports various layout algorithms and offers powerful filtering capabilities.</p>
+    <a href="https://gephi.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Learn more about Gephi</a>
+  </div>
+  <div className="bg-white p-6 rounded-lg shadow-md text-slate-900">
+    <h3 className="text-xl font-semibold mb-2">QGIS</h3>
+    <img src="/qgis.png" alt="QGIS logo" className="w-24 h-24 mb-4" />
+    <p className="mb-4">QGIS (Quantum GIS) is a free and open-source geographic information system. It allows you to create, edit, visualize, analyze, and publish geospatial information. It's a powerful tool for mapping incidents, analyzing spatial patterns, and integrating various geographic data sources.</p>
+    <a href="https://qgis.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Learn more about QGIS</a>
+  </div>
+  <div className="bg-white p-6 rounded-lg shadow-md text-slate-900">
+    <h3 className="text-xl font-semibold mb-2">D3.js</h3>
+    <img src="/d3js.png" alt="D3.js logo" className="w-24 h-24 mb-4" />
+    <p className="mb-4">D3.js (Data-Driven Documents) is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS. It's highly flexible and allows for the creation of custom, interactive, and complex data visualizations, though it requires programming skills.</p>
+    <a href="https://d3js.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Learn more about D3.js</a>
+  </div>
+</div>
+
 ## Exercise
 
 Take ten to twenty events from a recent news story and plot them on a timeline. Mark confirmed events differently from reported ones. Then write a title that states what the timeline shows. If you cannot write that title, the timeline is not finished yet.
