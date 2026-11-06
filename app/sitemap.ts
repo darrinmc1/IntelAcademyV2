@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next"
 import { learningPaths } from "@/data/learning-paths"
 import { exercises } from "@/data/exercises"
+import { topics } from "@/data/topics-catalog"
 
 const BASE_URL = "https://theintelanalystacademy.com"
 
@@ -75,11 +76,45 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }))
 
-  const topicPages: MetadataRoute.Sitemap = TOPIC_SLUGS.map((slug) => ({
-    url: `${BASE_URL}/topics/${slug}`,
-    priority: 0.7,
-    changeFrequency: "monthly" as const,
-  }))
+  const dateAddedBySlug = new Map<string, string>()
+  for (const topic of topics) {
+    const match = topic.href?.match(/^\/topics\/([^/?#]+)$/)
+    if (match && topic.dateAdded) dateAddedBySlug.set(match[1], topic.dateAdded)
+  }
+
+  // Keep the historical slug list, then append catalog lessons that were never on it.
+  // Existing URLs stay. New Monday topics are included because they live in the catalog.
+  const orderedTopicSlugs: string[] = [...TOPIC_SLUGS]
+  const seenTopicSlugs = new Set(orderedTopicSlugs)
+  for (const slug of dateAddedBySlug.keys()) {
+    if (!seenTopicSlugs.has(slug)) {
+      seenTopicSlugs.add(slug)
+      orderedTopicSlugs.push(slug)
+    }
+  }
+
+  const topicPages: MetadataRoute.Sitemap = orderedTopicSlugs.map((slug) => {
+    const dateAdded = dateAddedBySlug.get(slug)
+    return {
+      url: `${BASE_URL}/topics/${slug}`,
+      priority: 0.7,
+      changeFrequency: "monthly" as const,
+      ...(dateAdded ? { lastModified: dateAdded } : {}),
+    }
+  })
+
+  const caseStudyPages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/advanced-topics/case-studies/tracking-stolen-data`,
+      priority: 0.6,
+      changeFrequency: "yearly" as const,
+    },
+    {
+      url: `${BASE_URL}/advanced-topics/case-studies/hidden-criminal-infrastructure`,
+      priority: 0.6,
+      changeFrequency: "yearly" as const,
+    },
+  ]
 
   const downloadPages: MetadataRoute.Sitemap = TOPIC_SLUGS.map((slug) => ({
     url: `${BASE_URL}/topics/${slug}/download`,
@@ -93,5 +128,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }))
 
-  return [...STATIC_PAGES, ...exercisePages, ...learningPathPages, ...learningPathDownloads, ...topicPages, ...downloadPages]
+  return [...STATIC_PAGES, ...exercisePages, ...learningPathPages, ...learningPathDownloads, ...topicPages, ...downloadPages, ...caseStudyPages]
 }

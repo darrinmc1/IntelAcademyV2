@@ -141,10 +141,20 @@ export default async function AdvancedTopicPage({ params }: AdvancedTopicPagePro
                   <div key={index} className="border border-gray-200 dark:border-gray-700 rounded-lg p-6">
                     <h3 className="text-xl font-semibold mb-2">{caseStudy.title}</h3>
                     <p className="text-gray-600 dark:text-gray-300 mb-4">{caseStudy.description}</p>
-                    <div className="flex items-center text-blue-600 dark:text-blue-400">
-                      <BookOpen className="h-5 w-5 mr-2" />
-                      <span className="font-medium">Read the full case study (Coming Soon)</span>
-                    </div>
+                    {caseStudy.href ? (
+                      <Link
+                        href={caseStudy.href}
+                        className="inline-flex items-center font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
+                      >
+                        <BookOpen className="h-5 w-5 mr-2" />
+                        Read the full case study
+                      </Link>
+                    ) : (
+                      <div className="flex items-center text-blue-600 dark:text-blue-400">
+                        <BookOpen className="h-5 w-5 mr-2" />
+                        <span className="font-medium">Read the full case study (Coming Soon)</span>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -411,11 +421,13 @@ function getTopicContent(topicId: string) {
           title: "Tracking Stolen Data Through the Deep Web",
           description:
             "How analysts traced the path of stolen corporate data through various deep web channels to identify the responsible threat actors.",
+          href: "/advanced-topics/case-studies/tracking-stolen-data",
         },
         {
           title: "Uncovering a Hidden Criminal Infrastructure",
           description:
             "A case study examining how deep web research revealed a sophisticated criminal service network that was invisible to conventional investigation methods.",
+          href: "/advanced-topics/case-studies/hidden-criminal-infrastructure",
         },
       ],
       relatedTopics: [
