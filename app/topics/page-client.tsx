@@ -78,7 +78,7 @@ export default function TopicsPage() {
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
-                    <h3 className="text-lg font-semibold text-gray-900">{topic.title}</h3>
+                    <h3 className="text-lg font-semibold text-slate-900">{topic.title}</h3>
                     {topic.completed && <span className="text-xs px-2 py-1 bg-green-100 text-green-700 rounded">Completed</span>}
                   </div>
                   <p className="text-gray-600 text-sm mb-2">{topic.description}</p>
