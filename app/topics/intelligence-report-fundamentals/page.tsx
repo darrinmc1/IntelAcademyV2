@@ -2,6 +2,7 @@ import EnhancedLessonContentLoader from "@/components/enhanced-lesson-content-lo
 import LessonContainer from "@/components/lesson-container"
 import { MicroLesson } from "@/components/micro-lesson"
 import { Metadata } from "next"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/topics/intelligence-report-fundamentals" },
@@ -1051,6 +1052,15 @@ export default function IntelligencereportfundamentalsPage() {
         mascot="foundations"
         mascotMessage="Another day, another intelligence problem to solve. Let's get to work."
       >
+        <div className="relative w-full h-60 mb-8">
+          <Image
+            src="/intelligence-report-fundamentals.png"
+            alt="Intelligence Report Fundamentals"
+            fill
+            style={{ objectFit: 'cover' }}
+            className="rounded-lg"
+          />
+        </div>
         <EnhancedLessonContentLoader content={topicContent} topic="intelligence-report-fundamentals" />
       </MicroLesson>
     </LessonContainer>
