@@ -6,7 +6,7 @@ import { HomepageQuickNav } from "@/components/homepage-quick-nav"
 import { IntelligenceTypesShowcase } from "@/components/intelligence-types-showcase"
 import { LearningPathsSection } from "@/components/learning-paths-section"
 import { HotTopicsSection } from "@/components/hot-topics-section"
-import { LatestTopicsSection } from "@/components/latest-topics-section"
+import { WhatsNewSection } from "@/components/whats-new-section"
 import { EmailCapture } from "@/components/email-capture"
 import { LazySection } from "@/components/optimized/lazy-section"
 import { PerformanceMonitor } from "@/components/optimized/performance-monitor"
@@ -47,6 +47,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <WhatsNewSection />
+
       <div id="learning-paths" className="scroll-mt-24">
         <LearningPathsSection />
       </div>
@@ -70,11 +72,8 @@ export default function HomePage() {
       </div>
 
       <section className="py-8">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <HotTopicsSection />
-            <LatestTopicsSection />
-          </div>
+        <div className="container mx-auto px-4 max-w-3xl">
+          <HotTopicsSection />
         </div>
       </section>
 
