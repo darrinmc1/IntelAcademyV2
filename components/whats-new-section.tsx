@@ -1,33 +1,9 @@
 import Link from "next/link"
-import { topics } from "@/data/topics-catalog"
-
-const RECENT_COUNT = 6
-
-const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-
-/** Calendar date from a catalog `YYYY-MM-DD` string. Avoids UTC midnight shifting the day. */
-export function formatCatalogDate(iso: string | undefined): string {
-  if (!iso) return "Date not recorded"
-  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso)
-  if (!match) return iso
-  const month = MONTHS[Number(match[2]) - 1]
-  if (!month) return iso
-  return `${Number(match[3])} ${month} ${match[1]}`
-}
-
-export function recentCatalogTopics(count = RECENT_COUNT) {
-  return [...topics]
-    .filter((topic) => topic.href?.startsWith("/topics/") && topic.dateAdded)
-    .sort((a, b) => {
-      const byDate = b.dateAdded.localeCompare(a.dateAdded)
-      if (byDate !== 0) return byDate
-      return a.title.localeCompare(b.title)
-    })
-    .slice(0, count)
-}
+import { ChevronRight } from "lucide-react"
+import { formatCatalogDate, newestCatalogTopics, WHATS_NEW_COUNT } from "@/lib/recent-topics"
 
 export function WhatsNewSection() {
-  const recent = recentCatalogTopics()
+  const recent = newestCatalogTopics(WHATS_NEW_COUNT)
 
   return (
     <section className="py-12 border-b border-white/5" aria-labelledby="whats-new-heading">
@@ -38,9 +14,8 @@ export function WhatsNewSection() {
             What&apos;s new
           </h2>
           <p className="mt-2 text-sm text-slate-400">
-            The latest lessons, newest first, using the date each one was added. When a Monday lesson is published
-            into the catalog, it shows up here without anyone editing this page. If it is not listed, it is not new.
-            That is the whole method.
+            The {WHATS_NEW_COUNT} newest lessons, by the date each one was added. A Monday publish shows up here
+            without anyone editing this page. If it is not listed, it is not new. That is the whole method.
           </p>
         </div>
 
@@ -62,9 +37,13 @@ export function WhatsNewSection() {
           ))}
         </ul>
 
-        <div className="mt-6">
-          <Link href="/topics" className="text-sm text-slate-400 hover:text-cyan-300 transition-colors">
-            All topics
+        <div className="mt-8">
+          <Link
+            href="/topics/recent"
+            className="inline-flex items-center text-base font-medium text-cyan-300 hover:text-cyan-200 transition-colors"
+          >
+            See all previous topics
+            <ChevronRight className="ml-1 h-4 w-4" />
           </Link>
         </div>
       </div>
