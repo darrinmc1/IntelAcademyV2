@@ -1015,7 +1015,7 @@ intelligence communication is built.
 Remember that intelligence reports serve a practical purpose: to inform decisions. Every aspect of your
 report should contribute to that goal, from the overall structure to the specific words you choose.
 
-### Key Takeaways
+
 
 -
 
