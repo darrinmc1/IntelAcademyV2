@@ -2,6 +2,21 @@ import { lessonReadMinutes, lessonSlugFromHref } from "@/lib/read-time"
 
 export const topics = [
   {
+    title: "Verifying Photos and Video Before You Cite Them",
+    description: "A repeatable workflow for checking the origin, date, location and integrity of images and video before they go into an intelligence product.",
+    image: "/advanced-analysis.png",
+    href: "/topics/verifying-photos-and-video-before-you-cite-them",
+    category: "OSINT",
+    estimatedTime: "7 min",
+    completed: false,
+    dateAdded: "2026-11-09",
+    learningObjectives: [
+      "Test imagery against five separate questions: origin, source, date, location and integrity",
+      "Trace the earliest copy and match place and time from visible content",
+      "Write up a verification result with a clear confidence level and stated limits",
+    ],
+  },
+  {
     title: "Red Teaming and Devil's Advocacy for Analysts",
     description: "Run a structured challenge against your own judgment: build the best case against it, then view the problem from the adversary's side.",
     image: "/red-teaming-and-devils-advocacy-for-analysts.webp",
