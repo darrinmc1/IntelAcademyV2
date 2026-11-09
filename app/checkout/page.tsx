@@ -4,7 +4,7 @@ import { ComingSoonJoin } from "@/components/coming-soon-join"
 export const metadata: Metadata = {
   alternates: { canonical: "/checkout" },
   title: "Coming soon",
-  description: "Coming soon. Join the list. Written lessons stay free.",
+  description: "Coming soon. Join the list. Checkout is not live.",
 }
 
 export default function CheckoutPage() {

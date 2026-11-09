@@ -94,7 +94,7 @@ export function PathIntroPlayer({ slug }: { slug?: string }) {
     <section className="mb-8" aria-label="Path intro video">
       <div className="mb-3 flex items-baseline justify-between gap-3">
         <h3 className="text-lg font-medium">Path intro</h3>
-        <p className="text-xs text-muted-foreground">~75 seconds. Text lessons stay free.</p>
+        <p className="text-xs text-muted-foreground">~75 seconds. Checkout is not live.</p>
       </div>
       <div className="relative aspect-video overflow-hidden rounded-lg border border-white/10 bg-zinc-950">
         {state.kind === "loading" && (
@@ -110,10 +110,10 @@ export function PathIntroPlayer({ slug }: { slug?: string }) {
             icon={<Lock className="h-8 w-8 text-amber-400" />}
             eyebrow="Locked reel"
             title={PATH_INTRO_LOCK_COPY}
-            body="Video is coming soon. Written lessons stay free."
+            body={PATH_INTRO_LOCK_COPY}
           >
             <Button asChild className="mt-4 bg-black text-white hover:bg-yellow-500 hover:text-black">
-              <Link href="/buy">Join the list</Link>
+              <Link href="/buy">Coming soon / join the list</Link>
             </Button>
           </FrameCopy>
         )}

@@ -96,7 +96,7 @@ export function LessonVideoPlayer({ slug }: { slug?: string }) {
       <div className="mb-3 flex items-baseline justify-between gap-3">
         <h3 className="text-lg font-medium">Video Lessons</h3>
         <p className="text-xs text-muted-foreground">
-          Video is coming soon. Written lessons stay free. Humor stays on.
+          {LESSON_VIDEO_LOCK_COPY} Humor stays on.
         </p>
       </div>
       <div className="relative aspect-video overflow-hidden rounded-lg border border-white/10 bg-zinc-950">
@@ -113,10 +113,10 @@ export function LessonVideoPlayer({ slug }: { slug?: string }) {
             icon={<Lock className="h-8 w-8 text-amber-400" />}
             eyebrow="Locked reel"
             title={LESSON_VIDEO_LOCK_COPY}
-            body="Video is coming soon. Written lessons stay free."
+            body={LESSON_VIDEO_LOCK_COPY}
           >
             <Button asChild className="mt-4 bg-black text-white hover:bg-yellow-500 hover:text-black">
-              <Link href="/buy">Join the list</Link>
+              <Link href="/buy">Coming soon / join the list</Link>
             </Button>
           </FrameCopy>
         )}

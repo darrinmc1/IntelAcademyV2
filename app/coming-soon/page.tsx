@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/seo"
 export const metadata = pageMetadata(
   "/coming-soon",
   "Coming soon",
-  "Video lessons and the forum are not open. Written lessons, exercises, and Academy Brief are.",
+  "Video lessons and the forum are not open. Checkout is not live.",
 )
 
 export default function ComingSoon() {
@@ -25,7 +25,7 @@ export default function ComingSoon() {
           <section className="rounded-lg border p-6">
             <h2 className="text-2xl font-semibold mb-2">Not available</h2>
             <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-              <li>Video lessons. Written lessons stay free while you wait.</li>
+              <li>Video lessons. They are not buyable until videos ship.</li>
               <li>A forum. The forum page is a placeholder with no threads.</li>
             </ul>
             <p className="mt-4 text-sm text-muted-foreground">

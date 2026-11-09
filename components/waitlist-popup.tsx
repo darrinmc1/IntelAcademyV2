@@ -91,7 +91,7 @@ export function WaitlistPopup() {
                         🎓 Intel Academy is expanding
                     </DialogTitle>
                     <DialogDescription className="text-base pt-2">
-                        New lessons are on the way. Join the list. Written lessons stay free.
+                        New lessons are on the way. Checkout isn&apos;t live yet. Join the list.
                     </DialogDescription>
                 </DialogHeader>
 

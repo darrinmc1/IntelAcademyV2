@@ -11,7 +11,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   alternates: { canonical: "/downloads" },
   title: "Downloads & Templates",
-  description: "Free intelligence analysis templates, cheat sheets, and reference guides.",
+  description: "Intelligence analysis templates, checklists, and reference guides.",
 }
 
 interface Resource {
