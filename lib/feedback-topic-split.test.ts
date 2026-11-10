@@ -36,6 +36,9 @@ describe("feedback vs topic-request hard split", () => {
       'https://n8n.peelboss.com/webhook/feedback-creator-run'
     )
     expect(webhook).toContain("method: 'GET'")
+    expect(webhook).toContain('KD7_WEBHOOK_SECRET')
+    expect(webhook).toContain('X-KD7-Secret')
+    expect(webhook).not.toContain('NEXT_PUBLIC_')
     expect(webhook).not.toContain('empire-topic-request')
     expect(webhook).not.toContain('new_page')
   })
