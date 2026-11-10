@@ -14,9 +14,20 @@ export async function notifyFeedbackWebhook(): Promise<void> {
       process.env.FEEDBACK_WEBHOOK_URL?.trim() || DEFAULT_FEEDBACK_WEBHOOK_URL
     if (!webhookUrl) return
 
+    // Server-only env. A missing secret must not fail the feedback save.
+    const secret = process.env.KD7_WEBHOOK_SECRET?.trim()
+    const headers: Record<string, string> = { Accept: 'application/json' }
+    if (secret) {
+      headers['X-KD7-Secret'] = secret
+    } else {
+      console.warn(
+        'KD7_WEBHOOK_SECRET is unset; calling feedback webhook without X-KD7-Secret'
+      )
+    }
+
     await fetch(webhookUrl, {
       method: 'GET',
-      headers: { Accept: 'application/json' },
+      headers,
       cache: 'no-store',
       signal: AbortSignal.timeout(4000),
     })
