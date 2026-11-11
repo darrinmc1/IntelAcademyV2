@@ -8,6 +8,7 @@ import { LearningPathsSection } from "@/components/learning-paths-section"
 import { HotTopicsSection } from "@/components/hot-topics-section"
 import { WhatsNewSection } from "@/components/whats-new-section"
 import { EmailCapture } from "@/components/email-capture"
+import { HomepagePricingSummary } from "@/components/homepage-pricing-summary"
 import { LazySection } from "@/components/optimized/lazy-section"
 import { PerformanceMonitor } from "@/components/optimized/performance-monitor"
 
@@ -76,6 +77,8 @@ export default function HomePage() {
           <HotTopicsSection />
         </div>
       </section>
+
+      <HomepagePricingSummary />
 
       <section className="py-12">
         <div className="container mx-auto px-4">

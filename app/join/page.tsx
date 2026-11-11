@@ -5,7 +5,7 @@ import { ComingSoonJoin } from "@/components/coming-soon-join"
 export const metadata: Metadata = {
   alternates: { canonical: "/join" },
   title: "Join",
-  description: "Join The Intel Analyst Academy. Written lessons are free. Other access is coming soon.",
+  description: "Join The Intel Analyst Academy. Checkout is not live.",
 }
 
 export default function JoinPage() {

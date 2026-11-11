@@ -1,6 +1,8 @@
 "use client"
 
+import Link from "next/link"
 import { WaitlistSignup } from "@/components/waitlist-signup"
+import { PAID_CTA } from "@/lib/pricing"
 
 /**
  * Neutral coming-soon signup. No prices, humor, dates, or scarcity.
@@ -25,11 +27,17 @@ export function ComingSoonJoin({
       <Heading className={variant === "page" ? `text-4xl font-bold ${headingColor} mb-3` : `text-xl font-bold ${headingColor} mb-2`}>
         Coming soon
       </Heading>
-      <p className={`${bodyColor} mb-2`}>Join the list.</p>
-      <p className={`text-sm ${mutedColor} mb-6`}>Written lessons stay free.</p>
+      <p className={`${bodyColor} mb-2`}>Checkout isn&apos;t live yet. Join the list.</p>
+      <p className={`text-sm ${mutedColor} mb-6`}>
+        The free sample stays available.{" "}
+        <Link href="/pricing" className="underline underline-offset-2">
+          See the offer
+        </Link>
+        .
+      </p>
       <WaitlistSignup
         source={source}
-        buttonLabel="Join the list"
+        buttonLabel={PAID_CTA}
         successMessage="You're on the list."
       />
     </div>

@@ -63,12 +63,12 @@ export function WaitlistSignup({
         placeholder="you@example.com"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="flex-1 rounded-lg border border-white/15 bg-slate-950/60 px-4 py-3 text-sm text-white placeholder:text-slate-500"
+        className="min-w-0 flex-1 rounded-lg border border-white/15 bg-slate-950/60 px-4 py-3 text-sm text-white placeholder:text-slate-500"
       />
       <button
         type="submit"
         disabled={loading}
-        className="rounded-lg bg-cyan-600 px-5 py-3 text-sm font-semibold text-white hover:bg-cyan-500 disabled:opacity-60"
+        className="shrink-0 whitespace-nowrap rounded-lg bg-cyan-600 px-5 py-3 text-sm font-semibold text-white hover:bg-cyan-500 disabled:opacity-60"
       >
         {loading ? "Joining…" : buttonLabel}
       </button>

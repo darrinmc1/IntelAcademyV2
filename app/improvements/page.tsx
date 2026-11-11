@@ -17,7 +17,7 @@ export default function ImprovementsPage() {
           </div>
           <h1 className="text-3xl font-bold tracking-tight mb-3">We&apos;re Building Something Better</h1>
           <p className="text-slate-600 max-w-lg mx-auto mb-6 text-lg">
-            Written lessons stay free.
+            Checkout isn&apos;t live yet.
           </p>
           <div className="mx-auto max-w-md mb-8 text-left">
             <ComingSoonJoin source="pricing-coming-soon" variant="block" tone="light" />

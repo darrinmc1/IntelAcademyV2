@@ -43,7 +43,7 @@ export default function About() {
             <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
             <p className="mb-4">
               The academy publishes written intelligence analysis lessons. Beginners, students, and working analysts
-              can read them. Written lessons stay free. Video is not available yet.
+              can read the free sample. Planned paid packs are listed on the pricing page. Video is not available yet.
             </p>
             <p>
               Our platform serves complete beginners, students, law enforcement officers, and private sector analysts
@@ -97,7 +97,7 @@ export default function About() {
               <Link href="/pricing" className="text-cyan-400 underline underline-offset-2">
                 Coming soon — join the list
               </Link>
-              . Written lessons:{" "}
+              . Free sample:{" "}
               <Link href="/register" className="text-cyan-400 underline underline-offset-2">
                 register free
               </Link>

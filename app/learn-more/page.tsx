@@ -274,11 +274,11 @@ export default function LearnMore() {
           <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
-              <AccordionTrigger>Is the content really free?</AccordionTrigger>
+              <AccordionTrigger>What is free right now?</AccordionTrigger>
               <AccordionContent>
                 <p>
-                  Written lessons are free to read. You can register if you want an account. Video is not available yet,
-                  and the site does not take a card.
+                  The free sample is open: three written lessons and two PDFs, listed on the pricing page. Planned paid
+                  packs are not on sale. Video is not available yet, and the site does not take a card.
                 </p>
               </AccordionContent>
             </AccordionItem>

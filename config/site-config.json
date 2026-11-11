@@ -16,7 +16,7 @@
   "pricing": {
     "checkout": "waitlist",
     "paymentsLive": false,
-    "note": "No live prices. Written lessons are free. Video is coming soon."
+    "note": "Checkout is not live. The public offer is the AUD map on /pricing. paymentsLive stays false."
   },
   "points": {
     "lessonComplete": 50,
