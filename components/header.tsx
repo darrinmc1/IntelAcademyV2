@@ -13,7 +13,6 @@ import { MobileSearch } from "@/components/search/mobile-search"
 import { CategoryThumbnail } from "@/components/category-thumbnail"
 import { useMediaQuery } from "@/hooks/use-media-query"
 import { ProfileBar } from "@/components/profile-bar"
-import { HumorModeToggle } from "@/components/humor-mode-toggle"
 import { useAuth } from "@/components/auth-provider"
 import { logout } from "@/app/actions/auth"
 
@@ -267,7 +266,6 @@ export function Header() {
           </div>
 
           <div className="hidden md:flex items-center gap-2">
-            <HumorModeToggle compact />
             {isAuthenticated ? (
               <>
                 {user?.role && (
