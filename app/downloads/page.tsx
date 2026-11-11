@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import {
   AlertTriangle, BarChart2, BookOpen, CheckSquare, Clock,
-  Database, DollarSign, Download, FileText, Globe,
+  Database, DollarSign, Download, FileSpreadsheet, FileText, Globe,
   HardDrive, MapPin, Network, Presentation, Shield, Table, User, Lock,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -24,6 +24,8 @@ interface Resource {
   tab: string
   status: "available" | "coming-soon"
   file?: string
+  excelFile?: string
+  excelAction?: string
 }
 
 const resources: Resource[] = [
@@ -142,11 +144,13 @@ const resources: Resource[] = [
   },
   {
     title: "Collection Plan Template",
-    type: "PDF Template",
+    type: "PDF & Excel Template",
     description: "Translates intelligence requirements into taskings - IR register, collection taskings, source register, gap analysis, and reporting requirements.",
     icon: Table, iconColor: "text-emerald-400",
-    action: "Download Template", tab: "templates",
+    action: "Download PDF", tab: "templates",
     status: "available", file: "collection-plan-template.pdf",
+    excelFile: "collection-plan-template.xlsx",
+    excelAction: "Download Excel",
   },
   {
     title: "Timeline Development Tool",
@@ -242,7 +246,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
         <p className="text-sm text-slate-400 font-light leading-relaxed">{resource.description}</p>
         {isAvailable && (
           <p className="text-xs text-slate-500 mt-3 italic">
-            Need Word or Excel?{" "}
+            {resource.excelFile ? "Excel workbook available below. Need Word? " : "Need Word or Excel? "}
             <Link href="/contact" className="text-cyan-500 hover:underline">
               Use the contact form
             </Link>
@@ -251,11 +255,20 @@ function ResourceCard({ resource }: { resource: Resource }) {
       </div>
       <div className="px-6 pb-6">
         {isAvailable ? (
-          <a href={`/downloads/${resource.file}`} download>
-            <Button className="w-full bg-slate-800 hover:bg-cyan-600 text-slate-300 hover:text-white border border-white/10 hover:border-cyan-400/30 transition-all duration-300" variant="outline">
-              <Download className="mr-2 h-4 w-4" /> {resource.action}
-            </Button>
-          </a>
+          <div className="flex flex-col gap-2">
+            <a href={`/downloads/${resource.file}`} download>
+              <Button className="w-full bg-slate-800 hover:bg-cyan-600 text-slate-300 hover:text-white border border-white/10 hover:border-cyan-400/30 transition-all duration-300" variant="outline">
+                <Download className="mr-2 h-4 w-4" /> {resource.action}
+              </Button>
+            </a>
+            {resource.excelFile && (
+              <a href={`/downloads/${resource.excelFile}`} download>
+                <Button className="w-full bg-slate-800 hover:bg-cyan-600 text-slate-300 hover:text-white border border-white/10 hover:border-cyan-400/30 transition-all duration-300" variant="outline">
+                  <FileSpreadsheet className="mr-2 h-4 w-4" /> {resource.excelAction ?? "Download Excel"}
+                </Button>
+              </a>
+            )}
+          </div>
         ) : (
           <Link href={`/downloads/coming-soon?resource=${encodeURIComponent(resource.title)}`}>
             <Button className="w-full bg-slate-800/50 text-slate-500 border border-white/5 hover:border-amber-500/30 hover:text-amber-400 transition-all duration-300" variant="outline">
