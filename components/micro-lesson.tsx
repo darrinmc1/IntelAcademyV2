@@ -1,8 +1,6 @@
 "use client"
 
 import React, { useState } from "react"
-import { useHumor, ComedyOnly } from "@/components/humor-provider"
-import { HumorModeToggle } from "@/components/humor-mode-toggle"
 import { LessonMascot } from "@/components/lesson-mascot"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -20,7 +18,6 @@ interface MissionBriefingProps {
 }
 
 export function MissionBriefing({ children, humorText }: MissionBriefingProps) {
-  const { isComedy } = useHumor()
   return (
     <div className="bg-cyan-500/10 border border-cyan-500/20 rounded-xl p-5 mb-8">
       <div className="flex items-center gap-2 mb-3">
@@ -30,7 +27,7 @@ export function MissionBriefing({ children, humorText }: MissionBriefingProps) {
         </h3>
       </div>
       <div className="text-slate-200 text-sm leading-relaxed">{children}</div>
-      {isComedy && humorText && (
+      {humorText && (
         <p className="text-xs text-cyan-400/60 italic mt-3 border-t border-cyan-500/10 pt-3">
           {humorText}
         </p>
@@ -107,8 +104,6 @@ interface JokeAsideProps {
 }
 
 export function JokeAside({ children }: JokeAsideProps) {
-  const { isComedy } = useHumor()
-  if (!isComedy) return null
   return (
     <div className="bg-white/[0.03] border border-white/5 rounded-lg px-4 py-3 my-4 italic text-slate-400 text-sm">
       {children}
@@ -122,7 +117,6 @@ interface DebriefProps {
 }
 
 export function Debrief({ takeaways, humorSummary }: DebriefProps) {
-  const { isComedy } = useHumor()
   return (
     <div className="bg-slate-800/50 border border-white/10 rounded-xl p-5 my-8">
       <div className="flex items-center gap-2 mb-3">
@@ -139,7 +133,7 @@ export function Debrief({ takeaways, humorSummary }: DebriefProps) {
           </li>
         ))}
       </ul>
-      {isComedy && humorSummary && (
+      {humorSummary && (
         <p className="text-xs text-slate-500 italic mt-4 border-t border-white/5 pt-3">
           TL;DR: {humorSummary}
         </p>
@@ -196,7 +190,6 @@ export function MicroLesson({
   mascotMessage,
   children,
 }: MicroLessonProps) {
-  const { isComedy } = useHumor()
   // Show the read time computed from the lesson's real word count (230 wpm).
   // The readTime prop is only a fallback for pages outside /topics/<slug>.
   const pathname = usePathname()
@@ -221,7 +214,6 @@ export function MicroLesson({
             <span className="text-xs text-slate-500">{category}</span>
           </div>
           <div className="flex items-center gap-3">
-            <HumorModeToggle compact />
             <div className="flex items-center gap-1.5 text-slate-400 text-sm">
               <Clock className="w-3.5 h-3.5" />
               {shownReadTime} min read
@@ -231,7 +223,7 @@ export function MicroLesson({
 
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">{title}</h1>
         {subtitle && <p className="text-slate-300 text-lg">{subtitle}</p>}
-        {isComedy && humorSubtitle && (
+        {humorSubtitle && (
           <p className="text-sm text-slate-500 italic mt-1">{humorSubtitle}</p>
         )}
       </div>
