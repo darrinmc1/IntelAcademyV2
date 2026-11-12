@@ -1,6 +1,6 @@
 import { Suspense } from "react"
 import Link from "next/link"
-import { ChevronRight } from "lucide-react"
+import { ChevronRight, FlaskConical, GraduationCap } from "lucide-react"
 import { HeroSection } from "@/components/hero-section"
 import { HomepageQuickNav } from "@/components/homepage-quick-nav"
 import { IntelligenceTypesShowcase } from "@/components/intelligence-types-showcase"
@@ -49,6 +49,49 @@ export default function HomePage() {
 
       <WhatsNewSection />
 
+      <section className="py-12 border-b border-white/5">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-amber-500/20 bg-amber-500/5 p-6">
+              <div className="flex items-center gap-2 mb-2">
+                <FlaskConical className="h-5 w-5 text-amber-400" />
+                <p className="text-xs font-semibold uppercase tracking-widest text-amber-300">Practical exercises</p>
+              </div>
+              <h2 className="text-xl font-bold text-white">Work a fictional brief pack, not a quiz</h2>
+              <p className="mt-2 text-sm text-slate-400">
+                Grade sources, find the gaps, test competing hypotheses and write the assessment — then get marked
+                against an expert answer key.
+              </p>
+              <Link
+                href="/exercises"
+                className="mt-4 inline-flex items-center text-sm font-medium text-amber-300 hover:text-amber-200 transition-colors"
+              >
+                Open the exercise library
+                <ChevronRight className="ml-1 h-4 w-4" />
+              </Link>
+            </div>
+            <div className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-6">
+              <div className="flex items-center gap-2 mb-2">
+                <GraduationCap className="h-5 w-5 text-cyan-400" />
+                <p className="text-xs font-semibold uppercase tracking-widest text-cyan-300">AI instructor</p>
+              </div>
+              <h2 className="text-xl font-bold text-white">Meet The Chief</h2>
+              <p className="mt-2 text-sm text-slate-400">
+                The academy&apos;s AI instructor can write a fresh practice brief built around the trap you want to
+                drill, and question your reasoning while you work.
+              </p>
+              <Link
+                href="/instructor"
+                className="mt-4 inline-flex items-center text-sm font-medium text-cyan-300 hover:text-cyan-200 transition-colors"
+              >
+                Talk to The Chief
+                <ChevronRight className="ml-1 h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div id="learning-paths" className="scroll-mt-24">
         <LearningPathsSection />
       </div>
@@ -84,7 +127,7 @@ export default function HomePage() {
             theme="slate"
             siteName="Intel Academy"
             heading="Get new intelligence training as it is published"
-            subheading="Join early access for new written modules, exercises and upcoming video lessons."
+            subheading="One new lesson every Monday, by email, plus new practice exercises as they go live."
             source="homepage-hero"
             showName
           />
