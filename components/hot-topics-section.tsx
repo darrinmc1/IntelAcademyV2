@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Flame, ChevronRight } from "lucide-react"
 
-// Popular topics - TODO: replace with real analytics-driven data when available
+// Curated starting points for new visitors - TODO: replace with real analytics-driven data when available
 const hotTopics = [
   {
     title: "What is Intelligence?",
@@ -38,8 +38,8 @@ export function HotTopicsSection() {
           <Flame className="w-6 h-6 text-orange-400" />
         </div>
         <div>
-          <h2 className="text-2xl font-bold text-white">Hot Topics</h2>
-          <p className="text-slate-400 text-sm">Popular intelligence briefings</p>
+          <h2 className="text-2xl font-bold text-white">Start Here</h2>
+          <p className="text-slate-400 text-sm">Five lessons to get oriented, picked by us — not by traffic</p>
         </div>
       </div>
 
