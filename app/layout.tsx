@@ -13,7 +13,6 @@ import { AnimatedBackground } from "@/components/ui/animated-background"
 import { UserProvider } from "@/components/user-provider"
 import { AuthProvider } from "@/components/auth-provider"
 import { Toaster } from "sonner"
-import { HumorProvider } from "@/components/humor-provider"
 
 import { FeedbackWidget } from '@/components/feedback-widget'
 
@@ -76,19 +75,17 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-screen bg-slate-950 text-slate-50 flex flex-col relative`}>
         <UserProvider>
           <AuthProvider>
-            <HumorProvider>
-              <AnimatedBackground />
-              <Header />
-              <main className="flex-grow z-10">
-                <LayoutWrapper>
-                  {children}
-                </LayoutWrapper>
-              </main>
-              <Footer />
-              <ScrollToTop />
-              <FeedbackWidget />
-              <Toaster position="top-right" theme="dark" richColors />
-            </HumorProvider>
+            <AnimatedBackground />
+            <Header />
+            <main className="flex-grow z-10">
+              <LayoutWrapper>
+                {children}
+              </LayoutWrapper>
+            </main>
+            <Footer />
+            <ScrollToTop />
+            <FeedbackWidget />
+            <Toaster position="top-right" theme="dark" richColors />
           </AuthProvider>
         </UserProvider>
         <WaitlistPopup />

@@ -76,6 +76,7 @@ const nextConfig = {
     return [
       ...topicRedirects,
       { source: "/signup", destination: "/register", permanent: false },
+      { source: "/humor-settings", destination: "/", permanent: true },
       { source: "/refund", destination: "/refunds", permanent: true },
       { source: "/community", destination: "/forum", permanent: true },
       { source: "/community/:path*", destination: "/forum", permanent: true },
