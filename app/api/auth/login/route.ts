@@ -10,11 +10,19 @@ import {
   resetFailedAttempts,
 } from '@/lib/db'
 import { createToken, setAuthCookie } from '@/lib/auth'
+import { accountsDatabaseConfigured } from '@/lib/accounts-gate'
 
 const MAX_ATTEMPTS = 5
 
 export async function POST(request: Request) {
   try {
+    if (!accountsDatabaseConfigured()) {
+      return NextResponse.json(
+        { error: 'Sign-in is not connected yet. The site owner still needs to set POSTGRES_URL and JWT_SECRET.' },
+        { status: 503 },
+      )
+    }
+
     await initDatabase()
 
     // Accept email (preferred) or codename as the identifier.
@@ -70,6 +78,8 @@ export async function POST(request: Request) {
       role: user.role || 'user',
       createdAt: user.created_at,
       plan: user.plan || 'free',
+      entitlement: user.entitlement || undefined,
+      entitlementPath: user.entitlement_path || null,
     })
     await setAuthCookie(token)
 

@@ -54,7 +54,8 @@ export default function RegisterPage() {
     const result = await register(email, pin, codename, existingProfile)
     
     if (result.success) {
-      router.push("/profile")
+      const redirect = new URLSearchParams(window.location.search).get("redirect")
+      router.push(redirect && redirect.startsWith("/") && !redirect.startsWith("//") ? redirect : "/profile")
     } else {
       setError(result.error || "Registration failed")
     }
@@ -216,7 +217,7 @@ export default function RegisterPage() {
             </Link>
           </div>
           <p className="mt-4 text-center text-xs text-slate-500">
-            Free signup. Written lessons stay free. Video is coming soon —{" "}
+            Free account signup. The free sample is open. Checkout is not live —{" "}
             <Link href="/buy" className="text-cyan-400 hover:text-cyan-300">
               join the list
             </Link>

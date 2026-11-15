@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { WaitlistSignup } from "@/components/waitlist-signup"
 
 /**
@@ -25,11 +26,15 @@ export function ComingSoonJoin({
       <Heading className={variant === "page" ? `text-4xl font-bold ${headingColor} mb-3` : `text-xl font-bold ${headingColor} mb-2`}>
         Coming soon
       </Heading>
-      <p className={`${bodyColor} mb-2`}>Join the list.</p>
-      <p className={`text-sm ${mutedColor} mb-6`}>Written lessons stay free.</p>
+      <p className={`${bodyColor} mb-2`}>Checkout is not live.</p>
+      <p className={`text-sm ${mutedColor} mb-6`}>
+        <Link href="/register" className="underline underline-offset-2">Create a free account</Link>
+        {" "}for the sample, or join the list.{" "}
+        <Link href="/pricing" className="underline underline-offset-2">See the offer</Link>.
+      </p>
       <WaitlistSignup
         source={source}
-        buttonLabel="Join the list"
+        buttonLabel="Coming soon"
         successMessage="You're on the list."
       />
     </div>

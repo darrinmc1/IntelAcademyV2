@@ -9,7 +9,7 @@ import {
 export const metadata = {
   alternates: { canonical: "/privacy" },
   title: "Privacy Policy",
-  description: "Privacy policy for The Intel Analyst Academy website",
+  description: "What The Intel Analyst Academy collects, including lesson views, read time, and downloads.",
 }
 
 export default function PrivacyPolicy() {
@@ -33,36 +33,40 @@ export default function PrivacyPolicy() {
         <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
         
         <div className="prose max-w-none">
-          <p className="text-lg mb-6">Last Updated: {new Date().toLocaleDateString()}</p>
+          <p className="text-lg mb-6">Last updated: 15 November 2026</p>
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">1. Introduction</h2>
           <p>
-            Welcome to The Intel Analyst Academy. We respect your privacy and are committed to protecting your personal data.
-            This privacy policy will inform you about how we look after your personal data when you visit our website and tell
-            you about your privacy rights and how the law protects you.
+            The Intel Analyst Academy is operated by TTPN Pty Ltd. This policy says what the site stores when you create a free account
+            and what is recorded about how you use the lessons and PDFs. It also covers messages you send through the existing contact,
+            feedback, and topic-request forms.
           </p>
           
-          <h2 className="text-2xl font-semibold mt-8 mb-4">2. The Data We Collect</h2>
-          <p>
-            We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows:
-          </p>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">2. The data we collect</h2>
           <ul className="list-disc pl-6 my-4 space-y-2">
-            <li><strong>Identity Data</strong> includes first name, last name, username or similar identifier.</li>
-            <li><strong>Contact Data</strong> includes the name and email address you type into a form.</li>
-            <li><strong>Technical Data</strong> includes internet protocol (IP) address, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform, and other technology on the devices you use to access this website.</li>
-            <li><strong>Usage Data</strong> includes information about how you use our website, products and services.</li>
+            <li><strong>Account.</strong> Email address, codename, a hash of your PIN, the date the account was created, and your role.</li>
+            <li><strong>Entitlement.</strong> A field that is free, path pack, written library, or video. New accounts start on free. It is not a payment record. Checkout is not live.</li>
+            <li><strong>Lesson views.</strong> Which lesson you opened, and when, tied to your account.</li>
+            <li><strong>Read time.</strong> An approximate count of seconds the lesson tab was visible. Time while the tab is hidden is not added.</li>
+            <li><strong>Downloads.</strong> Which PDF or spreadsheet you downloaded, and when, tied to your account.</li>
+            <li><strong>Messages you send.</strong> Feedback, topic requests, and contact-form text, including an email if you type one. Those forms are unchanged.</li>
+            <li><strong>Technical data.</strong> IP address on feedback submissions, and the usual server logs needed to keep the site working.</li>
           </ul>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">3. How We Use Your Data</h2>
           <p>
-            We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:
+            The site does not ask for a street address, and this page does not publish a company number. We do not sell this data.
           </p>
+          
+          <h2 className="text-2xl font-semibold mt-8 mb-4">3. How we use it</h2>
           <ul className="list-disc pl-6 my-4 space-y-2">
-            <li>To create an account if you register.</li>
-            <li>To show the lessons and exercises you open.</li>
+            <li>To create your free account and let you sign in.</li>
+            <li>To show you the lessons and PDFs your entitlement allows.</li>
+            <li>To show the site operator how many accounts exist and what each account opens, reads, and downloads.</li>
             <li>To read a message you send through the contact form, feedback form, or a topic request.</li>
             <li>To keep the site working.</li>
           </ul>
+          <p>
+            Usage counts are visible to admin accounts only. Other learners cannot see your history.
+          </p>
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">4. Data Security</h2>
           <p>
@@ -90,10 +94,7 @@ export default function PrivacyPolicy() {
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">7. Contact Us</h2>
           <p>
-            If you have any questions about this privacy policy or our privacy practices, please contact us at:
-          </p>
-          <p className="mt-2">
-            Use the <a href="/contact" className="underline">contact form</a>.
+            If you have any questions about this privacy policy, email info@theintelanalystacademy.com.
           </p>
         </div>
       </div>

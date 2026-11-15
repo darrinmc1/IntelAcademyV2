@@ -54,7 +54,7 @@ export function HomepageQuickNav() {
         className="inline-flex items-center gap-1.5 rounded-sm border border-amber-400/40 bg-transparent px-2 py-1 text-[11px] font-semibold uppercase tracking-wider text-amber-200/90"
       >
         <Tag className="h-3 w-3" aria-hidden="true" />
-        Coming soon
+        Pricing
       </Link>
     </div>
   )

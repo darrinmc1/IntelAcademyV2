@@ -256,13 +256,13 @@ function ResourceCard({ resource }: { resource: Resource }) {
       <div className="px-6 pb-6">
         {isAvailable ? (
           <div className="flex flex-col gap-2">
-            <a href={`/downloads/${resource.file}`} download>
+            <a href={`/api/downloads/${resource.file}`}>
               <Button className="w-full bg-slate-800 hover:bg-cyan-600 text-slate-300 hover:text-white border border-white/10 hover:border-cyan-400/30 transition-all duration-300" variant="outline">
                 <Download className="mr-2 h-4 w-4" /> {resource.action}
               </Button>
             </a>
             {resource.excelFile && (
-              <a href={`/downloads/${resource.excelFile}`} download>
+              <a href={`/api/downloads/${resource.excelFile}`}>
                 <Button className="w-full bg-slate-800 hover:bg-cyan-600 text-slate-300 hover:text-white border border-white/10 hover:border-cyan-400/30 transition-all duration-300" variant="outline">
                   <FileSpreadsheet className="mr-2 h-4 w-4" /> {resource.excelAction ?? "Download Excel"}
                 </Button>
@@ -304,7 +304,7 @@ export default function Downloads() {
             Downloads &amp; <span className="text-cyan-400">Templates</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl">
-            PDF templates and checklists. The files on this page are the ones that download.
+            PDF templates and checklists. The Estimative Language Dictionary and Cognitive Bias Checklist are the free sample. The other files are part of the Written Library, which is not on sale yet.
           </p>
         </div>
       </div>

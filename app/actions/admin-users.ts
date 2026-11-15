@@ -3,8 +3,9 @@
 import { revalidatePath } from "next/cache"
 import { getCurrentUser, type UserRole } from "@/lib/auth"
 import { isAdmin } from "@/lib/rbac"
-import { getUserByEmail, initDatabase, setUserPlan, setUserRole } from "@/lib/db"
+import { getUserByEmail, initDatabase, setUserEntitlement, setUserPlan, setUserRole } from "@/lib/db"
 import { USER_PLANS, isUserPlan, type UserPlan } from "@/lib/user-plan"
+import { ENTITLEMENTS, isEntitlement, type Entitlement } from "@/lib/entitlement"
 
 const VALID_ROLES: UserRole[] = ["admin", "moderator", "editor", "viewer", "user"]
 
@@ -88,6 +89,40 @@ export async function setUserPlanAction(
     }
   } catch (error) {
     console.error("setUserPlanAction error:", error)
+    return { ok: false, message: "Update failed. Please try again." }
+  }
+}
+
+export async function setUserEntitlementAction(
+  email: string,
+  entitlement: string,
+  entitlementPath: string,
+): Promise<PlanUpdateResult> {
+  const actor = await getCurrentUser()
+  if (!actor || !isAdmin(actor)) {
+    return { ok: false, message: "Forbidden: admin access required" }
+  }
+
+  const normalizedEmail = email.trim().toLowerCase()
+  if (!normalizedEmail) return { ok: false, message: "Email is required" }
+  if (!isEntitlement(entitlement)) {
+    return { ok: false, message: `Invalid entitlement. Use one of: ${ENTITLEMENTS.join(", ")}` }
+  }
+
+  const target = await getUserByEmail(normalizedEmail)
+  if (!target) return { ok: false, message: `No user found with email ${normalizedEmail}` }
+
+  try {
+    await initDatabase()
+    await setUserEntitlement(normalizedEmail, entitlement as Entitlement, entitlementPath.trim() || null)
+    revalidatePath("/admin/users")
+    revalidatePath("/admin/usage")
+    return {
+      ok: true,
+      message: `${normalizedEmail} is now ${entitlement}. They should sign in again so the session picks it up.`,
+    }
+  } catch (error) {
+    console.error("setUserEntitlementAction error:", error)
     return { ok: false, message: "Update failed. Please try again." }
   }
 }

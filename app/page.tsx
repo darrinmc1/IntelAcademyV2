@@ -8,6 +8,7 @@ import { LearningPathsSection } from "@/components/learning-paths-section"
 import { HotTopicsSection } from "@/components/hot-topics-section"
 import { WhatsNewSection } from "@/components/whats-new-section"
 import { EmailCapture } from "@/components/email-capture"
+import { HomepagePricingSummary } from "@/components/homepage-pricing-summary"
 import { LazySection } from "@/components/optimized/lazy-section"
 import { PerformanceMonitor } from "@/components/optimized/performance-monitor"
 
@@ -31,7 +32,7 @@ export default function HomePage() {
             <Link href="/topics/intelligence-report-fundamentals" className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-6 hover:border-cyan-400/40 transition-colors">
               <p className="text-xs font-semibold uppercase tracking-widest text-cyan-300 mb-2">Sample lesson</p>
               <h2 className="text-xl font-bold text-white">Intelligence Report Fundamentals</h2>
-              <p className="mt-2 text-sm text-slate-400">See the teaching style before creating an account.</p>
+              <p className="mt-2 text-sm text-slate-400">One of three free sample lessons. Create a free account to read it.</p>
             </Link>
             <Link href="/topics/introduction-to-link-analysis" className="rounded-2xl border border-indigo-500/20 bg-indigo-500/5 p-6 hover:border-indigo-400/40 transition-colors">
               <p className="text-xs font-semibold uppercase tracking-widest text-indigo-300 mb-2">Technique</p>
@@ -46,6 +47,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <HomepagePricingSummary />
 
       <WhatsNewSection />
 

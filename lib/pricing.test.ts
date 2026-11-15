@@ -1,119 +1,125 @@
+import { readFileSync } from "node:fs"
 import { describe, expect, it } from "vitest"
 import {
   CHECKOUT_STATUS,
+  FREE_CTA,
+  NOT_INCLUDED,
+  PAID_CTA,
   PRICE_MAP_DETAIL,
   PRICE_MAP_LABEL,
   REFUND_POLICY,
+  REFUND_POLICY_PENDING_LEGAL_REVIEW,
   SUPPORT_EMAIL,
+  VIDEOS_PUBLISHED,
   getParseablePricing,
-  plans,
+  offers,
 } from "@/lib/pricing"
 import { academyBriefFaqs, buildLlmTxt, pricingJsonLd, softwareJsonLd } from "@/lib/aeo"
-import { USER_PLAN_LABELS } from "@/lib/user-plan"
 import { learningPaths } from "@/data/learning-paths"
 import siteConfig from "@/config/site-config.json"
 
-const LIVE_PRICE_LEAK =
-  /\$\s*(0|5|9|10|19|23|29|47)|\$0\/mo|Explorer \$|Enterprise \$|Analyst \$|Professional \$|pro_monthly|9\.99/i
+const STRIPE_OR_CHECKOUT =
+  /checkout\.stripe\.com|buy\.stripe|stripePriceId|payment link|US\$|\bUSD\b|>\s*Buy\b/i
+
+const MONTHLY = /\/mo\b|per month|lifetime|unlimited/i
 
 function publicSurfaces(): string[] {
   const pricing = getParseablePricing()
   return [
     PRICE_MAP_LABEL,
     PRICE_MAP_DETAIL,
+    NOT_INCLUDED,
     CHECKOUT_STATUS,
     REFUND_POLICY,
     JSON.stringify(pricing),
-    JSON.stringify(plans),
-    JSON.stringify(USER_PLAN_LABELS),
+    JSON.stringify(offers),
     buildLlmTxt(),
     JSON.stringify(pricingJsonLd()),
     JSON.stringify(softwareJsonLd()),
-    academyBriefFaqs.map((f) => `${f.question} ${f.answer}`).join(" "),
+    academyBriefFaqs.map((faq) => `${faq.question} ${faq.answer}`).join(" "),
     JSON.stringify(siteConfig),
+    readFileSync("app/pricing/page.tsx", "utf8"),
+    readFileSync("app/pricing.json/route.ts", "utf8"),
+    readFileSync("app/terms/page.tsx", "utf8"),
+    readFileSync("app/refunds/page.tsx", "utf8"),
   ]
 }
 
-describe("public access copy (no live prices)", () => {
-  it("keeps plan ids and video entitlement without printing dollar amounts", () => {
-    expect(PRICE_MAP_LABEL.toLowerCase()).toContain("free")
-    expect(PRICE_MAP_LABEL.toLowerCase()).toMatch(/coming soon|waitlist/)
-    expect(plans.map((p) => [p.id, p.userPlan, p.includesVideo])).toEqual([
-      ["free", "free", false],
-      ["early", "early", false],
-      ["normal", "pro", false],
-      ["video", "video", true],
+describe("AUD offer map", () => {
+  it("lists Free, Path Pack, Written Library, and Video in AUD", () => {
+    expect(offers.map((offer) => [offer.id, offer.priceAud, offer.priceLabel, offer.billing])).toEqual([
+      ["free", 0, "A$0", "free"],
+      ["path_pack", 15, "A$15", "one-off"],
+      ["written_library", 39, "A$39", "one-off"],
+      ["video", 19, "A$19", "one-off"],
     ])
-    expect(plans.find((p) => p.id === "early")?.description.toLowerCase()).toContain("no video")
-    expect(plans.find((p) => p.id === "normal")?.description.toLowerCase()).toContain("no video")
-    expect(plans.find((p) => p.id === "normal")?.description.toLowerCase()).toContain("written")
-    expect(plans.find((p) => p.id === "video")?.description.toLowerCase()).toMatch(/written/)
-    expect(plans.find((p) => p.id === "video")?.description.toLowerCase()).toMatch(/video/)
-    expect(PRICE_MAP_DETAIL.toLowerCase()).toContain("written")
-    expect(PRICE_MAP_DETAIL.toLowerCase()).toContain("video")
-    for (const plan of plans) {
-      expect(plan).not.toHaveProperty("price")
-      expect(plan).not.toHaveProperty("priceLabel")
+    expect(getParseablePricing().currency).toBe("AUD")
+    expect(getParseablePricing().monthlyPlan).toBe(false)
+    expect(offers.every((offer) => offer.billing === "free" || offer.billing === "one-off")).toBe(true)
+  })
+
+  it("keeps paid packs off checkout and marks video coming later", () => {
+    const free = offers.find((offer) => offer.id === "free")
+    expect(free?.cta).toBe(FREE_CTA)
+    expect(free?.href).toBe("/register")
+    expect(free?.buyable).toBe(false)
+    expect(free?.includes.join(" ")).toContain("What is Intelligence?")
+    expect(free?.includes.join(" ")).toContain("Estimative Language Dictionary")
+    expect(free?.includes.join(" ")).toContain("Cognitive Bias Checklist")
+
+    for (const id of ["path_pack", "written_library", "video"] as const) {
+      const offer = offers.find((item) => item.id === id)
+      expect(offer?.buyable).toBe(false)
+      expect(offer?.cta).toBe(PAID_CTA)
+      expect(offer?.href).toBe("/waitlist")
     }
+
+    expect(VIDEOS_PUBLISHED).toBe(false)
+    expect(offers.find((offer) => offer.id === "video")?.status).toBe("Coming later")
+    expect(offers.find((offer) => offer.id === "video")?.shown).toBe(true)
   })
 
-  it("does not publish a standalone Brief SKU, leftover SaaS map, or live prices", () => {
+  it("keeps payments off, with no Stripe and no monthly SKU", () => {
     const pricing = getParseablePricing()
-    const blob = JSON.stringify(pricing)
-    expect(pricing).not.toHaveProperty("standalone")
-    expect(blob).not.toMatch(LIVE_PRICE_LEAK)
-    expect(plans).toHaveLength(4)
-    expect(pricing.map).toBe(PRICE_MAP_LABEL)
-    expect(pricing.labels.written).toMatch(/written only, no video/)
-    expect(pricing.labels.video).toMatch(/written \+ video/)
-    expect(pricing.userPlans).toEqual(["free", "early", "pro", "video"])
-    expect(pricing.userPlanLabels.video.toLowerCase()).toContain("video")
-    expect(pricing.userPlanLabels.video).not.toMatch(/\$/)
-    expect(pricing.plans.map((p) => p.userPlan)).toEqual(["free", "early", "pro", "video"])
-    expect(pricing.plans.every((p) => !("price" in p))).toBe(true)
-    expect(pricing).not.toHaveProperty("labels.5")
-    expect(pricing.labels).not.toHaveProperty("5")
-    expect(pricing.labels).not.toHaveProperty("10")
-    expect(pricing.labels).not.toHaveProperty("19")
+    expect(pricing.paymentsLive).toBe(false)
+    expect(pricing.stripe).toBe(false)
+    expect(pricing.paymentLinks).toBe(false)
+    expect(pricing.x402).toBe(false)
+    expect(pricing.checkout).toBe("waitlist")
+    expect(JSON.stringify(pricing)).not.toMatch(STRIPE_OR_CHECKOUT)
+    expect(JSON.stringify(pricing)).not.toMatch(MONTHLY)
+    expect(pricing.merchant).toMatch(/TTPN Pty Ltd/)
+    expect(pricing.merchant.toLowerCase()).toContain("not live")
+    expect(pricing.merchant).not.toMatch(/ABN|street/i)
   })
 
-  it("keeps paid plan records off the public checkout and states payments are not live", () => {
-    expect(plans.filter((p) => !p.available).every((p) => p.href === "/waitlist")).toBe(true)
-    expect(getParseablePricing().paymentsLive).toBe(false)
-    expect(getParseablePricing().checkout).toBe("waitlist")
-    expect(getParseablePricing().stripe).toBe(false)
-    expect(getParseablePricing()).not.toHaveProperty("currency")
-    expect(CHECKOUT_STATUS.toLowerCase()).toContain("coming soon")
-    expect(CHECKOUT_STATUS).not.toMatch(/\$/)
-  })
-
-  it("uses one refund sentence and one support email, with no dollar amounts", () => {
-    expect(REFUND_POLICY.toLowerCase()).toContain("not set up")
-    expect(REFUND_POLICY).not.toMatch(/\$/)
+  it("marks the shared refund wording as pending legal review", () => {
+    expect(REFUND_POLICY_PENDING_LEGAL_REVIEW).toBe(true)
+    expect(REFUND_POLICY.toLowerCase()).toContain("pending legal review")
+    expect(REFUND_POLICY.toLowerCase()).toContain("3 days")
+    expect(REFUND_POLICY.toLowerCase()).toContain("cancelled anytime")
+    expect(REFUND_POLICY).toContain("Australian Consumer Law")
     expect(getParseablePricing().refundPolicy).toBe(REFUND_POLICY)
     expect(SUPPORT_EMAIL).toBe("info@theintelanalystacademy.com")
+    expect(NOT_INCLUDED.toLowerCase()).toContain("no monthly plan")
   })
 
-  it("keeps FAQ, llm.txt, JSON-LD, and site-config off live prices", () => {
-    const llm = buildLlmTxt()
-    const jsonLd = JSON.stringify(pricingJsonLd())
-    const software = JSON.stringify(softwareJsonLd())
-    const faq = academyBriefFaqs.map((f) => f.answer).join(" ")
+  it("keeps the public pages off Stripe, ABN, and a street address", () => {
     for (const text of publicSurfaces()) {
-      expect(text).not.toMatch(LIVE_PRICE_LEAK)
-      expect(text).not.toMatch(/\$\d/)
-      expect(text.toLowerCase()).not.toMatch(/first intelligence product/)
+      expect(text).not.toMatch(STRIPE_OR_CHECKOUT)
+      expect(text).not.toMatch(/\bABN\b/)
+      expect(text.toLowerCase()).not.toMatch(/street address|po box/)
     }
-    expect(llm).toContain(PRICE_MAP_LABEL)
-    expect(llm).not.toMatch(/\$\d/)
-    expect(jsonLd).toContain(PRICE_MAP_LABEL)
-    expect(jsonLd).not.toMatch(/"price"\s*:|"offers"\s*:|priceCurrency/)
-    expect(software).not.toMatch(/"price"\s*:|"offers"\s*:|priceCurrency/)
-    expect(faq).toContain(REFUND_POLICY)
-    expect(faq.toLowerCase()).toMatch(/free/)
-    expect(faq.toLowerCase()).toMatch(/coming soon/)
-    expect(JSON.stringify(siteConfig.pricing)).not.toMatch(/9\.99|99\.00|49\.00|199\.00|29\.00/)
-    expect(JSON.stringify(siteConfig)).not.toMatch(/stripePriceId/)
+    const llm = buildLlmTxt()
+    expect(llm).toContain("A$0")
+    expect(llm).toContain("A$15")
+    expect(llm).toContain("A$39")
+    expect(llm).toContain("A$19")
+    expect(llm).toContain("Payments live: false")
+    expect(JSON.stringify(pricingJsonLd())).not.toMatch(/priceCurrency/)
+    expect(JSON.stringify(softwareJsonLd())).not.toMatch(/"price"\s*:/)
+    expect(siteConfig.pricing.paymentsLive).toBe(false)
+    expect(siteConfig.pricing.checkout).toBe("waitlist")
   })
 })
 

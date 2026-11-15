@@ -130,7 +130,7 @@ export function TopicCard3D({
       <CardContent className="p-5 relative">
         {/* Title and description */}
         <h3
-          className="text-lg font-bold mb-2 transition-transform duration-300"
+          className="text-lg font-bold mb-2 text-slate-50 transition-transform duration-300"
           style={{
             transform: isHovered ? "translateY(-4px)" : "translateY(0)",
           }}

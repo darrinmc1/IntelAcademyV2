@@ -1,6 +1,7 @@
 import { SignJWT, jwtVerify } from 'jose'
 import { cookies } from 'next/headers'
 import { normalizeUserPlan, type UserPlan } from '@/lib/user-plan'
+import { normalizeEntitlement, type Entitlement } from '@/lib/entitlement'
 
 // Require a real secret in production — never silently fall back to a known
 // default, which would let anyone forge a session cookie.
@@ -28,8 +29,12 @@ export interface AuthUser {
   codename: string
   role: UserRole
   createdAt: string
-  /** Billing plan. Stripe later writes this same field. Default free. */
+  /** Legacy plan column. Video playback still reads this. Default free. */
   plan?: UserPlan
+  /** free / path_pack / written_library / video. Default free. */
+  entitlement?: Entitlement
+  /** Learning-path id when entitlement is path_pack. */
+  entitlementPath?: string | null
 }
 
 /**
@@ -42,6 +47,8 @@ export async function createToken(user: AuthUser): Promise<string> {
     codename: user.codename,
     role: user.role || 'user',
     plan: normalizeUserPlan(user.plan),
+    entitlement: normalizeEntitlement(user.entitlement, user.plan),
+    entitlementPath: user.entitlementPath || null,
   })
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
@@ -57,6 +64,8 @@ export async function verifyToken(token: string): Promise<AuthUser | null> {
     const { payload } = await jwtVerify(token, JWT_SECRET)
     const user = payload as unknown as AuthUser
     user.plan = normalizeUserPlan(user.plan)
+    user.entitlement = normalizeEntitlement(user.entitlement, user.plan)
+    user.entitlementPath = user.entitlementPath || null
     return user
   } catch {
     return null

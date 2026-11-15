@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
+import { isAccountsGateEnabled } from "@/lib/accounts-gate"
 
 const COOKIE_NAME = "intel-session"
 const encoder = new TextEncoder()
@@ -56,12 +57,44 @@ async function verifyHs256(token: string, secret: string): Promise<Record<string
   return payload
 }
 
+const FREE_DOWNLOADS = new Set([
+  "estimative-language-dictionary.pdf",
+  "cognitive-bias-checklist.pdf",
+])
+
 export async function middleware(request: NextRequest) {
   const url = request.nextUrl.pathname
   const userAgent = request.headers.get("user-agent") || ""
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
     || request.headers.get("x-real-ip")
     || "unknown"
+
+  const requestHeaders = new Headers(request.headers)
+  requestHeaders.set("x-pathname", url)
+
+  // === Download gate: public /downloads files stay blocked while accounts are on ===
+  if (isAccountsGateEnabled() && /^\/downloads\/[^/]+\.(pdf|xlsx)$/i.test(url)) {
+    const file = url.split("/").pop() || ""
+    const token = request.cookies.get(COOKIE_NAME)?.value
+    const loginUrl = new URL("/login", request.url)
+    loginUrl.searchParams.set("redirect", "/downloads")
+    if (!token) return NextResponse.redirect(loginUrl)
+    try {
+      const payload = await verifyHs256(token, JWT_SECRET)
+      if (!payload) return NextResponse.redirect(loginUrl)
+      const role = typeof payload.role === "string" ? payload.role : ""
+      const staff = ADMIN_ROLES.includes(role)
+      const entitlement = typeof payload.entitlement === "string" ? payload.entitlement : ""
+      const plan = typeof payload.plan === "string" ? payload.plan : "free"
+      const effective = entitlement || (plan === "video" ? "video" : plan === "pro" || plan === "early" ? "written_library" : "free")
+      const allowed = staff || FREE_DOWNLOADS.has(file) || effective === "written_library" || effective === "video"
+      if (!allowed) {
+        return new NextResponse("This file is part of the Written Library. Checkout is not live.", { status: 403 })
+      }
+    } catch {
+      return NextResponse.redirect(loginUrl)
+    }
+  }
 
   // === Admin auth gate: /admin requires an admin-capable role ===
   if (url.startsWith("/admin")) {
@@ -79,7 +112,7 @@ export async function middleware(request: NextRequest) {
     }
   }
 
-  const response = NextResponse.next()
+  const response = NextResponse.next({ request: { headers: requestHeaders } })
   const isAeoPath = AEO_PATHS.some((path) => url === path || url.startsWith(`${path}/`))
 
   // === 1. Security Headers ===

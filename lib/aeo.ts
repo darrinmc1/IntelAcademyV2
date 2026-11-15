@@ -74,6 +74,11 @@ ${DISCLAIMER}
 ${PRICE_MAP_LABEL}
 ${PRICE_MAP_DETAIL}
 Payments live: ${pricing.paymentsLive}
+Videos published: ${pricing.videosPublished}
+Monthly plan: ${pricing.monthlyPlan}
+Checkout: ${pricing.checkoutStatus}
+Currency: ${pricing.currency}
+${pricing.offers.map((offer) => `- ${offer.name}: ${offer.priceLabel} (${offer.billing}). ${offer.status}. Buyable: ${offer.buyable}.`).join("\n")}
 
 ## FAQs
 
@@ -98,7 +103,7 @@ export function pricingJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Coming soon",
+    name: "Pricing",
     url: `${SITE_URL}/pricing`,
     description: `${PRICE_MAP_LABEL} ${PRICE_MAP_DETAIL}`,
   }

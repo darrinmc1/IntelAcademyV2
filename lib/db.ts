@@ -1,5 +1,6 @@
 import { sql } from '@vercel/postgres'
 import { normalizeUserPlan, type UserPlan } from '@/lib/user-plan'
+import { normalizeEntitlement, planForEntitlement, type Entitlement } from '@/lib/entitlement'
 
 /**
  * Initialize the database tables (run once)
@@ -28,6 +29,21 @@ export async function initDatabase() {
   await sql`ALTER TABLE users ADD COLUMN IF NOT EXISTS role TEXT DEFAULT 'user'`
   // Access plan for gated path intros. Stripe later writes this same field.
   await sql`ALTER TABLE users ADD COLUMN IF NOT EXISTS plan TEXT DEFAULT 'free'`
+  await sql`ALTER TABLE users ADD COLUMN IF NOT EXISTS entitlement TEXT DEFAULT 'free'`
+  await sql`ALTER TABLE users ADD COLUMN IF NOT EXISTS entitlement_path TEXT`
+  await sql`
+    CREATE TABLE IF NOT EXISTS usage_events (
+      id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+      user_id TEXT NOT NULL,
+      event_type TEXT NOT NULL,
+      resource TEXT NOT NULL,
+      seconds INTEGER,
+      created_at TIMESTAMP DEFAULT NOW()
+    )
+  `
+  await sql`CREATE INDEX IF NOT EXISTS idx_usage_events_user ON usage_events(user_id, created_at DESC)`
+  await sql`CREATE INDEX IF NOT EXISTS idx_usage_events_type ON usage_events(event_type, created_at DESC)`
+  await ensureUsageRls()
 
   // PIN auth, lockout, and PIN-reset migrations.
   // password_hash now stores the bcrypt hash of the 4-digit PIN.
@@ -131,6 +147,95 @@ export async function initDatabase() {
 }
 
 /**
+ * RLS for a non-owner database role. The app connects as the table owner, which
+ * bypasses RLS, so API routes enforce the same rules in code. Failures here are
+ * non-fatal so signup still works on a database that cannot create policies.
+ */
+async function ensureUsageRls() {
+  const statements = [
+    `ALTER TABLE usage_events ENABLE ROW LEVEL SECURITY`,
+    `DROP POLICY IF EXISTS usage_events_select_own ON usage_events`,
+    `CREATE POLICY usage_events_select_own ON usage_events FOR SELECT USING (user_id = current_setting('app.user_id', true))`,
+    `DROP POLICY IF EXISTS usage_events_insert_own ON usage_events`,
+    `CREATE POLICY usage_events_insert_own ON usage_events FOR INSERT WITH CHECK (user_id = current_setting('app.user_id', true))`,
+    `DROP POLICY IF EXISTS usage_events_admin_all ON usage_events`,
+    `CREATE POLICY usage_events_admin_all ON usage_events FOR ALL USING (current_setting('app.user_role', true) = 'admin') WITH CHECK (current_setting('app.user_role', true) = 'admin')`,
+  ]
+  for (const statement of statements) {
+    try {
+      await sql.query(statement)
+    } catch (err) {
+      console.warn('usage RLS statement skipped:', err)
+    }
+  }
+}
+
+export type UsageEventType = 'lesson_view' | 'read_time' | 'download'
+
+export async function recordUsageEvent(args: {
+  userId: string
+  eventType: UsageEventType
+  resource: string
+  seconds?: number | null
+}) {
+  await sql`
+    INSERT INTO usage_events (user_id, event_type, resource, seconds)
+    VALUES (${args.userId}, ${args.eventType}, ${args.resource}, ${args.seconds ?? null})
+  `
+}
+
+export async function getUsageAdminSummary() {
+  const users = await sql`SELECT COUNT(*)::int AS count FROM users`
+  const events = await sql`
+    SELECT event_type, COUNT(*)::int AS count
+    FROM usage_events
+    GROUP BY event_type
+  `
+  const recent = await sql`
+    SELECT u.email, u.codename, u.entitlement, e.event_type, e.resource, e.seconds, e.created_at
+    FROM usage_events e
+    JOIN users u ON u.id = e.user_id
+    ORDER BY e.created_at DESC
+    LIMIT 100
+  `
+  const perUser = await sql`
+    SELECT u.email, u.codename, u.entitlement, u.created_at,
+      COUNT(e.id)::int AS events,
+      COUNT(*) FILTER (WHERE e.event_type = 'lesson_view')::int AS lesson_views,
+      COALESCE(SUM(e.seconds) FILTER (WHERE e.event_type = 'read_time'), 0)::int AS read_seconds,
+      COUNT(*) FILTER (WHERE e.event_type = 'download')::int AS downloads
+    FROM users u
+    LEFT JOIN usage_events e ON e.user_id = u.id
+    GROUP BY u.id, u.email, u.codename, u.entitlement, u.created_at
+    ORDER BY u.created_at DESC
+    LIMIT 200
+  `
+  return {
+    userCount: Number(users.rows[0]?.count ?? 0),
+    events: events.rows as { event_type: string; count: number }[],
+    recent: recent.rows as {
+      email: string
+      codename: string
+      entitlement: string | null
+      event_type: string
+      resource: string
+      seconds: number | null
+      created_at: string
+    }[],
+    perUser: perUser.rows as {
+      email: string
+      codename: string
+      entitlement: string | null
+      created_at: string
+      events: number
+      lesson_views: number
+      read_seconds: number
+      downloads: number
+    }[],
+  }
+}
+
+/**
  * Valid roles for RBAC (keep in sync with lib/rbac.ts)
  */
 export type UserRole = 'admin' | 'moderator' | 'editor' | 'viewer' | 'user'
@@ -148,6 +253,18 @@ export async function setUserRole(email: string, role: UserRole) {
  */
 export async function setUserPlan(email: string, plan: UserPlan) {
   await sql`UPDATE users SET plan = ${plan}, updated_at = NOW() WHERE email = ${email.toLowerCase()}`
+}
+
+export async function setUserEntitlement(email: string, entitlement: Entitlement, entitlementPath?: string | null) {
+  const plan = planForEntitlement(entitlement)
+  await sql`
+    UPDATE users
+    SET entitlement = ${entitlement},
+        entitlement_path = ${entitlementPath || null},
+        plan = ${plan},
+        updated_at = NOW()
+    WHERE email = ${email.toLowerCase()}
+  `
 }
 
 export async function getUserPlan(id: string): Promise<UserPlan> {
@@ -348,6 +465,8 @@ export async function getUserProfile(id: string) {
     accessTier: user.access_tier,
     role: user.role || 'user',
     plan: normalizeUserPlan(user.plan),
+    entitlement: normalizeEntitlement(user.entitlement, user.plan),
+    entitlementPath: user.entitlement_path || null,
     createdAt: user.created_at,
   }
 }

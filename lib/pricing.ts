@@ -1,19 +1,11 @@
-import { USER_PLAN_LABELS, USER_PLANS, type UserPlan } from "@/lib/user-plan"
+import { MERCHANT_OF_RECORD_DISCLOSURE } from "@/lib/merchant-of-record"
 
 /**
- * Public access copy — no live dollar amounts until lesson videos ship.
- * Used by /pricing, /pricing.json, /llm.txt, FAQ, JSON-LD, and refunds.
- * Payments are not live — paid CTAs go to /waitlist or /contact.
- * No Stripe, Payment Links, x402, or crypto checkout.
- *
- * Entitlements (catalog id → stored USER_PLANS id). Plan ids stay; prices do not.
- *   free   → free  = written lessons, NO video
- *   early  → early = waitlist / early, written, NO video
- *   normal → pro   = written, NO video
- *   video  → video = written + video
- *
- * Academy Brief is a tool / preview — not a standalone SKU.
- * The dollar map lives on a parked branch until videos are done. Do not print it here.
+ * Public AUD offer for /pricing, /pricing.json, /llm.txt, FAQ, and JSON-LD.
+ * Payments are not live. Paid buttons say "Coming soon" and go to /waitlist.
+ * No Stripe, Payment Links, x402, checkout, or Buy buttons.
+ * No monthly plan: lessons are published when written, not as a paid drip.
+ * Video is listed as coming later because no lesson video files are in the repo.
  */
 
 export const SITE_URL = "https://theintelanalystacademy.com"
@@ -23,117 +15,180 @@ export const SUPPORT_EMAIL = "info@theintelanalystacademy.com"
 export const DISCLAIMER =
   "Academy Brief is a training and education tool. It is not an operational intelligence product, does not constitute finished intelligence, and must not be used as a substitute for authorized analysis."
 
-export const CHECKOUT_STATUS = "Coming soon. Join the list."
+export const PRICING_CURRENCY = "AUD" as const
 
-export const REFUND_POLICY = "Payments are not set up. There is nothing to charge or refund."
+export const PAYMENTS_LIVE = false as const
 
-export const PRICE_MAP_LABEL = "Written lessons are free. Video is coming soon."
+/** No lesson mp4s are in the repo. Playback stays locked until files exist. */
+export const VIDEOS_PUBLISHED = false as const
 
-export const PRICE_MAP_DETAIL = "Written lessons stay free. Video is coming soon."
+export const PAID_CTA = "Coming soon"
 
-export type PlanId = "free" | "early" | "normal" | "video"
+export const FREE_CTA = "Create a free account"
 
-export type Plan = {
-  id: PlanId
-  /** Stored users.plan value. Catalog id `normal` maps to stored `pro`. */
-  userPlan: UserPlan
+export const CHECKOUT_STATUS = "Coming soon. Create a free account. Checkout is not live."
+
+/**
+ * Shared TTPN refund wording. Pending legal review — do not treat this as signed-off advice.
+ * Checkout is not live, so nothing is charged yet.
+ */
+export const REFUND_POLICY_PENDING_LEGAL_REVIEW = true
+
+export const REFUND_POLICY =
+  "Pending legal review. When billing is open, one-off purchases can be refunded within 3 days. A subscription, if one is offered later, can be cancelled anytime and stops at the end of the paid period. This does not limit rights under the Australian Consumer Law. Checkout is not live, so nothing is charged now."
+
+export const MERCHANT_NOTE = MERCHANT_OF_RECORD_DISCLOSURE
+
+export const PRICE_MAP_LABEL =
+  "Free A$0. Path Pack A$15. Written Library A$39. Video A$19, coming later."
+
+export const PRICE_MAP_DETAIL =
+  "The free offer is three sample lessons and two PDFs, behind a free account. Path Pack and Written Library are one-off prices in Australian dollars. Checkout is not live. There is no monthly plan."
+
+export const NOT_INCLUDED =
+  "Not included until they exist: certificates, a forum, video (the Video row is coming later), the Intelligence Report Generator, Source Analysis, Threat Assessment tools, and mentoring. Academy Brief stays a one-brief preview and is not a pack. There is no monthly plan."
+
+export const FREE_SAMPLE_LESSONS = [
+  { title: "What is Intelligence?", href: "/topics/what-is-intelligence" },
+  { title: "The Intelligence Cycle", href: "/topics/intelligence-cycle" },
+  { title: "Intelligence Report Fundamentals", href: "/topics/intelligence-report-fundamentals" },
+] as const
+
+export const FREE_SAMPLE_PDFS = [
+  { title: "Estimative Language Dictionary", href: "/downloads" },
+  { title: "Cognitive Bias Checklist", href: "/downloads" },
+] as const
+
+export type OfferId = "free" | "path_pack" | "written_library" | "video"
+
+export type Offer = {
+  id: OfferId
   name: string
-  blurb: string
-  description: string
-  includesVideo: boolean
-  includesAcademyBrief: boolean
-  briefAllowance: string
-  features: string[]
+  priceAud: number
+  priceLabel: string
+  currency: typeof PRICING_CURRENCY
+  billing: "free" | "one-off"
+  available: boolean
+  buyable: boolean
+  /** Hidden from the public grid when false. Video stays visible, marked coming later. */
+  shown: boolean
+  status: string
+  summary: string
+  includes: string[]
   cta: string
   href: string
-  highlighted: boolean
-  available: boolean
 }
 
-export const plans: Plan[] = [
+function aud(amount: number): string {
+  return `A$${amount}`
+}
+
+export const offers: Offer[] = [
   {
     id: "free",
-    userPlan: "free",
     name: "Free",
-    blurb: "Written lessons",
-    description: "Written lessons. Free. No video.",
-    includesVideo: false,
-    includesAcademyBrief: true,
-    briefAllowance: "1 structured brief preview",
-    features: ["Written lessons", "No video", "1 Academy Brief preview"],
-    cta: "Start free",
-    href: "/register",
-    highlighted: false,
+    priceAud: 0,
+    priceLabel: aud(0),
+    currency: PRICING_CURRENCY,
+    billing: "free",
     available: true,
-  },
-  {
-    id: "early",
-    userPlan: "early",
-    name: "Early",
-    blurb: "Waitlist / early — written only, no video",
-    description: "Waitlist / early for people who already signed up. Written lessons only. No video.",
-    includesVideo: false,
-    includesAcademyBrief: true,
-    briefAllowance: "Academy Brief included as a tool (when billing is live)",
-    features: [
-      "Waitlist / early for people who already signed up",
-      "Written lessons only",
-      "No video",
+    buyable: false,
+    shown: true,
+    status: "Free account",
+    summary: "Three sample lessons and two PDFs. Create a free account to open them.",
+    includes: [
+      "Lesson: What is Intelligence?",
+      "Lesson: The Intelligence Cycle",
+      "Lesson: Intelligence Report Fundamentals",
+      "PDF: Estimative Language Dictionary",
+      "PDF: Cognitive Bias Checklist",
     ],
-    cta: "Join the waitlist",
-    href: "/waitlist",
-    highlighted: true,
-    available: false,
+    cta: FREE_CTA,
+    href: "/register",
   },
   {
-    id: "normal",
-    userPlan: "pro",
-    name: "Written",
-    blurb: "Written only, no video",
-    description: "Written lessons only. No video. Not a video plan.",
-    includesVideo: false,
-    includesAcademyBrief: true,
-    briefAllowance: "Academy Brief included as a tool (when billing is live)",
-    features: ["Written lessons only", "No video"],
-    cta: "Join the waitlist",
-    href: "/waitlist",
-    highlighted: false,
+    id: "path_pack",
+    name: "Path Pack",
+    priceAud: 15,
+    priceLabel: aud(15),
+    currency: PRICING_CURRENCY,
+    billing: "one-off",
     available: false,
+    buyable: false,
+    shown: true,
+    status: "Coming soon",
+    summary: "One named learning path's written topics, plus the free sample.",
+    includes: [
+      "One named learning path (for example Foundations, OSINT, Report Writing, or Threat Assessment)",
+      "The free sample stays included",
+    ],
+    cta: PAID_CTA,
+    href: "/waitlist",
+  },
+  {
+    id: "written_library",
+    name: "Written Library",
+    priceAud: 39,
+    priceLabel: aud(39),
+    currency: PRICING_CURRENCY,
+    billing: "one-off",
+    available: false,
+    buyable: false,
+    shown: true,
+    status: "Coming soon",
+    summary: "All current written topics, plus the downloads that are on the site today.",
+    includes: [
+      "All current written topics",
+      "The PDFs listed on Downloads",
+      "The free sample stays included",
+    ],
+    cta: PAID_CTA,
+    href: "/waitlist",
   },
   {
     id: "video",
-    userPlan: "video",
     name: "Video",
-    blurb: "Written + video — coming soon",
-    description: "Written lessons plus course video. Coming soon.",
-    includesVideo: true,
-    includesAcademyBrief: true,
-    briefAllowance: "Academy Brief included as a tool (when billing is live)",
-    features: ["Written lessons", "Course video", "Not a PDF/book", "Coming soon"],
-    cta: "Join the waitlist",
-    href: "/waitlist",
-    highlighted: false,
+    priceAud: 19,
+    priceLabel: aud(19),
+    currency: PRICING_CURRENCY,
+    billing: "one-off",
     available: false,
+    buyable: false,
+    shown: true,
+    status: VIDEOS_PUBLISHED ? "Available when checkout opens" : "Coming later",
+    summary: VIDEOS_PUBLISHED
+      ? "Video unlock for lessons that have a video file. Checkout is not live."
+      : "Shown for the locked offer. Coming later — no lesson videos are published yet, so this cannot be bought.",
+    includes: [
+      "Lesson video playback",
+      "Only after a video file exists",
+      "Not buyable yet",
+    ],
+    cta: PAID_CTA,
+    href: "/waitlist",
   },
 ]
 
+export function visibleOffers(): Offer[] {
+  return offers.filter((offer) => offer.shown)
+}
+
 export function getParseablePricing() {
+  const publicOffers = offers.filter((offer) => offer.id !== "video" || offer.shown)
   return {
+    currency: PRICING_CURRENCY,
     map: PRICE_MAP_LABEL,
     detail: PRICE_MAP_DETAIL,
-    labels: {
-      free: "written lessons — free, no video",
-      early: "waitlist / early — written only, no video",
-      written: "written only, no video",
-      video: "written + video — coming soon",
-    },
-    userPlans: [...USER_PLANS],
-    userPlanLabels: USER_PLAN_LABELS,
-    billing: "planned",
-    paymentsLive: false,
-    checkout: "waitlist",
+    notIncluded: NOT_INCLUDED,
+    paymentsLive: PAYMENTS_LIVE,
+    videosPublished: VIDEOS_PUBLISHED,
+    monthlyPlan: false,
+    billing: "not_live" as const,
+    checkout: "waitlist" as const,
     checkoutStatus: CHECKOUT_STATUS,
     refundPolicy: REFUND_POLICY,
+    refundPolicyPendingLegalReview: REFUND_POLICY_PENDING_LEGAL_REVIEW,
+    merchant: MERCHANT_NOTE,
     supportEmail: SUPPORT_EMAIL,
     x402: false,
     stripe: false,
@@ -145,19 +200,23 @@ export function getParseablePricing() {
       url: `${SITE_URL}/tools/academy-brief`,
       job: "Paste a raw intel dump or notes. Receive a structured brief using the academy method, citing real catalog topics and lessons.",
       not: "Not a chat-with-the-site assistant. Not an operational intelligence product. Not a standalone SKU.",
-      includedInPaidPlans: true,
+      allowance: "Free preview: one brief",
     },
-    plans: plans.map((p) => ({
-      id: p.id,
-      userPlan: p.userPlan,
-      name: p.name,
-      label: p.blurb,
-      includesVideo: p.includesVideo,
-      includesAcademyBrief: p.includesAcademyBrief,
-      briefAllowance: p.briefAllowance,
-      features: p.features,
-      available: p.available,
-      url: `${SITE_URL}${p.href}`,
+    offers: publicOffers.map((offer) => ({
+      id: offer.id,
+      name: offer.name,
+      priceAud: offer.priceAud,
+      priceLabel: offer.priceLabel,
+      currency: offer.currency,
+      billing: offer.billing,
+      available: offer.available,
+      buyable: offer.buyable,
+      status: offer.status,
+      summary: offer.summary,
+      includes: offer.includes,
+      cta: offer.cta,
+      href: offer.href,
+      url: `${SITE_URL}${offer.href}`,
     })),
   }
 }

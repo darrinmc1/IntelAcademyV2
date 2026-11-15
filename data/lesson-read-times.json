@@ -56,8 +56,8 @@
     "minutes": 5
   },
   "data-visualization-intelligence": {
-    "words": 1184,
-    "minutes": 6
+    "words": 1457,
+    "minutes": 7
   },
   "deep-web-research-for-intel-analysts": {
     "words": 878,
@@ -203,6 +203,10 @@
     "words": 748,
     "minutes": 4
   },
+  "key-assumptions-check-testing-what-your-judgment-rests-on": {
+    "words": 1496,
+    "minutes": 7
+  },
   "learning-paths": {
     "words": 256,
     "minutes": 2
@@ -297,6 +301,10 @@
   },
   "recommendation-framework": {
     "words": 1672,
+    "minutes": 8
+  },
+  "red-teaming-and-devils-advocacy-for-analysts": {
+    "words": 1693,
     "minutes": 8
   },
   "repeat-offender-profiling-identifying-and-analyzing-patterns-of-repeat-offenders": {
@@ -410,6 +418,10 @@
   "verbal-briefing-techniques": {
     "words": 1065,
     "minutes": 5
+  },
+  "verifying-photos-and-video-before-you-cite-them": {
+    "words": 1577,
+    "minutes": 7
   },
   "visual-intelligence-reporting": {
     "words": 1257,

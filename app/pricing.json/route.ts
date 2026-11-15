@@ -1,16 +1,11 @@
 import { NextResponse } from "next/server"
+import { getParseablePricing } from "@/lib/pricing"
 
-/** Public file stays up so the URL does not 404. No prices, currency, or plan catalog. */
+/** Machine-readable AUD offer. paymentsLive stays false. No checkout URLs. */
 export function GET() {
-  return NextResponse.json(
-    {
-      paymentsLive: false,
-      note: "Coming soon. Written lessons are free.",
+  return NextResponse.json(getParseablePricing(), {
+    headers: {
+      "Cache-Control": "public, max-age=3600",
     },
-    {
-      headers: {
-        "Cache-Control": "public, max-age=3600",
-      },
-    },
-  )
+  })
 }
