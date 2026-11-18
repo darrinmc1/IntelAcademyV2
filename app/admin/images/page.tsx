@@ -19,7 +19,7 @@ export default function AdminImagesPage() {
           <h2 className="text-xl font-semibold mb-4">Image Verification</h2>
           <p className="text-gray-600 mb-4">Check if all referenced images exist and are accessible.</p>
           <Button asChild>
-            <Link href="/admin/image-check">Verify Images</Link>
+            <Link href="/admin/link-checker">Verify Images</Link>
           </Button>
         </div>
 

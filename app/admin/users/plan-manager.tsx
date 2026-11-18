@@ -48,8 +48,8 @@ export function PlanManager() {
           <BadgeCheck className="h-5 w-5" /> Set User Plan
         </CardTitle>
         <CardDescription>
-          Hand-set free / early / pro / video until billing writes this same field. Only the
-          video plan or an admin account can play path intros. No checkout on the site yet.
+          Hand-set the stored plan. Billing is not connected, and this form is not a checkout.
+          Only the video plan or an admin account can play path intros.
         </CardDescription>
       </CardHeader>
       <CardContent>

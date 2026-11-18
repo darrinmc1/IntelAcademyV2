@@ -1,3 +1,3 @@
-/** Merchant-of-record disclosure for Empire HQ / TTPN Pty Ltd. Non-pricing copy only. */
+/** Seller line. No ABN, no postal address, and no claim that this page can charge a card. */
 export const MERCHANT_OF_RECORD_DISCLOSURE =
-  "Part of the Empire HQ network. Payments are charged by TTPN Pty Ltd (statement may show as TTPN or TTPN* plus the product name)."
+  "The seller is TTPN Pty Ltd. This site does not take payment."

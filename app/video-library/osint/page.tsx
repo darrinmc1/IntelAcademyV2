@@ -126,64 +126,34 @@ export default function OSINTVideoLibraryPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card>
             <CardContent className="p-4">
-              <div className="aspect-video relative mb-3">
-                <img
-                  src="/category-images/osint.png"
-                  alt="OSINT Fundamentals Playlist"
-                  className="w-full h-full object-cover rounded-md"
-                />
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">6 Videos</span>
-                </div>
-              </div>
               <h3 className="font-bold text-lg">OSINT Fundamentals</h3>
               <p className="text-muted-foreground text-sm">
-                A introduction to OSINT concepts and methodologies
+                The written OSINT path. This card does not play a playlist.
               </p>
               <Button className="w-full mt-3" asChild>
-                <Link href="/video-library/osint/fundamentals">View Playlist</Link>
+                <Link href="/learning-paths/osint">Open the path</Link>
               </Button>
             </CardContent>
           </Card>
 
           <Card>
             <CardContent className="p-4">
-              <div className="aspect-video relative mb-3">
-                <img
-                  src="digital-investigation-interface.png"
-                  alt="OSINT Tools Playlist"
-                  className="w-full h-full object-cover rounded-md"
-                />
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">8 Videos</span>
-                </div>
-              </div>
               <h3 className="font-bold text-lg">OSINT Tools & Techniques</h3>
-              <p className="text-muted-foreground text-sm">Advanced tools and techniques for OSINT investigations</p>
+              <p className="text-muted-foreground text-sm">The written lesson on OSINT technique.</p>
               <Button className="w-full mt-3" asChild>
-                <Link href="/video-library/osint/tools">View Playlist</Link>
+                <Link href="/topics/osint-techniques">Open the lesson</Link>
               </Button>
             </CardContent>
           </Card>
 
           <Card>
             <CardContent className="p-4">
-              <div className="aspect-video relative mb-3">
-                <img
-                  src="/socmint-techniques-thumb.png"
-                  alt="SOCMINT Playlist"
-                  className="w-full h-full object-cover rounded-md"
-                />
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">5 Videos</span>
-                </div>
-              </div>
               <h3 className="font-bold text-lg">Social Media Intelligence</h3>
               <p className="text-muted-foreground text-sm">
-                Specialized techniques for gathering intelligence from social platforms
+                The written lesson on social media collection.
               </p>
               <Button className="w-full mt-3" asChild>
-                <Link href="/video-library/osint/socmint">View Playlist</Link>
+                <Link href="/topics/socmint-techniques">Open the lesson</Link>
               </Button>
             </CardContent>
           </Card>

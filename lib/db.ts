@@ -709,6 +709,65 @@ export type ActivityRow = {
  * Most recent entries from the review audit log, joined with the actor and
  * the submission they acted on. Powers the dashboard "Recent Activity" feed.
  */
+export type AdminUserRow = {
+  id: string
+  email: string
+  codename: string
+  role: string
+  plan: string
+  createdAt: string
+  lessonsViewed: string[]
+}
+
+function parseViewList(value: unknown): string[] {
+  if (Array.isArray(value)) return value.filter((item) => typeof item === "string")
+  if (typeof value !== "string" || !value) return []
+  try {
+    const parsed = JSON.parse(value)
+    return Array.isArray(parsed) ? parsed.filter((item) => typeof item === "string") : []
+  } catch {
+    return []
+  }
+}
+
+/**
+ * Accounts for the admin users page. No password hashes.
+ */
+export async function listUsersForAdmin(limit = 200): Promise<AdminUserRow[]> {
+  const result = await sql`
+    SELECT id, email, codename, role, plan, created_at, lessons_viewed
+    FROM users
+    ORDER BY created_at DESC
+    LIMIT ${limit}
+  `
+  return result.rows.map((row) => ({
+    id: String(row.id),
+    email: String(row.email),
+    codename: String(row.codename),
+    role: String(row.role || "user"),
+    plan: String(row.plan || "free"),
+    createdAt: row.created_at ? new Date(row.created_at).toISOString() : "",
+    lessonsViewed: parseViewList(row.lessons_viewed),
+  }))
+}
+
+/**
+ * Record a page a signed-in account opened. Ignores duplicates.
+ */
+export async function recordLessonView(id: string, slug: string) {
+  const user = await getUserById(id)
+  if (!user) return
+  const viewed = parseViewList(user.lessons_viewed)
+  if (!viewed.includes(slug)) viewed.push(slug)
+  await sql`
+    UPDATE users
+    SET lessons_viewed = ${JSON.stringify(viewed)},
+        last_visit_date = ${new Date().toISOString()},
+        updated_at = NOW()
+    WHERE id = ${id}
+  `
+}
+
 export async function getRecentActivity(limit = 8): Promise<ActivityRow[]> {
   const r = await sql`
     SELECT a.action, a.comment, a.created_at,

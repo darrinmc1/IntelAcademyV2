@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { HoneypotField } from "@/components/HoneypotField"
+import Link from "next/link"
 
 const TAG_ID = "4031941"
 const POPUP_STORAGE_KEY = "intel-academy-waitlist-seen"
@@ -91,7 +92,7 @@ export function WaitlistPopup() {
                         🎓 Intel Academy is expanding
                     </DialogTitle>
                     <DialogDescription className="text-base pt-2">
-                        New lessons are on the way. Join the list. Written lessons stay free.
+                        New lessons are on the way. This is an email list, not a checkout. The normal plan is A$9/month inc GST.
                     </DialogDescription>
                 </DialogHeader>
 
@@ -129,6 +130,11 @@ export function WaitlistPopup() {
 
                         <p className="text-xs text-muted-foreground text-center">
                             We'll only contact you when the site's good and ready!
+                        </p>
+                        <p className="text-center text-sm">
+                            <Link href="/register" className="text-cyan-400 underline underline-offset-2" onClick={handleClose}>
+                                Create a free account
+                            </Link>
                         </p>
                     </form>
                 ) : (

@@ -146,7 +146,7 @@ export default async function AdminDashboard() {
                     <Link href="/admin/images">Manage Images</Link>
                   </Button>
                   <Button asChild variant="outline">
-                    <Link href="/admin/image-check">Verify Image Paths</Link>
+                    <Link href="/admin/link-checker">Verify Image Paths</Link>
                   </Button>
                 </div>
               </CardFooter>

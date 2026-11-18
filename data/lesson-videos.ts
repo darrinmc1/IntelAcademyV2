@@ -21,7 +21,7 @@ export const lessonVideos: LessonVideoMap = {
       duration: "23:00",
       description: "An introduction to Open Source Intelligence and its importance in modern intelligence analysis.",
     },
-    "osint-types-categories": {
+    "osint-workflow": {
       videoId: "SbYVcIQJY-o", // OSINT Types and Categories
       duration: "15:21",
       description: "Explore the different types and categories of OSINT and how they're used in intelligence work.",

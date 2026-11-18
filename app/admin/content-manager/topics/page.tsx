@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ChevronLeft, Edit, Eye, Plus } from "lucide-react"
-import { getAvailablePages } from "@/app/actions/content-manager-client"
+import { listRoutePages } from "@/lib/catalog-pages"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/admin/content-manager/topics" },
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 }
 
 export default function TopicsContentManagerPage() {
-  const topics = getAvailablePages("topics")
+  const topics = listRoutePages("topics")
 
   return (
     <div className="space-y-6">

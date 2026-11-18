@@ -15,6 +15,7 @@ import { AuthProvider } from "@/components/auth-provider"
 import { Toaster } from "sonner"
 
 import { FeedbackWidget } from '@/components/feedback-widget'
+import { RecordOpen } from "@/components/record-open"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -85,6 +86,7 @@ export default function RootLayout({
             <Footer />
             <ScrollToTop />
             <FeedbackWidget />
+            <RecordOpen />
             <Toaster position="top-right" theme="dark" richColors />
           </AuthProvider>
         </UserProvider>

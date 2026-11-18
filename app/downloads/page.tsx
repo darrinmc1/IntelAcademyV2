@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { collectionPacks } from "@/lib/pricing"
 import {
   AlertTriangle, BarChart2, BookOpen, CheckSquare, Clock,
   Database, DollarSign, Download, FileSpreadsheet, FileText, Globe,
@@ -305,6 +306,7 @@ export default function Downloads() {
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl">
             PDF templates and checklists. The files on this page are the ones that download.
+            Collection packs are listed at {collectionPacks.map((pack) => pack.label.replace(", inc GST", "")).join(", ")} on the pricing page. There is no buy button here.
           </p>
         </div>
       </div>
@@ -318,6 +320,11 @@ export default function Downloads() {
             <Link href="/contact" className="text-cyan-400 hover:underline">
               Use the contact form
             </Link>
+            .{" "}
+            <Link href="/register" className="text-cyan-400 hover:underline">
+              Create a free account
+            </Link>
+            .
           </p>
         </div>
 

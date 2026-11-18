@@ -179,7 +179,7 @@ export default function LearnMore() {
                   </p>
                   <div className="mt-4">
                     <Button asChild>
-                      <Link href="/waitlist">Join the list</Link>
+                      <Link href="/register">Create a free account</Link>
                     </Button>
                   </div>
                 </div>

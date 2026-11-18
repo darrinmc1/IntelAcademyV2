@@ -204,7 +204,7 @@ export default function RegisterPage() {
             ) : (
               <>
                 <UserPlus className="w-4 h-4" />
-                Enlist as Agent
+                Create a free account
               </>
             )}
           </button>
@@ -216,11 +216,12 @@ export default function RegisterPage() {
             </Link>
           </div>
           <p className="mt-4 text-center text-xs text-slate-500">
-            Free signup. Written lessons stay free. Video is coming soon —{" "}
-            <Link href="/buy" className="text-cyan-400 hover:text-cyan-300">
-              join the list
+            Free signup. The normal plan is A$9/month inc GST, with A$5 for the first month
+            after you create this account.{" "}
+            <Link href="/pricing" className="text-cyan-400 hover:text-cyan-300">
+              Pricing
             </Link>
-            .
+            . No checkout on this form.
           </p>
         </form>
       </div>
