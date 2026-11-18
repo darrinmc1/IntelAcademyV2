@@ -5,11 +5,12 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import { GOVERNING_LAW, SELLER_NAME, SUPPORT_EMAIL } from "@/lib/pricing"
 
 export const metadata = {
   alternates: { canonical: "/privacy" },
   title: "Privacy Policy",
-  description: "Privacy policy for The Intel Analyst Academy website",
+  description: "Privacy policy for The Intel Analyst Academy. Seller: TTPN Pty Ltd.",
 }
 
 export default function PrivacyPolicy() {
@@ -31,70 +32,49 @@ export default function PrivacyPolicy() {
 
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
-        
+
         <div className="prose max-w-none">
-          <p className="text-lg mb-6">Last Updated: {new Date().toLocaleDateString()}</p>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">1. Introduction</h2>
+          <p className="text-lg mb-6">Last updated: 18 November 2026</p>
+
+          <h2 className="text-2xl font-semibold mt-8 mb-4">1. Who holds the data</h2>
           <p>
-            Welcome to The Intel Analyst Academy. We respect your privacy and are committed to protecting your personal data.
-            This privacy policy will inform you about how we look after your personal data when you visit our website and tell
-            you about your privacy rights and how the law protects you.
+            {SELLER_NAME} runs The Intel Analyst Academy. Privacy questions go to{" "}
+            <a className="text-cyan-400 underline underline-offset-2" href={`mailto:${SUPPORT_EMAIL}`}>
+              {SUPPORT_EMAIL}
+            </a>{" "}
+            or the <a href="/contact" className="underline">contact form</a>.
           </p>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">2. The Data We Collect</h2>
-          <p>
-            We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows:
-          </p>
+
+          <h2 className="text-2xl font-semibold mt-8 mb-4">2. What we collect</h2>
           <ul className="list-disc pl-6 my-4 space-y-2">
-            <li><strong>Identity Data</strong> includes first name, last name, username or similar identifier.</li>
-            <li><strong>Contact Data</strong> includes the name and email address you type into a form.</li>
-            <li><strong>Technical Data</strong> includes internet protocol (IP) address, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform, and other technology on the devices you use to access this website.</li>
-            <li><strong>Usage Data</strong> includes information about how you use our website, products and services.</li>
+            <li><strong>Account data</strong> includes the email address and codename you use to create a free account, and a hash of your PIN. We do not store the PIN itself.</li>
+            <li><strong>Usage data</strong> includes the pages and lessons a signed-in account opens, so we can see basic use of the site.</li>
+            <li><strong>Message data</strong> includes what you type into the contact form, the feedback form, or a topic request.</li>
+            <li><strong>Technical data</strong> includes the usual server logs: IP address, browser, and the time of a request.</li>
           </ul>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">3. How We Use Your Data</h2>
-          <p>
-            We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:
-          </p>
+
+          <h2 className="text-2xl font-semibold mt-8 mb-4">3. Why</h2>
           <ul className="list-disc pl-6 my-4 space-y-2">
-            <li>To create an account if you register.</li>
-            <li>To show the lessons and exercises you open.</li>
-            <li>To read a message you send through the contact form, feedback form, or a topic request.</li>
+            <li>To create the account you asked for.</li>
+            <li>To see how many accounts exist and which lessons they open.</li>
+            <li>To read a message you sent and reply.</li>
             <li>To keep the site working.</li>
           </ul>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">4. Data Security</h2>
+
+          <h2 className="text-2xl font-semibold mt-8 mb-4">4. Security and retention</h2>
           <p>
-            We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your personal data to those employees, agents, contractors and other third parties who have a business need to know.
+            Access to account records is limited to people who need it to run the site. We keep the data while the
+            account exists, or while we need it for a legal or accounting duty, and then delete it or de-identify it.
           </p>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">5. Data Retention</h2>
+
+          <h2 className="text-2xl font-semibold mt-8 mb-4">5. Your rights</h2>
           <p>
-            We will only retain your personal data for as long as necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal, accounting, or reporting requirements.
+            Australian privacy law gives you a right to ask for access to the personal information we hold, and to ask
+            for a correction. You can also ask us to delete the account. Use the contact email above.
           </p>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">6. Your Legal Rights</h2>
-          <p>
-            Under certain circumstances, you have rights under data protection laws in relation to your personal data, including the right to:
-          </p>
-          <ul className="list-disc pl-6 my-4 space-y-2">
-            <li>Request access to your personal data.</li>
-            <li>Request correction of your personal data.</li>
-            <li>Request erasure of your personal data.</li>
-            <li>Object to processing of your personal data.</li>
-            <li>Request restriction of processing your personal data.</li>
-            <li>Request transfer of your personal data.</li>
-            <li>Right to withdraw consent.</li>
-          </ul>
-          
-          <h2 className="text-2xl font-semibold mt-8 mb-4">7. Contact Us</h2>
-          <p>
-            If you have any questions about this privacy policy or our privacy practices, please contact us at:
-          </p>
-          <p className="mt-2">
-            Use the <a href="/contact" className="underline">contact form</a>.
-          </p>
+
+          <h2 className="text-2xl font-semibold mt-8 mb-4">6. Law</h2>
+          <p>{GOVERNING_LAW}</p>
         </div>
       </div>
     </div>

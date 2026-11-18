@@ -1,119 +1,152 @@
 import { USER_PLAN_LABELS, USER_PLANS, type UserPlan } from "@/lib/user-plan"
 
 /**
- * Public access copy — no live dollar amounts until lesson videos ship.
- * Used by /pricing, /pricing.json, /llm.txt, FAQ, JSON-LD, and refunds.
- * Payments are not live — paid CTAs go to /waitlist or /contact.
- * No Stripe, Payment Links, x402, or crypto checkout.
+ * The only public price map.
+ * Payments are not taken on the site: no Stripe, Payment Links, or checkout.
+ * Every public purchase-shaped CTA is "Create a free account" → /register.
  *
- * Entitlements (catalog id → stored USER_PLANS id). Plan ids stay; prices do not.
- *   free   → free  = written lessons, NO video
- *   early  → early = waitlist / early, written, NO video
- *   normal → pro   = written, NO video
- *   video  → video = written + video
- *
- * Academy Brief is a tool / preview — not a standalone SKU.
- * The dollar map lives on a parked branch until videos are done. Do not print it here.
+ * Replaces the previous public map, which had no dollar amounts:
+ * "Written lessons are free. Video is coming soon." Plans were free / early /
+ * written / video, and paid buttons went to a waitlist. There is no $5 / $10 / $19
+ * course-tier map on this branch.
  */
 
 export const SITE_URL = "https://theintelanalystacademy.com"
 
+/** Public contact address already used by this site. Not an office address. */
 export const SUPPORT_EMAIL = "info@theintelanalystacademy.com"
+
+export const SELLER_NAME = "TTPN Pty Ltd"
+
+export const GOVERNING_LAW =
+  "These terms are governed by the laws of Queensland and Australia. You submit to the non-exclusive jurisdiction of the courts of Queensland, Australia."
+
+export const ACCOUNT_CTA = "Create a free account"
+
+export const ACCOUNT_HREF = "/register"
 
 export const DISCLAIMER =
   "Academy Brief is a training and education tool. It is not an operational intelligence product, does not constitute finished intelligence, and must not be used as a substitute for authorized analysis."
 
-export const CHECKOUT_STATUS = "Coming soon. Join the list."
+export const CHECKOUT_STATUS = "This site does not take payment. Create a free account."
 
-export const REFUND_POLICY = "Payments are not set up. There is nothing to charge or refund."
+export const REFUND_POLICY =
+  "If a charge is made, you can ask for a refund within 3 days of the charge. You can cancel anytime. There is no lifetime plan and no unlimited deal."
 
-export const PRICE_MAP_LABEL = "Written lessons are free. Video is coming soon."
+export const INTRO_TERMS =
+  "The intro price applies to the first month only, then renews at A$9/month. Cancel anytime."
 
-export const PRICE_MAP_DETAIL = "Written lessons stay free. Video is coming soon."
+export const NO_LIFETIME =
+  "There is no lifetime plan and no unlimited deal."
 
-export type PlanId = "free" | "early" | "normal" | "video"
+export const PRICE_MAP_LABEL =
+  "Normal plan A$9/month inc GST. Limited time: A$5 for the first month if you create a free account with your email."
 
-export type Plan = {
-  id: PlanId
-  /** Stored users.plan value. Catalog id `normal` maps to stored `pro`. */
-  userPlan: UserPlan
-  name: string
-  blurb: string
-  description: string
-  includesVideo: boolean
-  includesAcademyBrief: boolean
-  briefAllowance: string
-  features: string[]
-  cta: string
+export const PRICE_MAP_DETAIL = `${INTRO_TERMS} Three lessons are free. Collection packs are A$9, A$14, or A$19 one-off, inc GST. This site does not take payment.`
+
+export type PlanId = "free" | "normal" | "packs"
+
+export type FreeItem = {
+  id: string
+  title: string
   href: string
-  highlighted: boolean
-  available: boolean
+  label: "Free"
+  why: string
 }
 
-export const plans: Plan[] = [
+/** The three lessons the homepage already puts first. */
+export const freeItems: FreeItem[] = [
   {
-    id: "free",
-    userPlan: "free",
-    name: "Free",
-    blurb: "Written lessons",
-    description: "Written lessons. Free. No video.",
-    includesVideo: false,
-    includesAcademyBrief: true,
-    briefAllowance: "1 structured brief preview",
-    features: ["Written lessons", "No video", "1 Academy Brief preview"],
-    cta: "Start free",
-    href: "/register",
-    highlighted: false,
-    available: true,
+    id: "intelligence-report-fundamentals",
+    title: "Intelligence Report Fundamentals",
+    href: "/topics/intelligence-report-fundamentals",
+    label: "Free",
+    why: "The sample lesson. See the teaching style before you create an account.",
   },
   {
-    id: "early",
-    userPlan: "early",
-    name: "Early",
-    blurb: "Waitlist / early — written only, no video",
-    description: "Waitlist / early for people who already signed up. Written lessons only. No video.",
-    includesVideo: false,
-    includesAcademyBrief: true,
-    briefAllowance: "Academy Brief included as a tool (when billing is live)",
-    features: [
-      "Waitlist / early for people who already signed up",
-      "Written lessons only",
-      "No video",
-    ],
-    cta: "Join the waitlist",
-    href: "/waitlist",
-    highlighted: true,
-    available: false,
+    id: "introduction-to-link-analysis",
+    title: "Introduction to Link Analysis",
+    href: "/topics/introduction-to-link-analysis",
+    label: "Free",
+    why: "The technique lesson. Entities, relationships, and a picture you can defend.",
   },
   {
-    id: "normal",
-    userPlan: "pro",
-    name: "Written",
-    blurb: "Written only, no video",
-    description: "Written lessons only. No video. Not a video plan.",
-    includesVideo: false,
-    includesAcademyBrief: true,
-    briefAllowance: "Academy Brief included as a tool (when billing is live)",
-    features: ["Written lessons only", "No video"],
-    cta: "Join the waitlist",
-    href: "/waitlist",
-    highlighted: false,
-    available: false,
+    id: "intelligence-failures",
+    title: "Intelligence Failures",
+    href: "/topics/intelligence-failures",
+    label: "Free",
+    why: "The case lesson. What happens when the assumption is the story.",
+  },
+]
+
+export type PaidPlan = {
+  id: "normal"
+  userPlan: UserPlan
+  name: string
+  priceAud: 9
+  introPriceAud: 5
+  cadence: "month"
+  gst: "inc GST"
+  label: string
+  introLabel: string
+  blurb: string
+  cta: string
+  href: string
+}
+
+export const normalPlan: PaidPlan = {
+  id: "normal",
+  userPlan: "pro",
+  name: "Normal",
+  priceAud: 9,
+  introPriceAud: 5,
+  cadence: "month",
+  gst: "inc GST",
+  label: "A$9/month inc GST",
+  introLabel: "A$5 first month",
+  blurb: "The normal plan for the rest of the academy.",
+  cta: ACCOUNT_CTA,
+  href: ACCOUNT_HREF,
+}
+
+export type CollectionPack = {
+  id: string
+  name: string
+  priceAud: number
+  label: string
+  blurb: string
+  cta: string
+  href: string
+}
+
+/** One-off packs. All inside A$9–A$19. Not a second monthly tier. */
+export const collectionPacks: CollectionPack[] = [
+  {
+    id: "cheatsheets",
+    name: "Cheat sheets and checklists",
+    priceAud: 9,
+    label: "A$9 one-off, inc GST",
+    blurb: "Estimative language, bias, writing, assumptions, and OSINT collection.",
+    cta: ACCOUNT_CTA,
+    href: ACCOUNT_HREF,
   },
   {
-    id: "video",
-    userPlan: "video",
-    name: "Video",
-    blurb: "Written + video — coming soon",
-    description: "Written lessons plus course video. Coming soon.",
-    includesVideo: true,
-    includesAcademyBrief: true,
-    briefAllowance: "Academy Brief included as a tool (when billing is live)",
-    features: ["Written lessons", "Course video", "Not a PDF/book", "Coming soon"],
-    cta: "Join the waitlist",
-    href: "/waitlist",
-    highlighted: false,
-    available: false,
+    id: "templates",
+    name: "Template library",
+    priceAud: 14,
+    label: "A$14 one-off, inc GST",
+    blurb: "Report formats, briefing notes, matrices, and collection plans.",
+    cta: ACCOUNT_CTA,
+    href: ACCOUNT_HREF,
+  },
+  {
+    id: "guides",
+    name: "Guides and handbooks",
+    priceAud: 19,
+    label: "A$19 one-off, inc GST",
+    blurb: "The primer, risk framework, and digital evidence notes.",
+    cta: ACCOUNT_CTA,
+    href: ACCOUNT_HREF,
   },
 ]
 
@@ -121,20 +154,46 @@ export function getParseablePricing() {
   return {
     map: PRICE_MAP_LABEL,
     detail: PRICE_MAP_DETAIL,
-    labels: {
-      free: "written lessons — free, no video",
-      early: "waitlist / early — written only, no video",
-      written: "written only, no video",
-      video: "written + video — coming soon",
+    seller: SELLER_NAME,
+    governingLaw: "Queensland, Australia",
+    currency: "AUD",
+    gst: "inc GST",
+    normal: {
+      id: normalPlan.id,
+      name: normalPlan.name,
+      userPlan: normalPlan.userPlan,
+      priceAud: normalPlan.priceAud,
+      label: normalPlan.label,
+      introPriceAud: normalPlan.introPriceAud,
+      introLabel: normalPlan.introLabel,
+      introWho: "people who create a free account with their email",
+      introTerms: INTRO_TERMS,
     },
+    free: freeItems.map((item) => ({
+      id: item.id,
+      title: item.title,
+      label: item.label,
+      url: `${SITE_URL}${item.href}`,
+    })),
+    packs: collectionPacks.map((pack) => ({
+      id: pack.id,
+      name: pack.name,
+      priceAud: pack.priceAud,
+      label: pack.label,
+      cadence: "one-off",
+    })),
     userPlans: [...USER_PLANS],
     userPlanLabels: USER_PLAN_LABELS,
-    billing: "planned",
+    billing: "not-connected",
     paymentsLive: false,
-    checkout: "waitlist",
+    checkout: "none",
     checkoutStatus: CHECKOUT_STATUS,
+    cta: ACCOUNT_CTA,
+    ctaUrl: `${SITE_URL}${ACCOUNT_HREF}`,
     refundPolicy: REFUND_POLICY,
     supportEmail: SUPPORT_EMAIL,
+    lifetime: false,
+    unlimited: false,
     x402: false,
     stripe: false,
     paymentLinks: false,
@@ -145,19 +204,6 @@ export function getParseablePricing() {
       url: `${SITE_URL}/tools/academy-brief`,
       job: "Paste a raw intel dump or notes. Receive a structured brief using the academy method, citing real catalog topics and lessons.",
       not: "Not a chat-with-the-site assistant. Not an operational intelligence product. Not a standalone SKU.",
-      includedInPaidPlans: true,
     },
-    plans: plans.map((p) => ({
-      id: p.id,
-      userPlan: p.userPlan,
-      name: p.name,
-      label: p.blurb,
-      includesVideo: p.includesVideo,
-      includesAcademyBrief: p.includesAcademyBrief,
-      briefAllowance: p.briefAllowance,
-      features: p.features,
-      available: p.available,
-      url: `${SITE_URL}${p.href}`,
-    })),
   }
 }

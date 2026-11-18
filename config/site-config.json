@@ -14,9 +14,12 @@
     { "name": "Chief Intelligence Officer", "icon": "🔴", "minPoints": 3000 }
   ],
   "pricing": {
-    "checkout": "waitlist",
+    "checkout": "none",
     "paymentsLive": false,
-    "note": "No live prices. Written lessons are free. Video is coming soon."
+    "normal": "A$9/month inc GST",
+    "intro": "A$5 first month for a free account with email, then A$9/month",
+    "packs": "A$9, A$14, or A$19 one-off, inc GST",
+    "note": "One price map. No checkout on the site."
   },
   "points": {
     "lessonComplete": 50,

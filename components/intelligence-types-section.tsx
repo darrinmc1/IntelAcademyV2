@@ -107,7 +107,7 @@ export function IntelligenceTypesSection({
         {showViewAll && (
           <div className="text-center mt-8">
             <Link
-              href="/intelligence-types"
+              href="/learning-paths"
               className="inline-block px-6 py-2 border border-gray-300 dark:border-gray-600 rounded-md 
                         hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors 
                         hover:border-gray-400 dark:hover:border-gray-500"

@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ChevronLeft, Edit, Eye, Plus } from "lucide-react"
-import { getAvailablePages } from "@/app/actions/content-manager-client"
+import { ChevronLeft, Eye } from "lucide-react"
+import { listRoutePages } from "@/lib/catalog-pages"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/admin/content-manager/learning-paths" },
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 }
 
 export default function LearningPathsContentManagerPage() {
-  const learningPaths = getAvailablePages("learning-paths")
+  const learningPaths = listRoutePages("learning-paths")
 
   return (
     <div className="space-y-6">
@@ -30,13 +30,6 @@ export default function LearningPathsContentManagerPage() {
       <div className="border rounded-md">
         <div className="bg-muted p-4 flex justify-between items-center">
           <div className="font-medium">Learning Paths ({learningPaths.length})</div>
-          <Link
-            href="/admin/content-manager/learning-paths/new"
-            className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-4 py-2"
-          >
-            <Plus className="h-4 w-4 mr-2" />
-            Add New Learning Path
-          </Link>
         </div>
 
         {learningPaths.length > 0 ? (
@@ -48,13 +41,6 @@ export default function LearningPathsContentManagerPage() {
                   <p className="text-sm text-muted-foreground">ID: {path.id}</p>
                 </div>
                 <div className="flex gap-2">
-                  <Link
-                    href={`/admin/content-manager/learning-paths/${path.id}`}
-                    className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-9 px-3"
-                  >
-                    <Edit className="h-4 w-4 mr-2" />
-                    Edit
-                  </Link>
                   <Link
                     href={`/learning-paths/${path.id}`}
                     target="_blank"

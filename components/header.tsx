@@ -135,7 +135,7 @@ export function Header() {
                 <Link href="/learning-paths" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Learning Paths</Link>
                 <Link href="/exercises" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Practical Exercises</Link>
                 <Link href="/instructor" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">AI Instructor</Link>
-                <Link href="/pricing" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Coming soon</Link>
+                <Link href="/pricing" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Pricing</Link>
                 <Link href="/tools/academy-brief" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Academy Brief</Link>
                 <Link href="/tools" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Analyst Tools</Link>
                 <Link href="/downloads" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Downloads</Link>
@@ -150,7 +150,7 @@ export function Header() {
                 ) : (
                   <>
                     <Link href="/login" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Sign In</Link>
-                    <Link href="/register" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Join Early Access</Link>
+                    <Link href="/register" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Create a free account</Link>
                   </>
                 )}
               </nav>
@@ -222,7 +222,7 @@ export function Header() {
                             Forum
                           </Link>
                           <Link href="/pricing" className="block px-4 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-cyan-400 transition-colors" onClick={closeDropdowns}>
-                            Coming soon
+                            Pricing
                           </Link>
                         </>
                       )}
@@ -292,7 +292,7 @@ export function Header() {
                   Sign In
                 </Link>
                 <Link href="/register" className="text-xs px-2 py-1 rounded-full bg-cyan-600 hover:bg-cyan-500 text-white font-medium border border-cyan-400/30">
-                  Join Early Access
+                  Create a free account
                 </Link>
               </>
             )}

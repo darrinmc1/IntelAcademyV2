@@ -6,15 +6,14 @@ export type UserPlan = (typeof USER_PLANS)[number]
 export const VIDEO_PLAN: UserPlan = "video"
 
 /**
- * Signup / waitlist labels for the stored USER_PLANS field.
- * Catalog ids in pricing.json use `normal` for the written plan; the stored plan is `pro`.
- * No live dollar amounts — checkout isn't live.
+ * Stored entitlement labels. Dollar amounts live only in lib/pricing.ts.
+ * Catalog id `normal` maps to stored `pro`. Video playback stays on `video`.
  */
 export const USER_PLAN_LABELS: Record<UserPlan, string> = {
-  free: "Free — written lessons, no video",
-  early: "Waitlist / early — written, no video",
-  pro: "Written plan — written, no video",
-  video: "Video plan — written + video",
+  free: "Free account",
+  early: "Early account",
+  pro: "Normal plan",
+  video: "Video plan",
 }
 
 export function isUserPlan(value: unknown): value is UserPlan {

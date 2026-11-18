@@ -27,11 +27,11 @@ export const academyBriefFaqs = [
     answer: "Yes. One structured-brief preview is free. Academy Brief is a training tool.",
   },
   {
-    question: "What is free right now?",
-    answer: `${PRICE_MAP_LABEL} ${PRICE_MAP_DETAIL}`,
+    question: "What does the normal plan cost?",
+    answer: `${PRICE_MAP_LABEL} ${PRICE_MAP_DETAIL} Create a free account. There is no checkout on this site.`,
   },
   {
-    question: "Are payments set up?",
+    question: "What is the refund policy?",
     answer: REFUND_POLICY,
   },
   {
@@ -98,7 +98,7 @@ export function pricingJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Coming soon",
+    name: "Pricing",
     url: `${SITE_URL}/pricing`,
     description: `${PRICE_MAP_LABEL} ${PRICE_MAP_DETAIL}`,
   }

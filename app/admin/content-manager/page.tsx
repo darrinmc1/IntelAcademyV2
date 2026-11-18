@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { getAvailablePages } from "@/app/actions/content-manager-client"
+import { listRoutePages } from "@/lib/catalog-pages"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/admin/content-manager" },
@@ -9,9 +9,8 @@ export const metadata: Metadata = {
 }
 
 export default function ContentManagerPage() {
-  const topicsCount = getAvailablePages("topics").length
-  const learningPathsCount = getAvailablePages("learning-paths").length
-  const glossaryCount = getAvailablePages("glossary").length
+  const topicsCount = listRoutePages("topics").length
+  const learningPathsCount = listRoutePages("learning-paths").length
   return (
     <div className="space-y-6">
       <div>
@@ -34,27 +33,23 @@ export default function ContentManagerPage() {
         />
         <ContentSection
           title="Resources"
-          description="Manage downloadable resources and materials"
-          href="/admin/content-manager/resources"
-          count={0}
+          description="The downloadable files currently on the site"
+          href="/downloads"
         />
         <ContentSection
           title="Glossary"
-          description="Edit intelligence terminology and definitions"
-          href="/admin/content-manager/glossary"
-          count={glossaryCount}
+          description="Intelligence terminology published on the site"
+          href="/glossary"
         />
         <ContentSection
           title="Media Library"
-          description="Manage images, videos and other media assets"
-          href="/admin/content-manager/media"
-          count={0}
+          description="Images already uploaded for the site"
+          href="/admin/images"
         />
         <ContentSection
           title="Site Content"
-          description="Edit static pages and site-wide content"
-          href="/admin/content-manager/site"
-          count={0}
+          description="Site settings"
+          href="/admin/settings"
         />
       </div>
     </div>
@@ -70,16 +65,18 @@ function ContentSection({
   title: string
   description: string
   href: string
-  count: number
+  count?: number
 }) {
   return (
     <div className="rounded-lg border bg-card text-card-foreground shadow">
       <div className="p-6 flex flex-col h-full">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold">{title}</h3>
-          <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">
-            {count} items
-          </div>
+          {typeof count === "number" && (
+            <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">
+              {count} items
+            </div>
+          )}
         </div>
         <p className="text-sm text-muted-foreground mt-2">{description}</p>
         <div className="flex-1"></div>
