@@ -30,11 +30,8 @@ export const DISCLAIMER =
 
 export const CHECKOUT_STATUS = "This site does not take payment. Create a free account."
 
-/** Shown as a visible label, not a footnote. */
-export const PENDING_LEGAL_REVIEW = "Pending legal review"
-
 export const REFUND_POLICY =
-  "Pending legal review: if a charge is made, you can ask for a refund within 3 days of the charge. You can cancel anytime. There is no lifetime plan and no unlimited deal."
+  "If a charge is made, you can ask for a refund within 3 days of the charge. You can cancel anytime. There is no lifetime plan and no unlimited deal."
 
 export const INTRO_TERMS =
   "The intro price applies to the first month only, then renews at A$9/month. Cancel anytime."
@@ -194,7 +191,6 @@ export function getParseablePricing() {
     cta: ACCOUNT_CTA,
     ctaUrl: `${SITE_URL}${ACCOUNT_HREF}`,
     refundPolicy: REFUND_POLICY,
-    pendingLegalReview: PENDING_LEGAL_REVIEW,
     supportEmail: SUPPORT_EMAIL,
     lifetime: false,
     unlimited: false,

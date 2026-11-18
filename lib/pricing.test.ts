@@ -5,7 +5,6 @@ import {
   CHECKOUT_STATUS,
   INTRO_TERMS,
   NO_LIFETIME,
-  PENDING_LEGAL_REVIEW,
   PRICE_MAP_DETAIL,
   PRICE_MAP_LABEL,
   REFUND_POLICY,
@@ -99,7 +98,7 @@ describe("one public price map", () => {
   })
 
   it("uses one refund sentence, one intro sentence, and one support email", () => {
-    expect(REFUND_POLICY).toContain(PENDING_LEGAL_REVIEW)
+    expect(REFUND_POLICY.toLowerCase()).not.toMatch(/pending legal review/)
     expect(REFUND_POLICY.toLowerCase()).toContain("3 days")
     expect(REFUND_POLICY.toLowerCase()).toContain("cancel anytime")
     expect(NO_LIFETIME.toLowerCase()).toContain("no lifetime")
@@ -108,7 +107,7 @@ describe("one public price map", () => {
     expect(getParseablePricing().normal.introTerms).toBe(INTRO_TERMS)
     expect(SUPPORT_EMAIL).toBe("info@theintelanalystacademy.com")
     expect(SELLER_NAME).toBe("TTPN Pty Ltd")
-    expect(JSON.stringify(getParseablePricing())).not.toMatch(/ABN|Suite|PO Box|postal/i)
+    expect(JSON.stringify(getParseablePricing())).not.toMatch(/ABN|Suite|PO Box|postal|pending legal review/i)
   })
 
   it("keeps FAQ, llm.txt, and JSON-LD on the same map, without an Offer checkout", () => {

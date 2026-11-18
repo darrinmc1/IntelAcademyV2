@@ -10,7 +10,6 @@ import {
   GOVERNING_LAW,
   INTRO_TERMS,
   NO_LIFETIME,
-  PENDING_LEGAL_REVIEW,
   REFUND_POLICY,
   SELLER_NAME,
   SUPPORT_EMAIL,
@@ -72,12 +71,7 @@ export default function TermsOfService() {
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">4. Refunds</h2>
-          <div className="rounded-xl border border-amber-400/40 bg-amber-500/10 p-4 my-4">
-            <p className="text-xs font-semibold uppercase tracking-widest text-amber-200 mb-2">
-              {PENDING_LEGAL_REVIEW}
-            </p>
-            <p>{REFUND_POLICY}</p>
-          </div>
+          <p className="my-4">{REFUND_POLICY}</p>
           <p>
             The full note is on the{" "}
             <Link href="/refunds" className="text-cyan-400 underline underline-offset-2">

@@ -5,7 +5,6 @@ import {
   ACCOUNT_HREF,
   INTRO_TERMS,
   NO_LIFETIME,
-  PENDING_LEGAL_REVIEW,
   REFUND_POLICY,
   SELLER_NAME,
   SUPPORT_EMAIL,
@@ -83,10 +82,7 @@ export default function PricingPage() {
           </div>
         </section>
 
-        <div className="rounded-xl border border-amber-400/40 bg-amber-500/10 p-5 mb-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-amber-200 mb-2">
-            {PENDING_LEGAL_REVIEW}
-          </p>
+        <div className="rounded-xl border border-white/10 bg-slate-900/60 p-5 mb-6">
           <p className="text-slate-100">{REFUND_POLICY}</p>
           <p className="mt-2 text-sm text-slate-300">
             <Link href="/refunds" className="text-cyan-300 underline underline-offset-2">
