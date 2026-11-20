@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
+import { isAccountsGateEnabled } from "@/lib/accounts-gate"
+import { downloadAccess } from "@/lib/content-access"
+import { normalizeEntitlement } from "@/lib/entitlement"
 
 const COOKIE_NAME = "intel-session"
 const encoder = new TextEncoder()
@@ -63,6 +66,35 @@ export async function middleware(request: NextRequest) {
     || request.headers.get("x-real-ip")
     || "unknown"
 
+  const requestHeaders = new Headers(request.headers)
+  requestHeaders.set("x-pathname", url)
+
+  // Public /downloads files stay blocked while the account gate is on.
+  // The page links go through /api/downloads, which applies the same rule.
+  if (isAccountsGateEnabled() && /^\/downloads\/[^/]+\.(pdf|xlsx)$/i.test(url)) {
+    const file = url.split("/").pop() || ""
+    const token = request.cookies.get(COOKIE_NAME)?.value
+    const loginUrl = new URL("/login", request.url)
+    loginUrl.searchParams.set("redirect", "/downloads")
+    if (!token) return NextResponse.redirect(loginUrl)
+    try {
+      const payload = await verifyHs256(token, JWT_SECRET)
+      if (!payload) return NextResponse.redirect(loginUrl)
+      const decision = downloadAccess({
+        fileName: file,
+        signedIn: true,
+        entitlement: normalizeEntitlement(payload.entitlement, payload.plan),
+        packs: payload.packs,
+        role: typeof payload.role === "string" ? payload.role : null,
+      })
+      if (decision !== "allow") {
+        return new NextResponse("This file is not in the free sample. Checkout is not live.", { status: 403 })
+      }
+    } catch {
+      return NextResponse.redirect(loginUrl)
+    }
+  }
+
   // === Admin auth gate: /admin requires an admin-capable role ===
   if (url.startsWith("/admin")) {
     const loginUrl = new URL("/login", request.url)
@@ -79,7 +111,7 @@ export async function middleware(request: NextRequest) {
     }
   }
 
-  const response = NextResponse.next()
+  const response = NextResponse.next({ request: { headers: requestHeaders } })
   const isAeoPath = AEO_PATHS.some((path) => url === path || url.startsWith(`${path}/`))
 
   // === 1. Security Headers ===

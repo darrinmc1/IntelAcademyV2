@@ -105,7 +105,7 @@ describe("one public price map", () => {
     expect(NO_LIFETIME.toLowerCase()).toContain("no unlimited")
     expect(getParseablePricing().refundPolicy).toBe(REFUND_POLICY)
     expect(getParseablePricing().normal.introTerms).toBe(INTRO_TERMS)
-    expect(SUPPORT_EMAIL).toBe("info@theintelanalystacademy.com")
+    expect(SUPPORT_EMAIL).toBe("admin@ttpn.com.au")
     expect(SELLER_NAME).toBe("TTPN Pty Ltd")
     expect(JSON.stringify(getParseablePricing())).not.toMatch(/ABN|Suite|PO Box|postal|pending legal review/i)
   })

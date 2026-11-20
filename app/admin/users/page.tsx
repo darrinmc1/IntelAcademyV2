@@ -1,6 +1,7 @@
 import { getAdminDashboardStats, listUsersForAdmin } from "@/lib/db"
 import { RoleManager } from "./role-manager"
 import { PlanManager } from "./plan-manager"
+import { EntitlementManager } from "./entitlement-manager"
 
 export const dynamic = "force-dynamic"
 
@@ -32,6 +33,7 @@ export default async function UsersPage() {
       </div>
 
       <RoleManager />
+      <EntitlementManager />
       <PlanManager />
 
       <div className="overflow-x-auto rounded-md border">

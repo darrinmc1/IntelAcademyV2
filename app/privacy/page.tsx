@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
         <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
 
         <div className="prose max-w-none">
-          <p className="text-lg mb-6">Last updated: 18 November 2026</p>
+          <p className="text-lg mb-6">Last updated: 20 November 2026</p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">1. Who holds the data</h2>
           <p>
@@ -47,8 +47,8 @@ export default function PrivacyPolicy() {
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">2. What we collect</h2>
           <ul className="list-disc pl-6 my-4 space-y-2">
-            <li><strong>Account data</strong> includes the email address and codename you use to create a free account, and a hash of your PIN. We do not store the PIN itself.</li>
-            <li><strong>Usage data</strong> includes the pages and lessons a signed-in account opens, so we can see basic use of the site.</li>
+            <li><strong>Account data</strong> includes the email address and codename you use to create a free account, a hash of your PIN, and the access label on the account (free, the normal plan, or a collection pack). We do not store the PIN itself. This is not a payment record.</li>
+            <li><strong>Usage data</strong> includes the pages and lessons a signed-in account opens, how long a lesson tab stayed visible, and which download was requested. Other learners cannot see that history. Admin accounts can see the counts.</li>
             <li><strong>Message data</strong> includes what you type into the contact form, the feedback form, or a topic request.</li>
             <li><strong>Technical data</strong> includes the usual server logs: IP address, browser, and the time of a request.</li>
           </ul>
