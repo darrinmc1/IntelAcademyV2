@@ -73,15 +73,15 @@ export default function TopicsPage() {
             <Link
               key={topic.title}
               href={topic.href}
-              className="block p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:shadow-md transition-all hover:bg-blue-50"
+              className="block p-4 border border-white/10 bg-slate-900/60 rounded-lg hover:border-cyan-500 hover:shadow-md transition-all"
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
-                    <h3 className="text-lg font-semibold text-gray-900">{topic.title}</h3>
+                    <h3 className="text-lg font-semibold text-slate-50">{topic.title}</h3>
                     {topic.completed && <span className="text-xs px-2 py-1 bg-green-100 text-green-700 rounded">Completed</span>}
                   </div>
-                  <p className="text-gray-600 text-sm mb-2">{topic.description}</p>
+                  <p className="text-slate-300 text-sm mb-2">{topic.description}</p>
                   <div className="flex flex-wrap gap-3 text-xs text-gray-500">
                     <span className="inline-block px-2 py-1 bg-gray-100 rounded">{topic.category}</span>
                     <span>{topic.estimatedTime}</span>

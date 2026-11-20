@@ -162,6 +162,11 @@ const navItems: NavItem[] = [
     icon: <Users className="h-5 w-5" />,
   },
   {
+    title: "Usage",
+    href: "/admin/usage",
+    icon: <BarChart2 className="h-5 w-5" />,
+  },
+  {
     title: "Analytics",
     href: "/admin/analytics",
     icon: <BarChart2 className="h-5 w-5" />,

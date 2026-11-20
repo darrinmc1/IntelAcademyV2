@@ -1,4 +1,6 @@
 import { sql } from '@vercel/postgres'
+import { newAccountWritesAllowed } from '@/lib/accounts-gate'
+import { normalizeEntitlement, normalizePacks, packsToColumn, type Entitlement, type PackId } from '@/lib/entitlement'
 import { normalizeUserPlan, type UserPlan } from '@/lib/user-plan'
 
 /**
@@ -148,6 +150,130 @@ export async function setUserRole(email: string, role: UserRole) {
  */
 export async function setUserPlan(email: string, plan: UserPlan) {
   await sql`UPDATE users SET plan = ${plan}, updated_at = NOW() WHERE email = ${email.toLowerCase()}`
+}
+
+/**
+ * Set lesson access and collection packs. Does not create columns.
+ * Refuses when the database env is missing or names the blocked project.
+ */
+export async function setUserEntitlement(email: string, entitlement: Entitlement, packs: readonly PackId[]) {
+  if (!newAccountWritesAllowed()) {
+    throw new Error('Account writes are disabled')
+  }
+  const packValue = packsToColumn(packs)
+  await sql`
+    UPDATE users
+    SET entitlement = ${entitlement},
+        entitlement_packs = ${packValue},
+        updated_at = NOW()
+    WHERE email = ${email.toLowerCase()}
+  `
+}
+
+export type UsageEventType = 'lesson_view' | 'read_time' | 'download'
+
+export async function recordUsageEvent(args: {
+  userId: string
+  eventType: UsageEventType
+  resource: string
+  seconds?: number | null
+}): Promise<boolean> {
+  if (!newAccountWritesAllowed()) return false
+  try {
+    await sql`
+      INSERT INTO usage_events (user_id, event_type, resource, seconds)
+      VALUES (${args.userId}, ${args.eventType}, ${args.resource}, ${args.seconds ?? null})
+    `
+    return true
+  } catch (err) {
+    console.error('usage event skipped:', err)
+    return false
+  }
+}
+
+export async function getUsageAdminSummary() {
+  if (!newAccountWritesAllowed()) {
+    throw new Error('Account writes are disabled')
+  }
+  const users = await sql`SELECT COUNT(*)::int AS count FROM users`
+  const events = await sql`
+    SELECT event_type, COUNT(*)::int AS count
+    FROM usage_events
+    GROUP BY event_type
+  `
+  const recent = await sql`
+    SELECT u.email, u.codename, u.entitlement, e.event_type, e.resource, e.seconds, e.created_at
+    FROM usage_events e
+    JOIN users u ON u.id = e.user_id
+    ORDER BY e.created_at DESC
+    LIMIT 100
+  `
+  const perUser = await sql`
+    SELECT u.email, u.codename, u.entitlement, u.created_at,
+      COUNT(e.id)::int AS events,
+      COUNT(*) FILTER (WHERE e.event_type = 'lesson_view')::int AS lesson_views,
+      COALESCE(SUM(e.seconds) FILTER (WHERE e.event_type = 'read_time'), 0)::int AS read_seconds,
+      COUNT(*) FILTER (WHERE e.event_type = 'download')::int AS downloads
+    FROM users u
+    LEFT JOIN usage_events e ON e.user_id = u.id
+    GROUP BY u.id, u.email, u.codename, u.entitlement, u.created_at
+    ORDER BY u.created_at DESC
+    LIMIT 200
+  `
+  return {
+    userCount: Number(users.rows[0]?.count ?? 0),
+    events: events.rows as { event_type: string; count: number }[],
+    recent: recent.rows as {
+      email: string
+      codename: string
+      entitlement: string | null
+      event_type: string
+      resource: string
+      seconds: number | null
+      created_at: string
+    }[],
+    perUser: perUser.rows as {
+      email: string
+      codename: string
+      entitlement: string | null
+      created_at: string
+      events: number
+      lesson_views: number
+      read_seconds: number
+      downloads: number
+    }[],
+  }
+}
+
+export async function getMemberUsage(userId: string) {
+  if (!newAccountWritesAllowed()) return null
+  const totals = await sql`
+    SELECT
+      COUNT(*) FILTER (WHERE event_type = 'lesson_view')::int AS lesson_views,
+      COALESCE(SUM(seconds) FILTER (WHERE event_type = 'read_time'), 0)::int AS read_seconds,
+      COUNT(*) FILTER (WHERE event_type = 'download')::int AS downloads
+    FROM usage_events
+    WHERE user_id = ${userId}
+  `
+  const recent = await sql`
+    SELECT event_type, resource, seconds, created_at
+    FROM usage_events
+    WHERE user_id = ${userId}
+    ORDER BY created_at DESC
+    LIMIT 20
+  `
+  const row = totals.rows[0] || {}
+  return {
+    lessonViews: Number(row.lesson_views ?? 0),
+    readSeconds: Number(row.read_seconds ?? 0),
+    downloads: Number(row.downloads ?? 0),
+    recent: recent.rows as {
+      event_type: string
+      resource: string
+      seconds: number | null
+      created_at: string
+    }[],
+  }
 }
 
 export async function getUserPlan(id: string): Promise<UserPlan> {
@@ -348,6 +474,8 @@ export async function getUserProfile(id: string) {
     accessTier: user.access_tier,
     role: user.role || 'user',
     plan: normalizeUserPlan(user.plan),
+    entitlement: normalizeEntitlement(user.entitlement, user.plan),
+    packs: normalizePacks(user.entitlement_packs),
     createdAt: user.created_at,
   }
 }

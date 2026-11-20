@@ -257,13 +257,13 @@ function ResourceCard({ resource }: { resource: Resource }) {
       <div className="px-6 pb-6">
         {isAvailable ? (
           <div className="flex flex-col gap-2">
-            <a href={`/downloads/${resource.file}`} download>
+            <a href={`/api/downloads/${resource.file}`}>
               <Button className="w-full bg-slate-800 hover:bg-cyan-600 text-slate-300 hover:text-white border border-white/10 hover:border-cyan-400/30 transition-all duration-300" variant="outline">
                 <Download className="mr-2 h-4 w-4" /> {resource.action}
               </Button>
             </a>
             {resource.excelFile && (
-              <a href={`/downloads/${resource.excelFile}`} download>
+              <a href={`/api/downloads/${resource.excelFile}`}>
                 <Button className="w-full bg-slate-800 hover:bg-cyan-600 text-slate-300 hover:text-white border border-white/10 hover:border-cyan-400/30 transition-all duration-300" variant="outline">
                   <FileSpreadsheet className="mr-2 h-4 w-4" /> {resource.excelAction ?? "Download Excel"}
                 </Button>
@@ -271,11 +271,9 @@ function ResourceCard({ resource }: { resource: Resource }) {
             )}
           </div>
         ) : (
-          <Link href={`/downloads/coming-soon?resource=${encodeURIComponent(resource.title)}`}>
-            <Button className="w-full bg-slate-800/50 text-slate-500 border border-white/5 hover:border-amber-500/30 hover:text-amber-400 transition-all duration-300" variant="outline">
-              <Clock className="mr-2 h-4 w-4" /> Notify Me When Available
-            </Button>
-          </Link>
+          <Button disabled className="w-full bg-slate-800/50 text-slate-500 border border-white/5" variant="outline">
+            <Clock className="mr-2 h-4 w-4" /> Coming soon
+          </Button>
         )}
       </div>
     </div>
@@ -305,8 +303,7 @@ export default function Downloads() {
             Downloads &amp; <span className="text-cyan-400">Templates</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl">
-            PDF templates and checklists. The files on this page are the ones that download.
-            Collection packs are listed at {collectionPacks.map((pack) => pack.label.replace(", inc GST", "")).join(", ")} on the pricing page. There is no buy button here.
+            PDF templates and checklists. The Estimative Language Dictionary and the Cognitive Bias Checklist are the free sample once you create a free account. The other files sit in the collection packs ({collectionPacks.map((pack) => pack.label.replace(", inc GST", "")).join(", ")}), or in the normal plan. There is no buy button here.
           </p>
         </div>
       </div>

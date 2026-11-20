@@ -14,7 +14,7 @@ import { USER_PLAN_LABELS, USER_PLANS, type UserPlan } from "@/lib/user-plan"
 export const SITE_URL = "https://theintelanalystacademy.com"
 
 /** Public contact address already used by this site. Not an office address. */
-export const SUPPORT_EMAIL = "info@theintelanalystacademy.com"
+export const SUPPORT_EMAIL = "admin@ttpn.com.au"
 
 export const SELLER_NAME = "TTPN Pty Ltd"
 

@@ -77,6 +77,9 @@ export default function ProfilePage() {
               <Calendar className="w-4 h-4" />
               Active since {memberSince}
             </div>
+            <Link href="/dashboard" className="mt-3 inline-flex text-sm text-cyan-400 hover:text-cyan-300">
+              Open your account dashboard
+            </Link>
           </div>
         </div>
 

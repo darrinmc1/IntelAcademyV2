@@ -4,9 +4,17 @@ import { createUser, getUserByEmail, getUserByCodename, initDatabase } from '@/l
 import { createToken, setAuthCookie } from '@/lib/auth'
 import { generateCodename } from '@/lib/codename-generator'
 import { generateUUID } from '@/lib/utils'
+import { accountsDatabaseConfigured } from '@/lib/accounts-gate'
 
 export async function POST(request: Request) {
   try {
+    if (!accountsDatabaseConfigured()) {
+      return NextResponse.json(
+        { error: 'Free accounts are not connected yet. The site owner still needs to set POSTGRES_URL and JWT_SECRET.' },
+        { status: 503 },
+      )
+    }
+
     await initDatabase()
 
     const { email, pin, codename, existingProfile } = await request.json()
@@ -62,6 +70,8 @@ export async function POST(request: Request) {
       role: 'user',
       createdAt: new Date().toISOString(),
       plan: 'free',
+      entitlement: 'free',
+      packs: [],
     })
     await setAuthCookie(token)
 

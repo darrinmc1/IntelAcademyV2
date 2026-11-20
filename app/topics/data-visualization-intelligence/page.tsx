@@ -98,7 +98,23 @@ The data did not change. The question did, and the chart followed it.
 
 ## Tools
 
-You do not need expensive software to make good charts. A spreadsheet handles bar charts and simple timelines. Gephi is a free option for network analysis, and QGIS is a free option for maps. Code libraries such as D3.js allow custom interactive visuals if you have the skills and the time. Pick the simplest tool that answers the question.
+You do not need expensive software to make good charts. Pick the simplest tool that answers the question.
+
+### Spreadsheet
+
+A spreadsheet is enough for bar charts, simple timelines, and a first pass at a flow. Use it when the question is "how much, compared to what?" or when you only have a short sequence of events. Keep one row per event, name the columns, and do not let the chart title say more than the numbers.
+
+### Gephi
+
+Gephi is a free desktop tool for network graphs. Use it when the question is who connects to whom: people, companies, accounts, or phone numbers. Import a node table and an edge table. Filter out weak or trivial links before you brief anyone, because a dense graph looks sinister even when the links are only social follows. Size the nodes by a number you can explain, such as degree, and say what a line means in the caption. Gephi's layout algorithms (ForceAtlas2 is the usual starting point) only arrange the picture. They do not decide who matters.
+
+### QGIS
+
+QGIS is a free desktop geographic information system. Use it when the question is where something happened. Load the incident points, then add a base map and, if you have it, the area your sources actually covered. A cluster can be a hotspot or it can be the only place anyone was reporting from. Shade the uncollected area rather than letting it look quiet. QGIS can also make a simple graduated symbol map when the question is "how many in each place?"
+
+### D3.js
+
+D3.js is a JavaScript library for custom graphics in a browser. Use it when a spreadsheet chart or Gephi layout cannot show the comparison you need, and when someone on the team can maintain the code. It will draw a timeline, a network, or a Sankey from the same data you would otherwise paste into a slide. It is the wrong choice for a one-off product that has to be finished this afternoon.
 
 ## Exercise
 

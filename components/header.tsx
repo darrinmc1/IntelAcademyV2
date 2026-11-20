@@ -144,6 +144,7 @@ export function Header() {
                 {isStaff && <Link href="/admin" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Admin</Link>}
                 {isAuthenticated ? (
                   <>
+                    <Link href="/dashboard" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Dashboard</Link>
                     <Link href="/profile" className="text-sm p-2 rounded-md hover:bg-white/5 hover:text-cyan-400 text-slate-300">Profile</Link>
                     <button type="button" onClick={() => logout()} className="text-left text-sm p-2 rounded-md hover:bg-white/5 hover:text-red-400 text-slate-300">Logout</button>
                   </>
@@ -273,6 +274,9 @@ export function Header() {
                     {user.role}
                   </span>
                 )}
+                <Link href="/dashboard" className="text-xs text-slate-400 hover:text-cyan-400">
+                  Dashboard
+                </Link>
                 <Link href="/profile" className="text-xs text-slate-400 hover:text-cyan-400">
                   Profile
                 </Link>
