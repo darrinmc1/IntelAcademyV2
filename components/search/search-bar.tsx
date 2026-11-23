@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useState, useTransition } from "react"
+import { useId, useState, useTransition } from "react"
 import { Search, X, Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -25,6 +25,7 @@ export function SearchBar({
 }: SearchBarProps) {
   const [query, setQuery] = useState(defaultValue)
   const [isPending, startTransition] = useTransition()
+  const inputId = useId()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -47,8 +48,13 @@ export function SearchBar({
   return (
     <form onSubmit={handleSubmit} className={cn("relative", className)} {...props} data-testid="search-form">
       <div className="relative">
+        <label htmlFor={inputId} className="sr-only">
+          {placeholder}
+        </label>
         <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
         <Input
+          id={inputId}
+          name="q"
           type="search"
           placeholder={placeholder}
             className={inputClass}

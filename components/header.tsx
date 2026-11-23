@@ -165,7 +165,10 @@ export function Header() {
                 alt="Logo"
                 width={40}
                 height={40}
-                className="object-cover"
+                sizes="40px"
+                className="h-10 w-10 object-cover"
+                priority
+                fetchPriority="high"
               />
             </div>
             <div className="hidden sm:flex flex-col leading-tight">
@@ -295,14 +298,14 @@ export function Header() {
                 <Link href="/login" className="text-xs text-slate-400 hover:text-cyan-400 transition-colors">
                   Sign In
                 </Link>
-                <Link href="/register" className="text-xs px-2 py-1 rounded-full bg-cyan-600 hover:bg-cyan-500 text-white font-medium border border-cyan-400/30">
+                <Link href="/register" className="text-xs px-2 py-1 rounded-full bg-cyan-700 hover:bg-cyan-600 text-white font-medium border border-cyan-400/30">
                   Create a free account
                 </Link>
               </>
             )}
           </div>
 
-          <Button asChild className="hidden sm:flex bg-cyan-600 hover:bg-cyan-500 text-white rounded-full px-4 py-1 text-sm glow-primary-hover border border-cyan-400/30">
+          <Button asChild className="hidden sm:flex bg-cyan-700 hover:bg-cyan-600 text-white rounded-full px-4 py-1 text-sm glow-primary-hover border border-cyan-400/30">
             <Link href="/request-topic">Request a new topic</Link>
           </Button>
         </div>

@@ -1,8 +1,6 @@
 "use client"
 
-import React from "react"
-
-import { useState, useTransition } from "react"
+import React, { useId, useState, useTransition } from "react"
 import { useRouter } from "next/navigation"
 import { Search, X, Loader2, History } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -15,6 +13,7 @@ export function MobileSearch() {
   const [query, setQuery] = useState("")
   const [isPending, startTransition] = useTransition()
   const [recentSearches, setRecentSearches] = useState<string[]>([])
+  const inputId = useId()
 
   // Load recent searches from localStorage when component mounts
   React.useEffect(() => {
@@ -91,8 +90,13 @@ export function MobileSearch() {
 
           <form onSubmit={handleSubmit} className="flex gap-2">
             <div className="relative flex-1">
+              <label htmlFor={inputId} className="sr-only">
+                Search intelligence topics
+              </label>
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
+                id={inputId}
+                name="q"
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}

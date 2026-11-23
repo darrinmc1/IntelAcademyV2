@@ -62,7 +62,7 @@ export function HotTopicsSection() {
               <h3 className="text-white font-medium group-hover:text-orange-300 transition-colors truncate">
                 {topic.title}
               </h3>
-              <span className="text-xs text-slate-500">{topic.category}</span>
+              <span className="text-xs text-slate-400">{topic.category}</span>
             </div>
 
             {/* Arrow */}

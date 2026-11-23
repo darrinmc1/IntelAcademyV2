@@ -65,8 +65,11 @@ export function LearningPathCard({
           <Image
             src={image}
             alt={title}
-            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+            width={800}
+            height={450}
+            sizes="(max-width: 768px) calc(100vw - 2rem), (max-width: 1200px) 50vw, 33vw"
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+            style={{ width: "100%", height: "100%" }}
           />
         </div>
         <CardContent className="p-6 relative z-10">

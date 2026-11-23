@@ -7,8 +7,20 @@ import Link from "next/link"
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden min-h-[500px] flex items-center justify-center py-10 lg:py-16">
-      <div className="absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none mix-blend-screen">
-        <Image src="/gears-of-thought.png" alt="" fill sizes="33vw" className="object-contain" aria-hidden="true" />
+      {/* Faint watermark. It sits in the mobile viewport, so it must not be
+          lazy-loaded: a full-height fill version was the LCP, and the
+          correctly sized graphic still was. */}
+      <div className="pointer-events-none absolute right-0 top-1/2 w-1/3 -translate-y-1/2 opacity-5 mix-blend-screen" aria-hidden="true">
+        <Image
+          src="/gears-of-thought.png"
+          alt=""
+          width={1024}
+          height={552}
+          sizes="33vw"
+          className="h-auto w-full"
+          priority
+          fetchPriority="high"
+        />
       </div>
 
       <div className="relative z-10 container mx-auto px-4">
@@ -30,7 +42,7 @@ export function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button asChild size="lg" className="bg-cyan-600 hover:bg-cyan-500 text-white px-8 py-6 text-lg rounded-full glow-primary-hover border border-cyan-400/50 shadow-[0_0_15px_rgba(8,145,178,0.5)]">
+              <Button asChild size="lg" className="bg-cyan-700 hover:bg-cyan-600 text-white px-8 py-6 text-lg rounded-full glow-primary-hover border border-cyan-400/50 shadow-[0_0_15px_rgba(8,145,178,0.5)]">
                 <Link href="/learning-paths">Choose a learning path</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/20 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md px-8 py-6 text-lg rounded-full transition-all duration-300">
@@ -44,10 +56,13 @@ export function HeroSection() {
             <Image
               src="/intelligence-analysis-workspace.png"
               alt="Intelligence analysis workspace"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-contain drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]"
+              width={1024}
+              height={612}
+              sizes="(max-width: 1024px) calc(100vw - 2rem), 40rem"
+              className="h-full w-full object-contain drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]"
+              style={{ width: "100%", height: "100%" }}
               priority
+              fetchPriority="high"
             />
           </div>
         </div>

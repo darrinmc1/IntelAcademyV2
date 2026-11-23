@@ -102,7 +102,7 @@ export default function HomePage() {
       <div className="flex justify-center mt-8 mb-12">
         <Link
           href="/learning-paths"
-          className="group flex items-center justify-center font-medium rounded-full shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 bg-cyan-600 text-white hover:bg-cyan-500 text-base py-2.5 px-6 border border-cyan-400/30"
+          className="group flex items-center justify-center font-medium rounded-full shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 bg-cyan-700 text-white hover:bg-cyan-600 text-base py-2.5 px-6 border border-cyan-400/30"
         >
           All Learning Paths
           <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

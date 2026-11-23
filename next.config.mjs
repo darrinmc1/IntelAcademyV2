@@ -90,6 +90,8 @@ const nextConfig = {
 
   images: {
     unoptimized: false,
+    // AVIF first, WebP fallback. The optimizer still accepts the PNG sources.
+    formats: ["image/avif", "image/webp"],
   },
 
   compiler: {
