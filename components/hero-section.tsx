@@ -7,8 +7,9 @@ import Link from "next/link"
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden min-h-[500px] flex items-center justify-center py-10 lg:py-16">
-      {/* Faint watermark. Keep the element box at the graphic's own size:
-          a full-height fill image was the mobile LCP and was lazy-loaded. */}
+      {/* Faint watermark. It sits in the mobile viewport, so it must not be
+          lazy-loaded: a full-height fill version was the LCP, and the
+          correctly sized graphic still was. */}
       <div className="pointer-events-none absolute right-0 top-1/2 w-1/3 -translate-y-1/2 opacity-5 mix-blend-screen" aria-hidden="true">
         <Image
           src="/gears-of-thought.png"
@@ -17,6 +18,8 @@ export function HeroSection() {
           height={552}
           sizes="33vw"
           className="h-auto w-full"
+          priority
+          fetchPriority="high"
         />
       </div>
 
