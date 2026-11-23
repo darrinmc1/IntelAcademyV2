@@ -13,6 +13,7 @@ interface StaticImageProps {
   fallbackSrc?: string
   priority?: boolean
   sizes?: string
+  fetchPriority?: "high" | "low" | "auto"
 }
 
 export function StaticImage({
@@ -25,6 +26,7 @@ export function StaticImage({
   fallbackSrc = "/placeholder.svg",
   priority = false,
   sizes,
+  fetchPriority,
 }: StaticImageProps) {
   const [imgSrc, setImgSrc] = useState(src)
   const [hasError, setHasError] = useState(false)
@@ -45,6 +47,7 @@ export function StaticImage({
       fill={fill}
       className={className}
       priority={priority}
+      fetchPriority={fetchPriority}
       sizes={sizes}
       onError={handleError}
     />

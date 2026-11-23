@@ -20,7 +20,7 @@ export function ComingSoonJoin({
   const buttonClass =
     tone === "light"
       ? "inline-flex items-center rounded-full bg-cyan-700 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-600"
-      : "inline-flex items-center rounded-full bg-cyan-600 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-500 border border-cyan-400/30"
+      : "inline-flex items-center rounded-full bg-cyan-700 px-4 py-2 text-sm font-semibold text-white hover:bg-cyan-600 border border-cyan-400/30"
 
   return (
     <div className={variant === "page" ? "mx-auto max-w-xl" : "mx-auto max-w-md text-left"}>

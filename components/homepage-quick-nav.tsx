@@ -39,7 +39,7 @@ export function HomepageQuickNav() {
               className={cn(
                 "flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition-colors",
                 active
-                  ? "bg-cyan-600 text-white"
+                  ? "bg-cyan-700 text-white"
                   : "text-slate-300 hover:bg-white/5 hover:text-white",
               )}
             >

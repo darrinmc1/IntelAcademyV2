@@ -203,7 +203,7 @@ export function FeedbackWidget() {
         className={`group flex items-center gap-2 px-5 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105 ${
           isOpen
             ? "bg-teal-200 text-teal-900 border-2 border-teal-300"
-            : "bg-teal-600 text-white hover:bg-teal-500"
+            : "bg-teal-700 text-white hover:bg-teal-600"
         }`}
         aria-label={isOpen ? "Close feedback" : "Feedback"}
       >

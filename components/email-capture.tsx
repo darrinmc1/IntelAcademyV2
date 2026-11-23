@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useId, useState } from "react"
 
 type ThemeColors = {
   primary: string
@@ -89,8 +89,8 @@ const themes: Record<string, ThemeColors> = {
     successBadgeBorder: "border-blue-300/50",
   },
   slate: {
-    primary: "bg-teal-600",
-    primaryHover: "hover:bg-teal-500",
+    primary: "bg-teal-700",
+    primaryHover: "hover:bg-teal-600",
     bg: "bg-gradient-to-br from-slate-900 to-slate-800",
     bgGradient: "bg-gradient-to-br from-slate-800 to-slate-900",
     border: "border-slate-600/60",
@@ -136,6 +136,8 @@ export function EmailCapture({
   const [message, setMessage] = useState("")
 
   const colors = themes[theme] || themes.slate
+  const nameId = useId()
+  const emailId = useId()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -212,21 +214,35 @@ export function EmailCapture({
 
           <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
             {showName && (
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Your name (optional)"
-                className={`w-full px-5 py-3.5 rounded-xl border-2 ${colors.inputBorder} ${colors.inputBg} backdrop-blur-sm ${colors.inputText} ${colors.inputPlaceholder} focus:outline-none ${colors.inputFocus} focus:ring-2 transition-all text-base`}
-              />
+              <>
+                <label htmlFor={nameId} className="sr-only">
+                  Your name (optional)
+                </label>
+                <input
+                  id={nameId}
+                  name="name"
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Your name (optional)"
+                  autoComplete="name"
+                  className={`w-full px-5 py-3.5 rounded-xl border-2 ${colors.inputBorder} ${colors.inputBg} backdrop-blur-sm ${colors.inputText} ${colors.inputPlaceholder} focus:outline-none ${colors.inputFocus} focus:ring-2 transition-all text-base`}
+                />
+              </>
             )}
             <div className="flex flex-col sm:flex-row gap-3">
+              <label htmlFor={emailId} className="sr-only">
+                Email address
+              </label>
               <input
+                id={emailId}
+                name="email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@email.com"
                 required
+                autoComplete="email"
                 className={`flex-1 px-5 py-3.5 rounded-xl border-2 ${colors.inputBorder} ${colors.inputBg} backdrop-blur-sm ${colors.inputText} ${colors.inputPlaceholder} focus:outline-none ${colors.inputFocus} focus:ring-2 transition-all text-base`}
               />
               <button
@@ -276,20 +292,34 @@ export function EmailCapture({
 
         <form onSubmit={handleSubmit} className="space-y-3">
           {showName && (
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Your name (optional)"
-              className={`w-full px-4 py-3 rounded-xl border-2 ${colors.inputBorder} ${colors.inputBg} ${colors.inputText} ${colors.inputPlaceholder} focus:outline-none ${colors.inputFocus} focus:ring-2 transition-all text-sm`}
-            />
+            <>
+              <label htmlFor={nameId} className="sr-only">
+                Your name (optional)
+              </label>
+              <input
+                id={nameId}
+                name="name"
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Your name (optional)"
+                autoComplete="name"
+                className={`w-full px-4 py-3 rounded-xl border-2 ${colors.inputBorder} ${colors.inputBg} ${colors.inputText} ${colors.inputPlaceholder} focus:outline-none ${colors.inputFocus} focus:ring-2 transition-all text-sm`}
+              />
+            </>
           )}
+          <label htmlFor={emailId} className="sr-only">
+            Email address
+          </label>
           <input
+            id={emailId}
+            name="email"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@email.com"
             required
+            autoComplete="email"
             className={`w-full px-4 py-3 rounded-xl border-2 ${colors.inputBorder} ${colors.inputBg} ${colors.inputText} ${colors.inputPlaceholder} focus:outline-none ${colors.inputFocus} focus:ring-2 transition-all text-sm`}
           />
           <button
@@ -331,12 +361,18 @@ export function EmailCapture({
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 min-w-0 md:min-w-[360px]">
+          <label htmlFor={emailId} className="sr-only">
+            Email address
+          </label>
           <input
+            id={emailId}
+            name="email"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@email.com"
             required
+            autoComplete="email"
             className={`flex-1 min-w-0 px-4 py-3 rounded-xl border-2 ${colors.inputBorder} ${colors.inputBg} backdrop-blur-sm ${colors.inputText} ${colors.inputPlaceholder} focus:outline-none ${colors.inputFocus} focus:ring-2 transition-all text-sm`}
           />
           <button

@@ -44,7 +44,7 @@ const sites: SisterSite[] = [
 export function SisterSites() {
   return (
     <div className="py-8">
-      <h4 className="text-xs uppercase tracking-widest font-semibold text-slate-500 mb-4">
+      <h4 className="text-xs uppercase tracking-widest font-semibold text-slate-400 mb-4">
         Sister Networks
       </h4>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
@@ -58,7 +58,7 @@ export function SisterSites() {
           >
             <div className="mb-3">{site.icon}</div>
             <h5 className="text-white font-medium text-sm mb-2">{site.name}</h5>
-            <p className="text-slate-500 text-xs">{site.description}</p>
+            <p className="text-slate-400 text-xs">{site.description}</p>
           </a>
         ))}
       </div>

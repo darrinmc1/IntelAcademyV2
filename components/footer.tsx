@@ -46,16 +46,16 @@ export function Footer() {
               <li><Link href="/waitlist" className="text-slate-400 hover:text-cyan-400 transition-colors duration-300 font-light flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-cyan-500/50 group-hover:bg-cyan-400 transition-colors" />Waitlist</Link></li>
               <li><Link href="/request-topic" className="text-slate-400 hover:text-cyan-400 transition-colors duration-300 font-light flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-indigo-500/50 group-hover:bg-indigo-400 transition-colors" />Request a new topic</Link></li>
               <li><Link href="/feedback" className="text-slate-400 hover:text-cyan-400 transition-colors duration-300 font-light flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-cyan-500/50 group-hover:bg-cyan-400 transition-colors" />Feedback</Link></li>
-              <li className="pt-2"><Link href="/privacy" className="text-sm text-slate-500 hover:text-slate-300 transition-colors duration-300">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="text-sm text-slate-500 hover:text-slate-300 transition-colors duration-300">Terms of Service</Link></li>
-              <li><Link href="/refunds" className="text-sm text-slate-500 hover:text-slate-300 transition-colors duration-300">Refunds</Link></li>
+              <li className="pt-2"><Link href="/privacy" className="text-sm text-slate-400 hover:text-slate-200 transition-colors duration-300">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-sm text-slate-400 hover:text-slate-200 transition-colors duration-300">Terms of Service</Link></li>
+              <li><Link href="/refunds" className="text-sm text-slate-400 hover:text-slate-200 transition-colors duration-300">Refunds</Link></li>
             </ul>
           </div>
         </div>
         <div className="border-t border-white/10 mt-8 pt-8">
           <SisterSites />
         </div>
-        <div className="border-t border-white/10 mt-8 pt-8 text-center text-slate-500 font-light flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-white/10 mt-8 pt-8 text-center text-slate-400 font-light flex flex-col md:flex-row justify-between items-center gap-4">
           <p>© {new Date().getFullYear()} The Intel Analyst Academy. All rights reserved.</p>
           <p className="text-sm">Part of a network of learning platforms</p>
         </div>

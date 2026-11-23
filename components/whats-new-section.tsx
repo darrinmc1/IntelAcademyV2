@@ -26,7 +26,7 @@ export function WhatsNewSection() {
                 href={topic.href}
                 className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-5 hover:border-cyan-400/40 transition-colors"
               >
-                <time dateTime={topic.dateAdded} className="text-xs font-semibold uppercase tracking-widest text-slate-500">
+                <time dateTime={topic.dateAdded} className="text-xs font-semibold uppercase tracking-widest text-slate-400">
                   {formatCatalogDate(topic.dateAdded)}
                 </time>
                 <h3 className="mt-2 text-lg font-bold text-white">{topic.title}</h3>
